@@ -1,0 +1,42 @@
+{% comment %}
+  TOC for a single parent. Usage:
+    {% include toc-parent.html parent_id="my-parent-id" %}
+
+  Finds the parent page by its "id" front-matter and lists:
+  - a link to the parent page
+  - links to children where page.section == parent_id (sorted by nav_order)
+
+  Silent if parent_id missing or no matching page.
+{% endcomment %}
+
+{%- assign pid = include.parent_id | default: "" -%}
+{%- if pid == "" -%}
+  {%- comment -%} no parent_id supplied — render nothing {%- endcomment -%}
+{%- else -%}
+  {%- assign parent = site.html_pages | where: "id", pid | first -%}
+  {%- if parent -%}
+    <div class="row justify-content-center">
+      <div class="m-3 col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title h3">Contents</h2>
+            <ul>
+              <li>
+                <a href="{{ parent.url | relative_url }}">{{ parent.title }}</a>
+                {%- assign children = site.html_pages | where: "section", pid | where_exp: "p", "p.nav_order" | sort: "nav_order" -%}
+                {%- if children and children.size > 0 -%}
+                  <ul>
+                    {%- for c in children -%}
+                      <li><a href="{{ c.url | relative_url }}">{{ c.title }}</a></li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+{%- endif -%}
+
