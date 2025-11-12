@@ -1,6 +1,7 @@
 ---
 parent_id: KaruppuSwamy
 nav_order: 19
+layout: main-layout
 title:  Enga Karuppasamy
 youtube_id: 1ZGdZFXY5pY
 topics: Ayyappa, Enga, Karuppasamy, எங்க, கருப்பசாமி

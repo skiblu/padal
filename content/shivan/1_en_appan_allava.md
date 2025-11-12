@@ -1,6 +1,7 @@
 ---
 parent_id: Shivan
 nav_order: 5
+layout: main-layout
 youtube_id: fRh3wIagoGw
 title:  En appan allava
 topics: Shivan, En, appan, allava, என்னப்பன், அல்லவா

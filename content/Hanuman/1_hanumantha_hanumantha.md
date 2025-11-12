@@ -1,6 +1,7 @@
 ---
 parent_id: Hanuman
 nav_order: 8
+layout: main-layout
 title:  Hanumantha Hanumantha
 topics: Hanuman, Hanumantha, Hanumantha
 ---

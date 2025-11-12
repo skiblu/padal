@@ -1,6 +1,7 @@
 ---
 parent_id: Murugan
 nav_order: 4
+layout: main-layout
 title:  Murugan Ashtothram
 topics: Murugan, Muruga, Ashtothram, 108
 ---
