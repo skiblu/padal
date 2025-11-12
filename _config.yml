@@ -32,20 +32,18 @@ plugins:
 # leave these commented out or blank for defaults.
 # these options tweak CSS, so should be valid CSS values.
 #
-# header-background: 
-# header-text-color: 
-breadcrumbs-background: #FFF3E0
-# breadcrumbs-text-color: 
-active-nav-color: #2596BE
+header-background: #ffffff
+header-text-color: #000000
+breadcrumbs-background: #f8f9fa
+breadcrumbs-text-color: #000000
+active-nav-color:
 # link-color:
 # next-button-color:
-# text-color: 
+text-color: #212529
 # base-font-size:
 
 
-##########
-# ROBOTS EXCLUDE [optional!]
-#
+########### SEO SETTINGS [optional!]
 # set noindex to true if you do NOT want Google to index your site
 noindex: false 
 
