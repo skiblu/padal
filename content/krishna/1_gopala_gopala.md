@@ -1,7 +1,6 @@
 ---
 parent_id: Vishnu
 nav_order: 7
-layout: main-layout
 title:  Gopala Gopala
 topics: Vishnu, Gopala, Gopala
 ---

@@ -1,7 +1,6 @@
 ---
 parent_id: Vinayaga
 nav_order: 3
-layout: main-layout
 title:  Vinayaga Ashtothram
 topics: Vinayaga, Ashtothram, 108
 ---
