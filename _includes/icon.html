@@ -8,6 +8,19 @@
     Note: this include provides a bit of a hack to include svg in the Markdown content with out messing up the paragraphs, so should be work in any Markdown.
 
 {%- endcomment -%}
-{% capture icon %}bootstrap-icons/{{ include.icon }}.svg{%- endcapture -%}
-{% capture markup %}{% include {{ icon }} %}{%- endcapture -%}
-{{ markup | normalize_whitespace }}
+
+{%- assign icon = include.icon -%}
+
+{%- comment -%} If a raster image is requested (png/jpg/jpeg/gif), render an <img> from the images folder. {%- endcomment -%}
+{%- if icon contains '.png' or icon contains '.jpg' or icon contains '.jpeg' or icon contains '.gif' -%}
+  {%- if icon contains '/' -%}
+    {%- assign src = icon -%}
+  {%- else -%}
+    {%- assign src = 'images/' | append: icon -%}
+  {%- endif -%}
+  <img src="{{ src | relative_url }}" alt="{{ include.alt | default: icon | split: '/' | last }}" {%- if include.class -%} class="{{ include.class }}"{%- endif -%}>
+{%- else -%}
+  {%- capture icon_path -%}bootstrap-icons/{{ icon }}.svg{%- endcapture -%}
+  {%- capture markup -%}{% include {{ icon_path }} %}{%- endcapture -%}
+  {{ markup | normalize_whitespace }}
+{%- endif -%}
