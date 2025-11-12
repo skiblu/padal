@@ -23,7 +23,8 @@
             <ul>
               <li>
                 <a href="{{ parent.url | relative_url }}">{{ parent.title }}</a>
-                {%- assign children = site.html_pages | where: "section", pid | where_exp: "p", "p.nav_order" | sort: "nav_order" -%}
+                {%- comment -%} collect children where section == pid, then sort by nav_order {%- endcomment -%}
+                {%- assign children = site.html_pages | where: "section", pid | sort: "nav_order" -%}
                 {%- if children and children.size > 0 -%}
                   <ul>
                     {%- for c in children -%}
@@ -39,4 +40,3 @@
     </div>
   {%- endif -%}
 {%- endif -%}
-
