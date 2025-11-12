@@ -2,7 +2,7 @@
 # SITE SETTINGS
 #
 # title appears in the header
-title: Bloom Bhajan
+title: Bhakti Padal
 # choose from Bootstrap Icons in _includes/bootstrap-icons
 # find names on https://icons.getbootstrap.com/ (or look in "_includes/bootstrap-icons")
 # some options: code-slash file-code gear tools lightblub book bookmark-star
@@ -10,20 +10,20 @@ title: Bloom Bhajan
 # description appears in sidebar footer
 description: "Devotional communications, group songs and lyrics"
 # keywords for meta tags used by search engines
-keywords: "ayyappa, lyrics, tamil, bhajan"
+keywords: "bhakti, padal, swamy, songs, ayyappa, amman, shiva, lyrics, tamil, bhajan"
 # image for meta tags, will appear when sharing link on social media
 featured-image: "/images/logo.png"
 
 # author name, displayed in credits
-author: san6031-repo
+author: bhaktipadal
 # year or date published, displayed in sidebar
 publication_year: 2024
 # location of code, the full url to your github repository
-source-code: https://github.com/sangit6031hub/bloombhajan
+source-code: https://github.com
 # content license (typically "cc by-sa"), displayed in sidebar
-content_license: "san6031-repo"
+content_license: "Copyright © 2024 Bhakti Padal"
 # URL to the content license
-content_license_link: https://github.com/sangit6031hub/bloombhajan
+content_license_link: https://www.bhaktipadal.in/
 
 ##########
 # THEME CUSTOMIZATION [optional!]

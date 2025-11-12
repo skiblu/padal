@@ -1,2 +1,1 @@
-# Bloom-Ayyappa
-Bloomington Ayyappa Group
+# Devotional Songs Collection
