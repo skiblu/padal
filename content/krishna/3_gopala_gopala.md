@@ -1,6 +1,6 @@
 ---
-parent_id: Vishnu
-nav_order: 7
+section: Vishnu
+nav_order: 3
 title:  Gopala Gopala
 topics: Vishnu, Gopala, Gopala
 ---

@@ -1,6 +1,6 @@
 ---
 section: Vinayaga
-nav_order: 2
+nav_order: 4
 title:  Prabho Ganapathe
 topics: Vinayaga, Prabho, Ganapathe, ப்ரபோ, கணபதே
 ---

@@ -1,6 +1,6 @@
 ---
-parent_id: Hanuman
-nav_order: 8
+section: Hanuman
+nav_order: 3
 title:  Hanumantha Hanumantha
 topics: Hanuman, Hanumantha, Hanumantha
 ---
