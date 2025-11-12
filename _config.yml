@@ -41,24 +41,12 @@ content_license_link: https://www.bhaktipadal.in/
 # text-color: 
 # base-font-size:
 
-##########
-# URL VARIABLES [optional!]
-#
-# Optional if using GitHub Pages! If building manually, these must be set correctly.
-#
-# url:
-# use baseurl to add subsection of the domain,
-# on gh-pages this is a / followed by the name of the repository
-# baseurl is your github repository's name prefixed with a /
-# baseurl:
-
 
 ##########
 # ROBOTS EXCLUDE [optional!]
 #
 # set noindex to true if you do NOT want Google to index your site
-# noindex: true 
-
+noindex: false 
 
 #######
 # BUILD SETTINGS [usually leave as is]
@@ -68,7 +56,7 @@ defaults:
   - scope:
       path: "content"
     values:
-      layout: "lesson-content"
+      layout: "web-content"
 # ignore stuff
 exclude: [README.md, LICENSE, assets/lib/README.md]
 # Build settings

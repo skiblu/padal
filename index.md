@@ -1,6 +1,6 @@
 ---
 title: Bhakti Padal
-layout: lesson-content
+layout: web-content
 ---
 
 Welcome to Bhakti Padal. One stop for all bhajan lyrics and songs.
