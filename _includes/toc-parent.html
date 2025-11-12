@@ -30,14 +30,17 @@
                 <a href="{{ parent.url | relative_url }}">{{ parent.title }}</a>
                 {%- comment -%}
                   collect children by section == parent.id and section == parent.title,
-                  concat them and sort by nav_order
+                  concat them, sort by nav_order, remove duplicates while preserving order
                 {%- endcomment -%}
                 {%- assign children1 = site.html_pages | where: "section", parent.id -%}
                 {%- assign children2 = site.html_pages | where: "section", parent.title -%}
-                {%- assign children = children1 | concat: children2 | sort: "nav_order" -%}
-                {%- if children and children.size > 0 -%}
+                {%- assign combined = children1 | concat: children2 -%}
+                {%- assign combined_sorted = combined | sort: "nav_order" -%}
+                {%- assign unique_urls = combined_sorted | map: "url" | uniq -%}
+                {%- if unique_urls and unique_urls.size > 0 -%}
                   <ul>
-                    {%- for c in children -%}
+                    {%- for u in unique_urls -%}
+                      {%- assign c = combined_sorted | where: "url", u | first -%}
                       <li><a href="{{ c.url | relative_url }}">{{ c.title }}</a></li>
                     {%- endfor -%}
                   </ul>
