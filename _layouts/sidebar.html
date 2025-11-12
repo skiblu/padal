@@ -98,7 +98,7 @@ layout: default
                        {% assign next_page_title = p_children[next_number].title %}{% assign next_page_url = p_children[next_number].url %}
                      {% endif %}
                    {%- endif -%}
-                <li><a href="{{ c.url | relative_url }}" class="link-dark rounded{% if page.url == c.url %} nav-active{% endif %}">{{ c.nav_order }} {{ c.nav | default: c.title }}</a></li>
+                <li><a href="{{ c.url | relative_url }}" class="link-dark rounded{% if page.url == c.url %} nav-active{% endif %}">{{ c.nav | default: c.title }}</a></li>
                  {% endfor %}
                </ul>
              </div>
