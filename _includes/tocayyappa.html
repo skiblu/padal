@@ -1,0 +1,33 @@
+{% comment %}
+    Add an auto generated TOC based on the front matter of content pages 
+{% endcomment %}
+<div class="row justify-content-center">
+    <div class="m-3 col-md-8" >
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title h3">Contents</h2>
+                <ul>
+                    {% assign nav_pages_old = site.html_pages | where_exp: 'p','p.nav_order' | where_exp: 'p', 'p.section == nil' | sort: 'nav_order' %}
+                    {% assign nav_pages = nav_pages_old.objects.filter(topics_text__icontains="Ayyappa") %}
+                    {% for p in nav_pages %}
+                    <li>
+                        {% if p.parent_id %}
+                        {{ p.parent_id }}
+                        {% assign p_children = site.html_pages | where: 'section', p.parent_id | sort: 'nav_order' %}
+                        <ul>
+                            <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+                            {% for c in p_children.objects.filter(topics_text__icontains="Ayyappa") %}
+                            <li><a href="{{ c.url | relative_url }}">{{ c.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

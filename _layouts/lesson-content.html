@@ -1,0 +1,33 @@
+---
+layout: sidebar
+---
+
+<h1 class="mb-4">{{ page.title }}</h1>
+
+{% if page.topics %}<div class="ms-3 mb-3 border-bottom">Topics: <strong>{{ page.topics }}</strong></div>{%- endif -%}
+
+{% if page.description %}<div class="ms-3 mb-3 border-bottom">{{ page.description | markdownify }}</div>{%- endif -%}
+
+{% if page.youtube_id %}
+<div class="mx-auto mb-4" style="max-width: 900px;">
+    <div class="card shadow-sm rounded">
+        <div class="card-body p-2">
+            <figure class="mb-0">
+                <div class="ratio ratio-{{ page.ratio | default: '16x9' }}">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}?rel=0&modestbranding=1"
+                        class="border-0"
+                        title="{{ page.title | default: 'Section Video' }}"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <figcaption class="figure-caption mt-2"><a href="https://youtu.be/{{ page.youtube_id }}" target="_blank" rel="noopener">Section Video</a></figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+{%- endif -%}
+
+
+{{ content }}
