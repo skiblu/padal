@@ -24,7 +24,8 @@ source-code: https://github.com
 content_license: "Copyright: Bhakti Padal"
 # URL to the content license
 content_license_link: https://www.bhaktipadal.in/
-
+plugins:
+  - jekyll-sitemap
 ##########
 # THEME CUSTOMIZATION [optional!]
 #
