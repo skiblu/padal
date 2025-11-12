@@ -29,10 +29,12 @@
               <li>
                 <a href="{{ parent.url | relative_url }}">{{ parent.title }}</a>
                 {%- comment -%}
-                  collect children where section == parent.id OR section == parent.title,
-                  then sort by nav_order
+                  collect children by section == parent.id and section == parent.title,
+                  concat them and sort by nav_order
                 {%- endcomment -%}
-                {%- assign children = site.html_pages | where_exp: "p", "p.section == parent.id or p.section == parent.title" | sort: "nav_order" -%}
+                {%- assign children1 = site.html_pages | where: "section", parent.id -%}
+                {%- assign children2 = site.html_pages | where: "section", parent.title -%}
+                {%- assign children = children1 | concat: children2 | sort: "nav_order" -%}
                 {%- if children and children.size > 0 -%}
                   <ul>
                     {%- for c in children -%}

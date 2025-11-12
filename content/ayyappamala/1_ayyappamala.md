@@ -1,5 +1,5 @@
 ---
-parent_id: Ayyappa Mala
+id: "Ayyappa Mala"
 nav_order: 9
 title: Ayyappa Mala
 ---
