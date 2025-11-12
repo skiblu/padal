@@ -36,7 +36,7 @@ plugins:
 # header-text-color: 
 # breadcrumbs-background: 
 # breadcrumbs-text-color: 
-# active-nav-color: 
+active-nav-color: #2596BE
 # link-color:
 # next-button-color:
 # text-color: 
