@@ -1,17 +1,17 @@
 {% comment %}
   TOC for a single parent. Usage:
-    {% include toc-parent.html parent_id="my-parent-id" %}
+    {% include toc-parent.html parent_name="my-parent-id" %}
 
   Finds the parent page by its "id" front-matter (or title as fallback) and lists:
   - a link to the parent page
-  - links to children where page.section == parent.id OR page.section == parent.title (sorted by nav_order)
+  - links to children where page.section matches the parent (sorted by nav_order)
 
-  Silent if parent_id missing or no matching page.
+  Silent if parent_name missing or no matching page.
 {% endcomment %}
 
-{%- assign pid = include.parent_id | default: "" -%}
+{%- assign pid = include.parent_name | default: "" -%}
 {%- if pid == "" -%}
-  {%- comment -%} no parent_id supplied — render nothing {%- endcomment -%}
+  {%- comment -%} no parent_name supplied — render nothing {%- endcomment -%}
 {%- else -%}
   {%- comment -%} try find parent by id, then fall back to title {%- endcomment -%}
   {%- assign parent = site.html_pages | where: "id", pid | first -%}
@@ -29,18 +29,17 @@
               <li>
                 <a href="{{ parent.url | relative_url }}">{{ parent.title }}</a>
                 {%- comment -%}
-                  collect children by section == parent.id and section == parent.title,
-                  concat them, sort by nav_order, remove duplicates while preserving order
+                  Single children collection: prefer section == parent.parent_id; if empty, fall back to section == parent.title.
+                  Then sort by nav_order.
                 {%- endcomment -%}
-                {%- assign children1 = site.html_pages | where: "section", parent.id -%}
-                {%- assign children2 = site.html_pages | where: "section", parent.title -%}
-                {%- assign combined = children1 | concat: children2 -%}
-                {%- assign combined_sorted = combined | sort: "nav_order" -%}
-                {%- assign unique_urls = combined_sorted | map: "url" | uniq -%}
-                {%- if unique_urls and unique_urls.size > 0 -%}
+                {%- assign children = site.html_pages | where: "section", parent.parent_id -%}
+                {%- if children == nil or children.size == 0 -%}
+                  {%- assign children = site.html_pages | where: "section", parent.title -%}
+                {%- endif -%}
+                {%- assign children = children | sort: "nav_order" -%}
+                {%- if children and children.size > 0 -%}
                   <ul>
-                    {%- for u in unique_urls -%}
-                      {%- assign c = combined_sorted | where: "url", u | first -%}
+                    {%- for c in children -%}
                       <li><a href="{{ c.url | relative_url }}">{{ c.title }}</a></li>
                     {%- endfor -%}
                   </ul>
