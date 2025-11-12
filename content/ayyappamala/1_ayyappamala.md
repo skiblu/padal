@@ -1,7 +1,6 @@
 ---
 parent_id: Ayyappa Mala
 nav_order: 2
-layout: web-content
 title: Ayyappa Mala
 ---
 
