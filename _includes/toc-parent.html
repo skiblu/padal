@@ -2,9 +2,9 @@
   TOC for a single parent. Usage:
     {% include toc-parent.html parent_id="my-parent-id" %}
 
-  Finds the parent page by its "id" front-matter and lists:
+  Finds the parent page by its "id" front-matter (or title as fallback) and lists:
   - a link to the parent page
-  - links to children where page.section == parent_id (sorted by nav_order)
+  - links to children where page.section == parent.id OR page.section == parent.title (sorted by nav_order)
 
   Silent if parent_id missing or no matching page.
 {% endcomment %}
@@ -13,7 +13,12 @@
 {%- if pid == "" -%}
   {%- comment -%} no parent_id supplied — render nothing {%- endcomment -%}
 {%- else -%}
+  {%- comment -%} try find parent by id, then fall back to title {%- endcomment -%}
   {%- assign parent = site.html_pages | where: "id", pid | first -%}
+  {%- if parent == nil -%}
+    {%- assign parent = site.html_pages | where: "title", pid | first -%}
+  {%- endif -%}
+
   {%- if parent -%}
     <div class="row justify-content-center">
       <div class="m-3 col-md-8">
@@ -23,8 +28,11 @@
             <ul>
               <li>
                 <a href="{{ parent.url | relative_url }}">{{ parent.title }}</a>
-                {%- comment -%} collect children where section == pid, then sort by nav_order {%- endcomment -%}
-                {%- assign children = site.html_pages | where: "section", pid | sort: "nav_order" -%}
+                {%- comment -%}
+                  collect children where section == parent.id OR section == parent.title,
+                  then sort by nav_order
+                {%- endcomment -%}
+                {%- assign children = site.html_pages | where_exp: "p", "p.section == parent.id or p.section == parent.title" | sort: "nav_order" -%}
                 {%- if children and children.size > 0 -%}
                   <ul>
                     {%- for c in children -%}
