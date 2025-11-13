@@ -1,5 +1,5 @@
 ---
-parent_id: Vinayaga
+section: Vinayaga
 nav_order: 2
 title:  Vinayaga Ashtothram
 topics: Vinayaga, Ashtothram, 108
