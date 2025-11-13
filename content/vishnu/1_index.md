@@ -6,7 +6,7 @@ topics: Vishnu, songs, விஷ்ணு, devotional, lyrics
 ---
 
 
-{% include figure.html img="vishnu_poster.gif" alt="Ayyappa" caption="Saranam Ayyappa" width="15%" %}
+{% include figure.html img="vishnu_poster.gif" width="15%" %}
 {% include toc-parent.html parent_name="Vishnu" %}
 
 
