@@ -55,22 +55,25 @@
                   </div>
 
                   <style>
-                    /* local styles to beautify the TOC grid */
+                    /* updated local styles: warmer box color and peach hover accent */
                     .toc-child-card {
                       border-radius: 6px;
-                      border: 1px solid rgba(0,0,0,0.06);
-                      transition: transform .08s ease, box-shadow .12s ease;
+                      border: 1px solid #ffd8b5; /* soft peach border */
+                      background-color: #fffaf6;  /* subtle warm background */
+                      transition: transform .08s ease, box-shadow .12s ease, border-color .12s ease;
                       display: flex;
                     }
                     .toc-child-card:hover {
                       transform: translateY(-4px);
-                      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+                      box-shadow: 0 8px 20px rgba(255,111,97,0.12); /* peach-tinted shadow */
+                      border-color: #ff6f61; /* stronger peach on hover */
                     }
                     .toc-child-link {
-                      color: #0b5ed7;
+                      color: #0b5ed7; /* keep primary link color */
                       text-decoration: none;
                     }
                     .toc-child-link:hover {
+                      color: #ff6f61; /* change link color on hover to match accent */
                       text-decoration: underline;
                     }
                     @media (max-width: 767.98px) {
