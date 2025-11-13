@@ -1,7 +1,7 @@
 ---
 parent_id: Sakthi
 nav_order: 6
-title:  Sakthi (Durga)
+title:  Sakthi
 topics: Amman, Sakthi, Durga, சக்தி, துர்கா, அம்மன், songs, devotional, lyrics
 ---
 
