@@ -25,64 +25,26 @@
         <div class="card">
           <div class="card-body">
             <h2 class="card-title h3">Contents</h2>
-            <ul class="list-unstyled mb-0">
+            <ul>
               <li>
-                <a href="{{ parent.url | relative_url }}" class="h5 d-inline-block mb-2">{{ parent.title }}</a>
-
                 {%- comment -%}
-                  Single children collection: prefer section == parent.id; if empty, fall back to section == parent.title.
+                  Single children collection: prefer section == parent.parent_id; if empty, fall back to section == parent.title.
                   Then sort by nav_order.
                 {%- endcomment -%}
-                {%- assign children = site.html_pages | where: "section", parent.id -%}
+                {%- assign children = site.html_pages | where: "section", parent.parent_id -%}
                 {%- if children == nil or children.size == 0 -%}
                   {%- assign children = site.html_pages | where: "section", parent.title -%}
                 {%- endif -%}
                 {%- assign children = children | sort: "nav_order" -%}
-
                 {%- if children and children.size > 0 -%}
-                  <!-- Render children in 3 responsive columns (col-md-4) with card styling -->
-                  <div class="row g-3 mt-2">
+                  <!-- Render children in 3 responsive columns (col-md-4) -->
+                  <div class="row g-2 mt-2">
                     {%- for c in children -%}
                       <div class="col-12 col-md-4">
-                        <div class="card toc-child-card h-100">
-                          <div class="card-body p-2">
-                            <h3 class="card-title h6 mb-1">
-                              <a href="{{ c.url | relative_url }}" class="toc-child-link stretched-link">{{ c.title }}</a>
-                            </h3>
-                            {%- if c.excerpt -%}
-                              <p class="card-text small mb-0 text-muted">{{ c.excerpt | strip_html | truncate: 100 }}</p>
-                            {%- endif -%}
-                          </div>
-                        </div>
+                        <a href="{{ c.url | relative_url }}">{{ c.title }}</a>
                       </div>
                     {%- endfor -%}
                   </div>
-
-                  <style>
-                    /* small, local styles to beautify the TOC grid */
-                    .toc-child-card {
-                      border-radius: 6px;
-                      box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
-                      transition: transform .08s ease, box-shadow .08s ease;
-                      min-height: 56px;
-                      display: flex;
-                      align-items: stretch;
-                    }
-                    .toc-child-card:hover {
-                      transform: translateY(-3px);
-                      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-                    }
-                    .toc-child-link {
-                      color: #0b5ed7;
-                      text-decoration: none;
-                    }
-                    .toc-child-link:hover {
-                      text-decoration: underline;
-                    }
-                    @media (max-width: 767.98px) {
-                      .toc-child-card { min-height: auto; }
-                    }
-                  </style>
                 {%- endif -%}
               </li>
             </ul>
