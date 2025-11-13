@@ -25,12 +25,6 @@
         <div class="card">
           <div class="card-body">
             <h2 class="card-title h3">Contents</h2>
-
-            <!-- parent link -->
-            <div class="mb-3">
-              <a href="{{ parent.url | relative_url }}" class="h5 d-inline-block mb-2">{{ parent.title }}</a>
-            </div>
-
             {%- comment -%}
               Single children collection: prefer section == parent.parent_id (kept unchanged as requested);
               if empty, fall back to section == parent.title. Then sort by nav_order.
