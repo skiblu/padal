@@ -38,11 +38,14 @@
                 {%- endif -%}
                 {%- assign children = children | sort: "nav_order" -%}
                 {%- if children and children.size > 0 -%}
-                  <ul>
+                  <!-- Render children in 3 responsive columns (col-md-4) -->
+                  <div class="row g-2 mt-2">
                     {%- for c in children -%}
-                      <li><a href="{{ c.url | relative_url }}">{{ c.title }}</a></li>
+                      <div class="col-12 col-md-4">
+                        <a href="{{ c.url | relative_url }}">{{ c.title }}</a>
+                      </div>
                     {%- endfor -%}
-                  </ul>
+                  </div>
                 {%- endif -%}
               </li>
             </ul>
