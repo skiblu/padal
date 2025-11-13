@@ -6,6 +6,6 @@ topics: Shivan, Shiva, songs, devotional, நமசிவாய, ஹரஹரச
 ---
 
 {% include figure.html img="shivan_poster.gif" width="15%" %}
-{% include toc-parent.html parent_name="Shivan" %}
+{% include toc-sections.html parent_name="Shivan" %}
 
 

@@ -5,6 +5,6 @@ title: Hanuman
 topics: Hanuman
 ---
 {% include figure.html img="hanuman_poster.gif" width="15%" %}
-{% include toc-parent.html parent_name="Hanuman" %}
+{% include toc-sections.html parent_name="Hanuman" %}
 
 

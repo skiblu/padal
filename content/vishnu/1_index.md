@@ -7,6 +7,6 @@ topics: Vishnu, songs, விஷ்ணு, devotional, lyrics
 
 
 {% include figure.html img="vishnu_poster.gif" width="15%" %}
-{% include toc-parent.html parent_name="Vishnu" %}
+{% include toc-sections.html parent_name="Vishnu" %}
 
 

@@ -6,6 +6,6 @@ topics: KaruppuSwamy, songs, கருப்பசாமி, lyrics, devotional
 ---
 
 {% include figure.html img="karuppuswamy_poster.jpg" width="15%" %}
-{% include toc-parent.html parent_name="KaruppuSwamy" %}
+{% include toc-sections.html parent_name="KaruppuSwamy" %}
 
 

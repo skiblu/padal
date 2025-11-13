@@ -6,6 +6,6 @@ topics: Amman, Sakthi, Durga, சக்தி, துர்கா, அம்ம�
 ---
 
 {% include figure.html img="sakthi_poster.gif" width="15%" %}
-{% include toc-parent.html parent_name="Sakthi" %}
+{% include toc-sections.html parent_name="Sakthi" %}
 
 

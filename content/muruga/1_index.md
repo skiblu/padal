@@ -6,6 +6,6 @@ topics: Murugan, Muruga, lyrics, முருகன், முருகா, ப�
 ---
 
 {% include figure.html img="murugan_poster.gif" width="15%" %}
-{% include toc-parent.html parent_name="Murugan" %}
+{% include toc-sections.html parent_name="Murugan" %}
 
 
