@@ -17,11 +17,9 @@ layout: default
             <a href="{{ '/' | relative_url }}">Home</a>
           </li>
           {% if page.section or page.parent_id %}
-          <a href="{{ '/' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/">{{ page.section | default: page.parent_id }}</a>
-          <li class="breadcrumb-item">{{ page.section | default: page.parent_id }}</li>
+          <a href="{{ '/content' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/">{{ page.section | default: page.parent_id }}</a>
           {% endif %}
-            <a href="{{ page.url | relative_url }}">{{ page.nav | default: page.title }}</a>
-          <li class="breadcrumb-item" aria-current="page">{{ page.nav | default: page.title }}</li>
+          <a href="{{ page.url | relative_url }}">{{ page.nav | default: page.title }}</a>
         </ol>
       </nav>
 
