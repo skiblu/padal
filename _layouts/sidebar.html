@@ -14,11 +14,11 @@ layout: default
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb ms-3 mb-0">
         <li class="breadcrumb-item">
-          <a href="{{ '/' | relative_url }}">Home</a><span class="mx-1"> / </span>
+          <a href="{{ '/' | relative_url }}">Home</a>
         </li>
         {% if page.section or page.parent_id %}
         <li class="breadcrumb-item">
-          <a href="{{ '/content/' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/">{{ page.section | default: page.parent_id }}</a><span class="mx-1"> / </span>
+          <a href="{{ '/content/' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/">{{ page.section | default: page.parent_id }}</a>
         </li>
         {% endif %}
         <li class="breadcrumb-item">
