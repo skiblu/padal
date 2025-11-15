@@ -3,20 +3,22 @@
   border-radius: 6px;
   border: 1px solid #ffd8b5;
   background-color: #fffaf6;
-  transition: transform 0.08s ease, box-shadow 0.12s ease, border-color 0.12s ease;
-  display: block;
+  transition: transform 0.06s ease, box-shadow 0.1s ease, border-color 0.1s ease;
   display: flex;
+  padding: 0.6rem 0.75rem; /* compact but still readable */
+  gap: 0.5rem;            /* tighter spacing */
 }
 
 .toc-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(255, 111, 97, 0.12);
+  transform: translateY(-2px); /* smaller lift */
+  box-shadow: 0 5px 14px rgba(255, 111, 97, 0.12);
   border-color: #ff6f61;
 }
 
 .toc-link {
   color: #0b5ed7;
   text-decoration: none;
+  font-size: 0.95rem; /* slightly smaller text */
 }
 
 .toc-link:hover {
@@ -24,8 +26,10 @@
   text-decoration: underline;
 }
 
+/* Mobile tweaks */
 @media (max-width: 768px) {
   .toc-card {
+    padding: 0.5rem 0.6rem; /* even more compact on mobile */
     min-height: auto;
   }
 }
