@@ -2,86 +2,65 @@
   TOC for a single parent. Usage:
     {% include toc-sections.html parent_name="my-parent-id" %}
 
-  Finds the parent page by its "id" front-matter (or title as fallback) and lists:
-  - a link to the parent page
-  - links to children where page.section matches the parent (sorted by nav_order)
-
-  Silent if parent_name missing or no matching page.
+  Lists all files where page.section matches the given parent_name.
 {% endcomment %}
 
 {%- assign pid = include.parent_name | default: "" -%}
 {%- if pid == "" -%}
   {%- comment -%} no parent_name supplied — render nothing {%- endcomment -%}
 {%- else -%}
-  {%- comment -%} try find parent by id, then fall back to title {%- endcomment -%}
-  {%- assign parent = site.html_pages | where: "id", pid | first -%}
-  {%- if parent == nil -%}
-    {%- assign parent = site.html_pages | where: "title", pid | first -%}
-  {%- endif -%}
+  {%- comment -%} collect all files where section matches parent_name {%- endcomment -%}
+  {%- assign children = site.html_pages | where: "section", pid | sort: "nav_order" -%}
 
-  {%- if parent -%}
+  {%- if children and children.size > 0 -%}
     <div class="row justify-content-center">
       <div class="m-3 col-md-8">
         <div class="card">
           <div class="card-body">
             <h2 class="card-title h3">Contents</h2>
-            {%- comment -%}
-              Single children collection: prefer section == parent.parent_id (kept unchanged as requested);
-              if empty, fall back to section == parent.title. Then sort by nav_order.
-            {%- endcomment -%}
-                {%- assign children = site.html_pages | where: "section", parent.parent_id -%}
-                {%- if children == nil or children.size == 0 -%}
-                  {%- assign children = site.html_pages | where: "section", parent.title -%}
-                {%- endif -%}
-                {%- assign children = children | sort: "nav_order" -%}
-
-                {%- if children and children.size > 0 -%}
-                  <!-- Render children in 3 responsive columns (col-md-4) with card styling -->
-                  <div class="row g-3 mt-2">
-                    {%- for c in children -%}
-                      <div class="col-12 col-md-4">
-                        <div class="card toc-child-card h-100">
-                          <div class="card-body p-3 d-flex flex-column">
-                            <h3 class="card-title h6 mb-1">
-                              <a href="{{ c.url | relative_url }}" class="toc-child-link stretched-link">{{ c.title }}</a>
-                            </h3>
-                            {%- if c.excerpt -%}
-                              <p class="card-text small mb-0 text-muted mt-auto">{{ c.excerpt | strip_html | truncate: 120 }}</p>
-                            {%- endif -%}
-                          </div>
-                        </div>
-                      </div>
-                    {%- endfor -%}
+            <div class="row g-3 mt-2">
+              {%- for c in children -%}
+                <div class="col-12 col-md-4">
+                  <div class="card toc-child-card h-100">
+                    <div class="card-body p-3 d-flex flex-column">
+                      <h3 class="card-title h6 mb-1">
+                        <a href="{{ c.url | relative_url }}" class="toc-child-link stretched-link">{{ c.title }}</a>
+                      </h3>
+                      {%- if c.excerpt -%}
+                        <p class="card-text small mb-0 text-muted mt-auto">{{ c.excerpt | strip_html | truncate: 120 }}</p>
+                      {%- endif -%}
+                    </div>
                   </div>
+                </div>
+              {%- endfor -%}
+            </div>
 
-                  <style>
-                    /* updated local styles: warmer box color and peach hover accent */
-                    .toc-child-card {
-                      border-radius: 6px;
-                      border: 1px solid #ffd8b5; /* soft peach border */
-                      background-color: #fffaf6;  /* subtle warm background */
-                      transition: transform .08s ease, box-shadow .12s ease, border-color .12s ease;
-                      display: flex;
-                    }
-                    .toc-child-card:hover {
-                      transform: translateY(-4px);
-                      box-shadow: 0 8px 20px rgba(255,111,97,0.12); /* peach-tinted shadow */
-                      border-color: #ff6f61; /* stronger peach on hover */
-                    }
-                    .toc-child-link {
-                      color: #0b5ed7; /* keep primary link color */
-                      text-decoration: none;
-                    }
-                    .toc-child-link:hover {
-                      color: #ff6f61; /* change link color on hover to match accent */
-                      text-decoration: underline;
-                    }
-                    @media (max-width: 767.98px) {
-                      .toc-child-card { min-height: auto; }
-                    }
-                  </style>
-                {%- endif -%}
-
+            <style>
+              /* updated local styles: warmer box color and peach hover accent */
+              .toc-child-card {
+                border-radius: 6px;
+                border: 1px solid #ffd8b5; /* soft peach border */
+                background-color: #fffaf6;  /* subtle warm background */
+                transition: transform .08s ease, box-shadow .12s ease, border-color .12s ease;
+                display: flex;
+              }
+              .toc-child-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 20px rgba(255,111,97,0.12); /* peach-tinted shadow */
+                border-color: #ff6f61; /* stronger peach on hover */
+              }
+              .toc-child-link {
+                color: #0b5ed7; /* keep primary link color */
+                text-decoration: none;
+              }
+              .toc-child-link:hover {
+                color: #ff6f61; /* change link color on hover to match accent */
+                text-decoration: underline;
+              }
+              @media (max-width: 767.98px) {
+                .toc-child-card { min-height: auto; }
+              }
+            </style>
           </div>
         </div>
       </div>
