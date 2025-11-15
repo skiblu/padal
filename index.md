@@ -12,6 +12,8 @@ Bhakti Padal is your one-stop destination for all Tamil devotional songs, bhajan
 - **Explore by Category**: Navigate through the side menu or the index to discover songs grouped by Tamil gods and themes.
 - **Learn and Sing Along**: Access transliterations and meanings for Tamil devotional songs to deepen your connection with the divine.
 
+{% include toc-parents.html %}
+
 ### Featured Categories:
 - **Lord Ayyappa**: Songs and rituals for the deity of Sabarimala.
 - **Lord Murugan**: Devotional hymns for the god of wisdom and valor.
@@ -22,4 +24,3 @@ Bhakti Padal is your one-stop destination for all Tamil devotional songs, bhajan
 
 Start your spiritual journey today by exploring the divine content we have to offer. Let Bhakti Padal be your companion in devotion.
 
-{% include toc-parents.html %}
