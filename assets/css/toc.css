@@ -4,7 +4,6 @@
   border: 1px solid #ffd8b5;
   background-color: #fffaf6;
   display: flex;
-
   /* SIGNIFICANT reductions */
   padding: 0.35rem 0.5rem;
   line-height: 1.2;
@@ -36,4 +35,31 @@
   .toc-card {
     padding: 0.3rem 0.45rem;
   }
+}
+
+.toc-card {
+  padding: 0.4rem !important;
+  border-radius: 8px;
+}
+
+.toc-card .card-body {
+  padding: 0.5rem !important;
+}
+
+.toc-link {
+  font-size: 0.95rem;
+  line-height: 1.1;
+}
+
+.card-text {
+  font-size: 0.8rem;
+  line-height: 1.15;
+}
+
+.sort-controls label {
+  font-size: 0.85rem;
+}
+
+.sort-controls input {
+  margin-right: 3px;
 }

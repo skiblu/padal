@@ -4,9 +4,7 @@ TOC for a single parent. Usage:
 {% endcomment %}
 
 {%- assign pid = include.parent_name | default: "" -%}
-{%- if pid == "" -%}
-{# no parent, render nothing #}
-{%- else -%}
+{%- if pid != "" -%}
 
 {%- comment -%} Collect default-sorted list {%- endcomment -%}
 {%- assign children_default = site.html_pages | where: "section", pid | sort: "nav_order" -%}
@@ -24,7 +22,6 @@ TOC for a single parent. Usage:
         <div class="d-flex justify-content-between align-items-center">
           <h2 class="card-title h3 mb-0">Contents</h2>
 
-          <!-- Sort Radio Buttons -->
           <div class="sort-controls">
             <label class="fw-bold me-2">Sort By:</label>
             <label class="me-2">
@@ -86,26 +83,8 @@ TOC for a single parent. Usage:
   </div>
 </div>
 
-<!-- Sorting Script -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const radios = document.querySelectorAll("input[name='tocSortSub']");
-    const blockDefault = document.getElementById("toc-sub-default");
-    const blockAtoZ = document.getElementById("toc-sub-atoz");
-
-    radios.forEach(rb => {
-      rb.addEventListener("change", function () {
-        if (this.value === "atoz") {
-          blockDefault.style.display = "none";
-          blockAtoZ.style.display = "block";
-        } else {
-          blockDefault.style.display = "block";
-          blockAtoZ.style.display = "none";
-        }
-      });
-    });
-  });
-</script>
+<!-- Use shared JS file -->
+<script src="{{ '/assets/js/toc-sort.js' | relative_url }}"></script>
 
 {%- endif -%}
 {%- endif -%}
