@@ -1,7 +1,7 @@
 ---
 parent_id: Ayyappa
 nav_order: 8
-title:  Home
+title: Browse
 topics: Ayyappa, Sloka(s), lyrics, songs, devotional, அய்யப்பன், பாடல்கள்
 ---
 {% include figure.html img="ayyappa_poster.gif" width="15%" %}

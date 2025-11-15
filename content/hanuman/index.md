@@ -1,7 +1,7 @@
 ---
 parent_id: Hanuman
 nav_order: 8
-title: Home
+title: Browse
 topics: Hanuman
 ---
 {% include figure.html img="hanuman_poster.gif" width="15%" %}

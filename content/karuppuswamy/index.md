@@ -1,7 +1,7 @@
 ---
 parent_id: KaruppuSwamy
 nav_order: 19
-title:  Home
+title: Browse
 topics: KaruppuSwamy, songs, கருப்பசாமி, lyrics, devotional
 ---
 

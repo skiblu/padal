@@ -1,7 +1,7 @@
 ---
 parent_id: Ayyappa Mala
 nav_order: 9
-title: Home
+title: Browse
 topics: Ayyappa, Sloka(s), lyrics, songs
 ---
 {% include figure.html img="ayyappa_poster.gif" width="15%" %}
