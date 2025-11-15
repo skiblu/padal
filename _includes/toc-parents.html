@@ -79,23 +79,4 @@ TOC of all items with parent_id.
   </div>
 </div>
 
-<!-- Sorting Script -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const radioButtons = document.querySelectorAll("input[name='tocSort']");
-    const tocDefault = document.getElementById("toc-default");
-    const tocAtoZ = document.getElementById("toc-atoz");
-
-    radioButtons.forEach(rb => {
-      rb.addEventListener("change", function () {
-        if (this.value === "atoz") {
-          tocDefault.style.display = "none";
-          tocAtoZ.style.display = "block";
-        } else {
-          tocDefault.style.display = "block";
-          tocAtoZ.style.display = "none";
-        }
-      });
-    });
-  });
-</script>
+<script src="{{ '/assets/js/toc-sort.js' | relative_url }}"></script>
