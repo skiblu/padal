@@ -1,0 +1,31 @@
+/* Shared styles for TOC cards */
+.toc-card {
+  border-radius: 6px;
+  border: 1px solid #ffd8b5;
+  background-color: #fffaf6;
+  transition: transform 0.08s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+  display: flex;
+}
+
+.toc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(255, 111, 97, 0.12);
+  border-color: #ff6f61;
+}
+
+.toc-link {
+  color: #0b5ed7;
+  text-decoration: none;
+}
+
+.toc-link:hover {
+  color: #ff6f61;
+  text-decoration: underline;
+}
+
+@media (max-width: 767.98px) {
+  .toc-card {
+    min-height: auto;
+  }
+}
+

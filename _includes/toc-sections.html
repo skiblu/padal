@@ -21,10 +21,10 @@
             <div class="row g-3 mt-2">
               {%- for c in children -%}
                 <div class="col-12 col-md-4">
-                  <div class="card toc-child-card h-100">
+                  <div class="card toc-card h-100">
                     <div class="card-body p-3 d-flex flex-column">
                       <h3 class="card-title h6 mb-1">
-                        <a href="{{ c.url | relative_url }}" class="toc-child-link stretched-link">{{ c.title }}</a>
+                        <a href="{{ c.url | relative_url }}" class="toc-link stretched-link">{{ c.title }}</a>
                       </h3>
                       {%- if c.excerpt -%}
                         <p class="card-text small mb-0 text-muted mt-auto">{{ c.excerpt | strip_html | truncate: 120 }}</p>
@@ -34,33 +34,6 @@
                 </div>
               {%- endfor -%}
             </div>
-
-            <style>
-              /* updated local styles: warmer box color and peach hover accent */
-              .toc-child-card {
-                border-radius: 6px;
-                border: 1px solid #ffd8b5; /* soft peach border */
-                background-color: #fffaf6;  /* subtle warm background */
-                transition: transform .08s ease, box-shadow .12s ease, border-color .12s ease;
-                display: flex;
-              }
-              .toc-child-card:hover {
-                transform: translateY(-4px);
-                box-shadow: 0 8px 20px rgba(255,111,97,0.12); /* peach-tinted shadow */
-                border-color: #ff6f61; /* stronger peach on hover */
-              }
-              .toc-child-link {
-                color: #0b5ed7; /* keep primary link color */
-                text-decoration: none;
-              }
-              .toc-child-link:hover {
-                color: #ff6f61; /* change link color on hover to match accent */
-                text-decoration: underline;
-              }
-              @media (max-width: 767.98px) {
-                .toc-child-card { min-height: auto; }
-              }
-            </style>
           </div>
         </div>
       </div>
