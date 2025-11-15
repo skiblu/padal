@@ -2,6 +2,9 @@
 # Generates CSS from _sass partials
 ---
 
+{% comment %}
+  Theme variables from _config.yml
+{% endcomment %}
 {% if site.header-background %}$header-background: {{ site.header-background }};{% endif %}
 {% if site.header-text-color %}$header-text-color: {{ site.header-text-color }};{% endif %}
 {% if site.breadcrumbs-background %}$breadcrumbs-background: {{ site.breadcrumbs-background }};{% endif %}
@@ -14,6 +17,7 @@
 
 /* NEW VARIABLES FOR BACKGROUND */
 {% if site.sidebar-background %}$sidebar-background: {{ site.sidebar-background }};{% endif %}
+{% if site.sidebar-text-color %}$sidebar-text-color: {{ site.sidebar-text-color }};{% endif %}
 {% if site.content-background %}$content-background: {{ site.content-background }};{% endif %}
 {% if site.border-color %}$border-color: {{ site.border-color }};{% endif %}
 {% if site.card-background %}$card-background: {{ site.card-background }};{% endif %}
