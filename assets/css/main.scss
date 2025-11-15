@@ -1,20 +1,22 @@
 ---
-# Generates CSS file from _sass partials
+# Generates CSS from _sass partials
 ---
 
-// customization options
-// these variables are set in "_config.yml"
 {% if site.header-background %}$header-background: {{ site.header-background }};{% endif %}
 {% if site.header-text-color %}$header-text-color: {{ site.header-text-color }};{% endif %}
 {% if site.breadcrumbs-background %}$breadcrumbs-background: {{ site.breadcrumbs-background }};{% endif %}
 {% if site.breadcrumbs-text-color %}$breadcrumbs-text-color: {{ site.breadcrumbs-text-color }};{% endif %}
-$active-nav-color: {{ site.active-nav-color | default: '#d2f4ea' }};
+{% if site.active-nav-color %}$active-nav-color: {{ site.active-nav-color | default: '#d2f4ea' }};{% endif %}
 {% if site.link-color %}$link-color: {{ site.link-color }};{% endif %}
 {% if site.next-button-color %}$next-button-color: {{ site.next-button-color }};{% endif %}
 {% if site.text-color %}$text-color: {{ site.text-color }};{% endif %}
-$base-font-size: {{ site.base-font-size | default: '1.1rem' }};
+{% if site.base-font-size %}$base-font-size: {{ site.base-font-size }};{% endif %}
 
-// Import partials.
-@import
-  "template", "custom"
-;
+/* NEW VARIABLES FOR BACKGROUND */
+{% if site.sidebar-background %}$sidebar-background: {{ site.sidebar-background }};{% endif %}
+{% if site.content-background %}$content-background: {{ site.content-background }};{% endif %}
+{% if site.border-color %}$border-color: {{ site.border-color }};{% endif %}
+{% if site.card-background %}$card-background: {{ site.card-background }};{% endif %}
+
+/* Import all partials */
+@import "template", "custom";
