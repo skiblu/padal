@@ -21,7 +21,7 @@ Lists all pages that have a non-empty parent_id.
             <div class="card toc-parent-card h-100">
               <div class="card-body p-3 d-flex flex-column">
                 <h3 class="card-title h6 mb-1">
-                  <a href="{{ p.url | relative_url }}" class="toc-parent-link stretched-link">{{ p.title }}</a>
+                  <a href="{{ p.url | relative_url }}" class="toc-parent-link stretched-link">{{ p.parent_id }}</a>
                 </h3>
                 {%- if p.excerpt -%}
                 <p class="card-text small mb-0 text-muted mt-auto">{{ p.excerpt | strip_html | truncate: 120 }}</p>
