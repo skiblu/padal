@@ -41,36 +41,37 @@ plugins:
 # next-button-color:
 # text-color:
 # base-font-size:
+########################################
 # -----------------------------
-# BHAKTIPADAL THEME CONFIG - GOLDEN GRADIENT
+# BHAKTIPADAL THEME CONFIG - CALM GOLDEN
 # -----------------------------
 
 # Header
-header-background: "linear-gradient(135deg, #FFD966, #F5B800)"  # gradient golden
-header-text-color: "#3A2E26"
+header-background: "linear-gradient(135deg, #E6D5B8, #D9C4A8)"  # soft warm gradient
+header-text-color: "#3A2E26"                                    # dark brown
 
 # Breadcrumbs
-breadcrumbs-background: "linear-gradient(90deg, #FFE599, #FFD966)"
+breadcrumbs-background: "#F2E7D5"                                # light warm cream
 breadcrumbs-text-color: "#3A2E26"
 
 # Sidebar
-sidebar-background: "linear-gradient(180deg, #FFEDC1, #FFD966)"  # light golden
+sidebar-background: "#F3E8D1"                                    # soft golden-beige
 sidebar-text-color: "#3A2E26"
 
 # Active / hover
-active-nav-color: "#FFC107"      # bright golden highlight
-link-color: "#B5751D"            # darker golden for links
+active-nav-color: "#E8D4B8"                                      # calm highlight
+link-color: "#8C6D42"                                            # subtle brown-gold
 
 # Buttons
-next-button-color: "linear-gradient(135deg, #FFD966, #FFC107)"
+next-button-color: "linear-gradient(135deg, #E8D4B8, #D9C4A8)"   # soft gradient
 
 # Page content
-content-background: "#FFF8E1"    # soft cream for readability
+content-background: "#FFF8F0"                                     # soft cream
 text-color: "#3A2E26"
 
 # Cards
-card-background: "linear-gradient(180deg, #FFF3C4, #FFE699)"
-border-color: "#E6C96D"
+card-background: "#FFF3E0"                                        # very soft cream
+border-color: "#E2D4C1"
 
 # Typography
 base-font-size: "1.1rem"

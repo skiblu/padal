@@ -2,14 +2,11 @@
 # Generates CSS from _sass partials
 ---
 
-{% comment %}
-  Theme variables from _config.yml
-{% endcomment %}
 {% if site.header-background %}$header-background: {{ site.header-background }};{% endif %}
 {% if site.header-text-color %}$header-text-color: {{ site.header-text-color }};{% endif %}
 {% if site.breadcrumbs-background %}$breadcrumbs-background: {{ site.breadcrumbs-background }};{% endif %}
 {% if site.breadcrumbs-text-color %}$breadcrumbs-text-color: {{ site.breadcrumbs-text-color }};{% endif %}
-{% if site.active-nav-color %}$active-nav-color: {{ site.active-nav-color | default: '#FFC107' }};{% endif %}
+{% if site.active-nav-color %}$active-nav-color: {{ site.active-nav-color | default: '#E8D4B8' }};{% endif %}
 {% if site.link-color %}$link-color: {{ site.link-color }};{% endif %}
 {% if site.next-button-color %}$next-button-color: {{ site.next-button-color }};{% endif %}
 {% if site.text-color %}$text-color: {{ site.text-color }};{% endif %}
@@ -23,7 +20,7 @@
 {% if site.card-background %}$card-background: {{ site.card-background }};{% endif %}
 
 /* ===========================
-   GOLDEN GRADIENT THEME STYLING
+   CALM GOLDEN THEME STYLING
 =========================== */
 
 /* Body */
@@ -104,7 +101,7 @@ a {
 }
 
 a:hover {
-  color: darken($link-color, 10%);
+  color: darken($link-color, 8%);
 }
 
 /* Import other partials */
