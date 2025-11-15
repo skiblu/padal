@@ -42,6 +42,15 @@ plugins:
 # text-color:
 # base-font-size:
 
+header-background: "#C49F75"        # Navigation bar background
+header-text-color: "#3A2E26"        # Nav text color
+breadcrumbs-background: "#F4E2C7"   # Light sandal background
+breadcrumbs-text-color: "#3A2E26"   # Brown text
+active-nav-color: "#E8D4B8"         # Lighter highlight
+link-color: "#2A4D69"               # Deep blue links
+next-button-color: "#6A8F4E"        # Earthy green buttons
+text-color: "#2B2B2B"               # Body text
+base-font-size: "1.1rem"      # Slightly larger base font size
 
 ########### SEO SETTINGS [optional!]
 # set noindex to true if you do NOT want Google to index your site
