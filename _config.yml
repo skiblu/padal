@@ -42,15 +42,31 @@ plugins:
 # text-color:
 # base-font-size:
 
-header-background: "#C49F75"        # Navigation bar background
-header-text-color: "#3A2E26"        # Nav text color
-breadcrumbs-background: "#F4E2C7"   # Light sandal background
-breadcrumbs-text-color: "#3A2E26"   # Brown text
-active-nav-color: "#E8D4B8"         # Lighter highlight
-link-color: "#2A4D69"               # Deep blue links
-next-button-color: "#6A8F4E"        # Earthy green buttons
-text-color: "#2B2B2B"               # Body text
-base-font-size: "1.1rem"      # Slightly larger base font size
+# --- THEME COLORS (Auto-applied to SCSS build) ---
+
+# Header (top navigation bar)
+header-background: "#D6C0A8"     # sandal beige
+header-text-color: "#3A2E26"     # dark sandal brown
+# Breadcrumbs / secondary header
+breadcrumbs-background: "#E8DCCB"
+breadcrumbs-text-color: "#3A2E26"
+# Sidebar (new)
+sidebar-background: "#D9C4A8"     # slightly deeper sandal tone
+sidebar-text-color: "#3A2E26"
+# Active and hover UI colors
+active-nav-color: "#E8D4B8"       # light highlight sandal
+link-color: "#2A4D69"             # deep blue (you already use it — it matches well)
+# Buttons / next button
+next-button-color: "#C9B08F"
+# Page content background + text
+content-background: "#F9F2E7"     # soft warm cream
+text-color: "#2B2B2B"
+# Optional fine-tuning
+border-color: "#E1D4C1"
+card-background: "#FFF8EE"
+# Base font size
+base-font-size: "1.1rem"
+
 
 ########### SEO SETTINGS [optional!]
 # set noindex to true if you do NOT want Google to index your site
