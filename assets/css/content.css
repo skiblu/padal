@@ -4,6 +4,7 @@
   border: 1px solid #ffd8b5;
   background-color: #fffaf6;
   transition: transform 0.08s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+  display: block;
   display: flex;
 }
 
@@ -23,7 +24,7 @@
   text-decoration: underline;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .toc-card {
     min-height: auto;
   }
