@@ -42,30 +42,41 @@ plugins:
 # text-color:
 # base-font-size:
 
-# --- THEME COLORS (Auto-applied to SCSS build) ---
+# -----------------------------
+# BHAKTIPADAL THEME CONFIG
+# -----------------------------
 
-# Header (top navigation bar)
+# Header
 header-background: "#D6C0A8"     # sandal beige
-header-text-color: "#3A2E26"     # dark sandal brown
-# Breadcrumbs / secondary header
+header-text-color: "#3A2E26"     # dark brown
+
+# Breadcrumbs
 breadcrumbs-background: "#E8DCCB"
 breadcrumbs-text-color: "#3A2E26"
-# Sidebar (new)
-sidebar-background: "#D9C4A8"     # slightly deeper sandal tone
+
+# Sidebar
+sidebar-background: "#D9C4A8"    # soft sandal
 sidebar-text-color: "#3A2E26"
-# Active and hover UI colors
-active-nav-color: "#E8D4B8"       # light highlight sandal
-link-color: "#2A4D69"             # deep blue (you already use it — it matches well)
-# Buttons / next button
+
+# Active / hover
+active-nav-color: "#E8D4B8"      # highlight for active nav
+link-color: "#2A4D69"            # deep blue links
+
+# Buttons
 next-button-color: "#C9B08F"
-# Page content background + text
-content-background: "#F9F2E7"     # soft warm cream
+
+# Page content
+content-background: "#F9F2E7"    # soft warm cream
 text-color: "#2B2B2B"
-# Optional fine-tuning
-border-color: "#E1D4C1"
+
+# Cards
 card-background: "#FFF8EE"
-# Base font size
+border-color: "#E1D4C1"
+
+# Typography
 base-font-size: "1.1rem"
+
+########################################
 
 
 ########### SEO SETTINGS [optional!]

@@ -15,7 +15,7 @@
 {% if site.text-color %}$text-color: {{ site.text-color }};{% endif %}
 {% if site.base-font-size %}$base-font-size: {{ site.base-font-size }};{% endif %}
 
-/* NEW VARIABLES FOR BACKGROUND */
+/* Background and card variables */
 {% if site.sidebar-background %}$sidebar-background: {{ site.sidebar-background }};{% endif %}
 {% if site.sidebar-text-color %}$sidebar-text-color: {{ site.sidebar-text-color }};{% endif %}
 {% if site.content-background %}$content-background: {{ site.content-background }};{% endif %}
@@ -26,14 +26,14 @@
    THEME STYLING
 =========================== */
 
-/* Body background */
+/* Body */
 body {
   background-color: $content-background;
   color: $text-color;
   font-size: $base-font-size;
 }
 
-/* Header styling */
+/* Header / Navigation */
 header, .navbar {
   background-color: $header-background;
   color: $header-text-color;
@@ -45,41 +45,34 @@ header, .navbar {
   color: $breadcrumbs-text-color;
 }
 
-/* Sidebar styling */
-.sidebar,
-.sidebar-container,
-aside.sidebar {
-  background-color: $sidebar-background;
+/* Sidebar */
+#sidebar-wrapper {
+  background-color: $sidebar-background !important;
   color: $sidebar-text-color;
   padding: 1rem;
   border-radius: 8px;
 }
 
 /* Sidebar links */
-.sidebar a,
-.sidebar-container a,
-aside.sidebar a {
+#sidebar-wrapper a {
   color: $sidebar-text-color;
   text-decoration: none;
 }
 
-.sidebar a:hover,
-.sidebar-container a:hover,
-aside.sidebar a:hover {
+#sidebar-wrapper a:hover {
   color: $link-color;
 }
 
-/* Active sidebar item highlight */
-.sidebar .active,
-.sidebar li.active > a,
-.sidebar-container .active,
-aside.sidebar .active {
-  background-color: $active-nav-color;
+/* Active sidebar item */
+#sidebar-wrapper .nav-active,
+#sidebar-wrapper .active {
+  background-color: $active-nav-color !important;
   color: $header-text-color;
   border-radius: 5px;
 }
 
-/* Content area */
+/* Page content */
+#page-content-wrapper,
 .page-content,
 .wrapper,
 .content {
@@ -90,15 +83,17 @@ aside.sidebar .active {
   padding: 1.5rem;
 }
 
-/* Cards */
+/* Cards / TOC */
 .card,
 .toc-card {
   background-color: $card-background;
   border: 1px solid $border-color;
+  border-radius: 8px;
 }
 
-/* Buttons / Next button */
-.next-button {
+/* Buttons / Next buttons */
+.next-button,
+.btn-next {
   background-color: $next-button-color;
   color: $header-text-color;
 }
@@ -112,5 +107,5 @@ a:hover {
   color: darken($link-color, 10%);
 }
 
-/* Import all partials */
+/* Import other partials */
 @import "template", "custom";
