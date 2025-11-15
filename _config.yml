@@ -41,37 +41,36 @@ plugins:
 # next-button-color:
 # text-color:
 # base-font-size:
-
 # -----------------------------
-# BHAKTIPADAL THEME CONFIG
+# BHAKTIPADAL THEME CONFIG - GOLDEN GRADIENT
 # -----------------------------
 
 # Header
-header-background: "#D6C0A8"     # sandal beige
-header-text-color: "#3A2E26"     # dark brown
+header-background: "linear-gradient(135deg, #FFD966, #F5B800)"  # gradient golden
+header-text-color: "#3A2E26"
 
 # Breadcrumbs
-breadcrumbs-background: "#E8DCCB"
+breadcrumbs-background: "linear-gradient(90deg, #FFE599, #FFD966)"
 breadcrumbs-text-color: "#3A2E26"
 
 # Sidebar
-sidebar-background: "#D9C4A8"    # soft sandal
+sidebar-background: "linear-gradient(180deg, #FFEDC1, #FFD966)"  # light golden
 sidebar-text-color: "#3A2E26"
 
 # Active / hover
-active-nav-color: "#E8D4B8"      # highlight for active nav
-link-color: "#2A4D69"            # deep blue links
+active-nav-color: "#FFC107"      # bright golden highlight
+link-color: "#B5751D"            # darker golden for links
 
 # Buttons
-next-button-color: "#C9B08F"
+next-button-color: "linear-gradient(135deg, #FFD966, #FFC107)"
 
 # Page content
-content-background: "#F9F2E7"    # soft warm cream
-text-color: "#2B2B2B"
+content-background: "#FFF8E1"    # soft cream for readability
+text-color: "#3A2E26"
 
 # Cards
-card-background: "#FFF8EE"
-border-color: "#E1D4C1"
+card-background: "linear-gradient(180deg, #FFF3C4, #FFE699)"
+border-color: "#E6C96D"
 
 # Typography
 base-font-size: "1.1rem"
