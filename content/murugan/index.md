@@ -1,7 +1,7 @@
 ---
 parent_id: Murugan
 nav_order: 4
-title:  Murugan
+title:  Home
 topics: Murugan, Muruga, lyrics, முருகன், முருகா, பாடல்கள், devotional, songs
 ---
 
