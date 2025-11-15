@@ -18,5 +18,95 @@
 {% if site.border-color %}$border-color: {{ site.border-color }};{% endif %}
 {% if site.card-background %}$card-background: {{ site.card-background }};{% endif %}
 
+/* ===========================
+   THEME STYLING
+=========================== */
+
+/* Body background */
+body {
+  background-color: $content-background;
+  color: $text-color;
+  font-size: $base-font-size;
+}
+
+/* Header styling */
+header, .navbar {
+  background-color: $header-background;
+  color: $header-text-color;
+}
+
+/* Breadcrumbs */
+.breadcrumbs, .breadcrumb {
+  background-color: $breadcrumbs-background;
+  color: $breadcrumbs-text-color;
+}
+
+/* Sidebar styling */
+.sidebar,
+.sidebar-container,
+aside.sidebar {
+  background-color: $sidebar-background;
+  color: $sidebar-text-color;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Sidebar links */
+.sidebar a,
+.sidebar-container a,
+aside.sidebar a {
+  color: $sidebar-text-color;
+  text-decoration: none;
+}
+
+.sidebar a:hover,
+.sidebar-container a:hover,
+aside.sidebar a:hover {
+  color: $link-color;
+}
+
+/* Active sidebar item highlight */
+.sidebar .active,
+.sidebar li.active > a,
+.sidebar-container .active,
+aside.sidebar .active {
+  background-color: $active-nav-color;
+  color: $header-text-color;
+  border-radius: 5px;
+}
+
+/* Content area */
+.page-content,
+.wrapper,
+.content {
+  background-color: $content-background;
+  color: $text-color;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/* Cards */
+.card,
+.toc-card {
+  background-color: $card-background;
+  border: 1px solid $border-color;
+}
+
+/* Buttons / Next button */
+.next-button {
+  background-color: $next-button-color;
+  color: $header-text-color;
+}
+
+/* Links */
+a {
+  color: $link-color;
+}
+
+a:hover {
+  color: darken($link-color, 10%);
+}
+
 /* Import all partials */
 @import "template", "custom";

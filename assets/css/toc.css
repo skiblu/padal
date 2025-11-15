@@ -1,8 +1,6 @@
 /* Compact TOC cards */
 .toc-card {
   border-radius: 4px;
-  border: 1px solid #ffd8b5;
-  background-color: #fffaf6;
   display: flex;
   /* SIGNIFICANT reductions */
   padding: 0.35rem 0.5rem;
