@@ -1,33 +1,23 @@
-(function () {
+(function() {
   const RECENT_KEY = 'bhaktipadal_recent';
   const FAVORITE_KEY = 'bhaktipadal_favorites';
   const MAX_RECENT = 10;
 
   document.addEventListener('DOMContentLoaded', () => {
-
-    /* =========================================================
-       LOAD TRASH SVG FROM LAYOUT (works even in external JS)
-    ========================================================== */
-    const trashIcon = document.getElementById("trash-icon")
-      ? document.getElementById("trash-icon").innerHTML
-      : '<span style="font-size:14px;">✖</span>';
-
-    /* =========================================================
-       FAVORITES + RECENT
-    ========================================================== */
-
     const favContainer = document.getElementById('favorite-btn-container');
     const allowHistory = !!favContainer;
 
-    const pageTitle = document.title.split('|')[0].trim();
+    // Current page info
+    const pageTitle = document.title.split('|')[0].trim(); // remove pipe suffix
     const currentPage = { title: pageTitle, url: window.location.pathname };
 
+    // --- Storage helpers ---
     const getRecent = () => JSON.parse(localStorage.getItem(RECENT_KEY)) || [];
     const getFavorites = () => JSON.parse(localStorage.getItem(FAVORITE_KEY)) || [];
     const saveRecent = (pages) => localStorage.setItem(RECENT_KEY, JSON.stringify(pages));
     const saveFavorites = (pages) => localStorage.setItem(FAVORITE_KEY, JSON.stringify(pages));
 
-    // ---- Update Recents ----
+    // --- Update recents ---
     if (allowHistory) {
       let recentPages = getRecent().filter(p => p.url !== currentPage.url);
       recentPages.unshift(currentPage);
@@ -35,7 +25,7 @@
       saveRecent(recentPages);
     }
 
-    // ---- Favorite helpers ----
+    // --- Favorites helpers ---
     function isFavorite(page) {
       return getFavorites().some(p => p.url === page.url);
     }
@@ -50,30 +40,33 @@
       renderFavorites();
     }
 
-    // ---- Render Cards (Favorites + Recent) ----
+    // --- Render table rows ---
     function renderCards(containerId, pages) {
       const container = document.getElementById(containerId);
       if (!container) return;
-
       container.innerHTML = '';
 
       pages.forEach(p => {
         const tr = document.createElement('tr');
 
-        // Title
+        // Title column
         const tdTitle = document.createElement('td');
-        tdTitle.innerHTML = `<a href="${p.url}" class="toc-link">${p.title}</a>`;
+        const link = document.createElement('a');
+        link.href = p.url;
+        link.innerText = p.title;
+        link.className = 'toc-link';
+        tdTitle.appendChild(link);
 
-        // Remove button
+        // Remove button column
         const tdRemove = document.createElement('td');
+        tdRemove.className = 'text-center';
         const btn = document.createElement('button');
-        btn.className = 'fav-remove-btn';
-        btn.innerHTML = trashIcon;
-
+        btn.className = 'remove-btn';
+        btn.innerHTML = `<i class="bi bi-trash"></i>`; // Bootstrap icon
+        btn.title = 'Remove';
         btn.addEventListener('click', (e) => {
           e.stopPropagation();
           e.preventDefault();
-
           if (containerId === 'favorites-container') {
             saveFavorites(getFavorites().filter(f => f.url !== p.url));
             renderFavorites();
@@ -82,7 +75,6 @@
             renderRecent();
           }
         });
-
         tdRemove.appendChild(btn);
 
         tr.appendChild(tdTitle);
@@ -94,26 +86,28 @@
     function renderFavorites() { renderCards('favorites-container', getFavorites()); }
     function renderRecent() { renderCards('recent-container', getRecent()); }
 
-    /* =========================================================
-       FAVORITE BUTTON (small)
-    ========================================================== */
-
+    // --- Favorite button on page ---
     function createFavoriteButton() {
       if (!favContainer) return;
 
       const btn = document.createElement('button');
       btn.id = 'favorite-btn';
-      btn.style.backgroundColor = '#f5d38d';
-      btn.style.border = '1px solid #d4b56b';
-      btn.style.borderRadius = '3px';
-      btn.style.padding = '0.15rem 0.35rem';
-      btn.style.fontSize = '0.75rem';
-      btn.style.cursor = 'pointer';
-      btn.style.marginLeft = '0.3rem';
+      btn.className = 'favorite-btn';
+      if (isFavorite(currentPage)) btn.classList.add('active');
 
-      btn.innerText = isFavorite(currentPage) ? '★ Remove' : '☆ Add';
+      const icon = document.createElement('i');
+      icon.className = 'bi bi-star'; // empty star
+      if (isFavorite(currentPage)) icon.className = 'bi bi-star-fill'; // filled if active
+      btn.appendChild(icon);
 
-      btn.addEventListener('click', () => toggleFavorite(currentPage));
+      const text = document.createElement('span');
+      text.textContent = isFavorite(currentPage) ? 'Remove' : 'Add';
+      btn.appendChild(text);
+
+      btn.addEventListener('click', () => {
+        toggleFavorite(currentPage);
+        updateFavoriteButton();
+      });
 
       favContainer.appendChild(btn);
     }
@@ -121,40 +115,36 @@
     function updateFavoriteButton() {
       const btn = document.getElementById('favorite-btn');
       if (!btn) return;
+      const icon = btn.querySelector('i');
+      const text = btn.querySelector('span');
 
-      btn.innerText = isFavorite(currentPage) ? '★ Remove' : '☆ Add';
-      btn.style.backgroundColor = isFavorite(currentPage) ? '#ffd966' : '#f5d38d';
+      if (isFavorite(currentPage)) {
+        btn.classList.add('active');
+        icon.className = 'bi bi-star-fill';
+        text.textContent = 'Remove';
+      } else {
+        btn.classList.remove('active');
+        icon.className = 'bi bi-star';
+        text.textContent = 'Add';
+      }
     }
 
-    // Clear Buttons
+    // --- Clear buttons ---
     const clearFavBtn = document.getElementById('clear-favorites');
-    if (clearFavBtn) clearFavBtn.addEventListener('click', () => { localStorage.removeItem(FAVORITE_KEY); renderFavorites(); });
+    if (clearFavBtn) clearFavBtn.addEventListener('click', () => {
+      localStorage.removeItem(FAVORITE_KEY);
+      renderFavorites();
+    });
 
     const clearRecentBtn = document.getElementById('clear-recent');
-    if (clearRecentBtn) clearRecentBtn.addEventListener('click', () => { localStorage.removeItem(RECENT_KEY); renderRecent(); });
+    if (clearRecentBtn) clearRecentBtn.addEventListener('click', () => {
+      localStorage.removeItem(RECENT_KEY);
+      renderRecent();
+    });
 
-    // Init Favorites
+    // --- Initialize ---
     createFavoriteButton();
     renderFavorites();
     renderRecent();
-
-    /* =========================================================
-       TOC SORT (A–Z or Default)
-    ========================================================== */
-    const radioButtons = document.querySelectorAll("input[name='tocSort']");
-    const tocDefault = document.getElementById("toc-default");
-    const tocAtoZ = document.getElementById("toc-atoz");
-
-    radioButtons.forEach(rb => {
-      rb.addEventListener("change", function () {
-        if (this.value === "atoz") {
-          if (tocDefault) tocDefault.style.display = "none";
-          if (tocAtoZ) tocAtoZ.style.display = "block";
-        } else {
-          if (tocDefault) tocDefault.style.display = "block";
-          if (tocAtoZ) tocAtoZ.style.display = "none";
-        }
-      });
-    });
   });
 })();

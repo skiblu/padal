@@ -30,3 +30,26 @@
     border-color: #c0a969;
     color: #5a4726;
 }
+
+/* Remove Button (table) */
+.remove-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 4px;
+    font-size: 0.65rem;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+    border-radius: 2px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.remove-btn i {
+    font-size: 0.75rem;
+}
+
+.remove-btn:hover {
+    background: #cc0000;
+    color: #fff;
+}
