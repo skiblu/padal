@@ -1,97 +1,78 @@
-/* ===== Custom Stylish Table CSS ===== */
-
-.stylish-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-  overflow: hidden;
+/* Global font scaling for table components */
+.stylish-table-wrapper,
+.stylish-table,
+.stylish-table * {
+    font-size: 0.55rem !important;   /* ~50% reduction */
 }
 
-.stylish-table thead {
-  background: linear-gradient(135deg, #E6D5B8, #D9C4A8); /* calm golden header */
+/* Table styling */
+.stylish-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    font-weight: 400;
 }
 
 .stylish-table thead th {
-  color: #3A2E26;
-  font-weight: 600;
-  padding: 0.75rem 1rem;
-  border-bottom: 2px solid #E1D4C1;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-}
-
-.stylish-table tbody tr {
-  transition: background-color 0.2s ease;
-}
-
-.stylish-table tbody tr:nth-of-type(odd) {
-  background: #fcf7ed; /* very light warm cream */
-}
-
-.stylish-table tbody tr:nth-of-type(even) {
-  background: #f9f4e6;
-}
-
-.stylish-table tbody tr:hover {
-  background: rgba(217, 196, 168, 0.3); /* hovered row: soft golden */
+    background: linear-gradient(90deg, #c8a858, #e3d18a);
+    color: #4a3f1e;
+    font-weight: 700;
+    padding: 6px 4px;
+    text-align: left;
+    white-space: nowrap;
 }
 
 .stylish-table tbody td {
-  color: #3A2E26;
-  padding: 0.7rem 1rem;
-  vertical-align: middle;
-  border-bottom: 1px solid #E1D4C1;
+    padding: 6px 4px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
 }
 
-.stylish-table tbody td:last-child {
-  text-align: center;
+/* Hover effect */
+.stylish-table tbody tr:hover {
+    background: #faf6e5;
 }
 
-.stylish-table button.remove-item {
-  padding: 0.2rem 0.6rem;
-  font-size: 0.9rem;
-  color: #A33;
-  background: transparent;
-  border: 1px solid #A33;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
-}
-.stylish-table button.remove-item:hover {
-  background: #A33;
-  color: #fff;
+/* Remove Button */
+.remove-btn {
+    background: #fff;
+    border: 1px solid #cc0000;
+    color: #cc0000;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
-/* Responsive */
+.remove-btn:hover {
+    background: #cc0000;
+    color: #fff;
+}
+
+/* The “X” icon visibility fix */
+.remove-btn i {
+    font-size: 0.7rem;
+    pointer-events: none;
+}
+
+/* Mobile optimization */
 @media (max-width: 576px) {
-  .stylish-table thead {
-    display: none;
-  }
-  .stylish-table,
-  .stylish-table tbody,
-  .stylish-table tr,
-  .stylish-table td {
-    display: block;
-    width: 100%;
-  }
-  .stylish-table tr {
-    margin-bottom: 1rem;
-  }
-  .stylish-table td {
-    text-align: right;
-    padding-left: 50%;
-    position: relative;
-  }
-  .stylish-table td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 1rem;
-    width: calc(50% - 1rem);
-    white-space: nowrap;
-    font-weight: 600;
-    color: #3A2E26;
-  }
+    .stylish-table thead th {
+        padding: 5px 3px;
+        font-size: 0.6rem !important;
+    }
+
+    .stylish-table tbody td {
+        padding: 5px 3px;
+        font-size: 0.55rem !important;
+    }
+
+    .remove-btn {
+        padding: 2px 4px;
+        font-size: 0.55rem !important;
+    }
 }

@@ -1,19 +1,28 @@
 {% comment %}
-Favorites list with sort and clear functionality (stylish golden table)
+Favorites list with sort and clear functionality (stylish golden table - mobile optimized)
 {% endcomment %}
 
-<div class="row justify-content-center">
+<div class="row justify-content-center stylish-table-wrapper">
     <div class="m-3 col-md-8">
         <div class="card">
             <div class="card-body">
 
                 <!-- Header with sort and clear -->
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h2 class="card-title h3 mb-0">Favorites</h2>
-                    <div class="d-flex align-items-center">
-                        <button id="clear-favorites" class="btn btn-sm btn-outline-danger me-2">Clear All</button>
-                        <label class="me-1 fw-bold mb-0">Sort:</label>
-                        <select id="sort-favorites" class="form-select form-select-sm d-inline-block w-auto">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h2 class="card-title mb-0" style="font-size: 1rem;">Favorites</h2>
+
+                    <div class="d-flex align-items-center" style="gap: 4px;">
+                        <button id="clear-favorites"
+                                class="btn btn-sm btn-outline-danger"
+                                style="font-size: 0.6rem; padding: 2px 6px;">
+                            Clear All
+                        </button>
+
+                        <label class="fw-bold mb-0" style="font-size: 0.6rem;">Sort:</label>
+
+                        <select id="sort-favorites"
+                                class="form-select form-select-sm d-inline-block w-auto"
+                                style="font-size: 0.6rem; padding: 2px 4px;">
                             <option value="default">Default</option>
                             <option value="atoz">A to Z</option>
                         </select>
@@ -25,12 +34,12 @@ Favorites list with sort and clear functionality (stylish golden table)
                     <table class="stylish-table mb-0">
                         <thead>
                         <tr>
-                            <th>Title</th>
-                            <th style="width: 80px;">Remove</th>
+                            <th style="font-size: 0.7rem;">Title</th>
+                            <th style="width: 60px; font-size: 0.7rem;">Remove</th>
                         </tr>
                         </thead>
                         <tbody id="favorites-container">
-                        <!-- Favorite rows inserted by JS -->
+                        <!-- Inserted dynamically -->
                         </tbody>
                     </table>
                 </div>
