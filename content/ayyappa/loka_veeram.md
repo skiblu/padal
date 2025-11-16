@@ -1,7 +1,7 @@
 ---
 section: Ayyappa
 nav_order: 93
-youtube_id: xHiMLXgx0OA
+audio_id: u7e5GU83
 title: Loka Veeram
 topics: Ayyappa, Loka, Veeram, லோக, வீரம்
 ---

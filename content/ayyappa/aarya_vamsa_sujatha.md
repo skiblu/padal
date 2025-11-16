@@ -1,7 +1,7 @@
 ---
 section: Ayyappa
 nav_order: 91
-youtube_id: EeTrlA35Iu0
+audio_id: fY6e9Hko9
 title: Aarya Vamsa Sujatha
 topics: Ayyappa, Aarya, Vamsa, Sujatha
 ---

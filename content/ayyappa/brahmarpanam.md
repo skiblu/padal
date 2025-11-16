@@ -1,7 +1,7 @@
 ---
 section: Ayyappa
 nav_order: 90
-youtube_id: xl3JulDyR6s
+audio_file: 7hd63diT7
 title: Brahmarpanam
 topics: Ayyappa, Brahmarpanam
 ---
