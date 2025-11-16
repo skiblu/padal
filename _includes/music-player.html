@@ -11,7 +11,7 @@ audio: dfdfd33
 <div class="music-player-wrapper" aria-label="Audio player" data-audio-id="{{ page.audio_id }}">
     <!-- Hidden native audio -->
     <audio id="mp-audio-{{ page.audio_id }}" preload="metadata" crossorigin="anonymous">
-        <source src="{{ '/assets/audio/' | relative_url }}{{ page.audio_id }}.mp3" type="audio/mpeg">
+        <source src="{{ '/assets/audio/' | relative_url }}{{ page.section }}{{'/'}}{{ page.audio_id }}.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 

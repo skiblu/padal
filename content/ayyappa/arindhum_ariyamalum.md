@@ -1,7 +1,7 @@
 ---
 section: Ayyappa
-youtube_id: p89TBJND2TE
 nav_order: 94
+audio_id: 7FTywe4759
 title: Arindhum Ariyamalum
 topics: Ayyappa, Arindhum, Ariyamalum, அறிந்தும், அறியாமலும்
 ---

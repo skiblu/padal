@@ -1,7 +1,7 @@
 ---
 section: Ayyappa
 nav_order: 95
-youtube_id: 0JUdvPYNL8E
+audio_id: uj8h47HFR3
 title: Harivarasanam
 topics: Ayyappa, Harivarasanam, ஹரிவ, ராஸனம்
 ---
