@@ -1,8 +1,8 @@
 ---
 section: Ayyappa
 nav_order: 14
-title: Kannimoola ganapathiyai
-topics: Ayyappa, Kannimoola ganapathiyai, கன்னிமூல, கணபதியை
+title: Kannimoola Ganapathiyai
+topics: Ayyappa, Kannimoola, Ganapathiyai, கன்னிமூல, கணபதியை
 ---
 
 ## Lyrics
