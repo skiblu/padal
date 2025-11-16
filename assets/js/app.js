@@ -8,7 +8,7 @@
     const allowHistory = !!favContainer;
 
     // Current page info
-    const pageTitle = document.title.split('|')[0].trim(); // remove pipe suffix
+    const pageTitle = document.title.split('|')[0].trim();
     const currentPage = { title: pageTitle, url: window.location.pathname };
 
     // --- Storage helpers ---
@@ -62,7 +62,7 @@
         tdRemove.className = 'text-center';
         const btn = document.createElement('button');
         btn.className = 'remove-btn';
-        btn.innerHTML = `<i class="bi bi-trash"></i>`; // Bootstrap icon
+        btn.innerHTML = `<i class="bi bi-trash"></i>`;
         btn.title = 'Remove';
         btn.addEventListener('click', (e) => {
           e.stopPropagation();
@@ -96,18 +96,14 @@
       if (isFavorite(currentPage)) btn.classList.add('active');
 
       const icon = document.createElement('i');
-      icon.className = 'bi bi-star'; // empty star
-      if (isFavorite(currentPage)) icon.className = 'bi bi-star-fill'; // filled if active
+      icon.className = isFavorite(currentPage) ? 'bi bi-star-fill' : 'bi bi-star';
       btn.appendChild(icon);
 
       const text = document.createElement('span');
       text.textContent = isFavorite(currentPage) ? 'Remove' : 'Add';
       btn.appendChild(text);
 
-      btn.addEventListener('click', () => {
-        toggleFavorite(currentPage);
-        updateFavoriteButton();
-      });
+      btn.addEventListener('click', () => toggleFavorite(currentPage));
 
       favContainer.appendChild(btn);
     }

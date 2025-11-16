@@ -5,16 +5,25 @@ layout: sidebar
     <h1 class="mb-0">{{ page.title }}</h1>
 
     {% if page.history != false %}
+    <!-- The JS will inject the small, compact favorite button here -->
     <div id="favorite-btn-container"></div>
     {% endif %}
 </div>
 
-{% if page.topics %}<div class="ms-3 mb-3 border-bottom">Topics: <strong>{{ page.topics }}</strong></div>{%- endif -%}
+{% if page.topics %}
+<div class="ms-3 mb-3 border-bottom">
+    Topics: <strong>{{ page.topics }}</strong>
+</div>
+{%- endif -%}
 
-{% if page.description %}<div class="ms-3 mb-3 border-bottom">{{ page.description | markdownify }}</div>{%- endif -%}
+{% if page.description %}
+<div class="ms-3 mb-3 border-bottom">
+    {{ page.description | markdownify }}
+</div>
+{%- endif -%}
 
 {% if page.youtube_id %}
-<div class="mx-auto mb-4" style="max-width: 600px;"> <!-- reduced width -->
+<div class="mx-auto mb-4" style="max-width: 600px;">
     <div class="card shadow-sm rounded">
         <div class="card-body p-2">
             <figure class="mb-0">
@@ -25,14 +34,16 @@ layout: sidebar
                             title="{{ page.title | default: 'Youtube Video' }}"
                             loading="lazy"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            allowfullscreen>
+                    </iframe>
                 </div>
-                <figcaption class="figure-caption mt-2"><a href="https://youtu.be/{{ page.youtube_id }}" target="_blank" rel="noopener">Youtube Video</a></figcaption>
+                <figcaption class="figure-caption mt-2">
+                    <a href="https://youtu.be/{{ page.youtube_id }}" target="_blank" rel="noopener">Youtube Video</a>
+                </figcaption>
             </figure>
         </div>
     </div>
 </div>
 {%- endif -%}
-
 
 {{ content }}
