@@ -9,20 +9,18 @@ Favorites list with sort and clear functionality (stylish golden table - mobile 
 
                 <!-- Header with sort and clear -->
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h2 class="card-title mb-0" style="font-size: 1rem;">Favorites</h2>
+                    <h2 class="card-title mb-0 favorites-title">Favorites</h2>
 
-                    <div class="d-flex align-items-center" style="gap: 4px;">
+                    <div class="d-flex align-items-center gap-1">
                         <button id="clear-favorites"
-                                class="btn btn-sm btn-outline-danger"
-                                style="font-size: 0.6rem; padding: 2px 6px;">
+                                class="btn btn-sm btn-outline-danger clear-btn-small">
                             Clear All
                         </button>
 
-                        <label class="fw-bold mb-0" style="font-size: 0.6rem;">Sort:</label>
+                        <label class="fw-bold mb-0 sort-label">Sort:</label>
 
                         <select id="sort-favorites"
-                                class="form-select form-select-sm d-inline-block w-auto"
-                                style="font-size: 0.6rem; padding: 2px 4px;">
+                                class="form-select form-select-sm d-inline-block w-auto sort-select-small">
                             <option value="default">Default</option>
                             <option value="atoz">A to Z</option>
                         </select>
@@ -34,12 +32,12 @@ Favorites list with sort and clear functionality (stylish golden table - mobile 
                     <table class="stylish-table mb-0">
                         <thead>
                         <tr>
-                            <th style="font-size: 0.7rem;">Title</th>
-                            <th style="width: 60px; font-size: 0.7rem;">Remove</th>
+                            <th class="col-title">Title</th>
+                            <th class="col-remove">Remove</th>
                         </tr>
                         </thead>
                         <tbody id="favorites-container">
-                        <!-- Inserted dynamically -->
+                        <!-- Dynamic items from app.js -->
                         </tbody>
                     </table>
                 </div>

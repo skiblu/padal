@@ -39,13 +39,15 @@
     border: 1px solid #cc0000;
     color: #cc0000;
     padding: 3px 6px;
-    border-radius: 1px;
+    border-radius: 2px;
     font-size: 0.88rem;
     line-height: 1;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    gap: 2px;
+    min-width: 22px; /* ensures space for icon */
 }
 
 .remove-btn:hover {
@@ -53,9 +55,11 @@
     color: #fff;
 }
 
-/* The “X” icon visibility fix */
-.remove-btn i {
-    font-size: 0.7rem;
+/* SVG icon fix (bigger, visible, centered) */
+.remove-btn svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
     pointer-events: none;
 }
 
@@ -74,5 +78,11 @@
     .remove-btn {
         padding: 2px 4px;
         font-size: 0.55rem !important;
+        min-width: 18px;
+    }
+
+    .remove-btn svg {
+        width: 11px;
+        height: 11px;
     }
 }
