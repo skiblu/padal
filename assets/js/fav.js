@@ -3,9 +3,7 @@
   const FAVORITE_KEY = 'bhaktipadal_favorites';
   const MAX_RECENT = 10;
 
-  // Get page info
-  const favContainer = document.getElementById('favorite-btn-container');
-  const allowHistory = favContainer?.dataset.allowHistory === "true";
+  // Current page info
   const currentPage = { title: document.title, url: window.location.pathname };
 
   // --- Storage helpers ---
@@ -14,8 +12,11 @@
   function saveRecent(pages) { localStorage.setItem(RECENT_KEY, JSON.stringify(pages)); }
   function saveFavorites(favs) { localStorage.setItem(FAVORITE_KEY, JSON.stringify(favs)); }
 
+  // --- Favorite container ---
+  const favContainer = document.getElementById('favorite-btn-container');
+
   // --- Update recent pages if allowed ---
-  if (allowHistory) {
+  if (favContainer) {
     let recentPages = getRecent();
     recentPages = recentPages.filter(p => p.url !== currentPage.url);
     recentPages.unshift(currentPage);
@@ -43,7 +44,6 @@
     container.innerHTML = '';
 
     pages.forEach(p => {
-      // Remove anything after "|" in title
       const displayTitle = p.title.split('|')[0].trim();
 
       const col = document.createElement('div');
@@ -88,7 +88,7 @@
 
   // --- Favorite button ---
   function createFavoriteButton() {
-    if (!allowHistory || !favContainer) return;
+    if (!favContainer) return; // only create button if container exists
     const btn = document.createElement('button');
     btn.id = 'favorite-btn';
     btn.className = 'btn btn-sm';
@@ -134,9 +134,9 @@
 
   // --- Initialize ---
   document.addEventListener('DOMContentLoaded', () => {
+    if (favContainer) createFavoriteButton(); // create button only if allowed
     renderFavorites();
     renderRecent();
-    createFavoriteButton();
     setupClearButtons();
     setupSortSelectors();
   });
