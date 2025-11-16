@@ -48,41 +48,39 @@
       container.innerHTML = '';
 
       pages.forEach(p => {
-        const col = document.createElement('div');
-        col.className = 'col-12 col-md-4';
+        const tr = document.createElement('tr');
 
-        col.innerHTML = `
-          <div class="card toc-card h-100">
-            <div class="card-body p-3 d-flex flex-column justify-content-between">
-              <div class="d-flex justify-content-between align-items-start">
-                <h3 class="card-title h6 mb-2">
-                  <a href="${p.url}" class="toc-link stretched-link">${p.title}</a>
-                </h3>
-                <button class="btn btn-sm btn-outline-danger remove-item" data-url="${p.url}" title="Remove">
-                  <i class="fa fa-trash"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        `;
-        container.appendChild(col);
-      });
+        // Title column
+        const tdTitle = document.createElement('td');
+        const link = document.createElement('a');
+        link.href = p.url;
+        link.innerText = p.title;
+        link.className = 'toc-link';
+        tdTitle.appendChild(link);
 
-      // Attach remove handlers
-      container.querySelectorAll('.remove-item').forEach(btn => {
+        // Remove button column
+        const tdRemove = document.createElement('td');
+        const btn = document.createElement('button');
+        btn.className = 'btn btn-sm btn-outline-danger';
+        btn.innerHTML = '<i class="fa fa-trash"></i>';
+        btn.title = 'Remove';
         btn.addEventListener('click', (e) => {
-          e.stopPropagation(); // Prevent link navigation
-          e.preventDefault();  // Prevent any default behavior
-          const url = btn.dataset.url;
+          e.stopPropagation();
+          e.preventDefault();
 
           if (containerId === 'favorites-container') {
-            saveFavorites(getFavorites().filter(p => p.url !== url));
+            saveFavorites(getFavorites().filter(f => f.url !== p.url));
             renderFavorites();
           } else {
-            saveRecent(getRecent().filter(p => p.url !== url));
+            saveRecent(getRecent().filter(f => f.url !== p.url));
             renderRecent();
           }
         });
+        tdRemove.appendChild(btn);
+
+        tr.appendChild(tdTitle);
+        tr.appendChild(tdRemove);
+        container.appendChild(tr);
       });
     }
 
