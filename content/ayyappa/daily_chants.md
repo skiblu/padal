@@ -1,8 +1,8 @@
 ---
 section: Ayyappa
 nav_order: 1
-title:  Daily Chants
-topics: Ayyappa, Daily Chants , Sloka(s)
+title:  Daily Chants 
+topics: Ayyappa, Daily Chants , Thuthi, சுவாமி, சரணம், ஐயப்பா, தூதி
 ---
 
 **Lord Ganesha** \
