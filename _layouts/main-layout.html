@@ -2,9 +2,12 @@
 layout: sidebar
 ---
 <div class="d-flex justify-content-between align-items-center mb-3">
-    <h1 class="mb-4">{{ page.title }}</h1>
+    <h1 class="mb-0">{{ page.title }}</h1>
+
+    {% unless page.history == false %}
     <!-- Favorite Button Container -->
-    <div id="favorite-btn-container"></div>
+    <div id="favorite-btn-container" data-allow-history="true"></div>
+    {% endunless %}
 </div>
 
 {% if page.topics %}<div class="ms-3 mb-3 border-bottom">Topics: <strong>{{ page.topics }}</strong></div>{%- endif -%}

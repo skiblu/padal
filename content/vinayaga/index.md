@@ -2,6 +2,7 @@
 parent_id: Vinayaga
 nav_order: 3
 title: Browse
+history: false
 topics: Vinayaga, Ganapathi, Ganesha, விநாயகர், கணேசன், songs, devotional, chants
 ---
 

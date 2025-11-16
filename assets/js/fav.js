@@ -3,16 +3,19 @@
   const FAVORITE_KEY = 'bhaktipadal_favorites';
   const MAX_RECENT = 10;
 
+  // Get page info
+  const favContainer = document.getElementById('favorite-btn-container');
+  const allowHistory = favContainer?.dataset.allowHistory === "true";
   const currentPage = { title: document.title, url: window.location.pathname };
 
-  // --- Storage Helpers ---
+  // --- Storage helpers ---
   function getRecent() { return JSON.parse(localStorage.getItem(RECENT_KEY)) || []; }
   function getFavorites() { return JSON.parse(localStorage.getItem(FAVORITE_KEY)) || []; }
   function saveRecent(pages) { localStorage.setItem(RECENT_KEY, JSON.stringify(pages)); }
   function saveFavorites(favs) { localStorage.setItem(FAVORITE_KEY, JSON.stringify(favs)); }
 
-  // --- Update Recent ---
-  function updateRecent() {
+  // --- Update recent pages if allowed ---
+  if (allowHistory) {
     let recentPages = getRecent();
     recentPages = recentPages.filter(p => p.url !== currentPage.url);
     recentPages.unshift(currentPage);
@@ -33,20 +36,23 @@
 
   function isFavorite(page) { return getFavorites().some(p => p.url === page.url); }
 
-  // --- Rendering ---
+  // --- Render cards ---
   function renderCards(containerId, pages) {
     const container = document.getElementById(containerId);
     if (!container) return;
     container.innerHTML = '';
 
     pages.forEach(p => {
+      // Remove anything after "|" in title
+      const displayTitle = p.title.split('|')[0].trim();
+
       const col = document.createElement('div');
       col.className = 'col-12 col-md-4';
       col.innerHTML = `
         <div class="card toc-card h-100">
           <div class="card-body p-3 d-flex flex-column justify-content-between">
             <h3 class="card-title h6 mb-2">
-              <a href="${p.url}" class="toc-link stretched-link">${p.title}</a>
+              <a href="${p.url}" class="toc-link stretched-link">${displayTitle}</a>
             </h3>
             <button class="btn btn-sm btn-outline-danger mt-auto remove-item" data-url="${p.url}">Remove</button>
           </div>
@@ -55,9 +61,8 @@
       container.appendChild(col);
     });
 
-    // Attach remove handlers
     container.querySelectorAll('.remove-item').forEach(btn => {
-      btn.addEventListener('click', e => {
+      btn.addEventListener('click', () => {
         const url = btn.dataset.url;
         if (containerId === 'favorites-container') {
           const favs = getFavorites().filter(p => p.url !== url);
@@ -77,21 +82,20 @@
 
   function sortPages(pages, method) {
     if (!method || method === 'default') return pages;
-    if (method === 'atoz') return [...pages].sort((a,b) => a.title.localeCompare(b.title));
+    if (method === 'atoz') return [...pages].sort((a, b) => a.title.localeCompare(b.title));
     return pages;
   }
 
-  // --- Favorite Button ---
+  // --- Favorite button ---
   function createFavoriteButton() {
-    const container = document.getElementById('favorite-btn-container');
-    if (!container) return;
+    if (!allowHistory || !favContainer) return;
     const btn = document.createElement('button');
     btn.id = 'favorite-btn';
     btn.className = 'btn btn-sm';
     btn.style.marginLeft = '0.5rem';
     btn.innerText = isFavorite(currentPage) ? '★ Remove from Favorites' : '☆ Add to Favorites';
     btn.addEventListener('click', () => toggleFavorite(currentPage));
-    container.appendChild(btn);
+    favContainer.appendChild(btn);
   }
 
   function updateFavoriteButton() {
@@ -100,7 +104,7 @@
     btn.innerText = isFavorite(currentPage) ? '★ Remove from Favorites' : '☆ Add to Favorites';
   }
 
-  // --- Clear buttons ---
+  // --- Clear all buttons ---
   function setupClearButtons() {
     const clearFavBtn = document.getElementById('clear-favorites');
     if (clearFavBtn) {
@@ -128,9 +132,8 @@
     if (recentSort) recentSort.addEventListener('change', renderRecent);
   }
 
-  // --- Init ---
+  // --- Initialize ---
   document.addEventListener('DOMContentLoaded', () => {
-    updateRecent();
     renderFavorites();
     renderRecent();
     createFavoriteButton();

@@ -2,6 +2,7 @@
 parent_id: Hanuman
 nav_order: 8
 title: Browse
+history: false
 topics: Hanuman
 ---
 {% include figure.html img="hanuman_poster.gif" width="15%" %}
