@@ -7,6 +7,7 @@ topics: Vinayaga, Ganapathi, Ganesha, விநாயகர், கணேசன�
 ---
 
 {% include figure.html img="vinayaga_poster.gif" width="15%" %}
+
 {% include toc-sections.html parent_name="Vinayaga" %}
 
 
