@@ -1,6 +1,7 @@
 ---
 title: Bhakti Padal
 layout: main-layout
+history: false
 ---
 
 ## Welcome to Bhakti Padal
