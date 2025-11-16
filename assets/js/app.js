@@ -179,27 +179,32 @@
     setupTableSort('sort-recent', 'recent-container');
 
     // --- TOC / Sub-TOC sort ---
-    function setupTocSort(radioName, defaultId, atozId) {
-      const radios = document.querySelectorAll(`input[name='${radioName}']`);
+    function setupTocSortWithIcons(buttonClass, defaultId, atozId) {
+      const buttons = document.querySelectorAll(buttonClass);
       const defaultDiv = document.getElementById(defaultId);
       const atozDiv = document.getElementById(atozId);
-      if (!radios || !defaultDiv || !atozDiv) return;
 
-      radios.forEach(rb => {
-        rb.addEventListener('change', function() {
-          if (this.value === 'atoz') {
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const sortType = btn.getAttribute('data-sort');
+
+          if (sortType === 'atoz') {
             defaultDiv.style.display = 'none';
             atozDiv.style.display = 'block';
           } else {
             defaultDiv.style.display = 'block';
             atozDiv.style.display = 'none';
           }
+
+          // Update active state
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
         });
       });
     }
 
-    setupTocSort('tocSort', 'toc-default', 'toc-atoz');
-    setupTocSort('tocSortSub', 'toc-sub-default', 'toc-sub-atoz');
+    setupTocSortWithIcons('.toc-sort-btn', 'toc-default', 'toc-atoz');
+    setupTocSortWithIcons('.toc-sort-btn-sub', 'toc-sub-default', 'toc-sub-atoz');
 
     // --- Initialize favorites / recent / buttons ---
     if (allowHistory) createFavoriteButton();

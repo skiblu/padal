@@ -10,20 +10,25 @@ TOC of all items with parent_id
     <div class="card">
       <div class="card-body">
 
-        <!-- Header & Sort Radios -->
+        <!-- Header & Sort Icons -->
         <div class="d-flex justify-content-between align-items-center">
           <h2 class="card-title h3 mb-0">Categories</h2>
 
-          <div class="sort-controls">
-            <label class="me-2 fw-bold">Sort By:</label>
-            <label class="me-2">
-              <input type="radio" name="tocSort" value="default" checked> Default
-            </label>
-            <label>
-              <input type="radio" name="tocSort" value="atoz"> A to Z
-            </label>
+          <div class="sort-controls d-flex align-items-center gap-2">
+            <span class="fw-bold me-1">Sort By:</span>
+
+            <!-- Default icon -->
+            <button type="button" class="toc-sort-btn" data-sort="default" title="Default">
+              <img src="/assets/bootstrap-icons/list.svg" width="16" height="16" alt="Default Sort">
+            </button>
+
+            <!-- A–Z icon -->
+            <button type="button" class="toc-sort-btn" data-sort="atoz" title="A to Z">
+              <img src="/assets/bootstrap-icons/sort-alpha-down.svg" width="16" height="16" alt="A to Z Sort">
+            </button>
           </div>
         </div>
+
 
         <!-- Default order -->
         <div id="toc-default" class="toc-section mt-3">
