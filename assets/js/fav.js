@@ -14,10 +14,12 @@
 
   // --- Favorite container ---
   const favContainer = document.getElementById('favorite-btn-container');
+  const allowHistory = !!favContainer; // true if container exists
 
   // --- Update recent pages if allowed ---
-  if (favContainer) {
+  if (allowHistory) {
     let recentPages = getRecent();
+    // Remove current page if already in list
     recentPages = recentPages.filter(p => p.url !== currentPage.url);
     recentPages.unshift(currentPage);
     if (recentPages.length > MAX_RECENT) recentPages.pop();
