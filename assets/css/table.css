@@ -2,7 +2,7 @@
 .stylish-table-wrapper,
 .stylish-table,
 .stylish-table * {
-    font-size: 0.55rem !important;   /* ~50% reduction */
+    font-size: 0.88rem !important;
 }
 
 /* Table styling */
@@ -39,8 +39,8 @@
     border: 1px solid #cc0000;
     color: #cc0000;
     padding: 3px 6px;
-    border-radius: 4px;
-    font-size: 0.65rem;
+    border-radius: 1px;
+    font-size: 0.88rem;
     line-height: 1;
     display: inline-flex;
     align-items: center;

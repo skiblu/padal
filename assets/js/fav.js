@@ -63,7 +63,7 @@
         const btn = document.createElement('button');
         btn.className = 'btn btn-sm btn-outline-danger';
         btn.innerHTML = '<i class="fa fa-trash"></i>';
-        btn.title = 'Remove';
+        btn.title = 'X';
         btn.addEventListener('click', (e) => {
           e.stopPropagation();
           e.preventDefault();
