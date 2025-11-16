@@ -104,24 +104,10 @@
       favContainer.appendChild(btn);
     }
 
-    function updateFavoriteButton(isFav) {
-        const btn = document.getElementById("favorite-btn");
-        if (!btn) return;
-
-        const icon = btn.querySelector("i");
-        const label = btn.querySelector(".fav-label");
-
-        if (isFav) {
-            btn.classList.add("active");
-            icon.classList.remove("bi-star");
-            icon.classList.add("bi-star-fill");
-            label.textContent = "Saved";
-        } else {
-            btn.classList.remove("active");
-            icon.classList.remove("bi-star-fill");
-            icon.classList.add("bi-star");
-            label.textContent = "Add";
-        }
+    function updateFavoriteButton() {
+      const btn = document.getElementById('favorite-btn');
+      if (!btn) return;
+      btn.innerText = isFavorite(currentPage) ? '★ Remove from Favorites' : '☆ Add to Favorites';
     }
 
     // --- Clear buttons ---
