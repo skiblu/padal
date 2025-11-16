@@ -90,17 +90,26 @@
     // --- Favorite button ---
     function createFavoriteButton() {
       if (!favContainer) return;
+
       const btn = document.createElement('button');
       btn.id = 'favorite-btn';
-      btn.style.backgroundColor = '#f5d38d';
+      btn.style.backgroundColor = '#f5d38d';   // calm golden
       btn.style.color = '#000';
       btn.style.border = '1px solid #d4b56b';
-      btn.style.borderRadius = '4px';
-      btn.style.padding = '0.3rem 0.6rem';
+      btn.style.borderRadius = '3px';
+      btn.style.padding = '0.2rem 0.4rem';     // reduced padding
+      btn.style.fontSize = '0.8rem';           // smaller font
       btn.style.cursor = 'pointer';
-      btn.style.marginLeft = '0.5rem';
+      btn.style.marginLeft = '0.3rem';
+      btn.style.display = 'inline-flex';
+      btn.style.alignItems = 'center';
+      btn.style.justifyContent = 'center';
+      btn.style.minWidth = 'fit-content';
+
       btn.innerText = isFavorite(currentPage) ? '★ Remove from Favorites' : '☆ Add to Favorites';
+
       btn.addEventListener('click', () => toggleFavorite(currentPage));
+
       favContainer.appendChild(btn);
     }
 
@@ -108,6 +117,8 @@
       const btn = document.getElementById('favorite-btn');
       if (!btn) return;
       btn.innerText = isFavorite(currentPage) ? '★ Remove from Favorites' : '☆ Add to Favorites';
+      // optional: change color when active
+      btn.style.backgroundColor = isFavorite(currentPage) ? '#ffd966' : '#f5d38d';
     }
 
     // --- Clear buttons ---
