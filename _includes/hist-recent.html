@@ -1,36 +1,41 @@
 {% comment %}
-Recently visited pages with sort and clear functionality (responsive table)
+Recently visited pages with sort and clear functionality (responsive stylish table)
 {% endcomment %}
 
 <div class="row justify-content-center">
-    <div class="m-3 col-md-8">
-        <div class="card">
-            <div class="card-body">
+    <div class="m-3 col-md-10 col-lg-8">
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
 
-                <!-- Header with sort and clear -->
-                <div class="d-flex justify-content-between align-items-center mb-3">
+                <!-- Header -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
                     <h2 class="card-title h3 mb-0">Recently Visited</h2>
-                    <div class="d-flex align-items-center">
-                        <button id="clear-recent" class="btn btn-sm btn-outline-danger me-2">Clear All</button>
-                        <label class="me-1 fw-bold mb-0">Sort:</label>
-                        <select id="sort-recent" class="form-select form-select-sm d-inline-block w-auto">
+
+                    <div class="d-flex align-items-center gap-3">
+                        <button id="clear-recent" class="btn btn-sm btn-outline-danger px-3">
+                            Clear All
+                        </button>
+
+                        <label class="fw-semibold mb-0">Sort:</label>
+                        <select id="sort-recent" class="form-select form-select-sm stylish-select">
                             <option value="default">Default</option>
                             <option value="atoz">A to Z</option>
                         </select>
                     </div>
                 </div>
 
-                <!-- Recent pages table -->
-                <div class="table-responsive">
-                    <table class="table table-striped table-hover mb-0">
+                <!-- Stylish table -->
+                <div class="table-responsive stylish-table-wrapper">
+                    <table class="table stylish-table mb-0">
                         <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Remove</th>
+                            <th class="w-75">Title</th>
+                            <th class="text-center">Remove</th>
                         </tr>
                         </thead>
+
                         <tbody id="recent-container">
-                        <!-- Recent pages dynamically inserted here -->
+                        <!-- JS will insert rows here -->
                         </tbody>
                     </table>
                 </div>
