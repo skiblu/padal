@@ -1,12 +1,11 @@
 ---
 layout: sidebar
 ---
-<!-- main-layout.html -->
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h1 class="mb-0">{{ page.title }}</h1>
 
     {% if page.history != false %}
-    <!-- Favorite button will be dynamically inserted here via JS -->
+    <!-- The JS will inject the small, compact favorite button here -->
     <div id="favorite-btn-container"></div>
     {% endif %}
 </div>
@@ -15,11 +14,13 @@ layout: sidebar
 <div class="ms-3 mb-3 border-bottom">
     Topics: <strong>{{ page.topics }}</strong>
 </div>
-{% endif %}
+{%- endif -%}
 
 {% if page.description %}
-<div class="ms-3 mb-3 border-bottom">{{ page.description | markdownify }}</div>
-{% endif %}
+<div class="ms-3 mb-3 border-bottom">
+    {{ page.description | markdownify }}
+</div>
+{%- endif -%}
 
 {% if page.youtube_id %}
 <div class="mx-auto mb-4" style="max-width: 600px;">
@@ -43,7 +44,6 @@ layout: sidebar
         </div>
     </div>
 </div>
-{% endif %}
+{%- endif -%}
 
 {{ content }}
-
