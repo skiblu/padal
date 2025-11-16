@@ -1,7 +1,7 @@
 ---
 parent_id: Hanuman
 nav_order: 8
-title: Browse
+title: All Songs
 history: false
 topics: Hanuman
 ---

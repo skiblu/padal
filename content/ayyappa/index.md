@@ -1,7 +1,7 @@
 ---
 parent_id: Ayyappa
 nav_order: 8
-title: Browse
+title: All Songs
 history: false
 topics: Ayyappa, Sloka(s), lyrics, songs, devotional, அய்யப்பன், பாடல்கள்
 ---

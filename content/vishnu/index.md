@@ -1,7 +1,7 @@
 ---
 parent_id: Vishnu
 nav_order: 7
-title: Browse
+title: All Songs
 history: false
 topics: Vishnu, songs, விஷ்ணு, devotional, lyrics
 ---
