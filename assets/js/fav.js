@@ -1,154 +1,117 @@
-(function () {
+(function() {
   const RECENT_KEY = 'bhaktipadal_recent';
   const FAVORITE_KEY = 'bhaktipadal_favorites';
   const MAX_RECENT = 10;
 
-  // Current page info
-  const currentPage = { title: document.title, url: window.location.pathname };
+  // Wait until DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    const favContainer = document.getElementById('favorite-btn-container');
+    const allowHistory = !!favContainer;
 
-  // --- Storage helpers ---
-  function getRecent() { return JSON.parse(localStorage.getItem(RECENT_KEY)) || []; }
-  function getFavorites() { return JSON.parse(localStorage.getItem(FAVORITE_KEY)) || []; }
-  function saveRecent(pages) { localStorage.setItem(RECENT_KEY, JSON.stringify(pages)); }
-  function saveFavorites(favs) { localStorage.setItem(FAVORITE_KEY, JSON.stringify(favs)); }
+    // Current page info
+    const pageTitle = document.title.split('|')[0].trim(); // strip after pipe
+    const currentPage = { title: pageTitle, url: window.location.pathname };
 
-  // --- Favorite container ---
-  const favContainer = document.getElementById('favorite-btn-container');
-  const allowHistory = !!favContainer; // true if container exists
+    // --- Storage helpers ---
+    const getRecent = () => JSON.parse(localStorage.getItem(RECENT_KEY)) || [];
+    const getFavorites = () => JSON.parse(localStorage.getItem(FAVORITE_KEY)) || [];
+    const saveRecent = (pages) => localStorage.setItem(RECENT_KEY, JSON.stringify(pages));
+    const saveFavorites = (pages) => localStorage.setItem(FAVORITE_KEY, JSON.stringify(pages));
 
-  // --- Update recent pages if allowed ---
-  if (allowHistory) {
-    let recentPages = getRecent();
-    // Remove current page if already in list
-    recentPages = recentPages.filter(p => p.url !== currentPage.url);
-    recentPages.unshift(currentPage);
-    if (recentPages.length > MAX_RECENT) recentPages.pop();
-    saveRecent(recentPages);
-  }
+    // --- Update recents ---
+    if (allowHistory) {
+      let recentPages = getRecent().filter(p => p.url !== currentPage.url);
+      recentPages.unshift(currentPage);
+      if (recentPages.length > MAX_RECENT) recentPages.pop();
+      saveRecent(recentPages);
+    }
 
-  // --- Favorites ---
-  function toggleFavorite(page) {
-    let favs = getFavorites();
-    const index = favs.findIndex(p => p.url === page.url);
-    if (index === -1) favs.push(page);
-    else favs.splice(index, 1);
-    saveFavorites(favs);
-    renderFavorites();
-    updateFavoriteButton();
-  }
+    // --- Favorites helpers ---
+    function isFavorite(page) {
+      return getFavorites().some(p => p.url === page.url);
+    }
 
-  function isFavorite(page) { return getFavorites().some(p => p.url === page.url); }
+    function toggleFavorite(page) {
+      let favs = getFavorites();
+      const idx = favs.findIndex(p => p.url === page.url);
+      if (idx === -1) favs.push(page);
+      else favs.splice(idx, 1);
+      saveFavorites(favs);
+      updateFavoriteButton();
+      renderFavorites();
+    }
 
-  // --- Render cards ---
-  function renderCards(containerId, pages) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    container.innerHTML = '';
-
-    pages.forEach(p => {
-      const displayTitle = p.title.split('|')[0].trim();
-
-      const col = document.createElement('div');
-      col.className = 'col-12 col-md-4';
-      col.innerHTML = `
-        <div class="card toc-card h-100">
-          <div class="card-body p-3 d-flex flex-column justify-content-between">
-            <h3 class="card-title h6 mb-2">
-              <a href="${p.url}" class="toc-link stretched-link">${displayTitle}</a>
-            </h3>
-            <button class="btn btn-sm btn-outline-danger mt-auto remove-item" data-url="${p.url}">Remove</button>
+    // --- Render favorites/recent cards ---
+    function renderCards(containerId, pages) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      container.innerHTML = '';
+      pages.forEach(p => {
+        const col = document.createElement('div');
+        col.className = 'col-12 col-md-4';
+        col.innerHTML = `
+          <div class="card toc-card h-100">
+            <div class="card-body p-3 d-flex flex-column justify-content-between">
+              <h3 class="card-title h6 mb-2">
+                <a href="${p.url}" class="toc-link stretched-link">${p.title}</a>
+              </h3>
+              <button class="btn btn-sm btn-outline-danger mt-auto remove-item" data-url="${p.url}">Remove</button>
+            </div>
           </div>
-        </div>
-      `;
-      container.appendChild(col);
-    });
-
-    container.querySelectorAll('.remove-item').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const url = btn.dataset.url;
-        if (containerId === 'favorites-container') {
-          const favs = getFavorites().filter(p => p.url !== url);
-          saveFavorites(favs);
-          renderFavorites();
-        } else {
-          const recent = getRecent().filter(p => p.url !== url);
-          saveRecent(recent);
-          renderRecent();
-        }
+        `;
+        container.appendChild(col);
       });
-    });
-  }
-
-  function renderFavorites() { renderCards('favorites-container', sortPages(getFavorites(), document.getElementById('sort-favorites')?.value)); }
-  function renderRecent() { renderCards('recent-container', sortPages(getRecent(), document.getElementById('sort-recent')?.value)); }
-
-  function sortPages(pages, method) {
-    if (!method || method === 'default') return pages;
-    if (method === 'atoz') return [...pages].sort((a, b) => a.title.localeCompare(b.title));
-    return pages;
-  }
-
-  // --- Favorite button ---
-  function createFavoriteButton() {
-    if (!favContainer) return; // only create button if container exists
-
-    const btn = document.createElement('button');
-    btn.id = 'favorite-btn';
-    btn.className = 'btn btn-sm'; // Bootstrap classes
-    btn.style.marginLeft = '0.5rem';
-    btn.style.backgroundColor = '#f5d38d'; // calm golden color
-    btn.style.color = '#000'; // black text
-    btn.style.border = '1px solid #d4b56b';
-    btn.style.borderRadius = '4px';
-    btn.style.padding = '0.3rem 0.6rem';
-    btn.style.cursor = 'pointer';
-    btn.innerText = isFavorite(currentPage) ? '★ Remove from Favorites' : '☆ Add to Favorites';
-
-    btn.addEventListener('click', () => toggleFavorite(currentPage));
-    favContainer.appendChild(btn);
-  }
-
-  function updateFavoriteButton() {
-    const btn = document.getElementById('favorite-btn');
-    if (!btn) return;
-    btn.innerText = isFavorite(currentPage) ? '★ Remove from Favorites' : '☆ Add to Favorites';
-  }
-
-  // --- Clear all buttons ---
-  function setupClearButtons() {
-    const clearFavBtn = document.getElementById('clear-favorites');
-    if (clearFavBtn) {
-      clearFavBtn.addEventListener('click', () => {
-        localStorage.removeItem(FAVORITE_KEY);
-        renderFavorites();
+      // Attach remove handlers
+      container.querySelectorAll('.remove-item').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const url = btn.dataset.url;
+          if (containerId === 'favorites-container') {
+            saveFavorites(getFavorites().filter(p => p.url !== url));
+            renderFavorites();
+          } else {
+            saveRecent(getRecent().filter(p => p.url !== url));
+            renderRecent();
+          }
+        });
       });
     }
+
+    function renderFavorites() { renderCards('favorites-container', getFavorites()); }
+    function renderRecent() { renderCards('recent-container', getRecent()); }
+
+    // --- Favorite button ---
+    function createFavoriteButton() {
+      if (!favContainer) return;
+      const btn = document.createElement('button');
+      btn.id = 'favorite-btn';
+      btn.style.backgroundColor = '#f5d38d';
+      btn.style.color = '#000';
+      btn.style.border = '1px solid #d4b56b';
+      btn.style.borderRadius = '4px';
+      btn.style.padding = '0.3rem 0.6rem';
+      btn.style.cursor = 'pointer';
+      btn.style.marginLeft = '0.5rem';
+      btn.innerText = isFavorite(currentPage) ? '★ Remove from Favorites' : '☆ Add to Favorites';
+      btn.addEventListener('click', () => toggleFavorite(currentPage));
+      favContainer.appendChild(btn);
+    }
+
+    function updateFavoriteButton() {
+      const btn = document.getElementById('favorite-btn');
+      if (!btn) return;
+      btn.innerText = isFavorite(currentPage) ? '★ Remove from Favorites' : '☆ Add to Favorites';
+    }
+
+    // --- Clear buttons ---
+    const clearFavBtn = document.getElementById('clear-favorites');
+    if (clearFavBtn) clearFavBtn.addEventListener('click', () => { localStorage.removeItem(FAVORITE_KEY); renderFavorites(); });
 
     const clearRecentBtn = document.getElementById('clear-recent');
-    if (clearRecentBtn) {
-      clearRecentBtn.addEventListener('click', () => {
-        localStorage.removeItem(RECENT_KEY);
-        renderRecent();
-      });
-    }
-  }
+    if (clearRecentBtn) clearRecentBtn.addEventListener('click', () => { localStorage.removeItem(RECENT_KEY); renderRecent(); });
 
-  // --- Sort selectors ---
-  function setupSortSelectors() {
-    const favSort = document.getElementById('sort-favorites');
-    if (favSort) favSort.addEventListener('change', renderFavorites);
-
-    const recentSort = document.getElementById('sort-recent');
-    if (recentSort) recentSort.addEventListener('change', renderRecent);
-  }
-
-  // --- Initialize ---
-  document.addEventListener('DOMContentLoaded', () => {
-    if (favContainer) createFavoriteButton(); // create button only if allowed
+    // --- Initialize ---
+    createFavoriteButton();
     renderFavorites();
     renderRecent();
-    setupClearButtons();
-    setupSortSelectors();
   });
-
 })();
