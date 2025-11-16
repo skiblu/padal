@@ -315,9 +315,8 @@
     })();
 
     // Optional: Prevent selection/copy (commented out; enable if you truly want)
-    /*
     document.addEventListener('selectstart', e => e.preventDefault());
     document.addEventListener('copy', e => e.preventDefault());
     document.addEventListener('dragstart', e => e.preventDefault());
-    */
+
  })();
