@@ -91,11 +91,19 @@
   // --- Favorite button ---
   function createFavoriteButton() {
     if (!favContainer) return; // only create button if container exists
+
     const btn = document.createElement('button');
     btn.id = 'favorite-btn';
-    btn.className = 'btn btn-sm';
+    btn.className = 'btn btn-sm'; // Bootstrap classes
     btn.style.marginLeft = '0.5rem';
+    btn.style.backgroundColor = '#f5d38d'; // calm golden color
+    btn.style.color = '#000'; // black text
+    btn.style.border = '1px solid #d4b56b';
+    btn.style.borderRadius = '4px';
+    btn.style.padding = '0.3rem 0.6rem';
+    btn.style.cursor = 'pointer';
     btn.innerText = isFavorite(currentPage) ? '★ Remove from Favorites' : '☆ Add to Favorites';
+
     btn.addEventListener('click', () => toggleFavorite(currentPage));
     favContainer.appendChild(btn);
   }
