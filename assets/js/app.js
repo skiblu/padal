@@ -203,3 +203,121 @@
 
   });
 })();
+
+// Devtools / right-click / view-source prevention script
+ (function () {
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    }, { passive: false });
+
+    // Disable common devtools / view-source / save shortcuts
+    document.addEventListener('keydown', function (e) {
+      // Key codes & helpers
+      const k = e.key && e.key.toLowerCase();
+      const ctrl = e.ctrlKey || e.metaKey; // ctrl on Windows/Linux, cmd on Mac
+      const shift = e.shiftKey;
+
+      // Block F12
+      if (e.key === 'F12' || e.keyCode === 123) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // Block Ctrl/Cmd+Shift+I  (Inspect)
+      if (ctrl && shift && k === 'i') {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // Block Ctrl/Cmd+Shift+C  (Inspect element / cursor)
+      if (ctrl && shift && k === 'c') {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // Block Ctrl/Cmd+Shift+J  (Console)
+      if (ctrl && shift && k === 'j') {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // Block Ctrl/Cmd+U (view-source)
+      if (ctrl && k === 'u') {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // Block Ctrl/Cmd+S (save page)
+      if (ctrl && k === 's') {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    }, true);
+
+    // Optional: simple devtools-open detection (heuristic) and action
+    // Note: false positives are possible. Use with caution.
+    (function detectDevTools() {
+      let open = false;
+      const threshold = 160; // tuned value; adjust as needed
+      function check() {
+        const widthDiff = window.outerWidth - window.innerWidth;
+        const heightDiff = window.outerHeight - window.innerHeight;
+        // If devtools docked, large diff appears
+        if (widthDiff > threshold || heightDiff > threshold) {
+          if (!open) {
+            open = true;
+            console.warn('DevTools detected');
+            // optional action: show a brief overlay, redirect, or log event
+            // Example: show a little overlay for casual deterrent:
+            showDevtoolsOverlay();
+          }
+        } else {
+          if (open) {
+            open = false;
+            removeDevtoolsOverlay();
+          }
+        }
+      }
+      setInterval(check, 1000);
+
+      function showDevtoolsOverlay() {
+        if (document.getElementById('__dt_overlay')) return;
+        const ov = document.createElement('div');
+        ov.id = '__dt_overlay';
+        ov.style.position = 'fixed';
+        ov.style.left = 0;
+        ov.style.top = 0;
+        ov.style.right = 0;
+        ov.style.bottom = 0;
+        ov.style.background = 'rgba(0,0,0,0.4)';
+        ov.style.color = '#fff';
+        ov.style.display = 'flex';
+        ov.style.alignItems = 'center';
+        ov.style.justifyContent = 'center';
+        ov.style.zIndex = 999999;
+        ov.style.backdropFilter = 'blur(2px)';
+        ov.innerText = 'Developer tools detected — functionality limited.';
+        document.documentElement.appendChild(ov);
+        // remove after 2s so it doesn't block forever
+        setTimeout(removeDevtoolsOverlay, 2000);
+      }
+      function removeDevtoolsOverlay() {
+        const el = document.getElementById('__dt_overlay');
+        if (el) el.remove();
+      }
+    })();
+
+    // Optional: Prevent selection/copy (commented out; enable if you truly want)
+    /*
+    document.addEventListener('selectstart', e => e.preventDefault());
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('dragstart', e => e.preventDefault());
+    */
+ })();
