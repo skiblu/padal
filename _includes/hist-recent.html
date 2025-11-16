@@ -1,0 +1,29 @@
+{% comment %}
+Recently visited pages with sort and clear functionality
+{% endcomment %}
+
+<div class="row justify-content-center">
+    <div class="m-3 col-md-8">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="card-title h3 mb-0">Recently Visited</h2>
+                    <div>
+                        <button id="clear-recent" class="btn btn-sm btn-outline-danger me-2">Clear All</button>
+                        <label class="me-1 fw-bold">Sort:</label>
+                        <select id="sort-recent" class="form-select form-select-sm d-inline-block w-auto">
+                            <option value="default">Default</option>
+                            <option value="atoz">A to Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="recent-container" class="row g-3 mt-2">
+                    <!-- Recent pages dynamically inserted here -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
