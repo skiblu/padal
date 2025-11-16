@@ -18,10 +18,9 @@
     background: #ece3c2;
 }
 
-/* Small Bootstrap icon */
-.favorite-btn i {
-    font-size: 0.75rem; /* small, clean */
-    line-height: 1;
+/* Favorite (Add/Remove) Button - initial SVG color fix */
+.favorite-btn svg {
+    fill: #4a3f1e;  /* dark enough to be visible on golden background */
 }
 
 /* When item is already a favorite */
