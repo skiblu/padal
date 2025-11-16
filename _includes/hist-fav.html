@@ -7,21 +7,17 @@ Favorites list with sort and clear functionality (stylish golden table - mobile 
         <div class="card">
             <div class="card-body">
 
-                <!-- Header -->
+                <!-- Header with sort and clear -->
                 <div class="d-flex justify-content-between align-items-center mb-2">
                     <h2 class="card-title mb-0" style="font-size: 1rem;">Favorites</h2>
 
                     <div class="d-flex align-items-center" style="gap: 4px;">
-                        <button id="clear-favorites"
-                                class="btn btn-sm btn-outline-danger"
-                                style="font-size: 0.6rem; padding: 2px 6px;">
+                        <button id="clear-favorites" class="btn btn-sm btn-outline-danger" style="font-size: 0.6rem; padding: 2px 6px;">
                             Clear All
                         </button>
 
                         <label class="fw-bold mb-0" style="font-size: 0.6rem;">Sort:</label>
-
-                        <select id="sort-favorites"
-                                class="form-select form-select-sm d-inline-block w-auto"
+                        <select id="sort-favorites" class="form-select form-select-sm d-inline-block w-auto"
                                 style="font-size: 0.6rem; padding: 2px 4px;">
                             <option value="default">Default</option>
                             <option value="atoz">A to Z</option>
@@ -29,7 +25,7 @@ Favorites list with sort and clear functionality (stylish golden table - mobile 
                     </div>
                 </div>
 
-                <!-- Table -->
+                <!-- Favorites table -->
                 <div class="table-responsive">
                     <table class="stylish-table mb-0">
                         <thead>
@@ -39,7 +35,7 @@ Favorites list with sort and clear functionality (stylish golden table - mobile 
                         </tr>
                         </thead>
                         <tbody id="favorites-container">
-                        <!-- JS inserts rows dynamically -->
+                        <!-- Rendered by JS -->
                         </tbody>
                     </table>
                 </div>

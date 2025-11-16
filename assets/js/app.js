@@ -4,26 +4,20 @@
   const MAX_RECENT = 10;
 
   document.addEventListener('DOMContentLoaded', () => {
-    const favContainer = document.getElementById('favorite-btn-container');
-    const allowHistory = !!favContainer;
 
-    // Current page info
-    const pageTitle = document.title.split('|')[0].trim();
-    const currentPage = { title: pageTitle, url: window.location.pathname };
-
-    // --- Storage helpers ---
+    // --- Helper functions ---
     const getRecent = () => JSON.parse(localStorage.getItem(RECENT_KEY)) || [];
     const getFavorites = () => JSON.parse(localStorage.getItem(FAVORITE_KEY)) || [];
     const saveRecent = (pages) => localStorage.setItem(RECENT_KEY, JSON.stringify(pages));
     const saveFavorites = (pages) => localStorage.setItem(FAVORITE_KEY, JSON.stringify(pages));
 
-    // --- Update recents ---
-    if (allowHistory) {
-      let recentPages = getRecent().filter(p => p.url !== currentPage.url);
-      recentPages.unshift(currentPage);
-      if (recentPages.length > MAX_RECENT) recentPages.pop();
-      saveRecent(recentPages);
-    }
+    const currentPage = {
+      title: document.title.split('|')[0].trim(),
+      url: window.location.pathname
+    };
+
+    const favContainer = document.getElementById('favorite-btn-container');
+    const allowHistory = !!favContainer;
 
     // --- Favorites helpers ---
     function isFavorite(page) {
@@ -44,12 +38,18 @@
     function renderCards(containerId, pages) {
       const container = document.getElementById(containerId);
       if (!container) return;
-      container.innerHTML = '';
 
-      pages.forEach(p => {
+      // Sort if table has a sort select
+      const sortSelect = container.parentNode.querySelector('select');
+      let sortedPages = [...pages];
+      if (sortSelect && sortSelect.value === 'atoz') {
+        sortedPages.sort((a, b) => a.title.localeCompare(b.title));
+      }
+
+      container.innerHTML = '';
+      sortedPages.forEach(p => {
         const tr = document.createElement('tr');
 
-        // Title column
         const tdTitle = document.createElement('td');
         const link = document.createElement('a');
         link.href = p.url;
@@ -57,7 +57,6 @@
         link.className = 'toc-link';
         tdTitle.appendChild(link);
 
-        // Remove button column
         const tdRemove = document.createElement('td');
         tdRemove.className = 'text-center';
         const btn = document.createElement('button');
@@ -86,10 +85,9 @@
     function renderFavorites() { renderCards('favorites-container', getFavorites()); }
     function renderRecent() { renderCards('recent-container', getRecent()); }
 
-    // --- Favorite button on page ---
+    // --- Favorite button ---
     function createFavoriteButton() {
       if (!favContainer) return;
-
       const btn = document.createElement('button');
       btn.id = 'favorite-btn';
       btn.className = 'favorite-btn';
@@ -138,9 +136,55 @@
       renderRecent();
     });
 
-    // --- Initialize ---
-    createFavoriteButton();
+    // --- Sorting for TOC / Sub-TOC ---
+    function setupTocSort(radioName, defaultId, atozId) {
+      const radios = document.querySelectorAll(`input[name='${radioName}']`);
+      const defaultDiv = document.getElementById(defaultId);
+      const atozDiv = document.getElementById(atozId);
+      if (!radios || !defaultDiv || !atozDiv) return;
+
+      radios.forEach(rb => {
+        rb.addEventListener('change', function() {
+          if (this.value === 'atoz') {
+            defaultDiv.style.display = 'none';
+            atozDiv.style.display = 'block';
+          } else {
+            defaultDiv.style.display = 'block';
+            atozDiv.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    // --- Sorting for Favorites/Recent Tables ---
+    function setupTableSort(selectId, containerId) {
+      const sel = document.getElementById(selectId);
+      if (!sel) return;
+      sel.addEventListener('change', () => {
+        renderCards(containerId, containerId === 'favorites-container' ? getFavorites() : getRecent());
+      });
+    }
+
+    // --- Initialize all ---
+    if (allowHistory) createFavoriteButton();
     renderFavorites();
     renderRecent();
+
+    // Favorites/Recent table sorts
+    setupTableSort('sort-favorites', 'favorites-container');
+    setupTableSort('sort-recent', 'recent-container');
+
+    // TOC sorts
+    setupTocSort('tocSort', 'toc-default', 'toc-atoz');
+    setupTocSort('tocSortSub', 'toc-sub-default', 'toc-sub-atoz');
+
+    // Add current page to recent
+    if (allowHistory) {
+      let recs = getRecent().filter(p => p.url !== currentPage.url);
+      recs.unshift(currentPage);
+      if (recs.length > MAX_RECENT) recs.pop();
+      saveRecent(recs);
+    }
+
   });
 })();
