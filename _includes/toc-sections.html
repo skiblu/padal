@@ -15,26 +15,18 @@ Usage: {% include toc-sections.html parent_name="my-parent-id" %}
     <div class="card">
       <div class="card-body">
 
-        <!-- Header & Sort Icons -->
+        <!-- Header & Single Sort Toggle Icon -->
         <div class="d-flex justify-content-between align-items-center">
-          <h2 class="card-title h3 mb-0">Categories</h2>
+          <h2 class="card-title h3 mb-0">Contents</h2>
 
-          <div class="sort-controls d-flex align-items-center gap-2">
-            <span class="fw-bold me-1">Sort By:</span>
-
-            <!-- Default icon -->
-            <button type="button" class="toc-sort-btn" data-sort="default" title="Default">
+          <div class="sort-controls">
+            <button id="toc-sort-toggle-sub" type="button" data-sort="default" title="Default">
               <img src="/assets/bootstrap-icons/list.svg" width="16" height="16" alt="Default Sort">
-            </button>
-
-            <!-- A–Z icon -->
-            <button type="button" class="toc-sort-btn" data-sort="atoz" title="A to Z">
-              <img src="/assets/bootstrap-icons/sort-alpha-down.svg" width="16" height="16" alt="A to Z Sort">
             </button>
           </div>
         </div>
 
-        <!-- Default -->
+        <!-- Default Sort -->
         <div id="toc-sub-default" class="toc-section mt-3">
           <div class="row g-3 mt-2">
             {%- for c in children_default -%}
@@ -56,7 +48,7 @@ Usage: {% include toc-sections.html parent_name="my-parent-id" %}
           </div>
         </div>
 
-        <!-- A–Z -->
+        <!-- A–Z Sort -->
         <div id="toc-sub-atoz" class="toc-section mt-3" style="display:none;">
           <div class="row g-3 mt-2">
             {%- for c in children_atoz -%}

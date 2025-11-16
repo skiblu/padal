@@ -9,26 +9,16 @@ TOC of all items with parent_id
   <div class="m-3 col-md-8">
     <div class="card">
       <div class="card-body">
-
-        <!-- Header & Sort Icons -->
+        <!-- Header & Sort Icon -->
         <div class="d-flex justify-content-between align-items-center">
           <h2 class="card-title h3 mb-0">Categories</h2>
 
-          <div class="sort-controls d-flex align-items-center gap-2">
-            <span class="fw-bold me-1">Sort By:</span>
-
-            <!-- Default icon -->
-            <button type="button" class="toc-sort-btn" data-sort="default" title="Default">
-              <img src="/assets/bootstrap-icons/list.svg" width="16" height="16" alt="Default Sort">
-            </button>
-
-            <!-- A–Z icon -->
-            <button type="button" class="toc-sort-btn" data-sort="atoz" title="A to Z">
-              <img src="/assets/bootstrap-icons/sort-alpha-down.svg" width="16" height="16" alt="A to Z Sort">
+          <div class="sort-controls">
+            <button type="button" id="toc-sort-toggle" class="toc-sort-btn" data-sort="default" title="Default">
+              <img src="/assets/bootstrap-icons/list.svg" width="16" height="16" alt="Sort Icon">
             </button>
           </div>
         </div>
-
 
         <!-- Default order -->
         <div id="toc-default" class="toc-section mt-3">
