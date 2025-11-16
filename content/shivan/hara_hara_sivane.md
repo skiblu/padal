@@ -1,7 +1,6 @@
 ---
 section: Shivan
 nav_order: 2
-youtube_id: Se5CGGMPOTQ
 audio_id: r43jejYR
 title:  Hara Hara Sivane
 topics: Shivan, Hara, Hara, Sivane, நம, சிவாய, ஹர ஹர சிவனே
