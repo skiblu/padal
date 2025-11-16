@@ -32,7 +32,6 @@ Usage: {% include toc-sections.html parent_name="my-parent-id" %}
             <tr>
               <th>Order</th>
               <th>Title</th>
-              <th>Excerpt</th>
             </tr>
             </thead>
             <tbody>
@@ -40,11 +39,6 @@ Usage: {% include toc-sections.html parent_name="my-parent-id" %}
             <tr>
               <td>{{ c.nav_order }}</td>
               <td><a href="{{ c.url | relative_url }}" class="toc-link">{{ c.title }}</a></td>
-              <td>
-                {%- if c.excerpt -%}
-                {{ c.excerpt | strip_html | truncate: 120 }}
-                {%- endif -%}
-              </td>
             </tr>
             {%- endfor -%}
             </tbody>
@@ -58,7 +52,6 @@ Usage: {% include toc-sections.html parent_name="my-parent-id" %}
             <tr>
               <th>Order</th>
               <th>Title</th>
-              <th>Excerpt</th>
             </tr>
             </thead>
             <tbody>
@@ -66,11 +59,6 @@ Usage: {% include toc-sections.html parent_name="my-parent-id" %}
             <tr>
               <td>{{ c.nav_order }}</td>
               <td><a href="{{ c.url | relative_url }}" class="toc-link">{{ c.title }}</a></td>
-              <td>
-                {%- if c.excerpt -%}
-                {{ c.excerpt | strip_html | truncate: 120 }}
-                {%- endif -%}
-              </td>
             </tr>
             {%- endfor -%}
             </tbody>
