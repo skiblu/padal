@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 18
+nav_order: 12
 youtube_id: TZY0XjRpaCE
 title: Thannanna Dhenam
 topics: Ayyappa, thannanna, dhenam, தன்னன்னா, தினம், தன்னன்னா, தினம்

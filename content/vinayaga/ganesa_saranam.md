@@ -1,6 +1,6 @@
 ---
 section: Vinayaga
-nav_order: 3
+nav_order: 2
 title:  Ganesa Saranam
 topics: Vinayaga, Ganesa, Saranam, கணேச, சரணம்
 ---

@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 17
+nav_order: 11
 title: Poi Indri Meiyodu
 topics: Ayyappa, Poi, Indri, Meiyodu, பொய, இன்றி, மெய்யோடு 
 ---

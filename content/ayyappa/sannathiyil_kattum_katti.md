@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 23
+nav_order: 16
 youtube_id: 7k5zDLBZpWc
 title: Sannathiyil Kattum Katti
 topics: Ayyappa, Sannathiyil, Kattum, Katti, சன்னதியில், கட்டும், கட்டி

@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 4
+nav_order: 2
 title:  Sarana Gosham
 topics: Ayyappa, Sarana, Gosham
 ---

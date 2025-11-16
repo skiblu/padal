@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 2
+nav_order: 1
 title:  Murugan Ashtothram
 topics: Murugan, Muruga, Ashtothram, 108
 ---

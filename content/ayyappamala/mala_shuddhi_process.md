@@ -1,6 +1,6 @@
 ---
 section: Ayyappa Mala
-nav_order: 4
+nav_order: 2
 title: Mala Shuddhi Process
 topics: Ayyappa, Mala, Shuddhi, Swamy
 ---

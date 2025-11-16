@@ -1,6 +1,6 @@
 ---
 section: Sakthi
-nav_order: 2
+nav_order: 1
 title:  Durga Ashtothram
 topics: Amman, Sakthi, Durga, Ashtothram, 108
 ---

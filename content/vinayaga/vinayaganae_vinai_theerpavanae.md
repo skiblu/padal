@@ -1,6 +1,6 @@
 ---
 section: Vinayaga
-nav_order: 50
+nav_order: 7
 title:  Vinayaganae Vinai Theerpavanae
 youtube_id: fOBYiKcncLQ
 topics: Vinayaga, Ganesa, vinai, theerpavanae, விநாயகன், வினை, தீர்ப்பவனே

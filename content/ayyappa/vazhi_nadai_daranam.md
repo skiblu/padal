@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 5
+nav_order: 3
 title:  Vazhi Nadai Saranam
 topics: Vazhi, Nadai, Saranam, Ayyappa
 ---

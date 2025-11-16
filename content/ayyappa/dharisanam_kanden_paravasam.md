@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 21
+nav_order: 18
 youtube_id: bwW1LtE4ad8
 title: Dharisanam Kanden Paravasam
 topics: Ayyappa, Dharisanam, Kanden, Paravasam, தரிசனம், கண்டேன், பரவசம்

@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 25
+nav_order: 17
 title: Ponal Sabarimalai
 youtube_id: QAq8s4-k7tc
 topics: Ayyappa, Ponal, Sabarimalai, பொனல், சபரிமலை

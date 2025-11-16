@@ -1,6 +1,6 @@
 ---
 section: Vinayaga
-nav_order: 5
+nav_order: 4
 title:  Om Ganesa Pahimam
 topics: Vinayaga, Om, Ganesa, Pahimam, ஓம், கணேச, பாஹிமாம்
 ---

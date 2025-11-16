@@ -1,6 +1,6 @@
 ---
 section: Ayyappa Mala
-nav_order: 47
+nav_order: 3
 title: Irumudi Pooja and Kettu Nira
 topics: Ayyappa
 ---

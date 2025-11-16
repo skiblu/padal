@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 20
+nav_order: 14
 title: Kannimoola ganapathiyai
 topics: Ayyappa, Kannimoola ganapathiyai, கன்னிமூல, கணபதியை
 ---

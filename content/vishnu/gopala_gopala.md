@@ -1,6 +1,6 @@
 ---
 section: Vishnu
-nav_order: 3
+nav_order: 1
 title:  Gopala Gopala
 topics: Vishnu, Gopala, Gopala
 ---

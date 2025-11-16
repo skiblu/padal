@@ -1,6 +1,6 @@
 ---
 parent_id: Ayyappa Mala
-nav_order: 9
+nav_order: 10
 title: All Songs
 history: false
 topics: Ayyappa, Sloka(s), lyrics, songs

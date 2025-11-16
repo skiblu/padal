@@ -1,6 +1,6 @@
 ---
 section: Ayyappa Mala
-nav_order: 50
+nav_order: 5
 title:  Ayyappa Swamy Titles
 topics: Ayyappa, Titles, Swamy
 ---

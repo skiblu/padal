@@ -1,6 +1,6 @@
 ---
 section: Ayyappa Mala
-nav_order: 49
+nav_order: 1
 title: Ayyappa Dos and Don'ts
 topics: Ayyappa
 ---

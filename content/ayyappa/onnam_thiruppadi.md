@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 22
+nav_order: 15
 youtube_id: dwU-V7q2waE
 title: Onnam Thiruppadi
 topics: Ayyappa, Onnam, Thiruppadi, ஒன்னம், திருப்படி
