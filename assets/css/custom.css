@@ -1,0 +1,32 @@
+/* Favorite (Add/Remove) Button */
+.favorite-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #f8f3da;       /* calm golden */
+    border: 1px solid #d4c38a;
+    color: #6b5a34;
+    padding: 2px 6px;          /* compact */
+    font-size: 0.65rem;        /* reduced font */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    white-space: nowrap;
+}
+
+.favorite-btn:hover {
+    background: #ece3c2;
+}
+
+/* Small Bootstrap icon */
+.favorite-btn i {
+    font-size: 0.75rem; /* small, clean */
+    line-height: 1;
+}
+
+/* When item is already a favorite */
+.favorite-btn.active {
+    background: #e8d8a6;
+    border-color: #c0a969;
+    color: #5a4726;
+}
