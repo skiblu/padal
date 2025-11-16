@@ -46,25 +46,35 @@
       const container = document.getElementById(containerId);
       if (!container) return;
       container.innerHTML = '';
+
       pages.forEach(p => {
         const col = document.createElement('div');
         col.className = 'col-12 col-md-4';
+
         col.innerHTML = `
           <div class="card toc-card h-100">
             <div class="card-body p-3 d-flex flex-column justify-content-between">
-              <h3 class="card-title h6 mb-2">
-                <a href="${p.url}" class="toc-link stretched-link">${p.title}</a>
-              </h3>
-              <button class="btn btn-sm btn-outline-danger mt-auto remove-item" data-url="${p.url}">Remove</button>
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="card-title h6 mb-2">
+                  <a href="${p.url}" class="toc-link stretched-link">${p.title}</a>
+                </h3>
+                <button class="btn btn-sm btn-outline-danger remove-item" data-url="${p.url}" title="Remove">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </div>
             </div>
           </div>
         `;
         container.appendChild(col);
       });
+
       // Attach remove handlers
       container.querySelectorAll('.remove-item').forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation(); // Prevent link navigation
+          e.preventDefault();  // Prevent any default behavior
           const url = btn.dataset.url;
+
           if (containerId === 'favorites-container') {
             saveFavorites(getFavorites().filter(p => p.url !== url));
             renderFavorites();
