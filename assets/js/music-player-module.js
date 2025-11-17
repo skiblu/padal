@@ -212,12 +212,14 @@ class MusicPlayer {
     this.nextBtn.title = 'Next';
     this.nextBtn.setAttribute('aria-label', 'Next');
     this.nextBtn.innerHTML = `<img src="/assets/bootstrap-icons/skip-end.svg" alt="Next">`;
-    // insert next/prev near play/pause (after play/pause)
+    // insert prev before play/pause and next after play/pause (fix swapped order)
     const refNode = this.pauseBtn || this.playBtn;
     if (refNode && refNode.parentNode) {
-      refNode.parentNode.insertBefore(this.prevBtn, refNode.nextSibling);
+      // place Prev immediately before the play/pause node, Next immediately after it
+      refNode.parentNode.insertBefore(this.prevBtn, refNode);
       refNode.parentNode.insertBefore(this.nextBtn, refNode.nextSibling);
     } else if (this.controlsRow) {
+      // fallback: append prev then next (prev still first)
       this.controlsRow.appendChild(this.prevBtn);
       this.controlsRow.appendChild(this.nextBtn);
     }
@@ -357,7 +359,7 @@ class MusicPlayer {
     this.playlist = Array.isArray(list) ? list.slice() : [];
     if (typeof opts.startIndex === 'number') this.currentIndex = Math.max(0, Math.min(opts.startIndex, this.playlist.length -1));
     this._buildPlaylistView();
-    if this.playlist.length) this._loadTrack(this.currentIndex, false);
+    if (this.playlist.length) this._loadTrack(this.currentIndex, false);
   }
 
   setMode(m) {
