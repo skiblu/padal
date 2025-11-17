@@ -276,7 +276,7 @@
             console.warn('DevTools detected');
             // optional action: show a brief overlay, redirect, or log event
             // Example: show a little overlay for casual deterrent:
-            showDevtoolsOverlay();
+            // showDevtoolsOverlay();
           }
         } else {
           if (open) {
