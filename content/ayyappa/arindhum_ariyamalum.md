@@ -2,6 +2,7 @@
 section: Ayyappa
 nav_order: 94
 audio_id: 7FTywe4759
+audio_length: 36
 title: Arindhum Ariyamalum
 topics: Ayyappa, Arindhum, Ariyamalum, அறிந்தும், அறியாமலும்
 ---

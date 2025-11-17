@@ -2,6 +2,7 @@
 section: Ayyappa
 nav_order: 93
 audio_id: u7e5GU83
+audio_length: 256
 title: Loka Veeram
 topics: Ayyappa, Loka, Veeram, லோக, வீரம்
 ---

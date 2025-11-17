@@ -1,360 +1,119 @@
 {%- comment -%}
-Self-contained radio player include (single file).
+Radio include — builds a client-side playlist from site pages and initializes
+music-player-module.js in "radio" mode so the browser behaves like a radio.
+
 Usage:
 {% include player-radio.html parent_name="bhakti" %}
 or
-{% include player-radio.html %}  <-- uses all tracks
+{% include player-radio.html %}  <-- uses all audio files
 
-Requirements:
-- Pages must have front-matter `audio_id: <id>` and `section: <folder>` (same pattern as music-player)
-    - Audio files must exist at /assets/audio/<section>/<audio_id>.mp3
-        {%- endcomment -%}
+Gathered fields from pages: title, section (parent), audio_id, audio_length (optional).
+If audio_length is missing we use a DEFAULT_TRACK_LENGTH fallback (seconds).
+{%- endcomment -%}
 
-        {%- assign parent = include.parent_name | default: "" -%}
+{%- assign parent = include.parent_name | default: "" -%}
 
-        {%- comment -%}
-        Build RADIO_TRACKS at build-time from site pages (scan for audio_id)
-        We generate an array of { title, parent, audio_id, url }
-        {%- endcomment -%}
-        <script>
-            window.RADIO_TRACKS = [
-            {%- assign all_pages = site.html_pages -%}
-            {%- assign firstOut = true -%}
-            {%- for p in all_pages -%}
-              {%- if p.audio_id and p.audio_id != "" -%}
-                {%- comment -%} allow filtering later in client; always include parent value from p.section or p.parent_id {%- endcomment -%}
-                {%- if forloop.index0 > 0 %},{% endif -%}
-                {
-                  "title": {{ p.title | jsonify }},
-                  "parent": {{ p.section | default: p.parent_id | jsonify }},
-                  "audio_id": {{ p.audio_id | jsonify }},
-                  "url": "{{ '/assets/audio/' | relative_url }}{{ p.section | default: p.parent_id }}/{{ p.audio_id }}.mp3"
-                }
-              {%- endif -%}
-            {%- endfor -%}
-            ];
-        </script>
+<div class="music-player-wrapper"
+     aria-label="Radio player"
+     data-radio-parent="{{ parent | escape }}">
+</div>
 
-        {%- comment -%}
-        Main HTML (cassette UI) — identical structure and classes to music-player.html
-        {%- endcomment -%}
-        <div class="music-player-wrapper"
-             aria-label="Radio player"
-             data-radio="true"
-             data-parent="{{ parent }}">
+<script type="module">
+  import initMusicPlayer from '/assets/js/music-player-module.js';
 
-            <!-- Hidden audio element (track selected by JS) -->
-            <audio class="radio-audio" preload="metadata" crossorigin="anonymous"></audio>
+  // Build TRACKS array from Jekyll pages (generated at build time)
+  const TRACKS = [
+  {%- assign all_pages = site.html_pages -%}
+  {%- assign first = true -%}
+  {%- for p in all_pages -%}
+    {%- if p.audio_id and p.audio_id != "" -%}
+      {%- if forloop.index0 > 0 %},{% endif -%}
+      {
+        "title": {{ p.title | jsonify }},
+        "parent": {{ p.section | default: p.parent_id | jsonify }},
+        "audio_id": {{ p.audio_id | jsonify }},
+        "url": "{{ '/assets/audio/' | relative_url }}{{ p.section | default: p.parent_id }}/{{ p.audio_id }}.mp3",
+        {%- assign d = p.audio_length | default: p.audio_duration | default: p.duration -%}
+        {%- if d and d != "" -%}
+        "duration": {{ d | replace: ',', '' }}
+        {%- else -%}
+        "duration": null
+        {%- endif -%}
+      }
+    {%- endif -%}
+  {%- endfor -%}
+  ];
 
-            <!-- Retro cassette visual (SAME UI AS SINGLE PLAYER) -->
-            <div class="cassette-player">
-                <div class="cassette-shell">
-                    <div class="cassette-window">
-                        <div class="reel reel-left" aria-hidden="true"></div>
-                        <div class="tape" aria-hidden="true"></div>
-                        <div class="reel reel-right" aria-hidden="true"></div>
-                    </div>
+  (function(){
+    const DEFAULT_TRACK_LENGTH = 1800; // seconds to use when duration missing
+    const parentName = (document.querySelector('.music-player-wrapper')?.dataset?.radioParent || '').trim() || null;
 
-                    <div class="cassette-label">
-                        <div class="track-title">Online Radio</div>
-                        <div class="track-sub">
-                            {% if parent != "" %}
-                            Playlist: {{ parent }}
-                            {% else %}
-                            Playlist: All Collections
-                            {% endif %}
-                        </div>
-                    </div>
+    // Filter playlist by parent if provided
+    const playlistSource = parentName ? TRACKS.filter(t => String(t.parent) === parentName) : TRACKS.slice();
 
-                    <div class="controls-row">
-                        <button class="mp-btn mp-play" aria-label="Play" title="Play">
-                            <img src="{{ '/assets/bootstrap-icons/play.svg' | relative_url }}" alt="">
-                        </button>
+    if (!playlistSource || playlistSource.length === 0) {
+      // fallback UI: init player with empty playlist and show message in console
+      console.warn('Radio: no tracks found for parent:', parentName);
+      const wrapperEl = document.querySelector('.music-player-wrapper[data-radio-parent="{{ parent | escape}}"]');
+      if (wrapperEl) {
+        wrapperEl.textContent = 'No audio tracks found';
+      }
+      return;
+    }
 
-                        <button class="mp-btn mp-pause" aria-label="Pause" title="Pause" style="display:none;">
-                            <img src="{{ '/assets/bootstrap-icons/pause.svg' | relative_url }}" alt="">
-                        </button>
+    // Normalize playlist items for music-player-module.js
+    const playlist = playlistSource.map(t => {
+      const dur = (t.duration === null || t.duration === undefined) ? null : Number(t.duration);
+      return {
+        src: t.url,
+        title: t.title || (t.audio_id || '').toString(),
+        sub: t.parent || '',
+        duration: isFinite(dur) && dur > 0 ? dur : null
+      };
+    });
 
-                        <div class="mp-seek">
-                            <input type="range" class="mp-seek-range" min="0" max="100" value="0"
-                                   aria-label="Seek" disabled>
-                        </div>
+    // Compute total length using provided durations; missing durations use DEFAULT_TRACK_LENGTH
+    const durations = playlist.map(item => item.duration === null ? DEFAULT_TRACK_LENGTH : item.duration);
+    const totalLength = durations.reduce((s, v) => s + v, 0);
 
-                        <div class="mp-times">
-                            <span class="mp-elapsed">0:00</span> /
-                            <span class="mp-duration">LIVE</span>
-                        </div>
+    // pick current track and offset from Unix timestamp
+    const nowSec = Math.floor(Date.now() / 1000);
+    const cursor = totalLength > 0 ? (nowSec % totalLength) : 0;
 
-                        <div class="mp-volume">
-                            <button class="mp-btn mp-vol-down" aria-label="Decrease volume">
-                                <img src="{{ '/assets/bootstrap-icons/volume-down.svg' | relative_url }}" alt="">
-                            </button>
+    let acc = 0;
+    let selectedIndex = 0;
+    let offsetInTrack = 0;
+    for (let i = 0; i < durations.length; i++) {
+      const d = durations[i];
+      if (cursor < acc + d) {
+        selectedIndex = i;
+        offsetInTrack = cursor - acc;
+        break;
+      }
+      acc += d;
+    }
 
-                            <input type="range" class="mp-volume-range"
-                                   min="0" max="1" step="0.01" value="1"
-                                   aria-label="Volume">
+    // initialize music player with computed playlist and position
+    const wrapper = document.querySelector('.music-player-wrapper[data-radio-parent="{{ parent | escape}}"]');
+    if (!wrapper) return;
 
-                            <button class="mp-btn mp-vol-up" aria-label="Increase volume">
-                                <img src="{{ '/assets/bootstrap-icons/volume-up.svg' | relative_url }}" alt="">
-                            </button>
-                        </div>
-                    </div>
+    const options = {
+      mode: 'radio',
+      playlist: playlist,
+      startIndex: selectedIndex,
+      radioStart: offsetInTrack,
+      loop: true
+    };
 
-                </div>
-            </div>
-        </div>
+    // initMusicPlayer will build UI inside wrapper
+    const player = initMusicPlayer(wrapper, options);
 
-        {%- comment -%}
-        Embed same CSS as music-player.html (copied inline for self-contained single file)
-        {%- endcomment -%}
-        <style>
-            /* ---- Retro cassette player styles (copied from music-player.html) ---- */
-            .music-player-wrapper { max-width: 780px; margin: 1.25rem auto; padding: 0 1rem; box-sizing: border-box; }
-            .cassette-player { display:flex; justify-content:center; }
-            .cassette-shell {
-              width: 100%;
-              max-width: 720px;
-              background: linear-gradient(180deg, #efe0b4 0%, #e3d19a 60%, #d6c68a 100%);
-              border-radius: 12px;
-              box-shadow: 0 6px 18px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.35);
-              padding: 14px;
-              font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-              color: #42321a;
-            }
+    // ensure UI reflects playing position (start paused; user can press Play)
+    // Optionally auto-start: uncomment next line if autoplay is desired (may be blocked by browser)
+    // player.play();
 
-            /* cassette window */
-            .cassette-window {
-              display:flex;
-              align-items:center;
-              justify-content:space-between;
-              gap: 18px;
-              background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02));
-              padding: 14px 12px;
-              border-radius: 8px;
-              margin-bottom: 12px;
-            }
+    // expose for debugging
+    window._RADIO_PLAYER = { player, playlist, selectedIndex, offsetInTrack, totalLength };
+  })();
 
-            /* reels */
-            .reel {
-              width: 78px;
-              height: 78px;
-              background: radial-gradient(circle at 34% 30%, #2a1f12 0, #4a3b28 30%, #2b1f13 100%);
-              border-radius: 50%;
-              box-shadow: inset 0 2px 6px rgba(255,255,255,0.05), 0 3px 8px rgba(0,0,0,0.2);
-              position: relative;
-              transform-origin: 50% 50%;
-            }
-
-            .reel::after {
-              content: "";
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              transform: translate(-50%, -50%);
-              width: 14px;
-              height: 14px;
-              border-radius: 50%;
-              background: #c9b58a;
-              box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2);
-            }
-
-            /* tape visually between reels */
-            .tape {
-              flex:1;
-              height: 8px;
-              background: linear-gradient(90deg,#3b2a1a 0%, #1e130a 40%, #3b2a1a 100%);
-              border-radius: 4px;
-              align-self:center;
-              box-shadow: inset 0 1px 1px rgba(255,255,255,0.06);
-            }
-
-            /* label area */
-            .cassette-label { padding: 6px 8px; background: rgba(255,255,255,0.03); border-radius: 6px; margin-bottom: 8px; }
-            .track-title { font-weight:700; font-size:1.05rem; margin-bottom:3px; color: #2a1f12; }
-            .track-sub { font-size:0.75rem; color: #5b4a30; }
-
-            /* controls row */
-            .controls-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:space-between; }
-            .mp-btn { display:inline-flex; align-items:center; justify-content:center; background: #fff; border: none; padding:6px; border-radius:6px; box-shadow: 0 2px 4px rgba(0,0,0,0.12); cursor:pointer; }
-            .mp-btn img { display:block; width:18px; height:18px; filter: none; }
-
-            /* seek (disabled for radio UI) */
-            .mp-seek { flex:1; min-width:160px; margin:0 8px; }
-            .mp-seek-range { width:100%; -webkit-appearance:none; background:transparent; height:8px; }
-            .mp-seek-range::-webkit-slider-runnable-track { height:8px; background: linear-gradient(90deg,#b88f45,#e9d49f); border-radius:8px; }
-            .mp-seek-range::-webkit-slider-thumb { -webkit-appearance:none; width:14px; height:14px; background:#2a1f12; border-radius:50%; margin-top:-3px; box-shadow:0 1px 3px rgba(0,0,0,0.4); }
-
-            /* times */
-            .mp-times { font-size:0.82rem; color:#302414; min-width:86px; text-align:center; }
-
-            /* volume */
-            .mp-volume { display:flex; align-items:center; gap:6px; min-width:170px; }
-            .mp-volume-range { width:90px; -webkit-appearance:none; height:6px; }
-            .mp-volume-range::-webkit-slider-runnable-track { height:6px; background: linear-gradient(90deg,#e6d6a8,#c8a858); border-radius:6px; }
-            .mp-volume-range::-webkit-slider-thumb { -webkit-appearance:none; width:12px; height:12px; background:#2a1f12; border-radius:50%; margin-top:-3px; }
-
-            /* responsive */
-            @media (max-width:720px) {
-              .reel { width:60px; height:60px; }
-              .mp-btn img { width:16px; height:16px; }
-              .mp-volume { min-width:140px; }
-              .mp-times { font-size:0.75rem; }
-            }
-        </style>
-
-        {%- comment -%}
-        Inline JS: deterministic radio using time-sliced windows (no duration manifest required).
-        TRACK_WINDOW: seconds per track window (default 1800s = 30 minutes). Change as needed.
-        {%- endcomment -%}
-        <script>
-            (function(){
-
-              const TRACK_WINDOW = 1800; // seconds per track window
-
-              // find our wrapper
-              const wrapper = document.querySelector('[data-radio="true"][data-parent="{{ parent }}"]');
-              if (!wrapper) return;
-
-              // use the Jekyll-built list
-              const ALL_TRACKS = window.RADIO_TRACKS && Array.isArray(window.RADIO_TRACKS) ? window.RADIO_TRACKS.slice() : [];
-
-              // filter by parent if needed
-              const parentName = wrapper.dataset.parent && wrapper.dataset.parent.trim() !== "" ? wrapper.dataset.parent.trim() : null;
-              const TRACKS = parentName ? ALL_TRACKS.filter(t => (t.parent + "") === parentName) : ALL_TRACKS;
-
-              // UI elements
-              const audio = wrapper.querySelector('.radio-audio');
-              const playBtn = wrapper.querySelector('.mp-play');
-              const pauseBtn = wrapper.querySelector('.mp-pause');
-              const volRange = wrapper.querySelector('.mp-volume-range');
-              const volUp = wrapper.querySelector('.mp-vol-up');
-              const volDown = wrapper.querySelector('.mp-vol-down');
-              const elapsedEl = wrapper.querySelector('.mp-elapsed');
-              const titleEl = wrapper.querySelector('.track-title');
-              const subEl = wrapper.querySelector('.track-sub');
-              const reelLeft = wrapper.querySelector('.reel-left');
-              const reelRight = wrapper.querySelector('.reel-right');
-
-              if (!TRACKS || TRACKS.length === 0) {
-                titleEl.textContent = "No audio tracks found";
-                subEl.textContent = "";
-                return;
-              }
-
-              function formatTime(sec) {
-                if (!isFinite(sec)) return '0:00';
-                const m = Math.floor(sec / 60);
-                const s = Math.floor(sec % 60);
-                return m + ':' + (s < 10 ? '0' + s : s);
-              }
-
-              function getNowSeconds() {
-                return Math.floor(Date.now() / 1000);
-              }
-
-              function pickTrackAndOffset(nowSec = getNowSeconds()) {
-                const total = TRACKS.length;
-                const index = Math.floor(nowSec / TRACK_WINDOW) % total;
-                const offsetInWindow = nowSec % TRACK_WINDOW;
-                return { index, track: TRACKS[index], offsetInWindow };
-              }
-
-              let reelTimer = null;
-              function startReels(){
-                if (reelTimer) return;
-                let angle = 0;
-                reelTimer = setInterval(() => {
-                  angle = (angle + 6 + Math.random()*2) % 360;
-                  reelLeft.style.transform = `rotate(${angle}deg)`;
-                  reelRight.style.transform = `rotate(${360-angle}deg)`;
-                }, 40);
-              }
-              function stopReels(){
-                if (!reelTimer) return;
-                clearInterval(reelTimer);
-                reelTimer = null;
-              }
-
-              // --- Only sync once on load/resume, no periodic resync ---
-              function syncAndPlay() {
-                const nowSec = getNowSeconds();
-                const { track, offsetInWindow } = pickTrackAndOffset(nowSec);
-                if (!track) return;
-
-                titleEl.textContent = track.title || track.audio_id || (track.url.split('/').pop());
-                subEl.textContent = track.parent || '';
-
-                audio.pause();
-                audio.src = track.url;
-
-                const onMeta = () => {
-                  const dur = audio.duration || 0;
-                  let seekTo = dur > 0 ? offsetInWindow % dur : 0;
-                  try { audio.currentTime = seekTo; } catch(e){}
-                  audio.play().catch(()=>{});
-                  audio.removeEventListener('loadedmetadata', onMeta);
-                };
-
-                if (audio.readyState >= 1) onMeta();
-                else audio.addEventListener('loadedmetadata', onMeta);
-
-                elapsedEl.textContent = formatTime(offsetInWindow);
-              }
-
-              // Hook up play/pause UI
-              playBtn.addEventListener('click', () => {
-                syncAndPlay(); // only sync on play
-                playBtn.style.display = 'none';
-                pauseBtn.style.display = '';
-                startReels();
-              });
-
-              // Play next track when current track ends
-                audio.addEventListener('ended', () => {
-                  if (!TRACKS || TRACKS.length === 0) return;
-                  // Find current track index
-                  const currentIndex = TRACKS.findIndex(t => t.url === audio.src.split(location.origin)[1] || audio.src);
-                  // Pick next track (wrap around)
-                  const nextIndex = (currentIndex + 1) % TRACKS.length;
-                  const nextTrack = TRACKS[nextIndex];
-                  if (!nextTrack) return;
-
-                  // Update UI
-                  titleEl.textContent = nextTrack.title || nextTrack.audio_id || (nextTrack.url.split('/').pop());
-                  subEl.textContent = nextTrack.parent || '';
-
-                  // Load and play
-                  audio.src = nextTrack.url;
-                  audio.addEventListener('loadedmetadata', function onMeta() {
-                    try { audio.currentTime = 0; } catch(e){}
-                    audio.play().catch(()=>{});
-                    audio.removeEventListener('loadedmetadata', onMeta);
-                  });
-                });
-
-             // Pause button
-              pauseBtn.addEventListener('click', () => {
-                audio.pause();
-                pauseBtn.style.display = 'none';
-                playBtn.style.display = '';
-                stopReels();
-              });
-
-              // Volume UI
-              audio.volume = 1;
-              volRange.value = audio.volume;
-              volRange.addEventListener('input', (e) => { audio.volume = e.target.value; });
-              volUp.addEventListener('click', () => { audio.volume = Math.min(1, audio.volume + 0.1); volRange.value = audio.volume; });
-              volDown.addEventListener('click', () => { audio.volume = Math.max(0, audio.volume - 0.1); volRange.value = audio.volume; });
-
-              // Autoplay if already playing
-              if (!audio.paused && audio.src) {
-                playBtn.style.display = 'none';
-                pauseBtn.style.display = '';
-                startReels();
-                syncAndPlay();
-              }
-
-            })();
-        </script>
-
+</script>

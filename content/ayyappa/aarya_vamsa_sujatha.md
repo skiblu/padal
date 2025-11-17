@@ -2,6 +2,7 @@
 section: Ayyappa
 nav_order: 91
 audio_id: fY6e9Hko9
+audio_length: 267
 title: Aarya Vamsa Sujatha
 topics: Ayyappa, Aarya, Vamsa, Sujatha
 ---
