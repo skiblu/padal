@@ -148,25 +148,30 @@ class MusicPlayer {
     .cassette-window { display:flex; align-items:center; justify-content:space-between; gap: 18px; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02)); padding: 14px 12px; border-radius: 8px; margin-bottom: 12px; position: relative; }
     /* centered track info sits above/below the tape line */
     .mp-track-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); display:flex; flex-direction:column; align-items:center; pointer-events: none; z-index: 60; }
-    /* title: sit clearly above the dark tape line with contrast background */
+    /* title: no visible boxed background (transparent), keeps overflow:hidden for marquee */
     .mp-track-center .track-title {
       font-weight:700;
       font-size:1.05rem;
       margin-bottom: 6px;
-      color: #ffffff;
+      color: #ffffff;           /* white for contrast over tape */
       text-align:center;
-      overflow:hidden;
+      overflow:hidden;         /* required for marquee clipping */
       white-space:nowrap;
       max-width: calc(100% - 160px); /* leaves room for reels */
-      transform: translateY(-18px); /* move higher above tape */
+      transform: translateY(-16px);  /* slightly above the tape */
       text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-      background: rgba(0,0,0,0.45); /* subtle dark backdrop so text is always legible */
-      padding: 3px 8px;
-      border-radius: 4px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+      background: transparent; /* remove the small dark box */
+      padding: 0;              /* no extra box padding */
+      border-radius: 0;
+      box-shadow: none;
       display: block;
     }
-    .mp-track-center .track-title .track-title-inner { display:inline-block; transform: translateX(0); }
+    /* give the scrolling inner text some horizontal padding so it doesn't hug edges */
+    .mp-track-center .track-title .track-title-inner {
+      display:inline-block;
+      transform: translateX(0);
+      padding: 0 16px;
+    }
      /* marquee animation: scroll to --mp-marquee-distance and back */
      .track-title.marquee-active .track-title-inner {
        animation-name: mpMarquee;
@@ -214,7 +219,8 @@ class MusicPlayer {
       .mp-volume { min-width:140px; }
       .mp-times { font-size:0.75rem; }
       /* smaller devices: reduce title size and move slightly less up so it doesn't collide with reels */
-      .mp-track-center .track-title { font-size:0.95rem; transform: translateY(-12px); max-width: calc(100% - 120px); padding: 2px 6px; }
+      .mp-track-center .track-title { font-size:0.95rem; transform: translateY(-12px); max-width: calc(100% - 120px); }
+      .mp-track-center .track-title .track-title-inner { padding: 0 10px; }
     }
     `;
     const style = document.createElement('style');
