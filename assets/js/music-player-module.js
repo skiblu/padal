@@ -134,6 +134,12 @@ class MusicPlayer {
             </button>
             <div class="mp-playlist-view" style="display:none; margin-top:8px;"></div>
           </div>
+
+          <!-- player-level LIVE badge (shown only in radio mode) -->
+          <div class="mp-live-badge-player" style="display:none;" aria-hidden="true">
+            <span class="mp-live-dot" aria-hidden="true"></span>
+            <span class="mp-live-label">LIVE</span>
+          </div>
         </div>
       </div>
     `;
@@ -150,7 +156,25 @@ class MusicPlayer {
     .cassette-shell { width: 100%; max-width: 720px; background: linear-gradient(180deg, #efe0b4 0%, #e3d19a 60%, #d6c68a 100%); border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.35); padding: 14px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #42321a; overflow: visible; }
     /* ensure absolutely-positioned title isn't clipped */
     .cassette-window { display:flex; align-items:center; justify-content:space-between; gap: 18px; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02)); padding: 14px 12px; border-radius: 8px; margin-bottom: 12px; position: relative; overflow: visible; }
-     /* centered track info sits above/below the tape line */
+    /* player-level live badge (bottom-right) */
+    .mp-live-badge-player {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.95);
+      color: #b30000;
+      padding: 6px 8px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-weight: 700;
+      z-index: 20;
+    }
+    .mp-live-badge-player .mp-live-dot { width:10px; height:10px; border-radius:50%; background:#ff2b2b; box-shadow:0 0 6px rgba(255,43,43,0.6); display:inline-block; }
+    .mp-live-badge-player .mp-live-label { font-size:0.85rem; color: #b30000; }
+    /* centered track info sits above/below the tape line */
     .mp-track-center {
       position: absolute;
       left: 50%;
@@ -226,8 +250,8 @@ class MusicPlayer {
      .mp-playlist-view li { padding:8px 10px; border-radius:6px; display:flex; align-items:center; gap:10px; cursor:pointer; }
      .mp-playlist-view li:hover { background: rgba(0,0,0,0.03); }
      .mp-playlist-view li.active { background: rgba(0,0,0,0.06); font-weight:700; }
-     .mp-live-badge { display:inline-flex; align-items:center; gap:6px; font-weight:700; color:#b30000; }
-     .mp-live-dot { width:10px; height:10px; border-radius:50%; background:#ff2b2b; box-shadow:0 0 6px rgba(255,43,43,0.6); }
+     /* .mp-live-badge { display:inline-flex; align-items:center; gap:6px; font-weight:700; color:#b30000; } */
+     /* .mp-live-dot { width:10px; height:10px; border-radius:50%; background:#ff2b2b; box-shadow:0 0 6px rgba(255,43,43,0.6); } */
      .mp-prev, .mp-next { margin-left:6px; padding:6px 8px; border-radius:6px; }
     @media (max-width:720px) {
       .reel { width:60px; height:60px; }
@@ -264,6 +288,9 @@ class MusicPlayer {
     // mode label (non-interactive) — only shows active mode
     this.mpModeLabel = this.wrapper.querySelector('.mp-mode-label');
     this.modeButtons = []; // no toggle controls exposed to user
+
+    // player-level live badge element
+    this.playerLiveBadge = this.wrapper.querySelector('.mp-live-badge-player');
 
     // create next/prev buttons and attach to controls-row (keeps layout intact)
     this.controlsRow = this.wrapper.querySelector('.controls-row');
@@ -322,12 +349,7 @@ class MusicPlayer {
       left.style.flex = '1';
       left.innerHTML = `<div class="mp-pl-title">${t.title || 'Untitled'}</div><div class="mp-pl-sub">${t.sub || ''}</div>`;
       li.appendChild(left);
-      if (this.isLive && i === this.currentIndex) {
-        const badge = document.createElement('div');
-        badge.className = 'mp-live-badge';
-        badge.innerHTML = '<span class="mp-live-dot"></span><span>LIVE</span>';
-        li.appendChild(badge);
-      }
+      // moved per-item LIVE badge to a single player-level badge (bottom-right)
       li.addEventListener('click', () => {
         if (this.mode === 'playlist') {
           this.select(i);
@@ -434,12 +456,22 @@ class MusicPlayer {
   _onTrackEnded() {
     if (this._endedHandled) return;
     this._endedHandled = true;
-    // radio: keep stopped / live badge; do not switch tracks
+
+    // RADIO: advance to next track and continue playback (continuous radio)
     if (this.mode === 'radio') {
-      this._updatePlayPauseUI(false);
+      if (!this.playlist || this.playlist.length === 0) {
+        this._updatePlayPauseUI(false);
+        return;
+      }
+      const nextIndex = (this.currentIndex + 1) % this.playlist.length;
+      // load next track and preserve play (so it auto-plays)
+      this._loadTrack(nextIndex, true);
+      // ensure UI shows playing state
+      this._updatePlayPauseUI(true);
       return;
     }
-    // playlist mode: advance
+
+    // PLAYLIST: advance to next, or loop/stop depending on settings
     if (this.mode === 'playlist') {
       if (this.currentIndex + 1 < this.playlist.length) {
         this.next();
@@ -450,14 +482,15 @@ class MusicPlayer {
       }
       return;
     }
-    // single mode: stop and reset
+
+    // SINGLE: stop and reset
     this.pause();
     try { this.audio.currentTime = 0; } catch(e){}
     this._updatePlayPauseUI(false);
   }
 
-  play() { this.audio.play(); }
-  pause() { this.audio.pause(); }
+  play() { this.audio.play(); this._updatePlayPauseUI(true); this._startReels(); }
+  pause() { this.audio.pause(); this._updatePlayPauseUI(false); this._stopReels(); }
 
   select(index) { if (index >= 0 && index < this.playlist.length) this._loadTrack(index, false); }
 
@@ -490,7 +523,7 @@ class MusicPlayer {
     this.playlist = Array.isArray(list) ? list.slice() : [];
     if (typeof opts.startIndex === 'number') this.currentIndex = Math.max(0, Math.min(opts.startIndex, this.playlist.length -1));
     this._buildPlaylistView();
-    if (this.playlist.length) this._loadTrack(this.currentIndex, false);
+    if this.playlist.length) this._loadTrack(this.currentIndex, false);
   }
 
   setMode(m) {
@@ -510,6 +543,12 @@ class MusicPlayer {
       } else {
         this.playlistContainer.style.display = 'none';
       }
+    }
+
+    // toggle player-level LIVE badge: show only when in radio mode AND currently playing
+    if (this.playerLiveBadge) {
+      const isPlaying = !!(this.audio && !this.audio.paused && !this.audio.ended);
+      this.playerLiveBadge.style.display = (this.mode === 'radio' && isPlaying) ? '' : 'none';
     }
 
     // radio: disable seeking
@@ -549,6 +588,10 @@ class MusicPlayer {
     });
     this.audio.addEventListener('ended', () => this._onTrackEnded());
 
+    // update UI when native playback events fire (keeps LIVE badge and buttons in sync)
+    this.audio.addEventListener('play', () => this._updatePlayPauseUI(true));
+    this.audio.addEventListener('pause', () => this._updatePlayPauseUI(false));
+
     // play/pause UI
     this.playBtn.addEventListener('click', () => { this._endedHandled = false; this.audio.play(); this._updatePlayPauseUI(true); this._startReels(); });
     this.pauseBtn.addEventListener('click', () => { this.audio.pause(); this._updatePlayPauseUI(false); this._stopReels(); });
@@ -584,6 +627,10 @@ class MusicPlayer {
     this.pauseBtn.style.display = isPlaying ? '' : 'none';
     if (!isPlaying) this._stopReels(); else this._startReels();
     this._highlightActive();
+    // live badge visibility follows radio + playing state
+    if (this.playerLiveBadge) {
+      this.playerLiveBadge.style.display = (this.mode === 'radio' && isPlaying) ? '' : 'none';
+    }
   }
 
   _startReels(){
