@@ -7,8 +7,7 @@ Usage:
 or
 {% include player-radio.html %}  <-- uses all audio files (no parent filter)
 
-Gathered fields from pages/posts: title, section (parent), audio_id, audio_length (optional).
-If audio_length is missing we use a DEFAULT_TRACK_LENGTH fallback (seconds).
+Only include items that have section, audio_id and audio_length (no fallbacks).
 {%- endcomment -%}
 
 {%- assign parent = include.parent_name | default: "" -%}
@@ -21,52 +20,44 @@ If audio_length is missing we use a DEFAULT_TRACK_LENGTH fallback (seconds).
 <script type="module">
   import initMusicPlayer from '/assets/js/music-player-module.js';
 
-  // Build TRACKS array incrementally (only include items that have a section)
+  // Build TRACKS array incrementally (merge pages + posts into a single iterable)
   const TRACKS = [];
-  {%- comment -%} pages {% endcomment -%}
-  {%- for p in site.pages -%}
-    {%- if p.audio_id and p.audio_id != "" and p.section and p.section != "" -%}
-      {%- capture _url -%}
-        {{ '/assets/audio/' | relative_url }}{{ p.section }}/{{ p.audio_id }}.mp3
-      {%- endcapture -%}
-      {%- assign d = p.audio_length | default: p.audio_duration | default: p.duration -%}
+  {%- comment -%}
+    Combine pages and posts into all_items safely:
+    - start with site.pages (always an array)
+    - concat site.posts.docs only when site.posts exists to avoid concat errors
+  {%- endcomment -%}
+  {%- assign all_items = site.pages -%}
+  {%- if site.posts and site.posts.docs -%}
+    {%- assign all_items = all_items | concat: site.posts.docs -%}
+  {%- endif -%}
+
+  {%- for p in all_items -%}
+    {%- comment -%}
+      Include only items that explicitly have:
+        - p.section (non-empty)
+        - p.audio_id (non-empty)
+        - p.audio_length (non-empty)
+      No fallback logic for duration or url.
+    {%- endcomment -%}
+    {%- if p.section and p.section != "" and p.audio_id and p.audio_id != "" and p.audio_length and p.audio_length != "" -%}
+      {%- capture _url -%}{{ '/assets/audio/' | relative_url }}{{ p.section }}/{{ p.audio_id }}.mp3{%- endcapture -%}
   TRACKS.push({
     title: {{ p.title | default: p.data.title | default: p.audio_id | jsonify }},
     parent: {{ p.section | jsonify }},
     audio_id: {{ p.audio_id | jsonify }},
     url: {{ _url | strip | jsonify }},
-    duration: {{ d and d != ""  ? d | replace: ',', '' : 'null' }}
+    duration: {{ p.audio_length | replace: ',', '' }}
   });
     {%- endif -%}
   {%- endfor -%}
 
-  {%- comment -%} posts (if any) {% endcomment -%}
-  {%- if site.posts -%}
-    {%- for p in site.posts -%}
-      {%- if p.audio_id and p.audio_id != "" and p.section and p.section != "" -%}
-        {%- capture _url -%}
-          {{ '/assets/audio/' | relative_url }}{{ p.section }}/{{ p.audio_id }}.mp3
-        {%- endcapture -%}
-        {%- assign d = p.audio_length | default: p.audio_duration | default: p.duration -%}
-  TRACKS.push({
-    title: {{ p.title | default: p.data.title | default: p.audio_id | jsonify }},
-    parent: {{ p.section | jsonify }},
-    audio_id: {{ p.audio_id | jsonify }},
-    url: {{ _url | strip | jsonify }},
-    duration: {{ d and d != ""  ? d | replace: ',', '' : 'null' }}
-  });
-      {%- endif -%}
-    {%- endfor -%}
-  {%- endif -%}
-
   (function(){
-    const DEFAULT_TRACK_LENGTH = 1800; // seconds fallback for missing durations
     const wrapper = document.querySelector('.music-player-wrapper[data-radio-parent="{{ parent | escape}}"]');
     if (!wrapper) return;
 
-    // normalize requested parent (trim + lowercase) or null if empty
-    const parentRaw = (wrapper.dataset.radioParent || '').toString();
     // Use the provided parent value exactly (case-sensitive). Do not normalize.
+    const parentRaw = (wrapper.dataset.radioParent || '').toString();
     const parentName = parentRaw !== '' ? parentRaw : null;
 
     // If parentName provided, perform case-sensitive exact match; else use all tracks
@@ -81,18 +72,15 @@ If audio_length is missing we use a DEFAULT_TRACK_LENGTH fallback (seconds).
     }
 
     // Normalize playlist items for music-player-module.js
-    const playlist = playlistSource.map(t => {
-      const durRaw = (t.duration === null || t.duration === undefined) ? null : Number(t.duration);
-      return {
-        src: t.url,
-        title: (t.title && String(t.title).trim()) ? t.title : (t.audio_id || 'Untitled'),
-        sub: t.parent || '',
-        duration: isFinite(durRaw) && durRaw > 0 ? durRaw : null
-      };
-    });
+    const playlist = playlistSource.map(t => ({
+      src: t.url,
+      title: (t.title && String(t.title).trim()) ? t.title : (t.audio_id || 'Untitled'),
+      sub: t.parent || '',
+      duration: Number(t.duration) // duration guaranteed present (no fallback)
+    }));
 
-    // Compute total length using provided durations; missing durations use DEFAULT_TRACK_LENGTH
-    const durations = playlist.map(item => (item.duration === null ? DEFAULT_TRACK_LENGTH : item.duration));
+    // Compute total length directly from provided durations (no defaults)
+    const durations = playlist.map(item => Number(item.duration));
     const totalLength = durations.reduce((s, v) => s + v, 0);
 
     // pick current track and offset from Unix timestamp (continuous radio cursor)
