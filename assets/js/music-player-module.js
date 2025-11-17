@@ -215,9 +215,10 @@ class MusicPlayer {
     // insert prev before play/pause and next after play/pause (fix swapped order)
     const refNode = this.pauseBtn || this.playBtn;
     if (refNode && refNode.parentNode) {
-      // place Prev immediately before the play/pause node, Next immediately after it
-      refNode.parentNode.insertBefore(this.prevBtn, refNode);
-      refNode.parentNode.insertBefore(this.nextBtn, refNode.nextSibling);
+      // keep play and pause adjacent, insert Prev and Next after that pair:
+      // DOM becomes: ... play, pause, prev, next ...
+      refNode.parentNode.insertBefore(this.prevBtn, refNode.nextSibling); // after refNode
+      refNode.parentNode.insertBefore(this.nextBtn, this.prevBtn.nextSibling);
     } else if (this.controlsRow) {
       // fallback: append prev then next (prev still first)
       this.controlsRow.appendChild(this.prevBtn);
