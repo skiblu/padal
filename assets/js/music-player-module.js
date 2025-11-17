@@ -101,8 +101,24 @@ class MusicPlayer {
               <button class="mp-mode-toggle mp-mode-radio" data-mode="radio" title="Radio">Radio</button>
             </div>
 
-            <button class="mp-btn mp-play" aria-label="Play" title="Play"><img src="/assets/bootstrap-icons/play.svg" alt=""></button>
-            <button class="mp-btn mp-pause" aria-label="Pause" title="Pause" style="display:none;"><img src="/assets/bootstrap-icons/pause.svg" alt=""></button>
+            <button class="mp-btn mp-play" aria-label="Play" title="Play">
+              <img src="/assets/bootstrap-icons/play.svg" alt="">
+            </button>
+            <button class="mp-btn mp-pause" aria-label="Pause" title="Pause" style="display:none;">
+              <img src="/assets/bootstrap-icons/pause.svg" alt="">
+            </button>
+
+            <div class="mp-seek">
+              <span class="mp-elapsed">0:00</span>
+              <input type="range" class="mp-seek-range" value="0" min="0">
+              <span class="mp-duration">0:00</span>
+            </div>
+
+            <div class="mp-volume">
+              <button class="mp-vol-down">-</button>
+              <input type="range" class="mp-volume-range" min="0" max="1" step="0.01" value="1">
+              <button class="mp-vol-up">+</button>
+            </div>
           </div>
 
           <div class="mp-playlist-container" style="display:none; margin-top:10px;">
@@ -113,6 +129,7 @@ class MusicPlayer {
       </div>
     `;
   }
+
 
 
   _injectStyles() {
