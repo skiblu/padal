@@ -1,276 +1,39 @@
 {%- comment -%}
-Music player include.
-Requires page.audio_id front-matter, e.g.
----
-title: Song
-audio: dfdfd33
----
+Music player include placeholder.
+All UI is now handled by music-player.js.
 {%- endcomment -%}
 
 {%- if page.audio_id and page.audio_id != "" -%}
-<div class="music-player-wrapper" aria-label="Audio player" data-audio-id="{{ page.audio_id }}">
-    <!-- Hidden native audio -->
-    <audio id="mp-audio-{{ page.audio_id }}" preload="metadata" crossorigin="anonymous">
-        <source src="{{ '/assets/audio/' | relative_url }}{{ page.section }}{{'/'}}{{ page.audio_id }}.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+<div class="music-player-wrapper" data-audio-id="{{ page.audio_id }}">
+
+    <!-- Optional: native audio tag kept, but hidden -->
+    <audio id="mp-audio-{{ page.audio_id }}" preload="metadata" crossorigin="anonymous" style="display:none;">
+        <source
+                src="{{ '/assets/audio/' | relative_url }}{{ page.section }}/{{ page.audio_id }}.mp3"
+                type="audio/mpeg">
     </audio>
 
-    <!-- Retro cassette visual -->
-    <div class="cassette-player">
-        <div class="cassette-shell">
-            <div class="cassette-window">
-                <div class="reel reel-left" aria-hidden="true"></div>
-                <div class="tape" aria-hidden="true"></div>
-                <div class="reel reel-right" aria-hidden="true"></div>
-            </div>
-
-            <div class="cassette-label">
-                <div class="track-title">{{ page.title | default: "Untitled" }}</div>
-                <div class="track-sub">Album: {{ page.section }}</div>
-            </div>
-
-            <div class="controls-row">
-                <button class="mp-btn mp-play" aria-label="Play" title="Play">
-                    <img src="{{ '/assets/bootstrap-icons/play.svg' | relative_url }}" alt="">
-                </button>
-
-                <button class="mp-btn mp-pause" aria-label="Pause" title="Pause" style="display:none;">
-                    <img src="{{ '/assets/bootstrap-icons/pause.svg' | relative_url }}" alt="">
-                </button>
-
-                <div class="mp-seek">
-                    <input type="range" class="mp-seek-range" min="0" max="100" value="0" aria-label="Seek">
-                </div>
-
-                <div class="mp-times">
-                    <span class="mp-elapsed">0:00</span> / <span class="mp-duration">0:00</span>
-                </div>
-
-                <div class="mp-volume">
-                    <button class="mp-btn mp-vol-down" aria-label="Decrease volume" title="Volume down">
-                        <img src="{{ '/assets/bootstrap-icons/volume-down.svg' | relative_url }}" alt="">
-                    </button>
-                    <input type="range" class="mp-volume-range" min="0" max="1" step="0.01" value="1" aria-label="Volume">
-                    <button class="mp-btn mp-vol-up" aria-label="Increase volume" title="Volume up">
-                        <img src="{{ '/assets/bootstrap-icons/volume-up.svg' | relative_url }}" alt="">
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
-<style>
-    /* ---- Retro cassette player styles ---- */
-    .music-player-wrapper { max-width: 780px; margin: 1.25rem auto; padding: 0 1rem; box-sizing: border-box; }
-    .cassette-player { display:flex; justify-content:center; }
-    .cassette-shell {
-      width: 100%;
-      max-width: 720px;
-      background: linear-gradient(180deg, #efe0b4 0%, #e3d19a 60%, #d6c68a 100%);
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.35);
-      padding: 14px;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color: #42321a;
-    }
+<!-- Module init -->
+<script type="module">
+    import initMusicPlayer from "/assets/js/music-player.js";
 
-    /* cassette window */
-    .cassette-window {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 18px;
-      background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02));
-      padding: 14px 12px;
-      border-radius: 8px;
-      margin-bottom: 12px;
-    }
+    const wrapper = document.querySelector('[data-audio-id="{{ page.audio_id }}"]');
+    const audioSrc = "{{ '/assets/audio/' | relative_url }}{{ page.section }}/{{ page.audio_id }}.mp3";
 
-    /* reels */
-    .reel {
-      width: 78px;
-      height: 78px;
-      background: radial-gradient(circle at 34% 30%, #2a1f12 0, #4a3b28 30%, #2b1f13 100%);
-      border-radius: 50%;
-      box-shadow: inset 0 2px 6px rgba(255,255,255,0.05), 0 3px 8px rgba(0,0,0,0.2);
-      position: relative;
-      transform-origin: 50% 50%;
-    }
-
-    .reel::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #c9b58a;
-      box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2);
-    }
-
-    /* tape visually between reels */
-    .tape {
-      flex:1;
-      height: 8px;
-      background: linear-gradient(90deg,#3b2a1a 0%, #1e130a 40%, #3b2a1a 100%);
-      border-radius: 4px;
-      align-self:center;
-      box-shadow: inset 0 1px 1px rgba(255,255,255,0.06);
-    }
-
-    /* label area */
-    .cassette-label { padding: 6px 8px; background: rgba(255,255,255,0.03); border-radius: 6px; margin-bottom: 8px; }
-    .track-title { font-weight:700; font-size:1.05rem; margin-bottom:3px; color: #2a1f12; }
-    .track-sub { font-size:0.75rem; color: #5b4a30; }
-
-    /* controls row */
-    .controls-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:space-between; }
-    .mp-btn { display:inline-flex; align-items:center; justify-content:center; background: #fff; border: none; padding:6px; border-radius:6px; box-shadow: 0 2px 4px rgba(0,0,0,0.12); cursor:pointer; }
-    .mp-btn img { display:block; width:18px; height:18px; filter: none; }
-
-    /* seek */
-    .mp-seek { flex:1; min-width:160px; margin:0 8px; }
-    .mp-seek-range { width:100%; -webkit-appearance:none; background:transparent; height:8px; }
-    .mp-seek-range::-webkit-slider-runnable-track { height:8px; background: linear-gradient(90deg,#b88f45,#e9d49f); border-radius:8px; }
-    .mp-seek-range::-webkit-slider-thumb { -webkit-appearance:none; width:14px; height:14px; background:#2a1f12; border-radius:50%; margin-top:-3px; box-shadow:0 1px 3px rgba(0,0,0,0.4); }
-
-    /* times */
-    .mp-times { font-size:0.82rem; color:#302414; min-width:86px; text-align:center; }
-
-    /* volume */
-    .mp-volume { display:flex; align-items:center; gap:6px; min-width:170px; }
-    .mp-volume-range { width:90px; -webkit-appearance:none; height:6px; }
-    .mp-volume-range::-webkit-slider-runnable-track { height:6px; background: linear-gradient(90deg,#e6d6a8,#c8a858); border-radius:6px; }
-    .mp-volume-range::-webkit-slider-thumb { -webkit-appearance:none; width:12px; height:12px; background:#2a1f12; border-radius:50%; margin-top:-3px; }
-
-    /* responsive */
-    @media (max-width:720px) {
-      .reel { width:60px; height:60px; }
-      .mp-btn img { width:16px; height:16px; }
-      .mp-volume { min-width:140px; }
-      .mp-times { font-size:0.75rem; }
-    }
-</style>
-
-<script>
-    (function(){
-      const audioId = "{{ page.audio_id }}";
-      const audioEl = document.getElementById('mp-audio-' + audioId);
-      if (!audioEl) return;
-
-      const wrapper = document.querySelector('[data-audio-id="{{ page.audio_id }}"]');
-      const playBtn = wrapper.querySelector('.mp-play');
-      const pauseBtn = wrapper.querySelector('.mp-pause');
-      const seekRange = wrapper.querySelector('.mp-seek-range');
-      const elapsed = wrapper.querySelector('.mp-elapsed');
-      const duration = wrapper.querySelector('.mp-duration');
-      const volRange = wrapper.querySelector('.mp-volume-range');
-      const volUp = wrapper.querySelector('.mp-vol-up');
-      const volDown = wrapper.querySelector('.mp-vol-down');
-      const reelLeft = wrapper.querySelector('.reel-left');
-      const reelRight = wrapper.querySelector('.reel-right');
-
-      // helpers: time format
-      function formatTime(sec){
-        if (!isFinite(sec)) return '0:00';
-        const s = Math.floor(sec % 60); const m = Math.floor(sec / 60);
-        return m + ':' + (s < 10 ? '0' + s : s);
-      }
-
-      // initialize
-      audioEl.volume = 1;
-      volRange.value = audioEl.volume;
-
-      // metadata loaded -> set duration
-      audioEl.addEventListener('loadedmetadata', () => {
-        duration.textContent = formatTime(audioEl.duration);
-        seekRange.max = Math.floor(audioEl.duration);
-      });
-
-      // update time while playing
-      audioEl.addEventListener('timeupdate', () => {
-        elapsed.textContent = formatTime(audioEl.currentTime);
-        if (!seekRange.dragging) seekRange.value = Math.floor(audioEl.currentTime);
-      });
-
-      // play/pause UI
-      playBtn.addEventListener('click', () => {
-        audioEl.play();
-        playBtn.style.display = 'none';
-        pauseBtn.style.display = '';
-        startReels();
-      });
-      pauseBtn.addEventListener('click', () => {
-        audioEl.pause();
-        pauseBtn.style.display = 'none';
-        playBtn.style.display = '';
-        stopReels();
-      });
-
-      // when audio ends
-      audioEl.addEventListener('ended', () => {
-        pauseBtn.style.display = 'none';
-        playBtn.style.display = '';
-        stopReels();
-        audioEl.currentTime = 0;
-      });
-
-      // seek interactions
-      seekRange.addEventListener('input', (e) => {
-        // when dragging show time but don't move audio until change (for smoothness)
-        elapsed.textContent = formatTime(e.target.value);
-        seekRange.dragging = true;
-      });
-      seekRange.addEventListener('change', (e) => {
-        audioEl.currentTime = e.target.value;
-        seekRange.dragging = false;
-      });
-
-      // volume controls
-      volRange.addEventListener('input', (e) => { audioEl.volume = e.target.value; });
-      volUp.addEventListener('click', () => {
-        audioEl.volume = Math.min(1, audioEl.volume + 0.1);
-        volRange.value = audioEl.volume;
-      });
-      volDown.addEventListener('click', () => {
-        audioEl.volume = Math.max(0, audioEl.volume - 0.1);
-        volRange.value = audioEl.volume;
-      });
-
-      // reel animation (CSS transform)
-      let reelAnimationId = null;
-      function startReels(){
-        let angle = 0;
-        cancelReels();
-        reelAnimationId = setInterval(() => {
-          angle = (angle + 6 + Math.random()*2) % 360;
-          reelLeft.style.transform = `rotate(${angle}deg)`;
-          reelRight.style.transform = `rotate(${(360-angle)}deg)`;
-        }, 40);
-      }
-      function stopReels(){ cancelReels(); }
-      function cancelReels(){ if (reelAnimationId) { clearInterval(reelAnimationId); reelAnimationId = null; } }
-
-      // initial UI states: if audio is already playing (autoplay disabled usually)
-      if (!audioEl.paused) {
-        playBtn.style.display = 'none';
-        pauseBtn.style.display = '';
-        startReels();
-      }
-
-      // Accessibility: keyboard shortcuts (space toggles play/pause when focused)
-      wrapper.addEventListener('keydown', (e) => {
-        if (e.key === ' ' || e.code === 'Space') {
-          e.preventDefault();
-          if (audioEl.paused) { playBtn.click(); } else { pauseBtn.click(); }
-        }
-      });
-
-    })();
+    initMusicPlayer(wrapper, {
+        mode: "single",
+        loop: false,
+        playlist: [
+            {
+                src: audioSrc,
+                title: "{{ page.title | escape }}",
+                sub: "{{ page.section | escape }}"
+            }
+        ],
+        startIndex: 0
+    });
 </script>
-{%- else -%}
-<!-- No audio file specified (page.audio_id not set) -->
+
 {%- endif -%}
