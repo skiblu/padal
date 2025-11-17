@@ -25,3 +25,6 @@ Bhakti Padal is your one-stop destination for all Tamil devotional songs, bhajan
 
 Start your spiritual journey today by exploring the divine content we have to offer. Let Bhakti Padal be your companion in devotion.
 
+### Devotional Songs Radio
+
+{% include player-radio.html parent_name="" %}
