@@ -209,10 +209,9 @@ Requirements:
         <script>
             (function(){
 
-              const TRACK_WINDOW = 1800; // seconds per track window — change this value if you want shorter/longer windows
-              const SYNC_INTERVAL_MS = 10_000; // periodic resync
+              const TRACK_WINDOW = 1800; // seconds per track window
 
-              // find our wrapper (this include may appear multiple times so choose matching parent)
+              // find our wrapper
               const wrapper = document.querySelector('[data-radio="true"][data-parent="{{ parent }}"]');
               if (!wrapper) return;
 
@@ -237,13 +236,11 @@ Requirements:
               const reelRight = wrapper.querySelector('.reel-right');
 
               if (!TRACKS || TRACKS.length === 0) {
-                // nothing to play: show message quietly
                 titleEl.textContent = "No audio tracks found";
                 subEl.textContent = "";
                 return;
               }
 
-              // Helpers
               function formatTime(sec) {
                 if (!isFinite(sec)) return '0:00';
                 const m = Math.floor(sec / 60);
@@ -251,12 +248,10 @@ Requirements:
                 return m + ':' + (s < 10 ? '0' + s : s);
               }
 
-              // Deterministic selection:
-              // - Choose track index based on floor(now/ TRACK_WINDOW) % TRACKS.length
-              // - Position offset = now % TRACK_WINDOW (seconds into the window)
               function getNowSeconds() {
                 return Math.floor(Date.now() / 1000);
               }
+
               function pickTrackAndOffset(nowSec = getNowSeconds()) {
                 const total = TRACKS.length;
                 const index = Math.floor(nowSec / TRACK_WINDOW) % total;
@@ -264,7 +259,6 @@ Requirements:
                 return { index, track: TRACKS[index], offsetInWindow };
               }
 
-              // Reels
               let reelTimer = null;
               function startReels(){
                 if (reelTimer) return;
@@ -281,107 +275,41 @@ Requirements:
                 reelTimer = null;
               }
 
-              // Sync & play: picks correct track+offset and loads audio.
-              // We set src then wait for metadata to compute a safe offset inside track
-              // (offsetInWindow may be larger than the track length; we map it using modulo with audio.duration).
-              let syncIntervalId = null;
-              async function syncAndPlay() {
+              // --- Only sync once on load/resume, no periodic resync ---
+              function syncAndPlay() {
                 const nowSec = getNowSeconds();
-                const { index, track, offsetInWindow } = pickTrackAndOffset(nowSec);
+                const { track, offsetInWindow } = pickTrackAndOffset(nowSec);
                 if (!track) return;
 
-                // update UI labels
                 titleEl.textContent = track.title || track.audio_id || (track.url.split('/').pop());
                 subEl.textContent = track.parent || '';
 
-                // If currently playing the same src, and currentTime is close to desired, do nothing.
-                const currentSrc = audio.src ? audio.src.split(location.origin)[1] || audio.src : '';
-                if (currentSrc.endsWith(track.url) && Math.abs(audio.currentTime - offsetInWindow) < 2) {
-                  // minor drift: leave it; UI time will update from timeupdate event
-                  return;
-                }
-
-                // Otherwise set new source
                 audio.pause();
                 audio.src = track.url;
 
-                // When metadata loads, set currentTime to offset modulo duration
                 const onMeta = () => {
-                  // map offset into available duration to avoid seeking beyond duration
                   const dur = audio.duration || 0;
-                  let seekTo = 0;
-                  if (dur > 0) {
-                    seekTo = offsetInWindow % dur;
-                  } else {
-                    seekTo = 0;
-                  }
-                  // set position and play
-                  try {
-                    audio.currentTime = seekTo;
-                  } catch (e) {
-                    // setting currentTime may throw if not allowed — ignore and try to play anyway
-                  }
-                  audio.play().catch(()=>{/* autoplay may require user gesture */});
+                  let seekTo = dur > 0 ? offsetInWindow % dur : 0;
+                  try { audio.currentTime = seekTo; } catch(e){}
+                  audio.play().catch(()=>{});
                   audio.removeEventListener('loadedmetadata', onMeta);
                 };
 
-                if (audio.readyState >= 1) {
-                  // metadata already available
-                  onMeta();
-                } else {
-                  audio.addEventListener('loadedmetadata', onMeta);
-                }
-              }
+                if (audio.readyState >= 1) onMeta();
+                else audio.addEventListener('loadedmetadata', onMeta);
 
-              // Update displayed elapsed time (position in the TRACK_WINDOW)
-              function updateElapsedDisplay() {
-                const nowSec = getNowSeconds();
-                const { offsetInWindow } = pickTrackAndOffset(nowSec);
                 elapsedEl.textContent = formatTime(offsetInWindow);
               }
 
-              // Start periodic sync (keeps everyone in sync and handles track switches)
-              function startSyncLoop() {
-                // initial immediate sync
-                syncAndPlay();
-                updateElapsedDisplay();
-                // update elapsed display every 1s
-                const disp = setInterval(updateElapsedDisplay, 1000);
-                // resync track selection occasionally (in case of drift / manual pause)
-                syncIntervalId = setInterval(() => {
-                  syncAndPlay();
-                }, SYNC_INTERVAL_MS);
-                // store for cleanup
-                wrapper._radioIntervals = wrapper._radioIntervals || [];
-                wrapper._radioIntervals.push(disp, syncIntervalId);
-              }
-
-              function stopSyncLoop() {
-                if (!wrapper._radioIntervals) return;
-                wrapper._radioIntervals.forEach(id => clearInterval(id));
-                wrapper._radioIntervals = [];
-              }
-
-              // Expose basic controls on window so other code can call them (optional)
-              window.startRadioPlayer = window.startRadioPlayer || function() {
-                startSyncLoop();
-              };
-              window.stopRadioPlayer = window.stopRadioPlayer || function() {
-                stopSyncLoop();
-                audio.pause();
-              };
-
               // Hook up play/pause UI
               playBtn.addEventListener('click', () => {
-                // start engine then switch UI
-                startSyncLoop();
+                syncAndPlay(); // only sync on play
                 playBtn.style.display = 'none';
                 pauseBtn.style.display = '';
                 startReels();
               });
 
               pauseBtn.addEventListener('click', () => {
-                stopSyncLoop();
                 audio.pause();
                 pauseBtn.style.display = 'none';
                 playBtn.style.display = '';
@@ -391,25 +319,18 @@ Requirements:
               // Volume UI
               audio.volume = 1;
               volRange.value = audio.volume;
-              volRange.addEventListener('input', (e) => {
-                audio.volume = e.target.value;
-              });
-              volUp.addEventListener('click', () => {
-                audio.volume = Math.min(1, audio.volume + 0.1);
-                volRange.value = audio.volume;
-              });
-              volDown.addEventListener('click', () => {
-                audio.volume = Math.max(0, audio.volume - 0.1);
-                volRange.value = audio.volume;
-              });
+              volRange.addEventListener('input', (e) => { audio.volume = e.target.value; });
+              volUp.addEventListener('click', () => { audio.volume = Math.min(1, audio.volume + 0.1); volRange.value = audio.volume; });
+              volDown.addEventListener('click', () => { audio.volume = Math.max(0, audio.volume - 0.1); volRange.value = audio.volume; });
 
-              // If audio is playing already (rare), set UI
+              // Autoplay if already playing
               if (!audio.paused && audio.src) {
                 playBtn.style.display = 'none';
                 pauseBtn.style.display = '';
                 startReels();
-                startSyncLoop();
+                syncAndPlay();
               }
 
             })();
         </script>
+
