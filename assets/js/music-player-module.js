@@ -61,6 +61,10 @@ class MusicPlayer {
     // build/attach DOM (will preserve your design by recreating same structure)
     this._ensureMarkup();
     this._bindElements();
+
+    // apply initial mode immediately so the visible mode label reflects provided options
+    this.setMode(this.mode);
+
     this._injectStyles();
     this._attachEvents();
 
@@ -72,7 +76,6 @@ class MusicPlayer {
 
     // load initial track
     if (this.playlist.length) this._loadTrack(this.currentIndex, false);
-    this.setMode(this.mode);
   }
 
   // ---------- DOM building / styling ----------
