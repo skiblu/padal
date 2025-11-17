@@ -1,0 +1,183 @@
+{%- comment -%}
+Radio Player Include
+Usage:
+{% include player-radio.html parent_name="bhakti" %}
+If parent_name is empty → scans all audio folders.
+{%- endcomment -%}
+
+{%- assign parent = include.parent_name | default: "" -%}
+
+<div class="music-player-wrapper"
+     aria-label="Radio player"
+     data-radio="true"
+     data-parent="{{ parent }}">
+
+    <!-- Hidden audio element (track selected by JS) -->
+    <audio class="radio-audio" preload="metadata" crossorigin="anonymous"></audio>
+
+    <!-- Retro cassette visual (SAME UI AS SINGLE PLAYER) -->
+    <div class="cassette-player">
+        <div class="cassette-shell">
+
+            <div class="cassette-window">
+                <div class="reel reel-left" aria-hidden="true"></div>
+                <div class="tape" aria-hidden="true"></div>
+                <div class="reel reel-right" aria-hidden="true"></div>
+            </div>
+
+            <div class="cassette-label">
+                <div class="track-title">Online Radio</div>
+                <div class="track-sub">
+                    {% if parent != "" %}
+                    Playlist: {{ parent }}
+                    {% else %}
+                    Playlist: All Collections
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="controls-row">
+                <button class="mp-btn mp-play" aria-label="Play" title="Play">
+                    <img src="{{ '/assets/bootstrap-icons/play.svg' | relative_url }}" alt="">
+                </button>
+
+                <button class="mp-btn mp-pause" aria-label="Pause" title="Pause" style="display:none;">
+                    <img src="{{ '/assets/bootstrap-icons/pause.svg' | relative_url }}" alt="">
+                </button>
+
+                <div class="mp-seek">
+                    <input type="range" class="mp-seek-range" min="0" max="100" value="0"
+                           aria-label="Seek" disabled>
+                </div>
+
+                <div class="mp-times">
+                    <span class="mp-elapsed">0:00</span> /
+                    <span class="mp-duration">LIVE</span>
+                </div>
+
+                <div class="mp-volume">
+                    <button class="mp-btn mp-vol-down" aria-label="Decrease volume">
+                        <img src="{{ '/assets/bootstrap-icons/volume-down.svg' | relative_url }}" alt="">
+                    </button>
+
+                    <input type="range" class="mp-volume-range"
+                           min="0" max="1" step="0.01" value="1"
+                           aria-label="Volume">
+
+                    <button class="mp-btn mp-vol-up" aria-label="Increase volume">
+                        <img src="{{ '/assets/bootstrap-icons/volume-up.svg' | relative_url }}" alt="">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- USE EXACT SAME CSS AS player-music.html -->
+<style>
+    {{ include_relative player-music-styles.css }}
+</style>
+
+<script>
+    (function(){
+
+      /* --------------------------------------------------------
+       *  RADIO INITIALIZATION
+       * -------------------------------------------------------- */
+      const wrapper = document.querySelector('[data-radio="true"][data-parent="{{ parent }}"]');
+      if (!wrapper) return;
+
+      const audio = wrapper.querySelector('.radio-audio');
+      const playBtn = wrapper.querySelector('.mp-play');
+      const pauseBtn = wrapper.querySelector('.mp-pause');
+      const volRange = wrapper.querySelector('.mp-volume-range');
+      const volUp = wrapper.querySelector('.mp-vol-up');
+      const volDown = wrapper.querySelector('.mp-vol-down');
+      const elapsed = wrapper.querySelector('.mp-elapsed');
+      const reelLeft = wrapper.querySelector('.reel-left');
+      const reelRight = wrapper.querySelector('.reel-right');
+
+      const parentName = wrapper.dataset.parent.trim();
+
+      /* --------------------------------------------------------
+       * 1. Build track list via JS
+       * Your JS here will:
+       *   - scan /assets/audio/** folders
+       *   - calculate durations
+       *   - determine "global radio" position
+       *   - load correct track at correct second
+       -------------------------------------------------------- */
+
+      window.radio_loadPlaylist(parentName).then(list => {
+
+          window.radio_initEngine({
+              audio,
+              list,
+              onTimeUpdate: sec => elapsed.textContent = window.radio_formatTime(sec),
+              onTrackChange: track => {
+                  /* optional: update UI label */
+              }
+          });
+
+      });
+
+      /* --------------------------------------------------------
+       * PLAY / PAUSE (same UI behavior as music-player)
+       * -------------------------------------------------------- */
+      playBtn.addEventListener('click', () => {
+          window.radio_play();
+          playBtn.style.display = 'none';
+          pauseBtn.style.display = '';
+          startReels();
+      });
+
+      pauseBtn.addEventListener('click', () => {
+          window.radio_pause();
+          pauseBtn.style.display = 'none';
+          playBtn.style.display = '';
+          stopReels();
+      });
+
+
+      /* --------------------------------------------------------
+       * VOLUME
+       * -------------------------------------------------------- */
+      audio.volume = 1;
+
+      volRange.addEventListener('input', e => {
+          audio.volume = e.target.value;
+      });
+
+      volUp.addEventListener('click', () => {
+          audio.volume = Math.min(1, audio.volume + 0.1);
+          volRange.value = audio.volume;
+      });
+
+      volDown.addEventListener('click', () => {
+          audio.volume = Math.max(0, audio.volume - 0.1);
+          volRange.value = audio.volume;
+      });
+
+
+      /* --------------------------------------------------------
+       * Reel Animation
+       * -------------------------------------------------------- */
+      let reelId = null;
+      function startReels(){
+          let angle = 0;
+          stopReels();
+          reelId = setInterval(() => {
+              angle = (angle + 6 + Math.random()*2) % 360;
+              reelLeft.style.transform = `rotate(${angle}deg)`;
+              reelRight.style.transform = `rotate(${360-angle}deg)`;
+          }, 40);
+      }
+
+      function stopReels(){
+          if (reelId) clearInterval(reelId);
+          reelId = null;
+      }
+
+    })();
+</script>
