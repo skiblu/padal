@@ -3,7 +3,16 @@ Music player include placeholder.
 {%- endcomment -%}
 
 {%- if page.audio_id and page.audio_id != "" -%}
-<div id="music-player" data-audio-id="{{ page.audio_id }}"></div>
+<div class="music-player-wrapper" data-audio-id="{{ page.audio_id }}">
+
+    <!-- Optional: native audio tag kept, but hidden -->
+    <audio id="bhakti-audio-player" preload="metadata" crossorigin="anonymous" style="display:none;">
+        <source
+                src="{{ '/assets/audio/' | relative_url }}{{ page.section }}/{{ page.audio_id }}.mp3"
+                type="audio/mpeg">
+    </audio>
+
+</div>
 <script type="module">
     import initMusicPlayer from "/assets/js/music-player-module.js";
 
