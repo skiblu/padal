@@ -8,4 +8,6 @@ topics: Ayyappa, Sloka(s), lyrics, songs, devotional, அய்யப்பன�
 {% include figure.html img="ayyappa_poster.gif" width="15%" %}
 {% include toc-sections.html parent_name="Ayyappa" %}
 
+{% include radio-player.html parent_name="Ayyappa" %}
+
 
