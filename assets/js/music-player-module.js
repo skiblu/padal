@@ -147,24 +147,26 @@ class MusicPlayer {
     .cassette-shell { width: 100%; max-width: 720px; background: linear-gradient(180deg, #efe0b4 0%, #e3d19a 60%, #d6c68a 100%); border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.35); padding: 14px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #42321a; }
     .cassette-window { display:flex; align-items:center; justify-content:space-between; gap: 18px; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02)); padding: 14px 12px; border-radius: 8px; margin-bottom: 12px; position: relative; }
     /* centered track info sits above/below the tape line */
-    .mp-track-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); display:flex; flex-direction:column; align-items:center; pointer-events: none; z-index: 3; }
-    .mp-track-center .track-title { font-weight:700; font-size:1.05rem; margin-bottom: 6px; color: #2a1f12; text-align:center; overflow:hidden; white-space:nowrap; max-width: calc(100% - 160px); } /* leaves room for reels */
+    .mp-track-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); display:flex; flex-direction:column; align-items:center; pointer-events: none; z-index: 6; }
+    /* title: moved up, high-contrast color and subtle shadow for readability over the dark tape */
+    .mp-track-center .track-title { font-weight:700; font-size:1.05rem; margin-bottom: 6px; color: #ffffff; text-align:center; overflow:hidden; white-space:nowrap; max-width: calc(100% - 160px); transform: translateY(-10px); text-shadow: 0 1px 2px rgba(0,0,0,0.6); }
     .mp-track-center .track-title .track-title-inner { display:inline-block; transform: translateX(0); }
-    /* marquee animation: scroll to --mp-marquee-distance and back */
-    .track-title.marquee-active .track-title-inner {
-      animation-name: mpMarquee;
-      animation-duration: var(--mp-marquee-duration, 6s);
-      animation-timing-function: cubic-bezier(.25,.1,.25,1);
-      animation-iteration-count: infinite;
-      animation-fill-mode: forwards;
-    }
-    .track-title.marquee-active:hover .track-title-inner { animation-play-state: paused; }
-    @keyframes mpMarquee {
-      0% { transform: translateX(0); }
-      50% { transform: translateX(var(--mp-marquee-distance, -100px)); }
-      100% { transform: translateX(0); }
-    }
-    .mp-track-center .track-sub { font-size:0.8rem; color:#5b4a30; margin-top:6px; text-align:center; }
+     /* marquee animation: scroll to --mp-marquee-distance and back */
+     .track-title.marquee-active .track-title-inner {
+       animation-name: mpMarquee;
+       animation-duration: var(--mp-marquee-duration, 6s);
+       animation-timing-function: cubic-bezier(.25,.1,.25,1);
+       animation-iteration-count: infinite;
+       animation-fill-mode: forwards;
+     }
+     .track-title.marquee-active:hover .track-title-inner { animation-play-state: paused; }
+     @keyframes mpMarquee {
+       0% { transform: translateX(0); }
+       50% { transform: translateX(var(--mp-marquee-distance, -100px)); }
+       100% { transform: translateX(0); }
+     }
+    /* subtitle: nudged down to sit clearly below the tape */
+    .mp-track-center .track-sub { font-size:0.8rem; color:#5b4a30; margin-top:8px; text-align:center; transform: translateY(8px); }
     .reel { width: 78px; height: 78px; background: radial-gradient(circle at 34% 30%, #2a1f12 0, #4a3b28 30%, #2b1f13 100%); border-radius: 50%; box-shadow: inset 0 2px 6px rgba(255,255,255,0.05), 0 3px 8px rgba(0,0,0,0.2); position: relative; transform-origin: 50% 50%; }
     .reel::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 14px; height: 14px; border-radius: 50%; background: #c9b58a; box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2); }
     .tape { flex:1; height: 8px; background: linear-gradient(90deg,#3b2a1a 0%, #1e130a 40%, #3b2a1a 100%); border-radius: 4px; align-self:center; box-shadow: inset 0 1px 1px rgba(255,255,255,0.06); z-index: 2; }
@@ -409,7 +411,7 @@ class MusicPlayer {
     this.playlist = Array.isArray(list) ? list.slice() : [];
     if (typeof opts.startIndex === 'number') this.currentIndex = Math.max(0, Math.min(opts.startIndex, this.playlist.length -1));
     this._buildPlaylistView();
-    if (this.playlist.length) this._loadTrack(this.currentIndex, false);
+    if this.playlist.length) this._loadTrack(this.currentIndex, false);
   }
 
   setMode(m) {
