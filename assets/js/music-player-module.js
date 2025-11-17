@@ -144,33 +144,46 @@ class MusicPlayer {
     /* Injected cassette player CSS (keeps styling identical to original include) */
     .music-player-wrapper { max-width: 780px; margin: 1.25rem auto; padding: 0 1rem; box-sizing: border-box; }
     .cassette-player { display:flex; justify-content:center; }
-    .cassette-shell { width: 100%; max-width: 720px; background: linear-gradient(180deg, #efe0b4 0%, #e3d19a 60%, #d6c68a 100%); border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.35); padding: 14px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #42321a; }
-    .cassette-window { display:flex; align-items:center; justify-content:space-between; gap: 18px; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02)); padding: 14px 12px; border-radius: 8px; margin-bottom: 12px; position: relative; }
-    /* centered track info sits above/below the tape line */
-    .mp-track-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); display:flex; flex-direction:column; align-items:center; pointer-events: none; z-index: 60; }
-    /* title: no visible boxed background (transparent), keeps overflow:hidden for marquee */
+    .cassette-shell { width: 100%; max-width: 720px; background: linear-gradient(180deg, #efe0b4 0%, #e3d19a 60%, #d6c68a 100%); border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.35); padding: 14px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #42321a; overflow: visible; }
+    /* ensure absolutely-positioned title isn't clipped */
+    .cassette-window { display:flex; align-items:center; justify-content:space-between; gap: 18px; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02)); padding: 14px 12px; border-radius: 8px; margin-bottom: 12px; position: relative; overflow: visible; }
+     /* centered track info sits above/below the tape line */
+    .mp-track-center {
+      position: absolute;
+      left: 50%;
+      /* move a bit higher so title clearly sits above the tape */
+      top: 38%;
+      transform: translate(-50%,-50%);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      pointer-events: none;
+      z-index: 9999; /* ensure it's on top */
+      width: calc(100% - 160px); /* keep within reels */
+    }
+    /* title: keep clipping for marquee but ensure strong contrast and readability */
     .mp-track-center .track-title {
       font-weight:700;
       font-size:1.05rem;
-      margin-bottom: 6px;
-      color: #ffffff;           /* white for contrast over tape */
+      margin:0 0 6px 0;
+      color: #ffffff;
       text-align:center;
       overflow:hidden;         /* required for marquee clipping */
       white-space:nowrap;
-      max-width: calc(100% - 160px); /* leaves room for reels */
-      transform: translateY(-16px);  /* slightly above the tape */
-      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-      background: transparent; /* remove the small dark box */
-      padding: 0;              /* no extra box padding */
-      border-radius: 0;
-      box-shadow: none;
+      max-width:100%;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.7); /* stronger shadow for visibility */
+      -webkit-text-stroke: 0.3px rgba(0,0,0,0.5); /* subtle stroke to improve contrast */
+      background: rgba(0,0,0,0.06); /* very subtle backdrop to help legibility on any background */
+      padding: 2px 8px;
+      border-radius: 4px;
       display: block;
+      transform: translateY(-4px); /* small nudge, not huge */
     }
-    /* give the scrolling inner text some horizontal padding so it doesn't hug edges */
+    /* inner padding for marquee breathing room */
     .mp-track-center .track-title .track-title-inner {
       display:inline-block;
       transform: translateX(0);
-      padding: 0 16px;
+      padding: 0 12px;
     }
      /* marquee animation: scroll to --mp-marquee-distance and back */
      .track-title.marquee-active .track-title-inner {
@@ -187,39 +200,40 @@ class MusicPlayer {
        100% { transform: translateX(0); }
      }
     /* subtitle: nudged down to sit clearly below the tape */
-    .mp-track-center .track-sub { font-size:0.8rem; color:#5b4a30; margin-top:8px; text-align:center; transform: translateY(8px); }
-    .reel { width: 78px; height: 78px; background: radial-gradient(circle at 34% 30%, #2a1f12 0, #4a3b28 30%, #2b1f13 100%); border-radius: 50%; box-shadow: inset 0 2px 6px rgba(255,255,255,0.05), 0 3px 8px rgba(0,0,0,0.2); position: relative; transform-origin: 50% 50%; }
-    .reel::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 14px; height: 14px; border-radius: 50%; background: #c9b58a; box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2); }
-    .tape { flex:1; height: 8px; background: linear-gradient(90deg,#3b2a1a 0%, #1e130a 40%, #3b2a1a 100%); border-radius: 4px; align-self:center; box-shadow: inset 0 1px 1px rgba(255,255,255,0.06); z-index: 2; }
-    /* removed separate cassette-label; track title/sub now in .mp-track-center (above) */
-    .controls-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:space-between; }
-    .mp-btn { display:inline-flex; align-items:center; justify-content:center; background: #fff; border: none; padding:6px; border-radius:6px; box-shadow: 0 2px 4px rgba(0,0,0,0.12); cursor:pointer; }
-    .mp-btn img { display:block; width:18px; height:18px; filter: none; }
-    .mp-mode { position:relative; display:flex; align-items:center; gap:6px; }
-    .mp-mode-current { display:inline-flex; align-items:center; gap:8px; background:transparent; border:1px solid rgba(0,0,0,0.06); padding:6px 8px; border-radius:6px; }
-    .mp-seek { flex:1; min-width:160px; margin:0 8px; }
-    .mp-seek-range { width:100%; -webkit-appearance:none; background:transparent; height:8px; }
-    .mp-seek-range::-webkit-slider-runnable-track { height:8px; background: linear-gradient(90deg,#b88f45,#e9d49f); border-radius:8px; }
-    .mp-seek-range::-webkit-slider-thumb { -webkit-appearance:none; width:14px; height:14px; background:#2a1f12; border-radius:50%; margin-top:-3px; box-shadow:0 1px 3px rgba(0,0,0,0.4); }
-    .mp-times { font-size:0.82rem; color:#302414; min-width:86px; text-align:center; }
-    .mp-volume { display:flex; align-items:center; gap:6px; min-width:170px; }
-    .mp-volume-range { width:90px; -webkit-appearance:none; height:6px; }
-    .mp-volume-range::-webkit-slider-runnable-track { height:6px; background: linear-gradient(90deg,#e6d6a8,#c8a858); border-radius:6px; }
-    .mp-volume-range::-webkit-slider-thumb { -webkit-appearance:none; width:12px; height:12px; background:#2a1f12; border-radius:50%; margin-top:-3px; }
-    .mp-playlist-view ul { list-style:none; padding:0; margin:0; max-height:220px; overflow:auto; }
-    .mp-playlist-view li { padding:8px 10px; border-radius:6px; display:flex; align-items:center; gap:10px; cursor:pointer; }
-    .mp-playlist-view li:hover { background: rgba(0,0,0,0.03); }
-    .mp-playlist-view li.active { background: rgba(0,0,0,0.06); font-weight:700; }
-    .mp-live-badge { display:inline-flex; align-items:center; gap:6px; font-weight:700; color:#b30000; }
-    .mp-live-dot { width:10px; height:10px; border-radius:50%; background:#ff2b2b; box-shadow:0 0 6px rgba(255,43,43,0.6); }
-    .mp-prev, .mp-next { margin-left:6px; padding:6px 8px; border-radius:6px; }
+    .mp-track-center .track-sub { font-size:0.8rem; color:#5b4a30; margin-top:8px; text-align:center; transform: translateY(8px); pointer-events: none; }
+     .reel { width: 78px; height: 78px; background: radial-gradient(circle at 34% 30%, #2a1f12 0, #4a3b28 30%, #2b1f13 100%); border-radius: 50%; box-shadow: inset 0 2px 6px rgba(255,255,255,0.05), 0 3px 8px rgba(0,0,0,0.2); position: relative; transform-origin: 50% 50%; }
+     .reel::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 14px; height: 14px; border-radius: 50%; background: #c9b58a; box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2); }
+     .tape { flex:1; height: 8px; background: linear-gradient(90deg,#3b2a1a 0%, #1e130a 40%, #3b2a1a 100%); border-radius: 4px; align-self:center; box-shadow: inset 0 1px 1px rgba(255,255,255,0.06); z-index: 2; }
+     /* removed separate cassette-label; track title/sub now in .mp-track-center (above) */
+     .controls-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:space-between; }
+     .mp-btn { display:inline-flex; align-items:center; justify-content:center; background: #fff; border: none; padding:6px; border-radius:6px; box-shadow: 0 2px 4px rgba(0,0,0,0.12); cursor:pointer; }
+     .mp-btn img { display:block; width:18px; height:18px; filter: none; }
+     .mp-mode { position:relative; display:flex; align-items:center; gap:6px; }
+     .mp-mode-current { display:inline-flex; align-items:center; gap:8px; background:transparent; border:1px solid rgba(0,0,0,0.06); padding:6px 8px; border-radius:6px; }
+     .mp-seek { flex:1; min-width:160px; margin:0 8px; }
+     .mp-seek-range { width:100%; -webkit-appearance:none; background:transparent; height:8px; }
+     .mp-seek-range::-webkit-slider-runnable-track { height:8px; background: linear-gradient(90deg,#b88f45,#e9d49f); border-radius:8px; }
+     .mp-seek-range::-webkit-slider-thumb { -webkit-appearance:none; width:14px; height:14px; background:#2a1f12; border-radius:50%; margin-top:-3px; box-shadow:0 1px 3px rgba(0,0,0,0.4); }
+     .mp-times { font-size:0.82rem; color:#302414; min-width:86px; text-align:center; }
+     .mp-volume { display:flex; align-items:center; gap:6px; min-width:170px; }
+     .mp-volume-range { width:90px; -webkit-appearance:none; height:6px; }
+     .mp-volume-range::-webkit-slider-runnable-track { height:6px; background: linear-gradient(90deg,#e6d6a8,#c8a858); border-radius:6px; }
+     .mp-volume-range::-webkit-slider-thumb { -webkit-appearance:none; width:12px; height:12px; background:#2a1f12; border-radius:50%; margin-top:-3px; }
+     .mp-playlist-view ul { list-style:none; padding:0; margin:0; max-height:220px; overflow:auto; }
+     .mp-playlist-view li { padding:8px 10px; border-radius:6px; display:flex; align-items:center; gap:10px; cursor:pointer; }
+     .mp-playlist-view li:hover { background: rgba(0,0,0,0.03); }
+     .mp-playlist-view li.active { background: rgba(0,0,0,0.06); font-weight:700; }
+     .mp-live-badge { display:inline-flex; align-items:center; gap:6px; font-weight:700; color:#b30000; }
+     .mp-live-dot { width:10px; height:10px; border-radius:50%; background:#ff2b2b; box-shadow:0 0 6px rgba(255,43,43,0.6); }
+     .mp-prev, .mp-next { margin-left:6px; padding:6px 8px; border-radius:6px; }
     @media (max-width:720px) {
       .reel { width:60px; height:60px; }
       .mp-btn img { width:16px; height:16px; }
       .mp-volume { min-width:140px; }
       .mp-times { font-size:0.75rem; }
       /* smaller devices: reduce title size and move slightly less up so it doesn't collide with reels */
-      .mp-track-center .track-title { font-size:0.95rem; transform: translateY(-12px); max-width: calc(100% - 120px); }
+      .mp-track-center { width: calc(100% - 120px); top: 40%; }
+      .mp-track-center .track-title { font-size:0.95rem; transform: translateY(-2px); }
       .mp-track-center .track-title .track-title-inner { padding: 0 10px; }
     }
     `;
