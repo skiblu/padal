@@ -122,11 +122,11 @@ class MusicPlayer {
 
             <div class="mp-volume">
               <button class="mp-btn mp-vol-down" title="Volume Down" aria-label="Volume Down">
-                <img src="assets/bootstrap-icons/volume-down.svg" alt="Volume Down">
+                <img src="/assets/bootstrap-icons/volume-down.svg" alt="Volume Down">
               </button>
               <input type="range" class="mp-volume-range" min="0" max="1" step="0.01" value="1">
               <button class="mp-btn mp-vol-up" title="Volume Up" aria-label="Volume Up">
-                <img src="assets/bootstrap-icons/volume-up.svg" alt="Volume Up">
+                <img src="/assets/bootstrap-icons/volume-up.svg" alt="Volume Up">
               </button>
             </div>
           </div>
