@@ -4,19 +4,17 @@ Music player include placeholder.
 
 {%- if page.audio_id and page.audio_id != "" -%}
 <div class="music-player-wrapper" data-audio-id="{{ page.audio_id }}">
-
-    <!-- Optional: native audio tag kept, but hidden -->
-    <audio id="bhakti-audio-player" preload="metadata" crossorigin="anonymous" style="display:none;">
+    <audio id="m-audio-player" preload="metadata" crossorigin="anonymous" style="display:none;">
         <source
                 src="{{ '/assets/audio/' | relative_url }}{{ page.section }}/{{ page.audio_id }}.mp3"
                 type="audio/mpeg">
     </audio>
-
 </div>
+
 <script type="module">
     import initMusicPlayer from "/assets/js/music-player-module.js";
 
-    const wrapper = document.querySelector('[data-audio-id="bhakti-audio-player"]');
+    const wrapper = document.querySelector('[data-audio-id="{{ page.audio_id }}"]');
     const audioSrc = "{{ '/assets/audio/' | relative_url }}{{ page.section }}/{{ page.audio_id }}.mp3";
 
     initMusicPlayer(wrapper, {
@@ -32,5 +30,4 @@ Music player include placeholder.
         startIndex: 0
     });
 </script>
-
 {%- endif -%}
