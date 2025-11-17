@@ -102,10 +102,10 @@ class MusicPlayer {
             </div>
 
             <button class="mp-btn mp-play" aria-label="Play" title="Play">
-              <img src="/assets/bootstrap-icons/play.svg" alt="">
+              <img src="/assets/bootstrap-icons/play.svg" alt="Play">
             </button>
             <button class="mp-btn mp-pause" aria-label="Pause" title="Pause" style="display:none;">
-              <img src="/assets/bootstrap-icons/pause.svg" alt="">
+              <img src="/assets/bootstrap-icons/pause.svg" alt="Pause">
             </button>
 
             <div class="mp-seek">
@@ -115,17 +115,16 @@ class MusicPlayer {
             </div>
 
             <div class="mp-volume">
-              <button class="mp-vol-down">-</button>
+              <button class="mp-vol-down" title="Volume Down" aria-label="Volume Down">-</button>
               <input type="range" class="mp-volume-range" min="0" max="1" step="0.01" value="1">
-              <button class="mp-vol-up">+</button>
+              <button class="mp-vol-up" title="Volume Up" aria-label="Volume Up">+</button>
             </div>
           </div>
 
           <div class="mp-playlist-container" style="display:none; margin-top:10px;">
--            <button class="mp-playlist-toggle">Show Playlist</button>
-+            <button class="mp-playlist-toggle" title="Show playlist" aria-label="Show playlist">
-+              <img src="assets/bootstrap-icons/list.svg" alt="Playlist">
-+            </button>
+            <button class="mp-playlist-toggle" title="Show playlist" aria-label="Show playlist">
+              <img src="/assets/bootstrap-icons/list.svg" alt="Playlist">
+            </button>
             <div class="mp-playlist-view" style="display:none; margin-top:8px;"></div>
           </div>
         </div>
@@ -200,16 +199,14 @@ class MusicPlayer {
     this.controlsRow = this.wrapper.querySelector('.controls-row');
     this.prevBtn = document.createElement('button');
     this.prevBtn.className = 'mp-prev mp-btn';
--    this.prevBtn.textContent = 'Prev';
-+    this.prevBtn.title = 'Previous';
-+    this.prevBtn.setAttribute('aria-label', 'Previous');
-+    this.prevBtn.innerHTML = `<img src="assets/bootstrap-icons/skip-start.svg" alt="Previous">`;
+    this.prevBtn.title = 'Previous';
+    this.prevBtn.setAttribute('aria-label', 'Previous');
+    this.prevBtn.innerHTML = `<img src="/assets/bootstrap-icons/skip-start.svg" alt="Previous">`;
     this.nextBtn = document.createElement('button');
     this.nextBtn.className = 'mp-next mp-btn';
--    this.nextBtn.textContent = 'Next';
-+    this.nextBtn.title = 'Next';
-+    this.nextBtn.setAttribute('aria-label', 'Next');
-+    this.nextBtn.innerHTML = `<img src="assets/bootstrap-icons/skip-end.svg" alt="Next">`;
+    this.nextBtn.title = 'Next';
+    this.nextBtn.setAttribute('aria-label', 'Next');
+    this.nextBtn.innerHTML = `<img src="/assets/bootstrap-icons/skip-end.svg" alt="Next">`;
     // insert next/prev near play/pause (after play/pause)
     const refNode = this.pauseBtn || this.playBtn;
     if (refNode && refNode.parentNode) {
@@ -275,18 +272,17 @@ class MusicPlayer {
   _togglePlaylist(show) {
     if (show === undefined) show = this.playlistView.style.display === 'none' || this.playlistView.style.display === '';
     this.playlistView.style.display = show ? '' : 'none';
--    this.playlistToggle.textContent = show ? 'Hide Playlist' : 'Show Playlist';
-+    if (this.playlistToggle) {
-+      if (show) {
-+        this.playlistToggle.innerHTML = `<img src="assets/bootstrap-icons/x.svg" alt="Hide playlist">`;
-+        this.playlistToggle.title = 'Hide playlist';
-+        this.playlistToggle.setAttribute('aria-label', 'Hide playlist');
-+      } else {
-+        this.playlistToggle.innerHTML = `<img src="assets/bootstrap-icons/list.svg" alt="Show playlist">`;
-+        this.playlistToggle.title = 'Show playlist';
-+        this.playlistToggle.setAttribute('aria-label', 'Show playlist');
-+      }
-+    }
+    if (this.playlistToggle) {
+      if (show) {
+        this.playlistToggle.innerHTML = `<img src="/assets/bootstrap-icons/x.svg" alt="Hide playlist">`;
+        this.playlistToggle.title = 'Hide playlist';
+        this.playlistToggle.setAttribute('aria-label', 'Hide playlist');
+      } else {
+        this.playlistToggle.innerHTML = `<img src="/assets/bootstrap-icons/list.svg" alt="Show playlist">`;
+        this.playlistToggle.title = 'Show playlist';
+        this.playlistToggle.setAttribute('aria-label', 'Show playlist');
+      }
+    }
     if (show) this._scrollActiveIntoView();
   }
 
@@ -356,7 +352,7 @@ class MusicPlayer {
     this.playlist = Array.isArray(list) ? list.slice() : [];
     if (typeof opts.startIndex === 'number') this.currentIndex = Math.max(0, Math.min(opts.startIndex, this.playlist.length -1));
     this._buildPlaylistView();
-    if this.playlist.length) this._loadTrack(this.currentIndex, false);
+    if (this.playlist.length) this._loadTrack(this.currentIndex, false);
   }
 
   setMode(m) {
@@ -437,7 +433,7 @@ class MusicPlayer {
     this.prevBtn.addEventListener('click', () => this.prev());
 
     // playlist toggle
-    this.playlistToggle && this.playlistToggle.addEventListener('click', () => this._togglePlaylist());
+    if (this.playlistToggle) this.playlistToggle.addEventListener('click', () => this._togglePlaylist());
 
     // mode buttons
     this.modeButtons.forEach(b => b.addEventListener('click', () => this.setMode(b.dataset.mode)));
@@ -450,7 +446,7 @@ class MusicPlayer {
     this.audio.addEventListener('pause', () => { this._stopReels(); this._updatePlayPauseUI(false); });
 
     // when playlist view changes, keep active visible
-    this.playlistView.addEventListener('transitionend', () => this._scrollActiveIntoView());
+    if (this.playlistView) this.playlistView.addEventListener('transitionend', () => this._scrollActiveIntoView());
   }
 
   _updatePlayPauseUI(isPlaying) {
