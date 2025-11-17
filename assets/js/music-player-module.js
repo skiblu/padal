@@ -411,7 +411,7 @@ class MusicPlayer {
     this.playlist = Array.isArray(list) ? list.slice() : [];
     if (typeof opts.startIndex === 'number') this.currentIndex = Math.max(0, Math.min(opts.startIndex, this.playlist.length -1));
     this._buildPlaylistView();
-    if this.playlist.length) this._loadTrack(this.currentIndex, false);
+    if (this.playlist.length) this._loadTrack(this.currentIndex, false);
   }
 
   setMode(m) {
