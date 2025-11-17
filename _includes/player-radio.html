@@ -1,13 +1,13 @@
 {%- comment -%}
-Radio include — builds a client-side playlist from site pages and initializes
+Radio include — builds a client-side playlist from site pages/posts and initializes
 music-player-module.js in "radio" mode so the browser behaves like a radio.
 
 Usage:
 {% include player-radio.html parent_name="bhakti" %}
 or
-{% include player-radio.html %}  <-- uses all audio files
+{% include player-radio.html %}  <-- uses all audio files (no parent filter)
 
-Gathered fields from pages: title, section (parent), audio_id, audio_length (optional).
+Gathered fields from pages/posts: title, section (parent), audio_id, audio_length (optional).
 If audio_length is missing we use a DEFAULT_TRACK_LENGTH fallback (seconds).
 {%- endcomment -%}
 
@@ -15,24 +15,27 @@ If audio_length is missing we use a DEFAULT_TRACK_LENGTH fallback (seconds).
 
 <div class="music-player-wrapper"
      aria-label="Radio player"
-     data-radio-parent="{{ parent | escape }}">
+     data-radio-parent="{{ parent | escape}}">
 </div>
 
 <script type="module">
   import initMusicPlayer from '/assets/js/music-player-module.js';
 
-  // Build TRACKS array from Jekyll pages (generated at build time)
+  // Build TRACKS array from Jekyll pages/posts (generated at build time)
+  // Collect pages and posts to ensure we include content from both places
   const TRACKS = [
-  {%- assign all_pages = site.html_pages -%}
-  {%- assign first = true -%}
-  {%- for p in all_pages -%}
+  {%- assign all_items = site.pages | concat: site.posts.docs -%}
+  {%- for p in all_items -%}
     {%- if p.audio_id and p.audio_id != "" -%}
       {%- if forloop.index0 > 0 %},{% endif -%}
       {
-        "title": {{ p.title | jsonify }},
-        "parent": {{ p.section | default: p.parent_id | jsonify }},
+        "title": {{ p.title | default: p.data.title | jsonify }},
+        "parent": {{ p.section | default: "" | jsonify }},
         "audio_id": {{ p.audio_id | jsonify }},
-        "url": "{{ '/assets/audio/' | relative_url }}{{ p.section | default: p.parent_id }}/{{ p.audio_id }}.mp3",
+        {% comment %} Build URL: use section if present, otherwise use top-level audio id path {% endcomment %}
+        {%- if p.section -%}
+        "url": "{{ '/assets/audio/' | relative_url }}{{ p.section }}/{{ p.audio_id }}.mp3",
+        {%- endif -%}
         {%- assign d = p.audio_length | default: p.audio_duration | default: p.duration -%}
         {%- if d and d != "" -%}
         "duration": {{ d | replace: ',', '' }}
@@ -45,30 +48,27 @@ If audio_length is missing we use a DEFAULT_TRACK_LENGTH fallback (seconds).
   ];
 
   (function(){
-    const DEFAULT_TRACK_LENGTH = 1800; // seconds to use when duration missing
-    const parentName = (document.querySelector('.music-player-wrapper')?.dataset?.radioParent || '').trim() || null;
+    const DEFAULT_TRACK_LENGTH = 1800; // seconds used when duration missing
+    const wrapper = document.querySelector('.music-player-wrapper[data-radio-parent="{{ parent | escape}}"]');
+    if (!wrapper) return;
 
     // Filter playlist by parent if provided
     const playlistSource = parentName ? TRACKS.filter(t => String(t.parent) === parentName) : TRACKS.slice();
 
     if (!playlistSource || playlistSource.length === 0) {
-      // fallback UI: init player with empty playlist and show message in console
       console.warn('Radio: no tracks found for parent:', parentName);
-      const wrapperEl = document.querySelector('.music-player-wrapper[data-radio-parent="{{ parent | escape}}"]');
-      if (wrapperEl) {
-        wrapperEl.textContent = 'No audio tracks found';
-      }
+      wrapper.textContent = 'No audio tracks found';
       return;
     }
 
     // Normalize playlist items for music-player-module.js
     const playlist = playlistSource.map(t => {
-      const dur = (t.duration === null || t.duration === undefined) ? null : Number(t.duration);
+      const durRaw = (t.duration === null || t.duration === undefined) ? null : Number(t.duration);
       return {
         src: t.url,
-        title: t.title || (t.audio_id || '').toString(),
+        title: (t.title && String(t.title).trim()) ? t.title : (t.audio_id || 'Untitled'),
         sub: t.parent || '',
-        duration: isFinite(dur) && dur > 0 ? dur : null
+        duration: isFinite(durRaw) && durRaw > 0 ? durRaw : null
       };
     });
 
@@ -76,7 +76,7 @@ If audio_length is missing we use a DEFAULT_TRACK_LENGTH fallback (seconds).
     const durations = playlist.map(item => item.duration === null ? DEFAULT_TRACK_LENGTH : item.duration);
     const totalLength = durations.reduce((s, v) => s + v, 0);
 
-    // pick current track and offset from Unix timestamp
+    // pick current track and offset from Unix timestamp (continuous radio cursor)
     const nowSec = Math.floor(Date.now() / 1000);
     const cursor = totalLength > 0 ? (nowSec % totalLength) : 0;
 
@@ -93,10 +93,7 @@ If audio_length is missing we use a DEFAULT_TRACK_LENGTH fallback (seconds).
       acc += d;
     }
 
-    // initialize music player with computed playlist and position
-    const wrapper = document.querySelector('.music-player-wrapper[data-radio-parent="{{ parent | escape}}"]');
-    if (!wrapper) return;
-
+    // initialize music player with playlist and computed position
     const options = {
       mode: 'radio',
       playlist: playlist,
@@ -105,14 +102,10 @@ If audio_length is missing we use a DEFAULT_TRACK_LENGTH fallback (seconds).
       loop: true
     };
 
-    // initMusicPlayer will build UI inside wrapper
+    // initMusicPlayer will build UI inside wrapper and load selected track/position
     const player = initMusicPlayer(wrapper, options);
 
-    // ensure UI reflects playing position (start paused; user can press Play)
-    // Optionally auto-start: uncomment next line if autoplay is desired (may be blocked by browser)
-    // player.play();
-
-    // expose for debugging
+    // Expose debug info
     window._RADIO_PLAYER = { player, playlist, selectedIndex, offsetInTrack, totalLength };
   })();
 
