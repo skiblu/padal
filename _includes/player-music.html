@@ -1,12 +1,10 @@
 {%- comment -%}
 Music player include placeholder.
-All UI is now handled by music-player.js.
 {%- endcomment -%}
 
 {%- if page.audio_id and page.audio_id != "" -%}
-<!-- Module init -->
 <script type="module">
-    import initMusicPlayer from "/assets/js/music-player.js";
+    import initMusicPlayer from "/assets/js/music-player-module.js";
 
     const wrapper = document.querySelector('[data-audio-id="{{ page.audio_id }}"]');
     const audioSrc = "{{ '/assets/audio/' | relative_url }}{{ page.section }}/{{ page.audio_id }}.mp3";
