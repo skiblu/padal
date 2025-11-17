@@ -86,11 +86,11 @@ class MusicPlayer {
             <div class="reel reel-left" aria-hidden="true"></div>
             <div class="tape" aria-hidden="true"></div>
             <div class="reel reel-right" aria-hidden="true"></div>
-          </div>
-
-          <div class="cassette-label">
-            <div class="track-title">Untitled</div>
-            <div class="track-sub"></div>
+            <!-- centered track info: title above the tape, sub below the tape -->
+            <div class="mp-track-center" aria-hidden="false">
+              <div class="track-title" aria-hidden="false"><span class="track-title-inner">Untitled</span></div>
+              <div class="track-sub"></div>
+            </div>
           </div>
 
           <div class="controls-row">
@@ -145,13 +145,30 @@ class MusicPlayer {
     .music-player-wrapper { max-width: 780px; margin: 1.25rem auto; padding: 0 1rem; box-sizing: border-box; }
     .cassette-player { display:flex; justify-content:center; }
     .cassette-shell { width: 100%; max-width: 720px; background: linear-gradient(180deg, #efe0b4 0%, #e3d19a 60%, #d6c68a 100%); border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.35); padding: 14px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #42321a; }
-    .cassette-window { display:flex; align-items:center; justify-content:space-between; gap: 18px; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02)); padding: 14px 12px; border-radius: 8px; margin-bottom: 12px; }
+    .cassette-window { display:flex; align-items:center; justify-content:space-between; gap: 18px; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02)); padding: 14px 12px; border-radius: 8px; margin-bottom: 12px; position: relative; }
+    /* centered track info sits above/below the tape line */
+    .mp-track-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); display:flex; flex-direction:column; align-items:center; pointer-events: none; z-index: 3; }
+    .mp-track-center .track-title { font-weight:700; font-size:1.05rem; margin-bottom: 6px; color: #2a1f12; text-align:center; overflow:hidden; white-space:nowrap; max-width: calc(100% - 160px); } /* leaves room for reels */
+    .mp-track-center .track-title .track-title-inner { display:inline-block; transform: translateX(0); }
+    /* marquee animation: scroll to --mp-marquee-distance and back */
+    .track-title.marquee-active .track-title-inner {
+      animation-name: mpMarquee;
+      animation-duration: var(--mp-marquee-duration, 6s);
+      animation-timing-function: cubic-bezier(.25,.1,.25,1);
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+    .track-title.marquee-active:hover .track-title-inner { animation-play-state: paused; }
+    @keyframes mpMarquee {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(var(--mp-marquee-distance, -100px)); }
+      100% { transform: translateX(0); }
+    }
+    .mp-track-center .track-sub { font-size:0.8rem; color:#5b4a30; margin-top:6px; text-align:center; }
     .reel { width: 78px; height: 78px; background: radial-gradient(circle at 34% 30%, #2a1f12 0, #4a3b28 30%, #2b1f13 100%); border-radius: 50%; box-shadow: inset 0 2px 6px rgba(255,255,255,0.05), 0 3px 8px rgba(0,0,0,0.2); position: relative; transform-origin: 50% 50%; }
     .reel::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 14px; height: 14px; border-radius: 50%; background: #c9b58a; box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2); }
-    .tape { flex:1; height: 8px; background: linear-gradient(90deg,#3b2a1a 0%, #1e130a 40%, #3b2a1a 100%); border-radius: 4px; align-self:center; box-shadow: inset 0 1px 1px rgba(255,255,255,0.06); }
-    .cassette-label { padding: 6px 8px; background: rgba(255,255,255,0.03); border-radius: 6px; margin-bottom: 8px; }
-    .track-title { font-weight:700; font-size:1.05rem; margin-bottom:3px; color: #2a1f12; }
-    .track-sub { font-size:0.75rem; color: #5b4a30; }
+    .tape { flex:1; height: 8px; background: linear-gradient(90deg,#3b2a1a 0%, #1e130a 40%, #3b2a1a 100%); border-radius: 4px; align-self:center; box-shadow: inset 0 1px 1px rgba(255,255,255,0.06); z-index: 2; }
+    /* removed separate cassette-label; track title/sub now in .mp-track-center (above) */
     .controls-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:space-between; }
     .mp-btn { display:inline-flex; align-items:center; justify-content:center; background: #fff; border: none; padding:6px; border-radius:6px; box-shadow: 0 2px 4px rgba(0,0,0,0.12); cursor:pointer; }
     .mp-btn img { display:block; width:18px; height:18px; filter: none; }
@@ -311,8 +328,9 @@ class MusicPlayer {
     const track = this.playlist[index];
     this.audio.src = track.src;
     const titleEl = this.wrapper.querySelector('.track-title');
+    const titleInner = this.wrapper.querySelector('.track-title .track-title-inner');
     const subEl = this.wrapper.querySelector('.track-sub');
-    if (titleEl) titleEl.textContent = track.title || 'Untitled';
+    if (titleInner) titleInner.textContent = track.title || 'Untitled';
     if (subEl) subEl.textContent = track.sub || '';
 
     // radio start
@@ -324,6 +342,37 @@ class MusicPlayer {
     if (preservePlay) this.audio.play().catch(()=>{});
     this._highlightActive();
     this._scrollActiveIntoView();
+    // enable marquee if title overflows
+    this._updateTitleMarquee();
+  }
+
+  // update marquee activation based on overflow; sets --mp-marquee-distance and --mp-marquee-duration
+  _updateTitleMarquee() {
+    const title = this.wrapper.querySelector('.track-title');
+    const inner = this.wrapper.querySelector('.track-title .track-title-inner');
+    if (!title || !inner) return;
+    // reset
+    title.classList.remove('marquee-active');
+    title.style.removeProperty('--mp-marquee-distance');
+    title.style.removeProperty('--mp-marquee-duration');
+
+    // measurement must happen after render
+    requestAnimationFrame(() => {
+      const containerW = title.clientWidth;
+      const textW = inner.scrollWidth;
+      if (textW > containerW + 4) {
+        // distance: move left by (textW - containerW) px (negative value)
+        const move = -(textW - containerW + 16); // extra padding to avoid cut
+        // duration based on speed (pixels/sec)
+        const speed = 60; // px per second
+        const duration = Math.max(4, ((textW - containerW) / speed) * 2); // *2 because animation goes there and back
+        title.style.setProperty('--mp-marquee-distance', `${move}px`);
+        title.style.setProperty('--mp-marquee-duration', `${duration}s`);
+        title.classList.add('marquee-active');
+      } else {
+        title.classList.remove('marquee-active');
+      }
+    });
   }
 
   play() { this.audio.play(); }
@@ -448,17 +497,13 @@ class MusicPlayer {
     // playlist toggle
     if (this.playlistToggle) this.playlistToggle.addEventListener('click', () => this._togglePlaylist());
 
-    // mode controls removed: no UI for switching modes; only active mode label is shown
-
-    // keyboard
-    this.wrapper.addEventListener('keydown', (e) => { if (e.key === ' '|| e.code === 'Space') { e.preventDefault(); if (this.audio.paused) this.playBtn.click(); else this.pauseBtn.click(); } });
-
-    // reel animation control depending on play state
-    this.audio.addEventListener('play', () => { this._startReels(); this._updatePlayPauseUI(true); });
-    this.audio.addEventListener('pause', () => { this._stopReels(); this._updatePlayPauseUI(false); });
-
-    // when playlist view changes, keep active visible
-    if (this.playlistView) this.playlistView.addEventListener('transitionend', () => this._scrollActiveIntoView());
+    // update marquee on resize (debounced)
+    let _marqTO = null;
+    const _resizeHandler = () => {
+      if (_marqTO) clearTimeout(_marqTO);
+      _marqTO = setTimeout(()=> { this._updateTitleMarquee(); _marqTO = null; }, 120);
+    };
+    window.addEventListener('resize', _resizeHandler);
   }
 
   _updatePlayPauseUI(isPlaying) {
