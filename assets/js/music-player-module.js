@@ -77,58 +77,43 @@ class MusicPlayer {
 
   // ---------- DOM building / styling ----------
   _ensureMarkup() {
-    // If the wrapper already contains the original HTML, keep it. Otherwise, construct identical markup.
-    // We detect presence of important elements (audio element) to decide.
-    if (!this.wrapper.querySelector('audio')) {
-      // create structure identical to your original include
-      this.wrapper.innerHTML = `
-        <audio preload="metadata" crossorigin="anonymous"></audio>
-        <div class="cassette-player">
-          <div class="cassette-shell">
-            <div class="cassette-window">
-              <div class="reel reel-left" aria-hidden="true"></div>
-              <div class="tape" aria-hidden="true"></div>
-              <div class="reel reel-right" aria-hidden="true"></div>
+    // Always create player UI inside the wrapper
+    this.wrapper.innerHTML = `
+      <audio preload="metadata" crossorigin="anonymous"></audio>
+      <div class="cassette-player">
+        <div class="cassette-shell">
+          <div class="cassette-window">
+            <div class="reel reel-left" aria-hidden="true"></div>
+            <div class="tape" aria-hidden="true"></div>
+            <div class="reel reel-right" aria-hidden="true"></div>
+          </div>
+
+          <div class="cassette-label">
+            <div class="track-title">Untitled</div>
+            <div class="track-sub"></div>
+          </div>
+
+          <div class="controls-row">
+            <div class="mp-mode">
+              <span class="mp-mode-label">Mode:</span>
+              <button class="mp-mode-toggle mp-mode-cassette" data-mode="single" title="Cassette">Casette</button>
+              <button class="mp-mode-toggle mp-mode-playlist" data-mode="playlist" title="Playlist">Playlist</button>
+              <button class="mp-mode-toggle mp-mode-radio" data-mode="radio" title="Radio">Radio</button>
             </div>
 
-            <div class="cassette-label">
-              <div class="track-title">Untitled</div>
-              <div class="track-sub"></div>
-            </div>
+            <button class="mp-btn mp-play" aria-label="Play" title="Play"><img src="/assets/bootstrap-icons/play.svg" alt=""></button>
+            <button class="mp-btn mp-pause" aria-label="Pause" title="Pause" style="display:none;"><img src="/assets/bootstrap-icons/pause.svg" alt=""></button>
+          </div>
 
-            <div class="controls-row">
-              <div class="mp-mode">
-                <span class="mp-mode-label">Mode:</span>
-                <button class="mp-mode-toggle mp-mode-cassette" data-mode="single" title="Cassette">Casette</button>
-                <button class="mp-mode-toggle mp-mode-playlist" data-mode="playlist" title="Playlist">Playlist</button>
-                <button class="mp-mode-toggle mp-mode-radio" data-mode="radio" title="Radio">Radio</button>
-              </div>
-
-              <button class="mp-btn mp-play" aria-label="Play" title="Play"><img src="/assets/bootstrap-icons/play.svg" alt=""></button>
-              <button class="mp-btn mp-pause" aria-label="Pause" title="Pause" style="display:none;"><img src="/assets/bootstrap-icons/pause.svg" alt=""></button>
-
-              <div class="mp-seek"><input type="range" class="mp-seek-range" min="0" max="100" value="0" aria-label="Seek"></div>
-
-              <div class="mp-times"><span class="mp-elapsed">0:00</span> / <span class="mp-duration">0:00</span></div>
-
-              <div class="mp-volume">
-                <button class="mp-btn mp-vol-down" aria-label="Decrease volume" title="Volume down"><img src="/assets/bootstrap-icons/volume-down.svg" alt=""></button>
-                <input type="range" class="mp-volume-range" min="0" max="1" step="0.01" value="1" aria-label="Volume">
-                <button class="mp-btn mp-vol-up" aria-label="Increase volume" title="Volume up"><img src="/assets/bootstrap-icons/volume-up.svg" alt=""></button>
-              </div>
-
-            </div>
-
-            <div class="mp-playlist-container" style="display:none; margin-top:10px;">
-              <button class="mp-playlist-toggle">Show Playlist</button>
-              <div class="mp-playlist-view" style="display:none; margin-top:8px;"></div>
-            </div>
-
+          <div class="mp-playlist-container" style="display:none; margin-top:10px;">
+            <button class="mp-playlist-toggle">Show Playlist</button>
+            <div class="mp-playlist-view" style="display:none; margin-top:8px;"></div>
           </div>
         </div>
-      `;
-    }
+      </div>
+    `;
   }
+
 
   _injectStyles() {
     if (document.getElementById('mp-module-styles')) return;

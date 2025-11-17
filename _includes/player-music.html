@@ -3,14 +3,7 @@ Music player include placeholder.
 {%- endcomment -%}
 
 {%- if page.audio_id and page.audio_id != "" -%}
-<div class="music-player-wrapper" data-audio-id="{{ page.audio_id }}">
-    <audio id="m-audio-player" preload="metadata" crossorigin="anonymous" style="display:none;">
-        <source
-                src="{{ '/assets/audio/' | relative_url }}{{ page.section }}/{{ page.audio_id }}.mp3"
-                type="audio/mpeg">
-    </audio>
-</div>
-
+<div id="music-player" data-audio-id="{{ page.audio_id }}"></div>
 <script type="module">
     import initMusicPlayer from "/assets/js/music-player-module.js";
 
