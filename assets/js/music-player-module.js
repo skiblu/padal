@@ -364,16 +364,20 @@ class MusicPlayer {
     this._highlightActive();
   }
 
-  _togglePlaylist(show) {
-    if (show === undefined) show = this.playlistView.style.display === 'none' || this.playlistView.style.display === '';
+  _togglePlaylist(show){
+    if (show === undefined) {
+      // determine real visibility via computed style (handles '' vs none)
+      const cs = window.getComputedStyle(this.playlistView);
+      show = cs.display === 'none';
+    }
     this.playlistView.style.display = show ? '' : 'none';
     if (this.playlistToggle) {
       if (show) {
-        this.playlistToggle.innerHTML = `<img src="/assets/bootstrap-icons/x.svg" alt="Hide playlist">`;
+        this.playlistToggle.innerHTML = '<img src="assets/bootstrap-icons/x.svg" alt="Hide playlist">';
         this.playlistToggle.title = 'Hide playlist';
         this.playlistToggle.setAttribute('aria-label', 'Hide playlist');
       } else {
-        this.playlistToggle.innerHTML = `<img src="/assets/bootstrap-icons/list.svg" alt="Show playlist">`;
+        this.playlistToggle.innerHTML = '<img src="assets/bootstrap-icons/list.svg" alt="Show playlist">';
         this.playlistToggle.title = 'Show playlist';
         this.playlistToggle.setAttribute('aria-label', 'Show playlist');
       }
@@ -548,7 +552,7 @@ class MusicPlayer {
     // toggle player-level LIVE badge: show only when in radio mode AND currently playing
     if (this.playerLiveBadge) {
       const isPlaying = !!(this.audio && !this.audio.paused && !this.audio.ended);
-      this.playerLiveBadge.style.display = (this.mode === 'radio' && isPlaying) ? '' : 'none';
+      this.playerLiveBadge.style.display = (this.mode === 'radio' && isPlaying) ? 'inline-flex' : 'none';
     }
 
     // radio: disable seeking
@@ -629,7 +633,7 @@ class MusicPlayer {
     this._highlightActive();
     // live badge visibility follows radio + playing state
     if (this.playerLiveBadge) {
-      this.playerLiveBadge.style.display = (this.mode === 'radio' && isPlaying) ? '' : 'none';
+      this.playerLiveBadge.style.display = (this.mode === 'radio' && isPlaying) ? 'inline-flex' : 'none';
     }
   }
 
