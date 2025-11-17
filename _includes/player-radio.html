@@ -1,12 +1,12 @@
 {%- comment -%}
-Self-contained radio player include (single file)
+Self-contained radio player include (single file).
 Usage:
-{% include player-radio.html parent_name="Ayyappa" %}
+{% include player-radio.html parent_name="bhakti" %}
 or
 {% include player-radio.html %}  <-- uses all tracks
 
 Requirements:
-- Pages must have front-matter `audio_id: <id>` and `section: <folder>`
+- Pages must have front-matter `audio_id: <id>` and `section: <folder>` (same pattern as music-player)
     - Audio files must exist at /assets/audio/<section>/<audio_id>.mp3
         {%- endcomment -%}
 
@@ -14,6 +14,7 @@ Requirements:
 
         {%- comment -%}
         Build RADIO_TRACKS at build-time from site pages (scan for audio_id)
+        We generate an array of { title, parent, audio_id, url }
         {%- endcomment -%}
         <script>
             window.RADIO_TRACKS = [
@@ -21,7 +22,8 @@ Requirements:
             {%- assign firstOut = true -%}
             {%- for p in all_pages -%}
               {%- if p.audio_id and p.audio_id != "" -%}
-                {%- if forloop.first == false %},{% endif -%}
+                {%- comment -%} allow filtering later in client; always include parent value from p.section or p.parent_id {%- endcomment -%}
+                {%- if forloop.index0 > 0 %},{% endif -%}
                 {
                   "title": {{ p.title | jsonify }},
                   "parent": {{ p.section | default: p.parent_id | jsonify }},
@@ -33,13 +35,18 @@ Requirements:
             ];
         </script>
 
+        {%- comment -%}
+        Main HTML (cassette UI) — identical structure and classes to music-player.html
+        {%- endcomment -%}
         <div class="music-player-wrapper"
              aria-label="Radio player"
              data-radio="true"
              data-parent="{{ parent }}">
 
+            <!-- Hidden audio element (track selected by JS) -->
             <audio class="radio-audio" preload="metadata" crossorigin="anonymous"></audio>
 
+            <!-- Retro cassette visual (SAME UI AS SINGLE PLAYER) -->
             <div class="cassette-player">
                 <div class="cassette-shell">
                     <div class="cassette-window">
@@ -92,59 +99,131 @@ Requirements:
                             </button>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
 
+        {%- comment -%}
+        Embed same CSS as music-player.html (copied inline for self-contained single file)
+        {%- endcomment -%}
         <style>
-            /* --- Same CSS as your music-player.html --- */
+            /* ---- Retro cassette player styles (copied from music-player.html) ---- */
             .music-player-wrapper { max-width: 780px; margin: 1.25rem auto; padding: 0 1rem; box-sizing: border-box; }
             .cassette-player { display:flex; justify-content:center; }
             .cassette-shell {
-              width: 100%; max-width: 720px;
+              width: 100%;
+              max-width: 720px;
               background: linear-gradient(180deg, #efe0b4 0%, #e3d19a 60%, #d6c68a 100%);
               border-radius: 12px;
               box-shadow: 0 6px 18px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.35);
-              padding: 14px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+              padding: 14px;
+              font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
               color: #42321a;
             }
-            .cassette-window { display:flex; align-items:center; justify-content:space-between; gap: 18px; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02)); padding: 14px 12px; border-radius: 8px; margin-bottom: 12px; }
-            .reel { width: 78px; height: 78px; background: radial-gradient(circle at 34% 30%, #2a1f12 0, #4a3b28 30%, #2b1f13 100%); border-radius: 50%; box-shadow: inset 0 2px 6px rgba(255,255,255,0.05), 0 3px 8px rgba(0,0,0,0.2); position: relative; transform-origin: 50% 50%; }
-            .reel::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 14px; height: 14px; border-radius: 50%; background: #c9b58a; box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2); }
-            .tape { flex:1; height: 8px; background: linear-gradient(90deg,#3b2a1a 0%, #1e130a 40%, #3b2a1a 100%); border-radius: 4px; align-self:center; box-shadow: inset 0 1px 1px rgba(255,255,255,0.06); }
+
+            /* cassette window */
+            .cassette-window {
+              display:flex;
+              align-items:center;
+              justify-content:space-between;
+              gap: 18px;
+              background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02));
+              padding: 14px 12px;
+              border-radius: 8px;
+              margin-bottom: 12px;
+            }
+
+            /* reels */
+            .reel {
+              width: 78px;
+              height: 78px;
+              background: radial-gradient(circle at 34% 30%, #2a1f12 0, #4a3b28 30%, #2b1f13 100%);
+              border-radius: 50%;
+              box-shadow: inset 0 2px 6px rgba(255,255,255,0.05), 0 3px 8px rgba(0,0,0,0.2);
+              position: relative;
+              transform-origin: 50% 50%;
+            }
+
+            .reel::after {
+              content: "";
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 14px;
+              height: 14px;
+              border-radius: 50%;
+              background: #c9b58a;
+              box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2);
+            }
+
+            /* tape visually between reels */
+            .tape {
+              flex:1;
+              height: 8px;
+              background: linear-gradient(90deg,#3b2a1a 0%, #1e130a 40%, #3b2a1a 100%);
+              border-radius: 4px;
+              align-self:center;
+              box-shadow: inset 0 1px 1px rgba(255,255,255,0.06);
+            }
+
+            /* label area */
             .cassette-label { padding: 6px 8px; background: rgba(255,255,255,0.03); border-radius: 6px; margin-bottom: 8px; }
             .track-title { font-weight:700; font-size:1.05rem; margin-bottom:3px; color: #2a1f12; }
             .track-sub { font-size:0.75rem; color: #5b4a30; }
+
+            /* controls row */
             .controls-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:space-between; }
             .mp-btn { display:inline-flex; align-items:center; justify-content:center; background: #fff; border: none; padding:6px; border-radius:6px; box-shadow: 0 2px 4px rgba(0,0,0,0.12); cursor:pointer; }
             .mp-btn img { display:block; width:18px; height:18px; filter: none; }
+
+            /* seek (disabled for radio UI) */
             .mp-seek { flex:1; min-width:160px; margin:0 8px; }
             .mp-seek-range { width:100%; -webkit-appearance:none; background:transparent; height:8px; }
             .mp-seek-range::-webkit-slider-runnable-track { height:8px; background: linear-gradient(90deg,#b88f45,#e9d49f); border-radius:8px; }
             .mp-seek-range::-webkit-slider-thumb { -webkit-appearance:none; width:14px; height:14px; background:#2a1f12; border-radius:50%; margin-top:-3px; box-shadow:0 1px 3px rgba(0,0,0,0.4); }
+
+            /* times */
             .mp-times { font-size:0.82rem; color:#302414; min-width:86px; text-align:center; }
+
+            /* volume */
             .mp-volume { display:flex; align-items:center; gap:6px; min-width:170px; }
             .mp-volume-range { width:90px; -webkit-appearance:none; height:6px; }
             .mp-volume-range::-webkit-slider-runnable-track { height:6px; background: linear-gradient(90deg,#e6d6a8,#c8a858); border-radius:6px; }
             .mp-volume-range::-webkit-slider-thumb { -webkit-appearance:none; width:12px; height:12px; background:#2a1f12; border-radius:50%; margin-top:-3px; }
-            @media (max-width:720px) { .reel { width:60px; height:60px; } .mp-btn img { width:16px; height:16px; } .mp-volume { min-width:140px; } .mp-times { font-size:0.75rem; } }
+
+            /* responsive */
+            @media (max-width:720px) {
+              .reel { width:60px; height:60px; }
+              .mp-btn img { width:16px; height:16px; }
+              .mp-volume { min-width:140px; }
+              .mp-times { font-size:0.75rem; }
+            }
         </style>
 
+        {%- comment -%}
+        Inline JS: deterministic radio using time-sliced windows (no duration manifest required).
+        TRACK_WINDOW: seconds per track window (default 1800s = 30 minutes). Change as needed.
+        {%- endcomment -%}
         <script>
             (function(){
+
+              const TRACK_WINDOW = 1800; // seconds per track window — change this value if you want shorter/longer windows
+              const SYNC_INTERVAL_MS = 10_000; // periodic resync
+
+              // find our wrapper (this include may appear multiple times so choose matching parent)
               const wrapper = document.querySelector('[data-radio="true"][data-parent="{{ parent }}"]');
               if (!wrapper) return;
 
+              // use the Jekyll-built list
               const ALL_TRACKS = window.RADIO_TRACKS && Array.isArray(window.RADIO_TRACKS) ? window.RADIO_TRACKS.slice() : [];
+
+              // filter by parent if needed
               const parentName = wrapper.dataset.parent && wrapper.dataset.parent.trim() !== "" ? wrapper.dataset.parent.trim() : null;
-              const TRACKS = parentName ? ALL_TRACKS.filter(t => (t.parent+"") === parentName) : ALL_TRACKS;
+              const TRACKS = parentName ? ALL_TRACKS.filter(t => (t.parent + "") === parentName) : ALL_TRACKS;
 
-              if (!TRACKS || TRACKS.length === 0) {
-                wrapper.querySelector('.track-title').textContent = "No audio tracks found";
-                wrapper.querySelector('.track-sub').textContent = "";
-                return;
-              }
-
+              // UI elements
               const audio = wrapper.querySelector('.radio-audio');
               const playBtn = wrapper.querySelector('.mp-play');
               const pauseBtn = wrapper.querySelector('.mp-pause');
@@ -157,49 +236,180 @@ Requirements:
               const reelLeft = wrapper.querySelector('.reel-left');
               const reelRight = wrapper.querySelector('.reel-right');
 
-              let currentTrackIndex = 0;
-              let playlistPos = 0;
+              if (!TRACKS || TRACKS.length === 0) {
+                // nothing to play: show message quietly
+                titleEl.textContent = "No audio tracks found";
+                subEl.textContent = "";
+                return;
+              }
 
+              // Helpers
               function formatTime(sec) {
                 if (!isFinite(sec)) return '0:00';
-                const m = Math.floor(sec / 60), s = Math.floor(sec % 60);
-                return m + ':' + (s<10?'0'+s:s);
+                const m = Math.floor(sec / 60);
+                const s = Math.floor(sec % 60);
+                return m + ':' + (s < 10 ? '0' + s : s);
               }
 
+              // Deterministic selection:
+              // - Choose track index based on floor(now/ TRACK_WINDOW) % TRACKS.length
+              // - Position offset = now % TRACK_WINDOW (seconds into the window)
+              function getNowSeconds() {
+                return Math.floor(Date.now() / 1000);
+              }
+              function pickTrackAndOffset(nowSec = getNowSeconds()) {
+                const total = TRACKS.length;
+                const index = Math.floor(nowSec / TRACK_WINDOW) % total;
+                const offsetInWindow = nowSec % TRACK_WINDOW;
+                return { index, track: TRACKS[index], offsetInWindow };
+              }
+
+              // Reels
               let reelTimer = null;
-              function startReels(){ if(reelTimer) return; let angle=0; reelTimer=setInterval(()=>{angle=(angle+6+Math.random()*2)%360; reelLeft.style.transform=`rotate(${angle}deg)`; reelRight.style.transform=`rotate(${360-angle}deg)`;},40);}
-              function stopReels(){ if(!reelTimer) return; clearInterval(reelTimer); reelTimer=null;}
-
-              audio.volume = 1; volRange.value = audio.volume;
-              volRange.addEventListener('input', e=>{ audio.volume=e.target.value; });
-              volUp.addEventListener('click', ()=>{ audio.volume=Math.min(1,audio.volume+0.1); volRange.value=audio.volume; });
-              volDown.addEventListener('click', ()=>{ audio.volume=Math.max(0,audio.volume-0.1); volRange.value=audio.volume; });
-
-              function playTrack(index, offset=0){
-                const t = TRACKS[index];
-                if(!t) return;
-                audio.src=t.url;
-                titleEl.textContent=t.title||t.audio_id;
-                subEl.textContent=t.parent||'';
-                audio.currentTime=offset;
-                audio.play().catch(()=>{});
+              function startReels(){
+                if (reelTimer) return;
+                let angle = 0;
+                reelTimer = setInterval(() => {
+                  angle = (angle + 6 + Math.random()*2) % 360;
+                  reelLeft.style.transform = `rotate(${angle}deg)`;
+                  reelRight.style.transform = `rotate(${360-angle}deg)`;
+                }, 40);
+              }
+              function stopReels(){
+                if (!reelTimer) return;
+                clearInterval(reelTimer);
+                reelTimer = null;
               }
 
-              audio.addEventListener('ended', ()=>{
-                currentTrackIndex=(currentTrackIndex+1)%TRACKS.length;
-                playTrack(currentTrackIndex,0);
-              });
+              // Sync & play: picks correct track+offset and loads audio.
+              // We set src then wait for metadata to compute a safe offset inside track
+              // (offsetInWindow may be larger than the track length; we map it using modulo with audio.duration).
+              let syncIntervalId = null;
+              async function syncAndPlay() {
+                const nowSec = getNowSeconds();
+                const { index, track, offsetInWindow } = pickTrackAndOffset(nowSec);
+                if (!track) return;
 
-              playBtn.addEventListener('click', ()=>{
-                playTrack(currentTrackIndex,playlistPos);
-                playBtn.style.display='none'; pauseBtn.style.display='';
+                // update UI labels
+                titleEl.textContent = track.title || track.audio_id || (track.url.split('/').pop());
+                subEl.textContent = track.parent || '';
+
+                // If currently playing the same src, and currentTime is close to desired, do nothing.
+                const currentSrc = audio.src ? audio.src.split(location.origin)[1] || audio.src : '';
+                if (currentSrc.endsWith(track.url) && Math.abs(audio.currentTime - offsetInWindow) < 2) {
+                  // minor drift: leave it; UI time will update from timeupdate event
+                  return;
+                }
+
+                // Otherwise set new source
+                audio.pause();
+                audio.src = track.url;
+
+                // When metadata loads, set currentTime to offset modulo duration
+                const onMeta = () => {
+                  // map offset into available duration to avoid seeking beyond duration
+                  const dur = audio.duration || 0;
+                  let seekTo = 0;
+                  if (dur > 0) {
+                    seekTo = offsetInWindow % dur;
+                  } else {
+                    seekTo = 0;
+                  }
+                  // set position and play
+                  try {
+                    audio.currentTime = seekTo;
+                  } catch (e) {
+                    // setting currentTime may throw if not allowed — ignore and try to play anyway
+                  }
+                  audio.play().catch(()=>{/* autoplay may require user gesture */});
+                  audio.removeEventListener('loadedmetadata', onMeta);
+                };
+
+                if (audio.readyState >= 1) {
+                  // metadata already available
+                  onMeta();
+                } else {
+                  audio.addEventListener('loadedmetadata', onMeta);
+                }
+              }
+
+              // Update displayed elapsed time (position in the TRACK_WINDOW)
+              function updateElapsedDisplay() {
+                const nowSec = getNowSeconds();
+                const { offsetInWindow } = pickTrackAndOffset(nowSec);
+                elapsedEl.textContent = formatTime(offsetInWindow);
+              }
+
+              // Start periodic sync (keeps everyone in sync and handles track switches)
+              function startSyncLoop() {
+                // initial immediate sync
+                syncAndPlay();
+                updateElapsedDisplay();
+                // update elapsed display every 1s
+                const disp = setInterval(updateElapsedDisplay, 1000);
+                // resync track selection occasionally (in case of drift / manual pause)
+                syncIntervalId = setInterval(() => {
+                  syncAndPlay();
+                }, SYNC_INTERVAL_MS);
+                // store for cleanup
+                wrapper._radioIntervals = wrapper._radioIntervals || [];
+                wrapper._radioIntervals.push(disp, syncIntervalId);
+              }
+
+              function stopSyncLoop() {
+                if (!wrapper._radioIntervals) return;
+                wrapper._radioIntervals.forEach(id => clearInterval(id));
+                wrapper._radioIntervals = [];
+              }
+
+              // Expose basic controls on window so other code can call them (optional)
+              window.startRadioPlayer = window.startRadioPlayer || function() {
+                startSyncLoop();
+              };
+              window.stopRadioPlayer = window.stopRadioPlayer || function() {
+                stopSyncLoop();
+                audio.pause();
+              };
+
+              // Hook up play/pause UI
+              playBtn.addEventListener('click', () => {
+                // start engine then switch UI
+                startSyncLoop();
+                playBtn.style.display = 'none';
+                pauseBtn.style.display = '';
                 startReels();
               });
-              pauseBtn.addEventListener('click', ()=>{
+
+              pauseBtn.addEventListener('click', () => {
+                stopSyncLoop();
                 audio.pause();
-                pauseBtn.style.display='none'; playBtn.style.display='';
+                pauseBtn.style.display = 'none';
+                playBtn.style.display = '';
                 stopReels();
               });
+
+              // Volume UI
+              audio.volume = 1;
+              volRange.value = audio.volume;
+              volRange.addEventListener('input', (e) => {
+                audio.volume = e.target.value;
+              });
+              volUp.addEventListener('click', () => {
+                audio.volume = Math.min(1, audio.volume + 0.1);
+                volRange.value = audio.volume;
+              });
+              volDown.addEventListener('click', () => {
+                audio.volume = Math.max(0, audio.volume - 0.1);
+                volRange.value = audio.volume;
+              });
+
+              // If audio is playing already (rare), set UI
+              if (!audio.paused && audio.src) {
+                playBtn.style.display = 'none';
+                pauseBtn.style.display = '';
+                startReels();
+                startSyncLoop();
+              }
 
             })();
         </script>
