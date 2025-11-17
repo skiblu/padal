@@ -95,15 +95,9 @@ class MusicPlayer {
 
           <div class="controls-row">
             <div class="mp-mode">
-              <!-- show only current mode by default; clicking opens the mode list -->
-              <button class="mp-mode-current" title="Change mode" aria-haspopup="true" aria-expanded="false">
+              <!-- show only the active mode label (non-interactive) -->
+              <div class="mp-mode-current" title="Mode" aria-hidden="true">
                 <span class="mp-mode-label">Cassette</span>
-                <img src="/assets/bootstrap-icons/chevron-down.svg" alt="" style="width:14px;height:14px;margin-left:6px;">
-              </button>
-              <div class="mp-mode-list" role="menu" style="display:none;">
-                <button class="mp-mode-toggle mp-mode-cassette" data-mode="single" role="menuitem">Cassette</button>
-                <button class="mp-mode-toggle mp-mode-playlist" data-mode="playlist" role="menuitem">Playlist</button>
-                <button class="mp-mode-toggle mp-mode-radio" data-mode="radio" role="menuitem">Radio</button>
               </div>
             </div>
 
@@ -162,10 +156,7 @@ class MusicPlayer {
     .mp-btn { display:inline-flex; align-items:center; justify-content:center; background: #fff; border: none; padding:6px; border-radius:6px; box-shadow: 0 2px 4px rgba(0,0,0,0.12); cursor:pointer; }
     .mp-btn img { display:block; width:18px; height:18px; filter: none; }
     .mp-mode { position:relative; display:flex; align-items:center; gap:6px; }
-    .mp-mode-current { display:inline-flex; align-items:center; gap:8px; background:transparent; border:1px solid rgba(0,0,0,0.06); padding:6px 8px; border-radius:6px; cursor:pointer; }
-    .mp-mode-list { position:absolute; top:calc(100% + 6px); left:0; background:#fff; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.12); padding:6px; z-index:30; min-width:120px; }
-    .mp-mode-list .mp-mode-toggle { display:block; width:100%; text-align:left; background:transparent; border:none; padding:6px 8px; border-radius:6px; cursor:pointer; }
-    .mp-mode-list .mp-mode-toggle:hover { background: rgba(0,0,0,0.03); }
+    .mp-mode-current { display:inline-flex; align-items:center; gap:8px; background:transparent; border:1px solid rgba(0,0,0,0.06); padding:6px 8px; border-radius:6px; }
     .mp-seek { flex:1; min-width:160px; margin:0 8px; }
     .mp-seek-range { width:100%; -webkit-appearance:none; background:transparent; height:8px; }
     .mp-seek-range::-webkit-slider-runnable-track { height:8px; background: linear-gradient(90deg,#b88f45,#e9d49f); border-radius:8px; }
@@ -205,10 +196,9 @@ class MusicPlayer {
     this.playlistContainer = this.wrapper.querySelector('.mp-playlist-container');
     this.playlistToggle = this.wrapper.querySelector('.mp-playlist-toggle');
     this.playlistView = this.wrapper.querySelector('.mp-playlist-view');
-    // new mode UI elements
-    this.mpModeCurrent = this.wrapper.querySelector('.mp-mode-current');
-    this.mpModeList = this.wrapper.querySelector('.mp-mode-list');
-    this.modeButtons = Array.from(this.wrapper.querySelectorAll('.mp-mode-toggle'));
+    // mode label (non-interactive) — only shows active mode
+    this.mpModeLabel = this.wrapper.querySelector('.mp-mode-label');
+    this.modeButtons = []; // no toggle controls exposed to user
 
     // create next/prev buttons and attach to controls-row (keeps layout intact)
     this.controlsRow = this.wrapper.querySelector('.controls-row');
@@ -367,22 +357,16 @@ class MusicPlayer {
     this.playlist = Array.isArray(list) ? list.slice() : [];
     if (typeof opts.startIndex === 'number') this.currentIndex = Math.max(0, Math.min(opts.startIndex, this.playlist.length -1));
     this._buildPlaylistView();
-    if (this.playlist.length) this._loadTrack(this.currentIndex, false);
+    if this.playlist.length) this._loadTrack(this.currentIndex, false);
   }
 
   setMode(m) {
     this.mode = m;
     this.isLive = this.mode === 'radio';
-    // UI changes
-    // mark active in the list (if present)
-    this.modeButtons.forEach(b => b.classList.toggle('active', b.dataset.mode === this.mode));
-    // update current-mode label and close list
-    if (this.mpModeCurrent) {
-      const label = (this.mode === 'single') ? 'Cassette' : (this.mode === 'playlist' ? 'Playlist' : 'Radio');
-      const lblEl = this.mpModeCurrent.querySelector('.mp-mode-label');
-      if (lblEl) lblEl.textContent = label;
-      if (this.mpModeList) { this.mpModeList.style.display = 'none'; this.mpModeCurrent.setAttribute('aria-expanded', 'false'); }
-    }
+    // UI: update visible (non-interactive) mode label only
+    const label = (this.mode === 'single') ? 'Cassette' : (this.mode === 'playlist' ? 'Playlist' : 'Radio');
+    if (this.mpModeLabel) this.mpModeLabel.textContent = label;
+
     // show playlist container only for playlist/radio
     if (this.playlistContainer) {
       if (this.mode === 'playlist' || this.mode === 'radio') {
@@ -461,23 +445,7 @@ class MusicPlayer {
     // playlist toggle
     if (this.playlistToggle) this.playlistToggle.addEventListener('click', () => this._togglePlaylist());
 
-    // mode UI: clicking current toggles the mode list; list items switch mode
-    if (this.mpModeCurrent && this.mpModeList) {
-      this.mpModeCurrent.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const open = this.mpModeList.style.display !== 'none' && this.mpModeList.style.display !== '';
-        this.mpModeList.style.display = open ? 'none' : '';
-        this.mpModeCurrent.setAttribute('aria-expanded', String(!open));
-      });
-      // close when clicking outside
-      document.addEventListener('click', (ev) => {
-        if (!this.mpModeCurrent.contains(ev.target) && !this.mpModeList.contains(ev.target)) {
-          this.mpModeList.style.display = 'none';
-          this.mpModeCurrent.setAttribute('aria-expanded', 'false');
-        }
-      }, { capture: true });
-    }
-    this.modeButtons.forEach(b => b.addEventListener('click', (ev) => { ev.stopPropagation(); this.setMode(b.dataset.mode); }));
+    // mode controls removed: no UI for switching modes; only active mode label is shown
 
     // keyboard
     this.wrapper.addEventListener('keydown', (e) => { if (e.key === ' '|| e.code === 'Space') { e.preventDefault(); if (this.audio.paused) this.playBtn.click(); else this.pauseBtn.click(); } });
