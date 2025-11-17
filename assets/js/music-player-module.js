@@ -58,6 +58,9 @@ class MusicPlayer {
     this.isLive = this.mode === 'radio';
     this.loop = !!this.options.loop;
 
+    // apply radioStart only once on the next radio load (initial load)
+    this._radioStartPending = this.isLive && !!this.options.radioStart;
+
     // build/attach DOM (will preserve your design by recreating same structure)
     this._ensureMarkup();
     this._bindElements();
@@ -409,9 +412,10 @@ class MusicPlayer {
     if (titleInner) titleInner.textContent = track.title || 'Untitled';
     if (subEl) subEl.textContent = track.sub || '';
 
-    // radio start
-    if (this.isLive && this.options.radioStart) {
+    // radio start: apply ONLY if a pending initial radio start flag is set
+    if (this.isLive && this.options.radioStart && this._radioStartPending) {
       try { this.audio.currentTime = parseFloat(this.options.radioStart) || 0; } catch(e){}
+      this._radioStartPending = false;
     }
 
     this.audio.load();
@@ -527,6 +531,10 @@ class MusicPlayer {
     this.playlist = Array.isArray(list) ? list.slice() : [];
     if (typeof opts.startIndex === 'number') this.currentIndex = Math.max(0, Math.min(opts.startIndex, this.playlist.length -1));
     this._buildPlaylistView();
+    // if switching to radio mode and radioStart option exists, ensure it's applied on next load
+    if (this.mode === 'radio' && !!this.options.radioStart) {
+      this._radioStartPending = true;
+    }
     if (this.playlist.length) this._loadTrack(this.currentIndex, false);
   }
 
@@ -553,6 +561,14 @@ class MusicPlayer {
     if (this.playerLiveBadge) {
       const isPlaying = !!(this.audio && !this.audio.paused && !this.audio.ended);
       this.playerLiveBadge.style.display = (this.mode === 'radio' && isPlaying) ? 'inline-flex' : 'none';
+    }
+
+    // when switching into radio mode, ensure radioStart (if provided) will be applied on the next load
+    if (this.isLive && !!this.options.radioStart) {
+      this._radioStartPending = true;
+    } else {
+      // leaving radio mode or no radioStart -> clear pending flag
+      this._radioStartPending = false;
     }
 
     // radio: disable seeking
