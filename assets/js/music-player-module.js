@@ -396,6 +396,40 @@ class MusicPlayer {
     this._updateTitleMarquee();
   }
 
+  // update marquee activation based on overflow; sets --mp-marquee-distance and --mp-marquee-duration
+  _updateTitleMarquee() {
+    const title = this.wrapper.querySelector('.track-title');
+    const inner = this.wrapper.querySelector('.track-title .track-title-inner');
+    if (!title || !inner) return;
+    // reset any previous settings
+    title.classList.remove('marquee-active');
+    title.style.removeProperty('--mp-marquee-distance');
+    title.style.removeProperty('--mp-marquee-duration');
+
+    // Run measurement on next frame to ensure layout is stable
+    requestAnimationFrame(() => {
+      try {
+        const containerW = title.clientWidth;
+        const textW = inner.scrollWidth;
+        // If text overflows container, enable marquee
+        if (textW > containerW + 4) {
+          // distance to move left (negative), include extra padding so it doesn't cut off
+          const move = -(textW - containerW + 16);
+          // duration: proportional to overflow width (pixels per second)
+          const speed = 60; // px per second
+          const duration = Math.max(4, ((textW - containerW) / speed) * 2); // there and back
+          title.style.setProperty('--mp-marquee-distance', `${move}px`);
+          title.style.setProperty('--mp-marquee-duration', `${duration}s`);
+          title.classList.add('marquee-active');
+        } else {
+          title.classList.remove('marquee-active');
+        }
+      } catch (e) {
+        // silent fail; do not break player
+      }
+    });
+  }
+
   // centralized ended handler (used by 'ended' event and timeupdate fallback)
   _onTrackEnded() {
     if (this._endedHandled) return;
