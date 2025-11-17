@@ -147,9 +147,25 @@ class MusicPlayer {
     .cassette-shell { width: 100%; max-width: 720px; background: linear-gradient(180deg, #efe0b4 0%, #e3d19a 60%, #d6c68a 100%); border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.35); padding: 14px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #42321a; }
     .cassette-window { display:flex; align-items:center; justify-content:space-between; gap: 18px; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02)); padding: 14px 12px; border-radius: 8px; margin-bottom: 12px; position: relative; }
     /* centered track info sits above/below the tape line */
-    .mp-track-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); display:flex; flex-direction:column; align-items:center; pointer-events: none; z-index: 6; }
-    /* title: moved up, high-contrast color and subtle shadow for readability over the dark tape */
-    .mp-track-center .track-title { font-weight:700; font-size:1.05rem; margin-bottom: 6px; color: #ffffff; text-align:center; overflow:hidden; white-space:nowrap; max-width: calc(100% - 160px); transform: translateY(-10px); text-shadow: 0 1px 2px rgba(0,0,0,0.6); }
+    .mp-track-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); display:flex; flex-direction:column; align-items:center; pointer-events: none; z-index: 60; }
+    /* title: sit clearly above the dark tape line with contrast background */
+    .mp-track-center .track-title {
+      font-weight:700;
+      font-size:1.05rem;
+      margin-bottom: 6px;
+      color: #ffffff;
+      text-align:center;
+      overflow:hidden;
+      white-space:nowrap;
+      max-width: calc(100% - 160px); /* leaves room for reels */
+      transform: translateY(-18px); /* move higher above tape */
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.45); /* subtle dark backdrop so text is always legible */
+      padding: 3px 8px;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+      display: block;
+    }
     .mp-track-center .track-title .track-title-inner { display:inline-block; transform: translateX(0); }
      /* marquee animation: scroll to --mp-marquee-distance and back */
      .track-title.marquee-active .track-title-inner {
@@ -192,7 +208,14 @@ class MusicPlayer {
     .mp-live-badge { display:inline-flex; align-items:center; gap:6px; font-weight:700; color:#b30000; }
     .mp-live-dot { width:10px; height:10px; border-radius:50%; background:#ff2b2b; box-shadow:0 0 6px rgba(255,43,43,0.6); }
     .mp-prev, .mp-next { margin-left:6px; padding:6px 8px; border-radius:6px; }
-    @media (max-width:720px) { .reel { width:60px; height:60px; } .mp-btn img { width:16px; height:16px; } .mp-volume { min-width:140px; } .mp-times { font-size:0.75rem; } }
+    @media (max-width:720px) {
+      .reel { width:60px; height:60px; }
+      .mp-btn img { width:16px; height:16px; }
+      .mp-volume { min-width:140px; }
+      .mp-times { font-size:0.75rem; }
+      /* smaller devices: reduce title size and move slightly less up so it doesn't collide with reels */
+      .mp-track-center .track-title { font-size:0.95rem; transform: translateY(-12px); max-width: calc(100% - 120px); padding: 2px 6px; }
+    }
     `;
     const style = document.createElement('style');
     style.id = 'mp-module-styles';
