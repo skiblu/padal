@@ -309,6 +309,30 @@ Requirements:
                 startReels();
               });
 
+              // Play next track when current track ends
+                audio.addEventListener('ended', () => {
+                  if (!TRACKS || TRACKS.length === 0) return;
+                  // Find current track index
+                  const currentIndex = TRACKS.findIndex(t => t.url === audio.src.split(location.origin)[1] || audio.src);
+                  // Pick next track (wrap around)
+                  const nextIndex = (currentIndex + 1) % TRACKS.length;
+                  const nextTrack = TRACKS[nextIndex];
+                  if (!nextTrack) return;
+
+                  // Update UI
+                  titleEl.textContent = nextTrack.title || nextTrack.audio_id || (nextTrack.url.split('/').pop());
+                  subEl.textContent = nextTrack.parent || '';
+
+                  // Load and play
+                  audio.src = nextTrack.url;
+                  audio.addEventListener('loadedmetadata', function onMeta() {
+                    try { audio.currentTime = 0; } catch(e){}
+                    audio.play().catch(()=>{});
+                    audio.removeEventListener('loadedmetadata', onMeta);
+                  });
+                });
+
+             // Pause button
               pauseBtn.addEventListener('click', () => {
                 audio.pause();
                 pauseBtn.style.display = 'none';
