@@ -369,6 +369,8 @@ class MusicPlayer {
   // ---------- Loading / playback ----------
   _loadTrack(index, preservePlay = false) {
     if (!this.playlist[index]) return;
+    // allow end handling for the new track
+    this._endedHandled = false;
     this.currentIndex = index;
     const track = this.playlist[index];
     this.audio.src = track.src;
@@ -391,33 +393,30 @@ class MusicPlayer {
     this._updateTitleMarquee();
   }
 
-  // update marquee activation based on overflow; sets --mp-marquee-distance and --mp-marquee-duration
-  _updateTitleMarquee() {
-    const title = this.wrapper.querySelector('.track-title');
-    const inner = this.wrapper.querySelector('.track-title .track-title-inner');
-    if (!title || !inner) return;
-    // reset
-    title.classList.remove('marquee-active');
-    title.style.removeProperty('--mp-marquee-distance');
-    title.style.removeProperty('--mp-marquee-duration');
-
-    // measurement must happen after render
-    requestAnimationFrame(() => {
-      const containerW = title.clientWidth;
-      const textW = inner.scrollWidth;
-      if (textW > containerW + 4) {
-        // distance: move left by (textW - containerW) px (negative value)
-        const move = -(textW - containerW + 16); // extra padding to avoid cut
-        // duration based on speed (pixels/sec)
-        const speed = 60; // px per second
-        const duration = Math.max(4, ((textW - containerW) / speed) * 2); // *2 because animation goes there and back
-        title.style.setProperty('--mp-marquee-distance', `${move}px`);
-        title.style.setProperty('--mp-marquee-duration', `${duration}s`);
-        title.classList.add('marquee-active');
+  // centralized ended handler (used by 'ended' event and timeupdate fallback)
+  _onTrackEnded() {
+    if (this._endedHandled) return;
+    this._endedHandled = true;
+    // radio: keep stopped / live badge; do not switch tracks
+    if (this.mode === 'radio') {
+      this._updatePlayPauseUI(false);
+      return;
+    }
+    // playlist mode: advance
+    if (this.mode === 'playlist') {
+      if (this.currentIndex + 1 < this.playlist.length) {
+        this.next();
+      } else if (this.loop) {
+        this._loadTrack(0, true);
       } else {
-        title.classList.remove('marquee-active');
+        this._updatePlayPauseUI(false);
       }
-    });
+      return;
+    }
+    // single mode: stop and reset
+    this.pause();
+    try { this.audio.currentTime = 0; } catch(e){}
+    this._updatePlayPauseUI(false);
   }
 
   play() { this.audio.play(); }
@@ -502,27 +501,19 @@ class MusicPlayer {
     this.audio.addEventListener('timeupdate', () => {
       this.elapsedEl.textContent = this._formatTime(this.audio.currentTime);
       if (!this.seekRange.dragging) this.seekRange.value = Math.floor(this.audio.currentTime);
+      // fallback: if 'ended' doesn't fire, detect near-end and trigger handler once
+      try {
+        const dur = this.audio.duration;
+        if (isFinite(dur) && dur > 0 && !this._endedHandled) {
+          const remaining = dur - this.audio.currentTime;
+          if (remaining <= 0.6) this._onTrackEnded();
+        }
+      } catch(e){}
     });
-    this.audio.addEventListener('ended', () => {
-      // radio: don't switch tracks
-      if (this.mode === 'radio') {
-        // keep showing as stopped but live indicator remains
-        this._updatePlayPauseUI(false);
-        return;
-      }
-      // playlist or single
-      if (this.mode === 'playlist') {
-        if (this.currentIndex + 1 < this.playlist.length) this.next();
-        else if (this.loop) this._loadTrack(0, true);
-        else this._updatePlayPauseUI(false);
-      } else {
-        // single: reset
-        this.pause(); this.audio.currentTime = 0; this._updatePlayPauseUI(false);
-      }
-    });
+    this.audio.addEventListener('ended', () => this._onTrackEnded());
 
     // play/pause UI
-    this.playBtn.addEventListener('click', () => { this.audio.play(); this._updatePlayPauseUI(true); this._startReels(); });
+    this.playBtn.addEventListener('click', () => { this._endedHandled = false; this.audio.play(); this._updatePlayPauseUI(true); this._startReels(); });
     this.pauseBtn.addEventListener('click', () => { this.audio.pause(); this._updatePlayPauseUI(false); this._stopReels(); });
 
     // seek
