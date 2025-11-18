@@ -120,28 +120,23 @@ class MusicPlayer {
               <span class="mp-duration">0:00</span>
             </div>
 
-            <div class="mp-volume">
-              <button class="mp-btn mp-vol-down" title="Volume Down" aria-label="Volume Down">
-                <img src="/assets/bootstrap-icons/volume-down.svg" alt="Volume Down">
+            <!-- right-side controls: mute, playlist toggle, live badge (inline) -->
+            <div class="controls-right" style="display:flex;align-items:center;gap:8px;">
+              <button class="mp-btn mp-mute" title="Mute" aria-label="Mute">
+                <img src="/assets/bootstrap-icons/volume-up.svg" alt="Unmuted" />
               </button>
-              <input type="range" class="mp-volume-range" min="0" max="1" step="0.01" value="1">
-              <button class="mp-btn mp-vol-up" title="Volume Up" aria-label="Volume Up">
-                <img src="/assets/bootstrap-icons/volume-up.svg" alt="Volume Up">
+              <button class="mp-playlist-toggle mp-btn" title="Show playlist" aria-label="Show playlist">
+                <img src="/assets/bootstrap-icons/list.svg" alt="Playlist">
               </button>
+              <div class="mp-live-badge-inline" style="display:none;" aria-hidden="true">
+                <span class="mp-live-dot" aria-hidden="true"></span>
+                <span class="mp-live-label">LIVE</span>
+              </div>
             </div>
           </div>
 
           <div class="mp-playlist-container" style="display:none; margin-top:10px;">
-            <button class="mp-playlist-toggle" title="Show playlist" aria-label="Show playlist">
-              <img src="/assets/bootstrap-icons/list.svg" alt="Playlist">
-            </button>
             <div class="mp-playlist-view" style="display:none; margin-top:8px;"></div>
-          </div>
-
-          <!-- player-level LIVE badge (shown only in radio mode) -->
-          <div class="mp-live-badge-player" style="display:none;" aria-hidden="true">
-            <span class="mp-live-dot" aria-hidden="true"></span>
-            <span class="mp-live-label">LIVE</span>
           </div>
         </div>
       </div>
@@ -160,24 +155,13 @@ class MusicPlayer {
     .cassette-shell { position: relative; width: 100%; max-width: 720px; background: linear-gradient(180deg, #efe0b4 0%, #e3d19a 60%, #d6c68a 100%); border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.35); padding: 14px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #42321a; overflow: visible; }
     /* ensure absolutely-positioned title isn't clipped */
     .cassette-window { display:flex; align-items:center; justify-content:space-between; gap: 18px; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(255,255,255,0.02)); padding: 14px 12px; border-radius: 8px; margin-bottom: 12px; position: relative; overflow: visible; }
-    /* player-level live badge (bottom-right) */
-    .mp-live-badge-player {
-      position: absolute;
-      right: 12px;
-      bottom: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,255,255,0.95);
-      color: #b30000;
-      padding: 6px 8px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      font-weight: 700;
-      z-index: 20;
-    }
-    .mp-live-badge-player .mp-live-dot { width:10px; height:10px; border-radius:50%; background:#ff2b2b; box-shadow:0 0 6px rgba(255,43,43,0.6); display:inline-block; }
-    .mp-live-badge-player .mp-live-label { font-size:0.85rem; color: #b30000; }
+    /* right-side small controls layout */
+    .controls-right { display:flex; align-items:center; gap:8px; }
+    .mp-mute { width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; padding:6px; border-radius:6px; }
+    .mp-mute img { width:18px; height:18px; display:block; }
+    /* inline live badge styling (placed beside playlist toggle) */
+    .mp-live-badge-inline { display:inline-flex; align-items:center; gap:6px; background: rgba(255,255,255,0.95); color:#b30000; padding:4px 8px; border-radius:6px; font-weight:700; box-shadow:0 4px 10px rgba(0,0,0,0.08); }
+    .mp-live-badge-inline .mp-live-dot { width:8px; height:8px; border-radius:50%; background:#ff2b2b; box-shadow:0 0 6px rgba(255,43,43,0.5); display:inline-block; }
     /* centered track info sits above/below the tape line */
     .mp-track-center {
       position: absolute;
@@ -289,9 +273,9 @@ class MusicPlayer {
     this.seekRange = this.wrapper.querySelector('.mp-seek-range');
     this.elapsedEl = this.wrapper.querySelector('.mp-elapsed');
     this.durationEl = this.wrapper.querySelector('.mp-duration');
-    this.volRange = this.wrapper.querySelector('.mp-volume-range');
-    this.volUp = this.wrapper.querySelector('.mp-vol-up');
-    this.volDown = this.wrapper.querySelector('.mp-vol-down');
+    // mute button replaces separate vol controls
+    this.muteBtn = this.wrapper.querySelector('.mp-mute');
+    this.muteBtnImg = this.muteBtn ? this.muteBtn.querySelector('img') : null;
     this.reelLeft = this.wrapper.querySelector('.reel-left');
     this.reelRight = this.wrapper.querySelector('.reel-right');
     this.playlistContainer = this.wrapper.querySelector('.mp-playlist-container');
@@ -302,7 +286,7 @@ class MusicPlayer {
     this.modeButtons = []; // no toggle controls exposed to user
 
     // player-level live badge element
-    this.playerLiveBadge = this.wrapper.querySelector('.mp-live-badge-player');
+    this.playerLiveBadge = this.wrapper.querySelector('.mp-live-badge-inline');
 
     // create next/prev buttons and attach to controls-row (keeps layout intact)
     this.controlsRow = this.wrapper.querySelector('.controls-row');
@@ -646,11 +630,21 @@ class MusicPlayer {
     this.seekRange.addEventListener('input', (e) => { this.elapsedEl.textContent = this._formatTime(e.target.value); this.seekRange.dragging = true; });
     this.seekRange.addEventListener('change', (e) => { if (this.mode === 'radio') return; this.audio.currentTime = e.target.value; this.seekRange.dragging = false; });
 
-    // volume
-    this.audio.volume = 1; this.volRange.value = this.audio.volume;
-    this.volRange.addEventListener('input', (e) => { this.audio.volume = e.target.value; });
-    this.volUp.addEventListener('click', () => { this.audio.volume = Math.min(1, this.audio.volume + 0.1); this.volRange.value = this.audio.volume; });
-    this.volDown.addEventListener('click', () => { this.audio.volume = Math.max(0, this.audio.volume - 0.1); this.volRange.value = this.audio.volume; });
+    // mute button wiring (single control) — use icons from assets/bootstrap-icons
+    try { this.audio.muted = !!this.options.muted; } catch(e){}
+    if (this.muteBtn) {
+      // ensure icon reflects current muted state
+      const updateMuteIcon = () => {
+        if (!this.muteBtnImg) return;
+        this.muteBtnImg.src = this.audio && this.audio.muted ? '/assets/bootstrap-icons/volume-mute.svg' : '/assets/bootstrap-icons/volume-up.svg';
+        this.muteBtnImg.alt = this.audio && this.audio.muted ? 'Muted' : 'Unmuted';
+      };
+      updateMuteIcon();
+      this.muteBtn.addEventListener('click', () => {
+        try { this.audio.muted = !this.audio.muted; } catch(e){}
+        updateMuteIcon();
+      });
+    }
 
     // next/prev
     this.nextBtn.addEventListener('click', () => this.next());
