@@ -250,6 +250,9 @@ class MusicPlayer {
      .mp-volume-range::-webkit-slider-runnable-track { height:6px; background: linear-gradient(90deg,#e6d6a8,#c8a858); border-radius:6px; }
      .mp-volume-range::-webkit-slider-thumb { -webkit-appearance:none; width:12px; height:12px; background:#2a1f12; border-radius:50%; margin-top:-3px; }
      .mp-playlist-view ul { list-style:none; padding:0; margin:0; max-height:220px; overflow:auto; }
+     /* playlist item icon (left) */
+     .mp-pl-icon { width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; flex:0 0 22px; margin-right:8px; }
+     .mp-pl-icon svg { width:16px; height:16px; display:block; }
      .mp-playlist-view li { padding:8px 10px; border-radius:6px; display:flex; align-items:center; gap:10px; cursor:pointer; }
      .mp-playlist-view li:hover { background: rgba(0,0,0,0.03); }
      .mp-playlist-view li.active { background: rgba(0,0,0,0.06); font-weight:700; }
@@ -348,9 +351,24 @@ class MusicPlayer {
       li.className = 'mp-playlist-item';
       li.tabIndex = 0;
       li.dataset.index = i;
+      // left area: small icon + title/sub (icon ensures visibility even when playlist was filtered by parent)
       const left = document.createElement('div');
+      left.style.display = 'flex';
+      left.style.alignItems = 'center';
       left.style.flex = '1';
-      left.innerHTML = `<div class="mp-pl-title">${t.title || 'Untitled'}</div><div class="mp-pl-sub">${t.sub || ''}</div>`;
+      const icon = document.createElement('span');
+      icon.className = 'mp-pl-icon';
+      icon.setAttribute('aria-hidden', 'true');
+      icon.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M10.804 8.47L5.53 12.116A.5.5 0 0 1 5 11.69V4.31a.5.5 0 0 1 .53-.428l5.274 3.646a.5.5 0 0 1 0 .852z"/>
+        </svg>`;
+      const text = document.createElement('div');
+      text.style.display = 'flex';
+      text.style.flexDirection = 'column';
+      text.innerHTML = `<div class="mp-pl-title">${t.title || 'Untitled'}</div><div class="mp-pl-sub">${t.sub || ''}</div>`;
+      left.appendChild(icon);
+      left.appendChild(text);
       li.appendChild(left);
       // moved per-item LIVE badge to a single player-level badge (bottom-right)
       li.addEventListener('click', () => {
