@@ -120,29 +120,28 @@ class MusicPlayer {
               <span class="mp-duration">0:00</span>
             </div>
 
-            <div class="mp-volume">
-              <button class="mp-btn mp-vol-down" title="Volume Down" aria-label="Volume Down">
-                <img src="/assets/bootstrap-icons/volume-down.svg" alt="Volume Down">
+            <!-- right-side controls: mute, playlist toggle, live badge (inline) -->
+            <div class="controls-right" style="display:flex;align-items:center;gap:8px;">
+              <button class="mp-btn mp-mute" title="Mute" aria-label="Mute">
+                <!-- default: unmuted speaker icon -->
+                <svg class="mp-icon mp-icon-unmuted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false" width="18" height="18">
+                  <path fill="currentColor" d="M9.717 3.55A.5.5 0 0 0 9 4v8a.5.5 0 0 0 .717.45L12 11.972V4.028L9.717 3.55zM4 6v4h2.5L9.5 12V4L6.5 6H4z"/>
+                </svg>
               </button>
-              <input type="range" class="mp-volume-range" min="0" max="1" step="0.01" value="1">
-              <button class="mp-btn mp-vol-up" title="Volume Up" aria-label="Volume Up">
-                <img src="/assets/bootstrap-icons/volume-up.svg" alt="Volume Up">
+              <button class="mp-playlist-toggle mp-btn" title="Show playlist" aria-label="Show playlist">
+                <img src="/assets/bootstrap-icons/list.svg" alt="Playlist">
               </button>
+              <div class="mp-live-badge-inline" style="display:none;" aria-hidden="true">
+                <span class="mp-live-dot" aria-hidden="true"></span>
+                <span class="mp-live-label">LIVE</span>
+              </div>
             </div>
           </div>
 
           <div class="mp-playlist-container" style="display:none; margin-top:10px;">
-            <button class="mp-playlist-toggle" title="Show playlist" aria-label="Show playlist">
-              <img src="/assets/bootstrap-icons/list.svg" alt="Playlist">
-            </button>
             <div class="mp-playlist-view" style="display:none; margin-top:8px;"></div>
           </div>
 
-          <!-- player-level LIVE badge (shown only in radio mode) -->
-          <div class="mp-live-badge-player" style="display:none;" aria-hidden="true">
-            <span class="mp-live-dot" aria-hidden="true"></span>
-            <span class="mp-live-label">LIVE</span>
-          </div>
         </div>
       </div>
     `;
@@ -289,9 +288,8 @@ class MusicPlayer {
     this.seekRange = this.wrapper.querySelector('.mp-seek-range');
     this.elapsedEl = this.wrapper.querySelector('.mp-elapsed');
     this.durationEl = this.wrapper.querySelector('.mp-duration');
-    this.volRange = this.wrapper.querySelector('.mp-volume-range');
-    this.volUp = this.wrapper.querySelector('.mp-vol-up');
-    this.volDown = this.wrapper.querySelector('.mp-vol-down');
+    // mute button replaces separate vol controls
+    this.muteBtn = this.wrapper.querySelector('.mp-mute');
     this.reelLeft = this.wrapper.querySelector('.reel-left');
     this.reelRight = this.wrapper.querySelector('.reel-right');
     this.playlistContainer = this.wrapper.querySelector('.mp-playlist-container');
@@ -301,8 +299,8 @@ class MusicPlayer {
     this.mpModeLabel = this.wrapper.querySelector('.mp-mode-label');
     this.modeButtons = []; // no toggle controls exposed to user
 
-    // player-level live badge element
-    this.playerLiveBadge = this.wrapper.querySelector('.mp-live-badge-player');
+    // player-level live badge element (inline)
+    this.playerLiveBadge = this.wrapper.querySelector('.mp-live-badge-inline');
 
     // create next/prev buttons and attach to controls-row (keeps layout intact)
     this.controlsRow = this.wrapper.querySelector('.controls-row');
@@ -646,12 +644,24 @@ class MusicPlayer {
     this.seekRange.addEventListener('input', (e) => { this.elapsedEl.textContent = this._formatTime(e.target.value); this.seekRange.dragging = true; });
     this.seekRange.addEventListener('change', (e) => { if (this.mode === 'radio') return; this.audio.currentTime = e.target.value; this.seekRange.dragging = false; });
 
-    // volume
-    this.audio.volume = 1; this.volRange.value = this.audio.volume;
-    this.volRange.addEventListener('input', (e) => { this.audio.volume = e.target.value; });
-    this.volUp.addEventListener('click', () => { this.audio.volume = Math.min(1, this.audio.volume + 0.1); this.volRange.value = this.audio.volume; });
-    this.volDown.addEventListener('click', () => { this.audio.volume = Math.max(0, this.audio.volume - 0.1); this.volRange.value = this.audio.volume; });
-
+    // mute button wiring (single control)
+    try { this.audio.muted = !!this.options.muted; } catch(e){}
+    if (this.muteBtn) {
+      this._updateMuteUI = () => {
+        const muted = !!(this.audio && this.audio.muted);
+        // swap SVG: use inline SVG markup for mute/unmute
+        if (muted) {
+          this.muteBtn.innerHTML = `<svg class="mp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11.536 14.01a.75.75 0 0 0 1.06-1.06L12.06 11.5l.536-.536a.75.75 0 1 0-1.06-1.06L11 10.439 9.939 9.379a.75.75 0 1 0-1.06 1.06L9.94 11.5l-.536.536a.75.75 0 1 0 1.06 1.06L11 12.561l.536 1.449z"/><path fill="currentColor" d="M9.717 3.55A.5.5 0 0 0 9 4v4.07l1.5 1.5V4.31a.5.5 0 0 0-.783-.76L9.717 3.55zM4 6v4h2.5L9.5 12V4L6.5 6H4z"/></svg>`;
+        } else {
+          this.muteBtn.innerHTML = `<svg class="mp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9.717 3.55A.5.5 0 0 0 9 4v8a.5.5 0 0 0 .717.45L12 11.972V4.028L9.717 3.55zM4 6v4h2.5L9.5 12V4L6.5 6H4z"/></svg>`;
+        }
+      };
+      this._updateMuteUI();
+      this.muteBtn.addEventListener('click', () => {
+        try { this.audio.muted = !this.audio.muted; } catch(e){}
+        this._updateMuteUI();
+      });
+    }
     // next/prev
     this.nextBtn.addEventListener('click', () => this.next());
     this.prevBtn.addEventListener('click', () => this.prev());
