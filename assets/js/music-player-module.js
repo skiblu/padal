@@ -575,10 +575,9 @@ class MusicPlayer {
       }
     }
 
-    // toggle player-level LIVE badge: show only when in radio mode AND currently playing
+    // show player-level LIVE badge whenever in radio mode (independent of play state)
     if (this.playerLiveBadge) {
-      const isPlaying = !!(this.audio && !this.audio.paused && !this.audio.ended);
-      this.playerLiveBadge.style.display = (this.mode === 'radio' && isPlaying) ? 'inline-flex' : 'none';
+      this.playerLiveBadge.style.display = (this.mode === 'radio') ? 'inline-flex' : 'none';
     }
 
     // when switching into radio mode, ensure radioStart (if provided) will be applied on the next load
@@ -665,10 +664,7 @@ class MusicPlayer {
     this.pauseBtn.style.display = isPlaying ? '' : 'none';
     if (!isPlaying) this._stopReels(); else this._startReels();
     this._highlightActive();
-    // live badge visibility follows radio + playing state
-    if (this.playerLiveBadge) {
-      this.playerLiveBadge.style.display = (this.mode === 'radio' && isPlaying) ? 'inline-flex' : 'none';
-    }
+    // NOTE: LIVE badge visibility is controlled by setMode (always visible in radio mode).
   }
 
   _startReels(){
