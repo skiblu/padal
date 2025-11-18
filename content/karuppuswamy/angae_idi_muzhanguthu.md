@@ -2,7 +2,7 @@
 section: KaruppuSwamy
 nav_order: 2
 title:  Angae Idi Muzhanguthu
-audio_id: 1VB1jQR-91bQHWBTQFApG-AQe2c4Dusqt
+audio_id: Hw38sk2d0
 audio_length: 193
 topics: Ayyappa, KaruppuSwamy, Tamil, அங்கே இடி முழங்குது, கருப்பசாமி
 ---
