@@ -394,11 +394,11 @@ class MusicPlayer {
     this.playlistView.style.display = show ? '' : 'none';
     if (this.playlistToggle) {
       if (show) {
-        this.playlistToggle.innerHTML = '<img src="assets/bootstrap-icons/x.svg" alt="Hide playlist">';
+        this.playlistToggle.innerHTML = '<img src="/assets/bootstrap-icons/x.svg" alt="Hide playlist">';
         this.playlistToggle.title = 'Hide playlist';
         this.playlistToggle.setAttribute('aria-label', 'Hide playlist');
       } else {
-        this.playlistToggle.innerHTML = '<img src="assets/bootstrap-icons/list.svg" alt="Show playlist">';
+        this.playlistToggle.innerHTML = '<img src="/assets/bootstrap-icons/list.svg" alt="Show playlist">';
         this.playlistToggle.title = 'Show playlist';
         this.playlistToggle.setAttribute('aria-label', 'Show playlist');
       }
