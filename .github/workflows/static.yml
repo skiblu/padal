@@ -1,10 +1,10 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy to Develop GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ["develop"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,19 +25,34 @@ jobs:
   # Single deploy job since we're just deploying
   deploy:
     environment:
+      # set the public URL where this will be reachable
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      # Use a static known URL here — do not reference step outputs in the job.environment block.
+      url: https://bhaktipadal.in/develop
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Prepare deploy folder
+        # copy repo contents into deploy/develop and add CNAME so Pages serves domain and route is /develop
+        run: |
+          set -e
+          mkdir -p deploy/develop
+          # copy repository files into deploy/develop, excluding CI metadata and large folders
+          rsync -a --delete --exclude='.github' --exclude='.git' --exclude='node_modules' --exclude='deploy' ./ deploy/develop/
+          # write custom domain to CNAME so Pages will use your domain (placed inside the published root)
+          echo 'bhaktipadal.in' > deploy/develop/CNAME
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # Upload the prepared deploy folder; Pages root will contain a 'develop' folder
+          path: 'deploy'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
