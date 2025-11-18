@@ -253,6 +253,11 @@ class MusicPlayer {
      /* playlist item icon (left) */
      .mp-pl-icon { width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; flex:0 0 22px; margin-right:8px; }
      .mp-pl-icon svg { width:16px; height:16px; display:block; }
+     /* single-line playlist text: "Title | Album" in a smaller font */
+     .mp-pl-line { font-size: 0.88rem; color: #2a1f12; display:flex; align-items:center; gap:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+     .mp-pl-line .mp-pl-title { font-weight:700; overflow:hidden; text-overflow:ellipsis; }
+     .mp-pl-line .mp-pl-sep { opacity:0.6; color:#5b4a30; }
+     .mp-pl-line .mp-pl-sub { color:#5b4a30; overflow:hidden; text-overflow:ellipsis; }
      .mp-playlist-view li { padding:8px 10px; border-radius:6px; display:flex; align-items:center; gap:10px; cursor:pointer; }
      .mp-playlist-view li:hover { background: rgba(0,0,0,0.03); }
      .mp-playlist-view li.active { background: rgba(0,0,0,0.06); font-weight:700; }
@@ -366,7 +371,10 @@ class MusicPlayer {
       const text = document.createElement('div');
       text.style.display = 'flex';
       text.style.flexDirection = 'column';
-      text.innerHTML = `<div class="mp-pl-title">${t.title || 'Untitled'}</div><div class="mp-pl-sub">${t.sub || ''}</div>`;
+      // Render as single-line: "Title | Album" in smaller font
+      const safeTitle = (t.title || 'Untitled');
+      const safeSub = (t.sub || '');
+      text.innerHTML = `<div class="mp-pl-line"><span class="mp-pl-title">${safeTitle}</span><span class="mp-pl-sep">|</span><span class="mp-pl-sub">${safeSub}</span></div>`;
       left.appendChild(icon);
       left.appendChild(text);
       li.appendChild(left);
