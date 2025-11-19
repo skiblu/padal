@@ -1,9 +1,9 @@
 ---
 section: Ayyappa
-nav_order: 28
-title: Ayyappa Namam Solla
-youtube_id: JqL5o2Hw6Qw
-topics: Ayyappa, Tamil, Ayyappa, Namam, Solla, அய்யப்பா, நாமம், சொல்ல
+nav_order: 29
+title: Vanpuli Vagananae
+youtube_id: hZr7aJRlO4c
+topics: Ayyappa, Tamil, Vanpuli, Vagananae, வன்புலி, வாகனனே
 ---
 
 விண்ணும் மண்ணும் கிடுகிடுங்க\
