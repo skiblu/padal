@@ -1,7 +1,7 @@
 ---
 section: KaruppuSwamy
 nav_order: 3
-title:  Vandharam Vandharam Karuppusamy
+title:  Vandharam Vandharam
 audio_id: D5dgwh7afs
 audio_length: 310
 topics: Karuppu, Swamy, KaruppuSwamy, Tamil, Vandharam, Vandharam, Karuppusamy, கருப்பசாமி, வந்தாரம், வந்தாரம்
