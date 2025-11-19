@@ -1,9 +1,9 @@
 ---
 section: KaruppuSwamy
 nav_order: 4
-title:  Vararaiya Vararu Karuppasamy
+title:  Vararaiya Vararu (Long)
 youtube_id: co_ZNf-PriU
-topics: Ayyappa, Karuppu, Swamy, Tamil, Vararaiya, Vararu, Karuppasamy, கருப்பசாமி, வாரரையா, வாரறு
+topics: Karuppu, Swamy, Tamil, Vararaiya, Vararu, Karuppasamy, கருப்பசாமி, வாரரையா, வாரறு
 ---
 
 வாராரய்யா வாராரு!! கருப்பசாமி வாராரு!! \
