@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 89
+nav_order: 88
 title: Entha Malai Sevithalum
 youtube_id: OLkBZQqsYDs
 topics: Ayyappa, Entha, Malai, Sevithalum

@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 29
+nav_order: 15
 title: Vanpuli Vagananae
 youtube_id: hZr7aJRlO4c
 topics: Ayyappa, Tamil, Vanpuli, Vagananae, வன்புலி, வாகனனே, Hari Haranae , Neiyodu, ஹரிஹரனே, நெய்யோடு
