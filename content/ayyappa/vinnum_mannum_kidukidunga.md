@@ -2,13 +2,14 @@
 section: Ayyappa
 nav_order: 34
 title: Vinnum Mannum Kidukidunga
-topics: Ayyappa, Tamil, Song, Lyrics, Devotional, Vinnum, Mannum, Kidukidunga, வின்னும், மண்ணும், கிடுகிடுங்க
+youtube_id: 27OhxfkjYKA
+topics: Ayyappa, Tamil, Song, Lyrics, Devotional, Vinnum, Mannum, Kidukidunga, விண்ணும், மண்ணும், கிடுகிடுங்க
 ---
 
-விண்ணும் மண்ணும் கிட்டு கிடுக்க\
+விண்ணும் மண்ணும் கிடுகிடுங்க\
 `ஐயப்ப நாமம் சொல்ல நாம் சரணகோசம் செய்ய (2)`
 
-விண்ணும் மண்ணும் கிட்டு கிடுக்க வந்து வரம் நமக்கருள (2)\
+விண்ணும் மண்ணும் கிடுகிடுங்க வந்து வரம் நமக்கருள (2)\
 சிங்கார பீடம் விட்டு ஜகமருள ஓடி வாரான்..(2)\
 `ஐயப்ப நாமம் சொல்ல நாம் சரணகோசம் செய்ய (2)`
 
