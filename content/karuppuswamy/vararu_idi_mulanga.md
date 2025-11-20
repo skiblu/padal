@@ -1,6 +1,6 @@
 ---
 section: KaruppuSwamy
-nav_order: 6
+nav_order: 7
 title:  Vararu Idi Mulanga
 youtube_id: Qh8_RwqjNYs
 topics: Karuppu, Swamy, Tamil, Karuppan, Vararu, Vararu, Idi, Mulanga
