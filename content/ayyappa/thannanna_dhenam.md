@@ -3,7 +3,7 @@ section: Ayyappa
 nav_order: 12
 youtube_id: TZY0XjRpaCE
 title: Thannanna Dhenam
-topics: Ayyappa, thannanna, dhenam, தன்னன்னா, தினம், தன்னன்னா, தினம்
+topics: Ayyappa, thannanna, dhenam, saranam, ayyappa, தன்னன்னா, தினம், சரணம், ஐயப்பா
 ---
 
 ## Lyrics
