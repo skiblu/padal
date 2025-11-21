@@ -5,8 +5,6 @@ title: All Songs
 history: false
 topics: Murugan, Muruga, lyrics, முருகன், முருகா, பாடல்கள், devotional, songs
 ---
-
-{% include figure.html img="murugan_poster.gif" width="15%" %}
 {% include toc-sections.html parent_name="Murugan" %}
 
 

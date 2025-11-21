@@ -5,8 +5,6 @@ title: All Songs
 history: false
 topics: KaruppuSwamy, songs, கருப்பசாமி, lyrics, devotional
 ---
-
-{% include figure.html img="karuppuswamy_poster.jpg" width="15%" %}
 {% include toc-sections.html parent_name="KaruppuSwamy" %}
 
 

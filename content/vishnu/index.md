@@ -3,10 +3,8 @@ parent_id: Vishnu
 nav_order: 7
 title: All Songs
 history: false
-topics: Vishnu, songs, விஷ்ணு, devotional, lyrics
+topics: Vishnu, songs, விஷ்ணு, devotional, lyrics, Venkatesa, Narayana, Govinda
 ---
-
-{% include figure.html img="vishnu_poster.gif" width="15%" %}
 {% include toc-sections.html parent_name="Vishnu" %}
 
 
