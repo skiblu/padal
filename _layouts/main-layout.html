@@ -23,6 +23,7 @@ layout: sidebar
 {%- endif -%}
 
 {% include player-music.html %}
+
 {% if page.youtube_id %}
 <div class="mx-auto mb-4" style="max-width: 600px;">
     <div class="card shadow-sm rounded">
@@ -46,5 +47,10 @@ layout: sidebar
     </div>
 </div>
 {%- endif -%}
+
+<!-- Added label: show "Lyrics(வரிகள்)" before page content -->
+<div class="ms-3 mb-3 border-bottom">
+    <strong>Lyrics (வரிகள்)</strong>
+</div>
 
 {{ content }}
