@@ -24,8 +24,7 @@ source-code: https://github.com
 content_license: "Copyright: Bhakti Padal"
 # URL to the content license
 content_license_link: https://www.bhaktipadal.in/
-plugins:
-  - jekyll-sitemap
+
 ##########
 # THEME CUSTOMIZATION [optional!]
 #
@@ -81,7 +80,6 @@ base-font-size: "1.1rem"
 
 ########### SEO SETTINGS [optional!]
 # set noindex to true if you do NOT want Google to index your site
-noindex: false 
 
 #######
 # BUILD SETTINGS [usually leave as is]
@@ -94,5 +92,11 @@ defaults:
       layout: "main-layout"
 # ignore stuff
 exclude: [README.md, WEB-COUNTER.md, LICENSE, assets/lib/README.md]
+url: "https://www.bhaktipadal.in"
+safe: false
+plugins:
+  - jekyll-sitemap
+gems:
+  - jekyll-sitemap
 # Build settings
 markdown: kramdown
