@@ -1,22 +1,26 @@
 ---
 layout: sidebar
 ---
-<!-- Reworked page header: icon + styled title, subtitle and small badges -->
+<!-- Reworked page header: icon at left, title + topics on the right (topics shown below title) -->
 <div class="d-flex justify-content-between align-items-start mb-3">
   <div class="d-flex align-items-start gap-3">
-    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width:56px;height:56px;flex:0 0 56px;">
-      <!-- music icon -->
-      <svg width="28" height="28" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-        <path d="M9 1v8.178A3 3 0 1 0 10 12V4h3V1H9z"/>
-      </svg>
+    <!-- Icon column -->
+    <div style="flex:0 0 56px;">
+      <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width:56px;height:56px;">
+        <!-- music icon -->
+        <svg width="28" height="28" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M9 1v8.178A3 3 0 1 0 10 12V4h3V1H9z"/>
+        </svg>
+      </div>
     </div>
 
+    <!-- Title column: title, subtitle, small badges, then topics (below title) -->
     <div>
       <h1 class="h3 mb-1 fw-bold">{{ page.title }}</h1>
       {% if page.subtitle %}
       <div class="text-muted small mb-1">{{ page.subtitle }}</div>
       {% endif %}
-      <div class="d-flex align-items-center flex-wrap">
+      <div class="d-flex align-items-center flex-wrap mb-2">
         {% if page.year %}
         <span class="badge bg-secondary me-1 mb-1">{{ page.year }}</span>
         {% endif %}
@@ -24,6 +28,15 @@ layout: sidebar
         <span class="badge bg-light text-muted border mb-1">{{ page.language }}</span>
         {% endif %}
       </div>
+
+      {% if page.topics %}
+      <div class="d-flex flex-wrap" style="gap: .35rem;">
+        {% assign topics_list = page.topics | split: ',' %}
+        {% for t in topics_list %}
+          <span class="badge bg-light text-muted border" style="font-size:.75rem;padding:.28rem .5rem;">{{ t | strip }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
   </div>
 
@@ -32,18 +45,6 @@ layout: sidebar
   <div id="favorite-btn-container"></div>
   {% endif %}
 </div>
-
-{% if page.topics %}
-<div class="ms-3 mb-3">
-  <div class="small text-muted mb-1">Topics</div>
-  <div>
-    {% assign topics_list = page.topics | split: ',' %}
-    {% for t in topics_list %}
-      <span class="me-1 mb-1" style="display:inline-block;background:#f7f7fa;color:#333;border-radius:0.5rem;padding:.35rem .6rem;font-size:.85rem;">{{ t | strip }}</span>
-    {% endfor %}
-  </div>
-</div>
-{%- endif -%}
 
 {% if page.description %}
 <div class="ms-3 mb-3">
