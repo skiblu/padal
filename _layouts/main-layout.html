@@ -1,6 +1,19 @@
 ---
 layout: sidebar
 ---
+<!-- tiny topic badge styles for compact indexing tags -->
+<style>
+  .topic-badge {
+    font-size: 0.55rem;
+    padding: 0.12rem 0.28rem;
+    border-width: 1px;
+    border-radius: 0.35rem;
+    line-height: 1;
+    margin: 0; /* rely on container gap */
+    display: inline-block;
+  }
+</style>
+
 <!-- Reworked page header: icon at left, title + topics on the right (topics shown below title) -->
 <div class="d-flex justify-content-between align-items-start mb-3">
   <div class="d-flex align-items-start gap-3">
@@ -37,10 +50,10 @@ layout: sidebar
       </div>
 
       {% if page.topics %}
-      <div class="d-flex flex-wrap" style="gap: .35rem;">
+      <div class="d-flex flex-wrap" style="gap: .25rem;">
         {% assign topics_list = page.topics | split: ',' %}
         {% for t in topics_list %}
-          <span class="badge bg-light text-muted border" style="font-size:.75rem;padding:.28rem .5rem;">{{ t | strip }}</span>
+          <span class="badge bg-light text-muted border topic-badge">{{ t | strip }}</span>
         {% endfor %}
       </div>
       {% endif %}
