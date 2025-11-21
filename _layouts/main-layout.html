@@ -49,8 +49,10 @@ layout: sidebar
 {%- endif -%}
 
 <!-- Added label: show "Lyrics(வரிகள்)" before page content -->
+{% if page.section %}
 <div class="ms-3 mb-3 border-bottom">
     <strong>Lyrics (வரிகள்)</strong>
 </div>
+{%- endif -%}
 
 {{ content }}
