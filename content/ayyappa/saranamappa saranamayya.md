@@ -2,7 +2,6 @@
 section: Ayyappa
 nav_order: 39
 title: Saranamappa Saranamayya
-youtube_id: 
 topics: Ayyappa, Tamil, Song, Lyrics, Devotional, Saranamappa Saranamayya, சரணமப்பா, சரணமய்யா, அய்யப்பன், பாடல், பாடல்கள், தமிழ், பக்தி
 ---
 
