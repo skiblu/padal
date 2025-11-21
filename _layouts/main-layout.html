@@ -6,10 +6,11 @@ layout: sidebar
   <div class="d-flex align-items-start gap-3">
     <!-- Icon column -->
     <div style="flex:0 0 56px;">
-      <div class="{% if page.parent_id %}bg-light text-dark border{% else %}bg-primary text-white{% endif %} rounded-circle d-flex align-items-center justify-content-center" style="width:56px;height:56px;overflow:hidden;">
-        {% if page.parent_id %}
-          <!-- show parent image when parent_id is present (light/grey background) -->
-          <img src="/images/{{ page.parent_id }}.gif" alt="parent image" width="36" height="36" style="display:block;object-fit:contain;" />
+      {%- assign img_key = page.parent_id | default: page.section -%}
+      <div class="{% if img_key %}bg-light text-dark border{% else %}bg-primary text-white{% endif %} rounded-circle d-flex align-items-center justify-content-center" style="width:56px;height:56px;overflow:hidden;">
+        {% if img_key %}
+          <!-- show image when parent_id or section is present (light/grey background) -->
+          <img src="/images/{{ img_key }}.gif" alt="{{ img_key }}" width="36" height="36" style="display:block;object-fit:contain;" />
         {% else %}
           <!-- default music icon (blue background) -->
           <svg width="28" height="28" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
