@@ -142,15 +142,6 @@ layout: default
         <a href="https://gnrcounter.com" title="Web Analytics">Web Analytics</a>
       </noscript>
 
-      <!-- Last updated -->
-      <div class="mt-3 small text-muted">
-        {% if page.last_modified_at %}
-        Last updated: {{ page.last_modified_at | date: "%B %d, %Y" }}
-        {% else %}
-        Last updated: {{ page.date | date: "%B %d, %Y" }}
-        {% endif %}
-      </div>
-
       {% include template/sidebar-footer.html %}
     </div>
 
