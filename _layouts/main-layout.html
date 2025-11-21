@@ -48,10 +48,19 @@ layout: sidebar
 </div>
 {%- endif -%}
 
-<!-- Added label: show "Lyrics(வரிகள்)" before page content -->
+<!-- Improved header: show "Lyrics (வரிகள்)" as a styled section header -->
 {% if page.section %}
-<div class="ms-3 mb-3 border-bottom">
-    <strong>Lyrics (வரிகள்)</strong>
+<div class="ms-3 mb-4">
+  <div class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded bg-light shadow-sm">
+    <!-- simple inline music note (keeps dependency-free) -->
+    <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" class="text-primary">
+      <path d="M9 1v8.178A3 3 0 1 0 10 12V4h3V1H9z"/>
+    </svg>
+    <div class="d-flex flex-column">
+      <span class="fw-bold h6 mb-0">Lyrics</span>
+      <small class="text-muted">வரிகள்</small>
+    </div>
+  </div>
 </div>
 {%- endif -%}
 
