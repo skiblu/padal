@@ -93,6 +93,6 @@ defaults:
     values:
       layout: "main-layout"
 # ignore stuff
-exclude: [README.md, LICENSE, assets/lib/README.md]
+exclude: [README.md, WEB-COUNTER.md, LICENSE, assets/lib/README.md]
 # Build settings
 markdown: kramdown
