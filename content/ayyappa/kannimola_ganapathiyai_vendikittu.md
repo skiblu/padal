@@ -5,7 +5,7 @@ title: Kannimoola Ganapathiyai
 topics: Ayyappa, Kannimoola, Ganapathiyai, கன்னிமூல, கணபதியை
 ---
 
-## Lyrics
+
 
 கன்னிமூல‌ கணபதியை வேண்டிக்கிட்டு\
 `நாங்க‌ கார்த்திகை முதல் தேதி மாலையிட்டோம்`\

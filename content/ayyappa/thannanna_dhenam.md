@@ -6,7 +6,7 @@ title: Thannanna Dhenam
 topics: Ayyappa, thannanna, dhenam, saranam, ayyappa, தன்னன்னா, தினம், சரணம், ஐயப்பா
 ---
 
-## Lyrics
+
 பால் அபிஷேகம்- `சுவாமிக்கே`\
 நெய் அபிஷேகம்- `சுவாமிக்கே`\
 மலர் அபிஷேகம்- `சுவாமிக்கே`\

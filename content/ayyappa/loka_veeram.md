@@ -7,7 +7,7 @@ title: Loka Veeram
 topics: Ayyappa, Loka, Veeram, லோக, வீரம்
 ---
 
-## Lyrics
+
 
 Note: ஒவ்வொரு ஸ்லோகத்தையும் கூறி சுவாமியே சரணமய்யப்பா என்று சொல்லி நமஸ்காரம் செய்ய வேண்டும்
 

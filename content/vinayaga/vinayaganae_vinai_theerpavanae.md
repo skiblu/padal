@@ -5,7 +5,7 @@ title:  Vinayaganae Vinai Theerpavanae
 youtube_id: fOBYiKcncLQ
 topics: Vinayaga, Ganesa, vinai, theerpavanae, விநாயகன், வினை, தீர்ப்பவனே
 ---
-## Lyrics
+
 
 `விநாயகனே வினை தீர்ப்பவனே`\
 `வேழ முகத்தோனே ஞால முதல்வனே`\

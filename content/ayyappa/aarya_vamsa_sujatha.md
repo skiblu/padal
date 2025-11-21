@@ -7,7 +7,7 @@ title: Aarya Vamsa Sujatha
 topics: Ayyappa, Aarya, Vamsa, Sujatha
 ---
 
-## Lyrics
+
 
 Aaryavamsha Sujata Namo Namo\
 Veeryadivya Vilasa Namo Namo\

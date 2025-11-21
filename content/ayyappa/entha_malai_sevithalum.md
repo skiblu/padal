@@ -6,7 +6,7 @@ youtube_id: OLkBZQqsYDs
 topics: Ayyappa, Entha, Malai, Sevithalum
 ---
 
-## Lyrics 
+ 
 
 ஸ்ரீ வீர தேவர் அகிலமும் ஓம் காரமாய் விளங்க\
 ஸ்ரீ சபகிரீஸ்வரராய் மணிப்பீடத்தில் ஐயப்பா…\

@@ -6,7 +6,7 @@ youtube_id: tuZr_5dgR2s
 topics: Vinayaga, Ganesa, Omkara, Ganapathiye, ஓம்கார, கணபதியே
 ---
 
-## Lyrics
+
 
 ஓம்கார கணபதியே.. உலகாளும் கணபதியே\
 உன் பாதம் சரணமய்யா\

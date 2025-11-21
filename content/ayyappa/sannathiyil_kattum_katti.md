@@ -7,7 +7,7 @@ title: Sannathiyil Kattum Katti
 topics: Ayyappa, Sannathiyil, Kattum, Katti, சன்னதியில், கட்டும், கட்டி
 ---
 
-## Lyrics
+
 
 சன்னதியில் கட்டும் கட்டி...வந்தோமப்பா ஐயப்பா...\
 சபரிமலை காடுதேடி... வாரோமப்பா ஐயப்பா...\

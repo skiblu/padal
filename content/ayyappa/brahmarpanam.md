@@ -7,7 +7,7 @@ title: Brahmarpanam
 topics: Ayyappa, Brahmarpanam
 ---
 
-## Lyrics
+
 
 **ஸ்துதி வரிகள்**\
 ப்ரஹ்மார்ப்பணம் ப்ரஹ்ம\

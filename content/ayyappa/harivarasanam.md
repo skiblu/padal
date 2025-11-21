@@ -7,7 +7,7 @@ title: Harivarasanam
 topics: Ayyappa, Harivarasanam, ஹரிவ, ராஸனம்
 ---
 
-## Lyrics
+
 
 ஹரிவ ராஸனம் விஸ்வ மோஹனம்\
 ஹரிததீஸ்வரம் ஆ ராத்ய பாதுகம்\

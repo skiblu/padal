@@ -5,7 +5,7 @@ title: Ellorum Sernthu Sollungo
 topics: Ayyappa, Ellorum, Sernthu, Sollungo
 ---
 
-## Lyrics
+
 சுவாமியே .. `சரணம் ஐய்யப்போ`
 
 `எல்லோரும் சேர்ந்து சொல்லுங்கோ...[2]`\

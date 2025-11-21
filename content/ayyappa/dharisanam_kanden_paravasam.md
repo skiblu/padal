@@ -6,7 +6,7 @@ title: Dharisanam Kanden Paravasam
 topics: Ayyappa, Dharisanam, Kanden, Paravasam, தரிசனம், கண்டேன், பரவசம்
 ---
 
-## Lyrics
+
 
 தரிசனம் கண்டேன் பரவசம் கொண்டேன்
 
