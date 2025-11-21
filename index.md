@@ -4,7 +4,7 @@ layout: main-layout
 history: false
 ---
 
-Bhakti Padal is your complete online destination for **Tamil devotional songs, bhajans, slokas, lyrics, meanings, and worship resources**. Here you can immerse yourself in the **divine world of Tamil spirituality**, learn devotional history, sing along with lyrics, and experience powerful devotional audio.
+Bhakti Padal is your complete online destination for **Tamil devotional songs, bhajans, slokas, lyrics, and worship resources**. Here you can immerse yourself in the **divine world of Tamil spirituality**, learn devotional history, sing along with lyrics, and experience powerful devotional audio.
 
 தமிழில் பக்தி பாடல்கள், தேவார பாடல்கள், திருப்புகழ், அஷ்டகங்கள், கீர்த்தனைகள், ஸ்லோகம், பாடல் அர்த்தம் போன்றவற்றை தேடுபவர்களுக்கு இந்த வலைதளம் ஒரு முழுமையான ஆன்லைன் பக்தி நூலகம்.
 
