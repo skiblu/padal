@@ -21,15 +21,13 @@ layout: sidebar
     <div style="flex:0 0 72px;">
       {%- assign img_key = page.parent_id | default: page.section -%}
       <!-- larger circle to make icon more prominent -->
-      <div class="{% if img_key %}bg-light text-dark border{% else %}bg-primary text-white{% endif %} rounded-circle d-flex align-items-center justify-content-center" style="width:72px;height:72px;overflow:hidden;">
+      <!-- keep rounded circle and alignment always; only add bg/border when img_key exists -->
+      <div class="rounded-circle d-flex align-items-center justify-content-center {% if img_key %}bg-light text-dark border{% endif %}" style="width:72px;height:72px;overflow:hidden;">
         {% if img_key %}
-          <!-- show image when parent_id or section is present (light/grey background) -->
           <img src="/images/{{ img_key }}.png" alt="{{ img_key }}" width="48" height="48" style="display:block;object-fit:contain;" />
         {% else %}
-          <!-- default music icon (blue background), scaled up -->
-          <svg width="36" height="36" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style="transform: translateY(2px);">
-            <path d="M9 1v8.178A3 3 0 1 0 10 12V4h3V1H9z"/>
-          </svg>
+          <!-- default without colored background -->
+          <img src="/images/logo.png" alt="logo" width="48" height="48" style="display:block;object-fit:contain;" />
         {% endif %}
       </div>
     </div>
