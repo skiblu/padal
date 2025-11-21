@@ -52,13 +52,3 @@
     background: #cc0000;
     color: #fff;
 }
-
-
-/* smaller, tighter topic badges */
-.topic-badge {
-    font-size: 0.65rem;
-    padding: 0.18rem 0.4rem;
-    border-width: 1px;
-    border-radius: 0.35rem;
-    line-height: 1;
-}

@@ -5,15 +5,16 @@ layout: sidebar
 <div class="d-flex justify-content-between align-items-start mb-3">
   <div class="d-flex align-items-start gap-3">
     <!-- Icon column -->
-    <div style="flex:0 0 56px;">
+    <div style="flex:0 0 72px;">
       {%- assign img_key = page.parent_id | default: page.section -%}
-      <div class="{% if img_key %}bg-light text-dark border{% else %}bg-primary text-white{% endif %} rounded-circle d-flex align-items-center justify-content-center" style="width:56px;height:56px;overflow:hidden;">
+      <!-- larger circle to make icon more prominent -->
+      <div class="{% if img_key %}bg-light text-dark border{% else %}bg-primary text-white{% endif %} rounded-circle d-flex align-items-center justify-content-center" style="width:72px;height:72px;overflow:hidden;">
         {% if img_key %}
           <!-- show image when parent_id or section is present (light/grey background) -->
-          <img src="/images/{{ img_key }}.png" alt="{{ img_key }}" width="36" height="36" style="display:block;object-fit:contain;" />
+          <img src="/images/{{ img_key }}.png" alt="{{ img_key }}" width="48" height="48" style="display:block;object-fit:contain;" />
         {% else %}
-          <!-- default music icon (blue background) -->
-          <svg width="28" height="28" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <!-- default music icon (blue background), scaled up -->
+          <svg width="36" height="36" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" style="transform: translateY(2px);">
             <path d="M9 1v8.178A3 3 0 1 0 10 12V4h3V1H9z"/>
           </svg>
         {% endif %}
