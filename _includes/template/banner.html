@@ -48,21 +48,39 @@
 </script>
 
 <!-- toast-like popup (hidden by default) used by pusher-configure.js -->
-<div id="notif-popup" class="card shadow-sm" role="status" aria-live="polite" style="position:fixed;right:1rem;top:4.5rem;z-index:1080;display:none;min-width:220px;max-width:320px;">
-  <div class="card-body p-2 d-flex align-items-start">
-    <div id="notif-msg" class="me-2" style="flex:1;font-size:0.95rem;color:#111;"></div>
-    <button type="button" class="btn-close" aria-label="Close" id="notif-close" style="margin-left:6px;"></button>
+<div id="notif-popup" class="card shadow-sm" role="status" aria-live="polite" style="position:fixed;right:1rem;top:4.5rem;z-index:1080;display:none;min-width:260px;max-width:360px;">
+  <div class="card-body p-2 d-flex flex-column">
+    <!-- container where JS injects transient notification or history list -->
+    <div id="notif-body" style="flex:1;"></div>
+    <div class="d-flex justify-content-end mt-2">
+      <button type="button" class="btn btn-sm btn-outline-secondary me-2" id="notif-clear-history" title="Clear history">Clear</button>
+      <button type="button" class="btn-close" aria-label="Close" id="notif-close"></button>
+    </div>
   </div>
 </div>
 
-<!-- configure pusher via a small inline config; actual logic is in /assets/js/pusher-configure.js -->
 <script>
+  // keep existing config injection here
   window.PUSHER_CONFIG = {
     key: "{{ site.pusher.key | default: '' }}",
     cluster: "{{ site.pusher.cluster | default: 'mt1' }}",
     channel: "{{ site.pusher.channel | default: '' }}",
     event: "{{ site.pusher.event | default: '' }}",
-    popupTimeout: 5000
+    popupTimeout: 5000,
+    debug: false
   };
 </script>
 <script src="{{ '/assets/js/pusher-configure.js' | relative_url }}"></script>
+
+<script>
+  // small handler for clear history button (delegated so it doesn't need to be in the JS file)
+  document.addEventListener('DOMContentLoaded', function () {
+    var clearBtn = document.getElementById('notif-clear-history');
+    if (!clearBtn) return;
+    clearBtn.addEventListener('click', function (e) {
+      try { localStorage.removeItem('padal_notifications_v1'); } catch (err) {}
+      var body = document.getElementById('notif-body');
+      if (body) body.innerHTML = '<div class="small text-muted">No notifications</div>';
+    });
+  });
+</script>
