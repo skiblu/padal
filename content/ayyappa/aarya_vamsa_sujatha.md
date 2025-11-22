@@ -7,8 +7,6 @@ title: Aarya Vamsa Sujatha
 topics: Ayyappa, Aarya, Vamsa, Sujatha
 ---
 
-
-
 Aaryavamsha Sujata Namo Namo\
 Veeryadivya Vilasa Namo Namo\
 Shaashvataashrita Deva Namo Namo.. Bahukoti
@@ -44,3 +42,5 @@ Aarti Naashana Moortey Namo Namo.. Divyaroopa
 Deepa Mangala Jyoti Namo Namo\
 Tooya Ambala Leela Namo Namo\
 Deva Kunjari Paada Namo Namo.. Arul Taaraai
+
+`சுவாமியே... சரணம் ஐயப்பா!`
