@@ -58,10 +58,10 @@
 <!-- configure pusher via a small inline config; actual logic is in /assets/js/pusher-configure.js -->
 <script>
   window.PUSHER_CONFIG = {
-    key: "{{ site.pusher_key | default: '' }}",
-    cluster: "{{ site.pusher_cluster | default: 'mt1' }}",
-    channel: "{{ site.pusher_channel | default: '' }}",
-    event: "{{ site.pusher_event | default: '' }}",
+    key: "{{ site.pusher.key | default: '' }}",
+    cluster: "{{ site.pusher.cluster | default: 'mt1' }}",
+    channel: "{{ site.pusher.channel | default: '' }}",
+    event: "{{ site.pusher.event | default: '' }}",
     popupTimeout: 5000
   };
 </script>

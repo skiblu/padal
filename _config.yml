@@ -102,8 +102,8 @@ gems:
 markdown: kramdown
 
 # Pusher Notifications
-site:
-  pusher_key: "1b04895e7de3790dc330"
-  pusher_cluster: "mt1"
-  pusher_channel: "padal-notification"
-  pusher_event: "pooja"
+pusher:
+  key: "1b04895e7de3790dc330"
+  cluster: "mt1"
+  channel: "padal-notification"
+  event: "pooja"
