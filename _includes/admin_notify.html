@@ -75,13 +75,13 @@ Usage: {% include admin-notify.html %}
         }
 
         const payload = {
-            name: "my-event",
-            channel: "my-channel",
+            name: "padal-notification",
+            channel: "pooja",
             data: JSON.stringify({ title, message })
         };
 
         // Placeholder: replace URL with your server endpoint or Pusher API if you handle signature
-        const url = `https://api-mt1.pusher.com/apps/YOUR_APP_ID/events?auth_key=${userKey}&auth_signature=${passKey}&auth_version=1.0&auth_timestamp=${Math.floor(Date.now()/1000)}`;
+        const url = `https://api-mt1.pusher.com/apps/2081560/events?auth_key=${userKey}&auth_signature=${passKey}&auth_version=1.0&auth_timestamp=${Math.floor(Date.now()/1000)}`;
 
         try {
             const res = await fetch(url, {
