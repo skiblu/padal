@@ -58,7 +58,7 @@
     var closeBtn = document.getElementById('notif-close');
     var btn = document.getElementById('notif-btn');
     var hideTimer = null;
-    var timeout = (cfg && cfg.popupTimeout) || 5000;
+    var timeout = (cfg && cfg.popupTimeout) || 10000;
     // resolve sensible defaults if config contains empty strings
     var eventName = (cfg && cfg.event) ? cfg.event : 'pooja';
     var channelName = (cfg && cfg.channel) ? cfg.channel : 'padal-notification';
