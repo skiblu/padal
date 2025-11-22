@@ -86,19 +86,13 @@
       count++;
       if (countEl) { countEl.textContent = count; countEl.style.display = 'inline-block'; }
 
-      // build visually pleasing content
-      var timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-      var titleHtml = title ? '<div class="notif-title">' + escapeHtml(title) + '</div>' : '';
-      var messageHtml = (message || link) ? '<div class="notif-message">' + linkify(message || '', link) + '</div>' : '';
-      var timeHtml = '<div class="notif-time">' + escapeHtml(timeStr) + '</div>';
-
-      var html = '<div class="notif-row">' +
-                   '<div class="notif-dot" aria-hidden="true"></div>' +
-                   '<div class="flex-grow-1">' + titleHtml + messageHtml + timeHtml + '</div>' +
-                 '</div>';
-
+      // build content: title bold + message (linkified)
+      var html = '';
+      if (title) html += '<div style="font-weight:600;margin-bottom:4px;">' + escapeHtml(title) + '</div>';
+      if (message || link) html += '<div>' + linkify(message || '', link) + '</div>';
       if (popupBody) {
         popupBody.innerHTML = html;
+        // show popup
         if (popup) popup.style.display = 'block';
         if (hideTimer) clearTimeout(hideTimer);
         hideTimer = setTimeout(function () { if (popup) popup.style.display = 'none'; }, timeout);
@@ -107,16 +101,16 @@
       // push to history (timestamp) - respect HISTORY_LIMIT when saving
       pushHistory({ title: title || '', message: message || '', link: link || '', ts: Date.now() });
 
-      // Browser Notification API (title + message)
+      // Browser Notification API
       try {
         if ("Notification" in window) {
-          var notifyTitle = title || 'Bhakti Padal';
-          var notifyOptions = { body: message || '', data: { url: link || null } };
           if (Notification.permission === "granted") {
-            new Notification(notifyTitle, notifyOptions);
+            new Notification(title || 'Bhakti Padal', { body: message || '', data: { url: link || null } });
           } else if (Notification.permission !== "denied") {
             Notification.requestPermission().then(function (perm) {
-              if (perm === "granted") new Notification(notifyTitle, notifyOptions);
+              if (perm === "granted") {
+                new Notification(title || 'Bhakti Padal', { body: message || '', data: { url: link || null } });
+              }
             });
           }
         }
@@ -126,28 +120,26 @@
     }
 
     function renderHistory() {
-      var list = loadHistory().slice(0, HISTORY_LIMIT); // most recent first
+      var list = loadHistory().slice(0, HISTORY_LIMIT); // most recent first already
       if (!popupBody || !popup) return;
       if (!list.length) {
-        popupBody.innerHTML = '<div class="notif-empty">No notifications</div>';
+        popupBody.innerHTML = '<div class="small text-muted">No notifications</div>';
       } else {
-        var html = '<div class="notif-scroll">';
+        var html = '<div style="max-height:320px;overflow:auto;padding-right:4px;">';
         list.forEach(function (it, idx) {
-          var time = new Date(it.ts || Date.now());
-          var timeStr = time.toLocaleString([], { hour: '2-digit', minute: '2-digit', day: 'numeric', month: 'short' });
-          var titleHtml = it.title ? '<div class="notif-history-title">' + escapeHtml(it.title) + '</div>' : '';
-          var msgHtml = it.message ? '<div class="notif-history-msg">' + linkify(it.message, it.link) + '</div>' : (it.link ? '<div class="notif-history-msg"><a href="' + it.link + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(it.link) + '</a></div>' : '');
-          html += '<div class="notif-history-item" data-idx="' + idx + '">' +
-                    '<div class="notif-dot" aria-hidden="true"></div>' +
-                    '<div style="flex:1;">' + titleHtml + msgHtml +
-                    '<div class="notif-time" style="margin-top:6px;">' + escapeHtml(timeStr) + '</div>' +
-                  '</div></div>';
+          var time = new Date(it.ts || Date.now()).toLocaleString();
+          var titleHtml = it.title ? '<div style="font-weight:600;">' + escapeHtml(it.title) + '</div>' : '';
+          var msgHtml = it.message ? '<div class="small text-muted">' + linkify(it.message, it.link) + '</div>' : (it.link ? '<div class="small text-muted"><a href="' + it.link + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(it.link) + '</a></div>' : '');
+          html += '<div class="notif-item" data-idx="' + idx + '" style="padding:.5rem .5rem;border-bottom:1px solid rgba(0,0,0,0.05);cursor:pointer;">' +
+                  titleHtml + msgHtml +
+                  '<div class="tiny text-muted" style="font-size:.7rem;margin-top:4px;">' + escapeHtml(time) + '</div>' +
+                  '</div>';
         });
         html += '</div>';
         popupBody.innerHTML = html;
 
-        // attach click handlers for each .notif-history-item (open link if available)
-        var items = popupBody.querySelectorAll('.notif-history-item');
+        // attach click handlers for each .notif-item (open link if available)
+        var items = popupBody.querySelectorAll('.notif-item');
         items.forEach(function (el) {
           el.addEventListener('click', function () {
             var idx = parseInt(el.getAttribute('data-idx'), 10);
