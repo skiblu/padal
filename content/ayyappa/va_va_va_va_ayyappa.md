@@ -1,8 +1,8 @@
 ---
-section: songs
-nav_order: 50
-title: "வா வா ஐயப்பா"
-topics: Ayyappa, Devotional, தமிழ் பாடல்கள், va va va va ayyappa, வா வா வா வா ஐயப்பா
+section: Ayyappa
+nav_order: 40
+title: Vava Vava Ayyappa
+topics: Ayyappa, Devotional, தமிழ் பாடல்கள், va va va va ayyappa, வா வா வா வா ஐயப்பா, vavar, தோழன்
 ---
 
 வா வா வா வா ஐயப்பா
