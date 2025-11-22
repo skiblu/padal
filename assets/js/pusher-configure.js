@@ -15,7 +15,7 @@
     return escapeHtml(text).replace(urlRegex, function (url) {
       var href = url;
       if (!/^https?:\/\//i.test(href)) href = 'http://' + href;
-      return '<a href="' + href + '" target="_blank" rel="noopener noreferrer">' + url + '</a>';
+      return '<a href="' + href + '" rel="noopener noreferrer">' + url + '</a>';
     });
   }
 
