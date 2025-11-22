@@ -13,6 +13,35 @@
                 </li>
             {% endif %}{% endfor %}
             </ul>  
+
+            <!-- Notification bell + popup -->
+            <div class="d-flex align-items-center ms-3">
+              <button id="notif-btn" class="btn btn-link position-relative p-2" type="button" aria-label="Notifications" title="Notifications">
+                <img src="/assets/bootstrap-icons/bell.svg" width="20" height="20" alt="Notifications" />
+                <span id="notif-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.65rem;display:none;min-width:18px;height:18px;line-height:16px;padding:0 4px;">0</span>
+              </button>
+            </div>
+
         </div>
     </div>
 </nav>
+
+<!-- toast-like popup (hidden by default) -->
+<div id="notif-popup" class="card shadow-sm" role="status" aria-live="polite" style="position:fixed;right:1rem;top:4.5rem;z-index:1080;display:none;min-width:220px;max-width:320px;">
+  <div class="card-body p-2 d-flex align-items-start">
+    <div id="notif-msg" class="me-2" style="flex:1;font-size:0.95rem;color:#111;"></div>
+    <button type="button" class="btn-close" aria-label="Close" id="notif-close" style="margin-left:6px;"></button>
+  </div>
+</div>
+
+<!-- configure pusher via a small inline config; actual logic moved to external file -->
+<script>
+  window.PUSHER_CONFIG = {
+    key: "{{ site.pusher_key | default: '' }}",
+    cluster: "{{ site.pusher_cluster | default: 'mt1' }}",
+    channel: "notifications",
+    event: "new-notification",
+    popupTimeout: 5000
+  };
+</script>
+<script src="{{ '/assets/js/pusher-configure.js' | relative_url }}"></script>
