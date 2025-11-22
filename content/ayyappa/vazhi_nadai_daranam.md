@@ -6,7 +6,7 @@ topics: Vazhi, Nadai, Saranam, Ayyappa
 ---
 
 | **Tamil Version** | **English Version** |
-|------------------|---------------------|
+|----------------|---------------------|
 | சுவாமியே | Swamiye |
 | அய்யப்போ | Ayyappo |
 | சுவாமி சரணம் | Swami Saranam |
@@ -46,12 +46,21 @@ topics: Vazhi, Nadai, Saranam, Ayyappa
 | தேவி பாதம் | Devi Paadham |
 | ஈஸ்வரன் பாதம் | Eswaran Paadham |
 | ஈஸ்வரி பாதம் | Eswari Paadham |
+ | பகவான் பாதம் | Bagawan Paadham |
+| பகவதி பாதம் | Bagawati Paadham |
+| சங்கரன் பாதம் | Sankaran Paadham |
+| சங்கரி பாதம் | Sankari Paadham |
+| வில்லாளி வீரனே | Villali Veerane |
+| வீர மணிகண்டனே | Veera Manikandane |
+| பூலோக நாதனே | Bhooloka Naathane |
+| பூமி பிரபஞ்சனே | Bhoomi Prabhanjane |
+| சத்குரு நாதா | Sadguru Naatha |
+| குருவின் குருவா | Guruvin Guruva |
+| குரு மகாராஜா | Guru Maharaja |
+| கலியுக வரதா | Kaliyuga Varada |
+| காணன வாசா | Kaanana Vaasa |
+| கண்ணைக் கண்ட தேவமே | Kann Kanda Deivame |
 | **சுவாமி திந்தக்க தோம் தோம்** | **Swami Thintakka Thom Thom** |
 | **அய்யப்ப திந்தக்க தோம் தோம்** | **Ayyappa Thintakka Thom Thom** |
 
 `Swamiyae.. Saranam Ayyapa !`
-
-
-
-
-
