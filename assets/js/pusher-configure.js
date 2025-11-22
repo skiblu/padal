@@ -40,6 +40,22 @@
     } catch (e) { /* ignore */ }
   }
 
+  // Add: remove items older than `hours` (keeps most recent first order)
+  function pruneOldHours(hours) {
+    try {
+      var cutoff = Date.now() - (hours * 60 * 60 * 1000);
+      var list = loadHistory();
+      var filtered = list.filter(function (it) {
+        return (it && it.ts && (it.ts >= cutoff));
+      });
+      if (filtered.length !== list.length) {
+        saveHistory(filtered);
+      }
+    } catch (e) {
+      /* ignore pruning errors */
+    }
+  }
+
   function pushHistory(item) {
     var list = loadHistory();
     list.unshift(item);
@@ -54,10 +70,12 @@
     var countEl = document.getElementById('notif-count');
     var popup = document.getElementById('notif-popup');
     var popupBody = document.getElementById('notif-body'); // content container
-    var historyListEl = document.getElementById('notif-history');
     var closeBtn = document.getElementById('notif-close');
     var btn = document.getElementById('notif-btn');
     var hideTimer = null;
+    // allow overriding history limit via config, fallback to MAX_HISTORY
+    var HISTORY_LIMIT = (cfg && cfg.historyLimit) ? parseInt(cfg.historyLimit, 10) : MAX_HISTORY;
+    // honor popup timeout
     var timeout = (cfg && cfg.popupTimeout) || 10000;
     // resolve sensible defaults if config contains empty strings
     var eventName = (cfg && cfg.event) ? cfg.event : 'pooja';
@@ -80,7 +98,7 @@
         hideTimer = setTimeout(function () { if (popup) popup.style.display = 'none'; }, timeout);
       }
 
-      // push to history (timestamp)
+      // push to history (timestamp) - respect HISTORY_LIMIT when saving
       pushHistory({ title: title || '', message: message || '', link: link || '', ts: Date.now() });
 
       // Browser Notification API
@@ -102,8 +120,8 @@
     }
 
     function renderHistory() {
-      var list = loadHistory();
-      if (!historyListEl || !popupBody || !popup) return;
+      var list = loadHistory().slice(0, HISTORY_LIMIT); // most recent first already
+      if (!popupBody || !popup) return;
       if (!list.length) {
         popupBody.innerHTML = '<div class="small text-muted">No notifications</div>';
       } else {
@@ -125,8 +143,8 @@
         items.forEach(function (el) {
           el.addEventListener('click', function () {
             var idx = parseInt(el.getAttribute('data-idx'), 10);
-            var list = loadHistory();
-            var item = list[idx];
+            var listNow = loadHistory().slice(0, HISTORY_LIMIT);
+            var item = listNow[idx];
             if (item && item.link) {
               window.open(item.link, '_blank');
             }
@@ -164,11 +182,19 @@
     if (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
+        // toggle popup visibility
+        if (popup && popup.style.display && popup.style.display !== 'none') {
+          popup.style.display = 'none';
+          return;
+        }
+        // PRUNE: remove notifications older than 3 hours before showing history
+        pruneOldHours(3);
+
         // show history when user clicks bell
         renderHistory();
         // clear unread count
         count = 0;
-        if (countEl) countEl.style.display = 'none';
+        if (countEl) { countEl.style.display = 'none'; countEl.textContent = '0'; }
       });
     }
 
@@ -207,9 +233,9 @@
           showTransient(title, message, link);
         });
 
-        console.info('Pusher subscribed to channel:', channelName, 'event:', eventName);
+        console.info('Subscribed to channel:', channelName, 'event:', eventName);
       } else {
-        console.warn('Pusher library not found.');
+        console.warn('Notification library not found.');
       }
     } catch (e) {
       console.error('Notification init error', e);
