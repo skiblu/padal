@@ -1,8 +1,8 @@
 ---
 section: Shivan
 nav_order: 3
-title:  NamaShivaya Om 
-topics: Shivan, Tamil, padal, Lyrics, Song, Nama Shivaya, Nama Shivaya, நம சிவாய நம சிவாய, நமசிவாய நமசிவாய, om, ஓம்
+title:  Hara Hara Bole Nama Shivaya
+topics: Shivan, Tamil, padal, Lyrics, Song, Nama Shivaya, Nama Shivaya, நம சிவாய நம சிவாய, நமசிவாய நமசிவாய, om, ஓம், Hara Hara Bole, ஹர ஹர போலே
 ---
 
 `நமசிவாய ஓம் நமசிவாய ஹர ஹர போலே நமசிவாய`
