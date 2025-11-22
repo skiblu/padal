@@ -101,7 +101,7 @@ gems:
 # Build settings
 markdown: kramdown
 
-# Notifications
+# Pusher Notifications
 site:
   pusher_key: "1b04895e7de3790dc330"
   pusher_cluster: "mt1"
