@@ -39,8 +39,8 @@
   window.PUSHER_CONFIG = {
     key: "{{ site.pusher_key | default: '' }}",
     cluster: "{{ site.pusher_cluster | default: 'mt1' }}",
-    channel: "notifications",
-    event: "new-notification",
+    channel: "{{ site.pusher_channel | default: '' }}",
+    event: "{{ site.pusher_event | default: '' }}",
     popupTimeout: 5000
   };
 </script>
