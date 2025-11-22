@@ -78,8 +78,15 @@
     // honor popup timeout
     var timeout = (cfg && cfg.popupTimeout) || 10000;
     // resolve sensible defaults if config contains empty strings
-    var eventName = (cfg && cfg.event) ? cfg.event : 'pooja';
-    var channelName = (cfg && cfg.channel) ? cfg.channel : 'padal-notification';
+    function defaultEventName() {
+      var now = new Date();
+      var months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+      var mon = months[now.getMonth()] || 'EVT';
+      var day = String(now.getDate()).padStart(2, '0');
+      return mon + day;
+    }
+    var eventName = (cfg && typeof cfg.event === 'string' && cfg.event.trim()) ? cfg.event.trim() : defaultEventName();
+    var channelName = (cfg && cfg.channel) ? cfg.channel;
 
     function showTransient(title, message, link) {
       // increment counter and show counter badge

@@ -106,4 +106,4 @@ pusher:
   key: "1b04895e7de3790dc330"
   cluster: "mt1"
   channel: "padal-notification"
-  event: "pooja"
+  event: ""
