@@ -86,7 +86,7 @@
       return mon + day;
     }
     var eventName = (cfg && typeof cfg.event === 'string' && cfg.event.trim()) ? cfg.event.trim() : defaultEventName();
-    var channelName = (cfg && cfg.channel) ? cfg.channel;
+    var channelName = (cfg && cfg.channel) ? cfg.channel : 'default-channel';
 
     function showTransient(title, message, link) {
       // increment counter and show counter badge
