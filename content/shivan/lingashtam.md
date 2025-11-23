@@ -2,7 +2,7 @@
 section: Shivan
 nav_order: 50
 title: Nataraja Nataraja
-topics: Shivan, Nama, Shivaya, Nataraja, Nataraja, Tamil, Devotional, நடராஜா, நர்த்தன சுந்தர, சிவராஜா
+topics: Shivan, Nama, Shivaya
 ---
 நடராஜா நடராஜா\
 நர்த்தன சுந்தர நடராஜா\
