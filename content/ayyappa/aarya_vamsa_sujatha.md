@@ -7,40 +7,40 @@ title: Aarya Vamsa Sujatha
 topics: Ayyappa, Aarya, Vamsa, Sujatha
 ---
 
-Aaryavamsha Sujata Namo Namo\
-Veeryadivya Vilasa Namo Namo\
-Shaashvataashrita Deva Namo Namo.. Bahukoti
+ஆர்ய வம்ச சுஜதா நமோ நமோ\
+வீர்யாதிவ்ய விளாசா நமோ நமோ\
+சாஷ்வதாஷ்ரித தேவா நமோ நமோ.. பகுகோடி
 
-Bhootavandita Deva Namo Namo\
-Bheeti Naashanaroopa Namo Namo\
-Mohanaambuja Paada Namo Namo.. Manikantha
+பூத வந்திதா தேவா நமோ நமோ\
+பீதி நாஷனாரூபா நமோ நமோ\
+மோகனாம்புஜ பாதா நமோ நமோ.. மாணிகந்த
 
-Raajasevaka Veera Namo Namo\
-Vaaji Vaarana Vaha Namo Namo\
-Geeta Nrtya Vinoda Namo Namo.. Veeraadiveera
+ராஜசேவக வீரா நமோ நமோ\
+வாஜி வாரண வாஹா நமோ நமோ\
+கீதா ந்ரத்ய வினோடா நமோ நமோ.. வீராதி வீரா
 
-Ghora Paapa Vinaasha Namo Namo\
-Haara Noopura Dhaari Namo Namo\
-Jyotishaarchita Peetha Namo Namo.. Jayasheela
+கோஹர பாப வினாஷா நமோ நமோ\
+ஹாரா நூபுர தாரி நமோ நமோ\
+ஜ்யோதிஷார்சித பீதா நமோ நமோ.. ஜெயசீல
 
-Dhaanya Mangala Roopa Namo Namo\
-Kaanaantara Vaasa Namo Namo\
-Vaasavaarshrita Devaa Namo Namo.. Nrupadaasa
+தான்ய மங்கள ரூபா நமோ நமோ\
+காநாந்தர வாஸா நமோ நமோ\
+வாஸவார்ஷ்ரித தேவா நமோ நமோ.. ந்ருபதாச
 
-Kaanta Shringa Nivaasa Namo Namo\
-Shaanti Daayaka Deva Namo Namo\
-Deva Vandya Gireesha Namo Namo.. Paradeva
+காந்த ஸ்ரிங்க நிவாசா நமோ நமோ\
+ஷாந்தி தாயகா தேவா நமோ நமோ\
+தேவ வந்ந்ய கீரீஷா நமோ நமோ.. பரதேவா
 
-Moola Mantra Swaroopa Namo Namo\
-Baala Vigraha Moola Namo Namo\
-Putradaayaka Deva Namo Namo.. Varabaala
+மூல மந்திர ஸ்வரூபா நமோ நமோ\
+பால விக்ரஹா மூலா நமோ நமோ\
+புத்ரதாயகா தேவா நமோ நமோ.. வரபாலா
 
-Eesha Keshava Soono Namo Namo\
-Paasha Janma Vinaasha Namo Namo\
-Aarti Naashana Moortey Namo Namo.. Divyaroopa
+ஈஷ கேசவ சூனா நமோ நமோ\
+பாச ஜன்ம வினாஷா நமோ நமோ\
+ஆர்தி நாஸன மூர்தி நமோ நமோ.. திவ்ய ரூபா
 
-Deepa Mangala Jyoti Namo Namo\
-Tooya Ambala Leela Namo Namo\
-Deva Kunjari Paada Namo Namo.. Arul Taaraai
+தீப மங்கள ஜ்யோதி நமோ நமோ\
+தூய அம்பல லீலா நமோ நமோ\
+தேவ குஞ்சரி பாதா நமோ நமோ.. அருள் தாராயி
 
 `சுவாமியே... சரணம் ஐயப்பா!`
