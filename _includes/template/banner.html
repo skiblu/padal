@@ -14,9 +14,7 @@
                 {{ site.title }}
             </a>
             <form class="ms-auto mb-3 mb-lg-0" role="search" id="search" onsubmit="site_search(); return false;">
-                <div class="d-flex align-items-center">
-                  <input id="site-search" class="form-control site-search-input" type="search" placeholder="Search" aria-label="Search box">
-                </div>
+                <input id="site-search" class="form-control" type="search" placeholder="Search" aria-label="Search box">
             </form>
         </div>
     </nav>
@@ -27,13 +25,3 @@
     window.open("{{ '/search/index.html' | relative_url }}?q=" + encodeURIComponent(query), "_self" );
     }
 </script>
-
-<!-- toast-like popup (hidden by default) used by notify-configure.js -->
-<div id="notif-popup" class="card shadow-sm" role="status" aria-live="polite" style="position:fixed;right:1rem;top:4.5rem;z-index:1080;display:none;min-width:260px;max-width:360px;">
-  <div class="card-body p-2 d-flex flex-column">
-    <!-- moved the close button to top-right so it takes less vertical space -->
-    <button type="button" class="btn-close" aria-label="Close" id="notif-close" style="display:inline-block;"></button>
-    <!-- container where JS injects transient notification or history list -->
-    <div id="notif-body" style="flex:1;"></div>
-  </div>
-</div>

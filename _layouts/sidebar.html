@@ -43,6 +43,17 @@ layout: default
 
   </div>
 </div>
+
+<!-- toast-like popup (hidden by default) used by notify-configure.js -->
+<div id="notif-popup" class="card shadow-sm" role="status" aria-live="polite" style="position:fixed;right:1rem;top:4.5rem;z-index:1080;display:none;min-width:260px;max-width:360px;">
+  <div class="card-body p-2 d-flex flex-column">
+    <!-- moved the close button to top-right so it takes less vertical space -->
+    <button type="button" class="btn-close" aria-label="Close" id="notif-close" style="display:inline-block;"></button>
+    <!-- container where JS injects transient notification or history list -->
+    <div id="notif-body" style="flex:1;"></div>
+  </div>
+</div>
+
 <!-- notification scripts and styles -->
 <script src="{{ '/assets/js/notify-configure.js' | relative_url }}"></script>
 <link rel="stylesheet" href="{{ '/assets/css/notify.css' | relative_url }}">

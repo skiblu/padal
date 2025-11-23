@@ -52,3 +52,12 @@
     background: #cc0000;
     color: #fff;
 }
+
+
+/* Keep search/input sizing rules intact */
+.title-icon-img {
+  height: 1em;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
