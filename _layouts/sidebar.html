@@ -26,8 +26,27 @@ layout: default
         </li>
       </ol>
     </nav>
+
+    <!-- Right-side: notification bell (moved from banner) -->
+    <div class="ms-auto">
+      <a id="notif-btn" class="btn btn-link position-relative p-2" href="#" role="button" aria-label="Notifications" title="Notifications" onclick="event.preventDefault();" style="color:inherit;"
+         data-ably-key="{{ site.notify.key | default: '' }}"
+         data-ably-channel="{{ site.notify.channel | default: 'padal-notification' }}"
+         data-ably-event="{{ site.notify.event | default: '' }}"
+         data-popup-timeout="{{ site.notify_popup_timeout | default: 5000 }}"
+         data-debug="{{ site.notify_debug | default: false | jsonify }}"
+         data-history-limit="{{ site.notify_history_limit | default: 10 }}">
+        <img id="notif-bell-img" src="{{ '/assets/bootstrap-icons/bell.svg' | relative_url }}" width="20" height="20" alt="Notifications" style="vertical-align:middle;" />
+        <span id="notif-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.65rem;display:none;min-width:18px;height:18px;line-height:16px;padding:0 4px;">0</span>
+      </a>
+    </div>
+
   </div>
 </div>
+<!-- notification scripts and styles -->
+<script src="{{ '/assets/js/notify-configure.js' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/assets/css/notify.css' | relative_url }}">
+
 
 <div class="container-xxl" id="wrapper">
   <!-- Sidebar-->
