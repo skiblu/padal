@@ -103,7 +103,7 @@
     }
 
     // Ably-only
-    var channelName = (cfg && typeof cfg.ablyChannel === 'string' && cfg.ablyChannel.trim()) ? cfg.ablyChannel.trim() : 'padal-notification';
+    var channelName = (cfg && typeof cfg.ablyChannel === 'string' && cfg.ablyChannel.trim()) ? cfg.ablyChannel.trim() : '';
     var eventName = (cfg && typeof cfg.ablyEvent === 'string' && cfg.ablyEvent.trim()) ? cfg.ablyEvent.trim() : defaultEventName();
 
     function showTransient(title, message, link) {
@@ -258,7 +258,7 @@
           }
           showTransient(title, messageText, link);
         });
-        console.info('Subscribed (Ably) to channel:', channelName, 'event:', eventName);
+        });
       } catch (e) {
         console.error('Ably initialization failed', e);
       }

@@ -1,15 +1,14 @@
 {%- comment -%}
 Notification Publisher (Ably REST)
-Usage: include on an notify page. NOTE: publishing from browser exposes the API key to client; use cautiously.
 {%- endcomment -%}
 
 <div class="push-notify-wrapper">
     <h3>Notify</h3>
 
-    <!-- API key and channel/event inputs -->
-    <input type="text" id="notify-apikey" placeholder="API Key (e.g. xxxx:yyyy)" />
-    <input type="text" id="notify-channel" placeholder="Channel (default: padal-notification)" value="padal-notification" />
-    <input type="text" id="notify-event" placeholder="Event name (default: NOV22)" />
+    <!-- Notify key and channel/event inputs -->
+    <input type="text" id="notify-key" placeholder="Notify Key (e.g. xxxx:yyyy)" />
+    <input type="text" id="notify-channel" placeholder="Channel " value="" />
+    <input type="text" id="notify-event" placeholder="Event name" />
 
     <input type="text" id="notify-title" placeholder="Title" />
     <textarea id="notify-message" placeholder="Message"></textarea>
@@ -60,15 +59,15 @@ document.getElementById("notify-send").addEventListener("click", async function 
     statusEl.style.color = 'black';
     statusEl.textContent = 'Publishing...';
 
-    var apiKey = document.getElementById("notify-apikey").value.trim();
+    var notifyKey = document.getElementById("notify-key").value.trim();
     var channel = document.getElementById("notify-channel").value.trim() || 'padal-notification';
     var eventName = document.getElementById("notify-event").value.trim() || '';
     var title = document.getElementById("notify-title").value.trim();
     var message = document.getElementById("notify-message").value.trim();
 
-    if (!apiKey) {
+    if (!notifyKey) {
         statusEl.style.color = 'red';
-        statusEl.textContent = 'API Key is required.';
+        statusEl.textContent = 'Notify Key is required.';
         return;
     }
     if (!title && !message) {
@@ -101,7 +100,7 @@ document.getElementById("notify-send").addEventListener("click", async function 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=UTF-8',
-                'Authorization': 'Basic ' + btoa(apiKey)
+                'Authorization': 'Basic ' + btoa(notifyKey)
             },
             body: JSON.stringify(payload)
         });
@@ -109,7 +108,7 @@ document.getElementById("notify-send").addEventListener("click", async function 
         if (res.ok) {
             statusEl.style.color = 'green';
             statusEl.textContent = 'Published successfully.';
-            // clear fields (except apikey)
+            // clear fields (except notifyKey)
             document.getElementById("notify-title").value = '';
             document.getElementById("notify-message").value = '';
             // optionally keep channel/event
