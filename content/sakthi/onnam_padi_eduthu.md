@@ -2,7 +2,7 @@
 section: Sakthi
 nav_order: 50
 youtube_id: 8qvS-F8olaU
-title:  Onnam padi eduthu
+title: Onnam padi eduthu
 topics: Sakthi, Onnam, padi, eduthu, தன்னன்னா, நாதினம், Onnam, Padi, Eduthu, Thannanna, Dhenam, ஒன்னாம், படி, எடுத்து, தன்னன்னா, நாதினம், சித்திர, கோபுரம், கட்டவே
 ---
 
