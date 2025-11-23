@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 15
+nav_order: 19
 title: Angae Pazhanimalai Muruganukku
 topics: Murugan, Padal, Tamil, Lyrics, Song, அங்க, பழனிமலை, முருகனுக்கு
 ---
