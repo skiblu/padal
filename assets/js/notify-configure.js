@@ -102,7 +102,7 @@
       return mon + day;
     }
 
-    // Ably-only: prefer ablyChannel/ablyEvent from cfg (no pusher fallback)
+    // Ably-only
     var channelName = (cfg && typeof cfg.ablyChannel === 'string' && cfg.ablyChannel.trim()) ? cfg.ablyChannel.trim() : 'padal-notification';
     var eventName = (cfg && typeof cfg.ablyEvent === 'string' && cfg.ablyEvent.trim()) ? cfg.ablyEvent.trim() : defaultEventName();
 
@@ -224,7 +224,7 @@
       });
     }
 
-    // Ably init: read only ablyKey (no pusher fallback)
+    // Ably init
     var ablyKey = (cfg && typeof cfg.ablyKey === 'string' && cfg.ablyKey.trim()) ? cfg.ablyKey.trim() : '';
 
     if (!ablyKey) {
