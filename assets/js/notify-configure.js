@@ -181,28 +181,6 @@
       popup.style.display = 'block';
     }
 
-    // Fallback: if bell image fails or renders at 0x0, hide it and show inline SVG fallback
-    (function setupBellFallback() {
-      var img = document.getElementById('notif-bell-img');
-      var fallback = document.getElementById('notif-svg-fallback');
-      if (!img || !fallback) return;
-
-      function showFallback() {
-        try { img.style.display = 'none'; fallback.style.display = 'inline-block'; } catch (e) { /* ignore */ }
-      }
-      if (img.complete) {
-        if (typeof img.naturalWidth !== 'undefined' && img.naturalWidth === 0) showFallback();
-      } else {
-        img.addEventListener('error', showFallback);
-        img.addEventListener('load', function () {
-          if (typeof img.naturalWidth !== 'undefined' && img.naturalWidth === 0) showFallback();
-        });
-      }
-      setTimeout(function () {
-        try { var rect = img.getBoundingClientRect(); if (rect.width === 0 || rect.height === 0) showFallback(); } catch (e) { /* ignore */ }
-      }, 300);
-    })();
-
     // Common UI handlers
     if (closeBtn) closeBtn.addEventListener('click', function () { if (popup) popup.style.display = 'none'; });
     if (btn) {
