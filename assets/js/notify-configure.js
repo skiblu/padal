@@ -258,7 +258,6 @@
           }
           showTransient(title, messageText, link);
         });
-        });
       } catch (e) {
         console.error('Ably initialization failed', e);
       }

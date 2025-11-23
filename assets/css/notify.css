@@ -1,13 +1,19 @@
-/* small sizing for raster title icons */
+/* Toast-style notification visuals (scoped to #notif-popup / #notif-body) */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');
+
+#notif-popup,
+#notif-popup * {
+  box-sizing: border-box;
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Keep search/input sizing rules intact */
 .title-icon-img {
   height: 1em;
   width: auto;
   vertical-align: middle;
   display: inline-block;
 }
-
-/* Reduce search box width by 30% while keeping layout stable.
-   Use flex-basis so it behaves well next to the bell; restore a smaller reduced width on small screens (do not expand to full width). */
 .site-search-input {
   flex: 0 0 70%;
   width: 70%;
@@ -15,8 +21,6 @@
   min-width: 120px;
   transition: width 160ms ease;
 }
-
-/* On narrow viewports, keep the search reduced (60%) so the bell stays visible inline */
 @media (max-width: 576px) {
   .site-search-input {
     flex: 0 0 60%;
@@ -26,3 +30,132 @@
   }
 }
 
+/* Map toast terminology to existing markup (#notif-popup as toast container) */
+#notif-popup {
+  border-radius: 4px;
+  overflow: visible;
+  box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
+  background-color: #ffffff;
+  max-width: 520px;
+  padding: 0; /* card-body holds padding */
+  border: none;
+}
+
+/* Decorative left accent bar (yellow) */
+#notif-popup:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #FFC007;
+}
+
+/* card-body tweaks: tighter layout like toast */
+#notif-popup .card-body {
+  padding: 14px 14px 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* content container where JS injects content */
+#notif-body {
+  padding: 0;
+  min-height: 48px;
+  color: #222;
+  font-size: 0.96rem;
+  display: block;
+}
+
+/* Transient notification layout: title, message, time */
+#notif-body > div {
+  display: block;
+  padding: 6px 4px;
+}
+#notif-body .notif-title,
+#notif-body > div > div:first-child {
+  font-weight: 600;
+  color: #3e3e3e; /* darker heading */
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+#notif-body .notif-message,
+#notif-body > div > div:nth-child(2) {
+  color: #666;
+  font-size: 0.92rem;
+  line-height: 1.3;
+}
+#notif-body .notif-time,
+#notif-body > div > div:last-child {
+  color: #7a7a7a;
+  font-size: 0.78rem;
+  margin-top: 8px;
+}
+
+/* History items styling (list view) */
+#notif-body .notif-item {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
+  border: 1px solid rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: background-color 140ms ease, transform 80ms ease;
+}
+#notif-body .notif-item:hover {
+  background: rgba(255,192,7,0.06);
+  transform: translateY(-1px);
+}
+#notif-body .notif-item .tiny {
+  color: #7a7a7a;
+  font-size: 0.78rem;
+}
+#notif-body .notif-item .small {
+  color: #444;
+  font-size: 0.88rem;
+}
+
+/* Empty state */
+#notif-body .small.text-muted,
+#notif-body .notif-empty {
+  color: #6c757d;
+  padding: 10px;
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+/* Close button: subtle and aligned */
+#notif-close {
+  opacity: 0.9;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: 2px;
+  color: #6c757d;
+}
+
+/* Notification links */
+#notif-body a {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+/* Badge (count) small adjustments so it fits with new toast visuals */
+#notif-count {
+  font-size: 0.65rem;
+  display: none;
+  min-width: 18px;
+  height: 18px;
+  line-height: 16px;
+  padding: 0 4px;
+}
+
+/* Make sure popup is responsive on very small screens */
+@media (max-width: 420px) {
+  #notif-popup { right: 0.5rem; left: 0.5rem; max-width: calc(100% - 1rem); }
+  #notif-popup:before { left: 0.4rem; }
+}
