@@ -38,7 +38,7 @@ Usage: {% include toc-sections.html parent_name="my-parent-id" %}
             <tbody>
             {%- for c in children_default -%}
             <tr>
-              <td>{{ c.nav_order }}</td>
+              <td>{{ forloop.index }}</td>
               <td><a href="{{ c.url | relative_url }}" class="toc-link">{{ c.title }}</a></td>
             </tr>
             {%- endfor -%}
@@ -58,7 +58,7 @@ Usage: {% include toc-sections.html parent_name="my-parent-id" %}
             <tbody>
             {%- for c in children_atoz -%}
             <tr>
-              <td>{{ c.nav_order }}</td>
+              <td>{{ forloop.index }}</td>
               <td><a href="{{ c.url | relative_url }}" class="toc-link">{{ c.title }}</a></td>
             </tr>
             {%- endfor -%}
