@@ -1,7 +1,7 @@
 ---
 section: Shivan
 nav_order: 50
-title:  Deena Karunakarane Nataraja
+title: Deena Karunakarane Nataraja
 youtube_id: 1eXcYjEAfoc
 topics: Shivan, Nama, Shivaya, Deena, Karunakarane, Nataraja, Tamil, Devotional, தீனகருணகரணே, நட்டராஜா
 ---

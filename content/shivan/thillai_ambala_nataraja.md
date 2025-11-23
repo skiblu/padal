@@ -2,7 +2,7 @@
 section: Shivan
 nav_order: 50
 youtube_id: 5qyCjrV305Y
-title:  Thillai Ambala Nataraja
+title: Thillai Ambala Nataraja
 topics: Shivan, Easwar, Nataraja, Thillai, Ambala, Tamil, Devotional, தில்லை, அம்பல, நட்டராஜா
 ---
 
