@@ -1,0 +1,28 @@
+/* small sizing for raster title icons */
+.title-icon-img {
+  height: 1em;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Reduce search box width by 30% while keeping layout stable.
+   Use flex-basis so it behaves well next to the bell; restore a smaller reduced width on small screens (do not expand to full width). */
+.site-search-input {
+  flex: 0 0 70%;
+  width: 70%;
+  max-width: 720px;
+  min-width: 120px;
+  transition: width 160ms ease;
+}
+
+/* On narrow viewports, keep the search reduced (60%) so the bell stays visible inline */
+@media (max-width: 576px) {
+  .site-search-input {
+    flex: 0 0 60%;
+    width: 60%;
+    max-width: 520px;
+    min-width: 100px;
+  }
+}
+
