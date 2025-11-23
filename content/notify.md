@@ -1,5 +1,5 @@
 ---
-section: admin
+section: push
 nav_order: 1
 title:  notify
 ---
