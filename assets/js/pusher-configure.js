@@ -1,43 +1,37 @@
 (function () {
-  var cfg = window.PUSHER_CONFIG || {};
+  var cfg = window.NOTIFY_CONFIG || {};
   var STORAGE_KEY = 'padal_notifications_v1';
   var MAX_HISTORY = 10;
 
   // utility: linkify URLs in text
   function linkify(text, hrefOverride) {
-    if (!text) return '';
+    if (!text && !hrefOverride) return '';
+    var t = text || '';
     // if explicit href provided, wrap entire text
     if (hrefOverride) {
-      return '<a href="' + hrefOverride + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(text) + '</a>';
+      return '<a href="' + hrefOverride + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(t) + '</a>';
     }
     // basic url regex
     var urlRegex = /((https?:\/\/|www\.)[^\s<]+)/gi;
-    return escapeHtml(text).replace(urlRegex, function (url) {
+    return escapeHtml(t).replace(urlRegex, function (url) {
       var href = url;
       if (!/^https?:\/\//i.test(href)) href = 'http://' + href;
-      return '<a href="' + href + '" rel="noopener noreferrer">' + url + '</a>';
+      return '<a href="' + href + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(url) + '</a>';
     });
   }
 
   function escapeHtml(s) {
-    return String(s).replace(/[&<>"']/g, function (m) {
+    return String(s || '').replace(/[&<>"']/g, function (m) {
       return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[m];
     });
   }
 
   function loadHistory() {
-    try {
-      var raw = localStorage.getItem(STORAGE_KEY);
-      return raw ? JSON.parse(raw) : [];
-    } catch (e) {
-      return [];
-    }
+    try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : []; } catch (e) { return []; }
   }
 
   function saveHistory(list) {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(list.slice(0, MAX_HISTORY)));
-    } catch (e) { /* ignore */ }
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list.slice(0, MAX_HISTORY))); } catch (e) { /* ignore */ }
   }
 
   // Add: remove items older than `hours` (keeps most recent first order)
@@ -45,27 +39,51 @@
     try {
       var cutoff = Date.now() - (hours * 60 * 60 * 1000);
       var list = loadHistory();
-      var filtered = list.filter(function (it) {
-        return (it && it.ts && (it.ts >= cutoff));
-      });
-      if (filtered.length !== list.length) {
-        saveHistory(filtered);
-      }
-    } catch (e) {
-      /* ignore pruning errors */
-    }
+      var filtered = list.filter(function (it) { return it && it.ts && it.ts >= cutoff; });
+      if (filtered.length !== list.length) saveHistory(filtered);
+    } catch (e) { /* ignore */ }
   }
 
   function pushHistory(item) {
-    var list = loadHistory();
-    list.unshift(item);
-    if (list.length > MAX_HISTORY) list = list.slice(0, MAX_HISTORY);
-    saveHistory(list);
+    try {
+      var list = loadHistory();
+      list.unshift(item);
+      if (list.length > MAX_HISTORY) list = list.slice(0, MAX_HISTORY);
+      saveHistory(list);
+    } catch (e) { /* ignore */ }
   }
 
   // run on DOM ready so elements exist
   document.addEventListener('DOMContentLoaded', function () {
-    // Elements used by both fallback UI and Pusher logic
+    // If global NOTIFY_CONFIG not provided, read from #notif-btn data-* attributes
+    try {
+      if (!cfg || Object.keys(cfg).length === 0) {
+        var btnEl = document.getElementById('notif-btn');
+        if (btnEl && btnEl.dataset) {
+          cfg = cfg || {};
+          var ds = btnEl.dataset;
+          // strings as provided by Liquid; normalize types
+          if (ds.ablyKey) cfg.ablyKey = ds.ablyKey;
+          if (ds.ablyChannel) cfg.ablyChannel = ds.ablyChannel;
+          if (ds.ablyEvent) cfg.ablyEvent = ds.ablyEvent;
+          if (ds.popupTimeout) cfg.popupTimeout = parseInt(ds.popupTimeout, 10) || 5000;
+          if (typeof ds.debug !== 'undefined') {
+            // data-debug may be "true"/"false" or JSON boolean
+            cfg.debug = (String(ds.debug).toLowerCase() === 'true');
+          }
+          if (ds.historyLimit) cfg.historyLimit = parseInt(ds.historyLimit, 10) || 10;
+        }
+      } else {
+        // ensure numeric/boolean normalization if window.NOTIFY_CONFIG was injected
+        if (cfg.popupTimeout) cfg.popupTimeout = parseInt(cfg.popupTimeout, 10) || 5000;
+        cfg.debug = !!cfg.debug;
+        cfg.historyLimit = parseInt(cfg.historyLimit || 10, 10);
+      }
+    } catch (e) {
+      cfg = cfg || {};
+    }
+
+    // Elements used by both fallback UI and Ably logic
     var count = 0;
     var countEl = document.getElementById('notif-count');
     var popup = document.getElementById('notif-popup');
@@ -73,11 +91,9 @@
     var closeBtn = document.getElementById('notif-close');
     var btn = document.getElementById('notif-btn');
     var hideTimer = null;
-    // allow overriding history limit via config, fallback to MAX_HISTORY
     var HISTORY_LIMIT = (cfg && cfg.historyLimit) ? parseInt(cfg.historyLimit, 10) : MAX_HISTORY;
-    // honor popup timeout
-    var timeout = (cfg && cfg.popupTimeout) || 10000;
-    // resolve sensible defaults if config contains empty strings
+    var timeout = (cfg && cfg.popupTimeout) ? parseInt(cfg.popupTimeout, 10) : 10000;
+
     function defaultEventName() {
       var now = new Date();
       var months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
@@ -85,18 +101,23 @@
       var day = String(now.getDate()).padStart(2, '0');
       return mon + day;
     }
-    var eventName = (cfg && typeof cfg.event === 'string' && cfg.event.trim()) ? cfg.event.trim() : defaultEventName();
-    var channelName = (cfg && cfg.channel) ? cfg.channel : 'default-channel';
+
+    // Ably-only: prefer ablyChannel/ablyEvent from cfg (no pusher fallback)
+    var channelName = (cfg && typeof cfg.ablyChannel === 'string' && cfg.ablyChannel.trim()) ? cfg.ablyChannel.trim() : 'padal-notification';
+    var eventName = (cfg && typeof cfg.ablyEvent === 'string' && cfg.ablyEvent.trim()) ? cfg.ablyEvent.trim() : defaultEventName();
 
     function showTransient(title, message, link) {
       // increment counter and show counter badge
       count++;
-      if (countEl) { countEl.textContent = count; countEl.style.display = 'inline-block'; }
+      if (countEl) { countEl.textContent = String(count); countEl.style.display = 'inline-block'; }
 
       // build content: title bold + message (linkified)
-      var html = '';
-      if (title) html += '<div style="font-weight:600;margin-bottom:4px;">' + escapeHtml(title) + '</div>';
-      if (message || link) html += '<div>' + linkify(message || '', link) + '</div>';
+      var timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      var titleHtml = title ? '<div style="font-weight:600;margin-bottom:4px;">' + escapeHtml(title) + '</div>' : '';
+      var msgHtml = (message || link) ? '<div>' + linkify(message || '', link) + '</div>' : '';
+      var timeHtml = '<div style="font-size:0.75rem;color:#6c757d;margin-top:6px;">' + escapeHtml(timeStr) + '</div>';
+      var html = '<div>' + titleHtml + msgHtml + timeHtml + '</div>';
+
       if (popupBody) {
         popupBody.innerHTML = html;
         // show popup
@@ -111,23 +132,21 @@
       // Browser Notification API
       try {
         if ("Notification" in window) {
+          var notifyTitle = title || 'Bhakti Padal';
+          var options = { body: message || '', data: { url: link || null } };
           if (Notification.permission === "granted") {
-            new Notification(title || 'Bhakti Padal', { body: message || '', data: { url: link || null } });
+            new Notification(notifyTitle, options);
           } else if (Notification.permission !== "denied") {
             Notification.requestPermission().then(function (perm) {
-              if (perm === "granted") {
-                new Notification(title || 'Bhakti Padal', { body: message || '', data: { url: link || null } });
-              }
+              if (perm === "granted") new Notification(notifyTitle, options);
             });
           }
         }
-      } catch (e) {
-        console.warn('Notification API error', e);
-      }
+      } catch (e) { /* ignore */ }
     }
 
     function renderHistory() {
-      var list = loadHistory().slice(0, HISTORY_LIMIT); // most recent first already
+      var list = loadHistory().slice(0, HISTORY_LIMIT);
       if (!popupBody || !popup) return;
       if (!list.length) {
         popupBody.innerHTML = '<div class="small text-muted">No notifications</div>';
@@ -205,47 +224,56 @@
       });
     }
 
-    // If no Pusher key configured, stop here (history UI still works)
-    if (!cfg.key) {
-      console.warn('PUSHER_CONFIG.key not set — skipping pusher initialization.');
+    // Ably init: read only ablyKey (no pusher fallback)
+    var ablyKey = (cfg && typeof cfg.ablyKey === 'string' && cfg.ablyKey.trim()) ? cfg.ablyKey.trim() : '';
+
+    if (!ablyKey) {
+      console.warn('Ably key not configured (NOTIFY_CONFIG.ablyKey) — skipping realtime init.');
       return;
     }
 
-    // Pusher initialization and event binding
-    try {
-      if (window.Pusher) {
-        Pusher.logToConsole = !!cfg.debug;
-        var pusher = new Pusher(cfg.key, { cluster: cfg.cluster || 'mt1' });
-        var channel = pusher.subscribe(channelName);
-
-        channel.bind(eventName, function (data) {
-          // Accept multiple shapes: { title, message, link } or { title, text, url } or raw string
+    function initAbly() {
+      try {
+        var ablyClient = new Ably.Realtime(ablyKey);
+        // optional debug logging
+        if (cfg.debug) {
+          ablyClient.connection.on(function (stateChange) { console.info('Ably state:', stateChange); });
+        }
+        var channel = ablyClient.channels.get(channelName);
+        channel.subscribe(eventName, function (message) {
+          // Ably message.data contains payload
+          var data = message && message.data ? message.data : message;
           var title = '';
-          var message = '';
+          var messageText = '';
           var link = '';
-
           if (!data) {
-            message = 'New notification';
+            messageText = 'New notification';
           } else if (typeof data === 'string') {
-            message = data;
+            messageText = data;
           } else {
-            // common keys
             title = data.title || data.heading || data.h || '';
-            message = data.message || data.text || data.body || data.msg || '';
+            messageText = data.message || data.text || data.body || data.msg || '';
             link = data.link || data.url || data.href || '';
-            // if no message but event contains other props, stringify minimally
-            if (!message && data.payload) message = JSON.stringify(data.payload);
+            if (!messageText && data.payload) messageText = JSON.stringify(data.payload);
           }
-
-          showTransient(title, message, link);
+          showTransient(title, messageText, link);
         });
-
-        console.info('Subscribed to channel:', channelName, 'event:', eventName);
-      } else {
-        console.warn('Notification library not found.');
+        console.info('Subscribed (Ably) to channel:', channelName, 'event:', eventName);
+      } catch (e) {
+        console.error('Ably initialization failed', e);
       }
-    } catch (e) {
-      console.error('Notification init error', e);
+    }
+
+    // Load Ably library dynamically if not present
+    if (typeof Ably === 'undefined') {
+      var s = document.createElement('script');
+      s.src = 'https://cdn.ably.io/lib/ably.min-1.js';
+      s.async = true;
+      s.onload = function () { initAbly(); };
+      s.onerror = function () { console.error('Failed to load Ably library'); };
+      document.head.appendChild(s);
+    } else {
+      initAbly();
     }
   });
 })();
