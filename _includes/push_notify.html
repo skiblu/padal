@@ -4,7 +4,7 @@ Usage: include on an notify page. NOTE: publishing from browser exposes the API 
 {%- endcomment -%}
 
 <div class="push-notify-wrapper">
-    <h3>Send Notification (Publisher)</h3>
+    <h3>Notify</h3>
 
     <!-- API key and channel/event inputs -->
     <input type="text" id="notify-apikey" placeholder="API Key (e.g. xxxx:yyyy)" />
@@ -12,7 +12,6 @@ Usage: include on an notify page. NOTE: publishing from browser exposes the API 
     <input type="text" id="notify-event" placeholder="Event name (default: NOV22)" />
 
     <input type="text" id="notify-title" placeholder="Title" />
-    <input type="text" id="notify-link" placeholder="Optional link (https://...)" />
     <textarea id="notify-message" placeholder="Message"></textarea>
 
     <button id="notify-send">Publish</button>
@@ -66,7 +65,6 @@ document.getElementById("notify-send").addEventListener("click", async function 
     var eventName = document.getElementById("notify-event").value.trim() || '';
     var title = document.getElementById("notify-title").value.trim();
     var message = document.getElementById("notify-message").value.trim();
-    var link = document.getElementById("notify-link").value.trim();
 
     if (!apiKey) {
         statusEl.style.color = 'red';
@@ -92,7 +90,7 @@ document.getElementById("notify-send").addEventListener("click", async function 
     // Build payload: Ably accepts an array of messages
     var payload = [{
       name: eventName,
-      data: { title: title, message: message, link: link }
+      data: { title: title, message: message }
     }];
 
     try {
@@ -114,7 +112,6 @@ document.getElementById("notify-send").addEventListener("click", async function 
             // clear fields (except apikey)
             document.getElementById("notify-title").value = '';
             document.getElementById("notify-message").value = '';
-            document.getElementById("notify-link").value = '';
             // optionally keep channel/event
         } else {
             var txt = await res.text().catch(()=>res.statusText);

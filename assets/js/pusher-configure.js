@@ -9,14 +9,14 @@
     var t = text || '';
     // if explicit href provided, wrap entire text
     if (hrefOverride) {
-      return '<a href="' + hrefOverride + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(t) + '</a>';
+      return '<a href="' + hrefOverride + '" rel="noopener noreferrer">' + escapeHtml(t) + '</a>';
     }
     // basic url regex
     var urlRegex = /((https?:\/\/|www\.)[^\s<]+)/gi;
     return escapeHtml(t).replace(urlRegex, function (url) {
       var href = url;
       if (!/^https?:\/\//i.test(href)) href = 'http://' + href;
-      return '<a href="' + href + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(url) + '</a>';
+      return '<a href="' + href + '" rel="noopener noreferrer">' + escapeHtml(url) + '</a>';
     });
   }
 
@@ -155,7 +155,7 @@
         list.forEach(function (it, idx) {
           var time = new Date(it.ts || Date.now()).toLocaleString();
           var titleHtml = it.title ? '<div style="font-weight:600;">' + escapeHtml(it.title) + '</div>' : '';
-          var msgHtml = it.message ? '<div class="small text-muted">' + linkify(it.message, it.link) + '</div>' : (it.link ? '<div class="small text-muted"><a href="' + it.link + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(it.link) + '</a></div>' : '');
+          var msgHtml = it.message ? '<div class="small text-muted">' + linkify(it.message, it.link) + '</div>' : (it.link ? '<div class="small text-muted"><a href="' + it.link + '" rel="noopener noreferrer">' + escapeHtml(it.link) + '</a></div>' : '');
           html += '<div class="notif-item" data-idx="' + idx + '" style="padding:.5rem .5rem;border-bottom:1px solid rgba(0,0,0,0.05);cursor:pointer;">' +
                   titleHtml + msgHtml +
                   '<div class="tiny text-muted" style="font-size:.7rem;margin-top:4px;">' + escapeHtml(time) + '</div>' +
