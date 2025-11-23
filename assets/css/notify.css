@@ -130,40 +130,28 @@
   text-align: center;
 }
 
-/* Close button: make compact and position in top-right corner of the popup */
-#notif-popup .card-body {
-  position: relative; /* ensure positioning context */
-  padding: 14px 14px 12px 18px; /* keep existing spacing */
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-/* Replace previous #notif-close styles with a compact top-right variant */
+/* Close button: subtle and aligned */
 #notif-close {
   position: absolute;
   top: 6px;
   right: 8px;
-  width: 14px;
-  height: 14px;
-  padding: 0;
-  opacity: 0.85;
-  border-radius: 3px;
+  width: 1.1rem;
+  height: 1.1rem;
+  padding: 2px;
+  opacity: 0.9;
+  border-radius: 4px;
   background: transparent;
   border: none;
   box-shadow: none;
-  line-height: 14px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  transform: none;
 }
 
-/* Ensure the native btn-close visual (if present) is tightened to fit the small box */
+/* Ensure native btn-close icon scales inside the smaller box */
 #notif-close::before,
 #notif-close::after,
 #notif-close > * {
-  width: 12px;
-  height: 12px;
+  width: 100%;
+  height: 100%;
   display: block;
 }
 
