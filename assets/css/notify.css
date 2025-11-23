@@ -133,26 +133,31 @@
 /* Close button: subtle and aligned */
 #notif-close {
   position: absolute;
-  top: 6px;
-  right: 8px;
-  width: 1.1rem;
-  height: 1.1rem;
-  padding: 2px;
+  top: 8px;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+  padding: 0;
   opacity: 0.9;
-  border-radius: 4px;
-  background: transparent;
+  border-radius: 3px;
   border: none;
   box-shadow: none;
-  transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  /* small 'X' icon as data-URL SVG (neutral color) */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'><line x1='1' y1='1' x2='13' y2='13' stroke='%23707070' stroke-width='2' stroke-linecap='round'/><line x1='13' y1='1' x2='1' y2='13' stroke='%23707070' stroke-width='2' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 12px;
+  z-index: 1101;
 }
 
-/* Ensure native btn-close icon scales inside the smaller box */
+/* prevent pseudo-elements from interfering with the icon */
 #notif-close::before,
-#notif-close::after,
-#notif-close > * {
-  width: 100%;
-  height: 100%;
-  display: block;
+#notif-close::after {
+  display: none;
 }
 
 /* Slight hover affordance but keep subtle */
