@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 7
+nav_order: 50
 title: Pachchai Mayil vaganane
 topics: Murugan, Pachchai, Mayil, vaganane
 ---

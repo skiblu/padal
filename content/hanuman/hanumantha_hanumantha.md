@@ -1,6 +1,6 @@
 ---
 section: Hanuman
-nav_order: 1
+nav_order: 50
 title:  Hanumantha Hanumantha
 topics: Hanuman, Hanumantha, Hanumantha
 ---

@@ -1,6 +1,6 @@
 ---
 section: Vinayaga
-nav_order: 8
+nav_order: 50
 title:  Aanai Mugathaan 
 youtube_id: xiI4jdhHeus
 topics: Vinayaga, Ganesa, Aanai, Mugathaan, Aran, Ainthu Mugathaan,ஆனை, முகத்தான், அரன், ஐந்து முகத்தான்

@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 16
+nav_order: 50
 title: Enappanae Enayyanae
 topics: Murugan, Padal, Tamil, Lyrics, Song, Enappanae, Enayyanae, எணப்பனே, எனையனே
 ---

@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 28
+nav_order: 50
 title: Ayyappa Namam Solla
 youtube_id: JqL5o2Hw6Qw
 topics: Ayyappa, Tamil, Ayyappa, Namam, Solla, அய்யப்பா, நாமம், சொல்ல

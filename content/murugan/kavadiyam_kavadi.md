@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 13
+nav_order: 50
 title: Kavadiyam Kavadi
 youtube_id: ZEjM3-eGRwk
 topics: Murugan, Padal, Tamil, Lyrics, Song, Kavadiyam, Kavadi, காவடியாம், காவடி, கந்தவேலன், காவடி

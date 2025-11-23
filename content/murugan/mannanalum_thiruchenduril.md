@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 5
+nav_order: 50
 title:  Mannanalum thiruchenduril
 topics: Murugan, Mannanalum, thiruchenduril, மண்ணானாலும், திருச்செந்தூரில்
 ---

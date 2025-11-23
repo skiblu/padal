@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 13
+nav_order: 50
 title: Ellorum Sernthu Sollungo
 topics: Ayyappa, Ellorum, Sernthu, Sollungo
 ---

@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 4
+nav_order: 50
 title:  Velava Velava
 topics: Murugan, Velava, Velava, வேலவா, வேலவா
 ---

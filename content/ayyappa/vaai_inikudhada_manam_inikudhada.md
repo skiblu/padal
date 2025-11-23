@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 31
+nav_order: 50
 title: Vaai Inikudhada Manam Inikudhada
 youtube_id: EK3MIvoevUc
 topics: Ayyappa, Tamil, Song, Vaai, Inikudhada, Manam, Inikudhada, வாய், இனிகுதடா, மனம், இனிகுதடா

@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 9
+nav_order: 50
 title: Yathiraiyam Yathirai
 topics: Ayyappa, Yathiraiyam, Yathirai, யாத்திரையும், யாத்திரை
 ---

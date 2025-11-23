@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 30
+nav_order: 50
 title: Saami Saami Ayyappa
 topics: Ayyappa, Saami, Ayyappa, சாமி, சாமி, ஐயப்பா
 ---

@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 5
+nav_order: 50
 title: Pallikattu Sabarimalaiku
 topics: Ayyappa, Pallikattu, Sabarimalaiku, பள்ளிக், கட்டு, சபரிமலைக்கு
 ---

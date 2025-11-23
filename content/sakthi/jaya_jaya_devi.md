@@ -1,7 +1,7 @@
 ---
 section: Sakthi
 youtube_id: eN264Um0O24
-nav_order: 2
+nav_order: 50
 title:  Jaya Jaya Devi
 topics: Amman, Sakthi, Jaya, Jaya, Devi, ஜெய, ஜெய, தேவி, துர்க்கா, சரணம்
 ---

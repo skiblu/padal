@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 7
+nav_order: 50
 title: Annadhana Prabhuve
 topics: Ayyappa, Annadhana, Prabhuve, அன்னதான‌, பிரபுவே
 ---

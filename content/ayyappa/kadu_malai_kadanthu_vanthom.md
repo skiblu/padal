@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 19
+nav_order: 50
 title: Kadu Malai Kadanthu Vanthom
 topics: Ayyappa, Kadu, Malai, Kadanthu, Vanthom, காடு, மலை, கடந்து, வந்தோம்
 ---

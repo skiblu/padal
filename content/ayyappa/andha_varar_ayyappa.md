@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 21
+nav_order: 50
 title: Andha Varar Ayyappa
 topics: Ayyappa, Samigale, Saranam, sollungo, சாமிகலே, சரணம், சொல்லுங்கோ
 ---

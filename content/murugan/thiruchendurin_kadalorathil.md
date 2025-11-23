@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 18
+nav_order: 50
 title: Thiruchendurin Kadalorathil
 topics: Murugan, Padal, Tamil, Lyrics, Song, Muruga, Thiruchendurin, Kadalorathil, முருகா, திருச்செந்தூரின், கடலோரத்தில்
 ---

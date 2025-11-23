@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 14
+nav_order: 50
 title: Theriyudhungo Pazhanimalai
 topics: Murugan, Padal, Tamil, Lyrics, Song, Theriyudhungo, Pazhanimalai, தெரியுதுங்கோ, பழனிமலை, தேடிவாருங்ககோ 
 ---

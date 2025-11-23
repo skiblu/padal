@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 10
+nav_order: 50
 title: Aragarogara Aragarogara
 topics: Murugan, Padal, Tamil, Lyrics, Song, Aragarogara, Aragarogara, அரகரொகரா, அரகரொகரா
 ---

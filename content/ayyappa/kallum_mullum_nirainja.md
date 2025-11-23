@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 26
+nav_order: 50
 title: Kallum Mullum Nirainja
 topics: Ayyappa, Tamil, Kallum, Mullum, Nirainja, கல்லும், முள்ளும், நிறைந்த
 ---

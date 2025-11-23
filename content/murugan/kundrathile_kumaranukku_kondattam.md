@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 11
+nav_order: 50
 title: Kundrathile Kumaranukku Kondattam
 topics: Murugan, Padal, Tamil, Lyrics, Song, Kundrathile, Kumaranukku, Kondattam, குன்றத்தில், குமரனுக்கு, கொண்டாட்டம்
 ---

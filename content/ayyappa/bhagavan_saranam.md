@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 4
+nav_order: 50
 title: Bhagavan saranam
 topics: Ayyappa, Bhagavan, saranam, பகவான், சரணம், பகவதி, சரணம்
 ---

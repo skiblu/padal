@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 25
+nav_order: 50
 title: Saranam Swamy Sollunga
 topics: Ayyappa, Tamil, Saranam, Swamy, Sollunga, சரணம், ஸ்வாமி, சொல்லுங்க
 ---

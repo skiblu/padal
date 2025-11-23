@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 6
+nav_order: 50
 title:  Muthai tharu
 youtube_id: cJI5hgdvsMg
 topics: Murugan, Muthai, tharu

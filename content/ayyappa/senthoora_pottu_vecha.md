@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 27
+nav_order: 50
 title: Senthoora Pottu Vecha
 topics: Ayyappa, Tamil, Senthoora, Pottu, Vecha, செந்தூரா, பொட்டு, வச்ச
 ---

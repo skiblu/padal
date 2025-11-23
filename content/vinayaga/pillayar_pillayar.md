@@ -1,6 +1,6 @@
 ---
 section: Vinayaga
-nav_order: 5
+nav_order: 50
 title:  Pillayar Pillayar
 topics: Vinayaga, Pillayar, Pillayar, பிள்ளையார், பிள்ளையார் 
 ---

@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 23
+nav_order: 50
 title: Enna Varam Vendum
 topics: Ayyappa, Enna, Varam, Vendum, என்ன‌, வரம், வேண்டும்
 ---

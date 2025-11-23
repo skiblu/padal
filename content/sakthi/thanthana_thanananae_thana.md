@@ -1,6 +1,6 @@
 ---
 section: Sakthi
-nav_order: 5
+nav_order: 50
 title: Thanthana Thanananae Thana
 topics: Sakthi, Amman, Bhakti Padal, Thanthana, Thanananae, Thana, 
 ---

@@ -1,6 +1,6 @@
 ---
 section: Murugan
-nav_order: 8
+nav_order: 50
 title: Anbarukku Anbane
 topics: Murugan, Anbarukku, Anbane
 ---

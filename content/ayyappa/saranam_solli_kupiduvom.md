@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 32
+nav_order: 50
 title: Saranam Solli Kupiduvom
 audio_id: ud73h39djD
 audio_length: 119
