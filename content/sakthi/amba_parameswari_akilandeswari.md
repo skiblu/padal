@@ -2,7 +2,7 @@
 section: Sakthi
 nav_order: 50
 title: Amba Parameswari Akilandeswari
-youtube_id: jUE33Cvi6uY
+youtube_id: hl3OGoVu5B8
 topics: Amman, Sakthi, Durga, Amba, Parameswari, Akilandeswari, அம்பா, பரமேஸ்வரி, அகிலாண்டேஸ்வரி
 ---
 
