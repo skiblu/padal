@@ -2,7 +2,7 @@
 section: Shivan
 nav_order: 50
 title: Lingashtam
-youtibe_id: oensAGheni4
+youtube_id: oensAGheni4
 topics: Shivan, Nama, Shivaya, Sivanae, Lingashtam, லிங்காஷ்டகம், சிவனே
 ---
 ப்ரம்ம முராரியார் போற்றிடும் லிங்கம்
