@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 10
+nav_order: 30
 title: Thalladi Thalladi
 youtube_id: jEhZDS-9gb8
 topics: Ayyappa, Thalladi, Thalladi, தள்ளாடி, தள்ளாடி
