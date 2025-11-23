@@ -1,7 +1,7 @@
 ---
 section: Vinayaga
 nav_order: 1
-title:  Vinayaga Ashtothram
+title:  Ashtothram Vinayaga
 topics: Vinayaga, Ashtothram, 108
 ---
 

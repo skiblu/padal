@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 42
+nav_order: 50
 title: Karuppinil Udai Aninthein
 topics: Ayyappa, Devotional, தமிழ் பாடல்கள், Karuppinil, Udai, Aninthein, கருப்பினில், உடை, அணிந்தேன்
 ---
