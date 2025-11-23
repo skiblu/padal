@@ -2,7 +2,7 @@
 section: Sakthi
 nav_order: 50
 title: Thanthana Thanananae Thana
-topics: Sakthi, Amman, Bhakti Padal, Thanthana, Thanananae, Thana, 
+topics: Sakthi, Amman, Bhakti Padal, Thanthana, Thanananae, Thana, தந்தனா, தானனன்னே, தான, நன்னே
 ---
 கல்லு வச்ச மூக்குத்தியாம்\
 கட்டி வச்ச மல்லிகையாம்\
