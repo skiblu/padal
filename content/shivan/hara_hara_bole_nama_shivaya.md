@@ -2,6 +2,7 @@
 section: Shivan
 nav_order: 50
 title: Hara Hara Bole Nama Shivaya
+youtube_id: WBzeTz_UpQ4
 topics: Shivan, Tamil, padal, Lyrics, Song, Nama Shivaya, Nama Shivaya, நம சிவாய நம சிவாய, நமசிவாய நமசிவாய, om, ஓம், Hara Hara Bole, ஹர ஹர போலே
 ---
 
