@@ -2,6 +2,7 @@
 section: Vishnu
 nav_order: 50
 title: Krishna Mukunda Murarae
+youtube_id: 49MOFhJu2Hs
 topics: Vishnu, Krishna, Bhakti, Krishna, Mukunda, Murarae, கிருஷ்ணா, முகுந்தா, முராரே 
 ---
 
