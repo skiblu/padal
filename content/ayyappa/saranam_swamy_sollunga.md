@@ -2,7 +2,8 @@
 section: Ayyappa
 nav_order: 50
 title: Saranam Swamy Sollunga
-lyrics_en: Ayyappa, Tamil, Saranam, Swamy, Sollunga, சரணம், ஸ்வாமி, சொல்லுங்க
+lyrics_en: Ayyappa, Tamil, Saranam, Swamy, Sollunga
+lyrics_ta: ஐயப்பா, தமிழ், சரணம், ஸ்வாமி, சொல்லுங்க
 ---
 
 `சரணம் சாமி. சரணம் சாமி. என்று சொல்லுங்க`\

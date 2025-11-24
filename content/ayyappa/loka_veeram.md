@@ -4,7 +4,8 @@ nav_order: 91
 audio_id: u7e5GU83
 audio_length: 256
 title: Loka Veeram
-lyrics_en: Ayyappa, Loka, Veeram, லோக, வீரம்
+lyrics_en: Ayyappa, Loka, Veeram, Maha, Poojyam
+lyrics_ta: லோக, வீரம், மஹா , பூஜ்யம
 ---
 
 

@@ -2,7 +2,8 @@
 section: Ayyappa
 nav_order: 50
 title: Vava Vava Ayyappa
-lyrics_en: Ayyappa, Devotional, தமிழ் பாடல்கள், va va va va ayyappa, வா வா வா வா ஐயப்பா, vavar, தோழன்
+lyrics_en: Ayyappa, Devotional, va va va va ayyappa, vavar, thozhane, ayyappa
+lyrics_ta: ஐயப்பா, பக்தி, வா வா வா வா ஐயப்பா, வாவர், தோழனே, ஐயப்பா
 ---
 
 வா வா வா வா ஐயப்பா\

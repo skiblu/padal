@@ -2,7 +2,8 @@
 section: Ayyappa
 nav_order: 50
 title: Saranam Viliththaal Maranam
-lyrics_en: Ayyappa, Tamil, Devotional, Saranam, Viliththaal, Maranam, சரணம், விளித்தால், மரணம், இல்லை
+lyrics_en: Ayyappa, Tamil, Devotional, Saranam, Viliththaal, Maranam
+lyrics_ta: ஐயப்பா, தமிழ், பக்தி, சரணம், விளித்தால், மரணம்
 ---
 
 சாமியே… ஐ .. \

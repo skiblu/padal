@@ -2,7 +2,8 @@
 section: Ayyappa
 nav_order: 50
 title: Ellorum Sernthu Sollungo
-lyrics_en: Ayyappa, Ellorum, Sernthu, Sollungo
+lyrics_en: Ayyappa, Ellorum, Sernthu, Sollungo, Saranam
+lyrics_ta: அய்யப்பா, எல்லோரும், சேர்ந்து, சொல்லுங்கோ, சரணம்
 ---
 
 

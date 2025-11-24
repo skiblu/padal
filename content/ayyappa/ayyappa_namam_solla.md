@@ -3,7 +3,8 @@ section: Ayyappa
 nav_order: 50
 title: Ayyappa Namam Solla
 youtube_id: JqL5o2Hw6Qw
-lyrics_en: Ayyappa, Tamil, Ayyappa, Namam, Solla, அய்யப்பா, நாமம், சொல்ல
+lyrics_en: Ayyappa, Tamil, Ayyappa, Namam, Solla
+lyrics_ta: அய்யப்பா, நாமம், சொல்ல, சரணம், கோஷம்
 ---
 
 விண்ணும் மண்ணும் கிடுகிடுங்க\

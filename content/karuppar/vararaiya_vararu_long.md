@@ -3,7 +3,8 @@ section: Karuppar
 nav_order: 50
 title:  Vararaiya Vararu (Long)
 youtube_id: co_ZNf-PriU
-lyrics_en: Karuppu, Swamy, Tamil, Vararaiya, Vararu, Karuppasamy, கருப்பசாமி, வாரரையா, வாரறு
+lyrics_en: Karuppu, Swamy, Tamil, Vararaiya, Vararu, Karuppasamy
+lyrics_ta: கருப்பு, சாமி, தமிழ், வாராரையா, வாராரு, கருப்பசாமி
 ---
 
 வாராரய்யா வாராரு!! கருப்பசாமி வாராரு!! \

@@ -4,7 +4,8 @@ nav_order: 50
 title:  Vandharam Vandharam
 audio_id: D5dgwh7afs
 audio_length: 310
-lyrics_en: Karuppu, Swamy, Karuppar, Tamil, Vandharam, Vandharam, Karuppusamy, கருப்பசாமி, வந்தாரம், வந்தாரம்
+lyrics_en: Karuppu, Swamy, Karuppar, Tamil, Vandharam, Vandharam, Karuppusamy
+lyrics_ta: கருப்பு, சாமி, கருப்பர், தமிழ், வந்தாரம், வந்தாரம், கருப்பசாமி
 ---
 
 எங்க கருப்பா…\

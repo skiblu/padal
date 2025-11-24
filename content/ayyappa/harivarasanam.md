@@ -4,7 +4,8 @@ nav_order: 95
 audio_id: uj8h47HFR3
 audio_length: 480
 title: Harivarasanam
-lyrics_en: Ayyappa, Harivarasanam, ஹரிவ, ராஸனம்
+lyrics_en: Ayyappa, Harivarasanam, Devotional, Vishva, Mohanam
+lyrics_ta: ஹரிவ, ராஸனம், விஸ்வ, மோஹனம், ஐயப்பா, சரணம்
 ---
 
 

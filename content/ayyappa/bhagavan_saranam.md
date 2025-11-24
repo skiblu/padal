@@ -2,7 +2,8 @@
 section: Ayyappa
 nav_order: 50
 title: Bhagavan saranam
-lyrics_en: Ayyappa, Bhagavan, saranam, பகவான், சரணம், பகவதி, சரணம்
+lyrics_en: Ayyappa, Bhagavan, Saranam, Bhagavati, Devan, Devi, Patham
+lyrics_ta: பகவான், சரணம், பகவதி, சரணம், ஐயப்பா, தேவன், பாதம், தேவி
 ---
 
 `பகவான் சரணம் பகவதி சரணம் - சரணம் சரணம் ஐயப்பா`\

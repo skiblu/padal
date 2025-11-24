@@ -3,10 +3,9 @@ section: Karuppar
 nav_order: 50
 title:  Enga Karuppasamy
 youtube_id: 1ZGdZFXY5pY
-lyrics_en: Enga, Karuppu, Swamy, எங்க, கருப்பசாமி
+lyrics_en: Enga, Karuppu, Swamy, avar, enga, karuppasamy
+lyrics_ta: எங்க, கருப்பு, சாமி, அவர், எங்க, கருப்பசாமி
 ---
-
- 
 
 `எங்க கருப்பசாமி அவர் எங்க கருப்பசாமி`\
 அக்கினியில் பிறந்தவராம் அரனாரின் மைந்தனவன்\

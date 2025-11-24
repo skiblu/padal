@@ -3,7 +3,8 @@ section: Ayyappa
 nav_order: 50
 title: Vanpuli Vagananae
 youtube_id: hZr7aJRlO4c
-lyrics_en: Ayyappa, Tamil, Vanpuli, Vagananae, வன்புலி, வாகனனே, Hari Haranae , Neiyodu, ஹரிஹரனே, நெய்யோடு
+lyrics_en: Ayyappa, Tamil, Vanpuli, Vagananae, Panthala, Balaganae
+lyrics_ta: ஐயப்பா, தமிழ், வன்புலி, வாகனனே, பந்தல, பாலகனே
 ---
 
 `வன்புலி வாகனனே`\

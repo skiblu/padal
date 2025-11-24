@@ -2,7 +2,8 @@
 section: Ayyappa
 nav_order: 50
 title: Saranamappa Saranamayya
-lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Saranamappa Saranamayya, சரணமப்பா, சரணமய்யா, அய்யப்பன், பாடல், பாடல்கள், தமிழ், பக்தி
+lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Saranamappa Saranamayya
+lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்கள், பக்தி, சரணமப்பா சரணமய்யா
 ---
 
 `சரணமப்பா சரணமய்யா ஸ்வாமியே`\

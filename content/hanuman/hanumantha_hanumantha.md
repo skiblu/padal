@@ -3,6 +3,7 @@ section: Hanuman
 nav_order: 50
 title:  Hanumantha Hanumantha
 lyrics_en: Hanuman, Hanumantha, Hanumantha
+lyrics_ta: ஹனுமான், ஹனுமந்தா, ஹனுமந்தா
 ---
 
 அனுமந்தா அனுமந்தா\

@@ -4,6 +4,7 @@ nav_order: 50
 title:  Vararu Idi Mulanga
 youtube_id: Qh8_RwqjNYs
 lyrics_en: Karuppu, Swamy, Tamil, Karuppan, Vararu, Vararu, Idi, Mulanga
+lyrics_ta: கருப்பு, சாமி, தமிழ், கருப்பன், வராரு, வராரு, இடி, முழங்க
 ---
 வாராரு இடி முழங்க\
 கருப்பசாமி வாராரு இடி முழங்க\

@@ -3,7 +3,8 @@ section: Ayyappa
 nav_order: 50
 title: Thalladi Thalladi
 youtube_id: jEhZDS-9gb8
-lyrics_en: Ayyappa, Thalladi, Thalladi, தள்ளாடி, தள்ளாடி
+lyrics_en: Ayyappa, Thalladi, Thalladi, Nadai, Nadanthu
+lyrics_ta: ஐயப்பா, தள்ளாடி, தள்ளாடி, நடை, நடந்து
 ---
 `தள்ளாடி தள்ளாடி நடை நடந்து`\
 `நாங்க‌ சபரிமலை நோக்கி வந்தோமய்யா`

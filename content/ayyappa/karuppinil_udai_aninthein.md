@@ -2,7 +2,8 @@
 section: Ayyappa
 nav_order: 50
 title: Karuppinil Udai Aninthein
-lyrics_en: Ayyappa, Devotional, தமிழ் பாடல்கள், Karuppinil, Udai, Aninthein, கருப்பினில், உடை, அணிந்தேன்
+lyrics_en: Ayyappa, Devotional, Karuppinil, Udai, Aninthein
+lyrics_ta: கருப்பினில், உடை, அணிந்தேன், கழுத்தினில், மணி, அணிந்தேன்
 ---
 
 சுவாமியே சரணம் அய்யப்பா..\

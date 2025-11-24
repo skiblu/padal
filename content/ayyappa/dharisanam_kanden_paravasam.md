@@ -3,7 +3,8 @@ section: Ayyappa
 nav_order: 50
 youtube_id: bwW1LtE4ad8
 title: Dharisanam Kanden Paravasam
-lyrics_en: Ayyappa, Dharisanam, Kanden, Paravasam, தரிசனம், கண்டேன், பரவசம்
+lyrics_en: Ayyappa, Dharisanam, Kanden, Paravasam
+lyrics_ta: தரிசனம், கண்டேன், பரவசம், கொண்டேன், அரிஹரன், மைந்தன், சபரிமலை
 ---
 
 

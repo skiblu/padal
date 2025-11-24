@@ -2,7 +2,8 @@
 section: Ayyappa
 nav_order: 50
 title: Annadhana Prabhuve
-lyrics_en: Ayyappa, Annadhana, Prabhuve, அன்னதான‌, பிரபுவே
+lyrics_en: Ayyappa, Annadhana, Prabhuve, Saranam
+lyrics_ta: அன்னதான‌, பிரபுவே, ஐயப்பா, சரணம்
 ---
 அன்னதான‌ பிரபுவே சரணம் ஐயப்பா\
 ஆரியங்காவு ஐயனே சரணம் ஐயப்பா

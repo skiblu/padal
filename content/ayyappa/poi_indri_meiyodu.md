@@ -2,7 +2,8 @@
 section: Ayyappa
 nav_order: 50
 title: Poi Indri Meiyodu
-lyrics_en: Ayyappa, Poi, Indri, Meiyodu, பொய, இன்றி, மெய்யோடு 
+lyrics_en: Ayyappa, Poi, Indri, Meiyodu, Ney, Kondu, Ponal, Ayyanai, Nee, Kaanalam, Sabaril
+lyrics_ta: பொய, இன்றி, மெய்யோடு, நெய், கொண்டு, போனால், ஐயனை, நீ, காணலாம், சபரியில்
 ---
 
 பொய் இன்றி மெய்யோடு

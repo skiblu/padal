@@ -3,7 +3,8 @@ section: Ayyappa
 nav_order: 50
 title: Enna Manakuthu Engae Manakuthu
 youtube_id: IkKKyVKPB44
-lyrics_en: Ayyappa, Devotional, தமிழ் பாடல்கள், Enna, Manakuthu, Engae, Manakuthu, என்ன, மணக்குது, எங்கே, மணக்குது
+lyrics_en: Ayyappa, Devotional, Enna, Manakuthu, Engae, Manakuthu
+lyrics_ta: என்ன, மணக்குது, எங்கே, மணக்குது, தமிழ் பாடல்கள்
 ---
 
 `சாமியப்பா ஐயப்பா… சரணமப்பா ஐயப்பா`\

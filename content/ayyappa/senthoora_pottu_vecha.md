@@ -2,7 +2,8 @@
 section: Ayyappa
 nav_order: 50
 title: Senthoora Pottu Vecha
-lyrics_en: Ayyappa, Tamil, Senthoora, Pottu, Vecha, செந்தூரா, பொட்டு, வச்ச
+lyrics_en: Ayyappa, Tamil, Senthoora, Pottu, Vecha
+lyrics_ta: ஐயப்பா, தமிழ், செந்தூர, பொட்டு, வச்ச
 ---
 Note: Similar to 16 vayathinile song tune
 

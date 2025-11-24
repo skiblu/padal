@@ -3,7 +3,8 @@ section: Ayyappa
 nav_order: 50
 title: Vinnum Mannum Kidukidunga
 youtube_id: 27OhxfkjYKA
-lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Vinnum, Mannum, Kidukidunga, விண்ணும், மண்ணும், கிடுகிடுங்க
+lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Vinnum, Mannum, Kidukidunga
+lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்கள், பக்தி, விண்ணும், மண்ணும், கிடுகிடுங்க
 ---
 
 விண்ணும் மண்ணும் கிடுகிடுங்க\

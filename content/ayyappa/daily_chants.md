@@ -2,7 +2,8 @@
 section: Ayyappa
 nav_order: 1
 title:  Daily Chants 
-lyrics_en: Ayyappa, Daily Chants , Thuthi, சுவாமி, சரணம், ஐயப்பா, தூதி
+lyrics_en: Ayyappa, Daily Chants , Thuthi
+lyrics_ta: சுவாமி, சரணம், ஐயப்பா, தூதி
 ---
 
 **Lord Ganesha** \

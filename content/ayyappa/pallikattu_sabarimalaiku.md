@@ -2,7 +2,8 @@
 section: Ayyappa
 nav_order: 50
 title: Pallikattu Sabarimalaiku
-lyrics_en: Ayyappa, Pallikattu, Sabarimalaiku, பள்ளிக், கட்டு, சபரிமலைக்கு
+lyrics_en: Ayyappa, Pallikattu, Sabarimalaiku
+lyrics_ta: பள்ளிக், கட்டு, சபரிமலைக்கு, ஸ்வாமியே, ஐயப்போ
 ---
 
 இருமுடி தாங்கி ஒரு மனதாகி\

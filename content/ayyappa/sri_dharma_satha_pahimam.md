@@ -3,7 +3,8 @@ section: Ayyappa
 nav_order: 50
 title: Sri Dharma Satha Pahimam
 youtube_id: yFnQyofd3jE
-lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Sri, Dharma, Satha, Pahimam, ஸ்ரீ, தர்ம, சாஸ்தா, பாஹிமாம்
+lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Sri, Dharma, Satha, Pahimam
+lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்கள், பக்தி, ஸ்ரீ, தர்ம, சாஸ்தா, பாஹிமாம்
 ---
 
 `ஸ்ரீ தர்ம சாஸ்தா பாஹிமாம்` \
