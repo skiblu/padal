@@ -28,11 +28,11 @@ TOC of all items with parent_id
             <div class="col-6 col-sm-4 col-md-3">
               <div class="card toc-card h-100 text-center">
                 <a href="{{ p.url | relative_url }}" class="stretched-link" aria-label="{{ p.parent_id }}">
-                  <img src="{{ '/images/' | append: p.parent_id | append: '.png' | relative_url }}" alt="{{ p.parent_id }}" class="img-fluid rounded mx-auto d-block" style="max-height:140px; width:auto; object-fit:cover;">
+                  <img src="{{ '/images/' | append: p.parent_id | append: '.png' | relative_url }}" alt="{{ p.parent_id }}" class="img-fluid rounded mx-auto d-block" style="max-height:100px; width:auto; object-fit:cover;">
                 </a>
                 <div class="card-body py-2">
                   <h3 class="card-title h6 mb-0">
-                    <a href="{{ p.url | relative_url }}" class="toc-link">{{ p.title | default: p.parent_id }}</a>
+                    <a href="{{ p.url | relative_url }}" class="toc-link">{{ p.parent_id }}</a>
                   </h3>
                 </div>
               </div>
@@ -50,11 +50,11 @@ TOC of all items with parent_id
             <div class="col-6 col-sm-4 col-md-3">
               <div class="card toc-card h-100 text-center">
                 <a href="{{ p.url | relative_url }}" class="stretched-link" aria-label="{{ p.parent_id }}">
-                  <img src="{{ '/images/' | append: p.parent_id | append: '.png' | relative_url }}" alt="{{ p.parent_id }}" class="img-fluid rounded mx-auto d-block" style="max-height:140px; width:auto; object-fit:cover;">
+                  <img src="{{ '/images/' | append: p.parent_id | append: '.png' | relative_url }}" alt="{{ p.parent_id }}" class="img-fluid rounded mx-auto d-block" style="max-height:100px; width:auto; object-fit:cover;">
                 </a>
                 <div class="card-body py-2">
                   <h3 class="card-title h6 mb-0">
-                    <a href="{{ p.url | relative_url }}" class="toc-link">{{ p.title | default: p.parent_id }}</a>
+                    <a href="{{ p.url | relative_url }}" class="toc-link">{{ p.parent_id }}</a>
                   </h3>
                 </div>
               </div>
