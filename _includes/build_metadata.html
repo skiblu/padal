@@ -1,23 +1,26 @@
-{% if page.lyrics_ta %}
+{%- comment -%} Emit Song JSON-LD when lyrics are present in either Tamil or English {%- endcomment -%}
+{% if page.lyrics_ta or page.lyrics_en %}
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Song",
+  "name": {{ page.title | jsonify }},
+  "lyrics": [
+    {%- if page.lyrics_ta %}
     {
-        "@context": "https://schema.org",
-        "@type": "Song",
-        "name": {{ page.title | jsonify }},
-        "lyrics": [
-            {
-                "@type": "CreativeWork",
-                "inLanguage": "ta",
-                "text": {{ page.lyrics_ta | strip_newlines | jsonify }}
-            }
-            {% if page.lyrics_en %},
-            {
-                "@type": "CreativeWork",
-                "inLanguage": "en",
-                "text": {{ page.lyrics_en | strip_newlines | jsonify }}
-            }
-            {% endif %}
-        ]
+      "@type": "CreativeWork",
+      "inLanguage": "ta",
+      "text": {{ page.lyrics_ta | strip_newlines | jsonify }}
+    }{%- endif -%}
+    {%- if page.lyrics_en and page.lyrics_ta %},{%- endif -%}
+    {%- if page.lyrics_en %}
+    {
+      "@type": "CreativeWork",
+      "inLanguage": "en",
+      "text": {{ page.lyrics_en | strip_newlines | jsonify }}
     }
+    {%- endif -%}
+  ]
+}
 </script>
 {% endif %}
