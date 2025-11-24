@@ -35,9 +35,6 @@ We strip newlines and trim to avoid breaking the meta attribute.
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 
 <meta property="og:locale" content="en_US" />
-<!-- schema.org JSON-LD -->
-<script type="application/ld+json">{ "@context":"http://schema.org", "@type":"WebPage", "headline":"{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}", "author": { "@type":"Person", "name":"{{ site.author | escape }}"}, "description":"{% if page.description %}{{ page.description | escape }}{% else %}{{ site.description | escape }}{% endif %}", {% if site.featured-image %}"image": "{{ site.featured-image | absolute_url }}",{% endif %} "url":"{{ page.url | absolute_url }}" }</script>
-
 {% comment %} Include song metadata JSON-LD (if any) into HEAD so it appears in devtools and crawlers can find it early. {% endcomment %}
 {% include build_metadata.html %}
 

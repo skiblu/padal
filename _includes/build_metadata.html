@@ -1,26 +1,39 @@
-{%- comment -%} Emit Song JSON-LD when lyrics are present in either Tamil or English {%- endcomment -%}
-{% if page.lyrics_ta or page.lyrics_en %}
+{%- comment -%} Emit a single JSON-LD script with @graph containing the WebPage and (optionally) Song objects {%- endcomment -%}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Song",
-  "name": {{ page.title | jsonify }},
-  "lyrics": [
-    {%- if page.lyrics_ta %}
+  "@graph": [
     {
-      "@type": "CreativeWork",
-      "inLanguage": "ta",
-      "text": {{ page.lyrics_ta | strip_newlines | jsonify }}
-    }{%- endif -%}
-    {%- if page.lyrics_en and page.lyrics_ta %},{%- endif -%}
-    {%- if page.lyrics_en %}
+      "@type": "WebPage",
+      "headline": {{ (page.title ? page.title | append: " | " | append: site.title : site.title) | jsonify }},
+      "author": { "@type":"Person", "name": {{ site.author | jsonify }} },
+      "description": {{ (page.description ? page.description : site.description) | jsonify }},
+      {% if site.featured-image %}"image": {{ site.featured-image | absolute_url | jsonify }},{% endif %}
+      "url": {{ page.url | absolute_url | jsonify }}
+    }{% if page.lyrics_ta or page.lyrics_en %},{% endif %}
+    {%- if page.lyrics_ta or page.lyrics_en -%}
     {
-      "@type": "CreativeWork",
-      "inLanguage": "en",
-      "text": {{ page.lyrics_en | strip_newlines | jsonify }}
+      "@type": "Song",
+      "name": {{ page.title | jsonify }},
+      "lyrics": [
+        {%- if page.lyrics_ta %}
+        {
+          "@type": "CreativeWork",
+          "inLanguage": "ta",
+          "text": {{ page.lyrics_ta | strip_newlines | jsonify }}
+        }{%- endif -%}
+        {%- if page.lyrics_en and page.lyrics_ta %},{%- endif -%}
+        {%- if page.lyrics_en %}
+        {
+          "@type": "CreativeWork",
+          "inLanguage": "en",
+          "text": {{ page.lyrics_en | strip_newlines | jsonify }}
+        }
+        {%- endif -%}
+      ]
     }
     {%- endif -%}
   ]
 }
 </script>
-{% endif %}
