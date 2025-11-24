@@ -1,4 +1,8 @@
-{%- comment -%} Emit a single JSON-LD script with @graph containing the WebPage and (optionally) Song objects {%- endcomment -%}
+{%- comment -%}
+Emit a single JSON-LD script with @graph containing the WebPage and,
+when lyrics are available, a MusicComposition entry whose "lyrics" is an array
+that may contain both Tamil and English CreativeWork objects.
+{%- endcomment -%}
 
 {%- if page.title -%}
   {%- capture _headline -%}{{ page.title }} | {{ site.title }}{%- endcapture -%}
@@ -6,7 +10,21 @@
   {%- capture _headline -%}{{ site.title }}{%- endcapture -%}
 {%- endif -%}
 
-{%- capture _description -%}{{ (page.description | default: site.description) }}{%- endcapture -%}
+{%- capture _description -%}{{ page.description | default: site.description }}{%- endcapture -%}
+{%- capture _page_id -%}{{ page.url | absolute_url }}{%- endcapture -%}
+
+{%- assign file_name = page.url | split: '/' | last -%}
+{%- assign song_slug = file_name | replace: '.html', '' | replace: '_', '-' -%}
+{%- capture _song_path -%}/song/{{ song_slug }}{%- endcapture -%}
+{%- capture _song_id -%}{{ _song_path | absolute_url }}{%- endcapture -%}
+
+{%- assign has_lyrics = false -%}
+{%- if page.lyrics_ta or page.lyrics_en -%}
+  {%- assign has_lyrics = true -%}
+{%- endif -%}
+
+{%- capture _lyrics_ta -%}{%- if page.lyrics_ta -%}{{ page.lyrics_ta | strip_newlines | strip }}{%- endif -%}{%- endcapture -%}
+{%- capture _lyrics_en -%}{%- if page.lyrics_en -%}{{ page.lyrics_en | strip_newlines | strip }}{%- endif -%}{%- endcapture -%}
 
 <script type="application/ld+json">
 {
@@ -14,33 +32,40 @@
   "@graph": [
     {
       "@type": "WebPage",
+      "@id": {{ _page_id | jsonify }},
       "headline": {{ _headline | jsonify }},
       "author": { "@type": "Person", "name": {{ site.author | jsonify }} },
       "description": {{ _description | jsonify }}{% if site.featured-image %},{% endif %}
       {%- if site.featured-image -%}
       "image": {{ site.featured-image | absolute_url | jsonify }},{% endif %}
-      "url": {{ page.url | absolute_url | jsonify }}
-    }{% if page.lyrics_ta or page.lyrics_en %},{% endif %}
-    {%- if page.lyrics_ta or page.lyrics_en -%}
+      "url": {{ _page_id | jsonify }}{% if has_lyrics %},
+      "mainEntity": { "@id": {{ _song_id | jsonify }} }{% endif %}
+    }{% if has_lyrics %},{% endif %}
+    {%- if has_lyrics -%}
     {
-      "@type": "Song",
+      "@type": "MusicComposition",
+      "@id": {{ _song_id | jsonify }},
       "name": {{ page.title | jsonify }},
       "lyrics": [
-        {%- if page.lyrics_ta -%}
+        {%- if _lyrics_ta != '' -%}
         {
           "@type": "CreativeWork",
           "inLanguage": "ta",
-          "text": {{ page.lyrics_ta | strip_newlines | jsonify }}
-        }{%- endif -%}
-        {%- if page.lyrics_en and page.lyrics_ta %},{%- endif -%}
-        {%- if page.lyrics_en -%}
+          "text": {{ _lyrics_ta | jsonify }}
+        }{%- if _lyrics_en != '' -%},{%- endif -%}
+        {%- endif -%}
+        {%- if _lyrics_en != '' -%}
         {
           "@type": "CreativeWork",
           "inLanguage": "en",
-          "text": {{ page.lyrics_en | strip_newlines | jsonify }}
+          "text": {{ _lyrics_en | jsonify }}
         }
         {%- endif -%}
-      ]
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": {{ site.title | jsonify }}
+      }
     }
     {%- endif -%}
   ]
