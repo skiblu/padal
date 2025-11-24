@@ -1,5 +1,5 @@
 ---
-section: KaruppuSwamy
+section: Karuppar
 nav_order: 50
 title:  Angae Idi Muzhanguthu
 audio_id: Hw38sk2d0

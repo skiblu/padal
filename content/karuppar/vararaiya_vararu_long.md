@@ -1,5 +1,5 @@
 ---
-section: KaruppuSwamy
+section: Karuppar
 nav_order: 50
 title:  Vararaiya Vararu (Long)
 youtube_id: co_ZNf-PriU

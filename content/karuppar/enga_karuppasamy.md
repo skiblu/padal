@@ -1,5 +1,5 @@
 ---
-section: KaruppuSwamy
+section: Karuppar
 nav_order: 50
 title:  Enga Karuppasamy
 youtube_id: 1ZGdZFXY5pY

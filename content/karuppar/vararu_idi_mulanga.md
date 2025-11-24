@@ -1,5 +1,5 @@
 ---
-section: KaruppuSwamy
+section: Karuppar
 nav_order: 50
 title:  Vararu Idi Mulanga
 youtube_id: Qh8_RwqjNYs

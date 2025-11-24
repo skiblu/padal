@@ -1,5 +1,5 @@
 ---
-section: KaruppuSwamy
+section: Karuppar
 nav_order: 50
 title:  Vararaiya Vararu (Short)
 topics: Karuppu, Swamy, Tamil, Vararaiya, Vararu, Karuppasamy, கருப்பசாமி, வாரரையா, வாரறு

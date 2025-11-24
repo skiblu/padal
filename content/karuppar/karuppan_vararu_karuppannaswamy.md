@@ -1,5 +1,5 @@
 ---
-section: KaruppuSwamy
+section: Karuppar
 nav_order: 50
 title:  Karuppan Vararu
 topics: Karuppu, Swamy, Tamil, Karuppan, Vararu, KaruppannaSwamy, கருப்பசாமி, கருப்பன், வாரறு
