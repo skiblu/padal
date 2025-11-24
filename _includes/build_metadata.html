@@ -1,15 +1,24 @@
 {%- comment -%} Emit a single JSON-LD script with @graph containing the WebPage and (optionally) Song objects {%- endcomment -%}
 
+{%- if page.title -%}
+  {%- capture _headline -%}{{ page.title }} | {{ site.title }}{%- endcapture -%}
+{%- else -%}
+  {%- capture _headline -%}{{ site.title }}{%- endcapture -%}
+{%- endif -%}
+
+{%- capture _description -%}{{ (page.description | default: site.description) }}{%- endcapture -%}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "headline": {{ (page.title ? page.title | append: " | " | append: site.title : site.title) | jsonify }},
-      "author": { "@type":"Person", "name": {{ site.author | jsonify }} },
-      "description": {{ (page.description ? page.description : site.description) | jsonify }},
-      {% if site.featured-image %}"image": {{ site.featured-image | absolute_url | jsonify }},{% endif %}
+      "headline": {{ _headline | jsonify }},
+      "author": { "@type": "Person", "name": {{ site.author | jsonify }} },
+      "description": {{ _description | jsonify }}{% if site.featured-image %},{% endif %}
+      {%- if site.featured-image -%}
+      "image": {{ site.featured-image | absolute_url | jsonify }},{% endif %}
       "url": {{ page.url | absolute_url | jsonify }}
     }{% if page.lyrics_ta or page.lyrics_en %},{% endif %}
     {%- if page.lyrics_ta or page.lyrics_en -%}
@@ -17,14 +26,14 @@
       "@type": "Song",
       "name": {{ page.title | jsonify }},
       "lyrics": [
-        {%- if page.lyrics_ta %}
+        {%- if page.lyrics_ta -%}
         {
           "@type": "CreativeWork",
           "inLanguage": "ta",
           "text": {{ page.lyrics_ta | strip_newlines | jsonify }}
         }{%- endif -%}
         {%- if page.lyrics_en and page.lyrics_ta %},{%- endif -%}
-        {%- if page.lyrics_en %}
+        {%- if page.lyrics_en -%}
         {
           "@type": "CreativeWork",
           "inLanguage": "en",
