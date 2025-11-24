@@ -1,7 +1,7 @@
 ---
 parent_id: Sakthi
 nav_order: 6
-title: All Songs
+title: Sakthi Songs
 history: false
 lyrics_en: Amman, Sakthi, Durga, சக்தி, துர்கா, அம்மன், songs, devotional, lyrics
 ---

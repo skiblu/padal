@@ -1,7 +1,7 @@
 ---
 parent_id: Karuppar
 nav_order: 9
-title: All Songs
+title: Karuppar Songs
 history: false
 lyrics_en: Karuppar, songs, கருப்பசாமி, lyrics, devotional
 ---

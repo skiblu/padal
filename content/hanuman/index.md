@@ -1,7 +1,7 @@
 ---
 parent_id: Hanuman
 nav_order: 8
-title: All Songs
+title: Hanuman Songs
 history: false
 lyrics_en: Hanuman, Sloka(s), lyrics, songs, devotional, ஹனுமான், பாடல்கள்
 ---

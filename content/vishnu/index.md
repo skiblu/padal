@@ -1,7 +1,7 @@
 ---
 parent_id: Vishnu
 nav_order: 7
-title: All Songs
+title: Vishnu Songs
 history: false
 lyrics_en: Vishnu, songs, விஷ்ணு, devotional, lyrics, Venkatesa, Narayana, Govinda
 ---

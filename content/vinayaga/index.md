@@ -1,7 +1,7 @@
 ---
 parent_id: Vinayaga
 nav_order: 3
-title: All Songs
+title: Vinayaga Songs
 history: false
 lyrics_en: Vinayaga, Ganapathi, Ganesha, விநாயகர், கணேசன், songs, devotional, chants
 ---
