@@ -44,15 +44,44 @@ layout: sidebar
 
       {% comment %}
       Replace topics sourced from page.topics with a derived list that includes
-      page.lyrics_en and page.lyrics_ta (if present). Truncate long text for badges.
+      page.lyrics_en and page.lyrics_ta (split by comma into separate items).
       {% endcomment %}
 
-      {%- capture topics_raw -%}
-        {%- if page.lyrics_en -%}EN: {{ page.lyrics_en | strip_newlines | truncate: 60, '...' }}{%- endif -%}
-        {%- if page.lyrics_ta -%}{%- if page.lyrics_en -%};;{%- endif -%}TA: {{ page.lyrics_ta | strip_newlines | truncate: 60, '...' }}{%- endif -%}
-      {%- endcapture -%}
-      {%- assign topics_list = topics_raw | strip | split: ';;' -%}
-      {%- if topics_raw != '' and topics_list.size > 0 -%}
+      {%- assign topics_items = '' -%}
+      {%- comment -%} collect English parts (split by comma) {%- endcomment -%}
+      {%- if page.lyrics_en -%}
+        {%- assign _en = page.lyrics_en | strip_newlines | strip -%}
+        {%- assign _en_parts = _en | split: ',' -%}
+        {%- for p in _en_parts -%}
+          {%- assign part = p | strip | truncate: 60, '...' -%}
+          {%- if part != '' -%}
+            {%- if topics_items == '' -%}
+              {%- assign topics_items = part -%}
+            {%- else -%}
+              {%- assign topics_items = topics_items | append: ';;' | append: part -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- comment -%} collect Tamil parts (split by comma) {%- endcomment -%}
+      {%- if page.lyrics_ta -%}
+        {%- assign _ta = page.lyrics_ta | strip_newlines | strip -%}
+        {%- assign _ta_parts = _ta | split: ',' -%}
+        {%- for p in _ta_parts -%}
+          {%- assign part = p | strip | truncate: 60, '...' -%}
+          {%- if part != '' -%}
+            {%- if topics_items == '' -%}
+              {%- assign topics_items = part -%}
+            {%- else -%}
+              {%- assign topics_items = topics_items | append: ';;' | append: part -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- assign topics_list = topics_items | split: ';;' -%}
+      {%- if topics_list.size > 0 and topics_items != '' -%}
       <div class="d-flex flex-wrap" style="gap: .25rem;">
         {%- for t in topics_list -%}
           <span class="badge bg-light text-muted border topic-badge">{{ t | strip }}</span>
