@@ -14,14 +14,14 @@ layout: sidebar
   }
 </style>
 
+{% include build_metadata.html %}
+
 <!-- Reworked page header: icon at left, title + topics on the right (topics shown below title) -->
 <div class="d-flex justify-content-between align-items-start mb-3">
   <div class="d-flex align-items-start gap-3">
     <!-- Icon column -->
     <div style="flex:0 0 72px;">
       {%- assign img_key = page.parent_id | default: page.section -%}
-      <!-- larger circle to make icon more prominent -->
-      <!-- keep rounded circle and alignment always; only add bg/border when img_key exists -->
       <div class="rounded-circle d-flex align-items-center justify-content-center {% if img_key %}bg-light text-dark border{% endif %}" style="width:72px;height:72px;overflow:hidden;">
         {% if img_key %}
           <img src="/images/{{ img_key }}.png" alt="{{ img_key }}" width="48" height="48" style="display:block;object-fit:contain;" />
@@ -44,14 +44,23 @@ layout: sidebar
         {% endif %}
       </div>
 
-      {% if page.topics %}
+      {% comment %}
+      Replace topics sourced from page.topics with a derived list that includes
+      page.lyrics_en and page.lyrics_ta (if present). Truncate long text for badges.
+      {% endcomment %}
+
+      {%- capture topics_raw -%}
+        {%- if page.lyrics_en -%}EN: {{ page.lyrics_en | strip_newlines | truncate: 60, '...' }}{%- endif -%}
+        {%- if page.lyrics_ta -%}{%- if page.lyrics_en -%};;{%- endif -%}TA: {{ page.lyrics_ta | strip_newlines | truncate: 60, '...' }}{%- endif -%}
+      {%- endcapture -%}
+      {%- assign topics_list = topics_raw | strip | split: ';;' -%}
+      {%- if topics_raw != '' and topics_list.size > 0 -%}
       <div class="d-flex flex-wrap" style="gap: .25rem;">
-        {% assign topics_list = page.topics | split: ',' %}
-        {% for t in topics_list %}
+        {%- for t in topics_list -%}
           <span class="badge bg-light text-muted border topic-badge">{{ t | strip }}</span>
-        {% endfor %}
+        {%- endfor -%}
       </div>
-      {% endif %}
+      {%- endif -%}
     </div>
   </div>
 

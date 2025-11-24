@@ -1,0 +1,23 @@
+{% if page.lyrics_ta %}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Song",
+        "name": {{ page.title | jsonify }},
+        "lyrics": [
+            {
+                "@type": "CreativeWork",
+                "inLanguage": "ta",
+                "text": {{ page.lyrics_ta | strip_newlines | jsonify }}
+            }
+            {% if page.lyrics_en %},
+            {
+                "@type": "CreativeWork",
+                "inLanguage": "en",
+                "text": {{ page.lyrics_en | strip_newlines | jsonify }}
+            }
+            {% endif %}
+        ]
+    }
+</script>
+{% endif %}
