@@ -3,7 +3,7 @@ section: Sakthi
 nav_order: 50
 title: Chellatha Chella Mariyatha
 youtube_id: VUQMFfVO-Ts
-topics: Amman, Sakthi, Durga, Chellatha, Chella Mariyatha, செல்லத்தா, செல்ல, மாரியாத்தா
+lyrics_en: Amman, Sakthi, Durga, Chellatha, Chella Mariyatha, செல்லத்தா, செல்ல, மாரியாத்தா
 ---
 `செல்லாத்தா செல்ல மாரியாத்தா`\
 `எங்கள் சிந்தையில் வந்து அரை வினாடி நில்லாத்தா` (2)

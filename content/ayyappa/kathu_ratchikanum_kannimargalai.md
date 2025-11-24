@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Kathu Ratchikanum Kannimargalai
-topics: Ayyappa, Tamil, Song, Lyrics, Devotional, Kathu, Ratchikanum, Kannimargalai, காத்து, இரட்சிக்கணும், கன்னிமார்களை
+lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Kathu, Ratchikanum, Kannimargalai, காத்து, இரட்சிக்கணும், கன்னிமார்களை
 ---
 
 காத்து இரட்சிக்கணும் கன்னிமார்களை\

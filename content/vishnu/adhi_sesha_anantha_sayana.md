@@ -3,7 +3,7 @@ section: Vishnu
 nav_order: 50
 title: Adhi Sesha Anantha Sayana
 youtube_id: WbWjg12osts
-topics: Vishnu, Krishna, Bhakti, Adhi, Sesha, Anantha, Sayana, ஆதிசேஷா அனந்தசயனா
+lyrics_en: Vishnu, Krishna, Bhakti, Adhi, Sesha, Anantha, Sayana, ஆதிசேஷா அனந்தசயனா
 ---
 
 `ஆதிசேஷா அனந்தசயனா`\

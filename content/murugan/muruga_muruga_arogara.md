@@ -2,7 +2,7 @@
 section: Murugan
 nav_order: 50
 title: Muruga Muruga Arogara
-topics: Murugan, Padal, Tamil, Lyrics, Song, Muruga, Muruga, Arogara, முருகா, முருகா, அரோகரா
+lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Muruga, Muruga, Arogara, முருகா, முருகா, அரோகரா
 ---
 
 முருகா முருகா முருகா முருகா ... `அரகரோகரா` \

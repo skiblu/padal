@@ -4,7 +4,7 @@ nav_order: 94
 audio_id: 7FTywe4759
 audio_length: 36
 title: Arindhum Ariyamalum
-topics: Ayyappa, Arindhum, Arinthum, Ariyamalum, அறிந்தும், அறியாமலும்
+lyrics_en: Ayyappa, Arindhum, Arinthum, Ariyamalum, அறிந்தும், அறியாமலும்
 ---
 
 அறிந்தும், அறியாமலும், தெரிந்தும் தெரியாமலும்  நாங்கள்  செய்த \

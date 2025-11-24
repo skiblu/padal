@@ -3,7 +3,7 @@ section: Karuppar
 nav_order: 50
 title:  Enga Karuppasamy
 youtube_id: 1ZGdZFXY5pY
-topics: Enga, Karuppu, Swamy, எங்க, கருப்பசாமி
+lyrics_en: Enga, Karuppu, Swamy, எங்க, கருப்பசாமி
 ---
 
  

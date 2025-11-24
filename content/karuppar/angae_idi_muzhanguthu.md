@@ -4,7 +4,7 @@ nav_order: 50
 title:  Angae Idi Muzhanguthu
 audio_id: Hw38sk2d0
 audio_length: 193
-topics: Karuppu, Swamy, Tamil, அங்கே இடி முழங்குது, கருப்பசாமி
+lyrics_en: Karuppu, Swamy, Tamil, அங்கே இடி முழங்குது, கருப்பசாமி
 ---
 
 கட்டக்கருப்பு லிங்கம்\

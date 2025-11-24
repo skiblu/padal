@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 3
 title:  Vazhi Nadai Saranam
-topics: Vazhi, Nadai, Saranam, Ayyappa
+lyrics_en: Vazhi, Nadai, Saranam, Ayyappa
 ---
 
 | **Tamil Version** | **English Version** |

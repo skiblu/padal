@@ -3,7 +3,7 @@ section: Sakthi
 youtube_id: WnFrQ2uQUqg
 nav_order: 50
 title: Om Sakthi Om Sakthi Om
-topics: Amman, Durga, Om, Sakthi, Om, Sakthi, Om, ஓம்சக்தி, ஓம்சக்தி, ஓம்
+lyrics_en: Amman, Durga, Om, Sakthi, Om, Sakthi, Om, ஓம்சக்தி, ஓம்சக்தி, ஓம்
 ---
 
 `ஓம்சக்தி ஓம்சக்தி ஓம் - பராசக்தி ஓம்சக்தி ஓம்சக்தி ஓம்`\

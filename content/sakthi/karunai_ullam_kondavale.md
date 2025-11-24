@@ -3,7 +3,7 @@ section: Sakthi
 nav_order: 50
 title: Karunai Ullam Kondavale
 youtube_id: toiIrpEWXO0
-topics: Amman, Sakthi, Durga, Karunai, Ullam, Kondavale, கருணை, உள்ளம், கொண்டவளே
+lyrics_en: Amman, Sakthi, Durga, Karunai, Ullam, Kondavale, கருணை, உள்ளம், கொண்டவளே
 ---
 
 `கருணை உள்ளம் கொண்டவளே கருமாரியம்மா - உன்`\

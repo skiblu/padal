@@ -3,7 +3,7 @@ section: Ayyappa
 nav_order: 50
 title: Nee Indri Vazhvethu Ayyappa
 youtube_id: tDnjFH9bo5c
-topics: Ayyappa, Tamil, Song, Lyrics, Devotional, Nee, Indri, Vazhvethu, Ayyappa, ஐயப்பன்‌, நீ, இன்றி, வாழ்வேது, ஐயப்பா
+lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Nee, Indri, Vazhvethu, Ayyappa, ஐயப்பன்‌, நீ, இன்றி, வாழ்வேது, ஐயப்பா
 ---
 
 `நீ இன்றி வாழ்வேது ஐயப்பா`\

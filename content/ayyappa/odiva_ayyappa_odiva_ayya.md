@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Odiva Ayyappa Odiva Ayya
-topics: Ayyappa, Tamil, Song, Lyrics, Devotional, Odiva, Ayyappa, Odiva, Ayya,  ஓடிவா, ஐயப்பா, ஓடிவா, ஐயா
+lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Odiva, Ayyappa, Odiva, Ayya,  ஓடிவா, ஐயப்பா, ஓடிவா, ஐயா
 ---
 `ஓடிவா ஐயப்பா ஓடிவா ஐயா`\
 `பஜனை கூட்டத்துக்கு ஓடிவா ஐயா`(2)

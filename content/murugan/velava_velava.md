@@ -2,7 +2,7 @@
 section: Murugan
 nav_order: 50
 title:  Velava Velava
-topics: Murugan, Velava, Velava, வேலவா, வேலவா
+lyrics_en: Murugan, Velava, Velava, வேலவா, வேலவா
 ---
 
 வேலவா வேலவா வேல்முருகா வா வா

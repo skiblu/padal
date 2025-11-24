@@ -3,7 +3,7 @@ section: Sakthi
 nav_order: 50
 title: Annaiyae Varuga
 youtube_id: 2jqqkHEueK8
-topics: Amman, Sakthi, Durga, Annaiyae, Varuga, அன்னை, வருக
+lyrics_en: Amman, Sakthi, Durga, Annaiyae, Varuga, அன்னை, வருக
 ---
 
 `அன்னையே வருக அமுதே வருக`\

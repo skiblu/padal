@@ -2,7 +2,7 @@
 section: Karuppar
 nav_order: 50
 title:  Vararaiya Vararu (Short)
-topics: Karuppu, Swamy, Tamil, Vararaiya, Vararu, Karuppasamy, கருப்பசாமி, வாரரையா, வாரறு
+lyrics_en: Karuppu, Swamy, Tamil, Vararaiya, Vararu, Karuppasamy, கருப்பசாமி, வாரரையா, வாரறு
 ---
 
 `வாராரையா வாராரு.. நம்ம கருப்பசாமி வாராரு(2)`\

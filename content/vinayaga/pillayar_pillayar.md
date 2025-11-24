@@ -2,7 +2,7 @@
 section: Vinayaga
 nav_order: 50
 title:  Pillayar Pillayar
-topics: Vinayaga, Pillayar, Pillayar, பிள்ளையார், பிள்ளையார் 
+lyrics_en: Vinayaga, Pillayar, Pillayar, பிள்ளையார், பிள்ளையார் 
 ---
 
 `பிள்ளையார் பிள்ளையார் பெருமை வாய்ந்த பிள்ளையார்`\

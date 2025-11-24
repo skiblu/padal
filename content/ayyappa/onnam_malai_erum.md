@@ -3,7 +3,7 @@ section: Ayyappa
 nav_order: 50
 title: Onnam Malai Erum
 youtube_id: aHkI6vDWK7o
-topics: Ayyappa, Tamil, Song, Onnam, Malai, Erum, ஒன்னம், மலை, ஏறும்
+lyrics_en: Ayyappa, Tamil, Song, Onnam, Malai, Erum, ஒன்னம், மலை, ஏறும்
 ---
 
 `சரணம் ஐயப்பா சாமி சரணம் ஐயப்பா `\

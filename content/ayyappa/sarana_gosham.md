@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 2
 title:  108 Sarana Gosham
-topics: Ayyappa, Sarana, Gosham
+lyrics_en: Ayyappa, Sarana, Gosham
 ---
 
 Add `சரணம் ஐயப்பா/Saranam Ayyappa` at the end of each gosham

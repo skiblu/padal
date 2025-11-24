@@ -4,7 +4,7 @@ nav_order: 50
 audio_id: 73hsdG8TY
 audio_length: 119
 title: Sannathiyil Kattum Katti
-topics: Ayyappa, Sannathiyil, Kattum, Katti, சன்னதியில், கட்டும், கட்டி
+lyrics_en: Ayyappa, Sannathiyil, Kattum, Katti, சன்னதியில், கட்டும், கட்டி
 ---
 
 

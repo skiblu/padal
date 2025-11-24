@@ -2,7 +2,7 @@
 section: Murugan
 nav_order: 50
 title:  Vel Vel Vel Muruga
-topics: Murugan, Vel, Vel, Muruga
+lyrics_en: Murugan, Vel, Vel, Muruga
 ---
 
 வேல் வேல் வேல் வேல் வேல்முருகா வேல்!\

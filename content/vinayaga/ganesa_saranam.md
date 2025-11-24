@@ -2,7 +2,7 @@
 section: Vinayaga
 nav_order: 50
 title:  Ganesa Saranam
-topics: Vinayaga, Ganesa, Saranam, கணேச, சரணம்
+lyrics_en: Vinayaga, Ganesa, Saranam, கணேச, சரணம்
 ---
 `கணேச சரணம் சரணம் கணேசா`\
 `கணேச சரணம் சரணம் கணேசா`

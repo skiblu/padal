@@ -3,7 +3,7 @@ section: Ayyappa
 nav_order: 50
 title: Ponal Sabarimalai
 youtube_id: QAq8s4-k7tc
-topics: Ayyappa, Ponal, Sabarimalai, பொனல், சபரிமலை
+lyrics_en: Ayyappa, Ponal, Sabarimalai, பொனல், சபரிமலை
 ---
 
 `போனால் சபரிமலை கேட்டால் சரண‌ கோஷம்`\

@@ -2,7 +2,7 @@
 section: Sakthi
 nav_order: 1
 title: Ashtothram Durga
-topics: Amman, Sakthi, Durga, Ashtothram, 108, துர்கா, அஷ்டோத்திரம்
+lyrics_en: Amman, Sakthi, Durga, Ashtothram, 108, துர்கா, அஷ்டோத்திரம்
 ---
 
 1. ஓம் தேவ்யை நம

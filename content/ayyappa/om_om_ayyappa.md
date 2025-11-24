@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Om Om Ayyappa
-topics: Ayyappa, Om, Om, Ayyappa, ஓம், ஓம், ஐயப்பா
+lyrics_en: Ayyappa, Om, Om, Ayyappa, ஓம், ஓம், ஐயப்பா
 ---
 
 ஓம் ஓம் அய்யப்பா\

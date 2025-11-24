@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Arokara Saranam Ayyappa
-topics: Ayyappa, Tamil, Arokara, Saranam, Ayyappa, அரோகர, சரணம், அய்யப்பா, பழனியிலே, முருகனுக்கு, அரகரோகரா
+lyrics_en: Ayyappa, Tamil, Arokara, Saranam, Ayyappa, அரோகர, சரணம், அய்யப்பா, பழனியிலே, முருகனுக்கு, அரகரோகரா
 ---
 
 `பழனியிலே முருகனுக்கு அரகரோகரா`\

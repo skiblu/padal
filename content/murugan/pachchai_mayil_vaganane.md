@@ -2,7 +2,7 @@
 section: Murugan
 nav_order: 50
 title: Pachchai Mayil vaganane
-topics: Murugan, Pachchai, Mayil, vaganane
+lyrics_en: Murugan, Pachchai, Mayil, vaganane
 ---
 
 `பச்சை மயில் வாகனனே சிவ`\

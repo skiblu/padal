@@ -2,7 +2,7 @@
 section: Murugan
 nav_order: 50
 title:  Subramaniam Subramaniam
-topics: Murugan, Subramaniam, Subramaniam, சுப்ரமண்யம், சுப்ரமண்யம்
+lyrics_en: Murugan, Subramaniam, Subramaniam, சுப்ரமண்யம், சுப்ரமண்யம்
 ---
 {% capture text %}
 `சுப்ரமண்யம் சுப்ரமண்யம் `\

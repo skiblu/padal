@@ -2,7 +2,7 @@
 section: Murugan
 nav_order: 50
 title: Om Enum Manthiram
-topics: Murugan, Padal, Tamil, Lyrics, Song, Om, Enum, Manthiram, ஓம், எண்ணும், மந்திரம்
+lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Om, Enum, Manthiram, ஓம், எண்ணும், மந்திரம்
 ---
 
 வெற்றிவேல் முருகனுக்கு அரோகரா\

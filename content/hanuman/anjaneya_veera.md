@@ -2,7 +2,7 @@
 section: Hanuman
 nav_order: 50
 title:  Anjaneya Veera
-topics: Hanuman, Tamil, Song, Lyrics, Anjaneya, Veera
+lyrics_en: Hanuman, Tamil, Song, Lyrics, Anjaneya, Veera
 ---
 
 ஆஞ்சநேய வீரா. அனுமந்த சூரா..\

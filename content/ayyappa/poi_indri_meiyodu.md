@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Poi Indri Meiyodu
-topics: Ayyappa, Poi, Indri, Meiyodu, பொய, இன்றி, மெய்யோடு 
+lyrics_en: Ayyappa, Poi, Indri, Meiyodu, பொய, இன்றி, மெய்யோடு 
 ---
 
 பொய் இன்றி மெய்யோடு

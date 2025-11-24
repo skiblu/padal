@@ -3,7 +3,7 @@ section: Vinayaga
 nav_order: 50
 title:  Omkara Ganapathiye
 youtube_id: tuZr_5dgR2s
-topics: Vinayaga, Ganesa, Omkara, Ganapathiye, ஓம்கார, கணபதியே
+lyrics_en: Vinayaga, Ganesa, Omkara, Ganapathiye, ஓம்கார, கணபதியே
 ---
 
 

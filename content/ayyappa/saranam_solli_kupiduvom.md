@@ -4,7 +4,7 @@ nav_order: 50
 title: Saranam Solli Kupiduvom
 audio_id: ud73h39djD
 audio_length: 119
-topics: Ayyappa, Tamil, Song, Lyrics, Devotional, Saranam, Solli, Kupiduvom
+lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Saranam, Solli, Kupiduvom
 ---
 சரணம் சொல்லி கூப்பிடுவோம்... சபரிமலை வாசனை...\
 வரணும் என்று அழைத்திடுவோம்...வரம் கொடுக்கும் ஈசனை...

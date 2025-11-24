@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Kallum Mullum Nirainja
-topics: Ayyappa, Tamil, Kallum, Mullum, Nirainja, கல்லும், முள்ளும், நிறைந்த
+lyrics_en: Ayyappa, Tamil, Kallum, Mullum, Nirainja, கல்லும், முள்ளும், நிறைந்த
 ---
 
 `கல்லும் முள்ளும் நிறைஞ்ச காடு சபரியினு சொன்னாங்க`\

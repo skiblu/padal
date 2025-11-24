@@ -2,7 +2,7 @@
 section: Vinayaga
 nav_order: 50
 title:  Prabho Ganapathe
-topics: Vinayaga, Prabho, Ganapathe, ப்ரபோ, கணபதே
+lyrics_en: Vinayaga, Prabho, Ganapathe, ப்ரபோ, கணபதே
 ---
 `ப்ரபோ கணபதே பரிபூரண வாழ்வருள்வாயே`\
 `ப்ரபோ கணபதே பரிபூரண வாழ்வருள்வாயே`\

@@ -3,7 +3,7 @@ section: Sakthi
 nav_order: 50
 title: Karpoora Nayagiyae
 youtube_id: JhaJL4ZdlgE
-topics: Amman, Sakthi, Durga, Karpoora, Nayagiyae, கர்பூரா, நாயகியே
+lyrics_en: Amman, Sakthi, Durga, Karpoora, Nayagiyae, கர்பூரா, நாயகியே
 ---
 
 கற்பூர நாயகியே ! கனகவல்லி,\

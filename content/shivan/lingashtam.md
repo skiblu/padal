@@ -3,7 +3,7 @@ section: Shivan
 nav_order: 50
 title: Lingashtam
 youtube_id: oensAGheni4
-topics: Shivan, Nama, Shivaya, Sivanae, Lingashtam, லிங்காஷ்டகம், சிவனே
+lyrics_en: Shivan, Nama, Shivaya, Sivanae, Lingashtam, லிங்காஷ்டகம், சிவனே
 ---
 ப்ரம்ம முராரியார் போற்றிடும் லிங்கம்\
 சிறிதும் களங்கம் இல்லா  சிவலிங்கம்\

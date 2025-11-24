@@ -2,7 +2,7 @@
 section: Ayyappa Mala
 nav_order: 2
 title: Mala Shuddhi Process
-topics: Ayyappa, Mala, Shuddhi, Swamy
+lyrics_en: Ayyappa, Mala, Shuddhi, Swamy
 ---
 
 **Mala Shuddhi Process**

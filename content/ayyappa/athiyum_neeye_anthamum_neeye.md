@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Athiyum Neeye Anthamum Neeye
-topics: Ayyappa, Devotional, Lyrics, Athiyum, Neeye, Anthamum, Neeye, அதியும், நீயே, அந்தமும், நீயே
+lyrics_en: Ayyappa, Devotional, Lyrics, Athiyum, Neeye, Anthamum, Neeye, அதியும், நீயே, அந்தமும், நீயே
 ---
 
 `ஆதியும் நீயே அந்தமும் நீயே`\

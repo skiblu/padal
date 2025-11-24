@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Saami Saami Ayyappa
-topics: Ayyappa, Saami, Ayyappa, சாமி, சாமி, ஐயப்பா
+lyrics_en: Ayyappa, Saami, Ayyappa, சாமி, சாமி, ஐயப்பா
 ---
 
 1. `சாமி சாமி ஐயப்பா சபரிமலை ஐயப்பா`\

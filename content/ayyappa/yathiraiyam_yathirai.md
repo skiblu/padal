@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Yathiraiyam Yathirai
-topics: Ayyappa, Yathiraiyam, Yathirai, யாத்திரையும், யாத்திரை
+lyrics_en: Ayyappa, Yathiraiyam, Yathirai, யாத்திரையும், யாத்திரை
 ---
 சுவாமியே…  `சரணம் ஐயப்பா`\
 சத்குரு நாதனே…  `சரணம் ஐயப்பா`

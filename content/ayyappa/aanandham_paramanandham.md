@@ -3,7 +3,7 @@ section: Ayyappa
 nav_order: 50
 title: Aanandham Paramanandham
 youtube_id: Xn5XfdvjGSA
-topics: Ayyappa, Tamil, Song, Lyrics, Devotional, Aanandham, Paramanandham, ஆனந்தம்‌, பரமானந்தம்‌, ஐயப்பன்‌, தரிசனம்‌
+lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Aanandham, Paramanandham, ஆனந்தம்‌, பரமானந்தம்‌, ஐயப்பன்‌, தரிசனம்‌
 ---
 
 `ஆனந்தம்‌ பரமானந்தம்‌ ஐயப்ப தரிசனம்‌`\

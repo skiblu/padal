@@ -3,7 +3,7 @@ section: Sakthi
 nav_order: 50
 title: Thaye Karumari Engal
 youtube_id: uIeI5_UNTU0
-topics: Amman, Sakthi, Durga, Thaye, Karumari, Engal, தாயே, கருமாரி, எங்கள்
+lyrics_en: Amman, Sakthi, Durga, Thaye, Karumari, Engal, தாயே, கருமாரி, எங்கள்
 ---
 
 `தாயே கருமாரி எங்கள் தாயே கருமாரி`\

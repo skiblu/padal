@@ -2,7 +2,7 @@
 section: Murugan
 nav_order: 50
 title: Enappanae Enayyanae
-topics: Murugan, Padal, Tamil, Lyrics, Song, Enappanae, Enayyanae, எணப்பனே, எனையனே
+lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Enappanae, Enayyanae, எணப்பனே, எனையனே
 ---
 
 என்னப்பனே என்னய்யனே கந்தப்பனே கந்த காருண்யனே \

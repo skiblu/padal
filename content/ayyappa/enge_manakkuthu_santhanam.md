@@ -3,7 +3,7 @@ section: Ayyappa
 nav_order: 50
 youtube_id: ro2yfPblisY
 title: Enge Manakkuthu Santhanam
-topics: Ayyappa, Enge, Manakkuthu, Santhanam, எங்கே, மண‌க்குது, சந்தனம்
+lyrics_en: Ayyappa, Enge, Manakkuthu, Santhanam, எங்கே, மண‌க்குது, சந்தனம்
 ---
 `எங்கே மணக்குது சந்தனம் எங்கே மணக்குது`\
 `ஐயப்ப சுவாமி கோவிலிலே சந்தனம் மணக்குது`

@@ -2,7 +2,7 @@
 section: Vinayaga
 nav_order: 1
 title:  Ashtothram Vinayaga
-topics: Vinayaga, Ashtothram, 108
+lyrics_en: Vinayaga, Ashtothram, 108
 ---
 
 1. ஓம் விநாயகாய நம

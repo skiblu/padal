@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Kannimoola Ganapathiyai
-topics: Ayyappa, Kannimoola, Ganapathiyai, கன்னிமூல, கணபதியை
+lyrics_en: Ayyappa, Kannimoola, Ganapathiyai, கன்னிமூல, கணபதியை
 ---
 
 

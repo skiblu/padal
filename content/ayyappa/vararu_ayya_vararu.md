@@ -3,7 +3,7 @@ section: Ayyappa
 nav_order: 50
 title: Vararu Ayya Vararu
 youtube_id: jmV9Y3i4Spw
-topics: Ayyappa, Tamil, Song, Vararu, Ayya, வரரு, அய்யா
+lyrics_en: Ayyappa, Tamil, Song, Vararu, Ayya, வரரு, அய்யா
 ---
 
 வாராரய்யா வாராரே வழிநடையா வாராரே\

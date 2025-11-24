@@ -4,7 +4,7 @@ nav_order: 90
 audio_id: 7hd63diT7
 audio_length: 60
 title: Brahmarpanam
-topics: Ayyappa, Brahmarpanam
+lyrics_en: Ayyappa, Brahmarpanam
 ---
 
 

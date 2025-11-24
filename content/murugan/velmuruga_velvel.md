@@ -2,7 +2,7 @@
 section: Murugan
 nav_order: 50
 title: VelMuruga VelVel
-topics: Murugan, VelMuruga, VelVel
+lyrics_en: Murugan, VelMuruga, VelVel
 ---
 
 வேல்முருகா வேல்முருகா வேல்முருகா வேல்வேல்\

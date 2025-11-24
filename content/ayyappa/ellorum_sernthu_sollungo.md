@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Ellorum Sernthu Sollungo
-topics: Ayyappa, Ellorum, Sernthu, Sollungo
+lyrics_en: Ayyappa, Ellorum, Sernthu, Sollungo
 ---
 
 

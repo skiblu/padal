@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Andha Varar Ayyappa
-topics: Ayyappa, Samigale, Saranam, sollungo, சாமிகலே, சரணம், சொல்லுங்கோ
+lyrics_en: Ayyappa, Samigale, Saranam, sollungo, சாமிகலே, சரணம், சொல்லுங்கோ
 ---
 
 `அந்தா வாறார் ஐயப்பா, இந்தா வாறார் ஐயப்பா,`\

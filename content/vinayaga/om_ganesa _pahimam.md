@@ -2,7 +2,7 @@
 section: Vinayaga
 nav_order: 50
 title:  Om Ganesa Pahimam
-topics: Vinayaga, Om, Ganesa, Pahimam, ஓம், கணேச, பாஹிமாம்
+lyrics_en: Vinayaga, Om, Ganesa, Pahimam, ஓம், கணேச, பாஹிமாம்
 ---
 ஓம் கணேச ஓம் கணேச\
 ஓம் கணேச பாஹிமாம்\

@@ -2,7 +2,7 @@
 section: Murugan
 nav_order: 50
 title: Anbarukku Anbane
-topics: Murugan, Anbarukku, Anbane
+lyrics_en: Murugan, Anbarukku, Anbane
 ---
 
 அன்பருக்கு அன்பனே நீ வாவா ஷண்முகா\

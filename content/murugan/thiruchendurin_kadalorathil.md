@@ -2,7 +2,7 @@
 section: Murugan
 nav_order: 50
 title: Thiruchendurin Kadalorathil
-topics: Murugan, Padal, Tamil, Lyrics, Song, Muruga, Thiruchendurin, Kadalorathil, முருகா, திருச்செந்தூரின், கடலோரத்தில்
+lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Muruga, Thiruchendurin, Kadalorathil, முருகா, திருச்செந்தூரின், கடலோரத்தில்
 ---
 
 `திருச்செந்தூரின் கடலொரத்தில் செந்தில் நாதன் அரசாங்கம் `(2)\

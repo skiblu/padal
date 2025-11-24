@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Kadu Malai Kadanthu Vanthom
-topics: Ayyappa, Kadu, Malai, Kadanthu, Vanthom, காடு, மலை, கடந்து, வந்தோம்
+lyrics_en: Ayyappa, Kadu, Malai, Kadanthu, Vanthom, காடு, மலை, கடந்து, வந்தோம்
 ---
 
 ஐயப்பா... சாமி ஐயப்பா...\

@@ -2,7 +2,7 @@
 section: Karuppar
 nav_order: 50
 title:  Karuppan Vararu
-topics: Karuppu, Swamy, Tamil, Karuppan, Vararu, KaruppannaSwamy, கருப்பசாமி, கருப்பன், வாரறு
+lyrics_en: Karuppu, Swamy, Tamil, Karuppan, Vararu, KaruppannaSwamy, கருப்பசாமி, கருப்பன், வாரறு
 ---
 
 `கருப்பன் வராரு கருப்பண்ண சாமி வராரு (2)`

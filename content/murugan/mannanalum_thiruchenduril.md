@@ -2,7 +2,7 @@
 section: Murugan
 nav_order: 50
 title:  Mannanalum thiruchenduril
-topics: Murugan, Mannanalum, thiruchenduril, மண்ணானாலும், திருச்செந்தூரில்
+lyrics_en: Murugan, Mannanalum, thiruchenduril, மண்ணானாலும், திருச்செந்தூரில்
 ---
  
 [ `மண்ணானாலும் திருச்செந்தூரில் மண்ணாவேன்`\

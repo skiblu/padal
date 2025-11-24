@@ -2,7 +2,7 @@
 section: Ayyappa Mala
 nav_order: 5
 title:  Ayyappa Swamy Titles
-topics: Ayyappa, Titles, Swamy
+lyrics_en: Ayyappa, Titles, Swamy
 ---
 
 The following are the various titles given to persons who are taking ayyappa swamy deeksha depending on the number of times they are taking the deeksha. The titles are symbolic for the 18 steps indicating the 18 years. Once the cycle completes the nineteenth year onwards it is counted from one again i.e the nineteenth year swamy is a kanne swamy again.

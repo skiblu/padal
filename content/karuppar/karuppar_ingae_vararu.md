@@ -3,7 +3,7 @@ section: Karuppar
 nav_order: 50
 title: Karuppar Ingae Vararu
 youtube_id: ixM4xzI4BV0
-topics: Karuppu, Karuppar, Swamy, Tamil, 
+lyrics_en: Karuppu, Karuppar, Swamy, Tamil, 
 ---
 `வாராரய்யா வாராரு`\
 `கருப்பரிங்கே வாராரு`\

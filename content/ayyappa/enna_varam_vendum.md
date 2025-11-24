@@ -2,7 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Enna Varam Vendum
-topics: Ayyappa, Enna, Varam, Vendum, என்ன‌, வரம், வேண்டும்
+lyrics_en: Ayyappa, Enna, Varam, Vendum, என்ன‌, வரம், வேண்டும்
 ---
 
 என்ன‌ வரம் வேண்டும் கேளுங்கள் – சபரி \

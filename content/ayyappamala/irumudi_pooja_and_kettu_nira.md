@@ -2,7 +2,7 @@
 section: Ayyappa Mala
 nav_order: 3
 title: Irumudi Pooja and Kettu Nira
-topics: Ayyappa
+lyrics_en: Ayyappa
 ---
 Below you can find general details about the process of Irumudi Pooja and Kettu Nira. Please check / follow the procedures mentioned by your Guruswami.
 

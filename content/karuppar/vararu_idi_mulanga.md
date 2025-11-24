@@ -3,7 +3,7 @@ section: Karuppar
 nav_order: 50
 title:  Vararu Idi Mulanga
 youtube_id: Qh8_RwqjNYs
-topics: Karuppu, Swamy, Tamil, Karuppan, Vararu, Vararu, Idi, Mulanga
+lyrics_en: Karuppu, Swamy, Tamil, Karuppan, Vararu, Vararu, Idi, Mulanga
 ---
 வாராரு இடி முழங்க\
 கருப்பசாமி வாராரு இடி முழங்க\

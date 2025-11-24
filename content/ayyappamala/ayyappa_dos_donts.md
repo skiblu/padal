@@ -2,7 +2,7 @@
 section: Ayyappa Mala
 nav_order: 1
 title: Ayyappa Dos and Don'ts
-topics: Ayyappa
+lyrics_en: Ayyappa
 ---
 Ayyappa Deeksha or Ayyappa Vratham is a religious observation done as an offering to Lord Ayyappa following the rules & regulations of utmost celibacy (as practiced by Brahmacharis in good olden days).  It is usually observed for 41 days (or 21 or 11 days).
 
