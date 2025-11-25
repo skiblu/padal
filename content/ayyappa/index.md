@@ -1,6 +1,6 @@
 ---
 parent_id: Ayyappa
-nav_order: 10
+nav_order: 9
 title: Ayyappa Songs
 history: false
 lyrics_en: Ayyappa, Sloka(s), lyrics, songs, devotional, Manikandan, Sastha
