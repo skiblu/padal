@@ -5,6 +5,8 @@ title: Chellatha Chella Mariyatha
 youtube_id: VUQMFfVO-Ts
 lyrics_en: Amman, Sakthi, Durga, Chellatha, Chella Mariyatha, செல்லத்தா, செல்ல, மாரியாத்தா
 ---
+
+{% capture text %}
 `செல்லாத்தா செல்ல மாரியாத்தா`\
 `எங்கள் சிந்தையில் வந்து அரை வினாடி நில்லாத்தா` (2)
 
@@ -38,3 +40,42 @@ lyrics_en: Amman, Sakthi, Durga, Chellatha, Chella Mariyatha, செல்லத
 `எங்கள் சிந்தையில் வந்து அரை வினாடி நில்லாத்தா`\
 `ஆதி சக்தி மாதா கருமாரி மாதா`\
 `எங்கள் ஆதி சக்தி மாதா கருமாரி மாதா`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Sellaatha Sella Mariyaatha`\
+`Engal Sindhaiyil Vandhu Arai Vinaadi Nillaatha` (2)
+
+Kannaatha Unnai Kaanaatta\
+Indha Kannalirundhu Enna Punniyam Sollaatha\
+Undhan Perumaiyai Indha Ulagukku Eduthu Paadaatta\
+Indha Jenmam Eduthu Enna Payanendru Solladi Neeyaatha
+
+(`Sellaatha`)
+
+Thennaarath Thoppinile Thenkaayap Parichikittu\
+Thennaarath Thoppinile Thenkaayap Parichikittu\
+Theedi Vandhom Undhanaye Sinnaatha - Naangal\
+Theedi Vandhom Undhanaye Sinnaatha\
+Nee Ilaneera Edukkittu Enga Kurai Keattuputtu\
+Ilaneera Edukkittu Enga Kurai Keattuputtu\
+Valamana Vaazhvu Kodu Mariyaatha\
+Nalla Vazhi Thannaye Kaattuividu Mariyaatha
+
+(`Sellaatha`)
+
+Pasumpala Karandhukittu Karandhapala Edukkittu\
+Puttrinile Oottra Vandhom Mariyaatha\
+Naangal Bakthiyudan Oottra Vandhom Mariyaatha\
+Nee Paambaga Maari Adhai Paangaga Kuditthuvittu\
+Thaanaga Aadiva Nee Mariyaatha\
+Undhan Perumaiyai Indha Ulagukku Eduthu Paadaatta\
+Indha Jenmam Eduthu Enna Payanendru Solladi Neeyaatha
+
+`Sellaatha Sella Mariyaatha`\
+`Engal Sindhaiyil Vandhu Arai Vinaadi Nillaatha`\
+`Aadhi Sakthi Maatha Karumari Maatha`\
+`Engal Aadhi Sakthi Maatha Karumari Maatha`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

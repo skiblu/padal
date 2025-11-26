@@ -7,6 +7,7 @@ lyrics_en: Ayyappa, thannanna, dhenam, saranam, ayyappa
 lyrics_ta: ஐயப்பா, தன்னன்னா, தினம், சரணம், ஐயப்பா
 ---
 
+{% capture text %}
 
 பால் அபிஷேகம்- `சுவாமிக்கே`\
 நெய் அபிஷேகம்- `சுவாமிக்கே`\
@@ -95,3 +96,97 @@ lyrics_ta: ஐயப்பா, தன்னன்னா, தினம், சர
 சரணம் ஐயப்பா `சரணம் ஐயப்பா` [2]
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+
+paal abhishaekam- `swaamikkae`\
+ney abhishaekam- `swaamikkae`\
+malar abhishaekam- `swaamikkae`\
+theen abhishaekam- `swaamikkae`\
+sandhana abhishaekam- `swaamikkae`\
+avalum malarum – `swaamikkae`\
+muththirai thaengaai – `swaamikkae`\
+karpoora dheepam – `swaamikkae`\
+kaani ponnu – `swaamikkae`\
+ellaam ellaam – `swaamikkae`
+
+`thannannaa dhinam thannannaa dhinam`\
+`saranam ayyappa … saranam ayyappa` (2)
+
+vizhiyaavum oliyaana guruvae en suvaami\
+unai paadum uyir naadham saranam ayy yappa
+
+vazhiyaavum thunnaiyaaga varuginndra saasthaa\
+manamae un malar peedam saranam ayy yappa
+
+suthththa sudar maniyae – `ayyappa`\
+bakthi pasum kaniyae – `ayyappa`\
+pithththa paurnnaami yae – `ayyappa`\
+sithththa kulir paniyae – `ayyappa`\
+
+saranam ayy yappa- `suvaami ayyappa`\
+saranam ayy yappa- `suvaami ayyappa` (thannannaa dhinam)
+
+aayiram kodi sooriyan koodi\
+saerginndra thaedhi makara maa jothi\
+theepaththai thaangum thiriyinai poala\
+aiyyanai sumandhanaen anbu nenjaalae\
+moolamum enna naannariyaen – saami ayyappa\
+mudiivugal enna naannariyaen – saranam ayyappa\
+vaazhginndra vaazhvu onndru mattum ayy yappan
+
+arul ena nannkarivaaen\
+arul vizhi malar mugam\
+adhil endhan mana sugam\
+isai enum aezhussvaram\
+enaakkaadhu pugazh tharum\
+manikaannda mandhiram\
+ulagil nirandharam
+
+saranam ayy yappa- `suvaami ayyappa`\
+saranam ayy yappa- `suvaami ayyappa` (thannannaa dhinam)
+
+harihara sudhanae arulmugu thavamae\
+nandhan vannanae vaa vaa – saami pon ayyappa – aiyyanae pon ayyappa
+
+kanioru mugamae kiliarru karamae\
+kaliyuga vannanae vaa vaa – saami pon ayyappa – aiyyanae
+
+pon ayyappa bakthi thaamarai mukthi thaen thuli thiththippaagiyath ae\
+sithththadhaal adhan piththaal dhinam kaththi kooviyath ae
+
+saami thindhakadhom, ayyappa thindhakadhom- saami thindhakadhom, ayyappa thindhakadhom\
+vinnil illaadha vinnaiyara thiruvae\
+mannil unndaana manikaannda guruvae\
+`suvaamiyae……….ai.. saranam ayyappa`
+
+gendai kottavudan singi thatta\
+adhu andham thottu bagirandha mutta undhan
+
+anbu mottu vida thunbam vittu vida\
+innum kattu ppada inbam vattamida
+
+shiva shiva saivamum hari hari vainnamum\
+iru inam valam varum azhagiya thiruththalam\
+oru malaiyae. guru malaiyae. arivaai\
+adhai arindhaal thuvar illaiyae podhuvvaai\
+shivan maganae. thiru oliyaai. varuvaai\
+harisudhhaanae anudhinamum arul tharuvaai…….\
+`suvaamiyae……….ai.. saranam ayyappa`
+
+saami appaa – `ayyappa`\
+saranam appaa – `ayyappa`\
+bandhal araajaa – `ayyappa`\
+bambaa vaasaa – `ayyappa`
+
+suvaami yae `ayyappo`\
+ayyappo `suvaami yae ` [2]
+
+thannannaa dhinam thannannaa dhinam\
+saranam ayyappa `saranam ayyappa` [2]
+
+`suvaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

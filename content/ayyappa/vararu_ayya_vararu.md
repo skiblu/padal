@@ -7,6 +7,7 @@ lyrics_en: Ayyappa, Tamil, Song, Vararu, Ayya, Vazhinadaya, vararu
 lyrics_ta: ஐயப்பா, தமிழ், பாடல், வாரரு, அய்யா, வழிநடைய, வாரரு
 ---
 
+{% capture text %}
 வாராரய்யா வாராரே வழிநடையா வாராரே\
 வழிநடையாய் வாராரே பெருவழியில வாராரே \
 பெருவழியில வாராரே பேரின்பம் தாராரே
@@ -50,3 +51,52 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், வாரரு
 
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+vaaraarayyaa vaaraarae vazhinadaiyaa vaaraarae\
+vazhinadaiyaai vaaraarae peruvaziyila vaaraarae\
+peruvaziyila vaaraarae paerinbam thaaraarae
+
+acchan koavil arasanum aadippaadi vaaraarae\
+aariyangaavu aiyyaavumae aananndhamaai vaaraarae\
+kulaththuppuzhai paalanumae kuraigal theerkka vaaraarae
+
+erumaeli saasthhaavumae aegaandhamaai vaaraarae\
+aegaandhamaai vaaraarae engal dheyvam vaaraarae\
+periyaana vattaththula perumaallum vaaraarae\
+siriyaana vattaththula sivanodum vaaraarae
+
+kaalaaikatti naadhanumae vaelai theerkka vaaraarae\
+azhudhaiyil kullichchipputtu hariharanum vaaraarae\
+hariharanum vaaraarae ayyappanum vaaraarae
+
+karimalaiyin aeththaththilae kannnan magan vaaraarae\
+kannnan magan vaaraarae karuppanoada vaaraarae
+
+bambaiyil kullichchipputtu baalakanum vaaraarae\
+baalakanum vaaraarae pandhalandharasan vaaraarae
+
+neelimalai aeththaththilae nikkaamalae vaaraarae\
+nikkaamalae vaaraarae brammacchaari vaaraarae
+
+appaachchi maedaeari hariharanum vaaraarae\
+hariharanum vaaraarae ayyappanum vaaraarae
+
+sabarimalai naadhanumae sabalam poakka vaaraarae\
+sabalam poakka vaaraarae saasthhaavum vaaraarae
+
+padinaettu padiyaeari saasthhaavum vaaraarae\
+villeduththu ambeduththu vaettaiyaadi vaaraarae\
+vaettaiyaadi vaaraarae viramanikaanndan vaaraarae
+
+ayyappa bajanaikkuththaan aananndhamaai vaaraarae\
+vandhavarrai vaazhthdidavae karunaiyoadu vaaraarae
+
+`vaaraarayyaa vaaraarae vazhinadaiyaa vaaraarae `(2)
+
+
+`swaamiyae... saranam ayyappaa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

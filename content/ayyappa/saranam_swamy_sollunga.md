@@ -6,6 +6,7 @@ lyrics_en: Ayyappa, Tamil, Saranam, Swamy, Sollunga
 lyrics_ta: ஐயப்பா, தமிழ், சரணம், ஸ்வாமி, சொல்லுங்க
 ---
 
+{% capture text %}
 `சரணம் சாமி. சரணம் சாமி. என்று சொல்லுங்க`\
 `அவன் சன்னதியில் பரவசமாய் உருகி நில்லுங்க`
 
@@ -30,3 +31,33 @@ lyrics_ta: ஐயப்பா, தமிழ், சரணம், ஸ்வாம
 
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`saranam saami. saranam saami. endru sollunga`\
+`avan sannadhiyil paravasaamaai urugi nillunga`
+
+maranam bayam endrum illai mayangida vaennndaam\
+malaiyaeari senndridavae dhayangida vaennndaam\
+`(saranam saami ..)`
+
+karunaiyulla dheivam avan kaivida maattaan\
+kaalan nammai endrumae anugida maattaan\
+`(saranam saami ..)`
+
+aruna jothi oliyil avan aatchi seygiraan\
+hariharanin puththiranaai kaatchi tharugiraan\
+`(saranam saami ..)`
+
+makarajothi oliyil avan kaatchi tharugiraan\
+varum baktthargalai kann imai poal kaathth unirkkiraan\
+`(saranam saami ..)`
+
+`saranam saami. saranam saami. endru sollunga`\
+`avan sannadhiyil paravasaamaai urugi nillunga`
+
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

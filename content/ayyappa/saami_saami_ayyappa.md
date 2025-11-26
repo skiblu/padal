@@ -6,6 +6,7 @@ lyrics_en: Ayyappa, Saami, Ayyappa, Sabarimala Ayyappa
 lyrics_ta: சாமி, சாமி, ஐயப்பா, சபரிமலை, ஐயப்பா
 ---
 
+{% capture text %}
 1. `சாமி சாமி ஐயப்பா சபரிமலை ஐயப்பா`\
    `சபரிமலை ஐயப்பா சாஸ்தாவே ஐயப்பா`
 
@@ -49,3 +50,52 @@ lyrics_ta: சாமி, சாமி, ஐயப்பா, சபரிமலை
     `சபரிமலை ஐயப்பா சாஸ்தாவே ஐயப்பா`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+1. `saami saami ayyappa sabarimalai ayyappa`\
+   `sabarimalai ayyappa saasthaavae ayyappa`
+
+2. achchankovil arasanae `saami saami ayyappa`\
+   aadharikka vaenndumaiyaa `sabarimalai ayyappa`
+
+3. kulaththuppuzhai baalakarea `saami saami ayyappa`\
+   kuraigalaiyae neekka vaenndum `sabarimalai ayyappa`
+
+4. ganapathiyin thambiyae `saami saami ayyappa`\
+   kavalaigalaip pokka vaenndum `sabarimalai ayyappa`
+
+5. vaavarin kottai ayyaa `saami saami ayyappa`\
+   varangalaiyae kodukka vaenndum `sabarimalai ayyappa`
+
+6. kaalaikkati aasramam `saami saami ayyappa`\
+   kalaippara vandhu nindrom `sabarimalai ayyappa`
+
+7. amuthaa nadhiyilee `saami saami ayyappa`\
+   aanandhamaai kulithtu vandhom `sabarimalai ayyappa`
+
+8. karimalai uchchiyilee `saami saami ayyappa`\
+   kadinamaaga earivandh om `sabarimalai ayyappa`
+
+9. bambaa nadhiyilee `saami saami ayyappa`\
+   paavamellaam pokka vaenndum `sabarimalai ayyappa`
+
+10. neelimalai aettraththilee `saami saami ayyappa`\
+    nirka vaiththu paarkkiiye `sabarimalai ayyappa`
+
+11. saranguth thi vandhadhainndhom `saami saami ayyappa`\
+    sannidhaanam kannddomae `sabarimalai ayyappa`
+
+12. neyyappishaekaththoadu `saami saami ayyappa`\
+    naeril kaana vandhom `sabarimalai ayyappa`
+
+13. kuttram kurai edhuvaanaalum `saami saami ayyappa`\
+    kuraigalaiyae neekka vaenndum `sabarimalai ayyappa`.
+
+14. `saami saami ayyappa sabarimalai ayyappa`\
+    `sabarimalai ayyappa saasthaavae ayyappa`
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

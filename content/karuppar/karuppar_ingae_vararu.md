@@ -6,6 +6,8 @@ youtube_id: ixM4xzI4BV0
 lyrics_en: Karuppu, Karuppar, Swamy, Tamil, Ingae, Vararu
 lyrics_ta: கருப்பு, கருப்பர், சாமி, தமிழ், இங்கே, வாரரு
 ---
+
+{% capture text %}
 `வாராரய்யா வாராரு`\
 `கருப்பரிங்கே வாராரு`\
 `வாராரய்யா வாராரு`\
@@ -40,4 +42,44 @@ lyrics_ta: கருப்பு, கருப்பர், சாமி, தம
 சாம்பிராணி வாசமுண்டு\
 சம்பங்கி ரோஜாமுல்லை\
 மணக்குதப்பா இங்கே இப்போ(`வாராரய்யா வாராரு…`)
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`vaaraarayyaa vaaraaru`\
+`karupparingae vaaraaru`\
+`vaaraarayyaa vaaraaru`\
+`karupparingae vaaraaru` (2)
+
+alli mudichcha kondaiyappaa\
+azhagu-meesai thulludhappaa\
+valla vaetti pattudonae\
+vaaraar aiyaa raasaappolae(`vaaraarayyaa vaaraaru…`)
+
+aaluyaram arivaalaam\
+adhukkeththa kambeeram aam\
+kaalilae mulluch seruppaam\
+karuppanukkae thanichirap paam(`vaaraarayyaa vaaraaru…`)
+
+veechcharivaal kaiyilundu\
+vaegamaana kuthiraiyundu\
+sutthivarum pagaiyazhikka\
+sukkumaan thadiyumundu(`vaaraarayyaa vaaraaru…`)
+
+iduppilae salangaiyundu\
+idimuzhakka sirippumundu\
+vaakkilae valimaiyndu\
+vattraadha karunaiyundu(`vaaraarayyaa vaaraaru…`)
+
+kaiyilae savukkumundu\
+kanagamanicha salangaiyundu\
+paarkkadalil pallikkonda\
+parandhaaman naamumundu(`vaaraarayyaa vaaraaru…`)
+
+sandhanamundu javvaadhundu\
+saambiraani vaasumundu\
+sambhangi roajaamullai\
+manakkudhappaa ingae ippo(`vaaraarayyaa vaaraaru…`)
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
 

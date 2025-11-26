@@ -5,6 +5,7 @@ title:  Velava Velava
 lyrics_en: Murugan, Velava, Velava, வேலவா, வேலவா
 ---
 
+{% capture text %}
 வேலவா வேலவா வேல்முருகா வா வா
 
 வேல்முருகா வா வா வேல்முருகா வா வா\
@@ -18,4 +19,23 @@ lyrics_en: Murugan, Velava, Velava, வேலவா, வேலவா
 
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+vaelava vaelava vaelmurugaa vaa vaa
+
+vaelmurugaa vaa vaa vaelmurugaa vaa vaa\
+vaelava shanmugaa murugaa murugaa `(vaelava vaelava….)`
+
+valli mannavaalaa kunjari mannaalaa\
+vanna mayil vaahanaa murugaa murugaa   `(vaelava vaelava….)`
+
+sooraadhi sooraa suprahmmannya dhaevaa\
+saravannaa shanmugaa murugaa murugaa  `(vaelava vaelava….)`
+
+
+`veththrivael muruganukku... aroharaa!!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
 

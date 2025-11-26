@@ -7,6 +7,8 @@ title: Sannathiyil Kattum Katti
 lyrics_en: Ayyappa, Sannathiyil, Kattum, Katti
 lyrics_ta: சன்னதியில், கட்டும், கட்டி, ஐயப்பா
 ---
+
+{% capture text %}
 சன்னதியில் கட்டும் கட்டி...வந்தோமப்பா ஐயப்பா...\
 சபரிமலை காடுதேடி... வாரோமப்பா ஐயப்பா...\
 கட்டுமுடி ரெண்டு கட்டி...வந்தோமப்பா ஐயப்பா...\
@@ -268,4 +270,273 @@ lyrics_ta: சன்னதியில், கட்டும், கட்ட�
 
 சாமி சரணம் சரணம் ஐயப்பா...\
 உந்தன் திருவடியே சரணம் ஐயப்பா...
+
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+sannathiyil kattum katti...vandhomappaa ayyappaa...\
+sabbarimalai kaadutheadi... vaaromappaa ayyappaa...\
+kattumudi rendu katti...vandhomappaa ayyappaa...\
+kaandhamalai jothikaana...vaaromappaa ayyappaa...\
+sabbarimalai payanandhaanappaa... saami vazhiththunaiyaavandhu saerappaa...
+
+gurusaami kaalaithotttu...vandhomappaa ayyappaa...\
+koodiyoru saranamittu...vaaromappaa ayyappaa...\
+puliyaerum unna nenachchu...vandhomappaa ayyappaa...\
+pullarikka saranamittu...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+kaarththikaiyil maalaiyittu...vandhomappaa ayyappaa...\
+kanivaaga viratham vechchu...vaaromappaa ayyappaa...\
+manni manniyaa maalaiyittu...vandhomappaa ayyappaa...\
+maarkazhiyil poosai vechchu...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa... saami vazhiththunaiyaa vandhu saerappaa...
+
+gurusaami sonnapadi...vandhomappaa ayyappaa...\
+koodi nalla viratham vechchu...vaaromappaa ayyappaa...
+
+karuppa saami unna nenachchu...vandhomappaa ayyappaa...\
+kaala maala poocha vechchu...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+karuppu pachcha aadai katti...vandhomappaa ayyappaa...\
+manasukkoru laadangatti...vaaromappaa ayyappaa...
+
+thulasiyila maalai katti...vandhomappaa ayyappaa...\
+sarana ghoasha paattu katti...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa... saami vazhiththunaiyaa vandhu saerappaa...
+
+neela vanna aadai katti...vandhomappaa ayyappaa...\
+niththam una manasil katti...vaaromappaa ayyappaa...
+
+ney pottu vilakkaeththri...vandhomappaa ayyappaa...\
+naeram oru paattu katti...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+uththaravu vandhadhunnu....vandhomappaa ayyappaa...\
+uurukkellaam oalaiyittu...vaaromappaa ayyappaa...
+
+uchchi malai poradhuнnu...vandhomappaa ayyappaa...\
+uruvukkellaam oalaiyittu...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa... saami vazhiththunaiyaa vandhu saerappaa...
+
+mooththadhoru mudiyungatta...vandhomappaa ayyappaa...\
+muththiraiyil ney pidichchu...vaaromappaa ayyappaa...
+
+munnumoru kattumittu...vandhomappaa ayyappaa...\
+pinnumoru kattumittu...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+veettaiyellaam thaan marandhu...vandhomappaa ayyappaa...\
+kaattai mattum manasil vachchu...vaaromappaa ayyappaa...
+
+sondhaamellaam thaan marandhu...vandhomappaa ayyappaa...\
+soadi mattum manasil vachchu...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa... saami vazhiththunaiyaa vandhu saerappaa...
+
+vanpulipol vaagannaththil...vandhomappaa ayyappaa...\
+vaalaiyaaru vazhi kadandhu...vaaromappaa ayyappaa...
+
+saeranaadu thaan pugundhu...vandhomappaa ayyappaa...\
+saarumidam thaan ninachchu...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+vazhiyil pala aalayangal...vandhomappaa ayyappaa...\
+vanakkam pala sollikittu...vaaromappaa ayyappaa...
+
+pachchapasel thoattamellaam...vandhomappaa ayyappaa...\
+undhan mugam paaththukittu...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa... saami vazhiththunaiyaa vandhu saerappaa...
+
+koattayaththaa thaan kadandhu...vandhomappaa ayyappaa...\
+koatta vaasal erumaeli...vaaromappaa ayyappaa...
+
+erumaeli seemayila...vandhomappaa ayyappaa...\
+erangi summa paetta thulla...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+vaaparukku salaam pottu...vandhomappaa ayyappaa...\
+vannangala poosikittu...vaaromappaa ayyappaa...
+
+sarakolu yendhikittu...vandhomappaa ayyappaa...\
+saayangala poosikittu...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa... saami vazhiththunaiyaa vandhu saerappaa...
+
+pachchilaya kattikittu...vandhomappaa ayyappaa...\
+maelaththaalam koottikittu...vaaromappaa ayyappaa...
+
+thindakkaththom aadikittu...vandhomappaa ayyappaa...\
+saasthaa unai vanangipputtu vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+peruvazhi thaan thirandhirukka...vandhomappaa ayyappaa...\
+gurusaami mun nadaththa...vaaromappaa ayyappaa...
+
+nandhaavanam thaan vannangi...vandhomappaa ayyappaa...\
+podinadaiyaa thaan nadandhu...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa... saami vazhiththunaiyaa vandhu saerappaa...
+
+paerooru thoadu mael...vandhomappaa ayyappaa...\
+pori pottu poosai panni...vaaromappaa ayyappaa...
+
+koattappadi adha nerungi...vandhomappaa ayyappaa...\
+yera yeduththu poocha panni...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+sivapperumaan vandha idam...vandhomappaa ayyappaa...\
+seer migundhaa kaala katti...vaaromappaa ayyappaa...
+
+kaalakatti kaayodachchu...vandhomappaa ayyappaa...\
+aduththaa adi azhudha nadhi...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa...\
+saami vazhiththunaiyaa vandhu saerappaa...
+
+azhudhanadhi thaanarangi...vandhomappaa ayyappaa...\
+aarudhalaa thaan kulichchu...vaaromappaa ayyappaa...
+
+adiyilor kalleduththu...vandhomappaa ayyappaa...\
+aazhippoosai pannipputtu...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+asaraama saranam solli...vandhomappaa ayyappaa...\
+azhudhameadu adhilaeari... vaaromappaa ayyappaa...
+
+kalleduththu kunnrilitthu...vandhomappaa ayyappaa...\
+kanivaaga saranam solli...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa...\
+saami vazhiththunaiyaa vandhu saerappaa...
+
+injippaara koattaiyil...vandhomappaa ayyappaa...\
+irundhu oru poocha panni...vaaromappaa ayyappaa...
+
+udumbaara uchchiyil...vandhomappaa ayyappaa...\
+utkaandhu poocha panni...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+moochaa muzhu moocheduththu...vandhomappaa ayyappaa...\
+mukuzhiyum thaan kadandhu...vaaromappaa ayyappaa...
+
+paechaa un paecheduththu...vandhomappaa ayyappaa...\
+periya malai kari malaiyum...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa...\
+saami vazhiththunaiyaa vandhu saerappaa...
+
+kadinamappaa karimalaiyum...vandhomappaa ayyappaa...\
+kaalkaduakka uchchiyaeari...vaaromappaa ayyappaa...
+
+kidukiduvena irakkamappaa...vandhomappaa ayyappaa...\
+kudukuduvena keezjirangi...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+siriyaana vattaththula...vandhomappaa ayyappaa...\
+silu silunnu kaaththu vaangi...vaaromappaa ayyappaa...
+
+
+kalaippuththeera oyvveduththu...vandhomappaa ayyappaa...\
+paatteduththu saranam solli...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa...\
+saami vazhiththunaiyaa vandhu saerappaa...
+
+periyya un paer solli...vandhomappaa ayyappaa...\
+periyaana vattaththula...vaaromappaa ayyappaa...
+
+salasalakkum bambaiyaaru...vandhomappaa ayyappaa...\
+peruvazhikku nandri solli...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+bambaiyil thala muzhugi...vandhomappaa ayyappaa...\
+paavangala adhil kazhuvi...vaaromappaa ayyappaa...
+
+annadhaana padaiyalittu...vandhomappaa ayyappaa...\
+azhagazhagaa dheepamittu...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa...\
+saami vazhiththunaiyaa vandhu saerappaa...
+
+kannimoola sannithiyil...vandhomappaa ayyappaa...\
+gannapathiya kaiththozhudhu...vaaromappaa ayyappaa...
+
+annaandhaa neelinmalai...  vandhomappaa ayyappaa...\
+aiyyaa un kai pidichchu...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+neelinmalai yaeththamaeari...vandhomappaa ayyappaa...\
+appaachchi maedu thottu...vaaromappaa ayyappaa...
+
+sabbaripeadam kaai udaichchu...vandhomappaa ayyappaa...\
+sarangutthi ambu vittu...vaaromappaa ayyappaa...
+
+sabbarimalai payanandhaanappaa...\
+saami vazhiththunaiyaa vandhu saerappaa...
+
+sannathikku oattamaaga...vandhomappaa ayyappaa...\
+ambalaththin vaasalilae...vaaromappaa ayyappaa...
+
+pakkamoru kaai udaichchu...vandhomappaa ayyappaa...\
+padhinaettu padiyaeari...vaaromappaa ayyappaa...
+
+kaandhamalai jothiyaanavaa...enga kaavalaaga vandhu saerappaa...\
+(sannathiyil kattum katti..)
+
+padhinaettu padiyaeari...vandhomappaa ayyappaa...\
+saasthaa un mugam kaana...vaaromappaa ayyappaa...
+
+aiyyaa un nadai vaasal...thirandhadhappaa ayyappaa...\
+neyyaadum thirumeniy...theriyudhappaa ayyappaa...
+
+aiyyaa un azhagu mugam...theriyudhappaa ayyappaa...\
+aanandham kanneera...perugudhappaa ayyappaa...
+
+azhagumugam kandhom ayyappaa...\
+naanga aanandhamae kondhom ayyappaa...
+
+ponnaana thirumeniy...saami saranam ayyappaa...\
+kannoadu kalakkudhappaa...saranam saranam ayyappaa...
+
+paarkka paarkka salikkaadhae....saami saranam ayyappaa...\
+aiyyaa un thirukkaatchi....saranam saranam ayyappaa...
+
+saami saranam saranam ayyappaa...\
+undhan thiruvadiyae saranam ayyappaa...
+
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
 

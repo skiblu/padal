@@ -6,6 +6,7 @@ lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Kathu, Ratchikanum, Kannima
 lyrics_ta: காத்து, இரட்சிக்கணும், கன்னிமார்களை, கன்னிமூல, கணபதியே
 ---
 
+{% capture text %}
 காத்து இரட்சிக்கணும் கன்னிமார்களை\
 கன்னிமூல‌ கணபதியே நீ\
 பாத்து இரட்சிக்கணும் பரிவு காட்டணும்\
@@ -35,3 +36,38 @@ lyrics_ta: காத்து, இரட்சிக்கணும், கன�
 ஸ்வாமியே சரணம் ஐயப்பா ஐயப்ப‌ சரணம் ஐயப்பா
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+kaathu iratchikaanum kannimaargalai\
+kannimoola ganapadhiyae nee\
+paathu iratchikaanum parivu kaattanum\
+kannimoola ganapadhiyae
+
+kaathu iratchikaanum karunai kaattanum\
+ponnu pagavadhiyae amma ponnu pagavadhiyae\
+maaligai purathu manjamma\
+maanikka paatham thanjam amma
+
+nei manakkuthu meyyirukkuthu sabarimalaiyilae\
+aiyyanae unthan azhagaik kandaal\
+bakthi pirakkuthu ullatthilee gnaana sakthi pirakkuthu\
+neyyabhishaekam seyyumpothu ullatthilee\
+mei silirkkuthu malaiyilae\
+thaiyinilae unthan sanndhikaana\
+ullatthil aaval pongiduthae\
+sathiyamaana ponnu padhinnetu padi bhagavaanae\
+swaami ponnu bhagavaanae ayyaa ponnu bhagavaanae\
+shanmugan thambiyae unthan dharisanam kidaikkavenumae
+
+swaamiyae saranam ayyappa\
+endru solli naangal vandhomae\
+sangara mohini paalanae unthan\
+dharisanam thanaikkana thayai purivaay thaevanae\
+thayai purivaay thaeviyae\
+swaamiyae saranam ayyappa ayyappa saranam ayyappa
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

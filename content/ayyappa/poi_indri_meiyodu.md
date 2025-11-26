@@ -6,6 +6,7 @@ lyrics_en: Ayyappa, Poi, Indri, Meiyodu, Ney, Kondu, Ponal, Ayyanai, Nee, Kaanal
 lyrics_ta: பொய, இன்றி, மெய்யோடு, நெய், கொண்டு, போனால், ஐயனை, நீ, காணலாம், சபரியில்
 ---
 
+{% capture text %}
 பொய் இன்றி மெய்யோடு\
 நெய் கொண்டு போனால்\
 ஐயனை நீ காணலாம்\
@@ -49,3 +50,52 @@ lyrics_ta: பொய, இன்றி, மெய்யோடு, நெய், �
 
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+poi indri meyyoadu\
+ney konndu ponaal\
+aiyanai nee kaanalam\
+sabariyil aiyanai nee kaanalam
+
+`poi indri meyyoadu`\
+`ney konndu ponaal`\
+`aiyanai nee kaanalam`\
+`sabariyil aiyanai nee kaanalam`
+
+`ayyappa.. suvaami ayyappa`\
+`ayyappa.. saranam ayyappa`
+
+avanai naadu avan pugazh paadu\
+pugazhoadu vaazhaivappaan ayyappan -unnai\
+pugazhoadu vaazhaivappaan ayyappan\
+iruppadhu kaadu vanangudhu naadu\
+avanaik kaana – dhaevai panbaadu
+
+`ayyappa.. suvaami ayyappa`\
+`ayyappa.. saranam ayyappa`
+
+poojaikal poodu thooya anboadu\
+peyaroadu vaazhaivappaan ayyappan -nalla\
+peyaroadu vaazhaivappaan ayyappan\
+anaivarum vaarungal aiyanai naadungal\
+`arul vaenndum anbarai ellaam vaazhaivappaan (x2)`
+
+`ayyappa.. suvaami ayyappa`\
+`ayyappa.. saranam ayyappa`
+
+poi indri meyyoadu\
+ney konndu ponaal\
+aiyanai nee kaanalam\
+sabariyil aiyanai nee kaanalam
+
+`ayyappa... suvaami ayyappa`\
+`ayyappa... saranam ayyappa`\
+`saranam ayyappa`\
+`saranam ayyappa`
+
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

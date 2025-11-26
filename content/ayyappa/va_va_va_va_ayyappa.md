@@ -6,6 +6,7 @@ lyrics_en: Ayyappa, Devotional, va va va va ayyappa, vavar, thozhane, ayyappa
 lyrics_ta: ஐயப்பா, பக்தி, வா வா வா வா ஐயப்பா, வாவர், தோழனே, ஐயப்பா
 ---
 
+{% capture text %}
 வா வா வா வா ஐயப்பா\
 வாவர் தோழனே ஐயப்பா — *Chorus*\
 வா வா வா வா ஐயப்பா\
@@ -72,3 +73,75 @@ lyrics_ta: ஐயப்பா, பக்தி, வா வா வா வா ஐ�
 வாவர் தோழனே ஐயப்பா
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+vaa vaa vaa vaa ayyappa\
+vaavar thoazhanae ayyappa — *Chorus*\
+vaa vaa vaa vaa ayyappa\
+vaavar thoazhanae ayyappa — *Chorus*
+
+karpooram aeththikuttu kaithaaalam pottukuttu\
+kaliyuga varadhanai kooppiduvvom.\
+namma kaliyuga varadhanai kooppiduvvom — *Chorus* — Repeat.
+
+avan vanpuli mael earikuttu vaasal vandhu saerum varai\
+saranangal balamaai sollidavvom\
+saami yae… saami yae… *(Side voice)*
+
+vaa vaa vaa vaa ayyappa\
+vaavar thoazhanae ayyappa — *Chorus*\
+vaa vaa vaa vaa ayyappa\
+vaavar thoazhanae ayyappa — *Chorus*
+
+karumpukatti maalai katti maalaiyoada paattukatti\
+manikannda saamiyai kooppiduvvom.\
+saami yae… saami yae… *(Side voice)*
+
+namma manikannda saamiyai kooppiduvvom — *Chorus*\
+avar maamalai ya vittuvandhu vaasal vandhu saerum varai\
+saranangal balamaai solliduvvom.\
+saami yae… saami yae… *(Side voice)*
+
+vaa vaa vaa vaa ayyappa\
+vaavar thoazhanae ayyappa\
+vaa vaa vaa vaa ayyappa\
+vaavar thoazhanae ayyappa
+
+dheepangalai aeththikuttu dhoopangalai koaththikuttu\
+karpoor dheeranai kooppiduvvom\
+namma karpooradhiiranai kooppiduvvom — *Chorus*
+
+vaa vaa vaa vaa ayyappa\
+vaavar thoazhanae ayyappa\
+vaa vaa vaa vaa ayyappa\
+vaavar thoazhanae ayyappa
+
+avan dheepamalai jothiyaaga vaasal vandhu saerum varai\
+saranangal balamaai solliduvvom\
+saami yae… saami yae… *(Loud / Side voice)*
+
+vaa vaa vaa vaa ayyappa\
+vaavar thoazhanae ayyappa\
+vaa vaa vaa vaa ayyappa\
+vaavar thoazhanae ayyappa
+
+vidhavithamaai thulasi katti padaiyalai nirappuvachchu\
+bambaa vaasanai kooppiduvvom\
+saami yae… saami yae… *(Loud / Side voice)*
+
+namma bambaa vaasanai kooppiduvvom
+
+namma kanni svaami poojaikkku (or) padaiyilukku vandhu saerum naeram varai\
+saranangal balamaai solliduvvom\
+saami yae… saami yae… *(Loud / Side voice)*
+
+vaa vaa vaa vaa ayyappa\
+vaavar thoazhanae ayyappa\
+vaa vaa vaa vaa ayyappa\
+vaavar thoazhanae ayyappa
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

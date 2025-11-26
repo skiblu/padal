@@ -7,6 +7,7 @@ lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Vinnum, Mannum, Kidukidunga
 lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்கள், பக்தி, விண்ணும், மண்ணும், கிடுகிடுங்க
 ---
 
+{% capture text %}
 விண்ணும் மண்ணும் கிடுகிடுங்க\
 `ஐயப்ப நாமம் சொல்ல நாம் சரணகோசம் செய்ய (2)`
 
@@ -50,3 +51,52 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்
 `ஐயப்ப நாமம் சொல்ல நாம் சரணகோசம் செய்ய (2)`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+vinnum mannum kidukidunga\
+`ayyappa naamam solla naam saranagosham seyya (2)`
+
+vinnum mannum kidukidunga vandhu varam namakkarul (2)\
+singaara beedam vittu jagamarul oadi vaaraan..(2)\
+`ayyappa naamam solla naam saranagosham seyya (2)`
+
+kacha nalla varunjikatti karunkacha maelae katti (2)\
+muththunira ponsilamb aam surandai manni kilukkilukka (2)\
+manjal nira ponnaam adhu manikanndan peyaraam (2)\
+`ayyappa naamam solla naam saranagosham seyya (2)`
+
+agannda nalla maarbinilae urundai manni kilukkilukka (2)\
+uppiri noolalakum thulasi manni thongiyaada ( 2)\
+maarbinilae padhakkam adhu pala palavena jollikka (2)\
+`ayyappa naamam solla naam saranagosham seyya (2)`
+
+anjala maiyeduththu siriththana nalla mugaththinilae (2)\
+sandhana kolamittu kungumamum thaanumittu (2)\
+ayyappan varaar paaru andha azhaga nallaa paaru (2)\
+`ayyappa naamam solla naam saranagosham seyya (2)`
+
+aravannaikkum kaigal rendil ambum villum thaaneduththu (2)\
+kunndalangal than aninthu kurai theerththu varamalikka (2)\
+vaedha mellaam mudiththu aiyan thirunerum poosi (2)\
+`ayyappa naamam solla naam saranagosham seyya (2)`
+
+kaalamellaam unai thuthiththu karuppudanae vaazhvatharkku (2)\
+sannathiyil vandhu undhan dharisanaththai kanndidhavae (2)\
+iru mudiya yaendhi naam oru manadhaai vaarom (2).\
+`ayyappa naamam solla naam saranagosham seyya (2)`
+
+karudanum munnaevar aabarannam pinnae vara (2)\
+poothaghanam suththivara poomi koadi oadi vara (2) \
+ayyappan varaar paaru andha azhaga nallaa paaru (2)\
+`ayyappa naamam solla naam saranagosham seyya (2)`
+
+karuppanum munnae vara karunaagam suththi vara (2)\
+nandheeshwara maththalamum naaradha muni veenai meeetta (2)\
+vanpuli maela vaaraan aiyan varam kodukka poraan (2)\
+`ayyappa naamam solla naam saranagosham seyya (2)`
+
+`swaamiyae... saranam ayyappaa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

@@ -7,6 +7,7 @@ lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Nee, Indri, Vazhvethu, Ayya
 lyrics_ta: ஐயப்பன்‌, நீ, இன்றி, வாழ்வேது, ஐயப்பா
 ---
 
+{% capture text %}
 `நீ இன்றி வாழ்வேது ஐயப்பா`\
 `உன் நினைவின்றி மகிழ்வேது ஐயப்பா`\
 கண்ணுக்குள் உனை வைத்து நான் பார்கிறேன்\
@@ -59,3 +60,61 @@ lyrics_ta: ஐயப்பன்‌, நீ, இன்றி, வாழ்வே
 
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`nee indri vazhvethu ayyappa`\
+`un ninaivinndri magizhvethu ayyappa`\
+kannukkul unai vaiththu naan paargireaen\
+kanneeraai karaindthoda maayam aeno\
+neeyinndri anuvedthum asayaadhayya\
+vaazhvil inbamum thunbamum neethaanaiyaa
+
+`nee indri vazhvethu ayyappa`\
+`un ninaivinndri magizhvethu ayyappa`
+
+neydhengaai naan konndu varuvenayyaa\
+unponmaeni ney uruga seyvaen ayyaa\
+gurusuvaami thunai konndu varuvenaiyyaa\
+engal guruvin guruvai kaanbenaiyaa
+
+`nee indri vazhvethu ayyappa`\
+`un ninaivinndri magizhvethu ayyappa`
+
+kannukkul unai vaiththu naan paargireaen\
+kanneeraai karaindthoda maayam aeno\
+neeyinndri anuvedthum asayaadhayya\
+neeyinndri anuvedthum asayaadhayya\
+vaazhvil inbamum thunbamum neethaanaiyaa
+
+`nee indri vazhvethu ayyappa`\
+`un ninaivinndri magizhvethu ayyappa`
+
+karimalai thaanndi vandhomayya\
+kadinathththin kadinathgai unarndhomayya\
+malaiyaettram romba romba kadinamaiyyaa\
+andha bambai nadhi neerum punathmamayyayyaa
+
+`nee indri vazhvethu ayyappa`\
+`un ninaivinndri magizhvethu ayyappa`
+
+irumudi thalai thaangi varuvomayya\
+un thiruvadi saranathtai adaivomayya\
+padhinettu padi eari varuvaenaiyyaa\
+undhan padhinettu padi eari varuvaenaiyyaa\
+engal thathvamasiyai kaanbenaiyyaa
+
+`nee indri vazhvethu ayyappa`\
+`un ninaivinndri magizhvethu ayyappa`
+
+`nee indri vazhvethu ayyappa`\
+`un ninaivinndri magizhvethu ayyappa`\
+un ninaivinndri magizhvethu ayyappa\
+un ninaivinndri magizhvethu ayyappa\
+undhan ninaivinndri magizhvethu ayyappa
+
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

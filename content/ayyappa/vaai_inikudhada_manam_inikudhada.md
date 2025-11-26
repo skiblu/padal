@@ -8,26 +8,7 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், வாய், �
 ---
 
 {% capture text %}
-கண்கண்ட தெய்வமாம்.... \
-கருணை உள்ள தெய்வமாம்.....\
-கணபதிக்கும் கந்தனுக்கும் கனிஷ்டனான தெய்வமாம்...\
-ஓம் சுவாமியே.... `சரணம் ஐயப்பா`
 
-காதகியாம் மகிஷிதனை கருவறுத்த தெய்வமாம்...\
-காந்தமலை மேவுகின்ற ஜோதியான தெய்வமாம்...\
-ஓம் சுவாமியே.... `சரணம் ஐயப்பா`
-
-கண்டத்திலே மணியணிந்த கலியுகத்தின் தெய்வமாம்...\
-நாம் பண்டு செய்த பாவம் தனைப் போக்க வந்த தெய்வமாம்....\
-ஓம் சுவாமியே.... `சரணம் ஐயப்பா`
-
-கைலாச வாசனும்... வைகுந்தநாதனும்... \
-கருத்தொருமித்து வந்த.... ஹரிஹரசுதன் எனும் நாமம் படைத்த... \
-அந்த ஐயப்ப தெய்வத்தை...... \
-வில்லாளி வீரனை..... வீர மணிகண்டனை...   \
-சொல்ல...  சொல்ல... சொல்ல.. . 
-
-{% endcapture %} {% include card.html header="முன்னுரை" text=text %}
 
 `வாய் இனிக்குதடா... மனம் இனிக்குதடா...`\
 `வல்லவனாம் ஐயப்பன் பேரைச் சொல்ல.. (2-Chorus)`
@@ -86,3 +67,66 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், வாய், �
 `வல்லவனாம் ஐயப்பன் பேரைச் சொல்ல.. (2-Chorus)`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Vaai inikkuthada... Manam inikkuthada...`\
+`Vallavanaam Ayyappan perai solla.. (2-Chorus)`
+
+Sollach solla.... Sollach solla....\
+Sollach solla... Thinum sollach solla...
+
+`Vaai inikkuthada... Manam inikkuthada...`\
+`Vallavanaam Ayyappan perai solla.. (2-Chorus)`
+
+Noi nodigal illaamal kaathiduvaanam...\
+Avan nokkam arinthu kettathellam thandhiduvaanam.`(2-Chorus)`
+
+Vaaipechchu illaathaavarai pesa vaippaanam.... \
+Vaaipechchu illaathaavarai pesa vaippaanam...\
+Indha vaiyaththile avaraip pola deivam illaiyaam....
+
+`Vaai inikkuthada... Manam inikkuthada...`\
+`Vallavanaam Ayyappan perai solla.. (2-Chorus)`
+
+Yeratha malai maele yeranumaam....\
+Yeratha malai maele yeranumaam..\
+Angu yettaatha uyaraththukku poganumaam\
+Seeraina bakthiyodu irukkanumaam... \
+Seeraina bakthiyodu irukkanumaam... \
+Angu sirappaina deivam vaazhum Sabarimalai yaam..\
+Angu sirappaina deivam vaazhum Sabarimalai yaam...
+
+`Vaai inikkuthada... Manam inikkuthada...`\
+`Vallavanaam Ayyappan perai solla.. (2-Chorus)`
+
+Aandi mudhal arasan varai ondrae thaanam....\
+Angu avan peridhu ivan peridhu pesakoodaathaam...\
+Aandimudhal arasanvarai ondraethaanam...\
+Angu avan peridhu ivan peridhu pesakoodaathaam....\
+Vendi avartham patham paninthaal vinaigal theerppaanam...\
+Vendi avartham  patham paninthaal vinaigal theerppaanam...\
+Veeramani kandanaan periya deivamaam....
+
+`Vaai inikkuthada... Manam inikkuthada...`\
+`Vallavanaam Ayyappan perai solla.. (2-Chorus)`
+
+Kaliyugaththil kandanda deivam avaraam...\
+Kaliyugaththil kandanda deivam avaraam...\
+Kandathillai kettathillai aacharyamaam.. \
+Kandathillai kettathillai aacharyamaai...\
+Saliyaatha manamodu viratham irukanum. \
+Saliyaatha manamodu viratham irukanum.. \
+Ayyappaa.. Saranam... Nee thaan varanum....
+
+`Saamiye saranam.... Ayyappa saranam... `\
+`Saamiye saranam... Ayyappa saranam...`\
+`Saamiye saranam... Ayyappa saranam...`
+
+`Vaai inikkuthada... Manam inikkuthada...`\
+`Vallavanaam Ayyappan perai solla.. (2-Chorus)`
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

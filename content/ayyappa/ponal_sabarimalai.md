@@ -7,6 +7,7 @@ lyrics_en: Ayyappa, Ponal, Sabarimalai, Kettal, Saranam, Gosham, Makara, Jyothi,
 lyrics_ta: பொனல், சபரிமலை, கேட்டால், சரண‌, கோஷம், மகர‌, ஜோதி, பார்க்க, வேண்டும்
 ---
 
+{% capture text %}
 `போனால் சபரிமலை கேட்டால் சரண‌ கோஷம்`\
 `கேட்டால் சரண‌ கோதி பார்க்க வேண்டும். நான்`\
 `பார்த்தால் மகர‌ ஜோதி பார்க்க வேண்டும்`[2]
@@ -41,3 +42,43 @@ lyrics_ta: பொனல், சபரிமலை, கேட்டால், ச
 `நான் பார்த்தால் மகர‌ ஜோதி பார்க்க வேண்டும்`[2]
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`ponaal sabarimalai kaettal sarana kosham`\
+`kaettal sarana kodhi paarkka vaenndum. naan`\
+`paarththaal makara jothi paarkka vaenndum`[2]
+
+manndala kaalathil maalai aninndu - `saami saranam ayyappa saranam`\
+manikaannda naamam dinmum dinmum jepithtu - `saami saranam ayyappa saranam`\
+irumudi thaanngi erumaeli sendru - `saami saranam ayyappa saranam`\
+paettaiyaadi naangal varuvom - `saami saranam ayyappa saranam`
+
+`ponaal sabarimalai kaettal sarana kosham`\
+`paarththaal makara jothi paarkka vaenndum. naan`\
+`paarththaal makara jothi paarkka vaenndum`
+
+kettum eduththu kaattil nadanndhu - `saami saranam ayyappa saranam`\
+azhuthaa nadhiyil kallum eduththu - `saami saranam ayyappa saranam`\
+kallidum kunndril pottu naangal - `saami saranam ayyappa saranam`\
+karimalaiyum eariyae varuvom - `saami saranam ayyappa saranam`
+
+`ponaal sabarimalai kaettal sarana kosham`\
+`paarththaal makara jothi paarkka vaenndum. naan`\
+`paarththaal makara jothi paarkka vaenndum`
+
+bambai nadhikkarai viriyum vaiththu - `saami saranam ayyappa saranam`\
+bambai vilakkai thozhuthu naangal – `saami saranam ayyappa saranam`\
+makara jothi naalil unnai – `saami saranam ayyappa saranam`\
+kanndu thozhavae vandhiduvom – `saami saranam ayyappa saranam`
+
+`ponaal sabarimalai kaettal sarana kosham`\
+`paarththaal makara jothi paarkka vaenndum. naan`\
+`paarththaal makara jothi paarkka vaenndum`
+
+`naan paarththaal makara jothi paarkka vaenndum`[2]
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

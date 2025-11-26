@@ -6,6 +6,7 @@ lyrics_en: Ayyappa, Kannimoola, Ganapathiyai
 lyrics_ta: கன்னிமூல, கணபதியை, வேண்டிக்கிட்டு
 ---
 
+{% capture text %}
 கன்னிமூல‌ கணபதியை வேண்டிக்கிட்டு\
 `நாங்க‌ கார்த்திகை முதல் தேதி மாலையிட்டோம்`\
 அய்யப்பா அய்யப்பா என்றே சொல்லி\
@@ -36,3 +37,39 @@ lyrics_ta: கன்னிமூல, கணபதியை, வேண்டி�
 மணிகண்டா உன் மகிமை அறிந்தோமய்யா[2]
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+kannimoola ganapathiyai vaendikittu\
+`naanga kaarththigai muthal thaethi maalaiyittom`\
+ayyappa ayyappa enrae solli\
+`naanga aaru vaaram thaanae nonbu irundhom`
+
+gurusaami thunaikkonndu avar paatham nambikkittu\
+irumudiayai sumandhukittu vandhomayya [2]
+
+aaruppadai veedusendru kandhanaiye vaendikittu\
+yaathiraiyaaga vandhomayya[2]
+
+guruvaayoor koavil muthal kanniyaagumari varai\
+dharisanamae seidhukittu vandhomayya [2]
+
+erumeli paettai thulli vaavaraiye vaendikittu\
+peroor thottil pori pottu vandhomayya [2]
+
+kaalai katti anjal vandhu aludhaamalai aerikkittu\
+karimalayin uchchiyilae vandhomayya [2]
+
+bambaiyilae kulithuvittu paavanggalaith tholaithukittu\
+neelimalai aerikkittu vandhomayya[2]
+
+padhiinettaam padithanndi bhagavaanae unaivaenndi\
+karpoora jothidanaik kandnomayya [2]
+
+makara jothiyaik kanndu manamara saranam pottu\
+manikandaa un mahimai arindhomayya[2]
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

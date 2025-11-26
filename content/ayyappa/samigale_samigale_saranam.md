@@ -5,6 +5,7 @@ title: Samigale Samigale Saranam
 lyrics_en: Ayyappa, Samigale, Saranam, sollungo, Ayyan, Sabari, Malai
 lyrics_ta: சாமிகலே, சரணம், சொல்லுங்கோ, ஐயன், சபரி, மலை
 ---
+{% capture text %}
 `சாமிகளே சாமிகளே சரணம் சொல்லுங்க - அந்த`\
 `சபரிமலை ஐயனுக்கு சரணம் சொல்லுங்க.`\
 `குளத்துப்புழை பாலனுக்கு,சரணம் சொல்லுங்க`\
@@ -55,3 +56,59 @@ lyrics_ta: சாமிகலே, சரணம், சொல்லுங்க�
 `(சாமிகளே)`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`saamigalae saamigalae saranam sollunga - andha`\
+`sabarimalai aiyyanukku saranam sollunga.`\
+`kulaththuppuzhai paalanukku,saranam sollunga`\
+`nam kuraigal ellaam theerththuvaippaan,saranam sollunga`
+
+`(saamigalae)`
+
+bandhalath thu raajan ukku, saranam sollunga - nam\
+paavamellaam pokkiduvaan saranam sollunga\
+`(saamigalae)`
+
+erimaeli saasthaavukku, saranam sollunga - avan\
+endrrendrum kaaththiduvaan saranam sollunga\
+`(saamigalae)`
+
+azhuthaiyilee shnaanam seythu,saranam sollunga\
+angae sabari aiyyan vandharulvaan\
+`(saamigalae)`
+
+karimalaiyil earumpodhu saranam sollunga\
+nam kavalaigalai theertiduvaan,saranam sollunga\
+`(saamigalae)`
+
+bambaiyilee shnaanam seythu,saranam sollunga\
+saami bakthiyudan koodi ninndru,saranam sollunga\
+`(saamigalae)`
+
+neelimalai earumpodhu,saranam sollunga\
+aiyyan naeril vandhu arul purivaan,saranam sollunga\
+`(saamigalae)`
+
+padhinnattaam padi eari saranam sollunga\
+karuppan paangudanae kaaththiduvaan,saranam sollunga\
+`(saamigalae)`
+
+manjal maathaa sannadhiyil saranam sollunga\
+ammaa mana irangi arul purivaal saranam sollunga\
+`(saamigalae)`
+
+vaavarsaami sannadhiyil,saranam sollunga\
+vaavar vaanchayyudan kaaththiduvaan,saranam sollunga\
+`(saamigalae)`
+
+bakthiyudan koodi koodi saranam sollunga\
+aiyyan bajanaikkku vandhiduvaan saranam sollunga\
+`(saamigalae)` aamaam\
+`(saamigalae)`\
+`(saamigalae)`
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

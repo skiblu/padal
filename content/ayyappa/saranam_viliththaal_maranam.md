@@ -6,6 +6,7 @@ lyrics_en: Ayyappa, Tamil, Devotional, Saranam, Viliththaal, Maranam
 lyrics_ta: ஐயப்பா, தமிழ், பக்தி, சரணம், விளித்தால், மரணம்
 ---
 
+{% capture text %}
 சாமியே… ஐ .. \
 சரணம் ஐயப்போ(chorus)\
 சரண‌ கோஷப்பிரியனே..\
@@ -36,3 +37,39 @@ lyrics_ta: ஐயப்பா, தமிழ், பக்தி, சரணம்
 
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+saamiyae… ai .. \
+saranam ayyappo(chorus)\
+sarana koshappriyaanae..\
+saranam ayyappo(chorus)
+
+`saranam viliththaal maranam illai`\
+`saasthaa naamam arulin ellai`\
+`tharunam idhudaan saranampodu`\
+`dharma sasthaa paadhambaadu` (2)
+
+kaakkum dheivam thirumaal naamam\
+karunai seyyum eeswara naamam\
+kalanndhu magizhndha aiyyan naamam\
+koovi vandhaal puviyil shemam `(saranam viliththaal..)`
+
+kaadum maedum veedum vaasal\
+kallum mullaum mallikai meththai\
+aadum manadththai adakki vaa vaa\
+aiyyan maedai naadi vaa vaa `(saranam viliththaal..)`
+
+neypol urugum manadthil aiyyan\
+naeril varuvaan niraiyath tharuvaan\
+guruvai naadu maalaiyai soodu\
+kodi gnaana jothiyai paadu
+
+saranam saranamae, saranam pon ayyappa\
+ayyappo saranam, saranam pon ayyappo
+
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

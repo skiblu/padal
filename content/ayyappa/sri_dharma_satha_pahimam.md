@@ -7,6 +7,7 @@ lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Sri, Dharma, Satha, Pahimam
 lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்கள், பக்தி, ஸ்ரீ, தர்ம, சாஸ்தா, பாஹிமாம்
 ---
 
+{% capture text %}
 `ஸ்ரீ தர்ம சாஸ்தா பாஹிமாம்` \
 `ஸ்ரீ சபரீசா பாஹிமாம்` \
 `தேவா பாஹிமாம்` \
@@ -40,3 +41,42 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்
 `மாமலை வாசா பாஹிமாம்`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`sree dharma saasthaa paahimaam` \
+`sree sabareesha paahimaam` \
+`dhaevaa paahimaam` \
+`maamalai vaasaa paahimaam`
+
+swaami yae... ayyappo, \
+swaami saranam.. saranam ayyappa...
+
+mohini suthanae mohana roopaa \
+mohamagattrruga paalanai \
+manndala kaalam idho vannallo \
+mani maalaiyum kazhuth thil vizhunnallo \
+manasaakilum azhiinju poyallo \
+engalai kaaththiduvvaai ayyappa.. ayyappa..
+
+`sree dharma saasthaa paahimaam` \
+`sree sabareesha paahimaam` \
+`dhaevaa paahimaam` \
+`maamalai vaasaa paahimaam`
+
+vanpuli mudhugil kayariya bhagavaan \
+vanmalai kazattruga engalai \
+ungal suyaroopathththai naangal kaannavae \
+malaiyaakilum kadanndhu vannallo \
+mani peedathth hil vaazhum dheivamae \
+engalai kaaththiduvvaai ayyappa.. ayyappa..
+
+`sree dharma saasthaa paahimaam` \
+`sree sabareesha paahimaam` \
+`dhaevaa paahimaam` \
+`maamalai vaasaa paahimaam`
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

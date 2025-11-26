@@ -6,6 +6,7 @@ lyrics_en: Ayyappa, Om, Om, Ayyappa
 lyrics_ta: ஓம், ஓம், ஐயப்பா
 ---
 
+{% capture text %}
 ஓம் ஓம் அய்யப்பா\
 ஓம் குரு நாதா அய்யப்பா
 
@@ -40,3 +41,43 @@ lyrics_ta: ஓம், ஓம், ஐயப்பா
 சாஸ்வத‌ ரூபே அய்யப்பா `(ஓம் ஓம் )`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+om om ayyappa\
+om guru naathaa ayyappa
+
+aranaar baalaa ayyappa\
+ambikai baalaa ayyappa `(om om )`
+
+aapth baanthavaa ayyappa\
+aadhi paraabara ayyappa `(om om )`
+
+irumudip priyaa ayyappa\
+irakkam migundhavaa ayyappa `(om om )`
+
+eesan maganae ayyappa\
+eeswara mainthaa ayyappa `(om om )`
+
+umaiyaal baalaa ayyappa\
+uruthunaai neeyae ayyappa `(om om )`
+
+ookkam tharubhavaa ayyappa\
+oozvinai aruppavaa ayyappa `(om om )`
+
+engum nirraindhavaa ayyappa\
+engal naayagaa ayyappa `(om om )`
+
+bambaiyin baalaa ayyappa\
+bandhala vaendhae ayyappa `(om om )`
+
+vanpuli vaahanaa ayyappa\
+vanaththiliruppavaa ayyappa `(om om )`
+
+sabari gireesaa ayyappa\
+saasvatha roopae ayyappa `(om om )`
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

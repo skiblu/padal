@@ -6,6 +6,7 @@ youtube_id: jEhZDS-9gb8
 lyrics_en: Ayyappa, Thalladi, Thalladi, Nadai, Nadanthu
 lyrics_ta: ஐயப்பா, தள்ளாடி, தள்ளாடி, நடை, நடந்து
 ---
+{% capture text %}
 `தள்ளாடி தள்ளாடி நடை நடந்து`\
 `நாங்க‌ சபரிமலை நோக்கி வந்தோமய்யா`
 
@@ -63,3 +64,66 @@ lyrics_ta: ஐயப்பா, தள்ளாடி, தள்ளாடி, ந
 சாமி…             `(தள்ளாடி தள்ளாடி…)`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`thallaadi thallaadi nadai nadandhu`\
+`naanga sabarimalai nokki vandhomayya`
+
+kaarththigai nalla naalil maalaiyum pottukittu\
+kaalaiyilum maalaiyilum saranangal sollikittu\
+saranangal sollikkonndu vandhomayya\
+naanga sabarimalai nokki vandhomayya\
+saami…             `(thallaadi thallaadi…)`
+
+irumudiya kattikittu inbamaagap paadikittu\
+saami.. irumudiya kattikittu inbamaagap paadikittu\
+eesan maganae undhan iruppidat tha nokkikittu
+
+saranangal sollikkonndu vandhomayya\
+naanga sabarimalai nokki vandhomayya\
+saami…             `(thallaadi thallaadi…)`
+
+paettaigalum thullivittu vaeshangalum pottukittu\
+vaedikkaiyaai naangalum aattangalum aadikittu\
+saami thimthakka thom thom `ayyappa thimthakka thom thom`\
+saami thimthakka thom thom `ayyappa thimthakka thom thom`\
+paettaigalum thullivittu vaeshangalum pottukittu vaedikkaiyaai\
+naangalum aattangalum aadikittu
+
+saranangal sollikkonndu vandhomayya\
+naanga sabarimalai nokki vandhomayya\
+saami…             `(thallaadi thallaadi…)`
+
+kaanaa dha kaatchiyellaam kannaara kanndukittu\
+kaadumalai galellaam kaal nadaiyaa thaanndikittu\
+kaanaa dha kaatchiyellaam kannaara kanndukittu\
+kaadumalai galellaam kaal nadaiyaa thaanndikittu\
+baktharellaam koodi ninndru\
+bajanai galellaam paadikittu
+
+saranangal sollikkonndu vandhomayya\
+naanga sabarimalai nokki vandhomayya\
+saami…             `(thallaadi thallaadi…)`
+
+neelimala aetththaththula ninnu ninnu earikkittu\
+`neelimala aetththaththula ninnu ninnu earikkittu`\
+nenja m muzhudhume undhan ninaipadhu mae maaththikittu
+
+saranangal sollikkonndu vandhomayya\
+naanga sabarimalai nokki vandhomayya\
+saami…             `(thallaadi thallaadi…)`
+
+padiyeari pogumpodhu paangaagak kaayudaiththu\
+bhagavana unnaiyae paaththup paaththu sokkikittu\
+neyyilee kulippadhaiyum naerilee paaththuvittu\
+aiyya saranam endru aanandhamaa paadikittu
+
+saranangal sollikkonndu vandhomayya\
+naanga sabarimalai nokki vandhomayya\
+saami…             `(thallaadi thallaadi…)`
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

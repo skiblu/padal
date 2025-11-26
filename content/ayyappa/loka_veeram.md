@@ -7,6 +7,7 @@ title: Loka Veeram
 lyrics_en: Ayyappa, Loka, Veeram, Maha, Poojyam
 lyrics_ta: லோக, வீரம், மஹா , பூஜ்யம
 ---
+{% capture text %}
 Note: ஒவ்வொரு ஸ்லோகத்தையும் கூறி சுவாமியே சரணமய்யப்பா என்று சொல்லி நமஸ்காரம் செய்ய வேண்டும்
 
 மூஷிக வாஹன மோதக ஹஸ்த\
@@ -65,3 +66,67 @@ Note: ஒவ்வொரு ஸ்லோகத்தையும் கூறி
 
 சமஸ்தா பராத ரச்சகனே..`சரணம் ஐயப்பா!`\
 சபரிகிரி ஈசனே ..`சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Note: ovvondru slokaththayum kuri swamiyae saranamayappa endru solli namaskaram seya vaenndum
+
+mooshika vahana modhaka hastha\
+samarakarna vilambitha suuthra\
+vaamanaroopa mahaeswara puthra\
+vignavinayaka paatha namasthae
+
+kannimoola ganapathi bhagavaanae.. saranam ayyappa.
+
+loka veeram maha poojyam,\
+sarva raksha karam vibum,\
+parvathi hrudhayanantham,\
+saastharam pranamaamyaham.\
+`swaamiyae saranam ayyappa!`
+
+vipra poojyam vishva vandhyam,\
+vishnu sambo priyam sutham,\
+kshipra prasaada niratham,\
+saastharam pranamaamyaham.\
+`swaamiyae saranam ayyappa!`
+
+matha maathanga kamanam,\
+karunya amrutha pooritham,\
+sarva vigna haram thaevam,\
+saastharam pranamaamyaham.\
+`swaamiyae saranam ayyappa!`
+
+asmath kulaeshvaram thaevam,\
+asmath sathru vinaasanam,\
+asmaathishta pradhaatharam,\
+saastharam pranamaamyaham.\
+`swaamiyae saranam ayyappa!`
+
+paandaeshya vamsa thilakam,\
+kerala keli vigraham,\
+aartha thraana param thaevem,\
+saastharam pranamaamyaham.\
+`swaamiyae saranam ayyappa!`
+
+pancha rathnaakyamae thath yo,\
+nithyam suttha patennar,\
+thasya prasanno bhagavaan,\
+saastha vasathi maan sae.\
+`swaamiyae saranam ayyappa!`
+
+bhootha naatha satha nanthaa,\
+sarva bhootha thaya paraa,\
+raksha raksha mahaa baaho,\
+saasthrae thubhyam namo namaha.\
+`swaamiyae saranam ayyappa!`
+
+bhoothasenaaya vithmahe\
+ariagara pudhraaya theemahi\
+thanno saastha prachchothaiyaadhu..\
+`swaamiyae saranam ayyappa!`
+
+samasthaa baraadha rachchakanae..`saranam ayyappa!`\
+sabarigiri eesanae ..`saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

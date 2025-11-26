@@ -5,7 +5,7 @@ title: Karuppinil Udai Aninthein
 lyrics_en: Ayyappa, Devotional, Karuppinil, Udai, Aninthein
 lyrics_ta: கருப்பினில், உடை, அணிந்தேன், கழுத்தினில், மணி, அணிந்தேன்
 ---
-
+{% capture text %}
 சுவாமியே சரணம் அய்யப்பா..\
 சரணம் சரணம் ஐயப்பா சாமியே சரணம் அய்யப்பா\
 சரணம் சரணம் ஐயப்பா சாமியே சரணம் அய்யப்பா - [chorus 2]
@@ -61,3 +61,64 @@ lyrics_ta: கருப்பினில், உடை, அணிந்தே�
 
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Swamiye saranam Ayyappa..\
+Saranam saranam Ayyappa saamiye saranam Ayyappa\
+Saranam saranam Ayyappa saamiye saranam Ayyappa - [chorus 2]
+
+Karuppinil udai aninthen kazhuthinil mani aninthen\
+Karuppinil udai aninthen kazhuthinil mani aninthen
+
+Karuthinil unnai ninainthen Ayyappa\
+En kavalaigalai maranthenae Ayyappa (Saranam saranam Ayyappa)
+
+Irumudi sumanthen iruvinaik kadanthen\
+Inbamathaikk kandenae Ayyappa\
+Irumudi sumanthen iruvinaik kadanthen\
+Inbamathaikk kandenae Ayyappa\
+En ithayamathaith thanthenae Ayyappa
+
+Karuppinil udai aninthen kazhuthinil mani aninthen\
+Karuppinil udai aninthen kazhuthinil mani aninthen
+
+Karuthinil unnai ninainthen Ayyappa\
+En kavalaigalai maranthenae Ayyappa\
+En kavalaigalai maranthenae Ayyappa\
+En kavalaigalai maranthenae Ayyappa (Saranam saranam Ayyappa)
+
+Saranam un thaazh endru sannathi adainthen\
+Saanthi kondenae Ayyappa\
+Saranam un thaazh endru sannathi adainthen\
+Saanthi kondenae Ayyappa - un\
+Sakthiyaik kandenae Ayyappa
+
+Karuppinil udai aninthen kazhuthinil mani aninthen\
+Karuppinil udai aninthen kazhuthinil mani aninthen
+
+Karuthinil unnai ninainthen Ayyappa\
+En kavalaigalai maranthenae Ayyappa\
+En kavalaigalai maranthenae Ayyappa\
+En kavalaigalai maranthenae Ayyappa (Saranam saranam Ayyappa)
+
+Varanaikkadangaatha vallalum neeyae\
+Vaazhvukkuth thunai neeyae Ayyappa\
+Varanaikkadangaatha vallalum neeyae\
+Vaazhvukkuth thunai neeyae Ayyappa\
+
+En uyirukkuth thunai neeyae Ayyappa
+
+Karuthinil unnai ninainthen Ayyappa\
+En kavalaigalai maranthenae Ayyappa\
+(Saranam saranam Ayyappa)
+
+Swamiye saranam Ayyappa\
+Saranam saranam Ayyappa saamiye saranam Ayyappa\
+Saranam saranam Ayyappa saamiye saranam Ayyappa - [chorus 2]
+
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

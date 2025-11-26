@@ -6,6 +6,7 @@ youtube_id: hl3OGoVu5B8
 lyrics_en: Amman, Sakthi, Durga, Amba, Parameswari, Akilandeswari, அம்பா, பரமேஸ்வரி, அகிலாண்டேஸ்வரி
 ---
 
+{% capture text %}
 `அம்பா பரமேஸ்வரி அகிலாண்டேஸ்வரி`\
 `ஆதிபராசக்தி பாலயமாம்`
 
@@ -26,3 +27,29 @@ lyrics_en: Amman, Sakthi, Durga, Amba, Parameswari, Akilandeswari, அம்ப�
 ஓம்சக்தி ஓம்சக்தி ஓம்சக்தி ஓம்\
 ஓம்சக்தி ஓம்சக்தி ஓம்சக்தி ஓம்\
 ஓம்சக்தி ஓம்சக்தி ஓம்சக்தி ஓம்
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Amba Parameswari Akilandeswari`\
+`Adhiparasakthi Palayamaam`
+
+Veenapaani Vimala Sarasvathi\
+Vedhantharoopini Palayamaam (`Amba..`)
+
+Theenadhayapari Poorana Kadaatchi\
+Thiripurasundhari Dhevi Meenaatchi (`Amba..`)
+
+Raja Rajeswari Rajapradhaayini\
+Sreepuvaneshari Palayamaam (`Amba..`)
+
+Kaanchi Kamakshi Kasi Visaalakshi\
+Madhurai Meenaatchi Palayamaam (`Amba..`)
+
+Om Sakthi Om Sakthi Om Sakthi Om\
+Om Sakthi Om Sakthi Om Sakthi Om\
+Om Sakthi Om Sakthi Om Sakthi Om\
+Om Sakthi Om Sakthi Om Sakthi Om\
+Om Sakthi Om Sakthi Om Sakthi Om
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

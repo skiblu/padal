@@ -7,6 +7,7 @@ audio_length: 119
 lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Saranam, Solli, Kupiduvom
 lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்கள், பக்தி, சரணம், சொல்லி, கூப்பிடுவோம்
 ---
+{% capture text %}
 சரணம் சொல்லி கூப்பிடுவோம்... சபரிமலை வாசனை...\
 வரணும் என்று அழைத்திடுவோம்...வரம் கொடுக்கும் ஈசனை...
 
@@ -46,3 +47,48 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்
 `சுவாமி சரணம் ஐயப்பா... சரணம் சரணம் ஐயப்பா...`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+saranam solli kooppiduvom... sabarimalai vaasanai...\
+varanum endru azhaiththiduvom...varam kodukkum eesanai...
+
+arulaiththarum aandavanai...anbarkumithththranai...\
+siram thaazhththi vanangiduvom... hariharasudhan ayyappanai...
+
+villaalee veeranae...veeramani kanndanae...\
+thamizh solleduththup paaduvom...sundharesan maindhannai...
+
+`suvaami saranam ayyappa... saranam saranam ayyappa...`\
+`suvaami saranam ayyappa... saranam saranam ayyappa...`
+
+sabarimalai selbavarku sanjalaangal illai....\
+bayan dhanaiye pokkiduvaan pandhalanin pillai...\
+aabayam endru saranndaindhaal akanndridumae thollai...\
+avaninnri avaniyilee anuvum asaivadhuu illai...
+
+veetai vittu kattum katti arulmalai purappaduvom...\
+koottu saranam pottu erumaeli paettai selvom...\
+paettai thulli aadum podhu paaerinbam kolvom...
+
+`saami thindhakkaththom...ayyappan thindhakkaththom`\
+`saami thindhakkaththom...ayyappan thindhakkaththom`
+
+paettai thulli aadum podhu paaerinbam kolvom...\
+kottai kaavalan vaabaru suvaamiyai konndaadi magizhvom...
+
+`suvaami saranam ayyappa... saranam saranam ayyappa...`\
+`suvaami saranam ayyappa... saranam saranam ayyappa...`
+
+seermaevum sabarimalai naadhan arul thaedu...\
+eearonnbadhu padiiyaeari eesan padham naadu...\
+paarellaam kaathth unirkkum paramanin thiruveedu...\
+naaraayanan selvanaiyae naaviniikka paadu...
+
+`suvaami saranam ayyappa... saranam saranam ayyappa...`\
+`suvaami saranam ayyappa... saranam saranam ayyappa...`
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

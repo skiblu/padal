@@ -5,7 +5,7 @@ title: Athiyum Neeye Anthamum Neeye
 lyrics_en: Ayyappa, Devotional, Lyrics, Athiyum, Neeye, Anthamum, Neeye
 lyrics_ta: அதியும், நீயே, அந்தமும், நீயே, அரிஹர சுதனே, ஐயப்பா, மாதவ மணியே, மாணிக்க ஒளியே
 ---
-
+{% capture text %}
 `ஆதியும் நீயே அந்தமும் நீயே`\
 `அரிஹர‌ சுதனே ஐயப்பா`\
 `மாதவ‌ மணியே மாணிக்க‌ ஒளியே`\
@@ -27,3 +27,30 @@ lyrics_ta: அதியும், நீயே, அந்தமும், நீ
 மரகத‌ மூர்த்தியே ஐயப்பா (`ஆதியும் நீயே`)
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Aathiyum neeye anthamum neeye`\
+`Arihara suthanae Ayyappa`\
+`Maathava maniye maanikka oliye`\
+`Manikanda saamiye Ayyappa` (`Aathiyum neeye`)
+
+Neethiyin kurale nithya azhage\
+Nenjathin ninaive Ayyappa\
+Naathathin uyire nambikkai vadive\
+Naanilam potridum Ayyappa (`Aathiyum neeye`)
+
+Kaalaiyal kathire maalaiyal mathiye\
+Karpoora jothiye Ayyappa\
+Aalaya arase anbin parise\
+Abishekap priyane Ayyappa (`Aathiyum neeye`)
+
+Kuzhaindhaiyum neeye deivamum neeye\
+Karunaakarane Ayyappa\
+Mazhalaiyin mozhiye mayakkidum ezhile\
+Maragatha moorthiye Ayyappa (`Aathiyum neeye`)
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

@@ -6,6 +6,7 @@ lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Saranamappa Saranamayya
 lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்கள், பக்தி, சரணமப்பா சரணமய்யா
 ---
 
+{% capture text %}
 `சரணமப்பா சரணமய்யா ஸ்வாமியே`\
 `இங்கே வரணுமப்பா வரணுமைய்யா சாமியே..`(Chorus)
 
@@ -44,3 +45,47 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்
 
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`saranamappa saranamayya swaamiyae`\
+`inge varanumappa varanumaiyyaa saamiyae..`(Chorus)
+
+nettriyilee neearaninndu neela aadai thaangayae\
+suttrrivandhu aiyyan padham dhedhinaen andha\
+sabarimalai thannai nokki odinaen.\
+(`saranamappa..`)
+
+bavakadalaai kadanndhu sendru paramanadi saernndiidavae\
+thavakkalamaaam thulasi maalai dhaangineaen – indha\
+dhaaraniyil un pugazhaip paadinaeaen.\
+(`saranamappa..`)
+
+
+svaami thindhakkaththom ayyappa thindhakkaththom\
+ayyappa thindhakkaththom svaami thindhakkaththom\
+sarameduththu theerththamaadi vaettaiyaadi koottam koodi\
+paettaiyilee thullivandhaeaen swaamiyae – adhu\
+paeraaanandham paeraaanandham swaamiyae…\
+(`saranamappa..`)
+
+irumudiyum thaan gikkonndu peruvazhi yil nadakkkaiyilee\
+karimalai yil kadharugiraen aiyyanae\
+kaaththarul vaenndugireaen meyyanae\
+(`saranamappa..`)
+
+paavanamaai bambaa thannnil paalakanae unnnaik kanndu\
+paattup paada paava vinai podhudhae\
+bakthiyoadu kai unaiyae kouppudhae\
+(`saranamappa..`)
+
+aaru vaaram nonbirundhu aaru moondru padiiyaeari\
+aaravvaram koottaththukku naduviilee\
+aanandhamaai dharisanamum kaannbaenae\
+(`saranamappa..`)
+
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

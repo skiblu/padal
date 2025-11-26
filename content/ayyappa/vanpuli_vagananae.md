@@ -7,6 +7,7 @@ lyrics_en: Ayyappa, Tamil, Vanpuli, Vagananae, Panthala, Balaganae
 lyrics_ta: ஐயப்பா, தமிழ், வன்புலி, வாகனனே, பந்தல, பாலகனே
 ---
 
+{% capture text %}
 `வன்புலி வாகனனே`\
 `பந்தல பாலகனே`\
 `அஞ்சுமலை நாயகனே`\
@@ -58,3 +59,60 @@ lyrics_ta: ஐயப்பா, தமிழ், வன்புலி, வாக
 
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`vanpuli vaaganane`\
+`panthala baalaganae`\
+`anjchumalai naayaganae`\
+`ennai vaazha vaikura thayavanae`
+
+kaandhamalai vaazhpavanae sabarimalai vaasaa…\
+makkal kuraiyai theerpavanae malaiyaala raasaa…
+
+`vanpuli vaaganane`\
+`panthala baalaganae`\
+`anjchumalai naayaganae`\
+`ennai vaazha vaikura thayavanae`
+
+eesanavan puththiranae\
+sannmugan sinnavanae\
+pulippaal kaettadhumae\
+pulimaer vandhavanae\
+thangamugam paarkka vandhom makarajoadhi vaarumaiyaa….\
+undhannadi thaedi vandhom parivoadu paarumaiyaa…\
+hariharanae neyyoada… vandhomaiyaa meyyoada…
+
+`vanpuli vaaganane`\
+`panthala baalaganae`\
+`anjchumalai naayaganae`\
+`ennai vaazha vaikura thayavanae`
+
+joadhiyilae vaazhpavanae\
+manimuth thu maayavanae\
+malaimaer vandhaddhumae\
+thunaiyaai vandhavanae\
+villeduththu amboadu sabari saami vaarumaiyaa….\
+vaenndi vandha neymanaththaa aruloadu thaarumaiyaa…\
+hariharanae neyyoada… vandhomaiyaa meyyoada…
+
+`vanpuli vaaganane`\
+`panthala baalaganae`\
+`anjchumalai naayaganae`\
+`ennai vaazha vaikura thayavanae`
+
+kaandhamalai vaazhpavanae sabarimalai vaasaa…\
+makkal kuraiyai theerpavanae malaiyaala raasaa…
+
+`vanpuli vaaganane`\
+`panthala baalaganae`\
+`anjchumalai naayaganae`\
+`ennai vaazha vaikura thayavanae..`\
+`ennai vaazha vaikura thayavanae….`\
+`ennai vaazha vaikura thayavanae……`
+
+
+`swaamiyae... saranam ayyappaa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

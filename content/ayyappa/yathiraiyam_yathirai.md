@@ -5,6 +5,8 @@ title: Yathiraiyam Yathirai
 lyrics_en: Ayyappa, Yathiraiyam, Yathirai, Sabarimalai, Yathirai
 lyrics_ta: ஐயப்பா, யாத்திரையும், யாத்திரை, சபரிமலை, யாத்திரை
 ---
+
+{% capture text %}
 சுவாமியே…  `சரணம் ஐயப்பா`\
 சத்குரு நாதனே…  `சரணம் ஐயப்பா`
 
@@ -55,3 +57,59 @@ lyrics_ta: ஐயப்பா, யாத்திரையும், யாத�
 கன்னிசாமி போகும் யாத்திரை
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+swaamiyae…  `saranam ayyappaa`\
+sadhguru naadhanae…  `saranam ayyappaa`
+
+yaathiraiyum yaathirai - sabbarimalai yaathirai\
+sarana mazhai thoovum yaathirai
+
+ae kaattu vazhi yaathirai - kaal kadukum yaathirai\
+kanni saami pogum yaathirai
+
+malai aninthu noambu irundhu ayyappaa\
+kaavi anindhu kaaththukidandhom ayyappaa
+
+sabbarimalai yaathiraikkku vaarom vaarom\
+saththiyaththin koattaikkulla vaarom vaarom
+
+sabbarimalai yaathiraikkku vaarom vaarom\
+saththiyaththin koattaikkulla vaarom vaarom
+
+saamiyappaa `saranamappaa ayyappaa`\
+saranamappaa `saamiyappaa ayyappaa`
+
+yaathiraiyum yaathirai sabbarimalai yaathirai\
+sarana mazhai thoovum yaathirai\
+ae kaattu vazhi yaathirai kaal kadukum yaathirai\
+kanni saami pogum yaathirai
+
+ae maarkazhiyil yaathirai malai vazhiyil yaathirai\
+mauna mozhi paesum yaathirai
+
+poo mazhaiyil yaathirai pulveliyil yaathirai\
+mun paniyil pogum yaathirai
+
+kaalayil ezhundhu koavil adaindhu ayyappaa\
+poojai maghilndhu koasham ezhuthtom ayyappaa
+
+erumaeli vaavar kanndu vaarom vaarom\
+engae undhan thoazhan endru keettu vaarom
+
+erumaeli vaavar kanndu vaarom vaarom\
+engae undhan thoazhan endru keettu vaarom
+
+saamiyappaa `saranamappaa ayyappaa`\
+saranamappaa `saamiyappaa ayyappaa`
+
+yaathiraiyum yaathirai sabbarimalai yaathirai\
+sarana mazhai thoovum yaathirai\
+ae kaattu vazhi yaathirai kaal kadukum yaathirai\
+kanni saami pogum yaathirai
+
+`swaamiyae... saranam ayyappaa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
