@@ -4,6 +4,23 @@
   const MAX_RECENT = 10;
 
   document.addEventListener('DOMContentLoaded', () => {
+    // Language selector: initialize from localStorage and reload page on change
+    (function setupLanguageSelect() {
+      var sel = document.getElementById('site-lang-select');
+      if (!sel) return;
+      try {
+        var stored = localStorage.getItem('site_lang');
+        if (stored) sel.value = stored;
+      } catch (e) { /* ignore storage errors */ }
+      // default to Tamil if nothing selected
+      if (!sel.value) sel.value = 'ta';
+      sel.addEventListener('change', function () {
+        try { localStorage.setItem('site_lang', sel.value); } catch (e) { /* ignore */ }
+        // reload current page to apply language change
+        window.location.reload();
+      });
+    })();
+
     const favContainer = document.getElementById('favorite-btn-container');
     const allowHistory = !!favContainer;
 

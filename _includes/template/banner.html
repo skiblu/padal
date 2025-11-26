@@ -14,7 +14,14 @@
                 {{ site.title }}
             </a>
             <form class="ms-auto mb-3 mb-lg-0" role="search" id="search" onsubmit="site_search(); return false;">
-                <input id="site-search" class="form-control" type="search" placeholder="Search" aria-label="Search box">
+                <div class="d-flex align-items-center">
+                  <!-- Language selector placed immediately before search; default is Tamil -->
+                  <select id="site-lang-select" class="form-select form-select-sm me-2" aria-label="Language">
+                    <option value="ta">தமிழ்</option>
+                    <option value="en">English</option>
+                  </select>
+                  <input id="site-search" class="form-control site-search-input" type="search" placeholder="Search" aria-label="Search box">
+                </div>
             </form>
         </div>
     </nav>
