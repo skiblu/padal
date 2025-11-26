@@ -24,4 +24,5 @@ lyrics_en: Murugan, Anbarukku, Anbane
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
 
-{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
