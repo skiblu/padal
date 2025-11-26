@@ -7,7 +7,7 @@ title: Aarya Vamsa Sujatha
 lyrics_en: Ayyappa, Aarya, Vamsa, Sujatha, Namo, Namo
 lyrics_ta: ஆர்ய, வம்ச , சுஜதா, ஐயப்பன்‌, திவ்ய ரூபா
 ---
-
+{% capture text %}
 ஆர்ய வம்ச சுஜதா நமோ நமோ\
 வீர்யாதிவ்ய விளாசா நமோ நமோ\
 சாஷ்வதாஷ்ரித தேவா நமோ நமோ.. பகுகோடி
@@ -45,3 +45,46 @@ lyrics_ta: ஆர்ய, வம்ச , சுஜதா, ஐயப்பன்�
 தேவ குஞ்சரி பாதா நமோ நமோ.. அருள் தாராயி
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Aarya vamsa sujatha namo namo\
+Veeryaathivya vilaasa namo namo\
+Saashvathaashrita deva namo namo.. Bakukoti
+
+Bootha vandhitha deva namo namo\
+Beethi naashanaaroopa namo namo\
+Moganaambuja paatha namo namo.. Maanikandha
+
+Raaja sevaka veera namo namo\
+Vaaji vaarana vaaha namo namo\
+Geetha nrthya vinoda namo namo.. Veeraathi veera
+
+Gohara paaba vinaasha namo namo\
+Haaraa noopura thaari namo namo\
+Jyothisharchitha beetha namo namo.. Jayaseela
+
+Thaanya mangala roopa namo namo\
+Kaanaanthara vaasa namo namo\
+Vaasavaarshritha deva namo namo.. Nrupathaasa
+
+Kaantha sringa nivaasa namo namo\
+Kshaanthi thaayaka deva namo namo\
+Deva vannya keereesa namo namo.. Paradeva
+
+Moola manthra swaroopa namo namo\
+Baala vigraha moola namo namo\
+Puthrathaayaka deva namo namo.. Varabaala
+
+Eesha kesava soona namo namo\
+Baasa janma vinaasha namo namo\
+Aarthi naasana moorthy namo namo.. Dhivya roopa
+
+Theepa mangala jyothi namo namo\
+Thoorya ambala leela namo namo\
+Deva kunjaree paatha namo namo.. Arul thaarayi
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
