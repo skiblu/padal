@@ -34,17 +34,22 @@ jobs:
       - name: Obfuscate JavaScript files
         run: |
           mkdir -p assets/js
-          # find and obfuscate only .js files; fail fast on any obfuscation error
           count=0
           while IFS= read -r -d '' src; do
             count=$((count+1))
-            echo "Obfuscating: $src"
+            echo "Processing: $src"
             bn="$(basename "$src")"
-            javascript-obfuscator "$src" --output "assets/js/$bn"
-            if [ $? -ne 0 ]; then
-              echo "ERROR: obfuscation failed for $src"
-              exit 1
+            TMP="$(mktemp)"
+            if javascript-obfuscator "$src" --output "assets/js/$bn" 2> "$TMP"; then
+              echo "Obfuscated: $src -> assets/js/$bn"
+            else
+              echo "WARNING: obfuscation failed for $src — copying original file to assets/js/$bn"
+              echo "----- obfuscator error (first 80 lines) -----"
+              sed -n '1,80p' "$TMP" || true
+              echo "---------------------------------------------"
+              cp "$src" "assets/js/$bn" || { echo "ERROR: failed to copy $src to assets/js/$bn"; rm -f "$TMP"; exit 1; }
             fi
+            rm -f "$TMP"
           done < <(find assets/bkp-js -type f -name '*.js' -print0)
           if [ "$count" -eq 0 ]; then
             echo "No JS files found in assets/bkp-js — nothing to obfuscate."
