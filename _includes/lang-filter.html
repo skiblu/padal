@@ -1,5 +1,4 @@
-<!-- lang-filter-start -->
-<span class="lang-filter" data-lang="{{ include.lang | default: '' }}" hidden style="display:none;">
+<div class="lang-filter" data-lang="{{ include.lang | default: '' }}" style="display:none;">
   {%- if include.html -%}
     {{ include.html }}
   {%- else -%}
@@ -7,5 +6,4 @@
       {{ include.text | markdownify }}
     {%- endif -%}
   {%- endif -%}
-</span>
-<!-- lang-filter-end -->
+</div>
