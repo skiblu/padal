@@ -1,4 +1,4 @@
-name: Build Jekyll + Obfuscate JS
+name: Build Jekyll and Obfuscate JS
 
 on:
   push:
