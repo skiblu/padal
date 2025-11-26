@@ -53,7 +53,7 @@ jobs:
 
       # UPLOAD SITE ARTIFACT
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: _site
           name: github-pages
