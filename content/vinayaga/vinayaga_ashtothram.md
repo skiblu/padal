@@ -5,6 +5,7 @@ title:  Ashtothram Vinayaga
 lyrics_en: Vinayaga, Ashtothram, 108
 ---
 
+{% capture text %}
 1. ஓம் விநாயகாய நம
 2. ஓம் விக்நராஜாய நம
 3. ஓம் கௌரீ புத்ராய நம
@@ -113,5 +114,118 @@ lyrics_en: Vinayaga, Ashtothram, 108
 106. ஓம் துஷ்டாய நம
 107. ஓம் பிரஸந் நாத்மநே நம
 108. ஓம் ஸர்வஸித்திப்ரதாயகாய நம
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+1. Om Vinaayagaaya Nama
+2. Om Vignarajaaya Nama
+3. Om Kauri Puthraaya Nama
+4. Om Ganesvaraaya Nama
+5. Om Skandhagrajaaya Nama
+6. Om Avyayaaya Nama
+7. Om Poothaaya Nama
+8. Om Dhakshaaya Nama
+9. Om Adhyakshaaya Nama
+10. Om Dhvija Priyaaya Nama
+11. Om Agnigarbhachide Nama
+12. Om Indrasreeprathaya Nama
+13. Om Vaaneeprathaya Nama
+14. Om Sarvasiddhiprathaya Nama
+15. Om Sarvanayaaya Nama
+16. Om Gajananaya Nama
+17. Om Sarvareeppriyaya Nama
+18. Om Sarvaathmakaya Nama
+19. Om Srushti Karthre Nama
+20. Om Devaaya Nama
+21. Om Anekarchithaaya Nama
+22. Om Sivaaya Nama
+23. Om Suddhaaya Nama
+24. Om Buddhipriyaaya Nama
+25. Om Saanthaaya Nama
+26. Om Brahmacharinae Nama
+27. Om Gajaana Naaya Nama
+28. Om Dvai Maathreya Nama
+29. Om Munisthuthyaya Nama
+30. Om Bhakthavighnavi Naasakaaya Nama
+31. Om Ekadanthaaya Nama
+32. Om Chathur Baahave Nama
+33. Om Chathuraaya Nama
+34. Om Sakthisamyuthaaya Nama
+35. Om Lambodha Raaya Nama
+36. Om Soorpakarnaaya Nama
+37. Om Haraye Nama
+38. Om Brahma Vidhuthamaaya Nama
+39. Om Kaalaaya Nama
+40. Om Grahapataye Nama
+41. Om Kaamine Nama
+42. Om Somasoorya Agnilochanaya Nama
+43. Om Paasaangusa Dharaaya Nama
+44. Om Chandaaya Nama
+45. Om Gunaatheethaya Nama
+46. Om Niranjanaya Nama
+47. Om Akal Makshaaya Nama
+48. Om Svayamsitthaaya Nama
+49. Om Siddharchithapathaam Pujaaya Nama
+50. Om Beeja Poora Balaa Sakthaaya Nama
+51. Om Varathaaya Nama
+52. Om Saakvathaaya Nama
+53. Om Kruthine Nama
+54. Om Veethabhayaaya Nama
+55. Om Gathine Nama
+56. Om Chakrine Nama
+57. Om Ikshachabapatruthe Nama
+58. Om Sree Thaaya Nama
+59. Om Ajaaya Nama
+60. Om Uthpalakaraaya Nama
+61. Om Sree Pathaye Nama
+62. Om Sthuthikshithaaya Nama
+63. Om Kulaatribhethre Nama
+64. Om Jadilaaya Nama
+65. Om Kalikalmashanaasakaaya Nama
+66. Om Chandra Soodaamanaye Nama
+67. Om Kaanthaaya Nama
+68. Om Paapahaarinne Nama
+69. Om Samaahithaaya Nama
+70. Om Aashri Thasreekaraaya Nama
+71. Om Saumyaaya Nama
+72. Om Bhakthavaanchi Thaayakaaya Nama
+73. Om Kaivalyasukhathaaya Nama
+74. Om Sachidhaanandha Vigrahaaya Nama
+75. Om Gnaanine Nama
+76. Om Dhayaayuthaaya Nama
+77. Om Thaanthaaya Nama
+78. Om Brahmathveshavivarjithaaya Nama
+79. Om Pramaththa Dhaithya Bayathaaya Nama
+80. Om Sree Kandaaya Nama
+81. Om Vibudhesvaraaya Nama
+82. Om Ramarchithaaya Nama
+83. Om Vidhaye Nama
+84. Om Naagaraaja Yajnopaveethakaya Nama
+85. Om Sthoolakandaaya Nama
+86. Om Svayam Karthre Nama
+87. Om Saamakosha Priyaaya Nama
+88. Om Parasmai Nama
+89. Om Sthoola Thundaaya Nama
+90. Om Akranyai Nama
+91. Om Theeraaya Nama
+92. Om Vaageesaaya Nama
+93. Om Siddhithaayakaaya Nama
+94. Om Dhoorvaabilva Priyaaya Nama
+95. Om Avyaktha Moorththaye Nama
+96. Om Athbhuthamoorththimathe Nama
+97. Om Sailendhranujothsanga Nama
+98. Om Kelanothsukamaa Nasaaya Nama
+99. Om Svalaavanya Nama
+100. Om Sudhaasaaraaya Nama
+101. Om Jithamanmatha Vigrahaaya Nama
+102. Om Samas Thajagathaa Thaaraaya Nama
+103. Om Maayine Nama
+104. Om Mooshikavaaha Naaya Nama
+105. Om Srushtaaya Nama
+106. Om Thushtaaya Nama
+107. Om Prasan Naathmane Nama
+108. Om Sarvasiddhiprathaayagaaya Nama
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+
 
 
