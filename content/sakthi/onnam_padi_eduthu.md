@@ -5,8 +5,7 @@ youtube_id: 8qvS-F8olaU
 title: Onnam padi eduthu
 lyrics_en: Sakthi, Onnam, padi, eduthu, தன்னன்னா, நாதினம், Onnam, Padi, Eduthu, Thannanna, Dhenam, ஒன்னாம், படி, எடுத்து, தன்னன்னா, நாதினம், சித்திர, கோபுரம், கட்டவே
 ---
-
-
+{% capture text %}
 தன்னன்னா நாதினம் தன்னன்னா நாதினம் தன்னன்னா நாதினம் தன்னானே\
 தன்னன்னா நாதினம் தன்னானே
 
@@ -114,4 +113,115 @@ lyrics_en: Sakthi, Onnam, padi, eduthu, தன்னன்னா, நாதி�
 
 தன்னன்னா நாதினம் தன்னன்னா நாதினம் தன்னன்னா நாதினம் தன்னானே\
 `தன்னன்னா நாதினம் தன்னானே` (Chorus)
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Thannanna nadheenam thannanna nadheenam thannanna nadheenam thannane\
+Thannanna nadheenam thannane
+
+`Thannanna nadheenam thannanna nadheenam thannanna nadheenam thannane`\
+`Thannanna nadheenam thannane` (Chorus)
+
+Sendhil vadivelavare sindhu kavi paada, pala sangadhigal poda, munbu seidha vinai oda\
+Ingu thanjamugam thanga velli kunjarangal paada
+
+`Thannanna nadheenam thannanna nadheenam thannanna nadheenam thannane`\
+`Thannanna nadheenam thannane` (Chorus)
+
+**Onnam padi** eduthu osandha poova ora orama bathrakaaliyam\
+Karuppa saamiyam pethavar deviyam vallavar saamiyam\
+Munnoraiyaan pechi aathaala maariammal\
+Sithira kopuram kattave\
+`Sithira kopuram kattave` (Chorus)
+
+Aalampannaiku azhagu pooppoothu aathaa vaaralaam poonjolaiku
+
+`Thannanna nadheenam thannanna nadheenam thannanna nadheenam thannane`\
+`Thannanna nadheenam thannane` (Chorus) – 2 times
+
+**Rendam padi** eduthu osandha poova ora orama bathrakaaliyam\
+Karuppa saamiyam pethavar deviyam vallavar saamiyam\
+Munnoraiyaan pechi aathaala maariammal\
+Sithira kopuram kattave\
+`Sithira kopuram kattave` (Chorus)
+
+Aalampannaiku azhagu pooppoothu aathaa vaaralaam poonjolaiku
+
+`Thannanna nadheenam thannanna nadheenam thannanna nadheenam thannane`\
+`Thannanna nadheenam thannane` (Chorus) – 2 times
+
+**Moonam padi** eduthu osandha poova ora orama bathrakaaliyam\
+Karuppa saamiyam pethavar deviyam vallavar saamiyam\
+Munnoraiyaan pechi aathaala maariammal\
+Sithira kopuram kattave\
+`Sithira kopuram kattave` (Chorus)
+
+Aalampannaiku azhagu pooppoothu aathaa vaaralaam poonjolaiku
+
+`Thannanna nadheenam thannanna nadheenam thannanna nadheenam thannane`\
+`Thannanna nadheenam thannane` (Chorus) – 2 times
+
+**Naalaam padi** eduthu osandha poova ora orama bathrakaaliyam\
+Karuppa saamiyam pethavar deviyam vallavar saamiyam\
+Munnoraiyaan pechi aathaala maariammal\
+Sithira kopuram kattave\
+`Sithira kopuram kattave` (Chorus)
+
+Aalampannaiku azhagu pooppoothu aathaa vaaralaam poonjolaiku
+
+`Thannanna nadheenam thannanna nadheenam thannanna nadheenam thannane`\
+`Thannanna nadheenam thannane` (Chorus) – 2 times
+
+**Anjaam padi** eduthu osandha poova ora orama bathrakaaliyam\
+Karuppa saamiyam pethavar deviyam vallavar saamiyam\
+Munnoraiyaan pechi aathaala maariammal\
+Sithira kopuram kattave\
+`Sithira kopuram kattave` (Chorus)
+
+Aalampannaiku azhagu pooppoothu aathaa vaaralaam poonjolaiku
+
+`Thannanna nadheenam thannanna nadheenam thannanna nadheenam thannane`\
+`Thannanna nadheenam thannane` (Chorus) – 2 times
+
+**Aaraam padi** eduthu osandha poova ora orama bathrakaaliyam\
+Karuppa saamiyam pethavar deviyam vallavar saamiyam\
+Munnoraiyaan pechi aathaala maariammal\
+Sithira kopuram kattave\
+`Sithira kopuram kattave` (Chorus)
+
+Aalampannaiku azhagu pooppoothu aathaa vaaralaam poonjolaiku
+
+`Thannanna nadheenam thannanna nadheenam thannanna nadheenam thannane`\
+`Thannanna nadheenam thannane` (Chorus) – 2 times
+
+**Ezhaam padi** eduthu osandha poova ora orama bathrakaaliyam\
+Karuppa saamiyam pethavar deviyam vallavar saamiyam\
+Munnoraiyaan pechi aathaala maariammal\
+Sithira kopuram kattave\
+`Sithira kopuram kattave` (Chorus)
+
+Aalampannaiku azhagu pooppoothu aathaa vaaralaam poonjolaiku
+
+`Thannanna nadheenam thannanna nadheenam thannanna nadheenam thannane`\
+`Thannanna nadheenam thannane` (Chorus) – 2 times
+
+**Ettaam padi** eduthu osandha poova ora orama bathrakaaliyam\
+Karuppa saamiyam pethavar deviyam vallavar saamiyam\
+Munnoraiyaan pechi aathaala maariammal\
+Sithira kopuram kattave\
+`Sithira kopuram kattave` (Chorus)
+
+Aalampannaiku azhagu pooppoothu aathaa vaaralaam poonjolaiku
+
+`Thannanna nadheenam thannanna nadheenam thannanna nadheenam thannane`\
+`Thannanna nadheenam thannane` (Chorus) – 2 times
+
+Kottiya kaiyum valichu poochu, nalla kodi valaivikal vittu poochu\
+Kottiya kaiyum valichu poochu nalla kodi valaivikal vittu poochu\
+Nithirai vandhu nil laabam maraikudhu uthharavu kodu kaalithaye\
+Nithirai vandhu nil laabam maraikudhu uthharavu kodu kaalithaye…
+
+Thannanna nadheenam thannanna nadheenam thannanna nadheenam thannane\
+`Thannanna nadheenam thannane` (Chorus)
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
 

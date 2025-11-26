@@ -6,6 +6,7 @@ youtube_id: JhaJL4ZdlgE
 lyrics_en: Amman, Sakthi, Durga, Karpoora, Nayagiyae, கர்பூரா, நாயகியே
 ---
 
+{% capture text %}
 கற்பூர நாயகியே ! கனகவல்லி,\
 காளி மகமாயி கருமாரியம்மா,\
 பொற்கோவில் கொண்ட சிவகாமியம்மா,\
@@ -86,3 +87,88 @@ lyrics_en: Amman, Sakthi, Durga, Karpoora, Nayagiyae, கர்பூரா, ந
 தொழுதாலும் அழுதாலும் வடிவாகினாய்,\
 போற்றாத நாளில்லை தாயே உன்னை,\
 பொருளோடு புகழோடு வைப்பாய் என்னை.
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Karpoora naayagiyae! Kanakavalli,\
+Kaali makamayi karumaariamma,\
+Porkovil konda sivakaamiyamma,\
+Pooviruntha valli deivanaiyamma,\
+Virkola vedavalli visalakshi,\
+Vizhikola maamadhurai meenakshi,\
+Sorkovil naanmaiththen ingu thaaye,\
+Sudaraga vaazhvippai ennai neeye
+
+Puvanam muzhuthum aalukinra puvaneswari,\
+Puramerithon puramirukum parameswari,\
+Nava navamay vadivagum maheswari,\
+Nambinavar kaivilakke sarveswari,\
+Kavalaigalaith theerthuvidum kaaleswari,\
+Kaarirulin theecchudare jotheeswari,\
+Uvaamanap paramporul jagatheeswari,\
+Unnadimaich siriyenai nee aadhari
+
+Unnidathil sollamal veru endha\
+Uravidathil muraiyiduven thaaye! endhan\
+Annaiyaval neeyiruka ulagil matra,\
+Anniyarai kenjidudhal muraiyoo amma,\
+Kannirai thudaithu vida odivamma,\
+Kaathirukka vaithidudhal sariyoo amma,\
+Sinnavalain kural kettu mugam thiruppu,\
+Sirithapadi ennai thinam vazhianuppu
+
+Kannirandum unnuruve kaana vendum,\
+Kaalirandum unnnadiye naadavendum,\
+Pannamaikum naa unnaye paada vendum,\
+Bakthiyodu kai unaiye kooda vendum,\
+Ennamellam un ninaive aaga vendum,\
+Irupathellaṁ unnudaiyadhaaga vendum,\
+Mannalakkum samayapura maariamma,\
+Makkaludaya kuraikalaium theerumamma
+
+Netriyile kungumame niraiya vendum,\
+Nenjil un thirunaamam vazhiya vendum,\
+Katrathellaṁ men melum peruga vendum,\
+Kavidhaiyile un naamam vaazha vendum,\
+Sutramellam needuzhi vaazha vendum,\
+Jothiyile neeyirundhu aala vendum,\
+Matrathellaṁ naanunakuch sollama?\
+Madimedhu pillai ennaith thallalama?
+
+Annaiku upakaaram seivathundo?\
+Arul seiya inneeram aavathundo?\
+Kannuku imaiindri kaavaluṇdo?\
+Kandruku pasuvindri sondhaamuṇdo?\
+Munnaikum pinaikum paarpadhundo?\
+Muzhūmaikum nee endhan annaiyandro?\
+Ennaiku vilakkuku bedhamuṇdo?\
+Endraikum naan undhan pillaiandro?
+
+Anbukkee naanadimai aaga vendum,\
+Arivukke en kaadhu ketka vendum,\
+Vambukkee pogaamal irukka vendum,\
+Vanjathai en nenjam arukka vendum,\
+Panbukkee uyir vaazha aasai vendum,\
+Parivukkee naanendrum paniya vendum,\
+En pakkam ivaiyellam irukka vendum,\
+Ennodu neeyendrum vaazha vendum
+
+Kumbidavo kaiirandum podhavilla,\
+Kooppidavo naavondral mudiyavilla,\
+Nambidavo meyyathanil sakthiyilla,\
+Nadanthidavo kaalirandal aagavilla,\
+Sembavala vaayazhagi unyezhilo!\
+Sinna iru kannaluku adangavilla,\
+Ambalavu vizhiyaalae unnai endrum!\
+Adipaniyum aasaikora alavumilla
+
+Katraagi kanalagi kadalaakinai,\
+Karuvaagi uyiraagi udalakinai,\
+Nettraagi indraagi naalakinai,\
+Nilamagi payiraagi unavaakinai,\
+Thottaalum jeyithaalum vaazhvaginai,\
+Thozhuthaalum azhuthaalum vadivaakinai,\
+Pottraatha naaalillai thaaye unnai,\
+Porulodu pugazhodu vaippai ennai.
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+

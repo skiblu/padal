@@ -4,7 +4,7 @@ nav_order: 50
 title: Pachchai Mayil vaganane
 lyrics_en: Murugan, Pachchai, Mayil, vaganane
 ---
-
+{% capture text %}
 `பச்சை மயில் வாகனனே சிவ`\
 `பால சுப்பிரமணியனே வா - இங்கு`\
 `இச்சை இல்லாம் உன்மேல் வைத்தேன்`\
@@ -34,3 +34,36 @@ lyrics_en: Murugan, Pachchai, Mayil, vaganane
 அனந்த கோடி நமஸ்காரம் - `(பச்சை மயில்)`   6
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Pachchai mayil vaaganane siva`\
+`Baala subbiramaniyanae vaa - ingu`\
+`Ichchai illaam unmel vaithen`\
+`Ellalavu aiyamillai`
+
+Kochchai mozhiyaanalum - unnai\
+Sarchai ellam maraindhathappa - engum\
+Santham neerainthappa - `(Pachchai mayil)` 2
+
+Vellamadhu pallanthanile paayum\
+Thanmai pola ullanthanile - nee\
+Malla malla pugundu vittai endhan\
+Kallamellam karaindhathappa - `(Pachchai mayil)` 3
+
+Nenjamathil kovil amaithen athil\
+Nermai ennum thibam vaithen - nee\
+Senjilamba konjida vaa maruga\
+Sevark kodi mayil veera - `(Pachchai mayil)` 4
+
+Aarupadi veedudaiyava enakku\
+Aaruthalaith tharunth dheva - nee\
+Erumayil ervaruvai - maruga\
+Engum neerainthavane - `(Pachchai mayil)` 5
+
+Anbana shanmugane - nee\
+Alaiya manang thanthai - unakku\
+Anantha kodi namaskaram - `(Pachchai mayil)` 6
+
+`Vetrivel Muruganukku... Aroharaa!!`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
