@@ -6,6 +6,7 @@ title: Thillai Ambala Nataraja
 lyrics_en: Shivan, Easwar, Nataraja, Thillai, Ambala, Tamil, Devotional, தில்லை, அம்பல, நட்டராஜா
 ---
 
+{% capture text %}
 கங்கை அணிந்தவா!\
 கண்டோர் தொழும் விலாசா!\
 சதங்கை ஆடும் பாத விநோதா!\
@@ -46,7 +47,48 @@ lyrics_en: Shivan, Easwar, Nataraja, Thillai, Ambala, Tamil, Devotional, தி�
 
 
 `தென்னாடுடைய சிவனே போற்றி!..  எந்நாட்டவர்க்கும் இறைவா போற்றி!..`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
 
+{% capture text_en %}
+Gangai anindhavaa!\
+Kandor thozhum vilaasaa!\
+Sathangai aadum paatha vinodhaa!\
+Lingesvara! Nin thaal thunai nee thaa!
 
+`Thillai ambala Nataraja`\
+`Sezhumai nadhane paramesha` (2)
+
+Allal theertha thaandavaa vaa vaa\
+Amizhdhaanava vaa\
+Allal theertha thaandavaa vaa vaa\
+Amizhdhaanava vaa
+
+`Thillai ambala Nataraja`\
+`Sezhumai nadhane paramesha`
+
+Engum inbam vilangave\
+Engum inbam vilangave\
+Arul Umaapadhe\
+Elimai agala varam thaa vaa vaa\
+Valam ponga vaa\
+Elimai agala varam thaa vaa vaa\
+Valam ponga vaa
+
+`Thillai ambala Nataraja`\
+`Sezhumai nadhane paramesha`
+
+Palavi tha naadum kalaiyedum\
+Panivudan unaiye thudhipaadum\
+Palavi tha naadum kalaiyedum\
+Panivudan unaiye thudhipaadum\
+Kalaiyalangaara Paandiya raani nesa\
+Kalaiyalangaara Paandiya raani nesa\
+Malai vaasaa! Mangaa madhiyaanavaa
+
+`Thillai ambala Nataraja`\
+`Sezhumai nadhane paramesha`
+
+`Thennaadudaiya Shivane potri!..  Ennaattavarkkum iraivaa potri!..`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
 
 

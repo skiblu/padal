@@ -4,6 +4,8 @@ nav_order: 50
 title: Nataraja Nataraja
 lyrics_en: Shivan, Nama, Shivaya, Nataraja, Nataraja, Tamil, Devotional, நடராஜா, நர்த்தன சுந்தர, சிவராஜா
 ---
+
+{% capture text %}
 நடராஜா நடராஜா\
 நர்த்தன சுந்தர நடராஜா\
 சிவராஜா சிவராஜா\
@@ -47,4 +49,51 @@ lyrics_en: Shivan, Nama, Shivaya, Nataraja, Nataraja, Tamil, Devotional, நட�
 பூமிப் ப்ரபஞ்சா நடராஜா...
 
 `தென்னாடுடைய சிவனே போற்றி!..  எந்நாட்டவர்க்கும் இறைவா போற்றி!..`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Nataraja Nataraja\
+Narthana sundhara Nataraja\
+Sivaraja Sivaraja\
+Sivagaami priya Nataraja
+
+Nataraja Nataraja\
+Aanandha thaandava Nataraja\
+Nataraja Nataraja\
+Oorthuva thaandava Nataraja
+
+Nataraja Nataraja\
+Chidambaresa Nataraja\
+Nataraja Nataraja\
+Sirsabeesa Nataraja
+
+Nataraja Nataraja\
+Pannaga booshana Nataraja\
+Nataraja Nataraja\
+Sachidananda Nataraja
+
+Nataraja Nataraja\
+Kanakasabeesa Nataraja\
+Nataraja Nataraja\
+Uttharakosamankai Nataraja
+
+Nataraja Nataraja\
+Thripura thaandava Nataraja\
+Nataraja Nataraja\
+Muni thaandava Nataraja
+
+Nataraja Nataraja\
+Sandhya thaandava Nataraja\
+Nataraja Nataraja\
+Kaali thaandava Nataraja
+
+Nataraja Nataraja\
+Thillai thaandava Nataraja\
+Nataraja Nataraja\
+Booloka natha Nataraja\
+Nataraja Nataraja\
+Bhoomi prapañja Nataraja...
+
+`Thennaadudaiya Shivane potri!..  Ennaattavarkkum iraivaa potri!..`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
 

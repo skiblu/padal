@@ -4,6 +4,8 @@ nav_order: 50
 title:  Prabho Ganapathe
 lyrics_en: Vinayaga, Prabho, Ganapathe, ப்ரபோ, கணபதே
 ---
+
+{% capture text %}
 `ப்ரபோ கணபதே பரிபூரண வாழ்வருள்வாயே`\
 `ப்ரபோ கணபதே பரிபூரண வாழ்வருள்வாயே`\
 `ப்ரபோ கணபதே பரிபூரண வாழ்வருள்வாய…….`
@@ -28,7 +30,34 @@ lyrics_en: Vinayaga, Prabho, Ganapathe, ப்ரபோ, கணபதே
 குன்றென விளங்கும் பெம்மானே
 
 `ப்ரபோ கணபதே பரிபூரண வாழ்வருள்வாயே`\
-`ப்ரபோ கணபதே பரிபூரண வாழ்வருள்வாயே….`
+`ப்ரபோ கணபதே பரிபூரண வாழ்வருள்வாயே…….`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
 
+{% capture text_en %}
+`Prabho Ganapathe paripoorna vaazhvarulvaye`\
+`Prabho Ganapathe paripoorna vaazhvarulvaye`\
+`Prabho Ganapathe paripoorna vaazhvarulvaay.......`
 
+Sarndhu vananggi thudhi paadi aadi unthan\
+Sannidhi saranandaidhomae\
+Saantha siththa soubakiyam yaavaiyum\
+Thantharul satguru neeye
+
+`Prabho Ganapathe paripoorna vaazhvarulvaye (2)`
+
+Aadhi moola gananaatha gajaanana\
+Arputha thavala soroopataa\
+Theva theva jaya vijaya vinaayaga\
+Sinmaya para siva deepaa
+
+`Prabho Ganapathe paripoorna vaazhvarulvaye (2)`
+
+Thedi thedi engko odugin draar ullae\
+Thedi kandu kollalamae\
+Kodi kodi matha yaanaigal panisey ya\
+Kundren vilangum pemmunae
+
+`Prabho Ganapathe paripoorna vaazhvarulvaye`\
+`Prabho Ganapathe paripoorna vaazhvarulvaye....`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
 

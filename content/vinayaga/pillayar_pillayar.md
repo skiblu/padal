@@ -5,6 +5,7 @@ title:  Pillayar Pillayar
 lyrics_en: Vinayaga, Pillayar, Pillayar, பிள்ளையார், பிள்ளையார் 
 ---
 
+{% capture text %}
 `பிள்ளையார் பிள்ளையார் பெருமை வாய்ந்த பிள்ளையார்`\
 `பிள்ளையார் பிள்ளையார் பெருமை வாய்ந்த பிள்ளையார்`
 
@@ -25,5 +26,28 @@ lyrics_en: Vinayaga, Pillayar, Pillayar, பிள்ளையார், பி�
 
 மஞ்சளிலே செய்திடினும் மண்ணினாலே செய்திடினும்\
 ஐந்தெழுத்து மந்திரத்தை நெஞ்சில் ஆழ்த்தும் பிள்ளையார்  `(பிள்ளையார் பிள்ளையார்…)`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
 
+{% capture text_en %}
+`Pillayar Pillayar perumai vaindha Pillayar`\
+`Pillayar Pillayar perumai vaindha Pillayar`
+
+Aatrangkarai orathile arasa mara nizhale\
+Veetrirukkum Pillayar vinaikal theerkum Pillayar `(Pillayar Pillayar...)`
+
+Aval pori kadalaiyum arisi kolukattaiyum\
+Kavalaiyindri thinnuvaar kashtangalai pokkuvaar `(Pillayar Pillayar...)`
+
+Aarumuga velavanin annan Pillayar\
+Nerum thunbam yavume neekki vaikkum Pillayar `(Pillayar Pillayar...)`
+
+Velavanin annanaaam velviккellaam muthalvanaaam\
+Vendum varangal yaavaiyume thantharulūm Pillayar `(Pillayar Pillayar...)`
+
+Vanni marathu nizhale varangal tharum Pillayar\
+Vilva marathu nizhale vinaikal theerkum Pillayar  `(Pillayar Pillayar...)`
+
+Manjalile seithidinum manninaale seithidinum\
+Aindhezhuthu mandhirathai nenjil aazhthum Pillayar  `(Pillayar Pillayar...)`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
 

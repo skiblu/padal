@@ -6,7 +6,7 @@ youtube_id: fOBYiKcncLQ
 lyrics_en: Vinayaga, Ganesa, vinai, theerpavanae, விநாயகன், வினை, தீர்ப்பவனே
 ---
 
-
+{% capture text %}
 `விநாயகனே வினை தீர்ப்பவனே`\
 `வேழ முகத்தோனே ஞால முதல்வனே`\
 `விநாயகனே வினை தீர்ப்பவனே`\
@@ -38,4 +38,39 @@ lyrics_en: Vinayaga, Ganesa, vinai, theerpavanae, விநாயகன், வ�
 
 `விநாயகனே.. `\
 `வினை தீர்ப்பவனே.....`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Vinayagane vinai theerpavanae`\
+`Vezha mugatthone gnala muthalvanae`\
+`Vinayagane vinai theerpavanae`\
+`Vezha mugatthone gnala muthalvanae`\
+`Vinayagane vinai theerpavanae`
+
+Gunaanidhiye guruve saranam.....\
+Gunaanidhiye guruve saranam\
+Kuraikal kalaiya idhuve tharunam
+
+Vinayagane vinai theerpavanae\
+Vezha mugatthone gnala muthalvanae\
+Vinayagane vinai theerpavanae
+
+Umapathiye ulagam endraye\
+Oru sutrinile valamum vandhaye\
+Umapathiye ulagam endraye\
+Oru sutrinile valamum vandhaye.....
+
+Gananaadhane maanganiyai undaaye.....\
+Gananaadhane maanganiyai undaaye\
+Kathirvelanin karuthil nindraaye\
+Kathirvelanin karuthil nindraaye
+
+`Vinayagane vinai theerpavanae`\
+`Vezha mugatthone gnala muthalvanae`\
+`Vinayagane vinai theerpavanae`\
+`Vezha mugatthone gnala muthalvanae`
+
+`Vinayagane.. `\
+`Vinai theerpavanae.....`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
 

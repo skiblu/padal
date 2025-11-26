@@ -4,6 +4,8 @@ nav_order: 50
 title:  Ganesa Saranam
 lyrics_en: Vinayaga, Ganesa, Saranam, கணேச, சரணம்
 ---
+
+{% capture text %}
 `கணேச சரணம் சரணம் கணேசா`\
 `கணேச சரணம் சரணம் கணேசா`
 
@@ -21,5 +23,25 @@ lyrics_en: Vinayaga, Ganesa, Saranam, கணேச, சரணம்
 
 `கணேச சரணம் சரணம் கணேசா`\
 `கணேச சரணம் சரணம் கணேசா (2)`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
 
+{% capture text_en %}
+`Ganesa saranam saranam Ganesha`\
+`Ganesa saranam saranam Ganesha`
+
+Gathiyena arulvaay saranam Ganesha\
+Karunayin vadive saranam Ganesha - - - `(Ganesa saranam)`
+
+Sakthiyin mainthaa saranam Ganesha\
+Saasthaa guruve saranam Ganesha - - - `(Ganesa saranam)`
+
+Muthalvanum neeye saranam Ganesha\
+Munithozhum thevaa saranam Ganesha - - - `(Ganesa saranam)`
+
+Moothavan neeye saranam Ganesha\
+Mooshika vaagana saranam Ganesha - - - `(Ganesa saranam)`
+
+`Ganesa saranam saranam Ganesha`\
+`Ganesa saranam saranam Ganesha (2)`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
 
