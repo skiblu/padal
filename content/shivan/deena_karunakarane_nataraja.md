@@ -6,6 +6,7 @@ youtube_id: 1eXcYjEAfoc
 lyrics_en: Shivan, Nama, Shivaya, Deena, Karunakarane, Nataraja, Tamil, Devotional, தீனகருணகரணே, நட்டராஜா
 ---
 
+{% capture text %}
 `தீன கருணாகரனே நடராஜா நீலகண்டனே`\
 `தீன கருணாகரனே நடராஜா நீலகண்டனே`
 
@@ -44,4 +45,45 @@ lyrics_en: Shivan, Nama, Shivaya, Deena, Karunakarane, Nataraja, Tamil, Devotion
 
 
 `தென்னாடுடைய சிவனே போற்றி!..  எந்நாட்டவர்க்கும் இறைவா போற்றி!..`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Dheena karunagarane Nataraja Neelakanntane`\
+`Dheena karunagarane Nataraja Neelakanntane`
+
+Ninnarul pugazhndhu paniyum, ennaiyum irangiyarulum\
+Ninnarul pugazhndhu paniyum, ennaiyum irangiyarulum
+
+Mauna guruve, mauna guruve, mauna guruve\
+Mauna guruve, Harane enaiyaanda Neelakanntane\
+Mauna guruve Harane enaiyaanda Neelakanntane
+
+`Dheena karunagarane Nataraja Neelakanntane`\
+`Dheena karunagarane Nataraja Neelakanntane`
+
+Meenalosani manaalaa, thaandavamadum sabaabathe\
+Meenalosani manaalaa, thaandavamadum sabaabathe
+
+Gnaanigal manam virumbum Neelakanntane\
+Gnaanigal manam virumbum Neelakanntane
+
+Mauna guruve, mauna guruve, mauna guruve\
+`Dheena karunagarane Nataraja Neelakanntane`\
+`Dheena karunagarane Nataraja Neelakanntane`
+
+Aadhiyandham illaa harane, anbar ullam vaazhum parane\
+Aadhiyandham illaa harane, anbar ullam vaazhum parane
+
+Paadhi madhiveniyane paramesa Neelakanntane\
+Paadhi madhiveniyane paramesa Neelakanntane\
+Neelakanntana, Neelakanntane\
+Neelakanntana, Neelakanntane
+
+`Dheena karunagarane Nataraja Neelakanntane`\
+`Dheena karunagarane Nataraja Neelakanntane`\
+`Dheena karunagarane Nataraja Neelakanntane`\
+`Dheena karunagarane Nataraja Neelakanntane`
+
+`Thennaadudaiya Shivane potri!..  Ennaattavarkkum iraivaa potri!..`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
 

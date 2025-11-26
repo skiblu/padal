@@ -5,6 +5,8 @@ title: Lingashtam
 youtube_id: oensAGheni4
 lyrics_en: Shivan, Nama, Shivaya, Sivanae, Lingashtam, லிங்காஷ்டகம், சிவனே
 ---
+
+{% capture text %}
 ப்ரம்ம முராரியார் போற்றிடும் லிங்கம்\
 சிறிதும் களங்கம் இல்லா  சிவலிங்கம்\
 பிறவியின் துயரை போக்கிடும் லிங்கம்\
@@ -46,4 +48,49 @@ lyrics_en: Shivan, Nama, Shivaya, Sivanae, Lingashtam, லிங்காஷ்�
 நானும் வணங்கும் சதாசிவ லிங்கம்!!
 
 `தென்னாடுடைய சிவனே போற்றி!..  எந்நாட்டவர்க்கும் இறைவா போற்றி!..`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Brahma muraariyaar potridum lingam\
+Sirithuṁ kalaṅkam illaa sivalingam\
+Piraviyin thuyarai pokkidum lingam\
+Naanum vanaṅkum sadhaasiva lingam !!
+
+Thevarum munivaṛum potridum lingam\
+Kaamanai erittha karunagara lingam\
+Iraavanan ullam vilangidum lingam\
+Naanum vanaṅkum sadhaasiva lingam !!
+
+Vaasamanaittaiyum poosiya lingam\
+Valar arivagiya kaarana lingam\
+Sithta suraasuraṛ potridum lingam\
+Naanum vanaṅkum sadhaasiva lingam !!
+
+Ponmani soodi sudarndhidum lingam\
+Thannidai naagam anindhidum lingam\
+Thakshanin yaagam veezhthiya lingam\
+Naanum vanaṅkum sadhaasiva lingam !!
+
+Kungumam sandhanam poosiya lingam\
+Pankaja maalaiyai soodiya lingam\
+Thongiya vinaigalai pokkidum lingam\
+Naanum vanaṅkum sadhaasiva lingam !!
+
+Theva kanangalin archana lingam\
+Theedidum bakthiyil vuuridum lingam\
+Sooriyan kodi sudar vidum lingam\
+Naanum vanaṅkum sadhaasiva lingam!!
+
+Ettu thalathinul ezhundhidum lingam\
+Ellaamaagiya kaarana lingam\
+Ettu tharitthiram neekidum lingam\
+Naanum vanaṅkum sadhaasiva lingam!!
+
+Thevarin uruvil poojaikkum lingam\
+Theva vanamalarai etridum lingam\
+Paramanaadhanaa paravīdum lingam\
+Naanum vanaṅkum sadhaasiva lingam!!
+
+`Thennaadudaiya Shivane potri!..  Ennaattavarkkum iraivaa potri!..`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
 

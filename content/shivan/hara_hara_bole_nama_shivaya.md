@@ -6,6 +6,7 @@ youtube_id: WBzeTz_UpQ4
 lyrics_en: Shivan, Tamil, padal, Lyrics, Song, Nama Shivaya, Nama Shivaya, நம சிவாய நம சிவாய, நமசிவாய நமசிவாய, om, ஓம், Hara Hara Bole, ஹர ஹர போலே
 ---
 
+{% capture text %}
 `நமசிவாய ஓம் நமசிவாய ஹர ஹர போலே நமசிவாய`
 
 கங்காதர சிவ கங்காதர ஹர ஹர போலே நமசிவாய
@@ -28,4 +29,29 @@ lyrics_en: Shivan, Tamil, padal, Lyrics, Song, Nama Shivaya, Nama Shivaya, ந�
 
 
 `தென்னாடுடைய சிவனே போற்றி!..  எந்நாட்டவர்க்கும் இறைவா போற்றி!..`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Namasivaya Om Namasivaya Hara Hara Bole Namasivaya`
+
+Gangaadhara Siva Gangaadhara Hara Hara Bole Namasivaya\
+`Namasivaya Om Namasivaya Hara Hara Bole Namasivaya`
+
+Vishveshvara Siva Vishveshvara Hara Hara Bole Namasivaya\
+`Namasivaya Om Namasivaya Hara Hara Bole Namasivaya`
+
+Rameshvara Siva Rameshvara Hara Hara Bole Namasivaya\
+`Namasivaya Om Namasivaya Hara Hara Bole Namasivaya`
+
+Jadaadhara Siva Jadaadhara Hara Hara Bole Namasivaya\
+`Namasivaya Om Namasivaya Hara Hara Bole Namasivaya`
+
+Someshvara Siva Someshvara Hara Hara Bole Namasivaya\
+`Namasivaya Om Namasivaya Hara Hara Bole Namasivaya`
+
+Kodesvara Siva Kodesvara Hara Hara Bole Namasivaya\
+`Namasivaya Om Namasivaya Hara Hara Bole Namasivaya`
+
+`Thennaadudaiya Shivane potri!..  Ennaattavarkkum iraivaa potri!..`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
 
