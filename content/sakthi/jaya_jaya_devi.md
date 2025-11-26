@@ -6,6 +6,7 @@ title: Jaya Jaya Devi
 lyrics_en: Amman, Sakthi, Jaya, Jaya, Devi, ஜெய, ஜெய, தேவி, துர்க்கா, சரணம்
 ---
 
+{% capture text %}
 `ஜெய ஜெய தேவி ஜெய ஜெய தேவி துர்க்கா தேவி சரணம்`\
 `ஜெய ஜெய தேவி ஜெய ஜெய தேவி துர்க்கா தேவி சரணம்`
 
@@ -28,5 +29,33 @@ lyrics_en: Amman, Sakthi, Jaya, Jaya, Devi, ஜெய, ஜெய, தேவி, 
 `ஜெய ஜெய தேவி ஜெய ஜெய தேவி துர்க்கா தேவி சரணம்`\
 `கனக துர்க்கா தேவி சரணம்`\
 `கனக துர்க்கா தேவி சரணம்`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Jaya Jaya Devi Jaya Jaya Devi Dhurgga Devi Saranam`\
+`Jaya Jaya Devi Jaya Jaya Devi Dhurgga Devi Saranam`
+
+Dhurgaiyammanai Thudhiththal Endrum Thunbam Parandhodum\
+Tharmam Kaakkum Thaayam Avalai Dharisanam Kandal Podhum\
+Karma Vinaihalum Pogum - Sarvamangalam Koodum `(Jaya Jaya Devi)`
+
+Porkarangal Padinettum Nammai Sutrivarum Pagai Virattum\
+Nettriyile Kunggumap Pottu Vetrip Paadhaiyai Kaattum\
+Aayiram Karangal Udaiyavale Aadhi Sakthi Aval Periyavale\
+Aayiram Naamangal Kondavale Thaay Pol Nammai Kaappavale `(Jaya Jaya Devi)`
+
+Sangu Sakkaramum Villum Ampum Minnum Vaalum Velum Soolamum\
+Thanga Kaikalil Thaangi Nirpaal Amma.....\
+Singaththin Mel Aval Veerrirupaal Thingalai Mudimel Soodi Nirpaal\
+Mangala Vaazhvum Thandhiduvaal Mangaiyarkarasiyum\
+Avale Angaiyarkaniyum Avale
+
+`Jaya Jaya Devi Jaya Jaya Devi Dhurgga Devi Saranam`\
+`Jaya Jaya Devi Jaya Jaya Devi Dhurgga Devi Saranam`\
+`Kanaka Dhurgga Devi Saranam`\
+`Kanaka Dhurgga Devi Saranam`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
 
 

@@ -5,6 +5,7 @@ title: Ashtothram Durga
 lyrics_en: Amman, Sakthi, Durga, Ashtothram, 108, துர்கா, அஷ்டோத்திரம்
 ---
 
+{% capture text %}
 1. ஓம் தேவ்யை நம
 2. ஓம் துர்காயை நம
 3. ஓம் த்ரிபுவநேச்வர்யை நம
@@ -113,4 +114,118 @@ lyrics_en: Amman, Sakthi, Durga, Ashtothram, 108, துர்கா, அஷ்�
 106. ஓம் ஸாகர கிரி ரக்ஷிகாயை நம
 107. ஓம் ஸர்வ கார்ய ஸித்தி ப்ரதாயி காயை நம
 108. ஓம் துர்கா பரமேச்வர்யை நம
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+1. Om Devyai Nama
+2. Om Durgayai Nama
+3. Om Thribhuvaneswariyai Nama
+4. Om Yasodha Garbhasapputhayai Nama
+5. Om Narayana Varapriyayai Nama
+6. Om Nandha Gopa Kula Jathayai
+7. Om Mangalyayai Nama
+8. Om Kulavarththinyai Nama
+9. Om Kamsa Vitravana Karyai
+10. Om Asurakshayangaryai Nama
+11. Om Sila Thada Vinikship Thayai Nama
+12. Om Akasagaminyai Nama
+13. Om Vasudeva Bhaginyai Nama
+14. Om Dhivyamalya Vipooshithayai Nama
+15. Om Dhivyambaratharayai Nama
+16. Om Khadga Khedaka Tharinjai Nama
+17. Om Sivayai Nama
+18. Om Papa Tharinjai Nama
+19. Om Varadayai Nama
+20. Om Krishnayai Nama
+21. Om Kumaryai Nama
+22. Om Brahma Sarinjai Nama
+23. Om Balarka Sathrusaga Rayai Nama
+24. Om Poorna Chandranipananaiyai Nama
+25. Om Chathur Bhujayai Nama
+26. Om Chathur Vakthrayai Nama
+27. Om Peena Sroni Payodharayai Nama
+28. Om Mayura Piccha Valayaiyai Nama
+29. Om Keyurangatha Tharinjai Nama
+30. Om Krishnachchavishamayai Nama
+31. Om Krishnayai Sangarshana Samananaiyai Nama
+32. Om Indhradhvaja Sama Nama
+33. Om Bahutharinjai Nama
+34. Om Pathra Tharinjai Nama
+35. Om Pangaja Tharinjai Nama
+36. Om Kanda Tharinjai Nama
+37. Om Pasa Tharinjai Nama
+38. Om Dhanur Tharinjai Nama
+39. Om Maha Chakra Tharinjai Nama
+40. Om Vividhayudha Dharayai Nama
+41. Om Kundala Poorna Karna Vipooshithayai Nama
+42. Om Sapthanra Visparthimuka Virajithayai Nama
+43. Om Mugudaviraji Thayai Nama
+44. Om Sikipiccha Dhvaja Virajithayai Nama
+45. Om Kaumara Vratha Dharayai Nama
+46. Om Thridiva Bhavayirthyai Nama
+47. Om Thridasha Poojithayai Nama
+48. Om Thrai Lokya Rakshinjai Nama
+49. Om Mahishasura Naachinjai Nama
+50. Om Prasannayai Nama
+51. Om Suraschreshtayai Nama
+52. Om Sivayai Nama
+53. Om Jayayai Nama
+54. Om Vijayayai Nama
+55. Om Sangrama Jayapradhayai Nama
+56. Om Varadayai Nama
+57. Om Vindhiya Vasinjai Nama
+58. Om Kalayai Nama
+59. Om Kalyai Nama
+60. Om Mahakalyai Nama
+61. Om Seethupriyayai Nama
+62. Om Mamsappriyayai Nama
+63. Om Pasu Priyayai Nama
+64. Om Bhootha Nusrithayai Nama
+65. Om Varadayai Nama
+66. Om Kamasarinjai Nama
+67. Om Papa Parinjai Nama
+68. Om Keerthyai Nama
+69. Om Sriyai Nama
+70. Om Dhrudhyai Nama
+71. Om Siddhyai Nama
+72. Om Hariyai Nama
+73. Om Vidhyayai Nama
+74. Om Santhadhyai Nama
+75. Om Madhyai Nama
+76. Om Sandhyayai Nama
+77. Om Rarthyai Nama
+78. Om Prabhayai Nama
+79. Om Nithrayai
+80. Om Jayothsnayai Nama
+81. Om Kanthyai Nama
+82. Om Kshamayai Nama
+83. Om Dhayayai Nama
+84. Om Bandana Nasinthayai Nama
+85. Om Moha Naachinjai Nama
+86. Om Puthrapa Mruthyunachinjai Nama
+87. Om Dhanakshaya Naachinjai Nama
+88. Om Vyadhi Naachinjai Nama
+89. Om Mruthyu Naachinjai Nama
+90. Om Bhaya Naachinjai Nama
+91. Om Padma Padhrakshai Nama
+92. Om Durgayai Nama
+93. Om Saranyayai Nama
+94. Om Bhaktha Vatsalayai Nama
+95. Om Saukhyadhayai Nama
+96. Om Arogya Dhayai Nama
+97. Om Rajya Dhayai Nama
+98. Om Ayur Dhayai Nama
+99. Om Vapur Dhayai Nama
+100. Om Sudha Dhayai Nama
+101. Om Pravasa Rakshikayai Nama
+102. Om Nagara Rakshikayai Nama
+103. Om Sangrama Rakshikayai Nama
+104. Om Satrusangkata Rakshikayai Nama
+105. Om Ada Veethurga Kanthara Rakshikayai Nama
+106. Om Sagara Giri Rakshikayai Nama
+107. Om Sarva Karya Siddhi Pradhayi Kayai Nama
+108. Om Durga Parameswariyai Nama
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
 

@@ -4,6 +4,8 @@ nav_order: 50
 title: Thanthana Thanananae Thana
 lyrics_en: Sakthi, Amman, Bhakti Padal, Thanthana, Thanananae, Thana, தந்தனா, தானனன்னே, தான, நன்னே
 ---
+
+{% capture text %}
 கல்லு வச்ச மூக்குத்தியாம்\
 கட்டி வச்ச மல்லிகையாம்\
 நம்ம கொலசைக்கு முத்தாரம்மா வந்தாளாம்\
@@ -61,4 +63,67 @@ lyrics_en: Sakthi, Amman, Bhakti Padal, Thanthana, Thanananae, Thana, தந்�
 `தந்தான தானன்னே தந்தானே`\
 `தா தான நானே தான நன்னே தானானே`\
 `தா தான நானே தான நன்னே தானானே`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Kallu Vacha Mookkuththiyaam\
+Katti Vacha Mallikaiyaam\
+Namma Kolasaikku Muththaaramma Vandhaalaam\
+`Ava Ammai Noya Theerththu Arul Thandhaalaam` (2)
+
+`Thanthana Thanannane Thana Nanne Thanannanna`\
+`Thanthana Thanannane Thana Nanne Thanannanna`\
+`Thanthaana Thaannane Thanthaane`\
+`Thaa Thana Naane Thana Nanne Thaanaane`\
+`Thaa Thana Naane Thana Nanne Thaanaane`
+
+Neththippottu Vachchavalaam\
+Neththikkadan Keppelaam\
+Vembula Avatharichchu Ninnalaam\
+Ava Vembula Avatharichchu Ninnalaam\
+`Namma Kashtaththalaam Theerkka Uruvanaalaam` (2)
+
+`Thanthana Thanannane Thana Nanne Thanannanna`\
+`Thanthana Thanannane Thana Nanne Thanannanna`\
+`Thanthaana Thaannane Thanthaane`\
+`Thaa Thana Naane Thana Nanne Thaanaane`\
+`Thaa Thana Naane Thana Nanne Thaanaane`
+
+Vesham Katti Vandhiduva\
+Melam Kotti Ninnuduva\
+Agniya Enthi Naanga Vaarome\
+`Nee Kettathhellam Kaanikkaiya Thaarome` (2)
+
+`Thanthana Thanannane Thana Nanne Thanannanna`\
+`Thanthana Thanannane Thana Nanne Thanannanna`\
+`Thanthaana Thaannane Thanthaane`\
+`Thaa Thana Naane Thana Nanne Thaanaane`\
+`Thaa Thana Naane Thana Nanne Thaanaane`
+
+Thangamugam Minungidumaam\
+Kaivalavi Kulungidumaam\
+Ulagaala Pirandhavalam Engamma\
+Indha Ulagaala Pirandhavalam Engamma\
+`Ava Kuzhantha Varam Thandhiduva Thangamma` (2)
+
+`Thanthana Thanannane Thana Nanne Thanannanna`\
+`Thanthana Thanannane Thana Nanne Thanannanna`\
+`Thanthaana Thaannane Thanthaane`\
+`Thaa Thana Naane Thana Nanne Thaanaane`\
+`Thaa Thana Naane Thana Nanne Thaanaane`
+
+Kadarkarai Kadal Alaiyaam\
+Thaay Irukkum Sannadhiyaam\
+Kaaatchith Thanthu Muththaaramma Ninnalaam\
+Anga Kaaatchith Thanthu Muththaaramma Ninnalaam\
+`Ava Vendumvaram Vandhu Arul Thandhaalaam` (2)
+
+`Thanthana Thanannane Thana Nanne Thanannanna`\
+`Thanthana Thanannane Thana Nanne Thanannanna`\
+`Thanthaana Thaannane Thanthaane`\
+`Thaa Thana Naane Thana Nanne Thaanaane`\
+`Thaa Thana Naane Thana Nanne Thaanaane`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
 

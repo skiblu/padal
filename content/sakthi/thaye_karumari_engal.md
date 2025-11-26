@@ -6,6 +6,7 @@ youtube_id: uIeI5_UNTU0
 lyrics_en: Amman, Sakthi, Durga, Thaye, Karumari, Engal, தாயே, கருமாரி, எங்கள்
 ---
 
+{% capture text %}
 `தாயே கருமாரி எங்கள் தாயே கருமாரி`\
 `தேவி கருமாரி துணை நீயே மகமாயி`
 
@@ -22,3 +23,25 @@ lyrics_en: Amman, Sakthi, Durga, Thaye, Karumari, Engal, தாயே, கரு
 சிங்கமுக வாகனத்தில் சிங்கார மாரியம்மா(2)\
 வந்துவரம் தந்திடுவாய் எங்கள் குலதெய்வம் அம்மா (2)\
 (`தாயே.`)
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Thaaye Karumari Engal Thaaye Karumari`\
+`Dhevi Karumari Thunai Neeye Mahamayi`
+
+(`Thaaye.`)
+
+Aayiram Kangal Udaiyavale Aalayaththin Thalaimagale(2)\
+Kadaikannale Paarththarulvay Kaalammellam Kaaththarulvay(2)\
+(`Thaaye.`)
+
+Annai Unthan Sannadhiyil Anaivarum Ondraay Koodiduvom (2)\
+Amma Unthan Ponnadiyil Anudinamum Saranadaivom(2)\
+(`Thaaye.`)
+
+Singamuga Vaaganaththil Singaara Mariyamma(2)\
+Vandhuvaram Thandhiduvay Engal Kulatheivam Amma (2)\
+(`Thaaye.`)
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
