@@ -26,3 +26,25 @@ lyrics_en: Murugan, Anbarukku, Anbane
 
 {% endcapture %}
 {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text %}
+Anbarukku Anbane nee vaavaa Shanmuga\
+Aarupadai veedudaiyaai vaavaa Shanmuga\
+Inbamaya jothiye nee vaavaa Shanmuga\
+Eesanumai paalakaney vaavaa Shanmuga\
+Uragasayanan Marugone vaavaa Shanmuga\
+Oomaik gupadesithava vaavaa Shanmuga\
+Ettukudi Velaavaa nee vaavaa Shanmuga\
+Yerumayil vaaganane vaavaa Shanmuga\
+Aingarak kilaiyavane vaavaa Shanmuga\
+Akhilaloka naayakane vaavaa Shanmuga\
+Oyyaari vallilola vaavaa Shanmuga\
+Omkaarath thathvame vaavaa Shanmuga\
+Ovaik gupadesithava vaavaa Shanmuga\
+Arunagiri karulsurandai vaavaa Shanmuga\
+Adivaanee Odivaanee vaavaa Shanmuga\
+Odivaanee Adivaanee vaavaa Shanmuga
+
+`Vetrivel Murukanukku... Arohara!!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text %}
