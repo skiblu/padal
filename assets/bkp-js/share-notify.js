@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
   popup.innerHTML = ''
     + '<div><strong>Share this page</strong></div>'
     + '<div class="row" style="margin-top:8px;">'
-    +   '<input id="share-key" type="password" placeholder="API Key" />'
+    +   '<input id="share-key" type="password" placeholder="Key" />'
     +   '<button id="share-send">Send</button>'
     + '</div>'
     + '<div class="status" id="share-status" aria-live="polite"></div>';
