@@ -5,7 +5,7 @@ title: Andha Varar Ayyappa
 lyrics_en: Ayyappa, Samigale, Saranam, sollungo
 lyrics_ta: சாமிகலே, சரணம், சொல்லுங்கோ
 ---
-
+{% capture text %}
 `அந்தா வாறார் ஐயப்பா, இந்தா வாறார் ஐயப்பா,`\
 `ஐந்து மலை தான் கடந்து ஓடி வாறார் ஐயப்பா,`
 
@@ -66,3 +66,69 @@ lyrics_ta: சாமிகலே, சரணம், சொல்லுங்க�
 `(அந்தா வாறார்)`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Andha varar Ayyappa, indha varar Ayyappa,`\
+`Ainthu malai thaan kadanthu odi varar Ayyappa,`
+
+`(Andha varar)`
+
+Sannathi vittirrangi vararaiya Ayyappa…\
+Pathinettam padiyirrangi parkka varar Ayyappa.
+`(Andha varar)`
+
+Saranguthiyazhai thaandi Sastha varar parppa,\
+Sakthi Umai paalanaga kaatchi tharar Ayyappa..
+`(Andha varar)`
+
+Sabariyin peedam vittu thaandi varar Ayyappa,\
+Santhasvaroopanaga kaatchi tharar Ayyappa,
+`(Andha varar)`
+
+Neelimalai thaan kadanthu nere varar parppa,\
+Nithya brahmachaariyaga kaatchi tharar Ayyappa…
+`(Andha varar)`
+
+Pambaa nathi thaandi parkka varar Ayyappa,\
+Pambaiyin paalanaga kaatchi tharar Ayyappa,
+`(Andha varar)`
+
+Karimalai uchchi thaandi odi varar Ayyappa,\
+Kaavalukku karuppanaiye kootti varar Ayyappa
+`(Andha varar)`
+
+Azhuthamalai thaandi odi varar Ayyappa,\
+Azhuthai malai uchchiyile kaatchitharar Ayyappa,
+`(Andha varar)`
+
+Kaalaikatti thaan kadanthu odi varar Ayyappa…\
+Kaanthamalai jothiyaga kaatchi tharar Ayyappa…
+`(Andha varar)`
+
+Erimeli pettai thulli inge varar Ayyappa\
+Egaantha vaasanaga kaatchitharar Ayyappa…
+`(Andha varar)`
+
+Panthalathu desam vittu parkka varar Ayyappa…\
+Pakthanukku pakthanaga kaatchi tharar Ayyappa…
+`(Andha varar)`
+
+Kulathuppuzhai thaan kadanthu koodi varar Ayyappa…\
+Kuzhanthaiyil paalanaga kaatchi tharar Ayyappa..
+`(Andha varar)`
+
+Achchangoyil thaan kadanthu andha varar parppa,\
+Arasanaga arulodu kaatchi tharar Ayyappa.
+`(Andha varar)`
+
+Aariyangaavu thaangadanthu odivarar Ayyappa,\
+Aanantha roopanaga kaatchi tharar Ayyappa..
+`(Andha varar)`
+
+`(Andha varar)`
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
