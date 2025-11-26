@@ -33,7 +33,7 @@ jobs:
       # OBFUSCATE ALL JS FILES
       - name: Obfuscate JavaScript files
         run: |
-          mkdir -p assets/js-obf
+          mkdir -p assets/js
           javascript-obfuscator assets/bkp-js --output assets/js
 
       # SETUP RUBY FOR JEKYLL
