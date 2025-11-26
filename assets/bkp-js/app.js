@@ -3,6 +3,28 @@
   const FAVORITE_KEY = 'bhaktipadal_favorites';
   const MAX_RECENT = 10;
 
+  // Immediate attempt to apply language filters as soon as this script runs.
+  // This prevents a visible flash when the stored language doesn't match the element.
+  (function immediateLangApply() {
+    try {
+      // read stored language (default 'ta')
+      var raw = null;
+      try { raw = localStorage.getItem('site_lang'); } catch (e) { raw = null; }
+      var cur = (raw && raw.trim()) ? raw.trim() : 'ta';
+      var nodes = document.querySelectorAll && document.querySelectorAll('.lang-filter[data-lang]');
+      if (nodes && nodes.length) {
+        nodes.forEach(function (el) {
+          var desired = (el.getAttribute('data-lang') || '').trim();
+          // show only when desired equals current; otherwise ensure hidden
+          if (desired && cur === desired) el.style.display = '';
+          else el.style.display = 'none';
+        });
+      }
+    } catch (e) {
+      // do not break the page if this runs too early or fails
+    }
+  })();
+
   document.addEventListener('DOMContentLoaded', () => {
     // Language selector: initialize from localStorage and reload page on change
     (function setupLanguageSelect() {
@@ -49,7 +71,7 @@
       } catch (e) { /* ignore */ }
     }
 
-    // initial apply
+    // initial apply (ensures correct state even if immediate attempt ran too early)
     updateLangFilters(_currentLang());
     // respond to changes without reload
     window.addEventListener('siteLangChanged', function (evt) {
