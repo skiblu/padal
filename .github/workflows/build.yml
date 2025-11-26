@@ -34,7 +34,21 @@ jobs:
       - name: Obfuscate JavaScript files
         run: |
           mkdir -p assets/js
-          javascript-obfuscator assets/bkp-js --output assets/js
+          # find and obfuscate only .js files; fail fast on any obfuscation error
+          count=0
+          while IFS= read -r -d '' src; do
+            count=$((count+1))
+            echo "Obfuscating: $src"
+            bn="$(basename "$src")"
+            javascript-obfuscator "$src" --output "assets/js/$bn"
+            if [ $? -ne 0 ]; then
+              echo "ERROR: obfuscation failed for $src"
+              exit 1
+            fi
+          done < <(find assets/bkp-js -type f -name '*.js' -print0)
+          if [ "$count" -eq 0 ]; then
+            echo "No JS files found in assets/bkp-js — nothing to obfuscate."
+          fi
 
       # SETUP RUBY FOR JEKYLL
       - name: Setup Ruby
