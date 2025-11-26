@@ -62,9 +62,16 @@ jobs:
           ruby-version: "3.2"
           bundler-cache: true
 
-      # INSTALL JEKYLL
+      # INSTALL DEPENDENCIES (guarded: use bundle if Gemfile exists, else install gems)
       - name: Install dependencies
-        run: bundle install
+        run: |
+          if [ -f Gemfile ]; then
+            echo "Gemfile found — running bundle install"
+            bundle install --jobs=4 --retry=3
+          else
+            echo "No Gemfile found — installing bundler and jekyll gems"
+            gem install bundler jekyll
+          fi
 
       # BUILD JEKYLL SITE
       - name: Build Jekyll site
