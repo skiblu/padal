@@ -6,6 +6,7 @@ youtube_id: 2jqqkHEueK8
 lyrics_en: Amman, Sakthi, Durga, Annaiyae, Varuga, அன்னை, வருக
 ---
 
+{% capture text %}
 `அன்னையே வருக அமுதே வருக`\
 `பொன்னே வருக பொலிவாய் வருக`
 
@@ -31,3 +32,34 @@ lyrics_en: Amman, Sakthi, Durga, Annaiyae, Varuga, அன்னை, வருக
 
 எங்குல மணியே எழிலுடன் வரு\
 எண்ணில் நலம் தரும் இன்பமே வருக (`அன்னையே..`)
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Annaiye Varuga Amudhe Varuga`\
+`Ponne Varuga Polivay Varuga`
+
+Ambikaiye Un Azhagudan Varuga\
+Nambina Perukku Nayagi Varuga\
+Engum Niraindhollir Iraivi Varuga\
+Pongum Arulmozhi Pungavi Varuga
+
+Sankari Varuga Sambavi Varuga\
+Mangalame Thara Maanpay Varuga\
+Thivviya Mayavan Dhevi Varuga\
+Sevviya Olidhara Seerudan Varuga
+
+Kusumamkaiyam Kunamalai Varuga\
+Vasumudhalor Thozhum Vasavi Varuga\
+Engal Parapari Eeswari Varuga\
+Thanggidum Inbam Tharuvoy Varuga
+
+Kalaimagale Nee Sadudhiyil Varuga\
+Malaimagale Nee Magizhvudan Varuga\
+Nilaimagale Nee Nerthiyay Varuga\
+Alarmagale Nee Anbudan Varuga\
+
+Enggula Maniye Ezhiludan Varu\
+Ennil Nalam Tharum Inbame Varuga (`Annaiye..`)
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
