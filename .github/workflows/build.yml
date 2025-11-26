@@ -86,6 +86,37 @@ jobs:
             jekyll build -d _site --trace
           fi
 
+      # Install HTML/CSS minifiers and minify generated site
+      - name: Install HTML/CSS minifiers
+        run: |
+          npm install -g html-minifier-terser clean-css-cli
+
+      - name: Minify HTML files in _site
+        run: |
+          echo "Minifying HTML files..."
+          find _site -type f -name '*.html' -print0 | while IFS= read -r -d '' file; do
+            echo "Minifying $file"
+            html-minifier-terser \
+              --collapse-whitespace \
+              --remove-comments \
+              --remove-redundant-attributes \
+              --remove-script-type-attribute \
+              --remove-style-link-type-attribute \
+              --minify-css true \
+              --minify-js true \
+              --collapse-inline-tag-whitespace \
+              --keep-closing-slash \
+              -o "$file" "$file" || echo "html-minifier failed for $file"
+          done
+
+      - name: Minify CSS files in _site
+        run: |
+          echo "Minifying CSS files..."
+          find _site -type f -name '*.css' -print0 | while IFS= read -r -d '' file; do
+            echo "Minifying $file"
+            cleancss -o "$file" "$file" || echo "cleancss failed for $file"
+          done
+
       # UPLOAD SITE ARTIFACT
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
