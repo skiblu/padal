@@ -4,7 +4,7 @@ nav_order: 50
 title: Om Enum Manthiram
 lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Om, Enum, Manthiram, ஓம், எண்ணும், மந்திரம்
 ---
-
+{% capture text %}
 வெற்றிவேல் முருகனுக்கு அரோகரா\
 பால தண்டபாணிக்காருக்கு அரோகரா
 
@@ -54,3 +54,56 @@ lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Om, Enum, Manthiram, ஓம், 
 
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Vettri Vel Muruganukku arohara\ 
+Pala Dhandapaanikaarukku arohara\
+\
+Om enum manthiram\ 
+Olikkindra thathvam\ 
+Oruvan iruppaan\ 
+Engal Murugan iruppaan (3)\
+\
+Then pozhiyum Tamililae\ 
+Thenpodhigai malaiyilae (2)\ 
+Thedi varum baktharukku\ 
+Vazhvalikkum Velava (2)
+
+(Om enum manthiram…)
+
+Kanru meyththa Kannaney\ 
+Kaliyuga varadhaney (2)\ 
+Kayilai naathan engalukku\ 
+Karththikeya mainthanae (2)
+
+(Om enum manthiram…)
+
+Sutta pazham vendumo\ 
+Suda pazham vendumo (2)\ 
+Endru kelvi kettavaa\ 
+Engal kula Velava (2)
+
+(Om enum manthiram…)
+
+Vel Vel Velava\ 
+Vettri Vel Velava (2)\ 
+Vaa Vaa Muruga\ 
+Vadivel Azhaga (2)
+
+(Om enum manthiram…)
+
+Sutta pazham thandhava\ 
+Sooranaiye vadaiththava (2)\ 
+Vanangi varum baktharukku\ 
+Vazhvalikkum Velava (2)
+
+Om enum manthiram\ 
+Olikkindra thathvam\ 
+Oruvan iruppaan\ 
+Engal Murugan iruppaan (3)
+
+Vettri Vel Muruganukku... arohara!!
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
