@@ -6,7 +6,7 @@ youtube_id: JqL5o2Hw6Qw
 lyrics_en: Ayyappa, Tamil, Ayyappa, Namam, Solla
 lyrics_ta: அய்யப்பா, நாமம், சொல்ல, சரணம், கோஷம்
 ---
-
+{% capture text %}
 விண்ணும் மண்ணும் கிடுகிடுங்க\
 வந்து வரம் நமக்கருள (2)\
 சிங்கார பீடம் விட்டு ஜெகம் அருள ஓடி வாரார் (2)\
@@ -88,3 +88,90 @@ lyrics_ta: அய்யப்பா, நாமம், சொல்ல, சரண
 `நாங்க சரண கோஷம் செய்ய (வேகமாக 5 முறை)`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Vinnum mannum kidukidunga\
+Vandhu varam namakkarula (2)\
+Singaara peedam vittu jegam arula odi vaarar (2)\
+Ayyappa naamam solla\
+Neenga sarana gosham seyya (2)
+
+`Ayyappa naamam solla`\
+`Naanga sarana gosham seyya (Chorus 2 times)`
+
+Kachanalla varinji katti\
+Karungatsai maele katti (2)\
+Muththunira pon silambam surundarai mani kilukidunga (2)\
+Manjal nira ponnam\
+Athu Manikandanin peyaram (2)
+
+`Ayyappa naamam solla`\
+`Naanga sarana gosham seyya (Chorus 2 times)`
+
+Akanda nalla maarpinile\
+Urundaimani kilukidunga (2)\
+Mupperi noolazhagum thulasi mani thongi aada (2)\
+Maarpinile pathakkam\
+Athu palabala vena jolikka (2)
+
+`Ayyappa naamam solla`\
+`Naanga sarana gosham seyya (2)`
+
+Anjana mai eduthu siritha nalla mugathindile (2)\
+Santhana golamittu\
+Kungumamum thaanum ittu (2)\
+Ayyappan varaar paaru\
+Andha azhaga nalla paaru (2)
+
+`Ayyappa naamam solla`\
+`Naanga sarana gosham seyya (2)`
+
+Aravanaikkum kaigal rendil\
+Ambuvillum thaaneduthu (2)\
+Kundalangal thaan anindu\
+Kuraitheerthu varamalikka (2)\
+Vedhamellam mudithu\
+Ayyappa thiruneerum poosi (2)
+
+`Ayyappa naamam solla`\
+`Naanga sarana gosham seyya (2)`
+
+Kaalamellam unai thuthithu\
+Karuththudane vaazhvatharkku (2)\
+Sannathiyil vandhu unthan\
+Tharisanaththai kaanidave (2)\
+Irumudiyal enthdi\
+Naanga orumanatha vaarom\
+Un irumudiyal enthdi\
+Naanga orumanatha vaarom
+
+`Ayyappa naamam solla`\
+`Naanga sarana gosham seyya (2)`
+
+Garudanum munnae vara\
+Aabaranam pinnae vara\
+Garudanum munnae vara\
+Thiru aabaranam pinnae vara\
+Poothagana suththi vara\
+Poomi kodi odi vara (2)\
+Ayyappan varaar paaru\
+Andha azhaga nallaa paaru (2)
+
+`Ayyappa naamam solla`\
+`Naanga sarana gosham seyya (2)`
+
+Karuppan munnae vara\
+Karu naagam suththi vara (2)\
+Nandheeswararar maththalamum\
+Naaradha muni veenai meetta (2)\
+Vanpuli maela vaaraar\
+Aiyan varam kodukka poraar (2)
+
+`Ayyappa naamam solla`\
+`Naanga sarana gosham seyya (Fast 5 times)`
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

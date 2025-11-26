@@ -5,7 +5,7 @@ title: Kadu Malai Kadanthu Vanthom
 lyrics_en: Ayyappa, Kadu, Malai, Kadanthu, Vanthom
 lyrics_ta: காடு, மலை, கடந்து, வந்தோம், ஐயப்பா, சாமி, சரணம்
 ---
-
+{% capture text %}
 ஐயப்பா... சாமி ஐயப்பா...\
 சரணம் ஐயப்பா...சாமி ஐயப்பா...
 
@@ -52,3 +52,55 @@ lyrics_ta: காடு, மலை, கடந்து, வந்தோம், �
 சரணம் ஐயப்பா...சாமி ஐயப்பா...
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Ayyappa... Saami Ayyappa...\
+Saranam Ayyappa...Saami Ayyappa...
+
+Kaadumalai kadanthu vanthom Ayyappa...\
+Unnai kaana naangal odi vanthom Ayyappa...
+
+Maaya veeduthanai maranthu vanthom Ayyappa...\
+Sabari veeduthanai thedi vanthom Ayyappa...
+
+Neyyabishekam...Paalabishekam...Theenabishekam saamikke...\
+Santhanam paneer abishekam engal Ayyappa saamikke...
+
+Kaadumalai kadanthu vanthom Ayyappa...\
+Unnai kaana naangal odi vanthom Ayyappa...
+
+Eettinile ezhuththa vaithaai Ayyappa...\
+Engal paattinile ezhunthu vanthaai Ayyappa...
+
+Naangal pettai thulli aadum pothu Ayyappa...\
+Nee aattam aadi vanthiduvaai Ayyappa....
+
+Kaadumalai kadanthu vanthom Ayyappa...\
+Unnai kaana naangal odi vanthom Ayyappa...
+
+Neelavizhi Kannanukum neeramintha Eesanukkum palaaganaai avatharittha Ayyappa...\
+Velavanin arumaithammbi... Kaalamellaam unai vendi\
+Neelimalai Sabarimalai erivanthom Ayyappa...
+
+Kaadumalai kadanthu vanthom Ayyappa...\
+Unnai kaana naangal odi vanthom Ayyappa...
+
+Manikanda un karunai amuthammappa...\
+Un punnagaiyil puvanamellamum mayang uthappa...\
+Minnum kaantha malaiyil jothi theriyuthappa...\
+Sabari mannavane un mahimai puriyuthappa...
+
+Neyyabishekam...Paalabishekam...Theenabishekam saamikke...\
+Santhanam paneer abishekam engal Ayyappa saamikke...
+
+Kaadumalai kadanthu vanthom Ayyappa...\
+Unnai kaana naangal odi vanthom Ayyappa...
+
+Ayyappa... Saami Ayyappa...\
+Saranam Ayyappa...Saami Ayyappa...
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

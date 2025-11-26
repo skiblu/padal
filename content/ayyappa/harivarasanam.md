@@ -8,7 +8,7 @@ lyrics_en: Ayyappa, Harivarasanam, Devotional, Vishva, Mohanam
 lyrics_ta: ஹரிவ, ராஸனம், விஸ்வ, மோஹனம், ஐயப்பா, சரணம்
 ---
 
-
+{% capture text %}
 
 ஹரிவ ராஸனம் விஸ்வ மோஹனம்\
 ஹரிததீஸ்வரம் ஆ ராத்ய பாதுகம்\
@@ -65,3 +65,65 @@ lyrics_ta: ஹரிவ, ராஸனம், விஸ்வ, மோஹனம்
 ஹரிஹராத்மஜம் தேவ மாச்ரயே
 
 `சரணம் ஐயப்பா ஸ்வாமி சரணம் ஐயப்பா! (2)`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+
+Hariva raasanam visva mohanam\
+Harithadheeshvaram aa raathya paathukam\
+Arivimarthanam nithya narththanam\
+Hariharaathmajam thaeva maashraye
+
+``Saranam Ayyappa Swaami Saranam Ayyappa! (2)``
+
+Sarana keerththanam shaktha maanasam\
+Paranalo lupam narththanaalaasam\
+Aruna parasuram bhootha naayakam\
+Hari haraathmajam thaeva maashraeya
+
+``Saranam Ayyappa Swaami Saranam Ayyappa! (2)``
+
+Pranaya sathyakam praana naayakam\
+Pranava kalpakam supra paanjitham\
+Pranava manthiram keerththanap riyam\
+Hariharaathmajam thaeva maashraeya
+
+``Saranam Ayyappa Swaami Saranam Ayyappa! (2)``
+
+Thuraka vaahanam suntha raananam\
+Varaka thaayutham thaeva varnitham\
+Kurukurupaakaaram keerththanappriyam\
+Hari haraathmajam thaeva maashraye
+
+`Saranam Ayyappa Swaami Saranam Ayyappa! (2)`
+
+Thri buvanaar sutham thaevaathmakam\
+Thri nayana prabum thivya thaeshikam\
+Thridhasa poojitham sintitha pratham\
+Hari haraathmajam thaeva maashraye
+
+`Saranam Ayyappa Swaami Saranam Ayyappa! (2)`
+
+Bavabayaa pakam baavu kaavakam\
+Puvana mokanam poothibooshanam\
+Thavala vaahanam thivya vaaranam\
+Hariharaathmajam thaeva maashraye
+
+`Saranam Ayyappa Swaami Saranam Ayyappa! (2)`
+
+Kalamruthu smitham sunthaaraananam\
+Kalapa koamalam kaathra mokanam\
+Kalapa kaesari vaaji vaahanam\
+Hariharaathmajam thaeva maashraye
+
+`Saranam Ayyappa Swaami Saranam Ayyappa! (2)`
+
+Shritha janappiriyam sintithapratham\
+Shruthi vipooshanam saathu jeevaanam\
+Shruthi manokaram keethalaaasam\
+Hariharaathmajam thaeva maashraye
+
+`Saranam Ayyappa Swaami Saranam Ayyappa! (2)`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

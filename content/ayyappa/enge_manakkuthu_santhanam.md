@@ -6,6 +6,7 @@ title: Enge Manakkuthu Santhanam
 lyrics_en: Ayyappa, Enge, Manakkuthu, Santhanam
 lyrics_ta: எங்கே, மண‌க்குது, சந்தனம், ஐயப்ப, சுவாமி, கோவில்
 ---
+{% capture text %}
 `எங்கே மணக்குது சந்தனம் எங்கே மணக்குது`\
 `ஐயப்ப சுவாமி கோவிலிலே சந்தனம் மணக்குது`
 
@@ -34,3 +35,37 @@ lyrics_ta: எங்கே, மண‌க்குது, சந்தனம், 
 ஓங்கார நாதத்திலே எழுந்து வருகிறான். `…(எங்கே மணக்குது)`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Enge manakkuthu santhanam enge manakkuthu`\
+`Ayyappa Swami kovilile santhanam manakkuthu`
+
+Enna manakkuthu malaiyil enna manakkuthu\
+Inbamaana oodhuvathi ange manakkuthu   `…(Enge manakkuthu)`
+
+Enna manakkuthu malaiyil enna manakkuthu\
+Veeramani Kandan sannathiyil neyyum manakkuthu\
+Thirunerum manakkuthu panneerum manakkuthu\
+Aandavanin sannathiyil arulum manakkuthu\
+Ayyappanmaarkal ullaththile anbu manakkuthu  `…(Enge manakkuthu)`
+
+Pallikattai sumandukitta bakthi pirakkuthu\
+Andhappanimalayil eridave sakthi pirakkuthu\
+Bhagavaanai paartthuvitta paavam parakkuthu\
+Pathinettam paditthottaal vaazhvum inikkuthu   `…(Enge manakkuthu)`
+
+Pettai thulli aadumbodhu manamum thulluthu\
+Aiyan perazhagai kaana ullam aasai kolluthu\
+Kaattukkulle saranagosham vaanai pilakkuthu…. **[ Om Swamiye……………. Saranam Ayyappa ]**\
+Veettai marandhu bhaktar koottam kaattilirukuthu   `…(Enge manakkuthu)`
+
+Poongaavanat thoppukkulle pavani varugiraan\
+Vengaiyin mel erivandhu varamum kodukkiran\
+Nonbirundu varuvore thaangi nirkkiraan\
+Ongaara naathaththile ezhundhu varugiraan. `…(Enge manakkuthu)`
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

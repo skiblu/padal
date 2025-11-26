@@ -5,7 +5,7 @@ title: Bhagavan saranam
 lyrics_en: Ayyappa, Bhagavan, Saranam, Bhagavati, Devan, Devi, Patham
 lyrics_ta: பகவான், சரணம், பகவதி, சரணம், ஐயப்பா, தேவன், பாதம், தேவி
 ---
-
+{% capture text %}
 `பகவான் சரணம் பகவதி சரணம் - சரணம் சரணம் ஐயப்பா`\
 `பகவதி சரணம் பகவான் சரணம் - சரணம் சரணம் ஐயப்பா`
 
@@ -63,3 +63,66 @@ lyrics_ta: பகவான், சரணம், பகவதி, சரணம்
 `சரணம் சரணம் ஐயப்பா! ஸ்வாமி சரணம் ஐயப்பா (3)`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Bhagavan saranam Bhagavathi saranam - Saranam saranam Ayyappa`\
+`Bhagavathi saranam Bhagavan saranam - Saranam saranam Ayyappa`
+
+Bhagavan saranam - `Bhagavathi saranam`\
+Dhevan paatham - `Dhevi paatham`\
+Bhagavanae - `Bhagavathiyae`\
+Dhevanae - `Dheviyae`
+
+`Bhagavan saranam Bhagavathi saranam - Saranam saranam Ayyappa`\
+`Bhagavathi saranam Bhagavan saranam - Saranam saranam Ayyappa`
+
+Agamum kulirave azhaiththiduvomae\
+Saranam saranam Ayyappa\
+Pagalum iravum un naamame\
+Saranam saranam Ayyappa
+
+Karimalai vaasa paapavinaasa\
+Saranam saranam Ayyappa\
+Karuththinil varuvai karunaiyaip pozhivai\
+Saranam saranam Ayyappa
+
+Mahishi samhaara mathagaja vaagana\
+Saranam saranam Ayyappa\
+Suguna vilaasa sundhara roopa\
+Saranam saranam Ayyappa
+
+Aaru vaaramae nonbu irundhom\
+Perazhagaa unaik kaana vandhom\
+Paalabishekam unakkappa – Ip\
+Palanai kadaikananum paarppa
+
+Muththirai thengai unakkappa\
+Thiththikkum naamam enakkappa\
+Karpoora dheepam unakkappa – Un\
+Porpatha malarkal enakkappa
+
+Dhevan paatham dhevi paatham\
+Sevadi saranam Ayyappa\
+Naavinil tharuvaai geethamappa\
+Thevai un thirup paathamappa
+
+Ney abishekam unakkappa – Un\
+Thivya dharisanam enakkappa\
+Thaiyinil varuvom Ayyappa\
+Arul seyyappa – Manam vaiyyappa
+
+Bhagavan saranam - `Bhagavathi saranam`\
+Dhevan paatham - `Dhevi paatham`\
+Bhagavanae - `Bhagavathiyae`\
+Dhevanae - `Dheviyae`
+
+`Bhagavan saranam Bhagavathi saranam - Saranam saranam Ayyappa`\
+`Bhagavathi saranam Bhagavan saranam - Saranam saranam Ayyappa`
+
+`Saranam saranam Ayyappa! Swami saranam Ayyappa (3)`
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

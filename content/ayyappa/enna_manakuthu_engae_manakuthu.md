@@ -6,7 +6,7 @@ youtube_id: IkKKyVKPB44
 lyrics_en: Ayyappa, Devotional, Enna, Manakuthu, Engae, Manakuthu
 lyrics_ta: என்ன, மணக்குது, எங்கே, மணக்குது, தமிழ் பாடல்கள்
 ---
-
+{% capture text %}
 `சாமியப்பா ஐயப்பா… சரணமப்பா ஐயப்பா`\
 `சாமியப்பா ஐயப்பா… சரணமப்பா ஐயப்பா`\
 `வந்தோமப்பா ஐயப்பா… வாரோமப்பா ஐயப்பா`\
@@ -107,3 +107,109 @@ lyrics_ta: என்ன, மணக்குது, எங்கே, மணக்
 
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Saamiyappa Ayyappa… Saranamappa Ayyappa`\
+`Saamiyappa Ayyappa… Saranamappa Ayyappa`\
+`Vanthomappa Ayyappa… Vaaromappa Ayyappa`\
+`Vanthomappa Ayyappa… Vaaromappa Ayyappa`
+
+Enna manakkuthu… Enge manakkuthu…\
+Ellaam manakkuthu Ayyan malaiyile\
+Enna manakkuthu… Enge manakkuthu…\
+Ellaam manakkuthu Ayyan malaiyile
+
+(`Saamiyappa Ayyappa… `)
+
+Panneeru santhanamum enge manakkuthu\
+Panthalaththin raajanavan maele manakkuthu
+
+(`Saamiyappa Ayyappa… `)
+
+Sammangi rojaa manakkuthu enge manakkuthu\
+Saashtaavin sannithiyil inge manakkuthu\
+Karporam manakkuthu… Neyyum manakkuthu…\
+Kaanthamalai vaasanin malaiyile manakkuthu…
+
+(`Saamiyappa Ayyappa… `)
+
+Enge manakkuthu… Enna manakkuthu…\
+Ellaam manakkuthu Ayyan malaiyile
+
+Thinthakka thinthakka thinthakka thinthakka Saami thinthakka thom\
+Thinthakka thinthakka thinthakka thinthakka Ayyappa thinthakka thom
+
+Kottai eru meliyile vibuthi manakkuthu\
+Kovarthanmakanin malaiyile manakkuthu
+
+(`Saamiyappa Ayyappa… `)
+
+Oothuvathi sambiraani enge manakkuthu\
+Uththamanin kovilile ellaam manakkuthu
+
+(`Saamiyappa Ayyappa… `)
+
+`Vaa vaa vaa Ayyappa Sabarimalai Ayyappa`
+
+Vithavidhaamai abishekam naalum nadakkuthu\
+Vithavidhaamai alangaaram jolizholikuthu
+
+(`Saamiyappa Ayyappa… `)
+
+Vithavidhaamai abishekam ennaalum zholikkuthu\
+Vithavidhaamai alangaaram kannil theriyuthu\
+Veera Manikandanin mahimai puriyuthu\
+Vaazha vaikkum Ayyappan Sabarimalai theriyuthu
+
+(`Saamiyappa Ayyappa… `)
+
+Thegabalan kodu Ayyappa.. Saami saranam Ayyappa\
+Paathabalan kodu Ayyappa.. Saami saranam Ayyappa
+
+Manjammaa dharisanam manasai ellaam alluthu\
+Mangaiyarkal kungumam kaakkindra thaayuthu minnum makaraththin jothi theriyuthu\
+Pathinettam padivasal karunai puriyuthu
+
+(`Saamiyappa Ayyappa… `)
+
+Pambainathi paalan avan karunai ullam puriyuthu\
+Panthalaththu raajanin pulik kodi parakkuthu
+
+`Vaa vaa vaa vaa vaa vaa Sabari Ayyappa`
+
+Panthalaththu raajan avan karunai ullam puriyuthu\
+Pambainathi paalanin pulik kodi parakkuthu\
+Paavamellaam theerthida Sabarimalai azhaikuthu\
+Punniyaththai serththida sannithaanam azhaikuthu
+
+(`Saamiyappa Ayyappa… `)
+
+Anthaa vaaraar Ayyappa… Inthaa vaaraar Ayyappa
+
+Hariharanin maindhanai kaana kaana aasaye\
+Aasai thanthu arulidum Sabarimalai mannane
+
+(`Saamiyappa Ayyappa… `)
+
+`Villaali veeraa Ayyappa… Veera Manikanda Ayyappa`\
+`Vaa vaa Ayyappa Sabarimalai Ayyappa`
+
+Vanthaadu Ayyappa, ninnaadu Ayyappa\
+Kannipoojai podurom vanthaadu Ayyappa\
+Periya karuppu vaaraan, sinna karuppan vaaraan\
+Kaattuvazhi paathaiyil thunaiyaaga vaaraan
+
+(`Saamiyappa Ayyappa… `)
+
+Enge manakkuthu… Enna manakkuthu…\
+Ellaam manakkuthu Ayyan malaiyile
+
+`Vaa vaa vaa vaa vaa vaa Sabari Ayyappa`\
+`Varamellaam tharavendum Sabari Ayyappa`
+
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

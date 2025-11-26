@@ -5,7 +5,7 @@ title:  Daily Chants
 lyrics_en: Ayyappa, Daily Chants , Thuthi
 lyrics_ta: சுவாமி, சரணம், ஐயப்பா, தூதி
 ---
-
+{% capture text %}
 **Lord Ganesha** \
 சுக்லாம்பரதரம் விஷ்ணும்\
 சசிவர்ணம் சதுர்புஜம்\
@@ -68,3 +68,71 @@ lyrics_ta: சுவாமி, சரணம், ஐயப்பா, தூதி
 `சுவாமியே சரணம் ஐயப்பா!`
 
 
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+**Lord Ganesha** \
+Suklambaradharam Vishnum\
+Sasivarnam Chathurbhujam\
+Prasanna Vadhanam Dhyayeth\
+Sarva Vighnopa Santhaye\
+`Swamiye Saranam Ayyappa!`
+
+Mooshika Vaahana Modhaka Hastha\
+Chaamarakarna Vilambitha Soothra\
+Vaamanaroopa Maheshwara Puthra\
+Vignavinaayaka Paadha Namasthe\
+`Swamiye Saranam Ayyappa!`
+
+**Guru**\
+Guru Brahmaa Guru Vishnu\
+Guru Devo Maheswarar;\
+Guru Saakshaat Parabrahmaa\
+Thasmai Sri Guruve Namaha\
+`Swamiye Saranam Ayyappa!`
+
+**Goddess Saraswathi**\
+Saraswathi Namasthubyam\
+Varadhae Kaamaroopini\
+Vidhyaarambam Karishyaami\
+Sidhdhirbhavatu Mey Sadhaa\
+`Swamiye Saranam Ayyappa!`
+
+**Parvathi Devi**\
+Om Sarva Mangala Maangalyey\
+Shivey Sarvaartha Saadhikey\
+Saranyey Thryambakey Gowri\
+Naaraayani Namosthuthe\
+`Swamiye Saranam Ayyappa!`
+
+**Lord Hanuman**\
+Buddhir Balam Yaso Dhairyam\
+Nirbhayatvam Arokataa\
+Ajaadyam Vaagpaduthvam Cha\
+Hanumath Smaranaath Bhaveth\
+`Swamiye Saranam Ayyappa!`
+
+**Lord Shiva**\
+Om Thryambakam Yajaamahe\
+Sugandhim Pushtivardhaanam\
+Urvaarukamiva Bandhanaan\
+Mruthyormuksheeya Maamrithaat\
+`Swamiye Saranam Ayyappa!`
+
+**Lord Vishnu**\
+Shaanthakaaram Bhujagasayanam Padhmanaabham Suresham\
+Vishwaadhaaram Gagana Sadrusham Meghavarnam Subhaangam\
+Lakshmeekaantham Kamalanaynam Yogihruthyaanagamyam\
+Vandhey Vishnum Bhavabhayaharam Sarvalokika Naatham … !!!\
+`Swamiye Saranam Ayyappa!`
+
+Thvameva Maathaa Cha Pithaa Thvameva\
+Thvameva Bandhuscha Sakaa Thvameva\
+Thvameva Vidhyaa Dhrhavinam Thvameva\
+Thvameva Sarvam Mama Dheva Dheva\
+`Swamiye Saranam Ayyappa!`
+
+
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

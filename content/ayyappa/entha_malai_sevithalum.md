@@ -6,7 +6,7 @@ youtube_id: OLkBZQqsYDs
 lyrics_en: Ayyappa, Entha, Malai, Sevithalum, Thangamalai, Sabarimalai
 lyrics_ta: எந்த, மலை, சேவித்தாலும், தங்கமலை, சபரிமலை
 ---
-
+{% capture text %}
  
 
 ஸ்ரீ வீர தேவர் அகிலமும் ஓம் காரமாய் விளங்க\
@@ -55,3 +55,57 @@ lyrics_ta: எந்த, மலை, சேவித்தாலும், தங
 `சுவாமியே சரணம். சுவாமியே சரணம். சுவாமியே சரணம் ஐயப்பா`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+ 
+
+Sri Veera Devar akilamum om kaaramaai vilanga\
+Sri Sabagiriswararaai manipeedaththil Ayyappa…\
+Kandam idari ennai nee thodanaai paadavaippaai\
+Nambinavark aatharavutrarulum Aiyanae aiyanae aiyanae\
+Aiyan Ayyappane saranam Ayyappa…
+
+`Entha malai sevithalum`\
+`Thangamalai vaibogam`\
+`Engeyum naan kandathillaiye Ayyappa`\
+`Engeyum naan kandathillaiye…`
+
+`Entha malai sevithalum`\
+`Sabarimalai vaibogam`\
+`Engeyum naan kandathillaiye Ayyappa`\
+`Engeyum naan kandathillaiye`
+
+Kodi sooriyan uthikkum malai\
+Komalangan vaazhum malai\
+Kodi janangal varugum malai\
+Kulaththoor aiyan vaazhum malai\
+
+`Entha malai sevithalum`\
+`Thangamalai vaibogam`\
+`Engeyum naan kandathillaiye Ayyappa`\
+`Engeyum naan kandathillaiye…`
+
+Paaril ullorellaam pugazhum malai\
+Paravasaththai kodukkum malai\
+Paava vinaigalai theerkum malai\
+Pambaa paalan vaazhum malai\
+
+`Entha malai sevithalum`\
+`Thangamalai vaibogam`\
+`Engeyum naan kandathillaiye Ayyappa`\
+`Engeyum naan kandathillaiye…`
+
+Sabarinayagaa saranam saranam endru urugi orumurai koorinaal\
+Sakala vinaigalum, sakala kuraigalum, sakala pinigalum akalumaam\
+Mathagajaananaa kuka sakotharaa varuga varuga ena vaazhththinaal\
+Mathagajaananaa kuka sakotharaa varuga varuga varuga ena vaazhththinaal\
+Manamagizhndhu mun vandhu nindru arul thanthu ner vazhi kaattuvaar\
+
+`Swamiye saranam. Swamiye saranam. Swamiye saranam Ayyappa`\
+`Swamiye saranam. Swamiye saranam. Swamiye saranam Ayyappa`\
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

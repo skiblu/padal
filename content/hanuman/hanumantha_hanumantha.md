@@ -6,6 +6,7 @@ lyrics_en: Hanuman, Hanumantha, Hanumantha
 lyrics_ta: ஹனுமான், ஹனுமந்தா, ஹனுமந்தா
 ---
 
+{% capture text %}
 அனுமந்தா அனுமந்தா\
 அஞ்சனை மைந்தா அனுமந்தா!\
 அனுமந்தா அனுமந்தா\
@@ -35,6 +36,41 @@ lyrics_ta: ஹனுமான், ஹனுமந்தா, ஹனுமந்�
 நீண்டிடச் செய்தாய் அனுமந்தா!\
 விருப்புடன் எந்தன் பக்தியும் அதுபோல்\
 வளர்ந்திட அருள்வாய் அனுமந்தா!
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+anumandhaa anumandhaa\
+anjchanai maindhaa anumandhaa!\
+anumandhaa anumandhaa\
+aanjcha naeyaa anumandhaa!
+
+aanjcha naeyaa anjchanai maindhaa\
+anjchaadha veeraa anumandhaa!\
+thunjchaamal anudhinum kannbola raamarai\
+nenjchaar poarridum anumandhaa!
+
+kadhiravan thannai pazhamendru enni\
+kaikalil pidiththaai anumandhaa!\
+kaatrinil yaeri kadalinaik kadandhu\
+ilangaiyaip podiththaai anumandhaa!
+
+buththiyil bakthiyil sakthiyil unakku\
+nikarillai evarum anumandhaa!\
+aththanai irundhhum adakkaththin uruvaai\
+thigazhbavan neeyae anumandhaa!
+
+karuththitta vannan kamalak kannan\
+kathaiyinaic sonnaal anumandhaa!\
+karuththudan amarndhhu kannneer peruga\
+kaettiduv vaayae anumandhaa!
+
+neruppittaa vaalinai mudivil laamal\
+neenndidhac seiyththaai anumandhaa!\
+viruppudan endhan bakthiyum adhupol\
+valarnndhida arulvaai anumandhaa!
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
 
 
 

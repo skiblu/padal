@@ -5,7 +5,7 @@ title: Arokara Saranam Ayyappa
 lyrics_en: Ayyappa, Tamil, Arokara, Saranam, Ayyappa
 lyrics_ta: அரோகர, சரணம், அய்யப்பா, பழனியிலே, முருகனுக்கு, அரகரோகரா
 ---
-
+{% capture text %}
 `பழனியிலே முருகனுக்கு அரகரோகரா`\
 `சபரியிலே ஐயனுக்கு சரணம் ஐயப்பா`\
 `அரகரோகரா.. ஸ்வாமி சரணம் ஐயப்பா`\
@@ -44,3 +44,47 @@ lyrics_ta: அரோகர, சரணம், அய்யப்பா, பழன
 
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Pazhaniyle Muruganukku Aragarogara`\
+`Sabariyile Aiyanukku Saranam Ayyappa`\
+`Aragarogara.. Swami Saranam Ayyappa`\
+`Ange Aragarogara.. Inge Saranam Ayyappa`
+
+Pazhaniyle Muruganukku Kaavadikkattu\
+Sabariyile Aiyanukku Irumudikkattu\
+Andha Sabariyile Aiyanukku Irumudikkattu\
+Ange Kaavadikkattu… Inge Irumudikkattu
+
+Pazhaniyle Muruganukku Paalabishekam\
+Sabariyile Aiyanukku Neiyabishekam\
+Indha Sabariyile Aiyanukku Neiyabishekam\
+Ange Paalabishekam… Inge Neiyabishekam
+
+Pazhaniyle Muruganukku Pala pala padigal\
+Sabariyile Aiyanukku Pathinettu padigal\
+Andha Sabariyile Aiyanukku Pathinettu padigal\
+Ange Pala pala padigal …Inge Pathinettu padigal
+
+`Pazhaniyle Muruganukku Aragarogara`\
+`Sabariyile Aiyanukku Saranam Ayyappa`\
+`Aragarogara.. Swami Saranam Ayyappa`\
+`Ange Kaavadikkattu... Inge Irumudikkattu`
+
+Aragarogara.. `Swami Saranam Ayyappa`\
+Ange Paalabithashakam… `Inge Neiyabishekam`\
+Aragarogara.. `Swami Saranam Ayyappa`\
+Ange Pala pala padigal … `Inge Pathinettu padigal`
+
+Aragarogara Swami Aragarogara\
+`Saranam Ayyappa Swami Saranam Ayyappa`
+
+Varanum Ayyappa Inge Varanum Ayyappa\
+`Saranam Ayyappa Swami Saranam Ayyappa`
+
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

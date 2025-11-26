@@ -6,6 +6,7 @@ lyrics_en: Ayyappa, Tamil, Kallum, Mullum, Nirainja
 lyrics_ta: கல்லும், முள்ளும், நிறைந்த, சபரி, சபரிமலை
 ---
 
+{% capture text %}
 `கல்லும் முள்ளும் நிறைஞ்ச காடு சபரியினு சொன்னாங்க`\
 `சபரிமலைன்னு சொன்னாங்க,`\
 `கால் வச்ச இடமெல்லாம் பஞ்சா இருக்கு என்னாங்க..`
@@ -67,3 +68,70 @@ lyrics_ta: கல்லும், முள்ளும், நிறைந்�
 `சாமி சரணம் ஐயப்பா.. சரணம் சரணம் ஐயப்பா`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`kallum mullum nirainja kaadu sabariyinu sonnanga`\
+`sabarimalainnnu sonnanga,`\
+`kaal vacha idamellaam panja irukku ennanga..`
+
+kallam kabadam illaatha, ullathoadu vandhaalae\
+malaiyil ulla ellaame maarum paaru thannaalae
+
+`kallum mullum nirainja kaadu sabariyinu sonnanga`\
+`sabarimalainnnu sonnanga,`\
+`kaal vacha idamellaam panja irukku ennanga..`
+
+kollum vaengai thiriyum kaadu sabariyinu sonnanga\
+sabarikkaadunu sonnanga\
+avaiyellaam silapoala amarnthurukkuthu ennanga\
+viratham irunthu vandhaalae, vilakum yaavum thannaalae\
+aiyanai thiyaanam seythaale, avaniruppaan munnaalae
+
+`kallum mullum nirainja kaadu sabariyinu sonnanga`\
+`sabarimalainnnu sonnanga,`\
+`kaal vacha idamellaam panja irukku ennanga..`
+
+aanaikkuuttam ulavum kaadu sabarimalainnu sonnanga\
+andha sabarimalainnu sonnanga\
+ganapadhiye munnaalae kaatchi thandhatu ennanga\
+dhinamum poojai senjaalae, theivabalam thannaalae\
+vanangum theivam ellaame, vandhu nikkum munnaal
+
+`kallum mullum nirainja kaadu sabariyinu sonnanga`\
+`sabarimalainnnu sonnanga,`\
+`kaal vacha idamellaam panja irukku ennanga..`
+
+karimalaia kadappadhellam kadinaminnnu sonnanga\
+aamaa kadinaminnnu sonnanga\
+manasukkullae avanirundaan kaatthupola vandhomnga\
+avan nambi ninnaalae, kaikoduppaan thannaalae\
+bakthiyoadu vandhaalae, kaatthunippaan munnaalae
+
+`kallum mullum nirainja kaadu sabariyinu sonnanga`\
+`sabarimalainnnu sonnanga,`\
+`kaal vacha idamellaam panja irukku ennanga..`
+
+panipeyyum iravinilae paadhaiellaam kosham dhaan\
+periya paadhaiellaam kosham dhaan\
+manikandan adhaikkettu odivarum neram dhaan\
+kuralaik ketta pinnaalae, kuthichiduvaar munnaalae\
+thanjamunnnu ninnaalae, thaangiduvaan thannaalae
+
+makarajothi ellorrukkum theriyumaannnu kettaanga\
+aamaa theriyumaannnu kettaanga\
+manasukkullae iruttillee vinnil jothi kandonka\
+saranam solli ninnaalae, jothiroopam munnaalae\
+vaanchaiyoadu vandhaalae, vaazhthiduvaan meyyaalae
+
+`kallum mullum nirainja kaadu sabariyinu sonnanga`\
+`sabarimalainnnu sonnanga,`\
+`kaal vacha idamellaam panja irukku ennanga..`
+
+`saami saranam ayyappa.. saranam saranam ayyappa`\
+`saami saranam ayyappa.. saranam saranam ayyappa`
+
+`swaamiyae... saranam ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
