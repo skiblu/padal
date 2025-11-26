@@ -7,10 +7,22 @@ title: Arindhum Ariyamalum
 lyrics_en: Ayyappa, Arindhum, Ariyamalum, Terindhum, Teriyamalum
 lyrics_ta: அறிந்தும், அறியாமலும், தெரிந்தும், தெரியாமலும்
 ---
-
+{% capture text %}
 அறிந்தும், அறியாமலும், தெரிந்தும் தெரியாமலும்  நாங்கள்  செய்த \
 சகல குற்றங்களையும் பொறுத்து காத்து இரட்சிக்க வேண்டும்\
 ஓம் சத்யமான பொன்னு பதினெட்டாம் படி மேல் வாழும்\
 வில்லாளி வீரன், வீர மணிகண்டன், காசி, ராமேஸ்வரம்,\
 பாண்டி, மலையாளம் அடக்கி ஆளும், ஓம் ஸ்ரீ ஹரிஹர சுதன்\
 ஆனந்த சித்தன் ஐயன் ஐயப்ப `சுவாமியே சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Arindhum, ariyaamalum, therindhum theriyaamalum  naangal  seytha \
+Sakala kutraangalaiyum poruththu kaathu iratchikka vendum\
+Om sathyamaana ponnu pathinettaam padi mel vaazhum\
+Villaali veeran, veera manikandan, Kaasi, Rameswaram,\
+Paandi, Malaiyaalam adakki aalum, Om Sri Harihara suthan\
+Aanandha siththan Aiyan Ayyappa `Swamiye saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
