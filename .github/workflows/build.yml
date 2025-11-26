@@ -69,8 +69,9 @@ jobs:
             echo "Gemfile found — running bundle install"
             bundle install --jobs=4 --retry=3
           else
-            echo "No Gemfile found — installing bundler and jekyll gems"
-            gem install bundler jekyll
+            echo "No Gemfile found — installing bundler, jekyll and required plugins (e.g. jekyll-sitemap)"
+            # install bundler and jekyll plus jekyll-sitemap to satisfy config plugins
+            gem install bundler jekyll jekyll-sitemap --no-document
           fi
 
       # BUILD JEKYLL SITE (use bundle exec only if Gemfile exists)
@@ -81,7 +82,8 @@ jobs:
             bundle exec jekyll build -d _site
           else
             echo "No Gemfile found — building with system jekyll"
-            jekyll build -d _site
+            # run with --trace for more diagnostics if build fails
+            jekyll build -d _site --trace
           fi
 
       # UPLOAD SITE ARTIFACT
