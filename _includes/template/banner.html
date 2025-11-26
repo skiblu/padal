@@ -15,8 +15,9 @@
             </a>
             <form class="ms-auto mb-3 mb-lg-0" role="search" id="search" onsubmit="site_search(); return false;">
                 <div class="d-flex align-items-center">
-                  <!-- Language selector placed immediately before search; default is Tamil -->
-                  <select id="site-lang-select" class="form-select form-select-sm me-2" aria-label="Language">
+                  <!-- Label + compact language selector -->
+                  <label for="site-lang-select" class="me-2 mb-0 small text-muted" style="line-height:1;">Language</label>
+                  <select id="site-lang-select" class="form-select form-select-sm me-2" aria-label="Language" style="width:88px;">
                     <option value="ta">தமிழ்</option>
                     <option value="en">English</option>
                   </select>
