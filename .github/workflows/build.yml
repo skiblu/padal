@@ -1,4 +1,4 @@
-name: Obfuscate JS
+name: Obfuscate Deployment
 
 on:
   push:
@@ -100,8 +100,8 @@ jobs:
               --collapse-whitespace \
               --remove-comments \
               --remove-redundant-attributes \
-              --remove-script-type-attribute \
-              --remove-style-link-type-attribute \
+              --remove-script-type-attributes \
+              --remove-style-link-type-attributes \
               --minify-css true \
               --minify-js true \
               --collapse-inline-tag-whitespace \
