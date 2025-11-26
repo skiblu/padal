@@ -6,6 +6,7 @@ youtube_id: ZEjM3-eGRwk
 lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Kavadiyam, Kavadi, காவடியாம், காவடி, கந்தவேலன், காவடி
 ---
 
+{% capture text %}
 காவடியாம் காவடி\
 கந்தவேலன் காவடி\
 கண்கொள்ளாக் காட்சிதரும்\
@@ -53,3 +54,55 @@ lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Kavadiyam, Kavadi, காவட�
 
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Kavadiyam kavadi\
+Kandha velan kavadi\
+Kankollak kaatchitharum\
+Kadambanukkuk kavadi\
+\
+Velmurugan namathile\
+Vithavithamaik kavadi\
+Vetrivelan kavadi\
+Veeravelan kavadi\
+\
+Singara velanukku\
+Sinnach chinnak kavadi\
+Vannamayil thogaiyodu\
+Aadivarum kavadi\
+\
+Pazhanimalai paalanukku\
+Palkudathaal kavadi\
+Thenpazhani velanukku\
+Then kudathaal kavadi\
+\
+Swaminatha velanukku\
+Sandhanathaal kavadi\
+Bala Subramaniyanukku\
+Panchamirthak kavadi\
+\
+Aarumuga wevanukku\
+Azhagumayil kavadi\
+Vanna vanna kavadi\
+Vetrivelan kavadi\
+\
+Mayur nathanukku\
+Machchathaal kavadi\
+Kundrakkudi Kumaranukku\
+Kurai villadha kavadi\
+\
+Bhaktarellam kondaadum\
+Kavadiyam kavadi\
+Pamalai paadi aadi\
+Naadivarum kavadi\
+\
+Kankollak kaatchi tharum\
+Kandha velan kavadi\
+Kavadiyam kavadi\
+Kaanavendum kankodi\
+\
+Vetrivel Murukanukku... Arohara!!
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

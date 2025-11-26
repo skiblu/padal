@@ -5,6 +5,7 @@ title: Bhakthargalae Bhakthargalae
 lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Bhakthargalae, Bhakthargalae, Ellorum, Vaangu, பக்தர்களே, பக்தர்களே, எல்லோரும், வாங்க
 ---
 
+{% capture text %}
 பக்தர்களே பக்தர்களே எல்லோரும் வாங்க \
 பழனிமலை யாத்திரைக்கு போகோனும் வாங்க
 
@@ -43,3 +44,46 @@ lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Bhakthargalae, Bhakthargalae, El
 
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Bhaktargale Bhaktargale ellorum vaangu\
+Pazhanimalai yaathiraikkku pogonum vaangu\
+\
+Saththimagan arulai perra nadaya podunga\
+Saami tharum vibhoothiyai vaangi poosungo\
+\
+Bhaktargale Bhaktargale ellorum vaangu\
+Pazhanimalai yaathiraikkku pogonum vaangu\
+\
+ArogarA ArogarA paattu paadunga\
+Azhagarmalai Saamiyidam kurai sollunga\
+\
+Varavirukkum thollai yellaam marainju pogunga\
+Vallinathan peyarai solli thulli odunga\
+\
+Bhaktargale Bhaktargale ellorum vaangu\
+Pazhanimalai yaathiraikkku pogonum vaangu\
+\
+Kunnakkudi kundrathile kootam kuduthu\
+Kootamellam kavadikku paattu paadudhu\
+\
+Vannamayil vagananai manasu ninaikkudhu\
+Vaiyapuri kandhadume varuththam pogudhu\
+\
+Bhaktargale Bhaktargale ellorum vaangu\
+Pazhanimalai yaathiraikkku pogonum vaangu\
+\
+Shanmuganin pugazhai enni paattu sollunga\
+Samuthirappatti vandhadume kettaivellunga\
+\
+Enni vantha idaichi madam arugildhaang\
+Eesan pugazh manadhil enni urudhi nillunga!\
+\
+Bhaktargale Bhaktargale ellorum vaangu\
+Pazhanimalai yaathiraikkku pogonum vaangu\
+\
+Vetrivel Murukanukku... Arohara!!
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

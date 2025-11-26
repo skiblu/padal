@@ -5,6 +5,8 @@ title:  Murugan Ashtothram
 lyrics_en: Murugan, Muruga, Ashtothram, 108
 ---
 
+
+{% capture text %}
 1. ஓம் ஸ்கந்தாய நமஹ
 2. ஓம் குஹாய நமஹ
 3. ஓம் ஷண்முகாய நமஹ
@@ -115,4 +117,119 @@ lyrics_en: Murugan, Muruga, Ashtothram, 108
 108. ஓம் மயூர வாஹனாய நமஹ
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
 
+{% capture text_en %}
+1. Om Skandaya Namaha\
+2. Om Kuhaya Namaha\
+3. Om Shanmukaya Namaha\
+4. Om Bala Nethrasthaya Namaha\
+5. Om Prabhave Namaha\
+6. Om Pingalay Namaha\
+7. Om Kruttika Sanave Namaha\
+8. Om Shikivahune Namaha\
+9. Om Dvishat Bhujaya Namaha\
+10. Om Dvishan Nethraya Namaha\
+11. Om Shakti Dharaya Namaha\
+12. Om Pisithas Prapanchanaya Namaha\
+13. Om Tharakasara Samharine Namaha\
+14. Om Rashobala Vimarthanaya Namaha\
+15. Om Mathaya Namaha\
+16. Om Bramathaya Namaha\
+17. Om Unmathaya Namaha\
+18. Om Sarasaianya Sarakshagaya Namaha\
+19. Om Devasenapathaye Namaha\
+20. Om Pragnyaya Namaha\
+21. Om Krupaalave Namaha\
+22. Om Bhakta Vatsalaye Namaha\
+23. Om Uma Sthaya Namaha\
+24. Om Shakti Dharaya Namaha\
+25. Om Kumaaraya Namaha\
+26. Om Kraunjadharanaya Namaha\
+27. Om Senan Ye Namaha\
+28. Om Agnijanmane Namaha\
+29. Om Vishagay Namaha\
+30. Om Sankarathmajaya Namaha\
+31. Om Siva Swamine Namaha\
+32. Om Ganaswamine Namaha\
+33. Om Sarvaswamine Namaha\
+34. Om Sanadhanaaya Namaha\
+35. Om Ananda Shaktyae Namaha\
+36. Om Akshobyaya Namaha\
+37. Om Parvathi Priya Nandanaya Namaha\
+38. Om Ganga Sthaya Namaha\
+39. Om Saroth Boothaya Namaha\
+40. Om Aahudaya Namaha\
+41. Om Bavakaathmajaya Namaha\
+42. Om Jrumbaya Namaha\
+43. Om Prajrumbaya Namaha\
+44. Om Ujrumbaya Namaha\
+45. Om Kamalasan Samsthuthaya Namaha\
+46. Om Ekavarnaya Namaha\
+47. Om Dvivarnaya Namaha\
+48. Om Trivarnaya Namaha\
+49. Om Samanokaraya Namaha\
+50. Om Chaturvarnaya Namaha\
+51. Om Panjavarhnaya Namaha\
+52. Om Prajapathaye Namaha\
+53. Om Ahuspathaye Namaha\
+54. Om Agnikarbaya Namaha\
+55. Om Sameekarbaya Namaha\
+56. Om Vishvaredase Namaha\
+57. Om Sararigne Namaha\
+58. Om Hurithvarnaya Namaha\
+59. Om Subakaraya Namaha\
+60. Om Vaasavaya Namaha\
+61. Om Vaduveshapruthe Namaha\
+62. Om Pushne Namaha\
+63. Om Kapasthine Namaha\
+64. Om Kahunay Namaha\
+65. Om Chandravarnaya Namaha\
+66. Om Kaladharaya Namaha\
+67. Om Mayadharaya Namaha\
+68. Om Mahamayine Namaha\
+69. Om Kaivalyaya Namaha\
+70. Om SankaIsathaya Namaha\
+71. Om Vishvayonaye Namaha\
+72. Om Ameyathmane Namaha\
+73. Om Dejonidhaye Namaha\
+74. Om Anamayaya Namaha\
+75. Om Parameshtine Namaha\
+76. Om Parabrahfmanaye Namaha\
+77. Om Vedakarbaya Namaha\
+78. Om Viratsthaya Namaha\
+79. Om Pulindakanyabarthre Namaha\
+80. Om Mahasaraswatha Prathaye Namaha\
+81. Om Ashrithagila Thatre Namaha\
+82. Om Shoragnaye Namaha\
+83. Om Roga Nasanaya Namaha\
+84. Om Anandamurthaye Namaha\
+85. Om Aananday Namaha\
+86. Om Sikandikrud Kethanaya Namaha\
+87. Om Tampaya Namaha\
+88. Om Param Tampaya Namaha\
+89. Om Mahatampaya Namaha\
+90. Om Vrushakapaye Namaha\
+91. Om Karanopaatha Dehaya Namaha\
+92. Om Karanadheetha Vikrahaya Namaha\
+93. Om Aneesvaraya Namaha\
+94. Om Amruthaya Namaha\
+95. Om Pranaya Namaha\
+96. Om Pranayama Parayanaya Namaha\
+97. Om Vrutha Hundhre Namaha\
+98. Om Veeragnaya Namaha\
+99. Om Raktha Shyama Kalaya Namaha\
+100. Om Mahade Namaha\
+101. Om Suprabhamnjaya Namaha\
+102. Om Kuhabdhaya Namaha\
+103. Om Brahmanjaya Namaha\
+104. Om Brahmana Priyaya Namaha\
+105. Om Vamsa Viruthikaraya Namaha\
+106. Om Veda Vedhyaya Namaha\
+107. Om Akshaya Palapradaya Namaha\
+108. Om Mayur Vahanaya Namaha\
+\
+Vetrivel Murukanukku... Arohara!!
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

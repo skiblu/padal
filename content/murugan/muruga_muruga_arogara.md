@@ -5,6 +5,7 @@ title: Muruga Muruga Arogara
 lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Muruga, Muruga, Arogara, முருகா, முருகா, அரோகரா
 ---
 
+{% capture text %}
 முருகா முருகா முருகா முருகா ... `அரகரோகரா` \
 மால் மருகா மருகா மருகா மருகா... `அரகரோகரா`
 
@@ -40,3 +41,43 @@ lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Muruga, Muruga, Arogara, மு�
 
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Muruga Muruga Muruga Muruga ... "Aragarogara"\
+Maal Maruga Maruga Maruga Maruga... "Aragarogara"\
+\
+Thanigaasalane thavama maniye.. "Aragarogara"\
+Vaanavar potrum theenathayala..."Aragarogara"\
+\
+Kadhirkaamathurai Kathirvel Muruga..."Aragarogara"\
+Kantha Kadamba Karthikeya "Aragarogara"\
+\
+Senthilan dhavaa Sengalvarayaa..."Aragarogara"\
+Siva Shanmmugane senai thalaivaa..."Aragarogara"\
+\
+Akkinikarbaa aaru padai veela..."Aragarogara"\
+Aavinangudi vaazh azhagiya vela "Aragarogara"\
+\
+(Muruga Muruga Muruga Muruga ... "Aragarogara"\
+Maal Maruga Maruga Maruga Maruga ... "Aragarogara")\
+\
+Mayil vagananey Mathavak kozhundhe.. "Aragarogara"\
+Pazhaniyam padhivaazh paalaku maaraa..."Aragarogara"\
+\
+Sevar kodi oy sengathir vela.."Aragarogara"\
+Sivanar maganey Senthiladhipa..."Aragarogara"\
+\
+Muruga Muruga Muruga ... "Aragarogara"\
+Maal Maruga Maruga Maruga Maruga.. "Aragarogara"\
+\
+Saminatha Shakthi Vela.... "Aragarogara"\
+Muvar Mudhalva Muthuk Kumara..."Aragarogara"\
+\
+Valli manaalaa vaanavar vendhe "Aragarogara"\
+Vadivel Muruga Thirumal Maruga ... "Aragarogara"\
+\
+Vetrivel Murukanukku... Arohara!!
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

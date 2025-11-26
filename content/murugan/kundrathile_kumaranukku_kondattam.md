@@ -5,6 +5,7 @@ title: Kundrathile Kumaranukku Kondattam
 lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Kundrathile, Kumaranukku, Kondattam, குன்றத்தில், குமரனுக்கு, கொண்டாட்டம்
 ---
 
+{% capture text %}
 `குன்றத்திலே குமரனுக்கு கொண்டாட்டம்`\
 `அங்கே குவிந்ததம்மா பெண்களெல்லாம்`\
 `வண்டாட்டம் கொண்டாட்டம்  (2)`
@@ -36,3 +37,40 @@ lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Kundrathile, Kumaranukku, Kondat
 `வேல் முருகா வெற்றி வேல் முருகா (Chorus)`
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+"Kundrathile Kumaranukku Kondattam"\
+"Ange kuvinthathamma pengalellam"\
+"Vandattam Kondattam  (2)"\
+\
+"Kundrathile Kumaranukku Kondattam"\
+\
+Deivayaanaai thirumanamaam thirupparangundram (2)\
+Theru muzudhum bhaktargalin aanandha manram (2)\
+Thangam vairam pavazham muthu thavazhum deivaanai (2)\
+Thaangi kondaal vaangi kondaal Muruga perumaanai (2)\
+\
+"Kundrathile Kumaranukku Kondattam"\
+"Ange kuvinthathamma pengalellam"\
+"Vandattam Kondattam (2)"\
+\
+"Kundrathile Kumaranukku Kondattam"\
+\
+Urugi sollunga Muruganin pera\
+Nerungi sellunga Kumaranin oorai (2)\
+\
+"Vel Muruga Vetri Vel Muruga"\
+"Vel Muruga Vetri Vel Muruga (Chorus)"\
+\
+Sandhanam poosunga kungumam soodunga (2)\
+Arakara paadunga varuvathai paarunga (2)\
+Kandhanukku Vel Vel Muruganukku Vel Vel (2)\
+\
+"Vel Muruga Vetri Vel Muruga"\
+"Vel Muruga Vetri Vel Muruga (Chorus)"\
+\
+Vetrivel Murukanukku... Arohara!!
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

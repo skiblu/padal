@@ -5,6 +5,7 @@ title: Aragarogara Aragarogara
 lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Aragarogara, Aragarogara, அரகரொகரா, அரகரொகரா
 ---
 
+{% capture text %}
 அரகரோகரா ஸ்வாமி `அரகரோகரா`. \
 அரகரோகரா ஸ்வாமி `அரகரோகரா`.
 
@@ -34,3 +35,38 @@ lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Aragarogara, Aragarogara, அர
 `அரகரோகரா ஸ்வாமி அரகரோகரா`
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Aragarogara Swami "Aragarogara"\
+Aragarogara Swami "Aragarogara"\
+\
+Kadhirkaama Velanukku "Aragarogara"\
+Kandappa Swamikku "Aragarogara"\
+\
+Thirupparangirith Theeranukku "Aragarogara"\
+Thiruppazhanee Selvanukku "Aragarogara"\
+Thiruverakap Paalanukku "Aragarogara"\
+\
+Kundrilaadum Kumaranukku "Aragarogara"\
+Kunjarithan Kanavanukku "Aragarogara"\
+Kuravalli Kanthanukku "Aragarogara"\
+Gunangadandha Velanukku "Aragarogara"\
+\
+Solaimalaik Kizhavanu "Aragarogara"\
+Sogusukkaara Muruganukku "Aragarogara"\
+Siva-Sakthi Vadivanu "Aragarogara"\
+Singara Velanukku "Aragarogara"\
+\
+Agangaar Naasarukku "Aragarogara"\
+Anbarin ney anukku "Aragarogara"\
+Ettukudi Endhaikku "Aragarogara"\
+Engum nirai iraivanukku "Aragarogara"\
+\
+"Aragarogara Swami Aragarogara"\
+"Aragarogara Swami Aragarogara"\
+\
+Vetrivel Murukanukku... Arohara!!
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

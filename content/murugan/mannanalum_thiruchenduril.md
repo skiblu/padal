@@ -5,6 +5,7 @@ title:  Mannanalum thiruchenduril
 lyrics_en: Murugan, Mannanalum, thiruchenduril, மண்ணானாலும், திருச்செந்தூரில்
 ---
  
+{% capture text %}
 [ `மண்ணானாலும் திருச்செந்தூரில் மண்ணாவேன்`\
 `ஒரு மரமானாலும் பழமுதிர்ச்சோலையில் மரமாவேன்`\
 `கருங்கல்லானாலும் தணிகைமலையில் கல்லாவேன்`\
@@ -32,6 +33,35 @@ lyrics_en: Murugan, Mannanalum, thiruchenduril, மண்ணானாலும�
 
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
 
-
-
+{% capture text_en %}
+"Mannaanalum Thiruchenduril Mannavaen"\
+"Oru maramaanalum pazhamudhirchcholaiyil maravaen"\
+"Karungallaanalum thanigaimalaiyil kallavaen"\
+"Pasum pullaanalum Murugan arulaal poovaenae - naan"\
+\
+Ponnaanalum vadivel seyyum ponnavaen\
+Panipoovaanalum saravanap poigaikkil poovaen\
+Tamil pechaanalum thiruppukazh vilakka pechaavaen\
+Manampithaanalum Murugan arulaal muthavaen\
+\
+Mannaanalum Thiruchenduril Mannavaen"\
+"Oru maramaanalum pazhamudhirchcholaiyil maravaen"\
+"Karungallaanalum thanigaimalaiyil kallavaen"\
+"Pasum pullaanalum Murugan arulaal poovaenae - naan"\
+\
+Sollaanalum Om enrOlikkum sollaavaen\
+Pazhachu vaiyaan alukum panjamirtha suvaiyaaven\
+Arul undaanalum veedumperam undaavaen\
+Thani uyiraanalum Murugan arulaal payiravaen - naan\
+\
+"Mannaanalum Thiruchenduril Mannavaen"\
+"Oru maramaanalum pazhamudhirchcholaiyil maravaen"\
+"Karungallaanalum thanigaimalaiyil kallavaen"\
+"Pasum pullaanalum Murugan arulaal poovaenae - naan"\
+\
+Vetrivel Murukanukku... Arohara!!
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
