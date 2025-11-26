@@ -6,8 +6,7 @@ youtube_id: tuZr_5dgR2s
 lyrics_en: Vinayaga, Ganesa, Omkara, Ganapathiye, ஓம்கார, கணபதியே
 ---
 
-
-
+{% capture text %}
 ஓம்கார கணபதியே.. உலகாளும் கணபதியே\
 உன் பாதம் சரணமய்யா\
 `விக்ன விநாயகா. சரணம் சரணம்`\
@@ -54,3 +53,53 @@ lyrics_en: Vinayaga, Ganesa, Omkara, Ganapathiye, ஓம்கார, கணப�
 `வேழ விநாயகா. சரணம் சரணம்`\
 `ஆனை முகனே. சரணம் சரணம்`\
 `ஆபத்பாந்தவா. சரணம் சரணம்`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Omkara Ganapathiye.. Ulagaalum Ganapathiye\
+Un paadham saranamayya\
+`Vigna Vinayagaa. Saranam Saranam`\
+`Vezha Vinayagaa. Saranam Saranam`\
+`Aanai Mugane. Saranam Saranam`\
+`Aapaththaandhavaa. Saranam Saranam`
+
+Vezha mugathu naayagaa vetrrigal thanthu aala vaa\
+Paniven unthan paathame karunai seiya odi vaa
+
+Arugampul sooda vaa arul vazhanggi paarkka vaa\
+Erukkam poo erka vaa.. Engal kudi kaakka vaa.
+
+`Mooshikamerum modaka priyaa`\
+`Saranam Saranam Gananaathaa`\
+`Aaruthal korum aanai mugane`\
+`Saranam Saranam Gananaathaa`
+
+Paalum thenum vaarit thannthe panivene aiyaa\
+Naalum naalum aadippaadi magizhvene aiyaa
+
+Pidimannai pidithu vaitthaal pillayare un uruvam\
+Poosum manjal thoolil kooda pesumayya un vadivam
+
+`Mooshikamerum modaka priyaa`\
+`Saranam Saranam Gananaathaa`\
+`Aaruthal korum aanai mugane`\
+`Saranam Saranam Gananaathaa`
+
+Paagum paruppum naalum thannthe thozhuvene aiyaa\
+Paasam nesam yaavum thedi varuvene aiyaa
+
+Thoppukkarnam pottu kondaal\
+Kettapadi vazhvum valamum\
+Vaarit thannthe vaasal nirpai\
+Vanakkiduvom unthan paadham
+
+`Mooshikamerum modaka priyaa`\
+`Saranam Saranam Gananaathaa`\
+`Aaruthal korum aanai mugane`\
+`Saranam Saranam Gananaathaa`
+
+`Vigna Vinayagaa. Saranam Saranam`\
+`Vezha Vinayagaa. Saranam Saranam`\
+`Aanai Mugane. Saranam Saranam`\
+`Aapaththaandhavaa. Saranam Saranam`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

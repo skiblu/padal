@@ -6,6 +6,7 @@ youtube_id: xiI4jdhHeus
 lyrics_en: Vinayaga, Ganesa, Aanai, Mugathaan, Aran, Ainthu Mugathaan,ஆனை, முகத்தான், அரன், ஐந்து முகத்தான்
 ---
 
+{% capture text %}
 ஆனை முகத்தான்…\
 அரன் ஐந்து முகத்தான் மகன்…\
 ஆறுமுகத்தானுடன் அவதரித்தான்…
@@ -79,3 +80,80 @@ lyrics_en: Vinayaga, Ganesa, Aanai, Mugathaan, Aran, Ainthu Mugathaan,ஆனை,
 அவன் ஆனை முகத்தான்…\
 அரன் ஐந்து முகத்தான் மகன்…\
 ஆறு முகத்தான் உடன் அவதரித்தான்…
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Aanai mugatthaan...\
+Aran ainthu mugatthaan magan...\
+Aarumugatthaanudan avatharitthaan...\
+
+Aanai mugatthaan...\
+Aran ainthu mugatthaan magan...\
+Aarumugatthaanudan avatharitthaan...\
+
+Avan aanai mugatthaan...\
+Aran ainthu mugatthaan magan...\
+Aarumugatthaanudan avatharitthaan...\
+
+Gnaanam alippaan...\
+Endrum nalam alippaan...\
+Gnaanam alippaan...\
+Endrum nalam alippaan...\
+
+Thannai nambiyavarkku ellaam...\
+Kai koduppaan...\
+Thannai nambiyavarkku ellaam...\
+Kai koduppaan...\
+
+Udan aanai mugatthaan...\
+Aran ainthu mugatthaan magan...\
+Aaru mugatthaanudan avatharitthaan...\
+
+Om ennum piranava naadhamae...\
+Avan thodakkam...\
+Ulagam ellaam avan vayittrinile adakkam...\
+
+Om ennum piranava naadhamae...\
+Avan thodakkam...\
+Ulagam ellaam avan vayittrinile adakkam...\
+
+Kaanal neer vaazhkkai...\
+Kadal adhanai kadakkum...\
+Kaanal neer vaazhkkai...\
+Kadal adhanai kadakkum...\
+
+Thoniyaaga vandhu thudhikkaiyaal anaikkum...\
+Thoniyaaga vandhu thudhikkaiyaal anaikkum...\
+
+Aanai mugatthaan...\
+Aran ainthu mugatthaan magan...\
+Aaru mugatthaanudan avatharitthaan...\
+
+Vellai ullam ennum...\
+Veettinil kudi iruppaan...\
+Veedhi thorum endre...\
+Vendum varam alippaan...\
+
+Vellai ullam ennum...\
+Veettinil kudi iruppaan...\
+Veedhi thorum endre...\
+Vendum varam alippaan...\
+
+Alli eduththa pidi...\
+Mannilum avan iruppaan...\
+Alli eduththa pidi...\
+Mannilum avan iruppaan...\
+
+Aingarathaan avan thaan...\
+Anaithirkkum munnirpaan...\
+Aingarathaan avan thaan...\
+Anaithirkkum munnirpaan...\
+
+Aanai mugatthaan...\
+Aran ainthu mugatthaan magan...\
+Aaru mugatthaanudan avatharitthaan...\
+
+Avan aanai mugatthaan...\
+Aran ainthu mugatthaan magan...\
+Aaru mugatthaanudan avatharitthaan...\
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

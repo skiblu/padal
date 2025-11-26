@@ -5,6 +5,8 @@ title: Om Jaya Jaya Shree Sai
 lyrics_en: Om Jaya Jaya Shree Sai, Sai Baba, devotional song, lyrics
 lyrics_ta: ஓம் ஜெய் ஜெய் ஶ்ரீ சாய், சாய்பாபா, பக்தி பாடல், பாடல்கள்
 ---
+
+{% capture text %}
 ஓம் ஜெய ஜெய ஸ்ரீ சாயி\
 சீரடி வாசனே என் சாயி\
 ஜகத்குரு சாயி பாபா\
@@ -55,3 +57,58 @@ lyrics_ta: ஓம் ஜெய் ஜெய் ஶ்ரீ சாய், சா
 நெஞ்சங்கள் எல்லாம் பாபா\
 சாயி வாழும் இடம்\
 பரப்ரம்மனே சாய் பாபா
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Om jaya jaya sree sayi\
+Seeradi vaasane en sayi\
+Jagathkuru sayi baaba\
+Jaya jaya sayi baaba\
+Sachidanandha sayi\
+Sathyaroopane sai baaba
+
+Thooya paramporuL thuvaara maayayil\
+Azhaippaan seeradikku.. suvaami azhaippaan seeradikku\
+Azhaithadhum varuvaan baaba\
+Arul karam tharuvaan baaba\
+Annaiyaai anaithiduvaan\
+Maathroopane sai baaba
+
+Om jaya jaya sree sayi...
+
+Neerum neruppai sudhare vaittaye\
+Nirmalane sayi.. engal nirmalane sayi\
+Aathma jothiye baaba\
+Aanandha kadale baaba\
+Seeradiyil kaandom\
+Siva roopan sai baaba
+
+Om jaya jaya sree sayi...
+
+Thiruvuthiyal pini theerthidum baaba\
+Un makimaiku alavavillaiye\
+Un makimaiku alavavillaiye\
+Thuniyil kanindha baaba\
+Yoga malare baaba\
+Punmuka dharisaname\
+Rama roopane sai baaba
+
+Om jaya jaya sree sayi....
+
+Guruvaai vandhaai arulai pozhindhaai\
+Tharaniyil thavamaanaai.. nee tharaniyil thavamaanaai\
+Eththanai thavangal baaba\
+Unnai kaana baaba\
+Ikkanam unnai thozhuthom\
+Thattha roopane sai baaba
+
+Om jaya jaya sree sayi....
+
+Thanamum kalviyum thalarvilla manamum\
+Nallvai naalum tharum.. thinam nallvai naalum tharum\
+Vanjanai illaa baaba\
+Nenjangal ellaam baaba\
+Sayi vaazhum idam\
+Parabrahmane sai baaba
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+

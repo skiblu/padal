@@ -6,6 +6,7 @@ youtube_id: 49MOFhJu2Hs
 lyrics_en: Vishnu, Krishna, Bhakti, Krishna, Mukunda, Murarae, கிருஷ்ணா, முகுந்தா, முராரே 
 ---
 
+{% capture text %}
 கிருஷ்ணா முகுந்தா முராரே - ஜெய\
 கிருஷ்ணா! முகு!
 
@@ -47,4 +48,49 @@ lyrics_en: Vishnu, Krishna, Bhakti, Krishna, Mukunda, Murarae, கிருஷ�
 
 கிருஷ்ணா முகுந்தா முராரே - ஜெய\
 கிருஷ்ணா முகுந்தா முராரே
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Krishna Mukundha Murarae - Jaya\
+Krishna! Mugu!
+
+Krishna Mukundha Murarae - Jaya\
+Krishna Mukundha Murarae - Jaya\
+Krishna Mukundha Murarae - Jaya\
+Krishna Mukundha Murarae
+
+Karuna saagara kamalaa naayaka\
+Karuna saagara kamalaa naayaka
+
+Kanakaambara thaari Gopalaa\
+Kanakaambara thaarii Gopalaa
+
+Krishna Mukundha Murarae - Jaya\
+Krishna Mukundha Murarae
+
+Kaaliya marthana kamsani dhooshana\
+Kaaliya marthana kamsani dhooshana
+
+Kamalaayatha nayanaa Gopalaa\
+Kamalaayatha nayanaa Gopalaa
+
+Krishna Mukundha Murarae - Jaya\
+Krishna Mukundha Murarae
+
+Kudila kundalam kuvalaya thalaneelam\
+Madhuramuralee ravalaolam
+
+Kodi madhana laavanyam\
+Gopi punyam bajaa Gopalam\
+Gopi jana mana mohana viyaapaka\
+Gopi jana mana mohana viyaapaka\
+Gopi jana mana mohana viyaapaka
+
+Kuvalaya thala neelaa Gopalaa\
+Kuvalaya thala neelaa Gopalaa\
+Kuvalaya thala neelaa Gopalaa
+
+Krishna Mukundha Murarae - Jaya\
+Krishna Mukundha Murarae
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
 

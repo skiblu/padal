@@ -6,6 +6,7 @@ youtube_id: WbWjg12osts
 lyrics_en: Vishnu, Krishna, Bhakti, Adhi, Sesha, Anantha, Sayana, ஆதிசேஷா அனந்தசயனா
 ---
 
+{% capture text %}
 `ஆதிசேஷா அனந்தசயனா`\
 `ஸ்ரீநிவாசா ஸ்ரீ வெங்கடேசா `(2)
 
@@ -29,4 +30,31 @@ lyrics_en: Vishnu, Krishna, Bhakti, Adhi, Sesha, Anantha, Sayana, ஆதிச�
 
 ஸ்ரீரெங்கநாதன் பள்ளி கொண்டிருக்கும் ஸ்ரீரெங்கம்\
 சென்றவன் திருவடி பணிவோம்(`ஆதிசேஷா`)
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Aadhiseshaa Ananthasayana`\
+`Sreenivaasa Sri Venkatesha` (2)
+
+Vaikunda nathaa Vaidhekipriya\
+Ezhumalai vaasa Engalin nesa (`Aadhiseshaa`)
+
+Venuvilolana Vijayagopala\
+Neelameha vanna Kaarmega kanna (`Aadhiseshaa`)
+
+Kaalinga narthana Kamaneya Krishna\
+Komala vaayana Kuruvaayurappana (`Aadhiseshaa`)
+
+Sri Rama Chandra moorthiyai paadu\
+Thevinai yagalavan thiruvadi thedu (`Aadhiseshaa`)
+
+Paavangal pokka bajanaigal seivom\
+Paartha saarathiyin paadham panivom (`Aadhiseshaa`)
+
+Thiruppathi malaiyil thirumugam kaattum\
+Thiruvengadattaan thiruarul peruvom (`Aadhiseshaa`)
+
+Sri Renganathan palli kondirukum Sri Rengam\
+Sendravan thiruvadi panivom (`Aadhiseshaa`)
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
 
