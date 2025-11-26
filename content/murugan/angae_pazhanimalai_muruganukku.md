@@ -5,6 +5,7 @@ title: Angae Pazhanimalai Muruganukku
 lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, அங்க, பழனிமலை, முருகனுக்கு
 ---
 
+{% capture text %}
 அங்கே பழனிமலை முருகனுக்கு அர ஹரோ ஹரா\
 அங்கே பழனிமலை முருகனுக்கு அர ஹரோ ஹரா--`[Chorus]`
 
@@ -136,3 +137,138 @@ lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, அங்க, பழனிமல
 
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Angae Pazhanimalai Muruganukku Ara Haro Hara\
+Angae Pazhanimalai Muruganukku Ara Haro Hara --`[Chorus]`
+
+Engal Sabarimalai Ayyappanukku Saranam Ayyappa\
+Engal Sabarimalai Ayyappanukku Saranam Ayyappa --`[Chorus]`
+
+Angae Ara Haro Hara\
+Ingae Saranam Ayyappa\
+Angae Ara Haro Hara --`[Chorus]`\
+Ingae Saranam Ayyappa --`[Chorus]`
+
+Anga Pazhani Muruganukku Velayudham\
+Anga Pazhani Muruganukku Velayudham --`[Chorus]`
+
+Engal Sabarimalai Ayyappanukku Villayudham\
+Engal Sabarimalai Ayyappanukku Villayudham --`[Chorus]`
+
+Angae Ara Haro Hara\
+Ingae Saranam Ayyappa\
+Angae Ara Haro Hara --`[Chorus]`\
+Ingae Saranam Ayyappa --`[Chorus]`
+
+Anga Pazhani Muruganukku Mayil Vaaganam\
+Anga Pazhani Muruganukku Mayil Vaaganam --`[Chorus]`\
+Engal Sabarimalai Ayyappanukku Puli Vaaganam\
+Engal Sabarimalai Ayyappanukku Puli Vaaganam --`[Chorus]`
+
+Angae Ara Haro Hara\
+Ingae Saranam Ayyappa\
+Angae Ara Haro Hara --`[Chorus]`\
+Ingae Saranam Ayyappa --`[Chorus]`
+
+Anga Pazhanimalai Muruganukku Palapala Padigal\
+Anga Pazhanimalai Muruganukku Palapala Padigal\
+
+Engal Sabarimalai Ayyappanukku Pathinettu Padigal\
+Engal Sabarimalai Ayyappanukku Pathinettu Padigal\
+
+Anga Palapala Padigal\
+Inga Pathinettu Padigal\
+Anga Palapala Padigal --`[Chorus]`\
+Inga Pathinettu Padigal --`[Chorus]`
+
+Angae Ara Haro Hara\
+Ingae Saranam Ayyappa\
+Angae Ara Haro Hara --`[Chorus]`\
+Ingae Saranam Ayyappa --`[Chorus]`
+
+Anga Pazhanimalai Muruganukku Paal Abishegam\
+Anga Pazhanimalai Muruganukku Paal Abishegam\
+
+Engal Sabarimalai Ayyappanukku Ney Abishegam\
+Engal Sabarimalai Ayyappanukku Ney Abishegam\
+
+Anga Paal Abishegam\
+Inga Ney Abishegam\
+Anga Paal Abishegam --`[Chorus]`\
+Inga Ney Abishegam --`[Chorus]`
+
+Angae Ara Haro Hara\
+Ingae Saranam Ayyappa\
+Angae Ara Haro Hara --`[Chorus]`\
+Ingae Saranam Ayyappa --`[Chorus]`
+
+Anga Pazhanimalai Muruganukku Kaavadi Kattu\
+Anga Pazhanimalai Muruganukku Kaavadi Kattu
+
+Inga Sabarimalai Ayyappanukku Irumudi Kattu\
+Engal Sabarimalai Ayyappanukku Irumudi Kattu
+
+Anga Kaavadi Kattu\
+Inga Irumudi Kattu\
+Anga Kaavadi Kattu -`[Chorus]`\
+Inga Irumudi Kattu -`[Chorus]`
+
+Angae Ara Haro Hara\
+Ingae Saranam Ayyappa
+
+Angae Ara Haro Hara --`[Chorus]`\
+Ingae Saranam Ayyappa --`[Chorus]`
+
+Anga Pazhanimalai Muruganukku Karthigai Deepam\
+Anga Pazhanimalai Muruganukku Karthigai Deepam --`[Chorus]`
+
+Inga Sabarimalai Ayyappanukku Makara Deepam\
+Inga Sabarimalai Ayyappanukku Makara Deepam --`[Chorus]`
+
+Anga Karthigai Deepam\
+Inga Makara Deepam\
+Anga Karthigai Deepam --`[Chorus]`\
+Inga Makara Deepam --`[Chorus]`
+
+Angae Ara Haro Hara\
+Ingae Saranam Ayyappa\
+Angae Ara Haro Hara --`[Chorus]`\
+Ingae Saranam Ayyappa --`[Chorus]`
+
+Anga Velayudham\
+Inga Villayudham\
+Anga Velayudham --`[Chorus]`\
+Inga Villayudham --`[Chorus]`
+
+Anga Mayil Vaaganam\
+Inga Puli Vaaganam\
+Anga Mayil Vaaganam --`[Chorus]`\
+Inga Puli Vaaganam --`[Chorus]`
+
+Anga Palapala Padigal\
+Inga Pathinettu Padigal
+
+Anga Palapala Padigal --`[Chorus]`\
+Inga Pathinettu Padigal --`[Chorus]`
+
+Anga Paal Abishegam\
+Inga Ney Abishegam
+
+Anga Paal Abishegam --`[Chorus]`\
+Inga Ney Abishegam --`[Chorus]`
+
+Anga Kaavadi Kattu\
+Inga Irumudi Kattu\
+Anga Kaavadi Kattu --`[Chorus]`\
+Inga Irumudi Kattu --`[Chorus]`
+
+Anga Karthigai Deepam\
+Inga Makara Deepam\
+Anga Karthigai Deepam --`[Chorus]`\
+Inga Makara Deepam --`[Chorus]`
+
+
+`Vetrivel Muruganukku... Arohara!!`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
