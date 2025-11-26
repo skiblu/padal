@@ -5,10 +5,7 @@ title:  Muthai tharu
 youtube_id: cJI5hgdvsMg
 lyrics_en: Murugan, Muthai, tharu
 ---
-
-
-
-
+{% capture text %}
 முத்தைத்தரு பத்தித் திருநகை\
 அத்திக்கிறை சத்திச் சரவண\
 முத்திக்கொரு வித்துக் குருபர …… எனவோதும்
@@ -43,6 +40,42 @@ lyrics_en: Murugan, Muthai, tharu
 
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
 
+{% capture text_en %}
+Muthaitharu paththith thirunagai\ 
+Aththikkirai saththis saravana\ 
+Muththikkoru viththuk kurubara …… enavodhum
 
+Mukkadparam marukuch surudiyin\ 
+Murpattathu karpith thiruarum\ 
+Muppaththumu varkkath thamararum …… adipenap
 
+Paththuthalai thathak kanai thodu\ 
+Orrraikkiri maththaip porudhoru\ 
+Pattappagal vatta thigiriyil …… iravagap
+
+Paththarkira thatthaik kadaviya\ 
+Pachchai puyal mechchath thaku porul\ 
+Pakshathodu ratchith arulvadum …… orunaale
+
+Thithithey oththa paripura\ 
+Nirththapatham vaiththup payiravi\ 
+Thikkotkana dikkak kazhugodu …… kazhuthadat
+
+Thikkuppari attap payiravar\ 
+Thokkuthoku thokkuth thoguthoku\ 
+Sithrapavu rikkuth thri kadaka …… enavodhak
+
+Kotthupparai kottak kalamisai\ 
+Kukku kukku kukku kukku kukku\ 
+Kuththipudai pukkupp pidi yena …… muthukookai
+
+Kodputtrezha natpara ravunarai\ 
+Vettippali yittuk kulagiri\ 
+Kuththuppa oththup poravala …… perumale.
+
+Vettri Vel Murukanukku... arohara!!
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
