@@ -1,0 +1,17 @@
+{%- comment -%}
+Usage:
+  {% include lang-filter.html lang="ta" text="தமிழ் only content" %}
+  or
+  {% include lang-filter.html lang="en" html="<strong>English</strong> content" %}
+This include will output the provided content inside a minimal span and show it
+only when localStorage.site_lang (default 'ta' if missing) matches the lang param.
+No additional styling or layout changes are applied.
+{%- endcomment -%}
+
+<span class="lang-filter" data-lang="{{ include.lang | default: '' }}" style="display:none;">
+  {%- if include.html -%}
+    {{ include.html }}
+  {%- else -%}
+    {{ include.text | markdownify }}
+  {%- endif -%}
+</span>

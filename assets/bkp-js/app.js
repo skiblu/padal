@@ -16,10 +16,47 @@
       if (!sel.value) sel.value = 'ta';
       sel.addEventListener('change', function () {
         try { localStorage.setItem('site_lang', sel.value); } catch (e) { /* ignore */ }
-        // reload current page to apply language change
-        window.location.reload();
+        // notify other scripts so they can update instantly without reload
+        try {
+          var ev = new CustomEvent('siteLangChanged', { detail: { lang: sel.value } });
+          window.dispatchEvent(ev);
+        } catch (e) {
+          // fallback: still reload if event dispatch fails
+          window.location.reload();
+        }
       });
     })();
+
+    // --- lang-filter handling (moved from include) ---
+    function _currentLang() {
+      try {
+        var raw = localStorage.getItem('site_lang');
+        return (raw && raw.trim()) ? raw.trim() : 'ta';
+      } catch (e) {
+        return 'ta';
+      }
+    }
+
+    function updateLangFilters(lang) {
+      try {
+        var nodes = document.querySelectorAll('.lang-filter[data-lang]');
+        if (!nodes || !nodes.length) return;
+        nodes.forEach(function (el) {
+          var desired = (el.getAttribute('data-lang') || '').trim();
+          if (desired && lang === desired) el.style.display = '';
+          else el.style.display = 'none';
+        });
+      } catch (e) { /* ignore */ }
+    }
+
+    // initial apply
+    updateLangFilters(_currentLang());
+    // respond to changes without reload
+    window.addEventListener('siteLangChanged', function (evt) {
+      var newLang = (evt && evt.detail && evt.detail.lang) ? evt.detail.lang : _currentLang();
+      updateLangFilters(newLang);
+    }, false);
+    // --- end lang-filter handling ---
 
     const favContainer = document.getElementById('favorite-btn-container');
     const allowHistory = !!favContainer;

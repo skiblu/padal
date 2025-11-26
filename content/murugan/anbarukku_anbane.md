@@ -4,7 +4,7 @@ nav_order: 50
 title: Anbarukku Anbane
 lyrics_en: Murugan, Anbarukku, Anbane
 ---
-
+{% capture text %}
 அன்பருக்கு அன்பனே நீ வாவா ஷண்முகா\
 ஆறுபடை வீடுடையாய் வாவா ஷண்முகா\
 இன்பமய ஜோதியே நீ வாவா ஷண்முகா\
@@ -23,3 +23,5 @@ lyrics_en: Murugan, Anbarukku, Anbane
 ஓடிவாநீ ஆடிவாநீ வாவா ஷண்முகா
 
 `வெற்றிவேல் முருகனுக்கு... அரோஹரா!!`
+
+{% endcapture %} {% include lang-filter.html lang="ta" %}
