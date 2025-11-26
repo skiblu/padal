@@ -7,8 +7,7 @@ title: Nama Shivaya Nama Shivaya
 lyrics_en: Shivan, Nama, Shivaya, Hara, Hara, Sivane, நம, சிவாய, ஹர, ஹர, சிவனே, அருணாசலனே, அண்ணாமலையே, போற்றி
 ---
 
-NOTE: ஹர ஹர சிவனே அருணாசலனே பாடல் வரிகள் (hara hara sivane) இந்த பதிவில் கொடுக்கப்பட்டுள்ளது… சிவபெருமானின் பாடல்களில் மிக மிக பிரபலமான பாடல்களில் இது தலைசிறந்த ஒன்றாகும். திருவண்ணாமலை கிரிவலம் செல்லும் போது இந்த பாடலை நாம் கேட்காமல் இருக்க முடியாது.. இந்த பாடல் வரிகளை படித்து சிவபெருமானின் அருளை பெறுவோம்… இந்த பாடலின் காணொளியும் இந்த பதிவின் இறுதியில் உள்ளது…
-
+{% capture text %}
 நம சிவாய நம சிவாய ஓம் நம சிவாய\
 நம சிவாய நம சிவாய ஓம் நம சிவாய
 
@@ -326,4 +325,325 @@ NOTE: ஹர ஹர சிவனே அருணாசலனே பாடல் 
 சிவலோக காட்சியுடன் சிவனருளும் கொள்வார்….
 
 `தென்னாடுடைய சிவனே போற்றி!..  எந்நாட்டவர்க்கும் இறைவா போற்றி!..`
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
 
+{% capture text_en %}
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Hara Hara Sivane Arunachalane Annamalai potri\
+Siva Om Nama Sivaya\
+Sivaa Sivaa Harane Sonachalane Annamalai potri\
+Hara Om Nama Sivaya
+
+Anale Namasivayam, Azhale Namasivayam\
+Kanale Namasivayam, Katre Namasivayam
+
+Puliyin tholai idaiyil anindha punitha kadale potri\
+Siva Om Nama Sivaya\
+Kaliyin theemai yaavum neekkum, karunai kadale potri\
+Hara Om Nama Sivaya
+
+Punale Namasivayam, Porule Namasivayam\
+Pugazhe Namasivayam, Punidham Namasivayam
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Sivanaar Gangai karayil amarntha Seethala oliye potri\
+Siva Om Nama Sivaya\
+Thavame seyyum thapovanatthil, Jyothi Lingane potri\
+Hara Om Nama Sivaya
+
+Vedham Namasivayam, Naatham Namasivayam\
+Pootham Namasivayam, Potham Namasivayam
+
+Manipooragamaai Sookshmam kaattum Arunachalane potri\
+Siva Om Nama Sivaya\
+Mangala Sivanaai thangkidum vadive, Sengkanal Vanna potri\
+Hara Om Nama Sivaya
+
+Anpe Namasivayam, Aniye Namasivayam\
+Panpe Namasivayam, Parive Namasivayam
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Ninaitta udane Mukthiyai thandidum Annamalai potri\
+Siva Om Nama Sivaya\
+Nimmadhi vaazhvinil niththamum thandhida Sannidhi kondaai potri\
+Hara Om Nama Sivaya
+
+Arule Namasivayam, Azhage Namasivayam\
+Irule Namasivayam, Inimai Namasivayam
+
+Sidhdhar Boomiyaai Sivaalayam kaattum Annamalai potri\
+Siva Om Nama Sivaya\
+Bhakthar nenjinai Sivamayam aakkum Sivaperumaane potri\
+Hara Om Nama Sivaya
+
+Uruve Namasivayam, Uyire Namasivayam\
+Aruve Namasivayam, Akilam Namasivayam
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Annai Umaiku idamaai udalil aalayam thandhaai potri\
+Siva Om Nama Sivaya\
+Sonna vanname seyyum nadhanae Sonachalane potri\
+Hara Om Nama Sivaya
+
+Aadhiyum Namasivayam, Andhamum Namasivayam\
+Jyothiyum Namasivayam, Sundharam Namasivayam
+
+Sooriyan Sandhiran Ashta vasukkal tozhudiddum Naatha potri\
+Siva Om Nama Sivaya\
+Sundhari Unnamulaiyudan Thilazhum Annamalai potri\
+Hara Om Nama Sivaya
+
+Sambuvum Namasivayam, Sathguru Namasivayam\
+Ambikai Namasivayam, Aagamam Namasivayam
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Ettaa nilaiyil Nettai elundha Eka Lingane potri\
+Siva Om Nama Sivaya\
+Patraa irundhu patrum evarkum paadhai kaattuvaai potri\
+Hara Om Nama Sivaya
+
+Kadhirum Namasivayam, Sudarum Namasivayam\
+Udhirum Namasivayam, Puvanam Namasivayam
+
+Jyothi Pilambin sudaril kanindha Annamalai potri\
+Siva Om Nama Sivaya\
+Aadhi Pilambil aalayam konda Adi Annamalaipotri\
+Hara Om Nama Sivaya
+
+Kulire Namasivayam, Mugilum Namasivayam\
+Kaniyum Namasivayam, Paruvam Namasivayam
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Kumaraguruvana Kughane panindha Gurulingesa potri\
+Siva Om Nama Sivaya\
+Imaiyamalai meethi vaasam puriyum amaror arase potri\
+Hara Om Nama Sivaya
+
+Mannum Namasivayam, Maramum Namasivayam\
+Vinnum Namasivayam, Vilaivum Namasivayam
+
+Manimayam aagiya mandhra malaiyil Sundharam aannai potri\
+Siva Om Nama Sivaya\
+Aniyabaaranam pala vaghai soodum Arunachalane potri\
+Hara Om Nama Sivaya
+
+Malaiye Namasivayam, Malare Namasivayam\
+Silaiye Namasivayam, Sigaram Namasivayam
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Kambathilaiyaan Kukhanai kannnil padaitta Sivane potri\
+Siva Om Nama Sivaya\
+Nambiya nenjil nalame alikkum Naathabaranaa potri\
+Hara Om Nama Sivaya
+
+Thiruve Namasivayam, Thelive Namasivayam\
+Karuve Namasivayam, Kanive Namasivayam
+
+Arunai Nagarasigaram virindha Agni Lingane potri\
+Siva Om Nama Sivaya\
+Karunaiyai vendi kaaladi panindhu saranam seithom potri\
+Hara Om Nama Sivaya
+
+Pennum Namasivayam, Aanum Namasivayam\
+Ennam Namasivayam, Ekam Namasivayam
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Moonru moorththigalin vadivaai elundha Mukkan arase potri\
+Siva Om Nama Sivaya\
+Thonri valarndu tulangkidum kadhire Soolanadhane potri\
+Hara Om Nama Sivaya
+
+Oliye Namasivayam, Unarve Namasivayam\
+Veliye Namasivayam, Isaiye Namasivayam
+
+Mouna vadivaaki Mohanam kaattum Moorththi Lingane potri\
+Siva Om Nama Sivaya\
+Gnaanam vazhangi natgadhi arulum Nandhi Vaagana potri\
+Hara Om Nama Sivaya
+
+Raagam Namasivayam, Ragasiyam Namasivayam\
+Yogam Namasivayam, Yaagam Namasivayam
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Ardhanaariyaai viththagam seyyum Arunachalane potri\
+Siva Om Nama Sivaya\
+Narththanam Thaandavam Naadagam aadum Naaga Naadhane potri\
+Hara Om Nama Sivaya
+
+Adhirvum Namasivayam, Asaivum Namasivayam\
+Ilaiyum Namasivayam, Niraivum Namasivayam
+
+Ramana Muniku ragasiyam sonna Raaja Lingane potri\
+Siva Om Nama Sivaya\
+Imaior thalavan pathaviyu valangum Esa Mahesa potri\
+Hara Om Nama Sivaya
+
+Kodaiyum Namasivayam, Kondaalum Namasivayam\
+Vaadaiyum Namasivayam, Thendralum Namasivayam
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Parani Deepamaai tharaniyil olirum Parameswarane potri\
+Siva Om Nama Sivaya\
+Hara Hara endraal vara mazhai pozhiyum Aadhilingane potri\
+Hara Om Nama Sivaya
+
+Siddhiyum Namasivayam, Mukthiyum Namasivayam\
+Bhakthiyum Namasivayam, Sakthiyum Namasivayam
+
+Kaarththigai Thirunaal utsavam kaanum Theepa sudare potri\
+Siva Om Nama Sivaya\
+Theerththam yavilum neeradaduvaai Arunachalane potri\
+Hara Om Nama Sivaya
+
+Nilave Namasivayam, Nijame Namasivayam\
+Kalaiye Namasivayam, Ninaive Namasivayam
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Sutrida sutrida vetrikkul valangum Sonachalane potri\
+Siva Om Nama Sivaya\
+Porsapai thannil atputha nadanam puriyum Parane potri\
+Hara Om Nama Sivaya
+
+Lingam Namasivayam, Leelaiyum Namasivayam\
+Gangaiyum Namasivayam, Karunaiyum Namasivayam
+
+Sonai Nadhi theeram koyil konda Arunachalane potri\
+Siva Om Nama Sivaya\
+Vaanaveli thanai Gopuram aakki malaiyil nirainthaai potri\
+Hara Om Nama Sivaya
+
+Selvam Namasivayam, Serum Namasivayam\
+Vilvam Namasivayam, Vesam Namasivayam
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Aadhirai azhagaa Aavudai mele amarum thalaivaa potri\
+Siva Om Nama Sivaya\
+Vedhiyar potrum Venjadai iraivaa Vedha porule potri\
+Hara Om Nama Sivaya
+
+Mudhalum Namasivayam, Mudivum Namasivayam\
+Idaiyum Namasivayam, Vidaiyum Namasivayam
+
+Naaga mudiyudan yogam puriyum Naageswarane potri\
+Siva Om Nama Sivaya\
+Mega naduvile Thiruneer aniyum Aruneswarane potri\
+Hara Om Nama Sivaya
+
+Ammaiyum Namasivayam, Appanum Namasivayam\
+Nanmaiyaiyum Namasivayam, Naadhanum Namasivayam
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Nama Sivaya Nama Sivaya Om Nama Sivaya\
+Nama Sivaya Nama Sivaya Om Nama Sivaya
+
+Adimudi illaa aanandha vadive Annamalai potri\
+Siva Om Nama Sivaya\
+Ammai Appanai akilam kaakkum Amutheswarane potri\
+Hara Om Nama Sivaya
+
+Adhuvum Namasivayam, Idhuvum Namasivayam\
+Edhuvum Namasivayam, Edhilum Namasivayam
+
+**Lingashtakam:**\
+Devaru Munivarum potridum Lingam\
+Kaamanai erittha Peraarul Lingam\
+Iraavanan garvam adakkiya Lingam\
+Naayir kadaiyaayk kidandha adiyen vanangum Lingam !!
+
+Maatram, Manam, kazhiya nindra Lingam\
+Siththam theliivikkum Siththargal Lingam\
+Devarum asurarum vanankgidum Lingam\
+Naayir kadaiyaayk kidandha adiyen vanangum Lingam !!
+
+Ponmani soodi sudarndhidum Lingam\
+Thanidai naagam anindhidum Lingam\
+Thaksanin yaagam veelththiya Lingam\
+Naayir kadaiyaayk kidandha adiyen vanangum Lingam !!
+
+Kungumam Santhаnam poosiya Lingam\
+Thaamarai Maalaiyai soodiya Lingam\
+Mundhai vinai muzhuthum moya uraikkum Lingam\
+Naayir kadaiyaayk kidandha adiyen vanangum Lingam !!
+
+Deva Kanangalin archanai Lingam\
+Thedidum Bakthiyil vooridum Lingam\
+Sooriyan kodi sudar vidum Lingam\
+Naayir kadaiyaayk kidandha adiyen vanangum Lingam !!
+
+Ettu thalaththinul ezundhidum Lingam\
+Ellaamaagiya Kaarana Lingam\
+Ettu thaririththiram neekkidum Lingam\
+Naayir kadaiyaayk kidandha adiyen vanangum Lingam !!
+
+Devarin uruvil Poojaikkum Lingam\
+Deva vanamalarai etridum Lingam\
+Paramanaadhanaai paravidum Lingam\
+Naayir kadaiyaayk kidandha adiyen vanangum Lingam !!
+
+Lingaashtakam ithanai thinаmum Siva Sannathiyil solvaаr\
+Sivaloka Kaatsiyudan Sivanaru kollaar….
+
+`Thennaadudaiya Sivane potri!..  Ennaattavarkum Iraivaa potri!..`
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
