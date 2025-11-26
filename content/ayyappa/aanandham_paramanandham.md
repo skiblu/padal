@@ -6,7 +6,7 @@ youtube_id: Xn5XfdvjGSA
 lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Aanandham, Paramanandham
 lyrics_ta: ஆனந்தம்‌, பரமானந்தம்‌, ஐயப்பன்‌, தரிசனம்‌
 ---
-
+{% capture text %}
 `ஆனந்தம்‌ பரமானந்தம்‌ ஐயப்ப தரிசனம்‌`\
 `ஆனந்தம்‌`
 
@@ -42,3 +42,44 @@ lyrics_ta: ஆனந்தம்‌, பரமானந்தம்‌, ஐய�
 
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Aanandham Paramaanandham Ayyappa dharisanam`\
+`Aanandham`
+
+Harihara suthanin makara vilakke Ayyappan\
+Maarukku aanandham. \
+(`Aanandham..`)
+
+Guru vadivaayi namakendum thiruvadi thandidum\
+Jayappan\
+Arul vadivaayi Sabariyile amarndhidum\
+Kuzhandhai deivamavan\
+(`Aanandham..`)
+
+Guruvai naadi maalai thadi viratham iruppom\
+Tharaniyile
+
+Viruppam udan naam sendru vandhaal –\
+Nalla thiruppam undu vaazhkaiyile\
+(Nidhaanamaaga) nalla thiruppam undu\
+Vaazhkaiyile\
+(`Aanandham..`)
+
+Sandhanam neerum appanukku, manjal kungumam\
+Ammanukku
+
+Paala abishekam.. Ganapathikku.\
+Neiya abishekam.. Aiyyanukku.
+
+(`Aanandham..`)
+
+Harihara suthanin makara vilakke Ayyappan\
+Maarukku aanandham.
+
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
