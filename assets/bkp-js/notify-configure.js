@@ -94,17 +94,9 @@
     var HISTORY_LIMIT = (cfg && cfg.historyLimit) ? parseInt(cfg.historyLimit, 10) : MAX_HISTORY;
     var timeout = (cfg && cfg.popupTimeout) ? parseInt(cfg.popupTimeout, 10) : 10000;
 
-    function defaultEventName() {
-      var now = new Date();
-      var months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-      var mon = months[now.getMonth()] || 'EVT';
-      var day = String(now.getDate()).padStart(2, '0');
-      return mon + day;
-    }
-
     // Ably-only
-    var channelName = (cfg && typeof cfg.ablyChannel === 'string' && cfg.ablyChannel.trim()) ? cfg.ablyChannel.trim() : '';
-    var eventName = (cfg && typeof cfg.ablyEvent === 'string' && cfg.ablyEvent.trim()) ? cfg.ablyEvent.trim() : defaultEventName();
+    var channelName = window.NOTIFY_UTILS.defaultChannelName();
+    var eventName = window.NOTIFY_UTILS.defaultEventName();
 
     function showTransient(title, message, link) {
       // increment counter and show counter badge

@@ -31,22 +31,14 @@ document.addEventListener('DOMContentLoaded', function () {
     popupEl.style.display = (popupEl.style.display === 'block') ? 'none' : 'block';
   });
 
-  // compute default event name like NOV22 when empty
-  function defaultEventName() {
-    var now = new Date();
-    var months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-    var mon = months[now.getMonth()] || 'EVT';
-    var day = String(now.getDate()).padStart(2, '0');
-    return mon + day;
-  }
-
   sendBtn.addEventListener('click', async function () {
     var key = keyInput.value.trim();
     statusEl.style.color = '#333';
     statusEl.textContent = 'Sending...';
 
-    var channel = 'padal-notification';
-    var eventName = defaultEventName();
+    var channel = window.NOTIFY_UTILS.defaultChannelName();
+    var eventName = window.NOTIFY_UTILS.defaultEventName();
+
     var payload = [{
       name: eventName,
       data: {
@@ -82,4 +74,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-

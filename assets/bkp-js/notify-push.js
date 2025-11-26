@@ -4,8 +4,8 @@ document.getElementById("notify-send").addEventListener("click", async function 
     statusEl.textContent = 'Publishing...';
 
     var notifyKey = document.getElementById("notify-key").value.trim();
-    var channel = document.getElementById("notify-channel").value.trim() || 'padal-notification';
-    var eventName = document.getElementById("notify-event").value.trim() || '';
+    var channel = document.getElementById("notify-channel").value.trim() || window.NOTIFY_UTILS.defaultChannelName();
+    var eventName = document.getElementById("notify-event").value.trim() || window.NOTIFY_UTILS.defaultEventName();
     var title = document.getElementById("notify-title").value.trim();
     var message = document.getElementById("notify-message").value.trim();
 
@@ -18,15 +18,6 @@ document.getElementById("notify-send").addEventListener("click", async function 
         statusEl.style.color = 'red';
         statusEl.textContent = 'Provide at least a title or message.';
         return;
-    }
-
-    // If eventName blank, compute default MONTH+DAY (e.g. NOV22)
-    if (!eventName) {
-      var now = new Date();
-      var months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-      var mon = months[now.getMonth()] || 'EVT';
-      var day = String(now.getDate()).padStart(2, '0');
-      eventName = mon + day;
     }
 
     // Build payload: Ably accepts an array of messages
