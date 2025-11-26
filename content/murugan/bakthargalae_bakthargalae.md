@@ -2,7 +2,7 @@
 section: Murugan
 nav_order: 50
 title: Bhakthargalae Bhakthargalae
-lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Bhakthargalae, Bhakthargalae, Ellorum, Vaangu, பக்தர்களே, பக்தர்களே, எல்லோரும், வாங்க
+lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Bhakthargalae, Bhakthargalae, Ellorum, Vaanga, பக்தர்களே, பக்தர்களே, எல்லோரும், வாங்க
 ---
 
 {% capture text %}
