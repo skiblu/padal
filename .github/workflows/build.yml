@@ -73,9 +73,16 @@ jobs:
             gem install bundler jekyll
           fi
 
-      # BUILD JEKYLL SITE
+      # BUILD JEKYLL SITE (use bundle exec only if Gemfile exists)
       - name: Build Jekyll site
-        run: bundle exec jekyll build -d _site
+        run: |
+          if [ -f Gemfile ]; then
+            echo "Gemfile found — building with bundle exec"
+            bundle exec jekyll build -d _site
+          else
+            echo "No Gemfile found — building with system jekyll"
+            jekyll build -d _site
+          fi
 
       # UPLOAD SITE ARTIFACT
       - name: Upload GitHub Pages artifact
