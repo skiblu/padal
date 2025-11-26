@@ -8,6 +8,7 @@ lyrics_en: Karuppu, Swamy, Karuppar, Tamil, Vandharam, Vandharam, Karuppusamy
 lyrics_ta: கருப்பு, சாமி, கருப்பர், தமிழ், வந்தாரம், வந்தாரம், கருப்பசாமி
 ---
 
+{% capture text %}
 எங்க கருப்பா…\
 எல்லை கருப்பா…\
 எட்டு வச்சு நடந்துவாரான்…\
@@ -60,5 +61,63 @@ lyrics_ta: கருப்பு, சாமி, கருப்பர், தம
 `அவரு வந்தாராம்…`\
 `அப்படியே வந்தாராம் வந்தாராம் கருப்பசாமி`\
 `வரம் தந்தாராம் தந்தாராம் கருப்பசாமி`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Enga Karuppaa…\
+Ellai Karuppaa…\
+Ettu Vachchu Nadandhuvaaraan…\
+Avan Aattam Aadi… Paattu Paadi Oadi Varaan..\
+Vellak Kudhiraiye\
+Virattu Purappatu\
+Vegama Kilumbi Varaan…
+
+Avan Theeppandha Velichchaththula……\
+Thegam Minuminukka…\
+Thidudhidunu Oadi Varaan….
+
+`Vandhaaraam Vandhaaraam Karuppasaami`\
+`Varam Thandhaaraam Thandhaaraam Karuppasaami`\
+
+Avar Vetta Naayu Munna Vittu Vegama Vaaraarammmmmmaa…..\
+Vetta Naayu Munna Vittu Vegama Vaaraarmma\
+Ellaiyil Iruppavaraam, Enga Kula Kaavalaraam\
+`Vandhaaraam`\
+`Avaru Vandhaaraam…`\
+`Appadiye Vandhaaraam Vandhaaraam Karuppasaami`\
+`Varam Thandhaaraam Thandhaaraam Karuppasaami`
+
+Mundhivarum Senaikellaam Karuppasaami\
+Ivaru Munnae Oadi Varuppavaraam Karuppasaami\
+Karuneela Kondavaru Karuththaadi Vaararayyyyyyaa…..\
+Karuneela Kondavaru Karuththaadi Vaaraarayyaa\
+Kottai Karuppasaami Vettaiyaadi Vaararayyo\
+`Vandhaaraam`\
+`Avaru Vandhaaraam…`\
+`Appadiye Vandhaaraam Vandhaaraam Karuppasaami`\
+`Varam Thandhaaraam Thandhaaraam Karuppasaami`
+
+Korappallu Azhaganaiyaa Karuppasaami\
+Kudhiraiyila Vandhaarayyaa Karuppasaami\
+Kaavalukku Sirandthavaru… Karunai Ullam Kondavaru…..\
+Kaavalukku Sirandthavaru Karunai Ullam Kondavaru\
+Singamana Adiyedutthu Sulatti Vittu Vaarayyaa\
+`Vandhaaraam`\
+`Avaru Vandhaaraam…`\
+`Appadiye Vandhaaraam Vandhaaraam Karuppasaami`\
+`Varam Thandhaaraam Thandhaaraam Karuppasaami`
+
+Karuppu Paiyil Mudiththavaraam Karuppasaami\
+Thaga Dhaganu Vandhaarayyaa Karuppasaami\
+Sappaani Karuppasaami Sampatti Viduththi Karuppasaami…….\
+Sappaani Karuppasaami Sampatti Viduththi Karuppasaami…\
+Silaiyaaga Iruppavaraam Singaaramaa Vandhaarayyaa\
+`Vandhaaraam`\
+`Avaru Vandhaaraam…`\
+`Appadiye Vandhaaraam Vandhaaraam Karuppasaami`\
+`Varam Thandhaaraam Thandhaaraam Karuppasaami`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
 
 

@@ -7,6 +7,7 @@ lyrics_en: Karuppu, Swamy, Tamil, Vararaiya, Vararu, Karuppasamy
 lyrics_ta: கருப்பு, சாமி, தமிழ், வாராரையா, வாராரு, கருப்பசாமி
 ---
 
+{% capture text %}
 வாராரய்யா வாராரு!! கருப்பசாமி வாராரு!! \
 `வாராரய்யா வாராரு!! கருப்பசாமி வாராரு!!`
 
@@ -151,5 +152,155 @@ lyrics_ta: கருப்பு, சாமி, தமிழ், வாரார
 
 
 `கருப்பண்ண சாமியே.. சரணம் ஐயப்பா..`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!! \
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!! \
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Sooraavali Kaaththa Pola Suththi Suththi Varaaru\
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Maaraappu Sangiliyum Thirithirikka Varaaru\
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Viraappu Kaaran Ippo Viru Virunuvaraaru\
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Oodhaappoo Kan Simitti Kuru Kurunnu Varaaru\
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Maththaappu Surula Pola Suru Surunnu Varaaru \
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+
+Aadi Aadi Varraar!! Kaavalukkku Oadi Varraar \
+Namma..Karuppasaami. \
+Theedi Theedi Varraar!! Saami Maarai Theedi Varraar \
+Namma..Karuppasaami
+
+`Aadi Aadi Varraar! Kaavalukkku Oadi Varraar` \
+`Namma Karuppasaami.` \
+`Theedi Theedi Varraar!! Saami Maarai Theedi Varraar` \
+`Namma Karuppasaami..` 
+
+Karuppasaami!! Karuppasaami! Karuppasaami!! Karuppasaami!! \
+Karuppasaami!! Karuppasaami!! Karuppannasaami!! Saami!! \
+`Karuppasaami!! Karuppasaami!! Karuppasaami!! Karuppasaami!!` \
+`Karuppasaami!! Karuppasaami!! Karuppannasaami!`
+
+Maanoottu Mandhaiyil Kudhichchi Kudhichchi Varaaru \
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Thenoottu Theerthamellaam Kudichchikudichchchi Varaaru \
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Aiyyaa!! Therukkootthu Aattamellaam Aadi Kalachchi Varaaru \
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Ey!!! Mazhaikkaththu Vaakkinile Aarparichchi Varaaru\
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Mugam Paathth Vaakku Solla Vakka Nai yaa Varaaru\
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Veeran Sooravan Varraar!! Velkambu Thaangi Varraar \
+Namma..Karuppasaami.. \
+Kaaval Kaaran Vaaraan!! Karu Karuvaa Enthi Vaaraan  \
+Namma Karuppasaami.. \
+`Veeran Sooran Varraar!! Velkambu Thaangi Varraar` \
+`Namma Karuppasaami..`\
+`Kaaval Kaaran Varaan!! Karu Karuvaa Enthi Vaaraan` \
+`Namma Karuppasaami..`
+
+Karuppasaami!! Karuppasaami! Karuppasaami!! Karuppasaami!! \
+Karuppasaami!! Karuppasaami!! Karuppannasaami!! Saami!! \
+`Karuppasaami!! Karuppasaami!! Karuppasaami!! Karuppasaami!!` \
+`Karuppasaami!! Karuppasaami!! Karuppannasaami!`
+
+Vellai Kudhirai Eri Viratti Viratti Varaaru\
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Kalla Sirippazhagaa Kalangi Kalangi Varaaru\
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Uruththum Meesaiyila Ney Poosi Varaaru\
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Oi!! Mochchai Kannu Rendum Muzhichchi Muzhichchi Varaaru\
+`Vaaraarayyaa Varaaru!! Karuppasaami Varaaru!!`
+
+Paasagaaran Vaaraan!! Poocha Kaana Oadi Vaaraan!! \
+Namma Karuppasaami.. \
+Roshakkaaran Vaaraan!! Aasigalai Arul Vaaraan!! \
+Namma Karuppasaami. Saami! Saami!! Saami!!
+
+`Paasagaaran Vaaraan!! Poocha Kaana Oadi Vaaraan!!`\
+`Namma Karuppasaami...`\
+`Roshakkaaran Vaaraan!! Aasigalai Arul Vaaraan!!`\
+`Namma Karuppasaami...`
+
+Karuppasaami!! Karuppasaami!! Karuppasaami!! Karuppasaami!! \
+Karuppasaami!! Karuppasaami!! Karuppannasaami!! Saami!!
+
+`Karuppasaami!! Karuppasaami!! Karuppasaami!! Karuppasaami!!`
+`Karuppasaami!! Karuppasaami!! Karuppannasaami!!`
+
+Azhagarmalai Karuppan Vaaraan.. `Enga Karuppasaami`\
+Aanai malai Karuppan Vaaraan.. `Enga Karuppasaami`\
+Oi!! Theerthamalai Karuppan Vaaraan.. `Enga Karuppasaami`\
+Thevadhaanam Karuppan Vaaraan.. `Enga Karuppasaami`
+
+Aiyyaa!! Maaligaipaarai Karuppan Vaaraan.. `Enga Karuppasaami`\
+Saamee!! Maaranaa du Karuppan Vaaraan.. `Enga Karuppasaami`\
+Kollimalai Karuppan Vaaraan.. `Enga Karuppasaami`\
+Vadivelkarai Karuppan Vaaraan.. `Enga Karuppasaami`
+
+Naagamalai Karuppan Vaaraan.. `Enga Karuppasaami`\
+Nellaiseeme Karuppan Vaaraan.. `Enga Karuppasaami`\
+Udaiyaarpaalaiyam Karuppan Vaaraan.. `Enga Karuppasaami`\
+Kottaivaasal Karuppan Vaaraan.. `Enga Karuppasaami`
+
+Kottaimalai Karuppan Vaaraan.. `Enga Karuppasaami`\
+Aalangulam Karuppan Vaaraan.. `Enga Karuppasaami`\
+Achchankovil Karuppan Vaaraan.. `Enga Karuppasaami`\
+Kovilpatti Karuppan Vaaraan.. `Enga Karuppasaami`
+
+Oi!! Naattukottaikaruppan Vaaraan.. `Enga Karuppasaami`\
+Kaangeyan Karuppan Vaaraan.. `Enga Karuppasaami`\
+Karandhamalai Karuppan Vaaraan.. `Enga Karuppasaami`\
+Valaiyangulam Karuppan Vaaraan.. `Enga Karuppasaami`
+
+Velangudi Karuppan Vaaraan.. `Enga Karuppasaami`\
+Langakottai Karuppan Vaaraan.. `Enga Karuppasaami`\
+Pachchaimalai Karuppan Vaaraan.. `Enga Karuppasaami`\
+Malaiyaala Karuppan Vaaraan.. `Enga Karuppasaami`
+
+Puliyangudi Karuppan Vaaraan..`Enga Karuppasaami`\
+Thiruppaachchi Karuppan Vaaraan.. `Enga Karuppasaami`\
+Vinaayagapuram Karuppan Vaaraan.. `Enga Karuppasaami`\
+Aruvik karai Karuppan Vaaraan.. `Enga Karuppasaami`
+
+Panangaattu Karuppan Vaaraan.. `Enga Karuppasaami`\
+Paathaala Karuppan Vaaraan.. `Enga Karuppasaami`\
+Manjamalai Karuppan Vaaraan.. `Enga Karuppasaami`\
+Ondippuli Karuppan Vaaraan.. `Enga Karuppasaami`\
+Vallanaadu Karuppan Vaaraan.. `Enga Karuppasaami`\
+Vellakaadu Karuppan Vaaraan.. ` Enga Karuppasaami`
+
+Karuppasaami Vandharayyaa.... Padipoojai Kandaaraa.....\
+`Karuppasaami Vandharayyaa...Padipoojai Kandaaraay..`
+
+Kaavalukkku Nindraarayyaa... Vettriyellaam Thandharayyaa....\
+`Kaavalukkku Nindraarayyaa... Vettriyellaam Thandharayyaa...`
+
+
+`Karuppanna Saamiye.. Saranam Aiyyappa..`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
 
 

@@ -7,6 +7,7 @@ lyrics_en: Enga, Karuppu, Swamy, avar, enga, karuppasamy
 lyrics_ta: எங்க, கருப்பு, சாமி, அவர், எங்க, கருப்பசாமி
 ---
 
+{% capture text %}
 `எங்க கருப்பசாமி அவர் எங்க கருப்பசாமி`\
 அக்கினியில் பிறந்தவராம் அரனாரின் மைந்தனவன்\
 `எங்க கருப்பசாமி அவர் எங்க கருப்பசாமி`
@@ -155,3 +156,102 @@ lyrics_ta: எங்க, கருப்பு, சாமி, அவர், எ�
 சத்குரு நாதனே `சரணம் ஐயப்போ ….`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Enga Karuppasamy Avar Enga Karuppasamy`\
+Akkiniyil Pirandhavaaram Aranaarin Maindhanavan\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+Mun Kondaai Kaaranavan Munkkopa Kaaranavan\
+Sandhanap Pottukaaran Sabarimalai Kaaval Kaaran\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+Jadaimudi Kaaranavan Saamigalai Kaaththiduvaan\
+Salladaiyai Katti Varaan Saanchi Saanchi Aadi Varaan…\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+Villu Paattu Paadi Varaan Vidha Vidhama Aadi Varaan\
+Pandham Kaiyil Pidichchi Varaan Paari Vettai Aadi Varaan\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+Achchan Kovil Aandavarku Ediraaga Iruppavaraam\
+Pathinettu Padigalukku Kaavalaaga Iruppavanaam\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+Thatchaiyai Katti Varaan Kai Aruva Kaatti Varaan\
+Oi… Meesaiyai Murukki Varaan Muchchandhiyil Nadandhu Varaan\
+`Enga Karuppasamy Avar Enga Karuppanna Saami`
+
+Villaali Veeranukum Veera Manikandanukum\
+Irumudiya Sumakkum Podhu Paadhukaakka Varupavanaam\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+Karpoora Aazhi Munnae Kadavulaaga Nindriduvaar\
+Oi.. Karuppu Vetti Kattikkittu Paavangalai Pokkiduvaar\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+`Enga Karuppan Varaan Enga Karuppasaami…` (Sing fast and music should be faster)\
+Kaarmegam Pola Varaan — `Karuppasaami`\
+Andhaa Varaan Indhaa Varaan — `Karuppasaami`\
+Naagavalli Kondu Varaan — `Karuppasaami`\
+Oi..Munkopa Kaaran Varaan — `Karuppasaami`\
+Aruvaalu Thookki Varaan — `Karuppasaami`\
+Jevvaadhu Vaasagaaran — `Karuppasaami`\
+Vellip Pirambu Kondu Varaan — `Karuppasaami`\
+Oi.. Vegamaaga Aadi Varaan — `Karuppasaami`
+
+Madhaiyodu Sandhanamum Poosi Poosi Nadandhu Varaan — `Karuppasaami`\
+Oi.. Vaandiyaan Nee Vaandiyaan Vethu Pakku Thingum — `Karuppasaami`\
+Madhaiyodu Sandhanamum Poosi Poosi Nadandhu Varaan — `Karuppasaami`\
+Oi.. Vaandiyaan Nee Vaandiyaan Vethu Pakku Thingum — `Karuppasaami`\
+Veera Pudharattaan Varaan — `Karuppasaami`\
+Kurai Kettukkanum Varaan — `Karuppasaami`\
+Mandu Medaiyai Thaangi Varaan — `Karuppasaami`\
+Mandhalam Poosi Aaduvaan — `Karuppasaami`\
+Manthalam Thaangi Varaan Madagalin Meedhu Amarndhu Varaan\
+Endha Maalaiyum Poojaikku Endha Karuppasamy Varaan\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+Kara Kara Vennu Andhak Kudhirai Oadudhu Varaan\
+Karundha Karuththaadum Avanai Thaan Paarthiduvaai\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+Oi Kolai Nilai Koduthu Kolapadam Vennum\
+Kudhiraiyin Peyarilae Nammai Oadumaan Paarthu Nammai Kaapaan\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+Munne Thoondil Mungilae Manikkattum Thaangi Varaan\
+Thuniyellaam Oandrum Kaatchi Kandu Thuniyellaam Paarthiduvaai\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+Vettriyaiyum Tharuvan Veera Pudhiran Avanaam\
+Nammudaiya Kulatheivam Adhanaiyum Meeri Nilpavan\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+Aalangudi Karuppanae Engal Ullam Pugazhgirom\
+Karuppanae Iru Kaal Piditthu Nirkkirom Aalangudi Karuppanae\
+`Enga Karuppasamy Avar Enga Karuppasamy`
+
+Indha Ayyappan Malar Poojai Varuvatharkku Aaval Kondu \
+Kannimaaraiyum Saami Maaraiyum Aiyyappa Maaraiyum Maalikaipuratthamanaiyum \
+Aanmeega Nenjangalaiyum Vaazhtthi Arul Vendum \
+Endra Ennam Kondu Indha Ayyappan Poojaiku Karuppan Varukiraan\
+Aangaaramaai Paravasamaai Udhiramaai Oadi Varukiraan……………..
+
+`Enga Karuppasamy Avar Enga Karuppasamy`\
+`( Karuppan Varaan Karuppan Varaan`\
+`Aangaaramaai Oadi Varaan`\
+`Oi Aaveshamaai Theedi Varaan`\
+`Karuppan Varaan Karuppan Varaan`\
+`Karuppan Varaan Karuppan Varaan )`3
+
+Svaamiye … `Saranam Aiyyappo ..`\
+Enga Karuppasaami.. `Avar Enga Karuppasaami……`\
+Karuppanna Svaamiye…. `Saranam Aiyyappo…`\
+Sathguru Naathanae `Saranam Aiyyappo ….`
+
+`Suvaamiye... Saranam Aiyyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

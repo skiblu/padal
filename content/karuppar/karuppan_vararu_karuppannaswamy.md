@@ -6,6 +6,7 @@ lyrics_en: Karuppu, Swamy, Tamil, Karuppan, Vararu, KaruppannaSwamy
 lyrics_ta: கருப்பு, சாமி, தமிழ், கருப்பன், வராரு, கருப்பண்ணசாமி
 ---
 
+{% capture text %}
 `கருப்பன் வராரு கருப்பண்ண சாமி வராரு (2)`
 
 பதினெட்டாம் படி இறங்கி பாக்க வராரு\
@@ -60,7 +61,7 @@ lyrics_ta: கருப்பு, சாமி, தமிழ், கருப்
 
 கருப்பன் வராரு சின்ன கருப்பன் வராரு\
 அந்த சந்தனம் மணம் மணக்க கருப்பன் வராரு\
-சந்தனம் மணம் மணக்க கருப்பன் வராரு
+அந்த சந்தனம் மணம் மணக்க கருப்பன் வராரு
 
 `கருப்பன் வராரு பெரிய கருப்பன் வராரு`\
 `கருப்பன் வராரு சின்ன கருப்பன் வராரு`\
@@ -68,5 +69,73 @@ lyrics_ta: கருப்பு, சாமி, தமிழ், கருப்
 
 
 `கருப்பண்ண சாமியே.. சரணம் ஐயப்பா..`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+`Karuppan Varaaru Karuppanna Saami Varaaru (2)`
+
+Pathinettaam Padi Irangi Paakka Varaaru\
+Paavamellaam Theerththidave Karuppan Varaaru\
+`Karuppan Varaaru Karuppanna Saami Varaaru`
+
+Meesaiyai Murukki Vittu Karuppan Varaaru\
+Karumpadcha Kattikkittu Aadi Varaaru\
+Vella Nalla Kudhiraiyila Aadi Varaaru\
+Veechcharuva Thookkikittu Karuppan Varaaru\
+`Karuppan Varaaru Saami Karuppan Varaaru`
+
+Karuppan Varaaru Karuppanna Saami Varaaru\
+Singam Eri Aadi Varum Karuppan Varaaru\
+Theeraa Vinai Theerththidave Karuppan Varaaru\
+Karuppan Varaaru Periya Karuppan Varaaru\
+`Karuppan Varaaru Karuppannasaami Varaaru`
+
+Sevalai Vellai Kudhirai Eri Karuppan Varaaru\
+Oththappanai Moolaiyile Karuppan Varaaru\
+Aadi Theedi Oadi Naadi Karuppan Varaaru\
+Aanandhamaai Aadikkittu Karuppan Varaaru\
+`Karuppan Varaaru Chinna Karuppan Varaaru`
+
+Karuppan Varaaru Mutti Karuppan Varaaru\
+Bhoomi Nadu Nadungga Karuppan Varaaru\
+Moovulaga Paakka Thaane Karuppan Varaaru\
+Karuppan Varaaru Valli Karuppan Varaaru\
+`Karuppan Varaaru Periya Karuppan Varaaru`
+
+Aruva Soolam Thaan Edutthu Karuppan Varaaru\
+Aanandhamaai Aattikkitte Karuppan Varaaru\
+Karuppan Varaaru Chinna Karuppan Varaaru\
+`Karuppan Varaaru Periya Karuppan Varaaru`
+
+Karumpadcha Kattikkittu Karuppan Varaaru\
+Sevappu Thundu Thalaiyil Katti Oadi Varaaru\
+`Karuppan Varaaru Periya Karuppan Varaaru`
+
+Karuppan Varaaru Mutti Karuppan Varaaru\
+Saatta Soolam Thaan Edutthu Karuppan Varaaru\
+Sanjaravu Theerththidave Karuppan Varaaru\
+`Karuppan Varaaru Karuppannasaami Varaaru`
+
+Uchchi Nalla Pozhudhinile Karuppan Varaaru\
+Oiyyaaramaai Nadandhukittu Aadi Varaaru\
+`Karuppan Varaaru Periya Karuppan Varaaru`
+
+Saampiraani Vaasaththile Karuppan Varaaru\
+Sandhadhigal Vaazhavaikka Karuppan Varaaru\
+`Ey Karuppan Varaaru Periya Karuppan Varaaru`
+
+Karuppan Varaaru Chinna Karuppan Varaaru\
+Andha Sandhanam Manam Manakka Karuppan Varaaru\
+Sandhanam Manam Manakka Karuppan Varaaru
+
+`Karuppan Varaaru Periya Karuppan Varaaru`\
+`Karuppan Varaaru Chinna Karuppan Varaaru`\
+`Karuppan Varaaru Karuppannasaami Varaaru`
+
+
+`Karuppanna Saamiye.. Saranam Aiyyappa..`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
 
 
