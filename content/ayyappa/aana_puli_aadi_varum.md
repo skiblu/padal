@@ -2,6 +2,7 @@
 section: Ayyappa
 nav_order: 50
 title: Aana Puli Aadi Varum
+youtube_id: YSgN8kXvUFg
 lyrics_en: Ayyappa, Aana, Puli, aadi, varum
 lyrics_ta: ஆனா, புலி, ஆடி, வரும், ஐயப்பா
 ---
