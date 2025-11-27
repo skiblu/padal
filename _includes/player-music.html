@@ -9,7 +9,7 @@ Music player include placeholder.
     import initMusicPlayer from "/assets/js/music-player-module.js";
 
     const wrapper = document.querySelector('[data-audio-id="{{ page.audio_id }}"]');
-    const audioSrc = "{{ 'https://foldr.space/d' | relative_url }}/{{ page.audio_id }}.mp3";
+    const audioSrc = "{{ '/assets/audio/' | relative_url }}{{ page.section }}/{{ page.audio_id }}.mp3";
 
     initMusicPlayer(wrapper, {
         mode: "single",

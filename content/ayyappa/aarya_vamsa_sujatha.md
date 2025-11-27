@@ -1,7 +1,7 @@
 ---
 section: Ayyappa
 nav_order: 92
-audio_id: dj3o2djSa83
+audio_id: fY6e9Hko9
 audio_length: 875
 title: Aarya Vamsa Sujatha
 lyrics_en: Ayyappa, Aarya, Vamsa, Sujatha, Namo, Namo
