@@ -92,7 +92,6 @@ class MusicPlayer {
             <div class="reel reel-left" aria-hidden="true"></div>
             <div class="tape" aria-hidden="true"></div>
             <div class="reel reel-right" aria-hidden="true"></div>
-            <!-- centered track info: title above the tape, sub below the tape -->
             <div class="mp-track-center" aria-hidden="false">
               <div class="track-title" aria-hidden="false"><span class="track-title-inner">Untitled</span></div>
               <div class="track-sub"></div>
@@ -101,7 +100,6 @@ class MusicPlayer {
 
           <div class="controls-row">
             <div class="mp-mode">
-              <!-- show only the active mode label (non-interactive) -->
               <div class="mp-mode-current" title="Mode" aria-hidden="true">
                 <span class="mp-mode-label">Cassette</span>
               </div>
@@ -120,7 +118,6 @@ class MusicPlayer {
               <span class="mp-duration">0:00</span>
             </div>
 
-            <!-- right-side controls: mute, playlist toggle, live badge (inline) -->
             <div class="controls-right" style="display:flex;align-items:center;gap:8px;">
               <button class="mp-btn mp-mute" title="Mute" aria-label="Mute">
                 <img src="/assets/bootstrap-icons/volume-up.svg" alt="Unmuted" />
