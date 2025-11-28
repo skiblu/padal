@@ -3,7 +3,10 @@ section: Vinayaga
 nav_order: 50
 title:  Omkara Ganapathiye
 youtube_id: tuZr_5dgR2s
-lyrics_en: Vinayaga, Ganesa, Omkara, Ganapathiye, ஓம்கார, கணபதியே
+audio_id: Y73fhsyeb6qw
+audio_length: 315
+lyrics_en: Vinayaga, Ganesa, Omkara, Ganapathiye, devotional, chant, lyrics
+lyrics_ta: விநாயகா, கணேசா, ஓம்கார, கணபதியே, பக்தி, மந்திரம், வரிகள்
 ---
 
 {% capture text %}

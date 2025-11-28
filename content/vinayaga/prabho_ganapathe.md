@@ -1,8 +1,12 @@
 ---
 section: Vinayaga
 nav_order: 50
-title:  Prabho Ganapathe
-lyrics_en: Vinayaga, Prabho, Ganapathe, ப்ரபோ, கணபதே
+title: Prabho Ganapathe
+youtube_id: FukODoF3d1k
+audio_id: W4hf7hvb8uin2
+audio_length: 252
+lyrics_en: Vinayaga, Prabho, Ganapathe, Paripoorna, Vaazhvarulvaye
+lyrics_ta: ப்ரபோ, கணபதே, பரிபூரண, வாழ்வருள்வாயே
 ---
 
 {% capture text %}

@@ -2,7 +2,11 @@
 section: Vinayaga
 nav_order: 50
 title:  Pillayar Pillayar
-lyrics_en: Vinayaga, Pillayar, Pillayar, பிள்ளையார், பிள்ளையார் 
+youtube_id: pFc7XJrswRU
+audio_id: 3984hfy5sUYt2
+audio_length: 244
+lyrics_en: Vinayaga, Pillayar, Pillayar, Pillayar, perumai, vaindha, Pillayar
+lyrics_ta: விநாயகா, பிள்ளையாரா, பிள்ளையாரா, பிள்ளையார், பெருமை, வாய்ந்த, பிள்ளையார்
 ---
 
 {% capture text %}

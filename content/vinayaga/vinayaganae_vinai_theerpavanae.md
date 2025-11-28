@@ -3,7 +3,10 @@ section: Vinayaga
 nav_order: 50
 title:  Vinayaganae Vinai Theerpavanae
 youtube_id: fOBYiKcncLQ
-lyrics_en: Vinayaga, Ganesa, vinai, theerpavanae, விநாயகன், வினை, தீர்ப்பவனே
+audio_id: F3s8aYBS92jds
+audio_length: 183
+lyrics_en: Vinayaga, Ganesa, vinai, theerpavanae, vezha, mugatthone, gnala, muthalvanae
+lyrics_ta: விநாயகனே, கணேசா, வினை, தீர்ப்பவனே, வேழ, முகத்தோனே, ஞால, முதல்வனே
 ---
 
 {% capture text %}

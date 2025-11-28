@@ -5,7 +5,8 @@ title:  Ganesa Saranam
 youtube_id: zC2fwS5bYXo
 audio_id: U6hdo35Gas2
 audio_length: 152
-lyrics_en: Vinayaga, Ganesa, Saranam, கணேச, சரணம்
+lyrics_en: Vinayaga, Ganesa, Saranam, devotional, chant, lyrics
+lyrics_ta: விநாயகா, கணேசா, சரணம், பக்தி, மந்திரம், வரிகள்
 ---
 
 {% capture text %}

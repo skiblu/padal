@@ -2,7 +2,8 @@
 section: Vinayaga
 nav_order: 50
 title:  Om Ganesa Pahimam
-lyrics_en: Vinayaga, Om, Ganesa, Pahimam, ஓம், கணேச, பாஹிமாம்
+lyrics_en: Vinayaga, Om, Ganesa, Pahimam, devotional, chant, lyrics
+lyrics_ta: விநாயகா, ஓம், கணேசா, பாஹிமாம், பக்தி, மந்திரம், வரிகள்
 ---
 
 {% capture text %}
