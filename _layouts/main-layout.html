@@ -98,30 +98,32 @@ layout: sidebar
   {% endif %}
 </div>
 
-{% include player-music.html %}
-
-{% if page.youtube_id %}
-<div class="mx-auto mb-4" style="max-width: 600px;">
-    <div class="card shadow-sm rounded">
-        <div class="card-body p-2">
-            <figure class="mb-0">
-                <div class="ratio ratio-{{ page.ratio | default: '16x9' }}">
-                    <iframe
-                            src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}?rel=0&modestbranding=1"
-                            class="border-0"
-                            title="{{ page.title | default: 'Youtube Video' }}"
-                            loading="lazy"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                    </iframe>
-                </div>
-                <figcaption class="figure-caption mt-2">
-                    <a href="https://youtu.be/{{ page.youtube_id }}" target="_blank" rel="noopener">Youtube Video</a>
-                </figcaption>
-            </figure>
-        </div>
-    </div>
-</div>
+{%- if page.audio_id and page.audio_id != "" -%}
+  {% include player-music.html %}
+{%- else -%}
+  {% if page.youtube_id %}
+  <div class="mx-auto mb-4" style="max-width: 600px;">
+      <div class="card shadow-sm rounded">
+          <div class="card-body p-2">
+              <figure class="mb-0">
+                  <div class="ratio ratio-{{ page.ratio | default: '16x9' }}">
+                      <iframe
+                              src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}?rel=0&modestbranding=1"
+                              class="border-0"
+                              title="{{ page.title | default: 'Youtube Video' }}"
+                              loading="lazy"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowfullscreen>
+                      </iframe>
+                  </div>
+                  <figcaption class="figure-caption mt-2">
+                      <a href="https://youtu.be/{{ page.youtube_id }}" target="_blank" rel="noopener">Youtube Video</a>
+                  </figcaption>
+              </figure>
+          </div>
+      </div>
+  </div>
+  {%- endif -%}
 {%- endif -%}
 
 <!-- Improved header: show "Lyrics (வரிகள்)" as a styled section header -->
