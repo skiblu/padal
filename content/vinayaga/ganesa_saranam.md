@@ -2,6 +2,9 @@
 section: Vinayaga
 nav_order: 50
 title:  Ganesa Saranam
+youtube_id: zC2fwS5bYXo
+audio_id: U6hdo35Gas2
+audio_length: 152
 lyrics_en: Vinayaga, Ganesa, Saranam, கணேச, சரணம்
 ---
 
@@ -20,6 +23,20 @@ lyrics_en: Vinayaga, Ganesa, Saranam, கணேச, சரணம்
 
 மூத்தவன் நீயே சரணம் கணேசா\
 மூஷிக வாகன சரணம் கணேசா - - - `(கணேச சரணம்)`
+
+## Optional Start
+அகந்தையை அழித்திடும் சரணம் கணேசா\
+அன்பில் உறைந்திடும் சரணம் கணேசா
+
+கஜமுகன் நியே சரணம் கணேசா\
+அடியார்க் கருள்வாய் சரணம் கணேசா
+
+ஐந்து கரத்தோனே சரணம் கணேசா\
+வேழ முகத்தோனே சரணம் கணேசா
+
+பார்வதி பாலகனே சரணம் கணேசா\
+பக்தருக் கருள்வாய் சரணம் கணேசா
+## Optional End
 
 `கணேச சரணம் சரணம் கணேசா`\
 `கணேச சரணம் சரணம் கணேசா (2)`
@@ -40,6 +57,20 @@ Munithozhum thevaa saranam Ganesha - - - `(Ganesa saranam)`
 
 Moothavan neeye saranam Ganesha\
 Mooshika vaagana saranam Ganesha - - - `(Ganesa saranam)`
+
+## Optional Start
+Aganthaiyai azhithidum saranam Ganesha\
+Anbil uraindidum saranam Ganesha
+
+Gajamugan niye saranam Ganesha\
+Adiyaark karulvaay saranam Ganesha
+
+Ainthu karatthone saranam Ganesha\
+Vezha mugatthone saranam Ganesha
+
+Paarvathi paalaganey saranam Ganesha\
+Baktharuk karulvaay saranam Ganesha
+## Optional End
 
 `Ganesa saranam saranam Ganesha`\
 `Ganesa saranam saranam Ganesha (2)`
