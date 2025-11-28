@@ -2,7 +2,11 @@
 section: Murugan
 nav_order: 50
 title: Anbarukku Anbane
-lyrics_en: Murugan, Anbarukku, Anbane
+youtube_id: dMUW2ju7Wok
+audio_id: D83jndao72hHAo
+audio_length: 135
+lyrics_en: Murugan, Anbarukku, Anbane, Vava, Shanmuga
+lyrics_ta: முருகன், அன்பருக்கு, அன்பனே, வாவா, ஷண்முகா
 ---
 {% capture text %}
 அன்பருக்கு அன்பனே நீ வாவா ஷண்முகா\

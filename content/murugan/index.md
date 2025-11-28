@@ -8,4 +8,8 @@ lyrics_ta: முருகன், முருகா, பாடல்கள், 
 ---
 {% include toc-sections.html parent_name="Murugan" %}
 
+### Murugan Radio
+{% include player-radio.html parent_name="Murugan" %}
+
+
 

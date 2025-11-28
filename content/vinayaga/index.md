@@ -8,6 +8,7 @@ lyrics_ta: விநாயகா, கணபதி, கணேசா, பாடல
 ---
 {% include toc-sections.html parent_name="Vinayaga" %}
 
+### Vinayaga Radio
 {% include player-radio.html parent_name="Vinayaga" %}
 
 

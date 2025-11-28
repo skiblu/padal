@@ -2,7 +2,11 @@
 section: Murugan
 nav_order: 19
 title: Angae Pazhanimalai Muruganukku
-lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, அங்க, பழனிமலை, முருகனுக்கு
+youtube_id: yEnY6bMuhxY
+audio_id: I4dshb3wB2d
+audio_length: 306
+lyrics_en: Murugan, Padal, Tamil, Lyrics, Angae, Pazhanimalai, Muruganukku, Ara, Haro, Hara
+lyrics_ta: முருகன், பாடல், தமிழ், வரிகள், அங்கே, பழனிமலை, முருகனுக்கு, அர, ஹரோ, ஹரா
 ---
 
 {% capture text %}

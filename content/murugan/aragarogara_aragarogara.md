@@ -2,7 +2,11 @@
 section: Murugan
 nav_order: 50
 title: Aragarogara Aragarogara
-lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Aragarogara, Aragarogara, அரகரொகரா, அரகரொகரா
+youtube_id: B7TWYp70ytE
+audio_id: D38sq729afhe
+audio_length: 373
+lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Aragarogara, Aragarogara, Vetrivel, Arohara
+lyrics_ta: முருகன், பாடல், தமிழ், வரிகள், அரகரோகரா, அரகரோகரா, வெற்றிவேல், அரோஹரா
 ---
 
 {% capture text %}
