@@ -3,7 +3,10 @@ section: Vinayaga
 nav_order: 50
 title:  Aanai Mugathaan 
 youtube_id: xiI4jdhHeus
-lyrics_en: Vinayaga, Ganesa, Aanai, Mugathaan, Aran, Ainthu Mugathaan,ஆனை, முகத்தான், அரன், ஐந்து முகத்தான்
+audio_id: u74Fghsl29U4
+audio_length: 267
+lyrics_en: Vinayaga, Ganesa, Aanai, Mugathaan, Aran, Ainthu Mugathaan
+lyrics_ta: விநாயக, கணேச, ஆனை, முகத்தான், அரன், ஐந்து முகத்தான்
 ---
 
 {% capture text %}
