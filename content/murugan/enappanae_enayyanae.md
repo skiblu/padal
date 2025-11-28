@@ -2,7 +2,11 @@
 section: Murugan
 nav_order: 50
 title: Enappanae Enayyanae
-lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Enappanae, Enayyanae, எணப்பனே, எனையனே
+youtube_id: o7mYE3rQxwk
+audio_id: J39fhuhgr29G
+audio_length: 259
+lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Enappanae, Enayyanae, Kandappane, Kanda, Karunyane
+lyrics_ta: முருகன், பாடல், தமிழ், வரிகள், என்னப்பனே, என்னய்யனே, கந்தப்பனே, கந்த, காருண்யனே
 ---
 
 {% capture text %}

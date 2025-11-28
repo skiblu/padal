@@ -1,8 +1,12 @@
 ---
 section: Murugan
 nav_order: 50
-title:  Mannanalum thiruchenduril
-lyrics_en: Murugan, Mannanalum, thiruchenduril, மண்ணானாலும், திருச்செந்தூரில்
+title: Mannanalum thiruchenduril
+youtube_id: ln55GI6Zm0Q
+audio_id: su392dg3yiGdh
+audio_length: 330
+lyrics_en: Murugan, Mannanalum, thiruchenduril, maravaen
+lyrics_ta: முருகன், மண்ணானாலும், திருச்செந்தூரில், மரமாவேன்
 ---
  
 {% capture text %}

@@ -2,7 +2,11 @@
 section: Murugan
 nav_order: 50
 title: Kundrathile Kumaranukku Kondattam
-lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Kundrathile, Kumaranukku, Kondattam, குன்றத்தில், குமரனுக்கு, கொண்டாட்டம்
+youtube_id: ykvgE3ZSpjA
+audio_id: eu3H29cNJw2
+audio_length: 170
+lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Kundrathile, Kumaranukku, Kondattam
+lyrics_ta: முருகன், பாடல், தமிழ், வரிகள், குன்றத்திலே, குமரனுக்கு, கொண்டாட்டம்
 ---
 
 {% capture text %}

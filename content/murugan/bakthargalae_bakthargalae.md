@@ -2,7 +2,11 @@
 section: Murugan
 nav_order: 50
 title: Bhakthargalae Bhakthargalae
-lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Bhakthargalae, Bhakthargalae, Ellorum, Vaanga, பக்தர்களே, பக்தர்களே, எல்லோரும், வாங்க
+youtube_id: pW3JPAbYp6I
+audio_id: dh3HF38fuu23
+audio_length: 224
+lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Bhakthargalae, Bhakthargalae, Ellorum, Vaanga, Pazhanimalai, Yaathirai
+lyrics_ta: முருகன், பாடல், தமிழ், வரிகள், பக்தர்களே, பக்தர்களே, எல்லோரும், வாங்க, பழனிமலை, யாத்திரை
 ---
 
 {% capture text %}
