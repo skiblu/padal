@@ -2,8 +2,11 @@
 section: Ayyappa
 nav_order: 50
 title: Annadhana Prabhuve
-lyrics_en: Ayyappa, Annadhana, Prabhuve, Saranam
-lyrics_ta: அன்னதான‌, பிரபுவே, ஐயப்பா, சரணம்
+youtube_id: em1GEtJyrv8
+audio_id: Kd893h9h2hdiW
+audio_length: 313
+lyrics_en: Ayyappa, Annadhana, Prabhuve, Saranam, Ayyappa, Aariyangaavu, Aiyaney, Saranam, Ayyappa
+lyrics_ta: அன்னதான‌ பிரபுவே, சரணம், ஐயப்பா, ஆரியங்காவு, ஐயனே, சரணம், ஐயப்பா
 ---
 {% capture text %}
 அன்னதான‌ பிரபுவே சரணம் ஐயப்பா\

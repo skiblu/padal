@@ -3,8 +3,10 @@ section: Ayyappa
 nav_order: 50
 title: Aana Puli Aadi Varum
 youtube_id: YSgN8kXvUFg
-lyrics_en: Ayyappa, Aana, Puli, aadi, varum
-lyrics_ta: ஆனா, புலி, ஆடி, வரும், ஐயப்பா
+audio_id: 8Hh37shu29D
+audio_length: 419
+lyrics_en: Ayyappa, Aana, Puli, aadi, varum, kattula, antharaana, ponnambala, mettula
+lyrics_ta: ஆனா, புலி, ஆடி, வரும், ஐயப்பா, காட்டுல, அந்தரான, பொன்னம்பல, மேட்டுல
 ---
 {% capture text %}
 `ஆன புலி ஆடி வரும் காட்டுல`\

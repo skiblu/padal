@@ -2,8 +2,11 @@
 section: Ayyappa
 nav_order: 50
 title: Andha Varar Ayyappa
-lyrics_en: Ayyappa, Samigale, Saranam, sollungo
-lyrics_ta: சாமிகலே, சரணம், சொல்லுங்கோ
+youtube_id: pzaMZ1bpKdI
+audio_id: qw28fbgv33hd8Gd
+audio_length: 401
+lyrics_en: Ayyappa, Andha, Varar, Ayyappa, Devotional, Song, Lyrics
+lyrics_ta: அந்தா, வாறார், ஐயப்பா, தரிசனம்‌
 ---
 {% capture text %}
 `அந்தா வாறார் ஐயப்பா, இந்தா வாறார் ஐயப்பா,`\
