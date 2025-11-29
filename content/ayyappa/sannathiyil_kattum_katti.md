@@ -1,8 +1,9 @@
 ---
 section: Ayyappa
 nav_order: 50
+youtube_id: cr1__UPmCAU
 audio_id: 73hsdG8TY
-audio_length: 119
+audio_length: 317
 title: Sannathiyil Kattum Katti
 lyrics_en: Ayyappa, Sannathiyil, Kattum, Katti
 lyrics_ta: சன்னதியில், கட்டும், கட்டி, ஐயப்பா

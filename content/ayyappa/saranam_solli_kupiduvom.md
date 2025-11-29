@@ -2,8 +2,9 @@
 section: Ayyappa
 nav_order: 50
 title: Saranam Solli Kupiduvom
+youtube_id: xb5dlj1RlpM
 audio_id: ud73h39djD
-audio_length: 119
+audio_length: 285
 lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Saranam, Solli, Kupiduvom
 lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்கள், பக்தி, சரணம், சொல்லி, கூப்பிடுவோம்
 ---
