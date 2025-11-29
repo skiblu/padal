@@ -2,9 +2,11 @@
 section: Ayyappa
 nav_order: 50
 youtube_id: ro2yfPblisY
+audio_id: CSw39cb32nks3
+audio_length: 345
 title: Enge Manakkuthu Santhanam
-lyrics_en: Ayyappa, Enge, Manakkuthu, Santhanam
-lyrics_ta: எங்கே, மண‌க்குது, சந்தனம், ஐயப்ப, சுவாமி, கோவில்
+lyrics_en: Ayyappa, Enge, Manakkuthu, Santhanam, Engae, Manakkuthu
+lyrics_ta: எங்கே, மணக்குது, சந்தனம், எங்கே, மணக்குது, தமிழ் பாடல்கள், ஐயப்ப
 ---
 {% capture text %}
 `எங்கே மணக்குது சந்தனம் எங்கே மணக்குது`\

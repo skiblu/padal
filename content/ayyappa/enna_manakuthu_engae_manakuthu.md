@@ -3,6 +3,8 @@ section: Ayyappa
 nav_order: 50
 title: Enna Manakuthu Engae Manakuthu
 youtube_id: IkKKyVKPB44
+audio_id: S39fh3GV39cha
+audio_length: 240
 lyrics_en: Ayyappa, Devotional, Enna, Manakuthu, Engae, Manakuthu
 lyrics_ta: என்ன, மணக்குது, எங்கே, மணக்குது, தமிழ் பாடல்கள்
 ---
