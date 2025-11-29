@@ -449,6 +449,33 @@ def generate_html_report(data: Dict) -> str:
             margin-bottom: 20px;
             padding-bottom: 15px;
             border-bottom: 2px solid #e2e8f0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }}
+        .section h2:hover {{
+            background: #f7fafc;
+            margin: -10px -15px 20px -15px;
+            padding: 10px 15px 15px 15px;
+            border-radius: 8px;
+        }}
+        .section h2::after {{
+            content: "▼";
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }}
+        .section h2.collapsed::after {{
+            transform: rotate(-90deg);
+        }}
+        .section-content {{
+            max-height: 10000px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }}
+        .section-content.collapsed {{
+            max-height: 0;
         }}
         .section.empty {{
             text-align: center;
@@ -582,7 +609,8 @@ def generate_html_report(data: Dict) -> str:
     if data['section_folder_mismatch']:
         html += f"""
         <div class="section">
-            <h2>⚠️ Section ID / Folder Name Mismatch ({len(data['section_folder_mismatch'])})</h2>
+            <h2 onclick="toggleSection(this)">⚠️ Section ID / Folder Name Mismatch ({len(data['section_folder_mismatch'])})</h2>
+            <div class="section-content">
             <table>
                 <thead>
                     <tr>
@@ -606,6 +634,7 @@ def generate_html_report(data: Dict) -> str:
         html += """
                 </tbody>
             </table>
+            </div>
         </div>
 """
     else:
@@ -617,9 +646,10 @@ def generate_html_report(data: Dict) -> str:
 
     # Missing YouTube ID
     if data['missing_youtube']:
-        html += """
+        html += f"""
         <div class="section">
-            <h2>⚠️ Missing YouTube ID</h2>
+            <h2 onclick="toggleSection(this)">⚠️ Missing YouTube ID ({len(data['missing_youtube'])})</h2>
+            <div class="section-content">
             <table>
                 <thead>
                     <tr>
@@ -639,6 +669,7 @@ def generate_html_report(data: Dict) -> str:
         html += """
                 </tbody>
             </table>
+            </div>
         </div>
 """
     else:
@@ -651,9 +682,10 @@ def generate_html_report(data: Dict) -> str:
     # Missing Audio Metadata
     total_missing = data['missing_audio_both'] + data['missing_audio_id'] + data['missing_audio_length']
     if total_missing:
-        html += """
+        html += f"""
         <div class="section">
-            <h2>⚠️ Missing Audio Metadata</h2>
+            <h2 onclick="toggleSection(this)">⚠️ Missing Audio Metadata ({total_missing})</h2>
+            <div class="section-content">
 """
         if data['missing_audio_both']:
             html += f"""
@@ -727,6 +759,7 @@ def generate_html_report(data: Dict) -> str:
             </table>
 """
         html += """
+            </div>
         </div>
 """
     else:
@@ -739,9 +772,10 @@ def generate_html_report(data: Dict) -> str:
     # Missing Lyrics
     total_missing_lyrics = data['missing_lyrics_both'] + data['missing_lyrics_en'] + data['missing_lyrics_ta']
     if total_missing_lyrics:
-        html += """
+        html += f"""
         <div class="section">
-            <h2>⚠️ Missing Lyrics</h2>
+            <h2 onclick="toggleSection(this)">⚠️ Missing Lyrics ({total_missing_lyrics})</h2>
+            <div class="section-content">
 """
         if data['missing_lyrics_both']:
             html += f"""
@@ -815,6 +849,7 @@ def generate_html_report(data: Dict) -> str:
             </table>
 """
         html += """
+            </div>
         </div>
 """
     else:
@@ -828,7 +863,8 @@ def generate_html_report(data: Dict) -> str:
     if data['nav_order_not_50']:
         html += f"""
         <div class="section">
-            <h2>ℹ️ Files with nav_order ≠ 50 ({len(data['nav_order_not_50'])})</h2>
+            <h2 onclick="toggleSection(this)">ℹ️ Files with nav_order ≠ 50 ({len(data['nav_order_not_50'])})</h2>
+            <div class="section-content">
             <table>
                 <thead>
                     <tr>
@@ -850,6 +886,7 @@ def generate_html_report(data: Dict) -> str:
         html += """
                 </tbody>
             </table>
+            </div>
         </div>
 """
     else:
@@ -863,7 +900,8 @@ def generate_html_report(data: Dict) -> str:
     if data['audio_results']['validated_ok']:
         html += f"""
         <div class="section">
-            <h2>✅ Audio Validation Successful ({len(data['audio_results']['validated_ok'])})</h2>
+            <h2 onclick="toggleSection(this)">✅ Audio Validation Successful ({len(data['audio_results']['validated_ok'])})</h2>
+            <div class="section-content">
             <table>
                 <thead>
                     <tr>
@@ -889,6 +927,7 @@ def generate_html_report(data: Dict) -> str:
         html += """
                 </tbody>
             </table>
+            </div>
         </div>
 """
 
@@ -896,7 +935,8 @@ def generate_html_report(data: Dict) -> str:
     if data['audio_results']['duration_mismatches']:
         html += f"""
         <div class="section">
-            <h2>❌ Duration Mismatches ({len(data['audio_results']['duration_mismatches'])})</h2>
+            <h2 onclick="toggleSection(this)">❌ Duration Mismatches ({len(data['audio_results']['duration_mismatches'])})</h2>
+            <div class="section-content">
             <table>
                 <thead>
                     <tr>
@@ -924,6 +964,7 @@ def generate_html_report(data: Dict) -> str:
         html += """
                 </tbody>
             </table>
+            </div>
         </div>
 """
 
@@ -931,7 +972,8 @@ def generate_html_report(data: Dict) -> str:
     if data['audio_results']['download_errors']:
         html += f"""
         <div class="section">
-            <h2>❌ Download/Read Errors ({len(data['audio_results']['download_errors'])})</h2>
+            <h2 onclick="toggleSection(this)">❌ Download/Read Errors ({len(data['audio_results']['download_errors'])})</h2>
+            <div class="section-content">
             <table>
                 <thead>
                     <tr>
@@ -955,10 +997,19 @@ def generate_html_report(data: Dict) -> str:
         html += """
                 </tbody>
             </table>
+            </div>
         </div>
 """
 
     html += """
+        <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            header.classList.toggle('collapsed');
+            content.classList.toggle('collapsed');
+        }
+        </script>
+        
         <div class="footer">
             <p>Bhakti Padal - Content Validation System</p>
         </div>
