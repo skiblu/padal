@@ -1,6 +1,9 @@
 ---
 section: Ayyappa
 nav_order: 50
+youtube_id: lrcNwpIzsjs
+audio_id: w8hHBwjS2d78f
+audio_length: 228
 title: Athiyum Neeye Anthamum Neeye
 lyrics_en: Ayyappa, Devotional, Lyrics, Athiyum, Neeye, Anthamum, Neeye
 lyrics_ta: அதியும், நீயே, அந்தமும், நீயே, அரிஹர சுதனே, ஐயப்பா, மாதவ மணியே, மாணிக்க ஒளியே
