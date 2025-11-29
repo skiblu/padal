@@ -2,8 +2,11 @@
 section: Ayyappa
 nav_order: 50
 title: Ellorum Sernthu Sollungo
-lyrics_en: Ayyappa, Ellorum, Sernthu, Sollungo, Saranam
-lyrics_ta: அய்யப்பா, எல்லோரும், சேர்ந்து, சொல்லுங்கோ, சரணம்
+youtube_id: 8kAWgXaiQbA
+audio_id: U9dav7ad802f
+audio_length: 263
+lyrics_en: Ayyappa, Ellorum, Sernthu, Sollungo, Ayyanin, Naamathai, Ayyappan, Naamathai, Saranam
+lyrics_ta: சுவாமியே, எல்லோரும், சேர்ந்து, சொல்லுங்கோ, ஐயனின், நாமத்தை, அய்யப்பன், நாமத்தை, சரணம்
 ---
 
 

@@ -2,6 +2,9 @@
 section: Ayyappa
 nav_order: 50
 title: Bhagavan saranam
+youtube_id: 2CNBmiThnQY
+audio_id: Ub38chV2u2hd
+audio_length: 440
 lyrics_en: Ayyappa, Bhagavan, Saranam, Bhagavati, Devan, Devi, Patham
 lyrics_ta: பகவான், சரணம், பகவதி, சரணம், ஐயப்பா, தேவன், பாதம், தேவி
 ---
