@@ -98,14 +98,26 @@ jobs:
           const cp = require('child_process');
           const path = require('path');
           const os = require('os');
-          const JavaScriptObfuscator = (() => {
-            try { return require('javascript-obfuscator'); } catch (e) { return null; }
-          })();
 
-          if (!JavaScriptObfuscator) {
-            console.error('javascript-obfuscator module not available; skipping inline obfuscation.');
-            process.exit(0);
+          // Try normal require first; if running script from /tmp Node's resolution roots start there,
+          // so also try loading from the repository's node_modules (process.cwd()).
+          function tryRequire(name) {
+            try { return require(name); } catch (e) { return null; }
           }
+          let JavaScriptObfuscator = tryRequire('javascript-obfuscator');
+          if (!JavaScriptObfuscator) {
+            try {
+              const repoPath = path.join(process.cwd(), 'node_modules', 'javascript-obfuscator');
+              JavaScriptObfuscator = require(repoPath);
+            } catch (e) {
+              JavaScriptObfuscator = null;
+            }
+          }
+
+           if (!JavaScriptObfuscator) {
+             console.error('javascript-obfuscator module not available; skipping inline obfuscation.');
+             process.exit(0);
+           }
 
           const out = (function() {
             try { return cp.execSync('find _site -type f -name "*.html" -print0', { encoding: 'utf8' }); }
