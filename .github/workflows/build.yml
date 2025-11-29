@@ -106,8 +106,21 @@ jobs:
               let s = fs.readFileSync(f, 'utf8');
               let changed = false;
               s = s.replace(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi, function (m, attr, code) {
-                // skip external scripts and modules
+                // skip external scripts
                 if (/src\s*=/i.test(attr)) return m;
+
+                // detect type attribute if present
+                const typeMatch = attr.match(/\btype\s*=\s*["']([^"']+)["']/i);
+                if (typeMatch) {
+                  const typeVal = (typeMatch[1] || '').toLowerCase();
+                  // skip modules
+                  if (typeVal.includes('module')) return m;
+                  // only allow obfuscation for JavaScript MIME types; skip others (e.g. application/ld+json)
+                  const isJsType = typeVal.includes('javascript') || typeVal === 'text/javascript' || typeVal === 'application/javascript' || typeVal === 'text/ecmascript' || typeVal === 'application/ecmascript';
+                  if (!isJsType) return m;
+                }
+
+                // skip explicit module scripts via attribute
                 if (/\btype\s*=\s*["']module["']/i.test(attr)) return m;
                 if (!code.trim()) return m;
 
