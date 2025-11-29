@@ -2,8 +2,11 @@
 section: Ayyappa
 nav_order: 50
 title: Enna Varam Vendum
-lyrics_en: Ayyappa, Enna, Varam, Vendum, Kelungal
-lyrics_ta: என்ன‌, வரம், வேண்டும், கேளுங்கள்
+youtube_id: _X3x7dg-GnE
+audio_id: Jf38ga3Fshvb3q9
+audio_length: 192
+lyrics_en: Ayyappa, Enna, Varam, Vendum, Kelungal, Sabari, Mannavan, Arulvan, Parungal
+lyrics_ta: என்ன‌, வரம், வேண்டும், கேளுங்கள், சபரி, மன்னவன், அருள்வான், பாருங்கள்
 ---
 
 என்ன‌ வரம் வேண்டும் கேளுங்கள் – சபரி \
