@@ -261,8 +261,16 @@ def download_and_verify_audio(files_with_metadata: List[Tuple[Path, Dict[str, st
         print(f"   [{idx}/{len(files_with_audio)}] {rel_path.name}...", end='\r')
         
         try:
-            # Download file
-            urllib.request.urlretrieve(audio_url, temp_file)
+            # Download file with timeout and proper headers
+            req = urllib.request.Request(
+                audio_url,
+                headers={
+                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+                }
+            )
+            with urllib.request.urlopen(req, timeout=30) as response:
+                with open(temp_file, 'wb') as out_file:
+                    out_file.write(response.read())
             
             # Get actual duration
             actual_duration = get_mp3_duration(str(temp_file))
@@ -326,6 +334,13 @@ def download_and_verify_audio(files_with_metadata: List[Tuple[Path, Dict[str, st
                 'file': str(rel_path),
                 'url': audio_url,
                 'error': f'URL Error: {e.reason}'
+            })
+        
+        except TimeoutError as e:
+            download_errors.append({
+                'file': str(rel_path),
+                'url': audio_url,
+                'error': 'Download timeout (30s)'
             })
         
         except Exception as e:
