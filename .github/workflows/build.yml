@@ -86,66 +86,97 @@ jobs:
             jekyll build -d _site --trace
           fi
 
-      # OBFUSCATE INLINE JS IN GENERATED HTML FILES
+      # OBFUSCATE INLINE JS IN GENERATED HTML FILES (use in-process obfuscator to avoid hangs)
       - name: Obfuscate inline JS in HTML files
         run: |
-          # create a temporary Node script to obfuscate inline <script> blocks
+          # Install obfuscator locally so require('javascript-obfuscator') works reliably
+          npm install javascript-obfuscator --no-save
+
+          # Write Node script that obfuscates inline <script> blocks using the library API
           cat > /tmp/obf_inline.js <<'NODE'
           const fs = require('fs');
           const cp = require('child_process');
           const path = require('path');
           const os = require('os');
-          const tmpdir = os.tmpdir();
+          const JavaScriptObfuscator = (() => {
+            try { return require('javascript-obfuscator'); } catch (e) { return null; }
+          })();
 
-          const out = cp.execSync('find _site -type f -name "*.html" -print0').toString();
+          if (!JavaScriptObfuscator) {
+            console.error('javascript-obfuscator module not available; skipping inline obfuscation.');
+            process.exit(0);
+          }
+
+          const out = (function() {
+            try { return cp.execSync('find _site -type f -name "*.html" -print0', { encoding: 'utf8' }); }
+            catch (e) { return ''; }
+          })();
+
           const files = out.split('\0').filter(Boolean);
-          if (!files.length) { process.exit(0); }
+          if (!files.length) {
+            console.log('No HTML files found under _site; nothing to obfuscate.');
+            process.exit(0);
+          }
+
+          let totalFiles = 0;
+          let totalScripts = 0;
 
           for (const f of files) {
             try {
               let s = fs.readFileSync(f, 'utf8');
               let changed = false;
+              let fileScriptCount = 0;
+
               s = s.replace(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi, function (m, attr, code) {
-                // skip external scripts
+                // Skip external scripts
                 if (/src\s*=/i.test(attr)) return m;
 
-                // detect type attribute if present
+                // Detect type attribute if present and allow only JS MIME types
                 const typeMatch = attr.match(/\btype\s*=\s*["']([^"']+)["']/i);
                 if (typeMatch) {
                   const typeVal = (typeMatch[1] || '').toLowerCase();
-                  // skip modules
+                  // skip modules and non-js types (e.g. application/ld+json)
                   if (typeVal.includes('module')) return m;
-                  // only allow obfuscation for JavaScript MIME types; skip others (e.g. application/ld+json)
                   const isJsType = typeVal.includes('javascript') || typeVal === 'text/javascript' || typeVal === 'application/javascript' || typeVal === 'text/ecmascript' || typeVal === 'application/ecmascript';
                   if (!isJsType) return m;
                 }
 
-                // skip explicit module scripts via attribute
-                if (/\btype\s*=\s*["']module["']/i.test(attr)) return m;
-                if (!code.trim()) return m;
+                // If code empty, skip
+                if (!code || !code.trim()) return m;
 
-                const inFile = path.join(tmpdir, 'in_' + Math.random().toString(36).slice(2) + '.js');
-                const outFile = path.join(tmpdir, 'out_' + Math.random().toString(36).slice(2) + '.js');
-                fs.writeFileSync(inFile, code, 'utf8');
                 try {
-                  cp.execFileSync('javascript-obfuscator', [inFile, '--output', outFile, '--compact', 'true', '--control-flow-flattening', 'true']);
-                  const ob = fs.readFileSync(outFile, 'utf8');
+                  // Obfuscate in-process (avoid calling external CLI)
+                  const obf = JavaScriptObfuscator.obfuscate(code, {
+                    compact: true,
+                    controlFlowFlattening: true,
+                    controlFlowFlatteningThreshold: 0.75,
+                    unicodeEscapeSequence: false
+                  });
+                  const ob = obf.getObfuscatedCode();
                   changed = true;
-                  fs.unlinkSync(inFile);
-                  fs.unlinkSync(outFile);
+                  fileScriptCount++;
                   return '<script' + attr + '>' + ob + '</script>';
-                } catch (e) {
-                  try { fs.unlinkSync(inFile); } catch (err) {}
-                  try { fs.unlinkSync(outFile); } catch (err) {}
+                } catch (err) {
+                  console.error('Obfuscation failed for a script in', f, '-', err && err.message || err);
                   return m;
                 }
               });
-              if (changed) fs.writeFileSync(f, s, 'utf8');
+
+              if (changed) {
+                fs.writeFileSync(f, s, 'utf8');
+                console.log('Obfuscated', fileScriptCount, 'inline script(s) in', f);
+              }
+              totalFiles += changed ? 1 : 0;
+              totalScripts += fileScriptCount;
             } catch (e) {
               console.error('Failed processing', f, e && e.message);
             }
           }
+
+          console.log('Inline obfuscation complete. Files changed:', totalFiles, 'Scripts obfuscated:', totalScripts);
           NODE
+
+          # Run the Node script (don't fail the workflow if obfuscation has issues; logs will show problems)
           node /tmp/obf_inline.js || true
 
       # Install HTML/CSS minifiers and minify generated site
