@@ -91,7 +91,7 @@ defaults:
     values:
       layout: "main-layout"
 # ignore stuff
-exclude: [README.md, WEB-COUNTER.md, LICENSE, assets/lib/README.md]
+exclude: [README.md, tools/*, LICENSE, assets/lib/README.md]
 url: "https://www.bhaktipadal.in"
 safe: false
 plugins:
