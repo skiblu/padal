@@ -1,0 +1,21 @@
+<!-- Default gnrcounter.com code for www.bhaktipadal.in -->
+<script language="JavaScript" type="text/javascript" src="https://gnrcounter.com/counter.php?accId=8bddd99f6c48e8a6e7185b70d9fd4ac3"></script>
+<noscript>
+<a href="https://gnrcounter.com" title="Web Analytics">Web Analytics</a>
+</noscript>
+<!-- End of gnrcounter.com Code -->
+
+
+Attention!
+Please save and remember the admin control panel link. Required for admin management.
+sCode (Secure Code) is your password.
+
+YOUR ADMIN DASHBOARD URL (Secure Code)
+(Please do not share this information with anyone)
+
+https://gnrcounter.com/dashboard/?accId=8bddd99f6c48e8a6e7185b70d9fd4ac3&sCode=Y9Z6Y1
+
+YOUR DASHBOARD URL (Does not contain Secure Code)
+You can share this link if you want. :)
+
+https://gnrcounter.com/dashboard/?accId=8bddd99f6c48e8a6e7185b70d9fd4ac3
