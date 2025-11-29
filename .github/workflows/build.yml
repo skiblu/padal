@@ -86,6 +86,55 @@ jobs:
             jekyll build -d _site --trace
           fi
 
+      # OBFUSCATE INLINE JS IN GENERATED HTML FILES
+      - name: Obfuscate inline JS in HTML files
+        run: |
+          # create a temporary Node script to obfuscate inline <script> blocks
+          cat > /tmp/obf_inline.js <<'NODE'
+          const fs = require('fs');
+          const cp = require('child_process');
+          const path = require('path');
+          const os = require('os');
+          const tmpdir = os.tmpdir();
+
+          const out = cp.execSync('find _site -type f -name "*.html" -print0').toString();
+          const files = out.split('\0').filter(Boolean);
+          if (!files.length) { process.exit(0); }
+
+          for (const f of files) {
+            try {
+              let s = fs.readFileSync(f, 'utf8');
+              let changed = false;
+              s = s.replace(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi, function (m, attr, code) {
+                // skip external scripts and modules
+                if (/src\s*=/i.test(attr)) return m;
+                if (/\btype\s*=\s*["']module["']/i.test(attr)) return m;
+                if (!code.trim()) return m;
+
+                const inFile = path.join(tmpdir, 'in_' + Math.random().toString(36).slice(2) + '.js');
+                const outFile = path.join(tmpdir, 'out_' + Math.random().toString(36).slice(2) + '.js');
+                fs.writeFileSync(inFile, code, 'utf8');
+                try {
+                  cp.execFileSync('javascript-obfuscator', [inFile, '--output', outFile, '--compact', 'true', '--control-flow-flattening', 'true']);
+                  const ob = fs.readFileSync(outFile, 'utf8');
+                  changed = true;
+                  fs.unlinkSync(inFile);
+                  fs.unlinkSync(outFile);
+                  return '<script' + attr + '>' + ob + '</script>';
+                } catch (e) {
+                  try { fs.unlinkSync(inFile); } catch (err) {}
+                  try { fs.unlinkSync(outFile); } catch (err) {}
+                  return m;
+                }
+              });
+              if (changed) fs.writeFileSync(f, s, 'utf8');
+            } catch (e) {
+              console.error('Failed processing', f, e && e.message);
+            }
+          }
+          NODE
+          node /tmp/obf_inline.js || true
+
       # Install HTML/CSS minifiers and minify generated site
       - name: Install HTML/CSS minifiers
         run: |
