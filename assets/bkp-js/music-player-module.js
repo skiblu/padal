@@ -219,6 +219,7 @@ class MusicPlayer {
      /* removed separate cassette-label; track title/sub now in .mp-track-center (above) */
      .controls-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:space-between; }
      .mp-btn { display:inline-flex; align-items:center; justify-content:center; background: #fff; border: none; padding:6px; border-radius:6px; box-shadow: 0 2px 4px rgba(0,0,0,0.12); cursor:pointer; }
+     .mp-btn:disabled { opacity: 0.4; cursor: not-allowed; }
      .mp-btn img { display:block; width:18px; height:18px; filter: none; }
      .mp-mode { position:relative; display:flex; align-items:center; gap:6px; }
      .mp-mode-current { display:inline-flex; align-items:center; gap:8px; background:transparent; border:1px solid rgba(0,0,0,0.06); padding:6px 8px; border-radius:6px; }
@@ -563,6 +564,27 @@ class MusicPlayer {
       } else {
         this.playlistContainer.style.display = 'none';
       }
+    }
+
+    // disable/enable next/prev buttons based on mode
+    // cassette (single) mode: disable next, prev, and playlist toggle
+    // radio mode: disable next and prev
+    // playlist mode: enable all
+    if (this.mode === 'single') {
+      // cassette mode: disable next, prev, playlist toggle
+      if (this.nextBtn) { this.nextBtn.disabled = true; this.nextBtn.style.opacity = '0.4'; this.nextBtn.style.cursor = 'not-allowed'; }
+      if (this.prevBtn) { this.prevBtn.disabled = true; this.prevBtn.style.opacity = '0.4'; this.prevBtn.style.cursor = 'not-allowed'; }
+      if (this.playlistToggle) { this.playlistToggle.disabled = true; this.playlistToggle.style.opacity = '0.4'; this.playlistToggle.style.cursor = 'not-allowed'; }
+    } else if (this.mode === 'radio') {
+      // radio mode: disable next and prev only
+      if (this.nextBtn) { this.nextBtn.disabled = true; this.nextBtn.style.opacity = '0.4'; this.nextBtn.style.cursor = 'not-allowed'; }
+      if (this.prevBtn) { this.prevBtn.disabled = true; this.prevBtn.style.opacity = '0.4'; this.prevBtn.style.cursor = 'not-allowed'; }
+      if (this.playlistToggle) { this.playlistToggle.disabled = false; this.playlistToggle.style.opacity = ''; this.playlistToggle.style.cursor = ''; }
+    } else {
+      // playlist mode: enable all buttons
+      if (this.nextBtn) { this.nextBtn.disabled = false; this.nextBtn.style.opacity = ''; this.nextBtn.style.cursor = ''; }
+      if (this.prevBtn) { this.prevBtn.disabled = false; this.prevBtn.style.opacity = ''; this.prevBtn.style.cursor = ''; }
+      if (this.playlistToggle) { this.playlistToggle.disabled = false; this.playlistToggle.style.opacity = ''; this.playlistToggle.style.cursor = ''; }
     }
 
     // show player-level LIVE badge whenever in radio mode (independent of play state)
