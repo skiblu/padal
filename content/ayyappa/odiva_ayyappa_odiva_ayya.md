@@ -2,6 +2,9 @@
 section: Ayyappa
 nav_order: 50
 title: Odiva Ayyappa Odiva Ayya
+youtube_id: 1Xtx8wd282g
+audio_id: A39fhj3bd7Hk
+audio_length: 348
 lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Odiva, Ayyappa, Odiva, Ayya
 lyrics_ta: ஓடிவா, ஐயப்பா, ஓடிவா, ஐயா, பஜனை, கூட்டத்துக்கு
 ---

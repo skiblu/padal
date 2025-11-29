@@ -3,6 +3,8 @@ section: Ayyappa
 nav_order: 50
 title: Vanpuli Vagananae
 youtube_id: hZr7aJRlO4c
+audio_id: y38Fh30ajM
+audio_length: 236
 lyrics_en: Ayyappa, Tamil, Vanpuli, Vagananae, Panthala, Balaganae
 lyrics_ta: ஐயப்பா, தமிழ், வன்புலி, வாகனனே, பந்தல, பாலகனே
 ---
