@@ -2,65 +2,56 @@
 section: Hanuman
 nav_order: 50
 title:  Anjaneya Veera
-lyrics_en: Hanuman, Tamil, Song, Lyrics, Anjaneya, Veera
-lyrics_ta: ஹனுமான், தமிழ், பாடல், பாடல்கள், அஞ்சநேய, வீரா
+youtube_id: YmXlvj-vqKM
+audio_id: Uh3h3B39dsb
+audio_length: 241
+lyrics_en: Hanuman, Tamil, Song, Lyrics, Anjaneya, Veera, Hanumantha, Soora
+lyrics_ta: ஹனுமான், தமிழ், பாடல், பாடல்கள், அஞ்சநேய, வீரா, ஹனுமந்த, சூரா
 ---
 
 {% capture text %}
-ஆஞ்சநேய வீரா. அனுமந்த சூரா..\
-ஆஞ்சநேய வீரா. அனுமந்த சூரா..
-
-வாயு குமாரா வானர வீரா.\
-வாயு குமாரா வானர வீரா.
+ஆஞ்சநேய வீரா. அனுமந்த சூரா..(2)\
+வாயு குமாரா வானர வீரா.(2)
 
 ஸ்ரீ ராம் ஜெய ராம் ஜெய் ஜெய் ராம்\
-சீதா ராம் ராதே ஷியாம்.\
-ஸ்ரீ ராம் ஜெய ராம் ஜெய் ஜெய் ராம்\
-சீதா ராம் ராதே ஷியாம்.
+சீதா ராம் ஜெய ராதே ஷியாம்.(2)
 
-ராம லக்ஷ்மண ஜானகி ஜெய் போலோ அனுமானுக்கி\
-ராம லக்ஷ்மண ஜானகி ஜெய் போலோ அனுமானுக்கி
+### Long version - continue below
+ராம லக்ஷ்மண ஜானகி. \
+ஜெய் போலோ அனுமானுக்கி(2)
 
-ஆஞ்சநேய வீரா அனுமந்த சூரா\
-ஆஞ்சநேய வீரா அனுமந்த சூரா
-
-வாயு குமாரா வானர வீரா\
-வாயு குமாரா வானர வீரா
+ஆஞ்சநேய வீரா. அனுமந்த சூரா..(2)\
+வாயு குமாரா வானர வீரா.(2)
 
 ஸ்ரீ ராம் ஜெய ராம் ஜெய் ஜெய் ராம்\
-சீதா ராம் ராதே ஷியாம்
+சீதா ராம் ஜெய ராதே ஷியாம்.(2)
 
-ராம லக்ஷ்மண ஜானகி ஜெய் போலோ அனுமானுக்கி\
-ராம லக்ஷ்மண ஜானகி ஜெய் போலோ அனுமானுக்கி
+ராம லக்ஷ்மண ஜானகி. \
+ஜெய் போலோ அனுமானுக்கி(2)
+
 {% endcapture %}
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-aanjaneya veeraa. anumandhaa sooraa..\
-aanjaneya veeraa. anumandhaa sooraa..
+Anjaneya Veera. Anumantha Soora..(2)\
+Vayu Kumara Vaanara Veera..(2)
 
-vaayuu kumaaraa vaanara veeraa.\
-vaayuu kumaaraa vaanara veeraa.
+Sri Rama Jaya Rama Jaya Jaya Rama\
+Seetha Rama Jaya Radhe Shyam..(2)
 
-sree raam jeya raam jey jey raam\
-seedhaa raam raadhe shiyaam.\
-sree raam jeya raam jey jey raam\
-seedhaa raam raadhe shiyaam.
+### Long version - continue below
+Rama Lakshmana Janaki. \
+Jaya Polo Anumanukki(2)
 
-raama lakshmann jaanakki jey bolo anumaanukki\
-raama lakshmann jaanakki jey bolo anumaanukki
+Anjaneya Veera. Anumantha Soora..(2)\
+Vayu Kumara Vaanara Veera..(2)
 
-aanjaneya veeraa anumandhaa sooraa\
-aanjaneya veeraa anumandhaa sooraa
+Sri Rama Jaya Rama Jaya Jaya Rama\
+Seetha Rama Jaya Radhe Shyam..(2)
 
-vaayuu kumaaraa vaanara veeraa\
-vaayuu kumaaraa vaanara veeraa
+Rama Lakshmana Janaki. \
+Jaya Polo Anumanukki(2)
 
-sree raam jeya raam jey jey raam\
-seedhaa raam raadhe shiyaam
-
-raama lakshmann jaanakki jey bolo anumaanukki\
-raama lakshmann jaanakki jey bolo anumaanukki
 {% endcapture %}
 {% include lang-filter.html lang="en" text=text_en %}
 

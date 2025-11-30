@@ -1,9 +1,9 @@
 ---
 section: Hanuman
 nav_order: 50
-title:  Hanumantha Hanumantha
-lyrics_en: Hanuman, Hanumantha, Hanumantha
-lyrics_ta: ஹனுமான், ஹனுமந்தா, ஹனுமந்தா
+title:  _Hanumantha Hanumantha_
+lyrics_en: Hanuman, Hanumantha, Hanumantha, Anjaneya, Maintha
+lyrics_ta: ஹனுமான், ஹனுமந்தா, ஹனுமந்தா, அஞ்சநேய, மைந்தா
 ---
 
 {% capture text %}
@@ -11,11 +11,6 @@ lyrics_ta: ஹனுமான், ஹனுமந்தா, ஹனுமந்�
 அஞ்சனை மைந்தா அனுமந்தா!\
 அனுமந்தா அனுமந்தா\
 ஆஞ்ச நேயா அனுமந்தா!
-
-ஆஞ்ச நேயா அஞ்சனை மைந்தா\
-அஞ்சாத வீரா அனுமந்தா!\
-துஞ்சாமல் அனுதினம் கண்போல ராமரை\
-நெஞ்சார போற்றிடும் அனுமந்தா!
 
 கதிரவன் தன்னை பழமென்று எண்ணி\
 கைகளில் பிடித்தாய் அனுமந்தா!\
@@ -44,11 +39,6 @@ anumandhaa anumandhaa\
 anjchanai maindhaa anumandhaa!\
 anumandhaa anumandhaa\
 aanjcha naeyaa anumandhaa!
-
-aanjcha naeyaa anjchanai maindhaa\
-anjchaadha veeraa anumandhaa!\
-thunjchaamal anudhinum kannbola raamarai\
-nenjchaar poarridum anumandhaa!
 
 kadhiravan thannai pazhamendru enni\
 kaikalil pidiththaai anumandhaa!\
