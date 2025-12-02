@@ -25,8 +25,8 @@ lyrics_ta: ஐயப்பா, யாத்திரையும், யாத�
 சபரிமலை யாத்திரைக்கு வாரோம் வாரோம்\
 சத்தியத்தின் கோட்டைக்குள்ள வாரோம் வாரோம்
 
-சாமியப்பா `சரணமப்பா ஐயப்பா`\
-சரணமப்பா `சாமியப்பா ஐயப்பா`
+சாமியப்பா.. `சரணமப்பா ஐயப்பா`\
+சரணமப்பா.. `சாமியப்பா ஐயப்பா`
 
 யாத்திரையும் யாத்திரை சபரிமலை யாத்திரை\
 சரண மழை தூவும் யாத்திரை\
@@ -48,8 +48,8 @@ lyrics_ta: ஐயப்பா, யாத்திரையும், யாத�
 எருமேலி வாவர் கண்டு வாரோம் வாரோம்\
 எங்கே உந்தன் தோழன் என்று கேட்டு வாரோம்
 
-சாமியப்பா `சரணமப்பா ஐயப்பா`\
-சரணமப்பா `சாமியப்பா ஐயப்பா`
+சாமியப்பா.. `சரணமப்பா ஐயப்பா`\
+சரணமப்பா.. `சாமியப்பா ஐயப்பா`
 
 யாத்திரையும் யாத்திரை சபரிமலை யாத்திரை\
 சரண மழை தூவும் யாத்திரை\
@@ -79,8 +79,8 @@ saththiyaththin koattaikkulla vaarom vaarom
 sabbarimalai yaathiraikkku vaarom vaarom\
 saththiyaththin koattaikkulla vaarom vaarom
 
-saamiyappaa `saranamappaa ayyappaa`\
-saranamappaa `saamiyappaa ayyappaa`
+saamiyappaa.. `saranamappaa ayyappaa`\
+saranamappaa.. `saamiyappaa ayyappaa`
 
 yaathiraiyum yaathirai sabbarimalai yaathirai\
 sarana mazhai thoovum yaathirai\
@@ -102,8 +102,8 @@ engae undhan thoazhan endru keettu vaarom
 erumaeli vaavar kanndu vaarom vaarom\
 engae undhan thoazhan endru keettu vaarom
 
-saamiyappaa `saranamappaa ayyappaa`\
-saranamappaa `saamiyappaa ayyappaa`
+saamiyappaa.. `saranamappaa ayyappaa`\
+saranamappaa.. `saamiyappaa ayyappaa`
 
 yaathiraiyum yaathirai sabbarimalai yaathirai\
 sarana mazhai thoovum yaathirai\
