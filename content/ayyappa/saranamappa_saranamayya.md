@@ -33,11 +33,6 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்
 காத்தருள வேண்டுகிறேன் மெய்யனே\
 (`சரணமப்பா..`)
 
-பாவனமாய் பம்பா தன்னில் பாலகனே உன்னைக் கண்டு\
-பாட்டுப் பாட பாவ வினை போகுதே\
-பக்தியோடு கை உனையே கூப்புதே\
-(`சரணமப்பா..`)
-
 ஆறு வாரம் நோன்பிருந்து ஆறு மூன்று படியேறி\
 ஆரவாரம் கூட்டத்துக்கு நடுவிலே\
 ஆனந்தமாய் தரிசனமும் காண்பேனே\
@@ -73,11 +68,6 @@ paeraaanandham paeraaanandham swaamiyae…\
 irumudiyum thaan gikkonndu peruvazhi yil nadakkkaiyilee\
 karimalai yil kadharugiraen aiyyanae\
 kaaththarul vaenndugireaen meyyanae\
-(`saranamappa..`)
-
-paavanamaai bambaa thannnil paalakanae unnnaik kanndu\
-paattup paada paava vinai podhudhae\
-bakthiyoadu kai unaiyae kouppudhae\
 (`saranamappa..`)
 
 aaru vaaram nonbirundhu aaru moondru padiiyaeari\
