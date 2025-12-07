@@ -8,9 +8,7 @@ title: Dharisanam Kanden Paravasam
 lyrics_en: Ayyappa, Dharisanam, Kanden, Paravasam, Konden, Ariharan, Maindhan, Sabarimalai
 lyrics_ta: தரிசனம், கண்டேன், பரவசம், கொண்டேன், அரிஹரன், மைந்தன், சபரிமலை
 ---
-
-
-
+{% capture text %}
 தரிசனம் கண்டேன் பரவசம் கொண்டேன்
 
 அரிஹரன் மைந்தனை சபரிமலை தன்னில் (தரிசனம்)
@@ -24,3 +22,22 @@ lyrics_ta: தரிசனம், கண்டேன், பரவசம், க
 தையினில் ஜேததியாய் திகழ்ந்திடும் நாதனை (தரிசனம்)
 
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Dharisanam kanden paravasam konden
+
+Ariharan maindhanai Sabarimalai thannil (Dharisanam)
+
+Dharmathai kaakkave dharanil piranthavanai aa...aa...\
+Karmavinaith theerkum karunaili sirandhavanai\
+Vaithaallum avar vaazhavazhi kaattum mannavan (Dharisanam)\
+Vaayaar vaazhthi ninraal vandarul seipavan
+
+Meyyappan Ayyappan menmai tharum paadal\
+Thaiyinil jaethathiyaai thigazhndidum naathanai (Dharisanam)
+
+`Swamiye... Saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}

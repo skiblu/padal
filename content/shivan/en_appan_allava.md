@@ -3,7 +3,8 @@ section: Shivan
 nav_order: 50
 youtube_id: fRh3wIagoGw
 title: En appan allava
-lyrics_en: Shivan, En, appan, allava, என்னப்பன், அல்லவா
+lyrics_en: Shivan, En, appan, allava
+lyrics_ta: சிவன், என், அப்பன், அல்லவா
 ---
 
 {% capture text %}

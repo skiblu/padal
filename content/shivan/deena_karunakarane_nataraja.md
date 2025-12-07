@@ -3,7 +3,8 @@ section: Shivan
 nav_order: 50
 title: Deena Karunakarane Nataraja
 youtube_id: 1eXcYjEAfoc
-lyrics_en: Shivan, Nama, Shivaya, Deena, Karunakarane, Nataraja, Tamil, Devotional, தீனகருணகரணே, நட்டராஜா
+lyrics_en: Shivan, Nama, Shivaya, Deena, Karunakarane, Nataraja, Tamil, Devotional
+lyrics_ta: சிவன், நம சிவாய, தீன, கருணாகரனே, நடராஜா, தமிழ், பக்தி
 ---
 
 {% capture text %}

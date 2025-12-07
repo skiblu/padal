@@ -9,7 +9,7 @@ lyrics_en: Ayyappa, Ellorum, Sernthu, Sollungo, Ayyanin, Naamathai, Ayyappan, Na
 lyrics_ta: சுவாமியே, எல்லோரும், சேர்ந்து, சொல்லுங்கோ, ஐயனின், நாமத்தை, அய்யப்பன், நாமத்தை, சரணம்
 ---
 
-
+{% capture text %}
 சுவாமியே .. `சரணம் ஐய்யப்போ`
 
 `எல்லோரும் சேர்ந்து சொல்லுங்கோ...[2]`\
@@ -31,5 +31,32 @@ lyrics_ta: சுவாமியே, எல்லோரும், சேர்�
 
 `எல்லோரும் சேர்ந்து..`
 
-
 `சுவாமியே... சரணம் ஐயப்பா!`
+{% endcapture %}
+{% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+Swamiye .. `Saranam Ayyappo`
+
+`Ellorum sernthu sollungo...[2]`\
+`Ayyanin naamathai Ayyappan naamathai[2]`\
+`Ellorum sernthu sollungo...[2]`\
+`Saranam Ayyappa Saami saranam Ayyappa[3]`
+
+Muththumani pavala nagai punsirippai paarungko[2]\
+Maadhavanai meyyappanai manammagizhndhu paadungko[2]\
+Kuzhandhai ullam kondavanai kodi makkal paadungko[2]\
+Azhagumalai odivandhu abishegam seiyungko[2]
+
+`Ellorum sernthu..`
+
+Kettadhellaam koduppavanai keerthiyudhan paadungko[2]\
+Ninaithadhellam mudippavanai bakthiyudhan naadungko[2]\
+Naattamudan pathinettu padiyerpi koodungko[2]\
+Pandhala kumaranai panivudhan paadungko[2]
+
+`Ellorum sernthu..`
+
+`Swamiye... saranam Ayyappa!`
+{% endcapture %}
+{% include lang-filter.html lang="en" text=text_en %}
