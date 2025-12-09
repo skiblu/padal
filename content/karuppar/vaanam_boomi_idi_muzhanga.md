@@ -2,8 +2,8 @@
 section: Karuppar
 nav_order: 50
 youtube_id: 
-audio_id: 
-audio_length: 
+audio_id: I29chY292bdD
+audio_length: 286
 title: Vaanam Boomi Idi Muzhanga
 lyrics_en: Vaanam, Boomi, Idi, Muzhanga
 lyrics_ta: வானம், பூமி, இடி, முழங்க
