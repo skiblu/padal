@@ -61,6 +61,9 @@ class MusicPlayer {
     // apply radioStart only once on the next radio load (initial load)
     this._radioStartPending = this.isLive && !!this.options.radioStart;
 
+    // flag to track if audio has been loaded yet (lazy load on first play)
+    this._audioLoaded = false;
+
     // build/attach DOM (will preserve your design by recreating same structure)
     this._ensureMarkup();
     this._bindElements();
@@ -77,8 +80,8 @@ class MusicPlayer {
       this.playlist = this.options.playlist.slice();
     }
 
-    // load initial track
-    if (this.playlist.length) this._loadTrack(this.currentIndex, false);
+    // prepare track info display but DO NOT load audio yet
+    if (this.playlist.length) this._prepareTrack(this.currentIndex);
   }
 
   // ---------- DOM building / styling ----------
@@ -408,6 +411,22 @@ class MusicPlayer {
   }
 
   // ---------- Loading / playback ----------
+  // prepare track display without loading audio
+  _prepareTrack(index) {
+    if (!this.playlist[index]) return;
+    this.currentIndex = index;
+    const track = this.playlist[index];
+    const titleEl = this.wrapper.querySelector('.track-title');
+    const titleInner = this.wrapper.querySelector('.track-title .track-title-inner');
+    const subEl = this.wrapper.querySelector('.track-sub');
+    if (titleInner) titleInner.textContent = track.title || 'Untitled';
+    if (subEl) subEl.textContent = track.sub || '';
+    this._highlightActive();
+    this._scrollActiveIntoView();
+    // enable marquee if title overflows
+    this._updateTitleMarquee();
+  }
+
   _loadTrack(index, preservePlay = false) {
     if (!this.playlist[index]) return;
     // allow end handling for the new track
@@ -428,6 +447,7 @@ class MusicPlayer {
     }
 
     this.audio.load();
+    this._audioLoaded = true;
     if (preservePlay) this.audio.play().catch(()=>{});
     this._highlightActive();
     this._scrollActiveIntoView();
@@ -506,7 +526,15 @@ class MusicPlayer {
     this._updatePlayPauseUI(false);
   }
 
-  play() { this.audio.play(); this._updatePlayPauseUI(true); this._startReels(); }
+  play() { 
+    // lazy load: only load audio on first play attempt
+    if (!this._audioLoaded) {
+      this._loadTrack(this.currentIndex, false);
+    }
+    this.audio.play(); 
+    this._updatePlayPauseUI(true); 
+    this._startReels(); 
+  }
   pause() { this.audio.pause(); this._updatePlayPauseUI(false); this._stopReels(); }
 
   select(index) { if (index >= 0 && index < this.playlist.length) this._loadTrack(index, false); }
@@ -544,7 +572,10 @@ class MusicPlayer {
     if (this.mode === 'radio' && !!this.options.radioStart) {
       this._radioStartPending = true;
     }
-    if (this.playlist.length) this._loadTrack(this.currentIndex, false);
+    // reset audio loaded flag when playlist changes
+    this._audioLoaded = false;
+    // only prepare track display, don't load audio yet
+    if (this.playlist.length) this._prepareTrack(this.currentIndex);
   }
 
   setMode(m) {
@@ -607,10 +638,10 @@ class MusicPlayer {
       this.seekRange.disabled = false; this.seekRange.style.opacity = '';
     }
 
-    // if radio, ensure current track loaded and start position applied
+    // if radio, prepare track display but don't load audio yet (lazy load on play)
     if (this.isLive && this.playlist.length) {
-      this._loadTrack(this.currentIndex, false);
-      if (this.options.radioStart) try { this.audio.currentTime = this.options.radioStart; } catch(e){}
+      this._audioLoaded = false;
+      this._prepareTrack(this.currentIndex);
     }
   }
 
@@ -642,7 +673,16 @@ class MusicPlayer {
     this.audio.addEventListener('pause', () => this._updatePlayPauseUI(false));
 
     // play/pause UI
-    this.playBtn.addEventListener('click', () => { this._endedHandled = false; this.audio.play(); this._updatePlayPauseUI(true); this._startReels(); });
+    this.playBtn.addEventListener('click', () => { 
+      this._endedHandled = false; 
+      // lazy load audio on first play
+      if (!this._audioLoaded) {
+        this._loadTrack(this.currentIndex, false);
+      }
+      this.audio.play(); 
+      this._updatePlayPauseUI(true); 
+      this._startReels(); 
+    });
     this.pauseBtn.addEventListener('click', () => { this.audio.pause(); this._updatePlayPauseUI(false); this._stopReels(); });
 
     // seek
