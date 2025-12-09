@@ -1,6 +1,6 @@
 ---
 section: Ayyappa
-nav_order: 92
+nav_order: 91
 audio_id: v6zdERT7y5ej
 audio_length: 352
 title: Ayyappan Aarti
