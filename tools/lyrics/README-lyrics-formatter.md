@@ -36,7 +36,7 @@ Create a plain text file with just the lyrics:
 
 Then run:
 ```bash
-python3 format_lyrics.py --file my_lyrics.txt --lang ta --section Shivan
+python3 format_lyrics.py --lang ta --section Shivan --file my_lyrics.txt 
 ```
 
 This will **overwrite** `my_lyrics.txt` with complete formatted markdown.
