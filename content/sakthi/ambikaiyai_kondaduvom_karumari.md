@@ -3,7 +3,8 @@ section: Sakthi
 nav_order: 50
 title: Ambikaiyai Kondaduvom Karumari
 youtube_id: QD81potaeqE
-lyrics_en: Amman, Sakthi, Durga, Ambikaiyai, Kondaduvom, Karumari, அம்பிகையே, கொண்டாடுவோம், கருமாரி
+lyrics_en: Amman, Sakthi, Durga, Ambikaiyai, Kondaduvom, Karumari, Pongal, Mariyamma
+lyrics_ta: அம்பிகையே, கருமாரி, கொண்டாடுவோம், ஆலய, திருநீர், மாங்காட்டு, நீலியம்மா, சூலியம்மா, நல்லூர், மாரியம்மா, காளியம்மா, தேவியம்மா
 ---
 
 {% capture text %}
