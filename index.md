@@ -82,10 +82,3 @@ Whether you wish to:
 
 **Bhakti Padal will stay with you as a companion in devotion.**
 
-
-
-### Online Devotional Radio
-
-Listen to nonstop Tamil devotional music here:
-
-{% include player-radio.html parent_name="" %}
