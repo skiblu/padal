@@ -16,7 +16,7 @@ lyrics_ta: ஓம், தில்லை, நடராஜனே, சிதம்
 `உன் நடனத்தை காணவே பாடி வந்தேன் தேவனே, நலம் பெற அருளே வா…`
 
 சாமி பிட்..டுக்கு மண் சுமந்த ஈசனே\
-கையில் பிரம் படி பட்ட நேசனே\
+கையில் பிரம் படி பட்ட பரமேஷனே\
 சாமி கட்டு கட்டாய் விறகினை\
 கடைத் தெருவில் விற்றுவந்த\
 கயிலை நாதனே வா….\
@@ -48,7 +48,7 @@ lyrics_ta: ஓம், தில்லை, நடராஜனே, சிதம்
 `uṉ Nataṉattai Kaanave Paati Vanteṉ Tevaṉe, Nalam Pera Arule Vaa…`
 
 Caami Pit..tukku Man Cumanta Eecaṉe\
-Kaiyil Piram Pati Patta Necaṉe\
+Kaiyil Piram Pati Patta Paramecaṉe\
 Caami Kattu Kattaay Virakiṉai\
 Katait Teruvil Virruvanta\
 Kayilai Naataṉe Vaa….\
