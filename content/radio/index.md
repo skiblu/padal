@@ -23,6 +23,9 @@ lyrics_ta: ரேடியோ, அம்மன், சக்தி, விஷ்
 ### Ayyappa Radio
 {% include player-radio.html parent_name="Ayyappa" %}
 
+### Karuppar Radio
+{% include player-radio.html parent_name="Karuppar" %}
+
 
 
 
