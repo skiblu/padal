@@ -1,7 +1,7 @@
 ---
 section: Shivan
 nav_order: 1
-title: Om Sivaaya Namaha
+title: Shivan Ashtothram
 lyrics_en: Ashtothram , Sivaaya, Namaha
 lyrics_ta: அஷ்டோத்தரம் , சிவாய, நமஹ
 ---
