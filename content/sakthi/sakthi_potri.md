@@ -123,7 +123,7 @@ lyrics_ta: ஓம், சக்தியே, போற்றி
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-Om Om saktiye Pottri\
+Om saktiye Pottri\
 Om Ongkaara Aaṉantiye Pottri\
 Om Ulaka Naayakiye Pottri\
 Om Uravukkum Uravaaṉavale Pottri\
@@ -143,7 +143,7 @@ Om Paamalar Uvantaay Pottri\
 Om Paampuru Aaṉaay Pottri\
 Om Citturu Amaintaay Pottri\
 Om Cemporul Neeye Pottri\
-Om Caktiye Taaye Pottri\
+Om Sakthiye Taaye Pottri\
 Om Caṉmaarkka Neriye Pottri\
 Om Camatarma Virunte Pottri\
 Om Ongkaara Uruve Pottri\
@@ -233,8 +233,8 @@ Om Taaymaiyiṉ Vilakkame Pottri\
 Om Aaraataara Nilaiye Pottri
 
 
-Om Cakti Om Cakti Om Cakti Om\
-Om Cakti Om Cakti Om Cakti Om\
+Om Sakthi Om Sakthi Om Sakthi Om\
+Om Sakthi Om Sakthi Om Sakthi Om\
 Om Om Om
 {% endcapture %}
 {% include lang-filter.html lang="en" text=text_en %}
