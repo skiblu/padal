@@ -224,6 +224,8 @@ class MusicPlayer {
      .mp-btn { display:inline-flex; align-items:center; justify-content:center; background: #fff; border: none; padding:6px; border-radius:6px; box-shadow: 0 2px 4px rgba(0,0,0,0.12); cursor:pointer; }
      .mp-btn:disabled { opacity: 0.4; cursor: not-allowed; }
      .mp-btn img { display:block; width:18px; height:18px; filter: none; }
+     .mp-play, .mp-pause { padding: 10px 16px; border-radius: 8px; }
+     .mp-play img, .mp-pause img { width: 24px; height: 24px; }
      .mp-mode { position:relative; display:flex; align-items:center; gap:6px; }
      .mp-mode-current { display:inline-flex; align-items:center; gap:8px; background:transparent; border:1px solid rgba(0,0,0,0.06); padding:6px 8px; border-radius:6px; }
      .mp-seek { flex:1; min-width:160px; margin:0 8px; }
