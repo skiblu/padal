@@ -1,8 +1,12 @@
 ---
 section: Murugan
 nav_order: 50
-title: Muruga Muruga Arogara
-lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Muruga, Muruga, Arogara, முருகா, முருகா, அரோகரா
+youtube_id: B2BKAQzME5A
+audio_id: Jw9chY298Db
+audio_length: 243
+title: Muruga Muruga Aragarogara
+lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Muruga, Muruga, Aragarogara
+lyrics_ta: முருகன், பாடல், தமிழ், வரிகள், பாடல், முருகா, முருகா, அரகரோகரா
 ---
 
 {% capture text %}
