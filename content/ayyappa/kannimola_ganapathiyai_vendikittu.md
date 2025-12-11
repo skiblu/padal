@@ -39,8 +39,8 @@ lyrics_ta: கன்னிமூல, கணபதியை, வேண்டி�
 `சாமியே சரணம்.... ஐயப்பா சரணம்... `\
 `சாமியே சரணம்... சரணம் அப்பா`   
 
-ஸ்வாமி யே `அய்யப்போ`\
-அய்யப்போ `சுவாமி யே `
+ஸ்வாமி யே.. `அய்யப்போ`\
+அய்யப்போ.. `சுவாமி யே `\
 ஸ்வாமி யே... `ஸ்வாமி சரணம் அய்யப்போ`
 
 `சுவாமியே... சரணம் ஐயப்பா!`
@@ -80,8 +80,8 @@ manikandaa un mahimai arindhomayya[2]
 `saamiye saranam.... ayyappa saranam... `\
 `saamiye saranam... saranam appa`
 
-swami yae `ayyappo`\
-ayyappo `suvaami yae `
+swami yae.. `ayyappo`\
+ayyappo.. `suvaami yae `\
 swami yae... swami saranam ayyappo
 
 `swaamiyae... saranam ayyappa!`
