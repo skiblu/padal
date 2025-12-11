@@ -1,9 +1,12 @@
 ---
 section: Vinayaga
 nav_order: 50
-title:  Om Ganesa Pahimam
-lyrics_en: Vinayaga, Om, Ganesa, Pahimam, devotional, chant, lyrics
-lyrics_ta: விநாயகா, ஓம், கணேசா, பாஹிமாம், பக்தி, மந்திரம், வரிகள்
+youtube_id: L9FekdPOs1M
+audio_id: WJ29dh2DH2
+audio_length: 352
+title:  Om Ganesa Pahimam - Pancharatnam
+lyrics_en: Vinayaga, Om, Ganesa, Pahimam, devotional, chant, lyrics, Pancharatnam
+lyrics_ta: விநாயகா, ஓம், கணேசா, பாஹிமாம், பக்தி, மந்திரம், வரிகள், பஞ்சரத்னம்
 ---
 
 {% capture text %}
