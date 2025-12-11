@@ -36,6 +36,13 @@ lyrics_ta: கன்னிமூல, கணபதியை, வேண்டி�
 மகர‌ ஜோதியைக் கண்டு மனமார‌ சரணம் போட்டு\
 மணிகண்டா உன் மகிமை அறிந்தோமய்யா[2]
 
+`சாமியே சரணம்.... ஐயப்பா சரணம்... `\
+`சாமியே சரணம்... சரணம் அப்பா`   
+
+ஸ்வாமி யே `அய்யப்போ`\
+அய்யப்போ `சுவாமி யே `
+ஸ்வாமி யே... `ஸ்வாமி சரணம் அய்யப்போ`
+
 `சுவாமியே... சரணம் ஐயப்பா!`
 {% endcapture %}
 {% include lang-filter.html lang="ta" text=text %}
@@ -69,6 +76,13 @@ karpoora jothidanaik kandnomayya [2]
 
 makara jothiyaik kanndu manamara saranam pottu\
 manikandaa un mahimai arindhomayya[2]
+
+`saamiye saranam.... ayyappa saranam... `\
+`saamiye saranam... saranam appa`
+
+swami yae `ayyappo`\
+ayyappo `suvaami yae `
+swami yae... swami saranam ayyappo
 
 `swaamiyae... saranam ayyappa!`
 {% endcapture %}

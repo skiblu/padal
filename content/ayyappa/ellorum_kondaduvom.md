@@ -1,7 +1,7 @@
 ---
 section: Ayyappa
 nav_order: 50
-title: Vavar Swamiya Enni
+title: Ellorum Kondaduvom - Vavar Swamya
 lyrics_en: Ayyappa, Tamil, Ayyappa, Vavar, Swamya, Enni, Ellorum Kondaduvom, Ayanin, Saranam, Solli
 lyrics_ta: அய்யப்பா, தமிழ், அய்யப்பா, வாவர், சுவாமிய, எண்ணி, எல்லோரும், கொண்டாடுவோம், ஐயனின் ,சரணம் ,சொல்லி
 ---
@@ -52,19 +52,19 @@ lyrics_ta: அய்யப்பா, தமிழ், அய்யப்பா, 
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-`Ellaarum kondaaduvom.... Ellorum kondaaduvom`\
+`Ellorum kondaaduvom.... Ellorum kondaaduvom`\
 `Aiyanin saranam solli vaabarin swamiya enni`\
 `Aiyanin saranam solli vaabarin swamiya enni`\
-`Ellaarum kondaaduvom.... Ellorum kondaaduvom`
+`Ellorum kondaaduvom.... Ellorum kondaaduvom`
 
 Kerala seemayila erumeli pattayila (2)\
 Pattaigal thulli vanthom saranakkal solli vanthom (2)\
 Indru pol endrum inge ondrāy kooduvom (2)
 
-`Ellaarum kondaaduvom.... Ellorum kondaaduvom`\
+`Ellorum kondaaduvom.... Ellorum kondaaduvom`\
 `Aiyanin saranam solli vaabarin swamiya enni`\
 `Aiyanin saranam solli vaabarin swamiya enni`\
-`Ellaarum kondaaduvom.... Ellorum kondaaduvom`
+`Ellorum kondaaduvom.... Ellorum kondaaduvom`
 
 Karuppu aadai katti, kaavi aadai katti (2)\
 Pattaigal thulli vanthom saranakkal solli vanthom (2)\
@@ -76,20 +76,20 @@ Swamiye saranam appa – Poojaiku varanam appa (2)
 Pattaigal thulli vanthom saranakkal solli vanthom (2)\
 Indru pol endrum inge ondrāy kooduvom (2)
 
-`Ellaarum kondaaduvom.... Ellorum kondaaduvom`\
+`Ellorum kondaaduvom.... Ellorum kondaaduvom`\
 `Aiyanin saranam solli vaabarin swamiya enni`\
 `Aiyanin saranam solli vaabarin swamiya enni`\
-`Ellaarum kondaaduvom.... Ellorum kondaaduvom`
+`Ellorum kondaaduvom.... Ellorum kondaaduvom`
 
 Peruvazhi thodangi vittom vavarai ninaithukittom (2)\
 Aiyana engaloda neeyum varuvāy (2)
 
 Indru pol endrum inge ondrāy kooduvom (2)
 
-`Ellaarum kondaaduvom.... Ellorum kondaaduvom`\
+`Ellorum kondaaduvom.... Ellorum kondaaduvom`\
 `Aiyanin saranam solli vaabarin swamiya enni`\
 `Aiyanin saranam solli vaabarin swamiya enni`\
-`Ellaarum kondaaduvom.... Ellorum kondaaduvom`
+`Ellorum kondaaduvom.... Ellorum kondaaduvom`
 
 `Swamiye... Saranam Ayyappa!`
 {% endcapture %}

@@ -1,13 +1,13 @@
 ---
 section: Ayyappa
 nav_order: 50
-title: Saranamappa Saranamayya
-lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Saranamappa Saranamayya
-lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்கள், பக்தி, சரணமப்பா சரணமய்யா
+title: Saranamappa Saranamappa
+lyrics_en: Ayyappa, Tamil, Song, Lyrics, Devotional, Saranamappa, Saranamappa, Saranamayya
+lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்கள், பக்தி, சரணமப்பா, சரணமப்பா, சரணமய்யா
 ---
 
 {% capture text %}
-`சரணமப்பா சரணமய்யா ஸ்வாமியே`\
+`சரணமப்பா சரணமப்பா ஸ்வாமியே`\
 `இங்கே வரணுமப்பா வரணுமைய்யா சாமியே..`(Chorus)
 
 நெற்றியிலே நீரணிந்து நீல ஆடை தாங்கயே\
@@ -44,7 +44,7 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-`saranamappa saranamayya swaamiyae`\
+`saranamappa saranamappa swaamiyae`\
 `inge varanumappa varanumaiyyaa saamiyae..`(Chorus)
 
 nettriyilee neearaninndu neela aadai thaangayae\

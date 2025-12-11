@@ -9,7 +9,7 @@ lyrics_ta: பொனல், சபரிமலை, கேட்டால், ச
 
 {% capture text %}
 `போனால் சபரிமலை கேட்டால் சரண‌ கோஷம்`\
-`கேட்டால் சரண‌ கோதி பார்க்க வேண்டும். நான்`\
+`பார்த்தால் மகர‌ ஜோதி பார்க்க வேண்டும். நான்`\
 `பார்த்தால் மகர‌ ஜோதி பார்க்க வேண்டும்`[2]
 
 மண்டல காலத்தில் மாலை அணிந்து - `சாமி சரணம் ஐயப்ப சரணம்`\
@@ -47,7 +47,7 @@ lyrics_ta: பொனல், சபரிமலை, கேட்டால், ச
 
 {% capture text_en %}
 `ponaal sabarimalai kaettal sarana kosham`\
-`kaettal sarana kodhi paarkka vaenndum. naan`\
+`paarththaal makara jothi paarkka vaenndum. naan`\
 `paarththaal makara jothi paarkka vaenndum`[2]
 
 manndala kaalathil maalai aninndu - `saami saranam ayyappa saranam`\

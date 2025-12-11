@@ -28,9 +28,7 @@ lyrics_ta: எந்த, மலை, சேவித்தாலும், தங
 கோமலாங்கன் வாழும் மலை(`Chorus - Engal`)
 
 கோடி ஜனங்கள் வருகும் மலை(`Chorus`)\
-கோடி கோடி கோடி கோடி ஜனங்கள் வருகும் மலை\
-`கோடி ஜனங்கள் வருகும் மலை`
-
+கோடி கோடி கோடி கோடி ஜனங்கள் வருகும் மலை(`Chorus`)\
 குளத்தூர் ஐயன் வாழும் மலை(`Chorus - Engal`)
 
 `எந்த மலை சேவித்தாலும்`\
@@ -83,9 +81,7 @@ Koti Cooriyaṉ Utikkum Malai(`chorus`)\
 Komalaangkaṉ Vaaḻum Malai(`chorus - Engal`)
 
 Koti Jaṉangkal Varukum Malai(`chorus`)\
-Koti Koti Koti Koti Jaṉangkal Varukum Malai\
-`koti Jaṉangkal Varukum Malai`
-
+Koti Koti Koti Koti Jaṉangkal Varukum Malai(`chorus`)\
 Kulattoor Aiyaṉ Vaaḻum Malai(`chorus - Engal`)
 
 `enta Malai sevittaalum`\

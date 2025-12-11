@@ -13,7 +13,8 @@ lyrics_ta: ஐயப்பா, தமிழ், பக்தி, ஸ்வாம
 அந்த சபரிமலை ஐயனுக்கு ஸ்வாமி சரணம்
 
 அந்த வில்லாளி வீரனுக்கு ஸ்வாமி சரணம்\
-எங்க வீர மணிக்கண்டனுக்கு ஸ்வாமி சரணம்\
+எங்க வீர மணிக்கண்டனுக்கு ஸ்வாமி சரணம்
+
 எங்கள் அஞ்சுதலைப் போக்கிடவே ஸ்வாமி சரணம்\
 அந்த ஆறுமுகச் சோதரனுக்கு ஸ்வாமி சரணம்
 
@@ -33,7 +34,8 @@ lyrics_ta: ஐயப்பா, தமிழ், பக்தி, ஸ்வாம
 ஐயா சுந்தர முகத்தழகாஸ்வாமி சரணம்
 
 பேட்டைத் துள்ளும் பேரழகே ஸ்வாமி சரணம்\
-ஐயா… பேட்டைத் துள்ளும் பேரழகே ஸ்வாமி சரணம்\
+ஐயா… பேட்டைத் துள்ளும் பேரழகே ஸ்வாமி சரணம்
+
 உன் பேரழகைக் காண வரோம் ஸ்வாமி சரணம்\
 ஐயா பெரும்பாதை தேடி வரோம் ஸ்வாமி சரணம்
 
@@ -46,13 +48,13 @@ lyrics_ta: ஐயப்பா, தமிழ், பக்தி, ஸ்வாம
 ஐயா எங்கும் நிறைந்தவனே ஸ்வாமி சரணம்\
 அய்யப்பா ஏழைகிறங்கும் தெய்வமே நீ ஸ்வாமி சரணம்
 
-குத்துக்காலு இட்டவனே ஸ்வாமி சரணம்
+குத்துக்காலு இட்டவனே ஸ்வாமி சரணம்\
 அய்யா குரிக்காட்டும் தெய்வமே நீ ஸ்வாமி சரணம்
 
-ஸ்வாமி சரணம் ஐயப்பா ஸ்வாமி சரணம்
+ஸ்வாமி சரணம் ஐயப்பா ஸ்வாமி சரணம்\
 அந்த சபரிமலை சன்னதிக்கு ஸ்வாமி சரணம்
 
-ஸ்வாமி சரணம் ஐயப்பா ஸ்வாமி சரணம்
+ஸ்வாமி சரணம் ஐயப்பா ஸ்வாமி சரணம்\
 அந்த சபரிமலை ஐயனுக்கு ஸ்வாமி சரணம்
 
 அந்த சபரிமலை ஐயனுக்கு ஸ்வாமி சரணம் (மூன்று முறை வேகமாக)
@@ -69,7 +71,8 @@ Swami Saranam Ayyappa Swami Saranam\
 Andha Sabarimala Ayyanukku Swami Saranam
 
 Andha Villali Veeranukku Swami Saranam\
-Enga Veera Manikandanukku Swami Saranam\
+Enga Veera Manikandanukku Swami Saranam
+
 Engal Anjudhalai Pokkidaave Swami Saranam\
 Andha Aarumugach Sodharanukku Swami Saranam
 
@@ -89,7 +92,8 @@ Aiya Solli Varam Koduppa Swami Saranam\
 Aiya Sundara Mugathazhagaaswami Saranam
 
 Pettai Thullum Perazhagae Swami Saranam\
-Aiya… Pettai Thullum Perazhagae Swami Saranam\
+Aiya… Pettai Thullum Perazhagae Swami Saranam
+
 Un Perazhagaik Kaana Varom Swami Saranam\
 Aiya Perumpaathai Thedi Varom Swami Saranam
 
