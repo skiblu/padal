@@ -49,6 +49,11 @@ lyrics_ta: எந்த, மலை, சேவித்தாலும், தங
 `எங்கேயும் நான் கண்டதில்லையே ஐயப்பா`\
 `எங்கேயும் நான் கண்டதில்லையே…`
 
+`எந்த மலை சேவித்தாலும்`\
+`சபரிமலை வைபோகம்`\
+`எங்கேயும் நான் கண்டதில்லையே ஐயப்பா`\
+`எங்கேயும் நான் கண்டதில்லையே` 
+
 சபரிநாயகா சரணம் சரணம் என்று உருகி ஒருமுறை பாடினால்(4)\
 சகல வினைகளும், சகல குறைகளும், சகல பிணிகளும் அகலுமாம்(4)
 
@@ -101,6 +106,11 @@ Pampaa Paalaṉ Vaaḻum Malai(`chorus - Engal`)
 `tangkamalai Vaipokam`\
 `engkeyum Naaṉ Kantatillaiye Aiyappaa`\
 `engkeyum Naaṉ Kantatillaiye…`
+
+`enta Malai sevittaalum`\
+`sabarimalai Vaipokam`\
+`engkeyum Naaṉ Kantatillaiye Aiyappaa`\
+`engkeyum Naaṉ Kantatillaiye`
 
 Caparinaayakaa saranam saranam Eṉru Uruki Orumurai Paatiṉaal(4)\
 Cakala Viṉaikalum, Cakala Kuraikalum, Cakala Pinikalum Akalumaam(4)
