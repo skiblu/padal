@@ -1,8 +1,11 @@
 ---
 section: Ayyappa
 nav_order: 50
-title: Kannimoola Ganapathiyai
-lyrics_en: Ayyappa, Kannimoola, Ganapathiyai
+title: Kannimoola Ganapathiyai Vendikittu
+youtube_id: RpKCR5kVaEk
+audio_id: C93hfWL3jF7
+audio_length: 277
+lyrics_en: Ayyappa, Kannimoola, Ganapathiyai, Vendikittu
 lyrics_ta: கன்னிமூல, கணபதியை, வேண்டிக்கிட்டு
 ---
 

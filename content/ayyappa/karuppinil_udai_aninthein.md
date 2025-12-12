@@ -2,7 +2,10 @@
 section: Ayyappa
 nav_order: 50
 title: Karuppinil Udai Aninthein
-lyrics_en: Ayyappa, Devotional, Karuppinil, Udai, Aninthein
+youtube_id: JMz9NE4Au7I
+audio_id: Nc038H30CH
+audio_length: 339
+lyrics_en: Ayyappa, Devotional, Karuppinil, Udai, Aninthein, Kazhuthinil, Mani, Aninthein
 lyrics_ta: கருப்பினில், உடை, அணிந்தேன், கழுத்தினில், மணி, அணிந்தேன்
 ---
 {% capture text %}

@@ -2,6 +2,9 @@
 section: Ayyappa
 nav_order: 50
 title: Aanai Alayura Neeli Malai
+youtube_id: qnhPKb-O5dI
+audio_id: 3JZD3ELwOQ
+audio_length: 266
 lyrics_en: Ayyappa, Aanai, Alayura, Neeli Malai, Saamimalai
 lyrics_ta: சுவாமியே, ஆனை, அலையுற, நீலிமலை, சாமிமலை
 ---

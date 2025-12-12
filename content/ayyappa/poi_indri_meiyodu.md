@@ -1,7 +1,10 @@
 ---
 section: Ayyappa
 nav_order: 50
-title: Poi Indri Meiyodu
+title: Poi Indri Meiyodu Ney Kondu
+youtube_id: tgEjIgW0mPo
+audio_id: CSi39FB37fs
+audio_length: 249
 lyrics_en: Ayyappa, Poi, Indri, Meiyodu, Ney, Kondu, Ponal, Ayyanai, Nee, Kaanalam, Sabaril
 lyrics_ta: பொய, இன்றி, மெய்யோடு, நெய், கொண்டு, போனால், ஐயனை, நீ, காணலாம், சபரியில்
 ---

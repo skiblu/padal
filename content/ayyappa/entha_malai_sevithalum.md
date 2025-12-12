@@ -3,6 +3,8 @@ section: Ayyappa
 nav_order: 88
 title: Entha Malai Sevithalum
 youtube_id: OLkBZQqsYDs
+audio_id: Jq8392HD38hd
+audio_length: 381
 lyrics_en: Ayyappa, Entha, Malai, Sevithalum, Thangamalai, Sabarimalai
 lyrics_ta: எந்த, மலை, சேவித்தாலும், தங்கமலை, சபரிமலை
 ---

@@ -2,6 +2,9 @@
 section: Ayyappa
 nav_order: 50
 title: Kadu Malai Kadanthu Vanthom
+youtube_id: dAHjSY60-z0
+audio_id: W39dh3d9SNG
+audio_length: 249
 lyrics_en: Ayyappa, Kadu, Malai, Kadanthu, Vanthom
 lyrics_ta: காடு, மலை, கடந்து, வந்தோம், ஐயப்பா, சாமி, சரணம்
 ---

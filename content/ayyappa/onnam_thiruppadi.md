@@ -1,7 +1,9 @@
 ---
 section: Ayyappa
 nav_order: 89
-youtube_id: dwU-V7q2waE
+youtube_id: _84tIv0XfaM
+audio_id: U3b39WhD3b
+audio_length: 355
 title: Onnam Thiruppadi
 lyrics_en: Ayyappa, Onnam, Thiruppadi, Ayyappa
 lyrics_ta: ஒன்னம், திருப்படி, ஐயப்பா

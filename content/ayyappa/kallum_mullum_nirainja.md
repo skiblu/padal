@@ -2,8 +2,11 @@
 section: Ayyappa
 nav_order: 50
 title: Kallum Mullum Nirainja
-lyrics_en: Ayyappa, Tamil, Kallum, Mullum, Nirainja
-lyrics_ta: கல்லும், முள்ளும், நிறைந்த, சபரி, சபரிமலை
+youtube_id: oRd_eeRZ9bM
+audio_id: Kw9ch38HXjw
+audio_length: 371
+lyrics_en: Ayyappa, Tamil, Kallum, Mullum, Nirainja, kaadu, Sabari, Sabarimala
+lyrics_ta: கல்லும், முள்ளும், நிறைந்த, காடு, சபரி, சபரிமலை
 ---
 
 {% capture text %}
