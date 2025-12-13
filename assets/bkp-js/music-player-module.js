@@ -97,7 +97,13 @@ class MusicPlayer {
             <div class="reel reel-right" aria-hidden="true"></div>
             <div class="mp-track-center" aria-hidden="false">
               <div class="track-title" aria-hidden="false"><span class="track-title-inner">Untitled</span></div>
-              <div class="track-sub"></div>
+              <div class="mp-equalizer">
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+              </div>
             </div>
           </div>
 
@@ -208,8 +214,18 @@ class MusicPlayer {
        animation-iteration-count: infinite;
        animation-fill-mode: forwards;
      }
-     .track-title.marquee-active:hover .track-title-inner { animation-play-state: paused; }
-     @keyframes mpMarquee {
+     /* equalizer: animated bars below title */
+     .mp-equalizer { display:flex; align-items:flex-end; justify-content:center; gap:3px; height:20px; margin-top:8px; transform: translateY(8px); }
+     .eq-bar { width:3px; background: linear-gradient(to top, #5b4a30, #8b7a50); border-radius:2px; height:4px; transition: height 0.1s ease; }
+     .mp-equalizer.playing .eq-bar:nth-child(1) { animation: eq-bounce 0.6s ease-in-out infinite; animation-delay: 0s; }
+     .mp-equalizer.playing .eq-bar:nth-child(2) { animation: eq-bounce 0.5s ease-in-out infinite; animation-delay: 0.1s; }
+     .mp-equalizer.playing .eq-bar:nth-child(3) { animation: eq-bounce 0.7s ease-in-out infinite; animation-delay: 0.2s; }
+     .mp-equalizer.playing .eq-bar:nth-child(4) { animation: eq-bounce 0.55s ease-in-out infinite; animation-delay: 0.15s; }
+     .mp-equalizer.playing .eq-bar:nth-child(5) { animation: eq-bounce 0.65s ease-in-out infinite; animation-delay: 0.05s; }
+     @keyframes eq-bounce {
+       0%, 100% { height: 4px; }
+       50% { height: 16px; }
+     }
        0% { transform: translateX(0); }
        50% { transform: translateX(var(--mp-marquee-distance, -100px)); }
        100% { transform: translateX(0); }
@@ -280,6 +296,9 @@ class MusicPlayer {
     this.muteBtn = this.wrapper.querySelector('.mp-mute');
     this.muteBtnImg = this.muteBtn ? this.muteBtn.querySelector('img') : null;
     this.reelLeft = this.wrapper.querySelector('.reel-left');
+    
+    // equalizer element
+    this.equalizer = this.wrapper.querySelector('.mp-equalizer');
     this.reelRight = this.wrapper.querySelector('.reel-right');
     this.playlistContainer = this.wrapper.querySelector('.mp-playlist-container');
     this.playlistToggle = this.wrapper.querySelector('.mp-playlist-toggle');
@@ -407,9 +426,7 @@ class MusicPlayer {
     lis.forEach(li => li.classList.toggle('active', parseInt(li.dataset.index,10) === this.currentIndex));
   }
 
-  _scrollActiveIntoView() {
-    const active = this.playlistView.querySelector('li.active');
-    if (active) active.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  _sif (titleInner) titleInner.textContent = track.title || 'Untitled 'smooth', block: 'nearest' });
   }
 
   // ---------- Loading / playback ----------
@@ -427,9 +444,7 @@ class MusicPlayer {
     this._scrollActiveIntoView();
     // enable marquee if title overflows
     this._updateTitleMarquee();
-  }
-
-  _loadTrack(index, preservePlay = false) {
+  }if (titleInner) titleInner.textContent = track.title || 'Untitled
     if (!this.playlist[index]) return;
     // allow end handling for the new track
     this._endedHandled = false;
@@ -729,7 +744,15 @@ class MusicPlayer {
     if (!isPlaying) this._stopReels(); else this._startReels();
     this._highlightActive();
     // NOTE: LIVE badge visibility is controlled by setMode (always visible in radio mode).
-  }
+  }Control equalizer animation
+    if (this.equalizer) {
+      if (isPlaying) {
+        this.equalizer.classList.add('playing');
+      } else {
+        this.equalizer.classList.remove('playing');
+      }
+    }
+    // 
 
   _startReels(){
     if (this._reelInterval) clearInterval(this._reelInterval);
