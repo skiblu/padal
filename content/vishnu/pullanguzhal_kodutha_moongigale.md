@@ -1,11 +1,11 @@
 ---
 section: Vishnu
 nav_order: 50
-title: Pullanguzhal Kodutha Moongigale
+title: Pullanguzhal Kodutha Moongilgale
 youtube_id: m4zZYlL_UJY
 audio_id: S39fh4vD398c
 audio_length: 320
-lyrics_en: Vishnu, Krishna, Bhakti, Pullanguzhal, Kodutha, Moongigale
+lyrics_en: Vishnu, Krishna, Bhakti, Pullanguzhal, Kodutha, Moongilgale
 ---
 
 {% capture text %}
