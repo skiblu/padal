@@ -1,7 +1,7 @@
 ---
 parent_id: Radio
 nav_order: 13
-title: All Radio
+title: Radio List
 history: false
 lyrics_en: Radio, Amman, Sakthi, Vishnu, Krishna, Ayyappa, Shivan, Murugan, Ganesha, Vinayagar
 lyrics_ta: ரேடியோ, அம்மன், சக்தி, விஷ்ணு, கிருஷ்ணா, அய்யப்பா, சிவன், முருகன், கணேசா, விநாயகர்
