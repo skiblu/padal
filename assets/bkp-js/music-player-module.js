@@ -426,7 +426,9 @@ class MusicPlayer {
     lis.forEach(li => li.classList.toggle('active', parseInt(li.dataset.index,10) === this.currentIndex));
   }
 
-  _sif (titleInner) titleInner.textContent = track.title || 'Untitled 'smooth', block: 'nearest' });
+  _scrollActiveIntoView() {
+    const active = this.playlistView.querySelector('li.active');
+    if (active) active.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
   // ---------- Loading / playback ----------
