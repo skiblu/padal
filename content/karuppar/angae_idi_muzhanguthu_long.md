@@ -1,7 +1,7 @@
 ---
 section: Karuppar
 nav_order: 50
-title:  Angae Idi Muzhanguthu (Long)
+title: Angae Idi Muzhanguthu (Long)
 audio_id: 
 audio_length: 
 lyrics_en: Karuppu, Swamy, Tamil, Angae, Idi, Muzhanguthu, karuppasami, thangakalasam
@@ -43,7 +43,8 @@ Odi வாரார்
 எங்க கருப்பசாமி\
 அவர் எங்க கருப்பசாமி\
 எங்க கருப்பசாமி (Chrous)\
-அவர் எங்க கருப்பசாமி (Chrous)\
+அவர் எங்க கருப்பசாமி (Chrous)
+
 எங்க கருப்பசாமி\
 அவர் எங்க கருப்பசாமி சாமி\
 எங்க கருப்பசாமி (Chrous)\
@@ -69,11 +70,13 @@ Odi வாரார்
 வில்லு பாட்டுப் பாடி வரான்\
 வித விதமா ஆடி வரான்\
 வில்லு பாட்டுப் பாடி வரான்\
-வித விதமா ஆடி வரான்  (Chrous)\
+வித விதமா ஆடி வரான்  (Chrous)
+
 எங்க கருப்பசாமி\
 அவர் எங்க கருப்பசாமி சாமி\
 எங்க கருப்பசாமி(Chrous)\
-அவர் எங்க கருப்பசாமி  (Chrous)\
+அவர் எங்க கருப்பசாமி  (Chrous)
+
 தட்சையை கட்டி வரான்\
 கை அருவா காட்டி வரான்\
 ஒய்… மீசையை முறுக்கி வரான்\
@@ -92,16 +95,18 @@ Odi வாரார்
 இருமுடிய சுமக்கும் போது (Chrous)\
 பாதுகாக்க வருபவனாம் (Chrous)\
 ஹெ… எங்க கருப்பசாமி\
-அவர் எங்க கருப்பசாமி\
+அவர் எங்க கருப்பசாமி
+
 எங்க கருப்பசாமி (Chrous)\
-அவர் எங்க கருப்பண்ண சாமி (Chrous)\
-கருப்பன் வாரான் கருப்பன் வாரான் கருப்பசாமி\
-அவர் கார்மேகம் போல வரான் கருப்பசாமி\
-கருப்பன் வாரான் கருப்பன் வாரான் கருப்பசாமி (Chrous)\
-அவர் கார்மேகம் போல வரான் கருப்பசாமி (Chrous)\
-கருப்பன் வாரான் கருப்பன் வாரான் கருப்பசாமி\
-அவர் கன்னி பூஜை  காண வாரார் கருப்பசாமி\
-அவர் கன்னி பூஜை  காண வாரார் கருப்பசாமி
+அவர் எங்க கருப்பண்ண சாமி (Chrous)
+
+கருப்பன் வாரான் கருப்பன் வாரான்.. கருப்பசாமி\
+அவர் கார்மேகம் போல வரான்.. கருப்பசாமி\
+கருப்பன் வாரான் கருப்பன் வாரான்.. கருப்பசாமி (Chrous)\
+அவர் கார்மேகம் போல வரான்.. கருப்பசாமி (Chrous)\
+கருப்பன் வாரான் கருப்பன் வாரான்.. கருப்பசாமி\
+அவர் கன்னி பூஜை  காண வாரார்.. கருப்பசாமி\
+அவர் கன்னி பூஜை  காண வாரார்.. கருப்பசாமி
 {% endcapture %}
 {% include lang-filter.html lang="ta" text=text %}
 
@@ -141,7 +146,8 @@ Odi Vaaraar
 Engka Karuppacaami\
 Avar Engka Karuppacaami\
 Engka Karuppacaami (chrous)\
-Avar Engka Karuppacaami (chrous)\
+Avar Engka Karuppacaami (chrous)
+
 Engka Karuppacaami\
 Avar Engka Karuppacaami Caami\
 Engka Karuppacaami (chrous)\
@@ -167,11 +173,13 @@ Paari Vettai Aati Varaaṉ (chrous)\
 Villu Paattup Paati Varaaṉ\
 Vita Vitamaa Aati Varaaṉ\
 Villu Paattup Paati Varaaṉ\
-Vita Vitamaa Aati Varaaṉ (chrous)\
+Vita Vitamaa Aati Varaaṉ (chrous)
+
 Engka Karuppacaami\
 Avar Engka Karuppacaami Caami\
 Engka Karuppacaami(chrous)\
-Avar Engka Karuppacaami (chrous)\
+Avar Engka Karuppacaami (chrous)
+
 Tatcaiyai Katti Varaaṉ\
 Kai Aruvaa Kaatti Varaaṉ\
 Oy… Meecaiyai Murukki Varaaṉ\
@@ -190,15 +198,17 @@ Paatukaakka Varupavaṉaam\
 Irumutiya Cumakkum Potu (chrous)\
 Paatukaakka Varupavaṉaam (chrous)\
 He… Engka Karuppacaami\
-Avar Engka Karuppacaami\
+Avar Engka Karuppacaami
+
 Engka Karuppacaami (chrous)\
-Avar Engka Karuppanna Caami (chrous)\
-Karuppaṉ Vaaraaṉ Karuppaṉ Vaaraaṉ Karuppacaami\
-Avar Kaarmekam Pola Varaaṉ Karuppacaami\
-Karuppaṉ Vaaraaṉ Karuppaṉ Vaaraaṉ Karuppacaami (chrous)\
-Avar Kaarmekam Pola Varaaṉ Karuppacaami (chrous)\
-Karuppaṉ Vaaraaṉ Karuppaṉ Vaaraaṉ Karuppacaami\
-Avar Kaṉṉi Poojai Kaana Vaaraar Karuppacaami\
-Avar Kaṉṉi Poojai Kaana Vaaraar Karuppacaami
+Avar Engka Karuppanna Caami (chrous)
+
+Karuppaṉ Vaaraaṉ Karuppaṉ Vaaraaṉ.. Karuppacaami\
+Avar Kaarmekam Pola Varaaṉ.. Karuppacaami\
+Karuppaṉ Vaaraaṉ Karuppaṉ Vaaraaṉ.. Karuppacaami (chrous)\
+Avar Kaarmekam Pola Varaaṉ.. Karuppacaami (chrous)\
+Karuppaṉ Vaaraaṉ Karuppaṉ Vaaraaṉ.. Karuppacaami\
+Avar Kaṉṉi Poojai Kaana Vaaraar.. Karuppacaami\
+Avar Kaṉṉi Poojai Kaana Vaaraar.. Karuppacaami
 {% endcapture %}
 {% include lang-filter.html lang="en" text=text_en %}
