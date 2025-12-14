@@ -2,6 +2,9 @@
 section: Murugan
 nav_order: 50
 title:  Velava Velava
+youtube_id: HG1owZigExY
+audio_id: Wber372vFSj
+audio_length: 199
 lyrics_en: Murugan, Velava, Velava, வேலவா, வேலவா
 ---
 
