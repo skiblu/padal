@@ -1,7 +1,7 @@
 ---
 section: Karuppar
 nav_order: 50
-title:  Angae Idi Muzhanguthu
+title:  Angae Idi Muzhanguthu (V1)
 audio_id: Hw38sk2d0
 audio_length: 251
 lyrics_en: Karuppu, Swamy, Tamil, Angae, Idi, Muzhanguthu
