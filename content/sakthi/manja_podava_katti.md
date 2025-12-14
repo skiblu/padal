@@ -23,7 +23,7 @@ lyrics_ta: மஞ்ச, பொடவ, கட்டி, மங்கலமா, �
 
 ஆதி பரமேஸ்வரி யாம்,\
 அங்காள ஈஸ்வரி யாம்,\
-எங்க <Your-City> எல்லையில்ல,\
+எங்க (Your-City) எல்லையில்ல,\
 ஓடி வருகிறாள்
 
 1.மஞ்ச பொடவ கட்டி மங்கலமா சிங்காரம்மா ஒய்யாரமா நடை நடந்து\
@@ -84,7 +84,7 @@ Varukiraal
 
 Aati Paramesvari Yaam,\
 Angkaala Eesvari Yaam,\
-Engka <your-city> Ellaiyilla,\
+Engka (Your-City) Ellaiyilla,\
 Oti Varukiraal
 
 1.manyca Potava Katti Mangkalamaa Cingkaarammaa Oyyaaramaa Natai Natantu\
