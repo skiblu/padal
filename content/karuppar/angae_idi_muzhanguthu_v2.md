@@ -89,9 +89,8 @@ Odi வாரார்
 வில்லாளி வீரனுக்கு\
 வீர மணிகண்டருக்கு\
 வில்லாளி வீரனுக்கு (Chrous)\
-வீர மணிகண்டருக்கு (Chrous)\
-வில்லாளி வீரனுக்கு\
-வீர மணிகண்டருக்கு\
+வீர மணிகண்டருக்கு (Chrous)
+
 இருமுடிய சுமக்கும் போது\
 பாதுகாக்க வருபவனாம்\
 இருமுடிய சுமக்கும் போது (Chrous)\
@@ -234,9 +233,8 @@ Muccantiyil Natantu Varaaṉ (chrous)
 Villaali Veeraṉukku\
 Veera Manikantarukku\
 Villaali Veeraṉukku (chrous)\
-Veera Manikantarukku (chrous)\
-Villaali Veeraṉukku\
-Veera Manikantarukku\
+Veera Manikantarukku (chrous)
+
 Irumutiya Cumakkum Potu\
 Paatukaakka Varupavaṉaam\
 Irumutiya Cumakkum Potu (chrous)\
