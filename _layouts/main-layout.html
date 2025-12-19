@@ -22,7 +22,7 @@ layout: sidebar
       {%- assign img_key = page.parent_id | default: page.section -%}
       <div class="rounded-circle d-flex align-items-center justify-content-center {% if img_key %}bg-light text-dark border{% endif %}" style="width:72px;height:72px;overflow:hidden;">
         {% if img_key %}
-          <img src="/images/{{ img_key }}.svg" alt="{{ img_key }}" width="48" height="48" style="display:block;object-fit:contain;" />
+          <img src="/images/{{ img_key }}.webp" alt="{{ img_key }}" width="48" height="48" style="display:block;object-fit:contain;" />
         {% else %}
           <!-- default without colored background -->
           <img src="/images/logo.png" alt="logo" width="48" height="48" style="display:block;object-fit:contain;" />
