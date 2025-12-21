@@ -1,7 +1,7 @@
 ---
 section: Ayyappa
 nav_order: 50
-title: Pallaakku Kuthiraiyile Pavaṉi Varum Manikanda
+title: Pallaakku Kuthiraiyile Pavaṉi
 lyrics_en: Pallaakku, Kutiraiyile, Pavaṉi, Varum, Manikantaa, chorus, Pavaṉi, Varum, Manikantaa, Paantiyaṉaar
 lyrics_ta: பல்லாக்கு, குதிரையிலே, பவனி, வரும், மணிகண்டா, குரோஸ், பவனி, வரும், மணிகண்டா, பாண்டியனார்
 ---
