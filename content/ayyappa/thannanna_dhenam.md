@@ -60,7 +60,7 @@ lyrics_ta: ஐயப்பா, தன்னன்னா, தினம், சர
 நந்தன வணனே வா வா – சாமி பொன் ஐயப்பா – ஐயனே பொன் ஐயப்பா
 
 கனிஒரு முகமே கிலிஅறு கரமே\
-கலியுக வணனே வா வா – சாமி பொன் ஐயப்பா – ஐயனே
+கலியுக வணனே வா வா – சாமி பொன் ஐயப்பா – ஐயனே பொன் ஐயப்பா
 
 பொன் ஐயப்பா பக்தி தாமரை முக்தி தேன் துளி தித்திப்பாகியதே\
 சித்ததால் அதன் பித்தால் தினம் கத்தி கூவியதே
@@ -152,7 +152,7 @@ harihara sudhanae arulmugu thavamae\
 nandhan vannanae vaa vaa – saami pon ayyappa – aiyyanae pon ayyappa
 
 kanioru mugamae kiliarru karamae\
-kaliyuga vannanae vaa vaa – saami pon ayyappa – aiyyanae
+kaliyuga vannanae vaa vaa – saami pon ayyappa – aiyyanae pon ayyappa
 
 pon ayyappa bakthi thaamarai mukthi thaen thuli thiththippaagiyath ae\
 sithththadhaal adhan piththaal dhinam kaththi kooviyath ae
