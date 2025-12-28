@@ -10,7 +10,7 @@ title-icon: logo.png
 # description appears in sidebar footer
 description: "Devotional songs and lyrics"
 # keywords for meta tags used by search engines
-keywords: "bhakti, padal, swamy, songs, ayyappa, amman, shiva, lyrics, tamil, bhajan"
+keywords: "bhakti, padal, songs, lyrics, tamil, bhajan, bhaktipadal, bhaktipadal.in"
 # image for meta tags, will appear when sharing link on social media
 featured-image: "/images/logo.png"
 
@@ -100,9 +100,6 @@ gems:
   - jekyll-sitemap
 # Build settings
 markdown: kramdown
-
-default:
-  keywords: "bhakti, padal, songs, lyrics, tamil, bhajan, bhaktipadal, bhaktipadal.in"
 
 # Ably config (client-side API key; exposing client key is a design decision)
 notify:
