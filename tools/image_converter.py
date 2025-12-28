@@ -202,22 +202,22 @@ def main():
         epilog="""
 Examples:
   # Convert all PNGs to SVG (default)
-  python3 png_to_svg_converter.py --input ./images
+  python3 image_converter.py --input ./images
 
   # Convert to WebP format
-  python3 png_to_svg_converter.py --input ./images --format webp
+  python3 image_converter.py --input ./images --format webp
 
   # Convert to both SVG and WebP
-  python3 png_to_svg_converter.py --input ./images --format both
+  python3 image_converter.py --input ./images --format both
 
   # Convert with custom output folder
-  python3 png_to_svg_converter.py --input ./images --output ./optimized
+  python3 image_converter.py --input ./images --output ./optimized
 
   # Convert with scaling for smaller files
-  python3 png_to_svg_converter.py --input ./images --scale 0.5 --format webp
+  python3 image_converter.py --input ./images --scale 0.5 --format webp
 
   # High quality WebP conversion
-  python3 png_to_svg_converter.py --input ./images --quality 90 --format webp
+  python3 image_converter.py --input ./images --quality 90 --format webp
         """
     )
     
