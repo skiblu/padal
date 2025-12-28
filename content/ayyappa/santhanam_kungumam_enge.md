@@ -69,64 +69,64 @@ lyrics_ta: சாந்தனம், குங்குமம், எங்க�
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-`caamiye Caranam Aiyappaa !`
+`saamiyae Saranam Aiyappaa !`
 
-`cantaṉam Kungkumam Engke Manakkutu`\
-`caparimalai Ayyappaṉiṉ Mele Manakkutu` X2
+`santhaṉam Kungkumam Engkae Manakkuthu`\
+`saparimalai Ayyappaṉiṉ Maelae Manakkuthu` X2
 
-Kuntumalli Poo Poottu Engke Manakkutu\
-Kuntumalli Poo Poottu Engke Manakkutu\
-Namma Kurucuvaami Avar Mele Manakkutu\
-(`cantaṉam Kungkumam`)
+Kunthumali Poo Poothu Engkae Manakkuthu\
+Kunthumali Poo Poothu Engkae Manakkuthu\
+Nama Kurusuvaami Avar Maelae Manakkuthu\
+(`santhaṉam Kungkumam`)
 
-Kaṉṉiccaami Poo Poottu Engke Manakkutu\
-Kaṉakaamparam Poo Poottu Engke Manakkutu\
-Ingke Ulla Kaṉṉiccaami Mele Manakkutu
+Kaṉṉissaami Poo Poothu Engkae Manakkuthu\
+Kaṉakaamparam Poo Poothu Engkae Manakkuthu\
+Ingkae Uzhzha Kaṉṉissaami Maelae Manakkuthu
 
-Kaṉakaamparam Poo Poottu Engke Manakkutu\
-Ingke Ulla Kaṉṉiccaami Mele Manakkutu\
-(`cantaṉam Kungkumam`)
+Kaṉakaamparam Poo Poothu Engkae Manakkuthu\
+Ingkae Uzhzha Kaṉṉissaami Maelae Manakkuthu\
+(`santhaṉam Kungkumam`)
 
-Maruta Marikkoḻuntu Engke Manakkutu\
-Maruta Marikoḻuntu Engke Manakkutu\
-Maalikapurattu Ammaa Mele Manakkutu\
-(`cantaṉam Kungkumam`)
+Marutha Marikkoḻunthu Engkae Manakkuthu\
+Marutha Marikoḻunthu Engkae Manakkuthu\
+Maazhikapurathu Amaa Maelae Manakkuthu\
+(`santhaṉam Kungkumam`)
 
-Rojaappoo Poo Poottu Engke Manakkutu\
-Rojaappoo Poo Poottu Engke Manakkutu\
-Raajaavaa Manikantaṉ Mele Manakkutu\
-(`cantaṉam Kungkumam`)
+Roajaappoo Poo Poothu Engkae Manakkuthu\
+Roajaappoo Poo Poothu Engkae Manakkuthu\
+Raajaavaa Manikanthaṉ Maelae Manakkuthu\
+(`santhaṉam Kungkumam`)
 
-Vaataata Mallikai Engke Manakkutu\
-Vaataata Mallikai Engke Manakkutu\
-Vallavaṉaam Vaavar Cuvaami Mele Manakkutu\
-(`cantaṉam Kungkumam`)
+Vaathaatha Malikai Engkae Manakkuthu\
+Vaathaatha Malikai Engkae Manakkuthu\
+Valavaṉaam Vaavar Suvaami Maelae Manakkuthu\
+(`santhaṉam Kungkumam`)
 
-Maa Palaa Koyyaavum Engke Manakkutu\
-Maa Palaa Koyyaavum Engke Manakkutu\
-Manikanta Caami Mele Manakkutu\
-(`cantaṉam Kungkumam`)
+Maa Palaa Koyyaavum Engkae Manakkuthu\
+Maa Palaa Koyyaavum Engkae Manakkuthu\
+Manikantha Saami Maelae Manakkuthu\
+(`santhaṉam Kungkumam`)
 
-Teṉṉampillai Poo Poottu Engke Manakkutu\
-Teṉṉampillai Poo Poottu Engke Manakkutu\
-Poṉṉampala Vaacaṉ Avar Mele Manakkutu\
-(`cantaṉam Kungkumam`)
+Theṉṉampizhzhai Poo Poothu Engkae Manakkuthu\
+Theṉṉampizhzhai Poo Poothu Engkae Manakkuthu\
+Poṉṉampala Vaasaṉ Avar Maelae Manakkuthu\
+(`santhaṉam Kungkumam`)
 
-Paarijaatam Poo Poottu Engke Manakkutu\
-Paarijaatam Poo Poottu Engke Manakkutu\
-Paattu Ketkum Paktar Koottam Mele Manakkutu\
-(`cantaṉam Kungkumam`)
+Paarijaatham Poo Poothu Engkae Manakkuthu\
+Paarijaatham Poo Poothu Engkae Manakkuthu\
+Paathu Kaethkum Pakthar Kootham Maelae Manakkuthu\
+(`santhaṉam Kungkumam`)
 
-Paṉṉeer Apishekam Engke Manakkutu\
-Paṉṉeer Apishekam Engke Manakkutu\
-Patiṉettu Patikaliṉ Mele Manakkutu\
-(`cantaṉam Kungkumam`)
+Paṉṉeer Apishaekam Engkae Manakkuthu\
+Paṉṉeer Apishaekam Engkae Manakkuthu\
+Pathiṉethu Pathikazhiṉ Maelae Manakkuthu\
+(`santhaṉam Kungkumam`)
 
-Aḻutaa Nati Teerttam Atu Engke Manakkutu\
-Aḻutaa Nati Teerttam Atu Engke Manakkutu\
-Harihara Cutaṉ Avaṉ Mele Manakkutu\
-(`cantaṉam Kungkumam`)
+Aḻuthaa Nathi Theertham Athu Engkae Manakkuthu\
+Aḻuthaa Nathi Theertham Athu Engkae Manakkuthu\
+Harihara Suthaṉ Avaṉ Maelae Manakkuthu\
+(`santhaṉam Kungkumam`)
 
-`caamiye Caranam Aiyappaa !`
+`saamiyae Saranam Aiyappaa !`
 {% endcapture %}
 {% include lang-filter.html lang="en" text=text_en %}
