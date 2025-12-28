@@ -101,6 +101,9 @@ gems:
 # Build settings
 markdown: kramdown
 
+default:
+  keywords: "bhakti, padal, songs, lyrics, tamil, bhajan, bhaktipadal, bhaktipadal.in"
+
 # Ably config (client-side API key; exposing client key is a design decision)
 notify:
   key: "e6jB9w.mRKWaw:RWddGsGNYNTgddHiXloOOFeoj1RA2t1bRvAAn_rP2LI"

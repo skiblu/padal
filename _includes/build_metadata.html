@@ -26,6 +26,13 @@ that may contain both Tamil and English CreativeWork objects.
 {%- capture _lyrics_ta -%}{%- if page.lyrics_ta -%}{{ page.lyrics_ta | strip_newlines | strip }}{%- endif -%}{%- endcapture -%}
 {%- capture _lyrics_en -%}{%- if page.lyrics_en -%}{{ page.lyrics_en | strip_newlines | strip }}{%- endif -%}{%- endcapture -%}
 
+{%- comment -%}
+Use site default keywords when page keywords not provided. Normalize commas and split into an array.
+{%- endcomment -%}
+{%- capture _kw_source -%}{{ page.keywords | default: site.default.keywords }}{%- endcapture -%}
+{%- capture _kw_clean -%}{{ _kw_source | replace: ', ', ',' | strip }}{%- endcapture -%}
+{%- assign _keywords = _kw_clean | split: ',' -%}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,6 +41,7 @@ that may contain both Tamil and English CreativeWork objects.
       "@type": "WebPage",
       "@id": {{ _page_id | jsonify }},
       "headline": {{ _headline | jsonify }},
+      "keywords": {{ _keywords | jsonify }},
       "author": { "@type": "Person", "name": {{ site.author | jsonify }} },
       "description": {{ _description | jsonify }}{% if site.featured-image %},{% endif %}
       {%- if site.featured-image -%}

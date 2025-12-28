@@ -4,8 +4,8 @@ nav_order: 50
 youtube_id: 
 audio_id: 
 audio_length: 
-title: Om Thillai Nataraajaṉe Chitampara Vaasaṉe 
-lyrics_en: Om, Thillai, Nataraajaṉe, Chitampara ,Vaasaṉe
+title: Om Thillai Nataraajane Chitampara Vaasane 
+lyrics_en: Om, Thillai, Nataraajane, Chitampara ,Vaasane
 lyrics_ta: ஓம், தில்லை, நடராஜனே, சிதம்பர, வாசனே
 ---
 {% capture text %}
