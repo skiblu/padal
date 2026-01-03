@@ -13,7 +13,9 @@
     {{ content }}
 
     {% include template/foot.html %}
-    {% include template/foot-add.html %}
+    {%- if site.attribute.advertisement.enabled -%}
+        {% include template/foot-add.html %}
+    {%- endif -%}
   </body>
 
 </html>

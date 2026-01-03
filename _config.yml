@@ -106,6 +106,8 @@ attribute:
     enabled: false
   audio:
     enabled: false
+  advertisement:
+    enabled: true
 
 # Ably config (client-side API key; exposing client key is a design decision)
 notify:
