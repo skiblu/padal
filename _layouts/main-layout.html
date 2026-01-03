@@ -98,10 +98,9 @@ layout: sidebar
   {% endif %}
 </div>
 
-{%- if page.audio_id and page.audio_id != "" -%}
+{%- if page.audio_id and page.audio_id != "" and site.attribute.audio.enabled -%}
   {% include player-music.html %}
-{%- else -%}
-  {% if page.youtube_id %}
+{%- elsif page.youtube_id and page.youtube_id != "" and site.attribute.youtube.enabled -%}
   <div class="mx-auto mb-4" style="max-width: 600px;">
       <div class="card shadow-sm rounded">
           <div class="card-body p-2">
@@ -123,7 +122,6 @@ layout: sidebar
           </div>
       </div>
   </div>
-  {%- endif -%}
 {%- endif -%}
 
 <!-- Conditional section header based on page.type -->
