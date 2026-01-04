@@ -2,8 +2,8 @@
 section: Sakthi
 nav_order: 50
 title: Kedara Gowri Nombu Kaappu
-lyrics_en: Kedara, Gowri, Nombu, Kaappu
-lyrics_ta: கேதார, கெளரி, நோம்பு, காப்பு
+lyrics_en: Kedara, Gowri, Nombu, Kaappu, Kedareeswarar
+lyrics_ta: கேதார, கெளரி, நோம்பு, காப்பு, கேதாரீஸ்வரர்
 ---
 {% capture text %}
 ### காப்பு
