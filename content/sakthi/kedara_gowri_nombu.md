@@ -367,6 +367,8 @@ Thaara Virathathai Yaaṉ Pathikka -- Seerilakum\
 Ainthu Karanthanthimukath Thanalathi Yaarkkaruzhung\
 Kanthamalars Senysaraṉae Kaappu
 
+{% include figure.html img="https://assets.bhaktipadal.in/images/sakthi/I4nf34S2kd.jpg" width="50%" %}
+
 ### Kaethaareesvarar Poojaa Vithi
 Poojaarampathil Manysazhaal Vinaayakarai Seyvithu Kantham Pushpam Aruku Saathi Noampu Virathakaararkazh\
 Kaiyil Pushpam Kothuthu Vinaayakarai Arssaṉai Seyvikka Vaenthiyathu.
