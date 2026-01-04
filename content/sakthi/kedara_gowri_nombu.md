@@ -254,6 +254,8 @@ lyrics_ta: கேதார, கெளரி, நோம்பு, காப்ப
 ஓம் சக்தி\
 காப்பு
 
+{% include figure.html img="https://assets.bhaktipadal.in/images/sakthi/D3j93FH3fs.jpg" width="50%" %}
+
 முன்னின்று செய்யுள் முறையாய்ப் புனைவதற்கு\
 என்னின் றருள்செய் எலிவா கனப்பிள்ளாய்\
 சொற்குற்ற மொடு பொருட்குற்றம் சோர்வு தரும்\
@@ -608,6 +610,8 @@ Vaaḻveerkazhaaka.
 Thaevi Thunai\
 Oam Sakthi\
 Kaappu
+
+{% include figure.html img="https://assets.bhaktipadal.in/images/sakthi/D3j93FH3fs.jpg" width="50%" %}
 
 Muṉṉiṉru Seyyuzh Muraiyaayp Puṉaivatharku\
 Eṉṉiṉ Raruzhsey Elivaa Kaṉappizhzhaay\
