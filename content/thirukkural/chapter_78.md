@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 178
 title: Chapter 78 - Padaichcherukku
 title_ta: அதிகாரம் 78 - படைச்செருக்கு
 lyrics_en: Thirukkural, Tamil, Padaichcherukku

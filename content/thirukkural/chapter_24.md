@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 124
 title: Chapter 24 - Pugazh
 title_ta: அதிகாரம் 24 - புகழ்
 lyrics_en: Thirukkural, Tamil, Pugazh

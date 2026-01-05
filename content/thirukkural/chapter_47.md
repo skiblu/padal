@@ -1,84 +1,84 @@
 ---
 section: Thirukkural
-nav_order: 50
-title: Chapter 47 - Valiaritthal
-title_ta: அதிகாரம் 47 - வலியறிதல்
-lyrics_en: Thirukkural, Tamil, Valiaritthal
-lyrics_ta: திருக்குறள், தமிழ், வலியறிதல்
+nav_order: 147
+title: Chapter 47 - Therindu Seyalvakai
+title_ta: அதிகாரம் 47 - தெரிந்து செயல்வகை
+lyrics_en: Thirukkural, Tamil, Therindu, Seyalvakai
+lyrics_ta: திருக்குறள், தமிழ், தெரிந்து, செயல்வகை
 ---
 
 {% capture text %}
-1. `வினைவலியும் தன்வலியும் மாற்றான் வலியும்`\
-   `துணைவலியும் தூக்கிச் செயல்`
-> செயலின்‌ வலிமையும்‌, தன்‌ வலிமையும்‌, பகைவனுடைய வலிமையும்‌, இருவர்க்கும்‌ துணையானவரின்‌ வலிமையும்‌ ஆராய்ந்து செய்யவேண்டும்‌.
+1. `அழிவதூஉம் ஆவதூஉம் ஆகி வழிபயக்கும்`\
+   `ஊதியமுஞ் சூழ்ந்து செயல்`
+> எந்த அளவுக்கு நன்மை கிடைக்கும் அல்லது தீமை ஏற்படும் என்று விளைவுகளைக் கணக்குப் பார்த்த பிறதே ஒரு செயலில் இறங்க வேண்டும்.
 
-2. `ஒல்வ தறிவது அறிந்ததன் கண்தங்கிச்`\
-   `செல்வார்க்குச் செல்லாதது இல்`
-> தனக்குப்‌ பொருந்தும்‌ செயலையும்‌, அதற்காக அறிய வேண்டியதையும்‌ அறிந்து அதனிடம்‌ நிலைத்து முயல்கின்றவர்க்கு முடியாதது ஒன்றும்‌ இல்லை ஒன்றும்‌ இல்லை.
+2. `தெரிந்த இனத்தொடு தேர்ந்தெண்ணிச் செய்வார்க்`\
+   `கரும்பொருள் யாதொன்று மில்.`
+> தெளிந்து தேர்ந்த நண்பர்களுடன், சேர்ந்து, ஆற்ற வேண்டிய செயலை ஆராய்ந்து, தாமும் நன்கு சிந்தித்துச் செய்தால் ஆகாதது ஒன்றுமில்லை.
 
-3. `உடைத்தம் வலியறியார் ஊக்கத்தின் ஊக்கி`\
-   `இடைக்கண் முரிந்தார் பலர்`
-> தம்முடைய வலிமை இவ்வளவு என்று அறியாமல்‌ ஊக்கத்தால்‌ முனைந்து தொடங்கி இடையில்‌ அதை முடிக்க வகையில்லாமல்‌ அழிந்தவர்‌ பலர்‌.
+3. `ஆக்கங் கருதி முதலிழக்குஞ் செய்வினை`\
+   `ஊக்கா ரறிவுடை யார்.`
+> பெரும் ஆதாயம் கிட்டுமென்று எதிர்பார்த்துக் கை முதலையும் இழந்து விடக்கூடிய காரியத்தை அறிவுடையவர்கள் செய்யமாட்டார்கள்.
 
-4. `அமைந்தாங் கொழுகான் அளவறியான் தன்னை`\
-   `வியந்தான் விரைந்து கெடும்`
-> மற்றவர்களோடு ஒத்து நடக்காமல்‌. தன்‌ வலிமையின்‌ அளவையும்‌ அறியாமல்‌, தன்னை வியந்து மதித்துக்‌ கொண்டிருப்பவன்‌ விரைவில்‌ கெடுவான்‌.
+4. `தெளிவி லதனைத் தொடங்கார் இளிவென்னும்`\
+   `ஏதப்பா டஞ்சு பவர்.`
+> களங்கத்துக்குப் பயப்படக் கூடியவர்கள்தான் விளைவுகளை எண்ணிப் பார்த்து அந்தக் களங்கம் தரும் காரியத்தில் இறங்காமல் இருப்பார்கள்.
 
-5. `பீலிபெய் சாகாடும் அச்சிறும் அப்பண்டஞ்`\
-   `சால மிகுத்துப் பெயின்`
-> மயிலிறகு ஏற்றிய வண்டியே ஆனாலும்‌, அந்தப்‌ பண்டமும்‌ (அளவோடு ஏற்றாமல்‌) அளவுகடந்து மிகுதியாக ஏற்றினால்‌ அச்சு முறியும்‌.
+5. `வகையறச் சூழா தெழுதல் பகைவரைப்`\
+   `பாத்திப் படுப்பதோ ராறு.`
+> முன்னேற்பாடுகளை முழுமையாக ஆராய்ந்து செய்யாமல் பகைவரை ஒடுக்க முனைவது அந்தப் பகைவரின் வலிமையை நிலையாக வளர்க்கும் வழியாக ஆகிவிடும்.
 
-6. `நுனிக்கொம்பர் ஏறினார் அஃதிறந் தூக்கின்`\
-   `உயிர்க்கிறுதி ஆகி விடும்`
-> ஒரு மரத்தின்‌ நுனிக்கொம்பில்‌ ஏறியவர்‌, அதையும்‌ கடந்து மேலும்‌ ஏற முனைந்தால்‌, அவருடைய உயிர்க்கு முடிவாக நேர்ந்துவிடும்‌
+6. `செய்தக்க அல்ல செயக்கெடுஞ் செய்தக்க`\
+   `செய்யாமை யானுங் கெடும்.`
+> செய்யக் கூடாததைச் செய்வதால் கேடு ஏற்படும்; செய்ய வேண்டியதைச் செய்யாமல் விட்டாலும் கேடு ஏற்படும்.
 
-7. `ஆற்றின் அறவறிந்து ஈக அதுபொருள்`\
-   `போற்றி வழங்கு நெறி`
-> தக்க வழியில்‌ பிறர்க்குக்‌ கொடுக்கும்‌ அளவு அறிந்து கொடுக்கவேண்டும்‌; அதுவே பொருளைப்‌ போற்றி வாழும்‌ வழியாகும்‌.
+7. `எண்ணித் துணிக கருமந் துணிந்தபின்`\
+   `எண்ணுவ மென்ப திழுக்கு.`
+> நன்றாகச் சிந்தித்த பிறகே செயலில் இறங்க வேண்டும்; இறங்கிய பிறகு சிந்திக்கலாம் என்பது தவறு.
 
-8. `ஆகாறு அளவிட்டி தாயினுங் கேடில்லை`\
-   `போகாறு அகலாக் கடை`
-> பொருள்‌ வரும்‌ வழி (வருவாய்‌) சிறியதாக இருந்தாலும்‌, போகும்‌ வழி (செலவு) விரிவுபடாவிட்டால்‌ அதனால்‌ தீங்கு இல்லை.
+8. `ஆற்றின் வருந்தா வருத்தம் பலர்நின்று`\
+   `போற்றினும் பொத்துப் படும்.`
+> எத்தனை பேர்தான் துணையாக இருந்தாலும் முறையாகச் செய்யப்படாத முயற்சி இறுதியில் முடங்கிப் போய்விடும்.
 
-9. `அளவறிந்து வாழாதான் வாழ்க்கை உளபோல`\
-   `இல்லாகித் தோன்றாக் கெடும்`
-> பொருளின்‌ அளவு அறிந்து வாழாதவனுடைய வாழ்க்கை (பல வளமும்‌) இருப்பது போல்‌ தோன்றி இல்லாமல்‌ மறைந்து கெட்டுவிடும்‌.
+9. `நன்றாற்ற லுள்ளுந் தவறுண் டவரவர்`\
+   `பண்பறிந் தாற்றாக் கடை.`
+> ஒருவருடைய இயல்பைப் புரிந்து கொண்டுதான் நன்மையைக் கூடச் செய்ய வேண்டும் இல்லாவிட்டால் அதுவே தீமையாகத் திருப்பித் தாக்கும்.
 
-10. `உளவரை தூக்காத ஒப்புர வாண்மை`\
-   `வளவரை வல்லைக் கெடும்`
-> தனக்குப்‌ பொருள்‌ உள்ள அளவை ஆராயாமல்‌ மேற்கொள்ளும்‌ ஒப்புரவினால்‌, ஒருவனுடைய செல்வத்தின்‌ அளவு விரைவில்‌ கெடும்‌.
+10. `எள்ளாத எண்ணிச் செயல்வேண்டுந் தம்மொடு`\
+   `கொள்ளாத கொள்ளா துலகு.`
+> தம்முடைய நிலைமைக்கு மாறான செயல்களை உயர்ந்தோர் பாராட்டமாட்டார்கள் என்பதால், அவர்கள் பழித்துரைக்காத செயல்களையே செய்திடல் வேண்டும்.
 
 {% endcapture %} {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-1. `The force the strife demands, the force he owns, the force of foes,The force of friends; these should he weigh ere to the war he goes.`
-> Let (one) weigh well the strength of the deed (he purposes to do), his own strength, the strength ofhis enemy, and the strength of the allies (of both), and then let him act.
+1. `Consider well ere action, for the deedThat good or ill may bring is to be heed.`
+> One should consider the consequences of an action carefully before undertaking it, to know how muchgood or ill will result.
 
-2. `Who know what can be wrought, with knowledge of the means, on this,Their mind firm set, go forth, nought goes with them amiss.`
-> There is nothing which may not be accomplished by those who, before they attack (an enemy), makethemselves acquainted with their own ability, and with whatever else is (needful) to be known, andapply themselves wholly to their object.
+2. `With wise associates counselled, and with thoughtResolved, there is no deed that’s nought.`
+> When one acts in concert with wise and well-considered friends, and has thought well over the action tobe done, there is nothing that cannot be accomplished.
 
-3. `Ill-deeming of their proper powers, have many monarchs striven,And midmost of unequal conflict fallen asunder riven.`
-> There are many who, ignorant of their (want of) power (to meet it), have haughtily set out to war,and broken down in the midst of it.
+3. `The wise ne’er venture on a deed, foreseeingLoss of their stake for hoped-for gain.`
+> Wise men will not undertake an action which, though it may bring great profit, may also involve the loss ofwhat they have invested in it.
 
-4. `Who not agrees with those around, no moderation knows,In self-applause indulging, swift to ruin goes.`
-> He will quickly perish who, ignorant of his own resources flatters himself of his greatness, and doesnot live in peace with his neighbours.
+4. `The timid, fearing shame, will not engageIn acts that may bring them disgrace.`
+> Those who fear disgrace will not undertake actions that may bring about such disgrace, afterconsidering the consequences.
 
-5. `With peacock feathers light, you load the wain;Yet, heaped too high, the axle snaps in twain.`
-> The axle tree of a bandy, loaded only with peacocks’ feathers will break, if it be greatly overloaded.
+5. `To crush an enemy, unweighed designs pursue,And so increase his strength anew.`
+> To attempt to overpower an enemy without fully weighing the preparations is to strengthen thatenemy’s power permanently.
 
-6. `Who daring climbs, and would himself upraiseBeyond the branch’s tip, with life the forfeit pays.`
-> There will be an end to the life of him who, having climbed out to the end of a branch, ventures to gofurther.
+6. `From ill-deeds harm will spring;From good deeds, harm will cling.`
+> Harm will result from doing what ought not to be done; harm will also result from omitting whatought to be done.
 
-7. `With knowledge of the measure due, as virtue bids you give!That is the way to guard your wealth, and seemly live.`
-> Let a man know the measure of his ability (to give), and let him give accordingly; such giving is theway to preserve his property.
+7. `With thought resolved, act thou;After acting, think not through.`
+> One should act only after careful thought; to think after acting is wrong.
 
-8. `Incomings may be scant; but yet, no failure there,If in expenditure you rightly learn to spare.`
-> Even though the income (of a king) be small, it will not cause his (ruin), if his outgoings be not largerthan his income.
+8. `Though many stand as aid,If ill done, the deed will fade.`
+> No matter how many stand as helpers, an ill-executed effort will ultimately come to naught.
 
-9. `Who prosperous lives and of enjoyment knows no bound,His seeming wealth, departing, nowhere shall be found.`
-> The prosperity of him who lives without knowing the measure (of his property), will perish, evenwhile it seems to continue.
+9. `Know well the nature of him who errs,And do good deeds, else ill recurs.`
+> One should understand a person’s nature before doing good to him; otherwise, that good mayturn to harm.
 
-10. `Beneficence that measures not its bound of means,Will swiftly bring to nought the wealth on which it leans.`
-> The measure of his wealth will quickly perish, whose liberality weighs not the measure of his property.
+10. `The wise will not applaud deeds unmeet;Do only deeds that they will greet.`
+> Since wise men will not praise actions that are inappropriate to one’s station, one should only do thoseactions that they will commend.
 
 {% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

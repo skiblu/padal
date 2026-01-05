@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 207
 title: Chapter 107 - Iravachcham
 title_ta: அதிகாரம் 107 - இரவச்சம்
 lyrics_en: Thirukkural, Tamil, Iravachcham

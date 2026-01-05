@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 114
 title: Chapter 14 - Ozhukkamudaimai
 title_ta: அதிகாரம் 14 - ஒழுக்கமுடைமை
 lyrics_en: Thirukkural, Tamil, Ozhukkamudaimai

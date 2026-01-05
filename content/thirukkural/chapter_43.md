@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 143
 title: Chapter 43 - Arivudaimai
 title_ta: அதிகாரம் 43 - அறிவுடைமை
 lyrics_en: Thirukkural, Tamil, Arivudaimai

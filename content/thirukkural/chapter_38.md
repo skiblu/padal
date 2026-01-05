@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 138
 title: Chapter 38 - Uozh
 title_ta: அதிகாரம் 38 - ஊழ்
 lyrics_en: Thirukkural, Tamil, Uozh

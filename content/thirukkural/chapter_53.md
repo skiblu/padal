@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 153
 title: Chapter 53 - Surranthazhal
 title_ta: அதிகாரம் 53 - சுற்றந்தழால்
 lyrics_en: Thirukkural, Tamil, Surranthazhal

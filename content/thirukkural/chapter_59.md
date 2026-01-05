@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 159
 title: Chapter 59 - Orrotal
 title_ta: அதிகாரம் 59 - ஒற்றாடல்
 lyrics_en: Thirukkural, Tamil, Orrotal

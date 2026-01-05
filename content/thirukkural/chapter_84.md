@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 184
 title: Chapter 84 - Pothaimai
 title_ta: அதிகாரம் 84 - பேதைமை
 lyrics_en: Thirukkural, Tamil, Pothaimai

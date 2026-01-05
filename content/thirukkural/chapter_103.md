@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 203
 title: Chapter 103 - Kudiseilvakai
 title_ta: அதிகாரம் 103 - குடிசெயல்வகை
 lyrics_en: Thirukkural, Tamil, Kudiseilvakai

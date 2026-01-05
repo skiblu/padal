@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 110
 title: Chapter 10 - Iniyavaikural
 title_ta: அதிகாரம் 10 - இனியவைகூறல்
 lyrics_en: Thirukkural, Tamil, Iniyavaikural

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 223
 title: Chapter 123 - Pozhudukandirangal
 title_ta: அதிகாரம் 123 - பொழுதுகண்டிரங்கல்
 lyrics_en: Thirukkural, Tamil, Pozhudukandirangal

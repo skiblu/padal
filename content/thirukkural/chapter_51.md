@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 151
 title: Chapter 51 - Therinduthelithal
 title_ta: அதிகாரம் 51 - தெரிந்துதெளிதல்
 lyrics_en: Thirukkural, Tamil, Therinduthelithal

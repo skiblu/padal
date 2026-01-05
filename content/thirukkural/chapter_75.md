@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 175
 title: Chapter 75 - Aran
 title_ta: அதிகாரம் 75 - அரண்
 lyrics_en: Thirukkural, Tamil, Aran

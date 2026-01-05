@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 220
 title: Chapter 120 - Thanipparmiguthi
 title_ta: அதிகாரம் 120 - தனிப்படர்மிகுதி
 lyrics_en: Thirukkural, Tamil, Thanipparmiguthi

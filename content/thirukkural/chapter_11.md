@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 111
 title: Chapter 11 - Seynnandri Arithal
 title_ta: அதிகாரம் 11 - செய்ந்நன்றி அறிதல்
 lyrics_en: Thirukkural, Tamil, Seynnandri, Arithal

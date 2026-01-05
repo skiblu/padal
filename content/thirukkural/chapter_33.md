@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 133
 title: Chapter 33 - Kollamai
 title_ta: அதிகாரம் 33 - கொல்லாமை
 lyrics_en: Thirukkural, Tamil, Kollamai

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 160
 title: Chapter 60 - Ukkamudaimai
 title_ta: அதிகாரம் 60 - ஊக்கமுடைமை
 lyrics_en: Thirukkural, Tamil, Ukkamudaimai

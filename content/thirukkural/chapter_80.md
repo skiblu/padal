@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 180
 title: Chapter 80 - Natpaaraythal
 title_ta: அதிகாரம் 80 - நட்பாராய்தல்
 lyrics_en: Thirukkural, Tamil, Natpaaraythal

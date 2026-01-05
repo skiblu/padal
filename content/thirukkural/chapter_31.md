@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 131
 title: Chapter 31 - Vegulamai
 title_ta: அதிகாரம் 31 - வெகுளாமை
 lyrics_en: Thirukkural, Tamil, Vegulamai

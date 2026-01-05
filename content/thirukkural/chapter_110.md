@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 210
 title: Chapter 110 - Kuriparithal
 title_ta: அதிகாரம் 110 - குறிப்பறிதல்
 lyrics_en: Thirukkural, Tamil, Kuriparithal

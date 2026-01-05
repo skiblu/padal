@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 157
 title: Chapter 57 - Veruvandhaseiyaamai
 title_ta: அதிகாரம் 57 - வெருவந்தசெய்யாமை
 lyrics_en: Thirukkural, Tamil, Veruvandhaseiyaamai

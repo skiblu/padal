@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 134
 title: Chapter 34 - Nilaiyamai
 title_ta: அதிகாரம் 34 - நிலையாமை
 lyrics_en: Thirukkural, Tamil, Nilaiyamai

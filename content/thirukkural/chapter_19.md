@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 119
 title: Chapter 19 - Purangooramai
 title_ta: அதிகாரம் 19 - புறங்கூறாமை
 lyrics_en: Thirukkural, Tamil, Purangooramai

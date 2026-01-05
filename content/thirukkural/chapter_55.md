@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 155
 title: Chapter 55 - Sengonmai
 title_ta: அதிகாரம் 55 - செங்கோன்மை
 lyrics_en: Thirukkural, Tamil, Sengonmai

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 156
 title: Chapter 56 - Kodungonmai
 title_ta: அதிகாரம் 56 - கொடுங்கோன்மை
 lyrics_en: Thirukkural, Tamil, Kodungonmai

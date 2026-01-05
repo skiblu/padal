@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 113
 title: Chapter 13 - Adakkamudaimai
 title_ta: அதிகாரம் 13 - அடக்கமுடைமை
 lyrics_en: Thirukkural, Tamil, Adakkamudaimai

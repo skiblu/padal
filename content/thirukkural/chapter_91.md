@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 191
 title: Chapter 91 - Poonvaliccheral
 title_ta: அதிகாரம் 91 - பெண்வழிச்சேறல்
 lyrics_en: Thirukkural, Tamil, Poonvaliccheral

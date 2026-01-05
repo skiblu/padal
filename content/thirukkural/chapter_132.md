@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 232
 title: Chapter 132 - Pulavi Nunukkam
 title_ta: அதிகாரம் 132 - புலவி நுணுக்கம்
 lyrics_en: Thirukkural, Tamil, Pulavi, Nunukkam

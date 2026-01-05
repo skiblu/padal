@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 135
 title: Chapter 35 - Thuravu
 title_ta: அதிகாரம் 35 - துறவு
 lyrics_en: Thirukkural, Tamil, Thuravu

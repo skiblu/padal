@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 170
 title: Chapter 70 - Mannaraich Serthonzhuthal
 title_ta: அதிகாரம் 70 - மன்னரைச் சேர்ந்தொழுதல்
 lyrics_en: Thirukkural, Tamil, Mannaraich, Serthonzhuthal

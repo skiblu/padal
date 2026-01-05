@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 139
 title: Chapter 39 - Iraimaatchi
 title_ta: அதிகாரம் 39 - இறைமாட்சி
 lyrics_en: Thirukkural, Tamil, Iraimaatchi

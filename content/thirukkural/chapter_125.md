@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 225
 title: Chapter 125 - Nenjjodukilatthal
 title_ta: அதிகாரம் 125 - நெஞ்சொடுகிளத்தல்
 lyrics_en: Thirukkural, Tamil, Nenjjodukilatthal

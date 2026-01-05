@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 168
 title: Chapter 68 - Vinaiseylvakai
 title_ta: அதிகாரம் 68 - வினைசெயல்வகை
 lyrics_en: Thirukkural, Tamil, Vinaiseylvakai

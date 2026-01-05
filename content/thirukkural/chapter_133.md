@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 233
 title: Chapter 133 - Udaluvakai
 title_ta: அதிகாரம் 133 - ஊடலுவகை
 lyrics_en: Thirukkural, Tamil, Udaluvakai

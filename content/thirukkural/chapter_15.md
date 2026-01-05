@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 115
 title: Chapter 15 - Piranil Vizhaiyamai
 title_ta: அதிகாரம் 15 - பிறனில் விழையாமை
 lyrics_en: Thirukkural, Tamil, Piranil, Vizhaiyamai

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 104
 title: Chapter 4 - Aranvaliyuruthal
 title_ta: அதிகாரம் 4 - அறன்வலியுறுத்தல்
 lyrics_en: Thirukkural, Tamil, Aranvaliyuruthal

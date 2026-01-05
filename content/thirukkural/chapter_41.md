@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 141
 title: Chapter 41 - Kallaamai
 title_ta: அதிகாரம் 41 - கல்லாமை
 lyrics_en: Thirukkural, Tamil, Kallaamai

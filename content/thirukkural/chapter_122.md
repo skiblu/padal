@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 222
 title: Chapter 122 - Kalavunilaiyuraiththal
 title_ta: அதிகாரம் 122 - கனவுநிலையுரைத்தல்
 lyrics_en: Thirukkural, Tamil, Kalavunilaiyuraiththal

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 137
 title: Chapter 37 - Avaavuruththal
 title_ta: அதிகாரம் 37 - அவாவறுத்தல்
 lyrics_en: Thirukkural, Tamil, Avaavuruththal

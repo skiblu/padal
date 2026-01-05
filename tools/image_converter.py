@@ -225,7 +225,7 @@ Examples:
                         help='Input folder containing PNG files')
     parser.add_argument('--output', '-o', default=None,
                         help='Output folder for converted files (default: input_folder)')
-    parser.add_argument('--format', '-f', choices=['svg', 'webp', 'both'], default='svg',
+    parser.add_argument('--format', '-f', choices=['svg', 'webp', 'both'], default='webp',
                         help='Output format (svg, webp, or both; default: svg)')
     parser.add_argument('--quality', '-q', type=int, default=85,
                         help='Optimization quality (0-100, default: 85)')

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 182
 title: Chapter 82 - Thee Natpu
 title_ta: அதிகாரம் 82 - தீ நட்பு
 lyrics_en: Thirukkural, Tamil, Thee, Natpu

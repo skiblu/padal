@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 172
 title: Chapter 72 - Avaiyarithal
 title_ta: அதிகாரம் 72 - அவையறிதல்
 lyrics_en: Thirukkural, Tamil, Avaiyarithal

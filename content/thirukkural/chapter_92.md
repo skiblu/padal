@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 192
 title: Chapter 92 - Varaivinmagalir
 title_ta: அதிகாரம் 92 - வரைவின்மகளிர்
 lyrics_en: Thirukkural, Tamil, Varaivinmagalir

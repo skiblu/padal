@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 230
 title: Chapter 130 - Nenjjodupulathal
 title_ta: அதிகாரம் 130 - நெஞ்சொடுபுலத்தல்
 lyrics_en: Thirukkural, Tamil, Nenjjodupulathal

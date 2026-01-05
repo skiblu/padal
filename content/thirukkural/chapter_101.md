@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 201
 title: Chapter 101 - Nanriil Selvam
 title_ta: அதிகாரம் 101 - நன்றியில்செல்வம்
 lyrics_en: Thirukkural, Tamil, Nanriil, Selvam

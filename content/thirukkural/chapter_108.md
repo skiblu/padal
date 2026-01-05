@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 208
 title: Chapter 108 - Kayamai
 title_ta: அதிகாரம் 108 - கயமை
 lyrics_en: Thirukkural, Tamil, Kayamai

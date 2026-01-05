@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 216
 title: Chapter 116 - Pirivaatraamai
 title_ta: அதிகாரம் 116 - பிரிவாற்றாமை
 lyrics_en: Thirukkural, Tamil, Pirivaatraamai

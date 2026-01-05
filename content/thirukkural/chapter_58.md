@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 157
 title: Chapter 58 - Kannotam
 title_ta: அதிகாரம் 58 - கண்ணோட்டம்
 lyrics_en: Thirukkural, Tamil, Kannotam

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 109
 title: Chapter 9 - Virundhombal
 title_ta: அதிகாரம் 9 - விருந்தோம்பல்
 lyrics_en: Thirukkural, Tamil, Virundhombal

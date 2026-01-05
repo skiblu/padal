@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 218
 title: Chapter 118 - Kanviduppazhithal
 title_ta: அதிகாரம் 118 - கண்விதுப்பழிதல்
 lyrics_en: Thirukkural, Tamil, kanviduppazhithal

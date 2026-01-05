@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 154
 title: Chapter 54 - Pochchavamai
 title_ta: அதிகாரம் 54 - பொச்சாவாமை
 lyrics_en: Thirukkural, Tamil, Pochchavamai

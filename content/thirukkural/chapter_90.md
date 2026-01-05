@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 190
 title: Chapter 90 - Poriyaraip Pizhaiyamai
 title_ta: அதிகாரம் 90 - பெரியாரைப் பிழையாமை
 lyrics_en: Thirukkural, Tamil, Poriyaraip, Pizhaiyamai

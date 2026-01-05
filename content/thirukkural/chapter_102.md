@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 202
 title: Chapter 102 - Naanudaimai
 title_ta: அதிகாரம் 102 - நாணுடைமை
 lyrics_en: Thirukkural, Tamil, Naanudaimai

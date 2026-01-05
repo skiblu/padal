@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 229
 title: Chapter 129 - Punarccividumpal
 title_ta: அதிகாரம் 129 - புணர்ச்சிவிதும்பல்
 lyrics_en: Thirukkural, Tamil, Punarccividumpal

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 106
 title: Chapter 6 - Vaazhkait Thunainalam
 title_ta: அதிகாரம் 6 - வாழ்க்கைத் துணைநலம்
 lyrics_en: Thirukkural, Tamil, Vaazhkait, Thunainalam

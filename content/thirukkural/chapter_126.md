@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 226
 title: Chapter 126 - Ninaiyazhithal
 title_ta: அதிகாரம் 126 - நிறையழிதல்
 lyrics_en: Thirukkural, Tamil, Ninaiyazhithal

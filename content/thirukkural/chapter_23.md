@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 123
 title: Chapter 23 - Ikai
 title_ta: அதிகாரம் 23 - ஈகை
 lyrics_en: Thirukkural, Tamil, Ikai

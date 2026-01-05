@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 176
 title: Chapter 76 - Porulseyalvakai
 title_ta: அதிகாரம் 76 - பொருள்செயல்வகை
 lyrics_en: Thirukkural, Tamil, Porulseyalvakai

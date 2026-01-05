@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 107
 title: Chapter 7 - Puthalvarai Peruthal
 title_ta: அதிகாரம் 7 - புதல்வரைப் பெறுதல்
 lyrics_en: Thirukkural, Tamil, Puthalvarai, Peruthal

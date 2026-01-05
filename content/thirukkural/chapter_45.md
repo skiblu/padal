@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 145
 title: Chapter 45 - Periyarai Thunaikkodal
 title_ta: அதிகாரம் 45 - பெரியாரைத் துணைக்கோடல்
 lyrics_en: Thirukkural, Tamil, Periyarai, Thunaikkodal

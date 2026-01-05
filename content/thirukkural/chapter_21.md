@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 121
 title: Chapter 21 - Theevinaiyachcham
 title_ta: அதிகாரம் 21 - தீவினையச்சம்
 lyrics_en: Thirukkural, Tamil, Theevinaiyachcham

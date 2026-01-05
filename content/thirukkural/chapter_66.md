@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 166
 title: Chapter 66 - Vinaitthooimai
 title_ta: அதிகாரம் 66 - வினைத்தூய்மை
 lyrics_en: Thirukkural, Tamil, Vinaitthooimai

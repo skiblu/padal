@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 165
+nav_order: 215
 title: Chapter 115 - அலரறிவுறுத்தல்
 title_ta: அதிகாரம் 115 - அலரறிவுறுத்தல்
 lyrics_en: Thirukkural, Tamil, 

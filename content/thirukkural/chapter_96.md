@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 196
 title: Chapter 96 - Kudimai
 title_ta: அதிகாரம் 96 - குடிமை
 lyrics_en: Thirukkural, Tamil, Kudimai

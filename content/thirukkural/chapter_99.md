@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 199
 title: Chapter 99 - Saanraanmai
 title_ta: அதிகாரம் 99 - சான்றாண்மை
 lyrics_en: Thirukkural, Tamil, Saanraanmai

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 127
 title: Chapter 27 - Thavam
 title_ta: அதிகாரம் 27 - தவம்
 lyrics_en: Thirukkural, Tamil, Thavam

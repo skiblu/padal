@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 136
 title: Chapter 36 - Meyyunarthal
 title_ta: அதிகாரம் 36 - மெய்யுணர்தல்
 lyrics_en: Thirukkural, Tamil, Meyyunarthal

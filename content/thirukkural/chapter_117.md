@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 217
 title: Chapter 117 - Padarmelinthirangal
 title_ta: அதிகாரம் 117 - படர்மெலிந்திரங்கல்
 lyrics_en: Thirukkural, Tamil, Padarmelinthirangal

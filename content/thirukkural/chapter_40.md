@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 140
 title: Chapter 40 - Kalvi
 title_ta: அதிகாரம் 40 - கல்வி
 lyrics_en: Thirukkural, Tamil, Kalvi

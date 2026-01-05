@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 188
 title: Chapter 88 - Pakaithirandherithal
 title_ta: அதிகாரம் 88 - பகைத்திறந்தெரிதல்
 lyrics_en: Thirukkural, Tamil, Pakaithirandherithal

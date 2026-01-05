@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 189
 title: Chapter 89 - Utpagai
 title_ta: அதிகாரம் 89 - உட்பகை
 lyrics_en: Thirukkural, Tamil, Utpagai

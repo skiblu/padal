@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 219
 title: Chapter 119 - Pasappuruparuvaral
 title_ta: அதிகாரம் 119 - பசப்புறுபருவரல்
 lyrics_en: Thirukkural, Tamil, Pasappuruparuvaral

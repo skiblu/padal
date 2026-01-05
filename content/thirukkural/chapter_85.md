@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 185
 title: Chapter 85 - Pullarivaanmai
 title_ta: அதிகாரம் 85 - புல்லறிவாண்மை
 lyrics_en: Thirukkural, Tamil, Pullarivaanmai

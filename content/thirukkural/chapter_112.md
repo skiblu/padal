@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 212
 title: Chapter 112 - Nalpunainthuraiththal
 title_ta: அதிகாரம் 112 - நலம்புனைந்துரைத்தல்
 lyrics_en: Thirukkural, Tamil, Nalpunainthuraiththal

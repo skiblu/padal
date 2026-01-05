@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 117
 title: Chapter 17 - Azhukkaaramai
 title_ta: அதிகாரம் 17 - அழுக்காறாமை
 lyrics_en: Thirukkural, Tamil, Azhukkaaramai

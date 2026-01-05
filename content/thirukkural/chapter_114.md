@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 214
 title: Chapter 114 - Nanudhuravuraiththal
 title_ta: அதிகாரம் 114 - நாணுத்துறவுரைத்தல்
 lyrics_en: Thirukkural, Tamil, Nanudhuravuraiththal

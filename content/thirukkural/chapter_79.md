@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 179
 title: Chapter 79 - Natpu
 title_ta: அதிகாரம் 79 - நட்பு
 lyrics_en: Thirukkural, Tamil, Natpu

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 129
 title: Chapter 29 - Kallamai
 title_ta: அதிகாரம் 29 - கள்ளாமை
 lyrics_en: Thirukkural, Tamil, Kallamai

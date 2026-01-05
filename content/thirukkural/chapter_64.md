@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 164
 title: Chapter 64 - Amaichu
 title_ta: அதிகாரம் 64 - அமைச்சு
 lyrics_en: Thirukkural, Tamil, Amaichu

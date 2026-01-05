@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 150
 title: Chapter 50 - Idanarithal
 title_ta: அதிகாரம் 50 - இடனறிதல்
 lyrics_en: Thirukkural, Tamil, Idanarithal

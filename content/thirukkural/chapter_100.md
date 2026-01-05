@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 200
 title: Chapter 100 - Panbudaimai
 title_ta: அதிகாரம் 100 - பண்புடைமை
 lyrics_en: Thirukkural, Tamil, Panbudaimai

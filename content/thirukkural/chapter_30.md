@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 130
 title: Chapter 30 - Vaaymai
 title_ta: அதிகாரம் 30 - வாய்மை
 lyrics_en: Thirukkural, Tamil, Vaaymai

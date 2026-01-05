@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 144
 title: Chapter 44 - Kuttrangkaadithal
 title_ta: அதிகாரம் 44 - குற்றங்கடிதல்
 lyrics_en: Thirukkural, Tamil, Kuttrangkaadithal

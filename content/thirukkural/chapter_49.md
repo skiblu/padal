@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 149
 title: Chapter 49 - Kaalamarithal
 title_ta: அதிகாரம் 49 - காலமறிதல்
 lyrics_en: Thirukkural, Tamil, Kaalamarithal

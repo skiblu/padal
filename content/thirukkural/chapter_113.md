@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 213
 title: Chapter 113 - KaatharchiRappuraitthal
 title_ta: அதிகாரம் 113 - காதற்சிறப்புரைத்தல்
 lyrics_en: Thirukkural, Tamil, KaatharchiRappuraitthal

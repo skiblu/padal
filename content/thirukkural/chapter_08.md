@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 108
 title: Chapter 8 - Anbudaimai
 title_ta: அதிகாரம் 8 - அன்புடைமை
 lyrics_en: Thirukkural, Tamil, Anbudaimai

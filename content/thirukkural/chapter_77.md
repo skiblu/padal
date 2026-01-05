@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 177
 title: Chapter 77 - Padaimatchi
 title_ta: அதிகாரம் 77 - படைமாட்சி
 lyrics_en: Thirukkural, Tamil, Padaimatchi

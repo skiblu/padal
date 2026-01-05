@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 204
 title: Chapter 104 - Uzhavu
 title_ta: அதிகாரம் 104 - உழவு
 lyrics_en: Thirukkural, Tamil, Uzhavu 

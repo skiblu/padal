@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 161
 title: Chapter 61 - Madiyinmai
 title_ta: அதிகாரம் 61 - மடியின்மை
 lyrics_en: Thirukkural, Tamil, Madiyinmai

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 128
 title: Chapter 28 - Koodavozhukkam
 title_ta: அதிகாரம் 28 - கூடாவொழுக்கம்
 lyrics_en: Thirukkural, Tamil, Koodavozhukkam

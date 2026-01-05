@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 169
 title: Chapter 69 - Thoodhu
 title_ta: அதிகாரம் 69 - தூது
 lyrics_en: Thirukkural, Tamil, Thoodhu

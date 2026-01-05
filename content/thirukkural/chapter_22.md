@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 122
 title: Chapter 22 - Oppuravaarithal
 title_ta: அதிகாரம் 22 - ஒப்புரவறிதல்
 lyrics_en: Thirukkural, Tamil, Oppuravaarithal

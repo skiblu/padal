@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 181
 title: Chapter 81 - Palaimai
 title_ta: அதிகாரம் 81 - பழைமை
 lyrics_en: Thirukkural, Tamil, Palaimai

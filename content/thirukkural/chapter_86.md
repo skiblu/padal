@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 186
 title: Chapter 86 - Ekal
 title_ta: அதிகாரம் 86 - இகல்
 lyrics_en: Thirukkural, Tamil, Ekal

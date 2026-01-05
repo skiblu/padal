@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 101
 title: Chapter 1 - Kadavul Vaazhthu
 title_ta: அதிகாரம் 1 - கடவுள் வாழ்த்து
 lyrics_en: Thirukkural, Tamil, Kadavul, Vaazhthu

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 162
 title: Chapter 62 - Aalvinaiyudaimai
 title_ta: அதிகாரம் 62 - ஆள்வினையுடைமை
 lyrics_en: Thirukkural, Tamil, Aalvinaiyudaimai

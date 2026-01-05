@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 205
 title: Chapter 105 - Nalkuravu
 title_ta: அதிகாரம் 105 - நல்குரவு
 lyrics_en: Thirukkural, Tamil, Nalkuravu

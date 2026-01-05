@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 228
 title: Chapter 128 - Kuriparivuruthal
 title_ta: அதிகாரம் 128 - குறிப்பறிவுறுத்தல்
 lyrics_en: Thirukkural, Tamil, Kuriparivuruthal

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 126
 title: Chapter 26 - Pulanmaruththal
 title_ta: அதிகாரம் 26 - புலான்மறுத்தல்
 lyrics_en: Thirukkural, Tamil, Pulanmaruththal

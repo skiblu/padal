@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 194
 title: Chapter 94 - Soothu
 title_ta: அதிகாரம் 94 - சூது
 lyrics_en: Thirukkural, Tamil, Soothu

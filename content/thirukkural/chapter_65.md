@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 165
 title: Chapter 65 - Solvanmai
 title_ta: அதிகாரம் 65 - சொல்வன்மை
 lyrics_en: Thirukkural, Tamil, Solvanmai

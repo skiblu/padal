@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 211
 title: Chapter 111 - Punarccimakizhdhal
 title_ta: அதிகாரம் 111 - புணர்ச்சிமகிழ்தல்
 lyrics_en: Thirukkural, Tamil, Punarccimakizhdhal

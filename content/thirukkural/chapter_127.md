@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 227
 title: Chapter 127 - Avarvayinvidumpal
 title_ta: அதிகாரம் 127 - அவர்வயின்விதும்பல்
 lyrics_en: Thirukkural, Tamil, Avarvayinvidumpal

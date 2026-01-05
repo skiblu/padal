@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 118
 title: Chapter 18 - Vegamaai
 title_ta: அதிகாரம் 18 - வெஃகாமை
 lyrics_en: Thirukkural, Tamil, Vegamaai

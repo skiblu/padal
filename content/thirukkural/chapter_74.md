@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 174
 title: Chapter 74 - Nadu
 title_ta: அதிகாரம் 74 - நாடு
 lyrics_en: Thirukkural, Tamil, Nadu

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 142
 title: Chapter 42 - Kelvi
 title_ta: அதிகாரம் 42 - கேள்வி
 lyrics_en: Thirukkural, Tamil, Kelvi

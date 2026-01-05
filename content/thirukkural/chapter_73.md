@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 173
 title: Chapter 73 - Avaiyanjamai
 title_ta: அதிகாரம் 73 - அவையஞ்சாமை
 lyrics_en: Thirukkural, Tamil, Avaiyanjamai

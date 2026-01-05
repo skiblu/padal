@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 152
 title: Chapter 52 - Therinduvinaiyaadal
 title_ta: அதிகாரம் 52 - தெரிந்துவினையாடல்
 lyrics_en: Thirukkural, Tamil, Therinduvinaiyaadal

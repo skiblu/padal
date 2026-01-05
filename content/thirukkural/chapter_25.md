@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 125
 title: Chapter 25 - Aruludaimai
 title_ta: அதிகாரம் 25 - அருளுடைமை
 lyrics_en: Thirukkural, Tamil, Aruludaimai

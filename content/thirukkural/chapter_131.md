@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 231
 title: Chapter 131 - Pulavi
 title_ta: அதிகாரம் 131 - புலவி
 lyrics_en: Thirukkural, Tamil, Pulavi

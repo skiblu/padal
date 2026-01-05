@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 132
 title: Chapter 32 - Inna Seyyamai
 title_ta: அதிகாரம் 32 - இன்னாசெய்யாமை
 lyrics_en: Thirukkural, Tamil, Inna, Seyyamai

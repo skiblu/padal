@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 103
 title: Chapter 3 - Neethar Perumai
 title_ta: அதிகாரம் 3 - நீத்தார் பெருமை
 lyrics_en: Thirukkural, Tamil, Neethar, Perumai

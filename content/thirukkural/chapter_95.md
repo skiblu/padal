@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 195
 title: Chapter 95 - Marundu
 title_ta: அதிகாரம் 95 - மருந்து
 lyrics_en: Thirukkural, Tamil, Marundu

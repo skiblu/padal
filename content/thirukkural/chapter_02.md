@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 102
 title: Chapter 2 - Vaan Sirappu
 title_ta: அதிகாரம் 2 - வான் சிறப்பு
 lyrics_en: Thirukkural, Tamil, Vaan, Sirappu

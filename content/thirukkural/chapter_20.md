@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 120
 title: Chapter 20 - Payanila Sollamai
 title_ta: அதிகாரம் 20 - பயனில சொல்லாமை
 lyrics_en: Thirukkural, Tamil, Payanila, Sollamai

@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 105
 title: Chapter 5 - Ilvaazhkkai
 title_ta: அதிகாரம் 5 - இல்வாழ்க்கை
 lyrics_en: Thirukkural, Tamil, Ilvaazhkkai

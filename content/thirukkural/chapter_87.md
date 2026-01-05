@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 187
 title: Chapter 87 - Pakaimatchi
 title_ta: அதிகாரம் 87 - பகைமாட்சி
 lyrics_en: Thirukkural, Tamil, Pakaimatchi

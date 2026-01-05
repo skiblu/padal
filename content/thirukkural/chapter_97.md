@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 197
 title: Chapter 97 - Maanam
 title_ta: அதிகாரம் 97 - மானம்
 lyrics_en: Thirukkural, Tamil, Maanam

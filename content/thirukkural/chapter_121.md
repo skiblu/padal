@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 221
 title: Chapter 121 - Ninaindhuvarpulampal
 title_ta: அதிகாரம் 121 - நினைந்தவர்புலம்பல்
 lyrics_en: Thirukkural, Tamil, Ninaindhuvarpulampal

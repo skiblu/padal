@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 163
 title: Chapter 63 - Idukkanazhiyaimai
 title_ta: அதிகாரம் 63 - இடுக்கணழியாமை
 lyrics_en: Thirukkural, Tamil, Idukkanazhiyaimai

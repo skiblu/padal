@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 206
 title: Chapter 106 - Iravu
 title_ta: அதிகாரம் 106 - இரவு
 lyrics_en: Thirukkural, Tamil, Iravu

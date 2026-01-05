@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 116
 title: Chapter 16 - Poraiyudaimai
 title_ta: அதிகாரம் 16 - பொறையுடைமை
 lyrics_en: Thirukkural, Tamil, Poraiyudaimai

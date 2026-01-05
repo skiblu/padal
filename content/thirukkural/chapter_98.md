@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 198
 title: Chapter 98 - Porumai
 title_ta: அதிகாரம் 98 - பெருமை
 lyrics_en: Thirukkural, Tamil, Porumai

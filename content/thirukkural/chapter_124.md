@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 224
 title: Chapter 124 - Uruppunalanazhithal
 title_ta: அதிகாரம் 124 - உறுப்புநலனழிதல்
 lyrics_en: Thirukkural, Tamil, Uruppunalanazhithal

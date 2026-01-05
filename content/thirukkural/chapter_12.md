@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 112
 title: Chapter 12 - Naduvil Nilaimai
 title_ta: அதிகாரம் 12 - நடுவு நிலைமை
 lyrics_en: Thirukkural, Tamil, Naduvil, Nilaimai

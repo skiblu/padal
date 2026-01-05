@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 146
 title: Chapter 46 - Sirrinanjeramai
 title_ta: அதிகாரம் 46 - சிற்றினஞ்சேராமை
 lyrics_en: Thirukkural, Tamil, Sirrinanjeramai

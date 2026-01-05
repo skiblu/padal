@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 193
 title: Chapter 93 - Kallunnamai
 title_ta: அதிகாரம் 93 - கள்ளுண்ணாமை
 lyrics_en: Thirukkural, Tamil, Kallunnamai

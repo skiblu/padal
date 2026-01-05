@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 209
 title: Chapter 109 - Thagaiananguruthal
 title_ta: அதிகாரம் 109 - தகையணங்குறுத்தல்
 lyrics_en: Thirukkural, Tamil, Thagaiananguruthal

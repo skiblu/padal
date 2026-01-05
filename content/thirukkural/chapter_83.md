@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 183
 title: Chapter 83 - Koodanadpu
 title_ta: அதிகாரம் 83 - கூடாநட்பு
 lyrics_en: Thirukkural, Tamil, Koodanadpu

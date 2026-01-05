@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 167
 title: Chapter 67 - Vinaitthidpam
 title_ta: அதிகாரம் 67 - வினைத்திட்பம்
 lyrics_en: Thirukkural, Tamil, Vinaitthidpam

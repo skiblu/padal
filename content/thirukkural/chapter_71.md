@@ -1,6 +1,6 @@
 ---
 section: Thirukkural
-nav_order: 50
+nav_order: 171
 title: Chapter 71 - Kuripparithal
 title_ta: அதிகாரம் 71 - குறிப்பறிதல்
 lyrics_en: Thirukkural, Tamil, Kuripparithal
