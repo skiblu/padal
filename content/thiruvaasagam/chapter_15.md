@@ -69,4 +69,5 @@ Aeḻaith Thoḻumpaṉaeṉ, Ethaṉaiyoa Kaalam Elaam,paaḻukku Iraithaeṉ, 
 Urai Maantha Uzh Ozhi Uthamaṉ Vanthu, Uzham Pukalum,karai Maantha Kaamap Perum Kathalaik Kathathalumae,irai Maantha Inthiriyap Paravai Irinthu Oatha,thurai Maanthavaa Paathi Thoazh Noakkam Aathaamoa!. Thiruppoṉ Oosal
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

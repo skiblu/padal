@@ -52,4 +52,5 @@ Paal Niṉainthu Oothum Thaayiṉum Saalap Parinthu, Nee, Paaviyaeṉuthaiyaoo�
 Puṉ Pulaal Yaakkai Purai Purai Kaṉiya Poṉ Nethum Koayilaap Pukunthu, Eṉeṉpu Elaam Urukki, Ezhiyai Aay, Aantha Eesaṉae! Maasu Ilaa Maniyae!thuṉpamae, Pirappae, Irappothu, Mayakku, Aam Thothakku Elaam, Arutha Nal Soathee!iṉpamae! Uṉṉais Sikkeṉap Pithithaeṉ; Engku Eḻuntharuzhuvathu, Iṉiyae?
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

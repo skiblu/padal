@@ -52,4 +52,5 @@ Pirivu Ariyaa Aṉpar, Niṉ Aruzh Pey Kaḻal Thaazh Inaik Keeḻ,marivu Ariyaa
 Vaḻangkukiṉraaykku Uṉ Aruzh Aar Amuthathai Vaarikkonthu,viḻungkukiṉraeṉ; Vikkiṉaeṉ Viṉaiyaeṉ, Eṉ Vithi Iṉmaiyaal;thaḻangku Arum Thaeṉ Aṉṉa Thaneer Parukath Thanthu, Uyyak Kozhzhaay;aḻungkukiṉraeṉ; Uthaiyaay! Athiyaeṉ Uṉ Athaikkalamae.
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

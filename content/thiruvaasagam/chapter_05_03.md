@@ -52,4 +52,5 @@ Vissai Thaaṉ Ithu Oppathu Unthoa? Kaethkiṉmiku Kaathal Athiyaar Tham Athiya�
 
 Thaevar Koa Ariyaatha Thaeva Thaevaṉ;seḻum Poḻilkazh Payanthu, Kaathu, Aḻikkumaraimoovar Koaṉaay Niṉra Muthalvaṉ; Moorthi;moothaathai; Maathu Aazhum Paakathu Enthai;yaavar Koaṉ; Eṉṉaiyum Vanthu Aanthukonthaaṉ;yaam Aarkkum Kuthi Aloam; Yaathumanysoam;maeviṉoam Avaṉ Athiyaar Athiyaaroathu;maeṉ Maelum Kuthainthu Aathi, Aathuvoamae.
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

@@ -52,4 +52,5 @@ Paangkiṉothu Parisu Oṉrum Ariyaatha Naayaeṉai,oangki, Uzhathu, Ozhi Vazhar
 Poothangkazh Ainthu Aaki, Pulaṉ Aaki, Poruzh Aaki,paethangkazh Aṉaithum Aay, Paetham Ilaap Perumaiyaṉai,kaethangkazh Kethuthu Aantha Kizhar Ozhiyai, Marakathathaivaethangkazh Thoḻuthu Aethum Vizhangku Thilaik Kanthaeṉae!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

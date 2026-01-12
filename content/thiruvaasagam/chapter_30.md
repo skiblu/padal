@@ -40,4 +40,5 @@ Paetham Ilathu Or Karpu Azhitha Perunthuraip Peru Vezhzhamae!aethamae Pala Paesa
 Iyakkimaar Arupathu Naalvarai En Kunam Seytha Eesaṉae!mayakkam Aayathu Oar Mum Malap Paḻa Val Viṉaikkuzh Aḻunthavum,thuyakku Aruthu, Eṉai Aanthukonthu, Niṉ Thoo Malark Kaḻal Thanthu, Eṉaikkayakka Vaithu, Athiyaar Muṉae Vanthu, Kaathiṉaay, Kaḻukkuṉrilae!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

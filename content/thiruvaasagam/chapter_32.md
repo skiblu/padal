@@ -56,4 +56,5 @@ Maaṉ Oar Pangkaa! Vanthippaar Mathurak Kaṉiyae! Maṉam Nekaanaaṉ, Oar Tho
 Koothik Koothi, Uṉ Athiyaar Kuṉippaar, Sirippaar, Kazhippaaraay;vaathi Vaathi, Vaḻi Arae, Varal Maram Poal Nirpaeṉoa?oothi Oothi, Uthaiyaayothu Kalanthu, Uzh Uruki, Peruki, Nekku,aathi Aathi, Aaṉantham Athuvae Aaka, Aruzh Kalanthae!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

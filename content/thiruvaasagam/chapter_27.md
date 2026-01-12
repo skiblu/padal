@@ -52,4 +52,5 @@ Thaathaay, Moo Aeḻ Ulakukkum Thaayae, Naayaeṉ Thaṉai Aanthapaethaay, Pirav
 Kaappaay, Pathaippaay, Karappaay, Muḻuthum; Kan Aar Visumpiṉ Vinoarkku Elaamooppaay; Moovaa Muthalaay Niṉra Muthalvaa; Muṉṉae Eṉai Aanthapaarppaaṉae; Em Paramaa!' Eṉru, Paathip Paathip Paninthu, Paathappoop Poathu Anaivathu Eṉru Koloa Eṉ Polaa Maniyaip Punarnthae?
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

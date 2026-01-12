@@ -53,4 +53,5 @@ Nyaalam, Inthiraṉ, Naaṉmukaṉ, Vaaṉoar, Nirka, Maru Eṉai Nayanthu, Iṉ
 Azhithu Vanthu, Eṉakku Aava' Eṉru Aruzhi, Assam Theertha Niṉ Aruzh Perungkathalil,thizhaithum, Thaekkiyum, Parukiyum, Urukaeṉ; Thirupperunthurai Maeviya Sivaṉae!vazhaik Kaiyaaṉothu Malaravaṉ Ariyaa Vaaṉavaa! Malai Maathu Oru Paakaa!kazhippu Elaam Mikak Kalangkithukiṉraeṉ; Kayilai Maa Malai Maeviya Kathalae!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

@@ -93,4 +93,5 @@ Muṉṉaaṉai, Moovarkkum; Murum Aay, Murukkumpiṉṉaaṉai; Pinynyakaṉai;
 Peri Pirarkku Ariya Pemaaṉ, Perunthuraiyaaṉ,korak Kuthiraiyiṉmael Vantharuzhi, Thaṉ Athiyaarkurangkazh Neekki, Kunam Konthu, Koathaathi,suriya Surath Thotharvu Aruppaaṉ Thol Pukaḻaepari, Ip Paasathaip Paru Ara Naam Paruvaaṉ,pariya Paer Aaṉantham Paathuthum Kaan; Amaaṉaay!thirussirampalam. Maanikkavaasakar Athikazh Poari!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

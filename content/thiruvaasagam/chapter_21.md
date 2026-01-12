@@ -51,4 +51,5 @@ Sirippaar; Kazhippaar; Thaeṉippaar; Thiranthu, Thiranthu, Uṉ Thiruvaarthaivi
 
 Nalkaathu Oḻiyaaṉ Namakku' Eṉru, Uṉ Naamaam Pithari, Nayaṉa Neermalkaa, Vaaḻthaa, Vaay Kuḻaraa, Vanangkaa, Maṉathaal Niṉainthu Uruki,palkaal Uṉṉaip Paavithu, Paravi, Poṉṉampalam' Eṉraeolkaa Nirkum Uyirkku Irangki, Aruzhaay! Eṉṉai Uthaiyaaṉae!
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

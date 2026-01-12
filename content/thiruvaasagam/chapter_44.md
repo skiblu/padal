@@ -37,4 +37,5 @@ Kaanum Athu Oḻinthaeṉ Niṉ Thirup Paatham; Kanthu Kan Kazhi Koora,paenum At
 Paal Thiru Neeru Em Paramaṉai; Param Karunaiyothum Ethirnthuthoari, Mey Athiyaarkku Aruzh Thurai Azhikkum Soathiyai; Neethi Ilaeṉ,poari, Eṉ Amuthae, Eṉa Niṉainthu, Aethi, Pukaḻnthu, Aḻaithu, Alari, Eṉ Uzhzhaeaaruvaṉ Aaka; Uthaiyavaṉae, Eṉai, Aava' Eṉru Aruzhaayae!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

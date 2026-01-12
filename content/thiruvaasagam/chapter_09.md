@@ -94,4 +94,5 @@ Vatha Malark Koṉrai Maalai Paathi, Mathamum Paathi, Mathiyum Paathi,sitharkazh
 Vaethamum, Vaezhviyum, Aayiṉaarkku; Meymaiyum, Poymaiyum, Aayiṉaarkku;soathiyum Aay, Iruzh Aayiṉaarkku; Thuṉpamum Aay, Iṉpam Aayiṉaarkku;paathiyum Aay, Murum Aayiṉaarkku; Panthamum Aay, Veethum Aayiṉaarukku;aathiyum, Anthamum, Aayiṉaarukku; Aatha, Porsunam Ithithum, Naamae!thirussirampalam. Maanikkavaasakar Athikazh Poari!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

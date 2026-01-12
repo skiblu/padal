@@ -52,4 +52,5 @@ Kathu Aruthu, Eṉai Aanthu, Kan Aara, Neeruitha Aṉparothu, Yaavarum Kaanavae,
 
 Arivaṉae! Amuthae! Athi Naayiṉaeṉarivaṉ Aakak Konthoa, Eṉai Aanthathum?arivu Ilaamai Aṉrae Kanthathu, Aantha Naazh?arivaṉoa, Alaṉoa? Aruzh, Eesaṉae!
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

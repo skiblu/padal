@@ -52,4 +52,5 @@ Paaḻs Sey Vizhaavi, Payaṉ Iliyaayk Kithappaerku,keeḻs Sey Thavathaal Kiḻ
 Komai Vari Mulaik Kompu Aṉaiyaazh Kooraṉukku,semai Maṉathaal Thirup Panikazh Seyvaeṉukku,imai Tharum Payaṉ Ithaṉaiyum Eengku Oḻikkum,amai Kulaa Thilai Aanthaaṉaik Konthaṉrae.
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

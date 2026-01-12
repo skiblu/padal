@@ -52,4 +52,5 @@ Sethi Aar Aakkaith Thiram Ara Veesi, Sivapura Nakar Pukku,kathi Aar Soathi Kanth
 Vem, Sael Aṉaiya Kanaar Tham Vekuzhi Valaiyil Akappathu,nainysaeṉ, Naayaeṉ; Nyaaṉas Sutharae! Naaṉ Oar Thunai Kaanaeṉ;panysu Aer Athiyaazh Paakathu Oruvaa! Pavazhath Thiruvaayaal,anysael' Eṉṉa, Aasaippathaeṉ Kanthaay; Amaaṉae!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

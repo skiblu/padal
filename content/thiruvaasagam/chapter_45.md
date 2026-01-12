@@ -53,4 +53,5 @@ Saerak Karuthi, Sinthaṉaiyaith Thiruntha Vaithu, Sinthimiṉ;poaril Poliyum Va
 Purazhvaar, Thoḻuvaar, Pukaḻvaar, Aay; Iṉrae Vanthu, Aazh Aakaatheer,maruzhveer; Piṉṉai, Mathippaar Aar? Mathiyuzh Kalangki, Mayangkuveer;theruzhveer Aakil, Ithu Seymiṉ; Sivaloakak Koaṉ, Thiruppuyangkaṉaruzh Aar Peruvaar, Akal Ithathae? Anthoa! Anthoa! Anthoavae!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

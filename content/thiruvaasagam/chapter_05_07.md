@@ -52,4 +52,5 @@ Theerntha Aṉpaaya Aṉparkku Avariṉum Aṉpa, Poari!paernthum, Eṉ Poymai A
 
 Poari! Ip Puvaṉam, Neer, Thee, Kaalothu, Vaaṉam Aaṉaay;poari! Ev Uyirkkum Thoaram Aaki, Nee, Thoaram Ilaay;poari! Elaa Uyirkkum Eeru Aay, Eeru Iṉmai Aaṉaay;poari! Aim Pulaṉkazh Niṉṉaip Punarkilaap Punarkkaiyaaṉae.
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

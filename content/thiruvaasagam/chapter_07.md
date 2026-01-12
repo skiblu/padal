@@ -93,4 +93,5 @@ Uṉ Kaiyil Pizhzhai Uṉakkae Athaikkalam, Eṉruangku Ap Paḻanysol Puthukkum
 Poari! Aruzhuka, Niṉ Aathi Aam Paatha Malar.poari! Aruzhuka, Niṉ Antham Aam Sem Thazhirkazh.poari! Elaa Uyirkkum Thoaram Aam Poṉ Paatham.poari! Elaa Uyirkkum Poakam Aam Poom Kaḻalkazh.poari! Elaa Uyirkkum Eeru Aam Inai Athikazh.poari! Maal, Naaṉmukaṉum, Kaanaatha Puntharikam.poari! Yaam Uyya, Aathkontharuzhum Poṉ Malarkazh.poari! Yaam Maarkaḻi Neer Aathu' Ael Oar Empaavaay!thirussirampalam. Maanikkavaasakar Athikazh Poari!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

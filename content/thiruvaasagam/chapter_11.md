@@ -48,7 +48,8 @@ lyrics_ta: திருவாசகம், தமிழ், ஆன்மிக�
 விண்ணோர் முழு முதல்; பாதாளத் தார் வித்து;மண்ணோர் மருந்து; அயன், மால், உடைய வைப்பு; அடியோம்கண் ஆர, வந்துநின்றான்; கருணைக் கழல் பாடி,தென்னா, தென்னா என்று தெள்ளேணம் கொட்டாமோ!
 
 குலம் பாடி , கொக்கு இறகும் பாடி, கோல் வளையாள்நலம் பாடி, நஞ்சு உண்ட வா பாடி, நாள்தோறும்அலம்பு ஆர் புனல் தில்லை அம்பலத்தே ஆடுகின்றசிலம்பு ஆடல் பாடி, நாம் தெள்ளேணம் கொட்டாமோ!
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}
 
 
 
@@ -93,4 +94,5 @@ Vinoar Muḻu Muthal; Paathaazhath Thaar Vithu;manoar Marunthu; Ayaṉ, Maal, Ut
 Kulam Paathi , Kokku Irakum Paathi, Koal Vazhaiyaazhnalam Paathi, Nanysu Untha Vaa Paathi, Naazhthoarumalampu Aar Puṉal Thilai Ampalathae Aathukiṉrasilampu Aathal Paathi, Naam Thezhzhaenam Kothaamoa!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

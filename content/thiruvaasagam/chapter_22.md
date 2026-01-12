@@ -53,4 +53,5 @@ Soathiyaayth Thoaṉrum Uruvamae! Aru Aam Oruvaṉae! Solutharku Ariyaaathiyae! 
 Thanthathu, Uṉ Thaṉṉai; Konthathu, Eṉ Thaṉṉai; Sangkaraa! Aar Koloa, Sathurar?antham Oṉru Ilaa Aaṉantham Peraeṉ; Yaathu Nee Perathu Oṉru, Eṉpaal?sinthaiyae Koayil Kontha Emperumaaṉ! Thirupperunthurai Urai Sivaṉae!enthaiyae! Eesaa! Uthal Itham Konthaay; Yaaṉ Itharku Ilaṉ, Oar Kaimaarae!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

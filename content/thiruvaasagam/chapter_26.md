@@ -52,4 +52,5 @@ Ura Aakkaiyiṉ Uru Poruzh, Naru Malar Eḻutharu Naaram Poal,paral Aavathu Oar 
 Iruzh Thininthu Eḻunthithathu Oar Valviṉais Siru Kuthil, Ithu: Ithaipporuzh Eṉak Kazhithu, Aru Narakathithai Viḻap Pukukiṉraeṉaitheruzhum Mumathil, Nothi Varai Ithithara, Siṉap Pathathothu Sem Theearuzhum Meyneri Poyneri Neekkiya Athisayam Kanthaamae!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

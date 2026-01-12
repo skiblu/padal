@@ -92,4 +92,5 @@ Kazhvaṉ, Kathiyaṉ, Kalathi, Ivaṉ' Eṉṉaathae,vazhzhal, Varavara Vanthu 
 Poo Mael Ayaṉoathu Maalum Pukal Arithu Eṉruaemaari Nirka, Athiyaeṉ Irumaakka,naay Mael Thavisu Ithu, Naṉraap Poruthpathuthathee Maeṉiyaaṉukkae Seṉru Oothaay; Koathumpee!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

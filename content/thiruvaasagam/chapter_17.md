@@ -52,4 +52,5 @@ Thaiyal Oar Pangkiṉar, Thaapatha Vaethathar,aiyam Pukuvaraal; Aṉṉae! Eṉ�
 
 Koṉrai, Mathiyamum, Koovizham, Mathamum,thuṉriya Seṉṉiyar; Aṉṉae! Eṉṉum.thuṉriya Seṉṉiyiṉ Matham Uṉmathamae,iṉru, Eṉakku Aaṉa Aaru; Aṉṉae! Eṉṉum.
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

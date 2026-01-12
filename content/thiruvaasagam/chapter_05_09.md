@@ -52,4 +52,5 @@ Panivaar Pini Theertharuzhi, Paḻaiya Athiyaarkku Uṉani Aar Paatham Kothuthi;
 
 Yaaṉae Poy; Eṉ Nenysum Poy; Eṉ Aṉpum Poy;aaṉaal, Viṉaiyaeṉ Aḻuthaal, Uṉṉaip Peralaamae?thaeṉae, Amuthae, Karumpiṉ Thezhivae, Thithikkumaaṉae, Aruzhaay Athiyaeṉ Uṉai Vanthu Urumaarae.
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

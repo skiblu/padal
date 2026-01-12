@@ -52,4 +52,5 @@ Maruvu Iṉiya Malarp Paatham, Maṉathil Vazharnthu Uzh Uruka,theruvuthorum Mik
 Naaṉaeyoa Thavam Seythaeṉ? Sivaaya Nama' Eṉap Peraeṉ?thaeṉ Aay, Iṉ Amuthamum Aay, Thithikkum Sivaperumaaṉthaaṉae Vanthu, Eṉathu Uzhzham Pukunthu, Athiyaerku Aruzh Seythaaṉooṉ Aarum Uyir Vaaḻkkai Oruthu Aṉrae, Veruthithavae!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

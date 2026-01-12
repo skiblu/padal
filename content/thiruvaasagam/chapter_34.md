@@ -52,4 +52,5 @@ Essam Arivaeṉ Naaṉ; Eṉakku Irukkiṉrathai Ariyaeṉ;assoa! Engkazh Araṉ
 Vaaṉ Paaviya Ulakathavar Thavamae Seya, Avamae,ooṉ Paaviya Uthalais Sumanthu, Athavi Maram Aaṉaeṉ;thaeṉ Paay Malark Koṉrai Maṉṉu Thirupperunthurai Uraivaay!naaṉ Paaviyaṉ Aaṉaal, Uṉai Nalkaay Eṉal Aamae?
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

@@ -52,4 +52,5 @@ Maruzhaṉaeṉ Maṉathai Mayakku Ara Noakki, Marumaiyoathu Imaiyum Kethuthapor
 Thirunthu Vaar Poḻil Sooḻ Thirupperunthuraiyil Seḻu Malark Kuruntham Maeviya Seerirunthavaaru Eni, Aesaraa, Niṉainthithu, Eṉṉuthai Empiraaṉ' Eṉru Eṉru,arunthavaa! Niṉainthae, Aatharithu Aḻaithaal, Alai Kathal Athaṉuzhae Niṉruporuntha, Vaa; Kayilai Puku Neri Ithu Kaan; Poatharaay' Eṉru Aruzhaayae!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}

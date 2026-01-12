@@ -45,8 +45,9 @@ lyrics_ta: திருவாசகம், தமிழ், ஆன்மிக�
 
 போற்றி, புகழ்ந்திருந்து, பொய் கெட்டு, மெய் ஆனார்மீட்டு இங்கு வந்து, வினைப் பிறவி சாராமே,கள்ளப் புலக் குரம்பை கட்டழிக்க வல்லானே!நள் இருளில் நட்டம் பயின்று ஆடும் நாதனே!தில்லையுள் கூத்தனே! தென்பாண்டி நாட்டானே!
 
-அல்லல் பிறவி அறுப்பானே! ஓ!' என்று,சொல்லற்கு அரியானைச் சொல்லி, திருவடிக் கீழ்ச்சொல்லிய பாட்டின் பொருள் உணர்ந்து சொல்லுவார்செல்வர் சிவபுரத்தின் உள்ளார் சிவன் அடிக் கீழ்,பல்லோரும் ஏத்தப் பணிந்து. (95)திருச்சிற்றம்பலம். மாணிக்கவாசகர் அடிகள் போற்றி!
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+அல்லல் பிறவி அறுப்பானே! ஓ!' என்று,சொல்லற்கு அரியானைச் சொல்லி, திருவடிக் கீழ்ச்சொல்லிய பாட்டின் பொருள் உணர்ந்து சொல்லுவார்செல்வர் சிவபுரத்தின் உள்ளார் சிவன் அடிக் கீழ்,பல்லோரும் ஏத்தப் பணிந்து. திருச்சிற்றம்பலம். மாணிக்கவாசகர் அடிகள் போற்றி!
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}
 
 Namassivaaya Vaaḻka! Naathaṉ Thaazh Vaaḻka!imaip Poḻuthum Eṉ Nenysil Neengkaathaaṉ Thaazh Vaaḻka!koakaḻi Aantha Kurumani Thaṉ Thaazh Vaaḻka!aakamam Aakiniṉru Anippaaṉ Thaazh Vaaḻka!aekaṉ, Anaekaṉ, Iraivaṉ, Athi Vaaḻka!
 
@@ -84,7 +85,8 @@ Maaram Aam Vaiyakathiṉ Vevvaerae Vanthu, Arivu Aamthaeraṉae! Thaerath Thezhi
 
 Poari, Pukaḻnthirunthu, Poy Kethu, Mey Aaṉaarmeethu Ingku Vanthu, Viṉaip Piravi Saaraamae,kazhzhap Pulak Kurampai Kathaḻikka Valaaṉae!nazh Iruzhil Natham Payiṉru Aathum Naathaṉae!thilaiyuzh Koothaṉae! Theṉpaanthi Naathaaṉae!
 
-Alal Piravi Aruppaaṉae! Oa!' Eṉru,solarku Ariyaaṉais Soli, Thiruvathik Keeḻssoliya Paathiṉ Poruzh Unarnthu Soluvaarselvar Sivapurathiṉ Uzhzhaar Sivaṉ Athik Keeḻ,paloarum Aethap Paninthu. (95)thirussirampalam. Maanikkavaasakar Athikazh Poari!
+Alal Piravi Aruppaaṉae! Oa!' Eṉru,solarku Ariyaaṉais Soli, Thiruvathik Keeḻssoliya Paathiṉ Poruzh Unarnthu Soluvaarselvar Sivapurathiṉ Uzhzhaar Sivaṉ Athik Keeḻ,paloarum Aethap Paninthu. thirussirampalam. Maanikkavaasakar Athikazh Poari!
 
 
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} 
+{% include lang-filter.html lang="en" text=text_en %}
