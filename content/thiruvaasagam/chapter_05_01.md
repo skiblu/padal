@@ -53,5 +53,4 @@ Pavaṉ, Empiraaṉ, Paṉi Maa Mathik Kani, Vinoar Perumaaṉ,sivaṉ, Empiraa�
 
 Pukavae Thakaeṉ Uṉakku Aṉparuzh, Yaaṉ; Eṉ Polaa Maniyae!thakavae, Eṉai Uṉakku Aathkontha Thaṉmai? Ep Puṉmaiyaraimikavae Uyarthi, Vinoaraip Panithi; Anaa! Amuthae!nakavae Thakum Empiraaṉ! Eṉṉai Nee Seytha Naathakamae.
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

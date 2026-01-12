@@ -52,5 +52,4 @@ Kaar Uthaip Poṉ Thikaḻ Maeṉi, Kathi Poḻil Vaaḻum, Kuyilae!seer Uthais 
 Konthu Anavum Poḻil Soalaik Koom Kuyilae! Ithu Kaezh Nee;anthanaṉ Aaki Vanthu, Ingkae, Aḻakiya Saevathi Kaathi,em Thamar Aam Ivaṉ' Eṉru Ingku Eṉṉaiyum Aathkontharuzhum,sem Thaḻal Poal Thirumaeṉith Thaevar Piraaṉ, Varak Koovaay!
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

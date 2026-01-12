@@ -41,5 +41,4 @@ Koavae, Aruzha Vaenthaavoa? Kothiyaeṉ Kethavae Amaiyumae?aa! Aa!' Eṉṉaavit
 Nariyaik Kuthiraip Pari Aakki, Nyaalam Elaam Nikaḻvithu,periya Theṉṉaṉ Mathurai Elaam Pissu Athu Aerum Perunthuraiyaay!ariya Poruzhae! Avinaasi Appaa! Paanthi Vezhzhamae!theriya Ariya Paranysoathee! Seyvathu Oṉrum Ariyaeṉae!thirussirampalam. Maanikkavaasakar Athikazh Poari!
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

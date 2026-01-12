@@ -24,5 +24,4 @@ Sathaiyaaṉae, Thaḻal Aathee, Thayangku Moo Ilais Soolappathaiyaaṉae, Paran
 Uraarai Yaaṉ Vaenthaeṉ; Oor Vaenthaeṉ; Paer Vaenthaeṉ;karaarai Yaaṉ Vaenthaeṉ; Karpaṉavum Iṉi Amaiyum;kuraalathu Amarnthu Uraiyum Koothaa! Uṉ Kurai Kaḻarkae,karaaviṉ Maṉam Poala, Kasinthu, Uruka Vaenthuvaṉae!
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

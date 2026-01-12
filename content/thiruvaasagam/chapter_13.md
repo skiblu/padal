@@ -92,5 +92,4 @@ Athi Urithu, Athu Poartharuzhum Perunthuraiyaaṉ,pitha Vathivu Konthu, Iv Ulaki
 Maa Aara Vaeri Mathurainakar Pukuntharuzhithaevaarntha Koalath Thikaḻap Perunthuraiyaaṉkoavaaki Vanthemaik Kuraeval Kontharuzhumpoovaar Kaḻalparavip Poovali Koyyaamoa
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

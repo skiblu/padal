@@ -52,5 +52,4 @@ Manysu Ulaam Urumum Anysaeṉ; Maṉṉaroathu Uravum Anysaeṉ;nanysamae Amutha
 Koan Ilaa Vaazhi Anysaeṉ; Kooruvaṉ Seeram Anysaeṉ;neezh Nilaa Aniyiṉaaṉai Niṉainthu, Nainthu, Uruki, Nekku,vaazh Nilaam Kankazh Soara, Vaaḻthiniṉru, Aethamaathaaaan Alaathavaraik Kanthaal, Ama! Naam Anysumaarae!
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

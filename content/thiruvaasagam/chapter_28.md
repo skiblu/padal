@@ -52,5 +52,4 @@ Paava Naasaa, Uṉ Paathamae Alaal, Paru Naaṉ Maru Ilaeṉ Kanthaay;thaevar Th
 Paḻuthu Il Thol Pukaḻaazh Pangka! Nee Alaal, Paru Naaṉ Maru Ilaeṉ Kanthaay;seḻu Mathi Aninthaay, Sivapurathu Arasae! Thirupperunthurai Urai Sivaṉae!thoḻuvaṉoa Pirarai? Thuthippaṉoa? Eṉakku Oar Thunai Eṉa Niṉaivaṉoa? Solaay;maḻa Vithaiyaaṉae! Vaaḻkilaeṉ Kanthaay; Varuka' Eṉru, Aruzhpuriyaayae.
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

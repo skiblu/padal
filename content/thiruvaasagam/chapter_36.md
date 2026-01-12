@@ -52,5 +52,4 @@ Viraviya Thee Viṉai Maelaip Pirappu Muneer Kathakka,paraviya Aṉparai, Eṉpu
 Koorai Veṉru, Aangku Aivar Koakkazhaiyum Veṉru Irunthu, Aḻakaalveerirunthaaṉ, Perum Thaeviyum, Thaaṉum Or Meeṉavaṉpaalaeru Vanthu, Aar Uyir Untha, Thiral Orais Saevakaṉae;thaeram Ilaathavar! Saevathi Sikkeṉas Saermiṉkazhae.
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

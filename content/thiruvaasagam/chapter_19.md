@@ -53,5 +53,4 @@ Aaya Moḻik Kizhzhaay! Azhzhoorum Aṉparpaalmaeya Perunthuraiyaaṉ Meyth Thaa
 Soalaip Pasum Kizhiyae! Thoo Neerp Perunthuraik Koaṉkoalam Poliyum Kothi Kooraay Saalavumaethilaar Thun Eṉṉa, Mael Vizhangki, Aer Kaathumkoathu Ilaa Aeru Aam, Kothi.
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

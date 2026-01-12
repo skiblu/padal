@@ -52,5 +52,4 @@ Thaṉmai Piraraal Ariyaatha Thalaivaa! Polaa Naay Aaṉapuṉmaiyaeṉai Aanthu
 
 Pukuvaeṉ, Eṉathae Niṉ Paatham; Poarum Athiyaar Uzh Niṉrunakuvaeṉ, Panthu Thoazh Noakki Naanam Ilaa Naayiṉaeṉ.nekum Aṉpu Ilai, Niṉaik Kaana; Nee Aanthu Aruzha, Athiyaeṉumthakuvaṉae? Eṉ Thaṉmaiyae! Enthaay, Anthoa! Thariyaeṉae!
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

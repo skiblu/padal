@@ -161,5 +161,4 @@ Uzhzham Konthu Oar Urus Seythaangku, Eṉakkuazhzhooru Aakkai Amaithaṉaṉ; Oz
 Aruzhothu Paravamu Thaakkiṉaṉpiramaṉmaal Ariyaap Periyoaṉae. (182)thirussirampalam. Maanikkavaasakar Athikazh Poari!
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

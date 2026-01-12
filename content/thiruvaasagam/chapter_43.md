@@ -52,5 +52,4 @@ Thoo Vezhzhai Neeru Ani Emperumaaṉ, Soathi Mayaenthira Naathaṉ, Vanthuthaeva
 Am Kanaṉ, Engkazh Amarar Pemaaṉ, Athiyaarkku Amuthaṉ, Avaṉi Vanthaengkazh Piraaṉ, Irum Paasam Theera Ika Param Aayathu Or Iṉpam Eytha,sangkam Kavarnthu, Van Saathiṉoathum, Sathuraṉ, Perunthurai Aazhi, Aṉru,mangkaiyar Malku Mathurai Saerntha Vakai Arivaar Empiraaṉ Aavaarae.
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

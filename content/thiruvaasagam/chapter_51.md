@@ -49,5 +49,4 @@ Saathal, Pirappu, Eṉṉum Thatham Suḻiyil Thathumaari,kaathaliṉ Mikku, Ani
 Semai Nalam Ariyaatha Sithatharothum Thirivaeṉai,mumai Malam Aruvithu, Muthal Aaya Muthalvaṉ Thaaṉnamaiyum Oar Poruzh Aakki, Naay Sivikai Aeruvithaamai Eṉakku Aruzhiya Aaru, Aar Peruvaar? Assoavae!
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

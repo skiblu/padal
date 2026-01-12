@@ -93,5 +93,4 @@ Amparam Aam, Puzhzhith Thoal; Aalaalam, Aar Amutham;emperumaaṉ Untha Sathir, E
 Arum Thavarukku, Aaliṉ Keeḻ, Aram Muthalaa Naaṉkiṉaiyumirunthu, Avarukku Aruzhumathu Eṉakku Ariya Iyampu; Aethee!arum Thavarukku, Aram Muthal Naaṉku Aṉru Aruzhisseythilaṉael,thiruntha, Avarukku, Ulaku Iyarkai Theriyaa, Kaan; Saaḻaloa!
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

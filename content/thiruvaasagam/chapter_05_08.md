@@ -52,5 +52,4 @@ Sinthai Seykai Kaezhvi Vaakku Seeril Aim Pulaṉkazhaalmunthai Aaṉa Kaalam Ni�
 
 Iruppu Nenysa Vanysaṉaeṉai Aanthu Kontha Niṉṉa Thaazhkaruppu Mathu Vaay Mathuth Theṉaik Kalanthu Poakavumneruppum Unthu Yaaṉum Unthi Runtha Thuntha Thaayiṉumviruppum Unthu Niṉkan Eṉkan Eṉpa Theṉṉa Vissaiyae
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

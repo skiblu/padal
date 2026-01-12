@@ -52,5 +52,4 @@ Vampaṉaayth Thirivaeṉai Vaa' Eṉru Val Viṉaip Pakai Maaythithumumparaaṉ
 Muthaṉai, Muthal Soathiyai, Muk Kan Appaṉai, Muthal Vithiṉai,sithaṉai, Sivaloakaṉai, Thiru Naamam Paathith Thiritharumpatharkaazh! Ingkae, Vamiṉ, Neer; Ungkazh Paasam Theerap Panimiṉoa;sitham Aartharum Saevathikkan, Nam Seṉṉi Maṉṉi, Thikaḻumae.!
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

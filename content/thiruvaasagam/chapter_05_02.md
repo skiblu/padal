@@ -52,5 +52,4 @@ Vaeṉil Vaezh Malark Kanaikkum, Vezh Nakai, Sev Vaay, Kariyapaaṉal Aar Kaniya
 
 Vaaḻkiṉraay; Vaaḻaatha Nenysamae! Val Viṉaip Pathuaaḻkiṉraay; Aaḻaamal Kaappaaṉai Aethaathae,sooḻkiṉraay Kaethu Uṉakku; Solkiṉraeṉ, Palkaalum;veeḻkiṉraay Nee Avalak Kathal Aaya Vezhzhathae.
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

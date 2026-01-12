@@ -57,5 +57,4 @@ Irunthu Eṉṉai Aanthaaṉ Inai Athiyae Sinthithuirunthu, Iranthukozh, Nenysae
 Iṉpam Perukki, Iruzh Akari, Enynyaaṉrumthuṉpam Thotharvu Aruthu, Soathi Aay, Aṉpu Amaithu,seer Aar Perunthuraiyaaṉ Eṉṉuthaiya Sinthaiyaeoor Aakak Konthaaṉ, Uvanthu.
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

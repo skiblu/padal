@@ -53,5 +53,4 @@ Oayvu Ilaathaṉa; Uvamaṉil Iranthaṉa; Ozh Malarth Thaazh Thanthu,naayil Aak
 
 Vaeṉil Vaezh Kanai Kiḻithitha, Mathi Suthum; Athu Thaṉai Niṉaiyaathae,maaṉ Nilaaviya Noakkiyar Pathirithai Mathu Ithu Thayir Aaki,thaeṉ Nilaaviya Thiruaruzh Purintha, Eṉ Sivaṉ Nakar Pukap Poakaeṉ;ooṉil Aaviyai Oamputhal Poruthu, Iṉum Unthu Uthuthu Irunthaeṉae.
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

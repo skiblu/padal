@@ -93,5 +93,4 @@ Thaerai Niruthi Malaiyethuth Thaaṉsirameerainthum Iravaa Runtheepara:irupathum
 Aekaasamitha Iruthikazh Poakaamalaakaasangkaavaleṉ Runtheeparaatharkappaalung Kaavaleṉ Runtheepara.
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

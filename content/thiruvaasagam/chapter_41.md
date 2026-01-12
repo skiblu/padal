@@ -52,5 +52,4 @@ Possai Aaṉa Ip Piraviyil Kithanthu, Naaṉ, Puḻuthu Alai Naaypoala,issai Aay
 Seriyum Ip Pirappu, Irappu, Ivai Niṉaiyaathu, Seri Kuḻalaar Seyyumkiriyum, Keeḻmaiyum, Kenthai Am Kankazhum, Uṉṉiyae Kithappaeṉai,iraivaṉ, Empiraaṉ, Elai Ilaatha Thaṉ Inai Malark Kaḻal Kaathi,arivu Thanthu, Eṉai Aanthukonthu, Aruzhiya Arputham Ariyaeṉae!
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

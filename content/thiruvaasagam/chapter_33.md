@@ -52,5 +52,4 @@ Kan Aar Nuthaloay! Kaḻal Inaikazh Kanthaeṉ, Kankazh Kazhi Koora;enaathu, Ira
 Aḻakae Purinthithu, Athi Naayaeṉ Ararukiṉraeṉ; Uthaiyaaṉae!thikaḻaa Niṉra Thirumaeṉi Kaathi, Eṉṉaip Panikonthaay;pukaḻae Periya Patham Eṉakku, Puraana! Nee, Thantharuzhaathae,kuḻakaa, Koala Maraiyoaṉae, Koaṉae, Eṉṉaik Kuḻaithaayae!
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

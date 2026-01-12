@@ -21,5 +21,4 @@ Nyaaṉa Vaazh Aenthum Aiyar Naathap Parai Araimiṉ;maaṉa Maa Aerum Aiyar Mat
 Thontharkaazh, Thoosi Seleer; Patharkaazh, Sooḻap Poakeer;on Thiral Yoakikazhae, Paer Ani Untheerkazh;thin Thiral Sitharkazhae, Kathaik Kooḻai Selmiṉkazh;anthar Naathu Aazhvoam Naam Alal Pathai Vaaraamae.
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

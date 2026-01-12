@@ -52,5 +52,4 @@ Maṉṉa, Empiraaṉ, Varuka' Eṉ Eṉai; Maalum, Naaṉmukathu Oruvaṉ, Yaar
 
 Paatha Vaenthum Naaṉ; Poari! Niṉṉaiyae Paathi, Nainthu Nainthu Uruki, Nekku Nekku,aatha Vaenthum Naaṉ; Poari! Ampalathu Aathum Niṉ Kaḻal Poathu, Naayiṉaeṉkootha Vaenthum Naaṉ; Poari! Ip Puḻuk Koothu Neekku Eṉai; Poari! Poy Elaamveetha Vaenthum Naaṉ; Poari! Veethu Thanthu Aruzhu; Poari! Niṉ Meyyar Meyyaṉae!thirussirampalam. Maanikkavaasakar Athikazh Poari!
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

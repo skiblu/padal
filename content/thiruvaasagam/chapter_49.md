@@ -45,5 +45,4 @@ Sol Iyalaathu Eḻu Thoo Mani Oasai Suvai Tharum Aakaathae?thun Eṉa Eṉ Uzham
 Sangku Thiranthu, Muraṉru Eḻum Oasai Thaḻaippaṉa Aakaathae?saathi Vithaatha Kunangkazh Namoathu Salithithum Aakaathae?angku Ithu Naṉru, Ithu Naṉru, Eṉum Maayai Athangkithum Aakaathae?aasai Elaam, Athiyaar Athiyoam Eṉum Athaṉai Aakaathae?sem Kayal On Kan Mathanthaiyar Sinthai Thizhaippaṉa Aakaathae?seer Athiyaarkazh Siva Aṉupavangkazh Therinthithum Aakaathae?engkum Nirainthu, Amuthu Ooru, Paramsuthar Eythuvathu Aakaathae?eeru Ariyaa Maraiyoaṉ Eṉai Aazha, Eḻuntharuzhap Perilae!
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

@@ -49,5 +49,4 @@ Koala Varaik Kuthumi Vanthu, Kuvalayathussaala Amuthu Unthu, Thaaḻ Kathaliṉ 
 Thengku Ulavu Soalaith Thiru Utharakoasamangkaithangku, Ulavu Soathith Thaṉi Uruvam Vantharuzhi,engkazh Pirappu Aruthithu, Em Tharamum Aathkozhvaaṉ:pangku Ulavu Koathaiyum, Thaaṉum, Pani Konthakongku Ulavu Koṉrais Sathaiyaaṉ Kunam Paravi,pongku Ulavu Poon Mulaiyeer! Poṉ Oosal Aathaamoa.
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

@@ -51,5 +51,4 @@ Vinakath Thaevarum Nanavum Maathaa Viḻup Poruzhae! Uṉ Thoḻuppu Athiyoangka
 
 Puvaṉiyil Poayp Piravaamaiyiṉ, Naazh Naam Poakkukiṉroam Avamae; Inthap Poomi,sivaṉ Uyyak Kozhkiṉra Aaru' Eṉru Noakki, Thirupperunthurai Uraivaay! Thirumaalaamavaṉ Viruppu Eythavum, Malaravaṉ Aasaip Pathavum, Niṉ Alarntha Meykkarunaiyum, Neeyum,avaṉiyil Pukunthu, Emai Aathkozhzha Valaay! Aar Amuthae! Pazhzhi Eḻuntharuzhaayae!
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

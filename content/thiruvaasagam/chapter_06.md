@@ -214,5 +214,4 @@ Sirippippaṉ, Seerum Piḻaippai; Thoḻumpaiyum Eesarku' Eṉruvirippippaṉ; 
 Aesiṉum, Yaaṉ, Uṉṉai Aethiṉum, Eṉ Piḻaikkae Kuḻainthuvaesaruvaeṉai Vithuthi Kanthaay? Sem Pavazha Verpiṉthaesu Uthaiyaay; Eṉṉai Aazhuthaiyaay; Siruyirkku Irangki,kaay Siṉa Aalam Unthaay Amuthu Unak Kathaiyavaṉae.thirussirampalam. Maanikkavaasakar Athikazh Poari!
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

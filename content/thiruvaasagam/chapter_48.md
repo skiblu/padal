@@ -41,5 +41,4 @@ Kaanum Karanangkazh Elaam Paeriṉpam Eṉa,paenum Athiyaar Pirappu Akala, Kaanu
 Paesum Poruzhukku Ilakkitham Aay, Paessu Iranthamaasu Il Maniyiṉ Mani Vaarthai Paesi,perunthuraiyae Eṉru, Pirappu Aruthaeṉ Nalamarunthiṉ Athi Eṉ Maṉathae Vaithu.
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}

@@ -192,5 +192,4 @@ Seḻu Malars Sivapurathu Arasae, Poari!kaḻuneer Maalaik Kathavuzh, Poari!tho�
 Puram Pala Eritha Puraana, Poari!param Param Soathip Paraṉae, Poari!poari! Poari! Puyangkap Perumaaṉ!poari! Poari! Puraana Kaarana!poari! Poari! Saya, Saya, Poari! (225)
 
 
-{% endcapture %} 
-{% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
