@@ -66,8 +66,9 @@ lyrics_ta: திருவாசகம், தமிழ், ஆன்மிக�
 நாத! நாத!' என்று அழுது அரற்றி,பாதம் எய்தினர் பாதம் எய்தவும்;பதஞ்சலிக்கு அருளிய பரம நாடக' என்றுஇதம் சலிப்பு எய்தநின்று ஏங்கினர் ஏங்கவும்;எழில் பெறும் இமயத்து இயல்பு உடை அம் பொன்
 
 பொலிதரு புலியூர்ப் பொதுவினில், நடம் நவில்கனிதரு செவ் வாய் உமையொடு, காளிக்கு,அருளிய திருமுகத்து, அழகு உறு சிறு நகை,இறைவன், ஈண்டிய அடியவரோடும்,பொலிதரு புலியூர்ப் புக்கு, இனிது அருளினன்ஒலிதரு கைலை உயர் கிழவோனே. (145)திருச்சிற்றம்பலம். மாணிக்கவாசகர் அடிகள் போற்றி!
-{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
 
+{% capture text_en %}
 Thilai Moothoor Aathiya Thiruvathipal Uyir Elaam Payiṉraṉaṉ Aaki,en Il Pal Kunam Eḻil Pera Vizhangki,manum, Vinum, Vaaṉoar Ulakum,thuṉṉiya Kalvi Thoariyum, Aḻithum,
 
 Eṉṉuthai Iruzhai Aerath Thuranthum,athiyaar Uzhzhathu Aṉpu Meethoorakkuthiyaak Kontha Kozhkaiyum, Sirappum,maṉṉum Maa Malai Makaenthiram Athaṉilsoṉṉa Aakamam Thoaruvithu Aruzhiyum;
