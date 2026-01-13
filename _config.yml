@@ -103,11 +103,11 @@ markdown: kramdown
 
 attribute:
   youtube:
-    enabled: false
-  audio:
-    enabled: false
-  advertisement:
     enabled: true
+  audio:
+    enabled: true
+  advertisement:
+    enabled: false
 
 # Ably config (client-side API key; exposing client key is a design decision)
 notify:
