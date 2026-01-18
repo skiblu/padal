@@ -12,10 +12,10 @@ TOC of all items with parent_id, grouped by type
 
         {%- for group in pages_by_type -%}
         <!-- {{ group.name }} Section -->
-        <h5 class="card-title mb-2 mt-3">{{ group.name }}</h5>
+        <h5 class="card-title mt-2">{{ group.name }}</h5>
 
-        <div class="toc-section mt-3">
-          <div class="row g-3 mt-2">
+        <div class="toc-section">
+          <div class="row g-3">
             {%- for p in group.items -%}
             {%- if p.parent_id and p.parent_id != '' -%}
             <div class="col-6 col-sm-4 col-md-3">
