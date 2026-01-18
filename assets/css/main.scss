@@ -42,6 +42,21 @@ header, .navbar {
   color: $breadcrumbs-text-color;
 }
 
+/* Mobile breadcrumb sticky positioning */
+#breadcrumb-path-mobile,
+#breadcrumb-nav-mobile {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+/* Desktop breadcrumb sticky positioning */
+#breadcrumb-header {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
 /* Sidebar */
 #sidebar-wrapper {
   background: $sidebar-background !important;
@@ -69,11 +84,7 @@ header, .navbar {
 }
 
 /* Page content */
-#page-content-wrapper {
-  background-color: $content-background;
-  color: $text-color;
-}
-
+#page-content-wrapper,
 .page-content,
 .wrapper,
 .content {
