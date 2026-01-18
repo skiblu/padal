@@ -3,61 +3,63 @@
 layout: default
 ---
 <div id="breadcrumb-header" class="py-2 border-bottom bg-orange-light">
-  <div class="container-xxl d-flex align-items-center justify-content-between gap-3">
+  <div class="container-xxl">
+    <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
 
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb mb-0">
-        <li class="breadcrumb-item">
-          <a href="{{ '/' | relative_url }}">Home</a>
-        </li>
-        {% if page.section or page.parent_id %}
-        <li class="breadcrumb-item">
-          <a href="{{ '/content/' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/">{{ page.section | default: page.parent_id }}</a>
-        </li>
-        {% endif %}
-        <li class="breadcrumb-item">
-          <a href="{{ page.url | relative_url }}">{{ page.nav | default: page.title }}</a>
-        </li>
-      </ol>
-    </nav>
+      <nav aria-label="breadcrumb" class="w-100 w-lg-auto">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a href="{{ '/' | relative_url }}">Home</a>
+          </li>
+          {% if page.section or page.parent_id %}
+          <li class="breadcrumb-item">
+            <a href="{{ '/content/' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/">{{ page.section | default: page.parent_id }}</a>
+          </li>
+          {% endif %}
+          <li class="breadcrumb-item">
+            <a href="{{ page.url | relative_url }}">{{ page.nav | default: page.title }}</a>
+          </li>
+        </ol>
+      </nav>
 
-    <!-- Type-based Navigation Menu (center) -->
-    <nav aria-label="content type navigation" class="flex-grow-1 d-flex justify-content-center">
-      <div class="d-flex flex-wrap gap-2">
-        {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
-        {%- for group in pages_by_type -%}
-        {%- if group.name and group.name != '' -%}
-        <div class="dropdown">
-          <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
-            {{ group.name }}
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdown{{ forloop.index }}">
-            {%- for item in group.items -%}
-            {%- if item.parent_id and item.parent_id != '' -%}
-            <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
-            {%- endif -%}
-            {%- endfor -%}
-          </ul>
+      <!-- Type-based Navigation Menu -->
+      <nav aria-label="content type navigation" class="w-100 w-lg-auto d-flex justify-content-center justify-content-lg-center order-lg-2">
+        <div class="d-flex flex-wrap gap-2 justify-content-center">
+          {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
+          {%- for group in pages_by_type -%}
+          {%- if group.name and group.name != '' -%}
+          <div class="dropdown">
+            <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ group.name }}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown{{ forloop.index }}">
+              {%- for item in group.items -%}
+              {%- if item.parent_id and item.parent_id != '' -%}
+              <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
+              {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+          {%- endif -%}
+          {%- endfor -%}
         </div>
-        {%- endif -%}
-        {%- endfor -%}
+      </nav>
+
+      <!-- Right-side: notification bell -->
+      <div class="order-lg-3">
+        <a id="notif-btn" class="btn btn-link position-relative p-2" href="#" role="button" aria-label="Notifications" title="Notifications" onclick="event.preventDefault();" style="color:inherit;"
+           data-ably-key="{{ site.notify.key | default: '' }}"
+           data-ably-channel="{{ site.notify.channel | default: 'padal-notification' }}"
+           data-ably-event="{{ site.notify.event | default: '' }}"
+           data-popup-timeout="{{ site.notify_popup_timeout | default: 5000 }}"
+           data-debug="{{ site.notify_debug | default: false | jsonify }}"
+           data-history-limit="{{ site.notify_history_limit | default: 10 }}">
+          <img id="notif-bell-img" src="{{ '/assets/bootstrap-icons/bell.svg' | relative_url }}" width="20" height="20" alt="Notifications" style="vertical-align:middle;" />
+          <span id="notif-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.65rem;display:none;min-width:18px;height:18px;line-height:16px;padding:0 4px;">0</span>
+        </a>
       </div>
-    </nav>
 
-    <!-- Right-side: notification bell (moved from banner) -->
-    <div>
-      <a id="notif-btn" class="btn btn-link position-relative p-2" href="#" role="button" aria-label="Notifications" title="Notifications" onclick="event.preventDefault();" style="color:inherit;"
-         data-ably-key="{{ site.notify.key | default: '' }}"
-         data-ably-channel="{{ site.notify.channel | default: 'padal-notification' }}"
-         data-ably-event="{{ site.notify.event | default: '' }}"
-         data-popup-timeout="{{ site.notify_popup_timeout | default: 5000 }}"
-         data-debug="{{ site.notify_debug | default: false | jsonify }}"
-         data-history-limit="{{ site.notify_history_limit | default: 10 }}">
-        <img id="notif-bell-img" src="{{ '/assets/bootstrap-icons/bell.svg' | relative_url }}" width="20" height="20" alt="Notifications" style="vertical-align:middle;" />
-        <span id="notif-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.65rem;display:none;min-width:18px;height:18px;line-height:16px;padding:0 4px;">0</span>
-      </a>
     </div>
-
   </div>
 </div>
 
@@ -82,8 +84,8 @@ layout: default
   <div id="page-content-wrapper">
 
     <!-- Page content-->
-    <main id="maincontent" role="main" aria-label="Content">
-      <div class="px-1 py-4">
+    <main id="maincontent" role="main" aria-label="Content" class="d-flex justify-content-center">
+      <div class="px-3 py-4" style="width: 100%; max-width: 100%;">
         {{ content }}
       </div>
 
