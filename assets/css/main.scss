@@ -84,7 +84,13 @@ header, .navbar {
 }
 
 /* Page content */
-#page-content-wrapper,
+#page-content-wrapper {
+    background-color: $content-background;
+    color: $text-color;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+}
+
 .page-content,
 .wrapper,
 .content {

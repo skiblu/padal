@@ -63,8 +63,8 @@ a { text-decoration: none; }
 }
 
 
-/* set up sidebar + content flex grid */ 
-@media (min-width: 992px) {
+/* set up sidebar + content flex grid - DISABLED: no longer using sidebar */ 
+/* @media (min-width: 992px) {
     #wrapper {
         grid-template-columns: 1fr 5fr;
     }
@@ -84,10 +84,10 @@ a { text-decoration: none; }
     grid-area: main;
     order: 1;
     min-width:0;
-}
+} */
 
-/* set up sidebar display toggle for mobile */
-#sidebar-wrapper {
+/* set up sidebar display toggle for mobile - DISABLED: no longer using sidebar */
+/* #sidebar-wrapper {
     display: none;
     z-index: 98;
 }
@@ -111,7 +111,7 @@ a { text-decoration: none; }
     #sidebar-wrapper {
         display: block;
     }
-}
+} */
 
 /* set up sidebar nav item styles */
 .side-bar-item {
