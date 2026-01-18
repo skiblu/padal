@@ -1,6 +1,6 @@
 ---
 parent_id: Meditation
-nav_order: 20
+nav_order: 21
 type: Yoga
 title: Meditation
 history: false

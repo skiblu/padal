@@ -1,6 +1,6 @@
 ---
 parent_id: Yoga Nidra
-nav_order: 20
+nav_order: 22
 type: Yoga
 title: Yoga Nidra
 history: false
