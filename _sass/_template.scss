@@ -33,17 +33,15 @@ a { text-decoration: none; }
 }
 
 /* setup breadcrumb area */
-#breadcrumb-header {
+#breadcrumb-header,
+#breadcrumb-path-mobile,
+#breadcrumb-nav-mobile {
     display: block;
     // make sticky
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 99;
-    // set breadcrumb divider type
-    nav {
-        --bs-breadcrumb-divider: '>';
-    }
     // set custom background color
     @if variable-exists(breadcrumbs-background) {
         background: $breadcrumbs-background;
@@ -60,6 +58,14 @@ a { text-decoration: none; }
             border-color: #fff;
         }
     }
+}
+
+/* breadcrumb divider type */
+#breadcrumb-header nav {
+    --bs-breadcrumb-divider: '>';
+}
+#breadcrumb-path-mobile nav {
+    --bs-breadcrumb-divider: '>';
 }
 
 
