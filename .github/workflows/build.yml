@@ -1,4 +1,4 @@
-name: Obfuscate Deployment
+name: Custom Deployment
 
 on:
   push:
