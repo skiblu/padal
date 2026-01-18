@@ -73,7 +73,7 @@ a { text-decoration: none; }
     #wrapper {
         display: grid;
         gap: 1.5rem;
-        grid-template-areas: "sidebar main";
+        grid-template-areas: "main";
         grid-template-columns: 1fr 3fr;
     }
 }
