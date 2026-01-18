@@ -2,10 +2,36 @@
 # pages with sidebar nav
 layout: default
 ---
+<!-- Mobile: Type-based Navigation Menu Bar -->
+<div id="type-nav-header" class="py-2 border-bottom bg-light d-lg-none">
+  <div class="container-xxl d-flex justify-content-center">
+    <nav aria-label="content type navigation" class="d-flex flex-wrap gap-2">
+      {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
+      {%- for group in pages_by_type -%}
+      {%- if group.name and group.name != '' -%}
+      <div class="dropdown">
+        <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
+          {{ group.name }}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdown{{ forloop.index }}">
+          {%- for item in group.items -%}
+          {%- if item.parent_id and item.parent_id != '' -%}
+          <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
+          {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endif -%}
+      {%- endfor -%}
+    </nav>
+  </div>
+</div>
+
+<!-- Breadcrumb & Navigation Bar -->
 <div id="breadcrumb-header" class="py-2 border-bottom bg-orange-light">
   <div class="container-xxl d-flex align-items-center justify-content-between gap-3">
 
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb" class="flex-grow-1">
       <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item">
           <a href="{{ '/' | relative_url }}">Home</a>
@@ -21,17 +47,17 @@ layout: default
       </ol>
     </nav>
 
-    <!-- Type-based Navigation Menu (center) -->
-    <nav aria-label="content type navigation" class="flex-grow-1 d-flex justify-content-center">
+    <!-- Type-based Navigation Menu (desktop only, centered) -->
+    <nav aria-label="content type navigation" class="flex-grow-1 d-none d-lg-flex justify-content-center">
       <div class="d-flex flex-wrap gap-2">
         {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
         {%- for group in pages_by_type -%}
         {%- if group.name and group.name != '' -%}
         <div class="dropdown">
-          <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown-desktop{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
             {{ group.name }}
           </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdown{{ forloop.index }}">
+          <ul class="dropdown-menu" aria-labelledby="dropdown-desktop{{ forloop.index }}">
             {%- for item in group.items -%}
             {%- if item.parent_id and item.parent_id != '' -%}
             <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
@@ -76,14 +102,14 @@ layout: default
 <link rel="stylesheet" href="{{ '/assets/css/notify.css' | relative_url }}">
 
 
-<div class="container-xxl" id="wrapper">
+<div class="container-xxl mx-auto" id="wrapper" style="max-width: 900px;">
 
   <!-- Page content wrapper-->
   <div id="page-content-wrapper">
 
     <!-- Page content-->
     <main id="maincontent" role="main" aria-label="Content">
-      <div class="px-1 py-4">
+      <div class="px-3 py-4">
         {{ content }}
       </div>
 
