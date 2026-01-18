@@ -60,11 +60,12 @@ layout: default
         <ul class="dropdown-menu" aria-labelledby="dropdown-mobile-more">
           {%- for group in hidden_groups -%}
           {%- if group.name and group.name != '' -%}
-          <li class="dropdown-submenu">
-            <button class="dropdown-item dropdown-toggle" type="button" id="dropdown-more{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="dropdown-submenu position-relative">
+            <a href="#" class="dropdown-item d-flex justify-content-between align-items-center" onclick="event.preventDefault(); event.stopPropagation();">
               {{ group.name }}
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdown-more{{ forloop.index }}">
+              <span class="ms-2" style="font-size: 0.75rem;">▶</span>
+            </a>
+            <ul class="dropdown-menu" style="position: absolute; top: 0; left: 100%; min-width: 150px;">
               {%- for item in group.items -%}
               {%- if item.parent_id and item.parent_id != '' -%}
               <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
