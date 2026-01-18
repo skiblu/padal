@@ -86,8 +86,8 @@ a { text-decoration: none; }
     min-width:0;
 } */
 
-/* set up sidebar display toggle for mobile - DISABLED: no longer using sidebar */
-/* #sidebar-wrapper {
+/* set up sidebar display toggle for mobile - DISABLED: no longer using sidebar 
+#sidebar-wrapper {
     display: none;
     z-index: 98;
 }
@@ -95,15 +95,13 @@ a { text-decoration: none; }
     display: block;
 }
 #sidebar-wrapper {
-    // make sticky
     position: -webkit-sticky;
     position: sticky;
-    // place below breadcrumbs
     top: 3rem;
     height: calc(100vh - 3rem);
     overflow-y: auto;
 }
-/* set up sticky sidebar for desktop */
+set up sticky sidebar for desktop
 @media (min-width: 768px) {
     #sidebarToggle {
         display: none;
@@ -111,7 +109,8 @@ a { text-decoration: none; }
     #sidebar-wrapper {
         display: block;
     }
-} */
+}
+*/
 
 /* set up sidebar nav item styles */
 .side-bar-item {
