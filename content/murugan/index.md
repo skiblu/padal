@@ -1,6 +1,7 @@
 ---
 parent_id: Murugan
 nav_order: 4
+type: Lyrics
 title: Murugan Songs
 history: false
 lyrics_en: Murugan, Muruga, lyrics, devotional, songs, Subramanya, Kartikeya

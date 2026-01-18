@@ -1,5 +1,6 @@
 ---
 parent_id: Radio
+type: Audio
 nav_order: 13
 title: Radio List
 history: false

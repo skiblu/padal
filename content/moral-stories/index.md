@@ -1,6 +1,7 @@
 ---
 parent_id: Moral Stories
 nav_order: 15
+type: eBooks
 title: Stories List
 history: false
 lyrics_en: Moral, Stories, Kids, Everyone, Tamil, short, stories

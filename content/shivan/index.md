@@ -1,5 +1,6 @@
 ---
 parent_id: Shivan
+type: Lyrics
 nav_order: 5
 title: Shivan Songs
 history: false

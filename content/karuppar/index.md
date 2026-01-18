@@ -1,6 +1,7 @@
 ---
 parent_id: Karuppar
 nav_order: 10
+type: Lyrics
 title: Karuppar Songs
 history: false
 lyrics_en: Karuppar, Karuppu, karuppaswamy, songs, lyrics, devotional

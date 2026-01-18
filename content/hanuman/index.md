@@ -1,6 +1,7 @@
 ---
 parent_id: Hanuman
 nav_order: 8
+type: Lyrics
 title: Hanuman Songs
 history: false
 lyrics_en: Hanuman, Sloka(s), lyrics, songs, devotional, Anjaneya

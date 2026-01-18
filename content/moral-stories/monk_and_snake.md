@@ -2,7 +2,7 @@
 section: Moral Stories
 nav_order: 50
 title: Monk and the Snake
-type: story
+type: eBooks
 lyrics_en: Monk, and, the, snake, moral, story
 lyrics_ta: சித்தர், மற்றும், பாம்பு, நெறிமுறை, கதை
 ---

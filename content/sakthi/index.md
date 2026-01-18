@@ -1,5 +1,6 @@
 ---
 parent_id: Sakthi
+type: Lyrics
 nav_order: 6
 title: Sakthi Songs
 history: false

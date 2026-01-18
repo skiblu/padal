@@ -1,5 +1,6 @@
 ---
 parent_id: Thiruvasagam
+type: eBooks
 nav_order: 18
 title: Thiruvasagam
 title_ta: திருவாசகம்

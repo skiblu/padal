@@ -1,5 +1,6 @@
 ---
 parent_id: SaiBaba
+type: Lyrics
 nav_order: 12
 title: SaiBaba Songs
 history: false

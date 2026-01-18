@@ -1,5 +1,6 @@
 ---
 parent_id: Thirukkural
+type: eBooks
 nav_order: 16
 title: Thirukkural
 history: false

@@ -1,5 +1,6 @@
 ---
 parent_id: Ayyappa Mala
+type: eBooks
 nav_order: 11
 title: Ayyappa Mala
 history: false

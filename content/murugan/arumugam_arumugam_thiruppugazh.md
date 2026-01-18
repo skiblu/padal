@@ -7,7 +7,7 @@ audio_id: Fg3729dhjsac
 audio_length: 237
 lyrics_en: Murugan, Arumugam, Thiruppugazh
 lyrics_ta: முருகன், ஆறுமுகம், திருப்புகழ் 
-type: lyrics
+type: Lyrics
 ---
 {% capture text %}
 `ஆறுமுகம் ஆறுமுகம் ஆறுமுகம் ஆறுமுகம்`\

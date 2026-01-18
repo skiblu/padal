@@ -1,29 +1,22 @@
 {% comment %}
-TOC of all items with parent_id
+TOC of all items with parent_id, grouped by type
 {% endcomment %}
 
-{%- assign pages_sorted_default = site.html_pages | sort: "nav_order" -%}
-{%- assign pages_sorted_atoz = site.html_pages | sort: "parent_id" -%}
+{%- assign pages_sorted = site.html_pages | sort: "nav_order" -%}
+{%- assign pages_by_type = pages_sorted | group_by: "type" -%}
 
 <div class="row justify-content-center">
   <div class="m-3 col-md-8">
     <div class="card">
       <div class="card-body">
-        <!-- Header & Sort Icon -->
-        <div class="d-flex justify-content-between align-items-center">
-          <h2 class="card-title h3 mb-0">Categories</h2>
 
-          <div class="sort-controls">
-            <button type="button" id="toc-sort-toggle" class="toc-sort-btn" data-sort="default" title="Default">
-              <img src="/assets/bootstrap-icons/list.svg" width="16" height="16" alt="Sort Icon">
-            </button>
-          </div>
-        </div>
+        {%- for group in pages_by_type -%}
+        <!-- {{ group.name }} Section -->
+        <h2 class="card-title h3 mb-3">{{ group.type }}</h2>
 
-        <!-- Default order -->
-        <div id="toc-default" class="toc-section mt-3">
+        <div class="toc-section mt-3">
           <div class="row g-3 mt-2">
-            {%- for p in pages_sorted_default -%}
+            {%- for p in group.items -%}
             {%- if p.parent_id and p.parent_id != '' -%}
             <div class="col-6 col-sm-4 col-md-3">
               <div class="card toc-card h-100 text-center">
@@ -42,27 +35,7 @@ TOC of all items with parent_id
           </div>
         </div>
 
-        <!-- A–Z order -->
-        <div id="toc-atoz" class="toc-section mt-3" style="display:none;">
-          <div class="row g-3 mt-2">
-            {%- for p in pages_sorted_atoz -%}
-            {%- if p.parent_id and p.parent_id != '' -%}
-            <div class="col-6 col-sm-4 col-md-3">
-              <div class="card toc-card h-100 text-center">
-                <a href="{{ p.url | relative_url }}" class="stretched-link" aria-label="{{ p.parent_id }}">
-                  <img src="{{ '/images/' | append: p.parent_id | append: '.webp' | relative_url }}" alt="{{ p.parent_id }}" class="img-fluid rounded mx-auto d-block" style="max-height:100px; width:auto; object-fit:cover;">
-                </a>
-                <div class="card-body py-2">
-                  <h3 class="card-title h6 mb-0">
-                    <a href="{{ p.url | relative_url }}" class="toc-link">{{ p.parent_id }}</a>
-                  </h3>
-                </div>
-              </div>
-            </div>
-            {%- endif -%}
-            {%- endfor -%}
-          </div>
-        </div>
+        {%- endfor -%}
 
       </div>
     </div>

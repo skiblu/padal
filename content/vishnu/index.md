@@ -1,5 +1,6 @@
 ---
 parent_id: Vishnu
+type: Lyrics
 nav_order: 7
 title: Vishnu Songs
 history: false

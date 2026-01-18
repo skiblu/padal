@@ -7,7 +7,7 @@ audio_id: U2b7VBcJc6
 audio_length: 308
 lyrics_en: Ayyappa, Anju, Malai, Azhaga, ayya, anju, malai, engal, nenjil, thangidama
 lyrics_ta: அய்யப்பா, அஞ்சு, மலை, அழகா, ஐயா, அஞ்சு, மலை, எங்கள், நெஞ்சில், தங்கிடமா
-type: lyrics
+type: Lyrics
 ---
 {% capture text %}
 `அஞ்சு மலை அழகா ஐயா அஞ்சுமலை அழகா `\

@@ -1,5 +1,6 @@
 ---
 parent_id: Ayyappa
+type: Lyrics
 nav_order: 9
 title: Ayyappa Songs
 history: false

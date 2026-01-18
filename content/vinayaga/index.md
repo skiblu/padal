@@ -1,5 +1,6 @@
 ---
 parent_id: Vinayaga
+type: Lyrics
 nav_order: 3
 title: Vinayaga Songs
 history: false
