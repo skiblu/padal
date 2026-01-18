@@ -2,11 +2,39 @@
 # pages with sidebar nav
 layout: default
 ---
-<div id="breadcrumb-header" class="py-2 border-bottom bg-orange-light">
-  <div class="container-xxl">
-    <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+<div id="breadcrumb-header" class="border-bottom bg-orange-light">
+  <!-- Mobile: Type Navigation (first bar) -->
+  <div class="py-2 border-bottom bg-orange-light d-lg-none">
+    <div class="container-xxl d-flex justify-content-center">
+      <nav aria-label="content type navigation">
+        <div class="d-flex flex-wrap gap-2 justify-content-center">
+          {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
+          {%- for group in pages_by_type -%}
+          {%- if group.name and group.name != '' -%}
+          <div class="dropdown">
+            <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown-mobile{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ group.name }}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown-mobile{{ forloop.index }}">
+              {%- for item in group.items -%}
+              {%- if item.parent_id and item.parent_id != '' -%}
+              <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
+              {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+          {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </nav>
+    </div>
+  </div>
 
-      <nav aria-label="breadcrumb" class="w-100 w-lg-auto">
+  <!-- Breadcrumb & Navigation Bar -->
+  <div class="py-2">
+    <div class="container-xxl d-flex align-items-center justify-content-between gap-3">
+
+      <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0">
           <li class="breadcrumb-item">
             <a href="{{ '/' | relative_url }}">Home</a>
@@ -22,17 +50,17 @@ layout: default
         </ol>
       </nav>
 
-      <!-- Type-based Navigation Menu -->
-      <nav aria-label="content type navigation" class="w-100 w-lg-auto d-flex justify-content-center justify-content-lg-center order-lg-2">
+      <!-- Type-based Navigation Menu (desktop only, centered) -->
+      <nav aria-label="content type navigation" class="d-none d-lg-flex">
         <div class="d-flex flex-wrap gap-2 justify-content-center">
           {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
           {%- for group in pages_by_type -%}
           {%- if group.name and group.name != '' -%}
           <div class="dropdown">
-            <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown-desktop{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
               {{ group.name }}
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdown{{ forloop.index }}">
+            <ul class="dropdown-menu" aria-labelledby="dropdown-desktop{{ forloop.index }}">
               {%- for item in group.items -%}
               {%- if item.parent_id and item.parent_id != '' -%}
               <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
@@ -46,7 +74,7 @@ layout: default
       </nav>
 
       <!-- Right-side: notification bell -->
-      <div class="order-lg-3">
+      <div class="ms-auto">
         <a id="notif-btn" class="btn btn-link position-relative p-2" href="#" role="button" aria-label="Notifications" title="Notifications" onclick="event.preventDefault();" style="color:inherit;"
            data-ably-key="{{ site.notify.key | default: '' }}"
            data-ably-channel="{{ site.notify.channel | default: 'padal-notification' }}"
@@ -81,11 +109,11 @@ layout: default
 <div class="container-xxl" id="wrapper">
 
   <!-- Page content wrapper-->
-  <div id="page-content-wrapper">
+  <div id="page-content-wrapper" class="d-flex justify-content-center">
 
     <!-- Page content-->
-    <main id="maincontent" role="main" aria-label="Content" class="d-flex justify-content-center">
-      <div class="px-3 py-4" style="width: 100%; max-width: 100%;">
+    <main id="maincontent" role="main" aria-label="Content" class="w-100">
+      <div class="px-3 py-4">
         {{ content }}
       </div>
 
