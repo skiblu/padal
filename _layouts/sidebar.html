@@ -8,7 +8,9 @@ layout: default
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb mb-0" style="font-size: 0.85rem;">
         <li class="breadcrumb-item">
-          <a href="{{ '/' | relative_url }}" title="Home">Home</a>
+          <a href="{{ '/' | relative_url }}" title="Home" class="btn btn-link p-2 position-relative" style="color:inherit;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;">
+            <img src="{{ '/assets/bootstrap-icons/house.svg' | relative_url }}" width="20" height="20" alt="Home" style="vertical-align:middle;" />
+          </a>
         </li>
         {% if page.section or page.parent_id %}
         <li class="breadcrumb-item">
