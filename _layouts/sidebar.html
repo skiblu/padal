@@ -12,11 +12,11 @@ layout: default
         </li>
         {% if page.section or page.parent_id %}
         <li class="breadcrumb-item">
-          <a href="{{ '/content/' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/" title="{{ page.section | default: page.parent_id }}">{{ page.section | default: page.parent_id | truncate: 5, '' }}</a>
+          <a href="{{ '/content/' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/" title="{{ page.section | default: page.parent_id }}">{{ page.section | default: page.parent_id }}</a>
         </li>
         {% endif %}
         <li class="breadcrumb-item">
-          <a href="{{ page.url | relative_url }}" title="{{ page.nav | default: page.title }}">{{ page.nav | default: page.title | truncate: 5, '' }}</a>
+          <a href="{{ page.url | relative_url }}" title="{{ page.nav | default: page.title }}">{{ page.nav | default: page.title | truncate: 8, '' }}</a>
         </li>
       </ol>
     </nav>
