@@ -61,3 +61,28 @@
   vertical-align: middle;
   display: inline-block;
 }
+
+/* Nested Dropdown Support */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  display: none;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > .dropdown-item::after {
+  content: '';
+  float: right;
+  border-left: 0.25em solid;
+  border-bottom: 0.25em solid transparent;
+  border-top: 0.25em solid transparent;
+  margin-right: 0.5em;
+}
