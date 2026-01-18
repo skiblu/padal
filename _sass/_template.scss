@@ -40,7 +40,6 @@ a { text-decoration: none; }
     // make sticky
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
     z-index: 99;
     // set custom background color
     @if variable-exists(breadcrumbs-background) {
@@ -58,6 +57,19 @@ a { text-decoration: none; }
             border-color: #fff;
         }
     }
+}
+
+/* desktop breadcrumb positioning */
+#breadcrumb-header {
+    top: 0;
+}
+
+/* mobile breadcrumb positioning - stack vertically */
+#breadcrumb-path-mobile {
+    top: 0;
+}
+#breadcrumb-nav-mobile {
+    top: 2.5rem;
 }
 
 /* breadcrumb divider type */
