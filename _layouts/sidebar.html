@@ -2,92 +2,155 @@
 # pages with sidebar nav
 layout: default
 ---
-<div id="breadcrumb-header" class="border-bottom bg-orange-light">
-  <!-- Mobile: Type Navigation (first bar) -->
-  <div class="py-2 border-bottom bg-orange-light d-lg-none">
-    <div class="container-xxl d-flex justify-content-center">
-      <nav aria-label="content type navigation">
-        <div class="d-flex flex-wrap gap-2 justify-content-center">
-          {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
-          {%- for group in pages_by_type -%}
+<!-- Mobile: Breadcrumb Path (first line) -->
+<div id="breadcrumb-path-mobile" class="py-2 border-bottom bg-orange-light d-lg-none">
+  <div class="container-xxl">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0" style="font-size: 0.85rem;">
+        <li class="breadcrumb-item">
+          <a href="{{ '/' | relative_url }}" title="Home">Home</a>
+        </li>
+        {% if page.section or page.parent_id %}
+        <li class="breadcrumb-item">
+          <a href="{{ '/content/' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/" title="{{ page.section | default: page.parent_id }}">{{ page.section | default: page.parent_id | truncate: 5, '' }}</a>
+        </li>
+        {% endif %}
+        <li class="breadcrumb-item">
+          <a href="{{ page.url | relative_url }}" title="{{ page.nav | default: page.title }}">{{ page.nav | default: page.title | truncate: 5, '' }}</a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- Mobile: Type Navigation & Notification (second line) -->
+<div id="breadcrumb-nav-mobile" class="py-2 border-bottom bg-orange-light d-lg-none">
+  <div class="container-xxl d-flex justify-content-between align-items-center gap-2">
+    <!-- Type Navigation -->
+    <div class="d-flex flex-wrap gap-1 flex-grow-1">
+      {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
+      {%- assign visible_groups = pages_by_type | slice: 0, 3 -%}
+      {%- assign hidden_groups = pages_by_type | slice: 3 -%}
+      
+      {%- for group in visible_groups -%}
+      {%- if group.name and group.name != '' -%}
+      <div class="dropdown">
+        <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown-mobile{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
+          {{ group.name }}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdown-mobile{{ forloop.index }}">
+          {%- for item in group.items -%}
+          {%- if item.parent_id and item.parent_id != '' -%}
+          <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
+          {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endif -%}
+      {%- endfor -%}
+
+      <!-- More dropdown if there are more than 3 groups -->
+      {%- if hidden_groups.size > 0 -%}
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdown-mobile-more" data-bs-toggle="dropdown" aria-expanded="false">
+          More
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdown-mobile-more">
+          {%- for group in hidden_groups -%}
           {%- if group.name and group.name != '' -%}
-          <div class="dropdown">
-            <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown-mobile{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="dropdown-submenu">
+            <button class="dropdown-item dropdown-toggle" type="button" id="dropdown-more{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
               {{ group.name }}
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdown-mobile{{ forloop.index }}">
+            <ul class="dropdown-menu" aria-labelledby="dropdown-more{{ forloop.index }}">
               {%- for item in group.items -%}
               {%- if item.parent_id and item.parent_id != '' -%}
               <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
               {%- endif -%}
               {%- endfor -%}
             </ul>
-          </div>
+          </li>
           {%- endif -%}
           {%- endfor -%}
-        </div>
-      </nav>
+        </ul>
+      </div>
+      {%- endif -%}
+    </div>
+
+    <!-- Notification Bell -->
+    <div class="flex-shrink-0">
+      <a id="notif-btn" class="btn btn-link position-relative p-2" href="#" role="button" aria-label="Notifications" title="Notifications" onclick="event.preventDefault();" style="color:inherit;"
+         data-ably-key="{{ site.notify.key | default: '' }}"
+         data-ably-channel="{{ site.notify.channel | default: 'padal-notification' }}"
+         data-ably-event="{{ site.notify.event | default: '' }}"
+         data-popup-timeout="{{ site.notify_popup_timeout | default: 5000 }}"
+         data-debug="{{ site.notify_debug | default: false | jsonify }}"
+         data-history-limit="{{ site.notify_history_limit | default: 10 }}">
+        <img id="notif-bell-img" src="{{ '/assets/bootstrap-icons/bell.svg' | relative_url }}" width="20" height="20" alt="Notifications" style="vertical-align:middle;" />
+        <span id="notif-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.65rem;display:none;min-width:18px;height:18px;line-height:16px;padding:0 4px;">0</span>
+      </a>
     </div>
   </div>
+</div>
 
-  <!-- Breadcrumb & Navigation Bar -->
-  <div class="py-2">
-    <div class="container-xxl d-flex align-items-center justify-content-between gap-3">
+<!-- Desktop: Single Breadcrumb Line (Left | Center | Right) -->
+<div id="breadcrumb-header" class="py-2 border-bottom bg-orange-light d-none d-lg-block">
+  <div class="container-xxl d-flex align-items-center justify-content-between gap-3">
 
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item">
-            <a href="{{ '/' | relative_url }}">Home</a>
-          </li>
-          {% if page.section or page.parent_id %}
-          <li class="breadcrumb-item">
-            <a href="{{ '/content/' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/">{{ page.section | default: page.parent_id }}</a>
-          </li>
-          {% endif %}
-          <li class="breadcrumb-item">
-            <a href="{{ page.url | relative_url }}">{{ page.nav | default: page.title }}</a>
-          </li>
-        </ol>
-      </nav>
+    <!-- Left: Page Navigation Path -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item">
+          <a href="{{ '/' | relative_url }}">Home</a>
+        </li>
+        {% if page.section or page.parent_id %}
+        <li class="breadcrumb-item">
+          <a href="{{ '/content/' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/">{{ page.section | default: page.parent_id }}</a>
+        </li>
+        {% endif %}
+        <li class="breadcrumb-item">
+          <a href="{{ page.url | relative_url }}">{{ page.nav | default: page.title }}</a>
+        </li>
+      </ol>
+    </nav>
 
-      <!-- Type-based Navigation Menu (desktop only, centered) -->
-      <nav aria-label="content type navigation" class="d-none d-lg-flex">
-        <div class="d-flex flex-wrap gap-2 justify-content-center">
-          {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
-          {%- for group in pages_by_type -%}
-          {%- if group.name and group.name != '' -%}
-          <div class="dropdown">
-            <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown-desktop{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
-              {{ group.name }}
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdown-desktop{{ forloop.index }}">
-              {%- for item in group.items -%}
-              {%- if item.parent_id and item.parent_id != '' -%}
-              <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
-              {%- endif -%}
-              {%- endfor -%}
-            </ul>
-          </div>
-          {%- endif -%}
-          {%- endfor -%}
+    <!-- Center: Type-based Navigation Menu -->
+    <nav aria-label="content type navigation" class="flex-grow-1 d-flex justify-content-center">
+      <div class="d-flex flex-wrap gap-2 justify-content-center">
+        {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
+        {%- for group in pages_by_type -%}
+        {%- if group.name and group.name != '' -%}
+        <div class="dropdown">
+          <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown-desktop{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ group.name }}
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdown-desktop{{ forloop.index }}">
+            {%- for item in group.items -%}
+            {%- if item.parent_id and item.parent_id != '' -%}
+            <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
+            {%- endif -%}
+            {%- endfor -%}
+          </ul>
         </div>
-      </nav>
-
-      <!-- Right-side: notification bell -->
-      <div class="ms-auto">
-        <a id="notif-btn" class="btn btn-link position-relative p-2" href="#" role="button" aria-label="Notifications" title="Notifications" onclick="event.preventDefault();" style="color:inherit;"
-           data-ably-key="{{ site.notify.key | default: '' }}"
-           data-ably-channel="{{ site.notify.channel | default: 'padal-notification' }}"
-           data-ably-event="{{ site.notify.event | default: '' }}"
-           data-popup-timeout="{{ site.notify_popup_timeout | default: 5000 }}"
-           data-debug="{{ site.notify_debug | default: false | jsonify }}"
-           data-history-limit="{{ site.notify_history_limit | default: 10 }}">
-          <img id="notif-bell-img" src="{{ '/assets/bootstrap-icons/bell.svg' | relative_url }}" width="20" height="20" alt="Notifications" style="vertical-align:middle;" />
-          <span id="notif-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.65rem;display:none;min-width:18px;height:18px;line-height:16px;padding:0 4px;">0</span>
-        </a>
+        {%- endif -%}
+        {%- endfor -%}
       </div>
+    </nav>
 
+    <!-- Right: Notification Bell -->
+    <div>
+      <a id="notif-btn" class="btn btn-link position-relative p-2" href="#" role="button" aria-label="Notifications" title="Notifications" onclick="event.preventDefault();" style="color:inherit;"
+         data-ably-key="{{ site.notify.key | default: '' }}"
+         data-ably-channel="{{ site.notify.channel | default: 'padal-notification' }}"
+         data-ably-event="{{ site.notify.event | default: '' }}"
+         data-popup-timeout="{{ site.notify_popup_timeout | default: 5000 }}"
+         data-debug="{{ site.notify_debug | default: false | jsonify }}"
+         data-history-limit="{{ site.notify_history_limit | default: 10 }}">
+        <img id="notif-bell-img" src="{{ '/assets/bootstrap-icons/bell.svg' | relative_url }}" width="20" height="20" alt="Notifications" style="vertical-align:middle;" />
+        <span id="notif-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.65rem;display:none;min-width:18px;height:18px;line-height:16px;padding:0 4px;">0</span>
+      </a>
     </div>
+
   </div>
 </div>
 
@@ -109,12 +172,14 @@ layout: default
 <div class="container-xxl" id="wrapper">
 
   <!-- Page content wrapper-->
-  <div id="page-content-wrapper" class="d-flex justify-content-center">
+  <div id="page-content-wrapper">
 
     <!-- Page content-->
-    <main id="maincontent" role="main" aria-label="Content" class="w-100">
-      <div class="px-3 py-4">
-        {{ content }}
+    <main id="maincontent" role="main" aria-label="Content">
+      <div class="px-3 py-4 mx-auto" style="width: 100%; display: flex; justify-content: center;">
+        <div style="width: 100%;">
+          {{ content }}
+        </div>
       </div>
 
       {% if prev_page_title or next_page_title %}<hr>{% endif %}
