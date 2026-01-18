@@ -69,7 +69,11 @@ header, .navbar {
 }
 
 /* Page content */
-#page-content-wrapper,
+#page-content-wrapper {
+  background-color: $content-background;
+  color: $text-color;
+}
+
 .page-content,
 .wrapper,
 .content {
