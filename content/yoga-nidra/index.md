@@ -12,6 +12,19 @@ lyrics_ta: யோகா நித்ரா, யோகா, மனநிலை, �
 
 யோகா நித்ரா, பொதுவாக "யோகிக் தூக்கம்" என்று அழைக்கப்படுகிறது, ஒரு முறையான வழிகாட்டப்பட்ட தியானமாகும் இது விழிப்புணர்வு ஓய்வின் நிலையை உண்டாக்குகிறது. இது பயிற்சியாளரை விழிப்புணர்வு மற்றும் தூக்கத்தின் நிலைகளுக்கு இடையில் மிதக்கும் நிலையில் வைத்திருக்க உதவுகிறது, ஆழமான உடல், மன மற்றும் உணர்ச்சி சிகிச்சையை எளிதாக்குகிறது.
 
+{% endcapture %} {% include lang-filter.html lang="ta" text=text %}
+
+{% capture text_en %}
+# Yoga Nidra for Relaxation
+
+Yoga Nidra, often referred to as "Yogic Sleep," is a systematic guided meditation that induces a state of conscious relaxation. It allows the practitioner to hover between the states of wakefulness and sleep, facilitating deep physical, mental, and emotional healing.
+
+{% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
+
+{% include toc-sections.html parent_name="Yoga Nidra" %}
+
+{% capture text %}
+
 ## 1. முக்கிய நன்மைகள்
 *   **ஆழமான ஓய்வு:** இது உடலை பராசிம்பத்திக் நரம்பு அமைப்பில் (ஓய்வு மற்றும் ஜீரணம்) மாற்றுகிறது, கார்டிசோல் அளவுகளை குறிப்பிடத்தக்க அளவில் குறைக்கிறது.
 *   **தூக்கத்தின் தரம்:** வழக்கமான பயிற்சிInsomnia கையாள உதவுகிறது மற்றும் நரம்பு அமைப்பை மீட்கும் தூக்கத்திற்கு தயாரிக்கிறது.
@@ -35,10 +48,6 @@ lyrics_ta: யோகா நித்ரா, யோகா, மனநிலை, �
 {% endcapture %} {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-# Yoga Nidra for Relaxation
-
-Yoga Nidra, often referred to as "Yogic Sleep," is a systematic guided meditation that induces a state of conscious relaxation. It allows the practitioner to hover between the states of wakefulness and sleep, facilitating deep physical, mental, and emotional healing.
-
 ## 1. Core Benefits
 *   **Deep Relaxation:** It shifts the body into the parasympathetic nervous system (rest-and-digest), significantly reducing cortisol levels.
 *   **Sleep Quality:** Regular practice helps manage insomnia and prepares the nervous system for restorative sleep.
@@ -58,7 +67,5 @@ Yoga Nidra, often referred to as "Yogic Sleep," is a systematic guided meditatio
 *   **Do Not Sleep:** The goal is to remain conscious. If you find yourself falling asleep, try practicing with a thinner pillow or at a different time of day.
 *   **Stay Still:** Physical stillness is the key to mental stillness. Resolve to remain completely still for the duration of the session.
 *   **Consistency:** Even a 10-minute daily practice is more beneficial than a long session once a month.
-
-
 {% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
-{% include toc-sections.html parent_name="Yoga Nidra" %}
+
