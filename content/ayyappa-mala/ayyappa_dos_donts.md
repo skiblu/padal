@@ -8,17 +8,17 @@ lyrics_ta: அய்யப்ப, மல, டாஸ், அண்ட், டோ�
 {% capture text %}
 அய்யப்ப வரதம் என்பது அய்யப்ப சுவாமிக்கு அர்ப்பணிக்கப்பட்ட ஒரு புனித ஆன்மிகப் பயிற்சி ஆகும், இது பக்தர்கள் கடுமையான பரிசுத்தம் மற்றும் ஒழுக்கத்தை கடைப்பிடிக்க வேண்டும். இந்த கடைப்பிடிப்பு பொதுவாக 41 நாட்கள் நீடிக்கும், ஆனால் 21 அல்லது 11 நாட்கள் குறைந்த கால அளவுகளும் நடைமுறையில் உள்ளன.
 
-## தகுதி
+### தகுதி
 **ஆண்கள்:** அனைத்து வயதினருக்கும் மற்றும் பின்னணிகளுக்கும் திறந்தது.
 **பெண்கள்:** பாரம்பரியமாக, புன்னகைமுன் பெண்கள் மற்றும் மாதவிடாய் முடிந்த பெண்கள் இதனை கடைப்பிடிக்கின்றனர்.
 
-## நேரம்
+### நேரம்
 இந்த கடைப்பிடிப்பு பொதுவாக மண்டலம் பருவத்தில் நடைபெறும், இது கார்திக மாதத்தின் முதல் நாளில் (கேரள காலண்டர்) தொடங்குகிறது - பொதுவாக நவம்பர் நடுப்பகுதியில் இருந்து சங்க்ராந்தி வரை.
 
-## புனித தொடக்கம்
+### புனித தொடக்கம்
 சாமர்த்திய மாலை (புனித நூல்) எந்த கோவிலிலும் அணியப்படலாம், சிறந்தது சபரிமலாவுக்கு 18 பயணங்களை முடித்த குருசுவாமியின் வழிகாட்டுதலின் கீழ். வரதம் சபரிமலா கோவிலில் தர்ஷனத்துடன் முடிவடைகிறது. வட அமெரிக்காவில், மேரிலாந்தில் உள்ள சிவ விஷ்ணு கோவில் போன்ற மாற்று அய்யப்ப சன்னிதானங்கள் புனித இடங்களாக செயல்ப்படுகின்றன.
 
-## தினசரி கடைப்பிடிப்புகள்
+### தினசரி கடைப்பிடிப்புகள்
 இந்த வரதத்தின் சாரம் பிரம்மச்சரியம் (காமம் இல்லாத நிலை)ஐ அர்ப்பணித்த வழிபாடு, கவனமான உணவு மற்றும் ஆன்மிக ஒழுக்கம் மூலம் ஏற்றுக்கொள்ளும்.
 
 ### பரிசுத்தம் சடங்குகள்
@@ -65,7 +65,7 @@ lyrics_ta: அய்யப்ப, மல, டாஸ், அண்ட், டோ�
 - பொது இடங்களிலிருந்து திரும்பியவுடன் உடனே குளியல் செய்யவும்\
 - புகையிலை மற்றும் மது முற்றிலும் நீக்கவும்
 
-## பயிற்சியைப் புரிந்துகொள்ளுதல்
+### பயிற்சியைப் புரிந்துகொள்ளுதல்
 இந்த ஆன்மிக ஒழுக்கம் நிலையான அர்ப்பணிப்பின் மூலம் உள்ளார்ந்த மனித பலவீனங்களை மீறுவதில் நிபுணத்துவத்தை வளர்க்கிறது. பாரம்பரிய 18 ஆண்டு கடமை முன்னேற்றமான பரிசுத்தத்தை பிரதிநிதித்துள்ளது, சபரிமலாவில் உள்ள 18 படிகள் இந்த மாற்று பயணத்தை சின்னமாக்குகின்றன. 
 40 நாள் காலம் இந்தக் கொள்கையை பின்பற்றுகிறது என்று கூறப்படுகிறது, ஏனெனில் இந்த காலப்பகுதியில் தொடர்ச்சியான பயிற்சி நிலையான பழக்கவழக்கங்களையும் மாற்றத்தையும் ஏற்படுத்துகிறது. 21 அல்லது 11 நாட்கள் குறைந்த கால அளவுகளும் ஏற்றுக்கொள்ளப்படுகின்றன, ஆனால் ஒரே நாளான கடைப்பிடிப்புகள் பரிந்துரைக்கப்படவில்லை.
 
@@ -80,21 +80,21 @@ lyrics_ta: அய்யப்ப, மல, டாஸ், அண்ட், டோ�
 {% capture text_en %}
 The Ayyappa Vratham is a sacred spiritual practice dedicated to Lord Ayyappa, requiring devotees to observe strict vows of celibacy and discipline. This observance typically spans 41 days, though shorter durations of 21 or 11 days are also practiced.
 
-## Eligibility
+### Eligibility
 
 **Men:** Open to all ages and backgrounds.
 
 **Women:** Traditionally observed by pre-pubescent girls and post-menopausal women.
 
-## Timing
+### Timing
 
 The observance commonly occurs during Mandalam season, beginning on the first day of Kartika Masam (Kerala Calendar) - typically from mid-November through Sankranti.
 
-## Sacred Initiation
+### Sacred Initiation
 
 The ceremonial mala (sacred thread) is worn at any temple, ideally under the guidance of a Guruswami who has completed 18 pilgrimages to Sabarimala. The vratham culminates with darshan at the Sabarimala temple in Kerala. In North America, alternative Ayyappa Sannidhanams such as the Siva Vishnu Temple in Maryland serve as pilgrimage destinations.
 
-## Daily Observances
+### Daily Observances
 
 The essence of this vratham lies in embracing Brahmacharyam through dedicated worship, mindful eating, and spiritual discipline.
 
@@ -147,7 +147,7 @@ The core practice involves transcending kama (desire), krodha (anger), moha (att
 - Take immediate bath after returning from public spaces\
 - Eliminate tobacco and alcohol completely
 
-## Understanding the Practice
+### Understanding the Practice
 
 This spiritual discipline cultivates mastery over innate human weaknesses through sustained dedication. The traditional 18-year commitment represents progressive purification, with the 18 steps at Sabarimala symbolizing this transformative journey.
 

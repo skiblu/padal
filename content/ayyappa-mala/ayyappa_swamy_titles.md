@@ -5,11 +5,11 @@ title:  Ayyappa Swamy Titles
 lyrics_en: Ayyappa, Titles, Swamy
 ---
 {% capture text %}
-## அய்யப்ப சுவாமி பட்டங்கள் - தமிழில்
+### அய்யப்ப சுவாமி பட்டங்கள் - தமிழில்
 
 சபரிமலை கோயிலின் புனிதமான 18 படிகளுக்கு ஒத்த பதினெட்டு பட்டங்கள் அய்யப்ப பக்தர்களுக்கு வழங்கப்படுகின்றன. இவை ஆன்மீக வளர்ச்சியின் படிப்படியான பயணத்தை குறிக்கின்றன. ஒவ்வொரு யாத்திரை ஆண்டும் ஒரு குறிப்பிட்ட உள் தடையை கடப்பதை குறிக்கிறது, பக்தர்கள் முன்னேறும் ஆன்மீக முதிர்ச்சியை குறிக்கும் புதிய பட்டத்தை பெறுகிறார்கள். 18 ஆண்டு சுழற்சி முடிந்தவுடன், எண்ணிக்கை மீண்டும் தொடங்குகிறது, பத்தொன்பதாம் ஆண்டு யாத்ரீகர் கன்னி சுவாமி நிலைக்கு திரும்புகிறார்.
 
-## பதினெட்டு புனித பட்டங்கள்
+### பதினெட்டு புனித பட்டங்கள்
 
 ### முதல் ஆண்டு - கன்னி சுவாமி (தூய பக்தர்)
 **குறியீடு:** முதல் யாத்திரை அப்பாவித்தனம், தூய்மை மற்றும் ஆன்மீக விழிப்புணர்வுக்கான முதல் படி. "கன்னி" என்றால் தொடப்படாத அல்லது தூய்மையானது, தர்ம பாதையில் ஒரு பக்தரின் புதிய அர்ப்பணிப்பை குறிக்கிறது.
@@ -116,7 +116,7 @@ lyrics_en: Ayyappa, Titles, Swamy
 
 குருசுவாமி (ஆன்மீக வழிகாட்டி) இப்போது ஆர்வலர்கள் மற்றும் தெய்வீகத்திற்கு இடையில் வாழும் பாலமாக பணியாற்றுகிறார். முழுமையான பாதையில் நடந்து, அவர்கள் புதிய பக்தர்களை வழிநடத்த உண்மையான ஞானத்தை பெற்றுள்ளனர். அவர்களின் இருப்பு 18 ஆண்டுகள் அசையாத ஒழுக்கத்தின் மூலம் அவர்கள் உள்ளடக்கிய மாற்றும் சக்தியை வெளிப்படுத்துகிறது.
 
-## ஆன்மீக வளர்ச்சியின் சுழற்சி இயல்பு
+### ஆன்மீக வளர்ச்சியின் சுழற்சி இயல்பு
 
 18 ஆண்டு சுழற்சியை முடித்தவுடன், தங்கள் யாத்திரையைத் தொடரும் பக்தர்கள் கன்னி சுவாமி பதவிக்கு திரும்புகிறார்கள், ஆன்மீக வளர்ச்சி நேரியல் அல்ல மாறாக சுழல் என்பதை ஒப்புக்கொள்கிறார்கள். ஒவ்வொரு சுழற்சியும் புரிதலை ஆழப்படுத்துகிறது, நுட்பமான கண்டிஷனிங் அடுக்குகளை அகற்றுகிறது, மற்றும் தெய்வீக உணர்வில் நிரந்தர நிலைப்பாட்டிற்கு பக்தரை நெருக்கமாக கொண்டுவருகிறது.
 
@@ -130,7 +130,7 @@ lyrics_en: Ayyappa, Titles, Swamy
 
 The eighteen sacred titles bestowed upon Ayyappa devotees correspond to the iconic 18 steps of Sabarimala temple, representing a progressive spiritual journey toward self-realization. Each pilgrimage year marks the crossing of a specific internal obstacle, with devotees earning a new title that symbolizes their advancing spiritual maturity. Upon completing the 18-year cycle, the count resets, and the nineteenth-year pilgrim returns to Kanni Swamy status.
 
-## The 18 Sacred Titles
+### The 18 Sacred Titles
 
 ### 1st Year - KANNI SWAMY (Virgin/Pure Devotee)
 **Symbolism:** The maiden pilgrimage represents innocence, purity, and the first step toward spiritual awakening. "Kanni" means virgin or untouched, signifying a devotee's fresh commitment to the path of dharma.
@@ -238,7 +238,7 @@ Having conquered the 18th obstacle, the devotee achieves the state described by 
 
 The Guruswamy (spiritual preceptor) now serves as a living bridge between aspirants and the divine. Having walked the complete path, they possess authentic wisdom to guide newer devotees. Their presence radiates the transformative power they have embodied through 18 years of unwavering discipline.
 
-## The Cyclical Nature of Spiritual Growth
+### The Cyclical Nature of Spiritual Growth
 
 Upon completing the 18-year cycle, devotees who continue their pilgrimage return to Kanni Swamy designation, acknowledging that spiritual growth is not linear but spiral. Each cycle deepens understanding, removes subtler layers of conditioning, and brings the devotee closer to permanent establishment in divine consciousness.
 

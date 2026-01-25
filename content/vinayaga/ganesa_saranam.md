@@ -25,7 +25,7 @@ lyrics_ta: விநாயகா, கணேசா, சரணம், பக்த
 மூத்தவன் நீயே சரணம் கணேசா\
 மூஷிக வாகன சரணம் கணேசா - - - `(கணேச சரணம்)`
 
-## Optional Start
+### Optional Start
 அகந்தையை அழித்திடும் சரணம் கணேசா\
 அன்பில் உறைந்திடும் சரணம் கணேசா
 
@@ -37,7 +37,7 @@ lyrics_ta: விநாயகா, கணேசா, சரணம், பக்த
 
 பார்வதி பாலகனே சரணம் கணேசா\
 பக்தருக் கருள்வாய் சரணம் கணேசா
-## Optional End
+### Optional End
 
 `கணேச சரணம் சரணம் கணேசா`\
 `கணேச சரணம் சரணம் கணேசா (2)`
@@ -59,7 +59,7 @@ Munithozhum thevaa saranam Ganesha - - - `(Ganesa saranam)`
 Moothavan neeye saranam Ganesha\
 Mooshika vaagana saranam Ganesha - - - `(Ganesa saranam)`
 
-## Optional Start
+### Optional Start
 Aganthaiyai azhithidum saranam Ganesha\
 Anbil uraindidum saranam Ganesha
 
@@ -71,7 +71,7 @@ Vezha mugatthone saranam Ganesha
 
 Paarvathi paalaganey saranam Ganesha\
 Baktharuk karulvaay saranam Ganesha
-## Optional End
+### Optional End
 
 `Ganesa saranam saranam Ganesha`\
 `Ganesa saranam saranam Ganesha (2)`
