@@ -1,6 +1,6 @@
 ---
 section: Yoga Nidra
-nav_order: 1
+nav_order: 25
 audio_id: 3fsjhGwicn7
 audio_length: 826
 title: Yoga Nidra for Relaxation
