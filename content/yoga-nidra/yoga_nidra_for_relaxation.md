@@ -1,0 +1,11 @@
+---
+section: Yoga Nidra
+nav_order: 1
+audio_id: 3fsjhGwicn7
+audio_length: 826
+title: Yoga Nidra for Relaxation
+lyrics_en: yoga, nidra, relaxation, meditation, sleep, rest, calm, grounding
+lyrics_ta: யோகா, நித்ரா, ஓய்வு, தியான, தூக்கம், அமைதி, நிலைநிறுத்தல்
+type: Yoga
+---
+
