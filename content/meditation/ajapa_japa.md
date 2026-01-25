@@ -10,7 +10,7 @@ type: Yoga
 ---
 
 {% capture text %}
-# அஜபா ஜபா தியானம்
+## அஜபா ஜபா தியானம்
 
 அஜபா ஜபா என்பது யோக-தந்திர பாரம்பரியத்தில் அடிப்படையிலான ஒரு தானாகவும் எளிதாகவும் செய்யக்கூடிய தியான நுட்பமாகும். இது "உச்சரிக்காத மந்திரம்" என்று அழைக்கப்படுகிறது, இது இயல்பான மூச்சு செயல்முறையுடன் ஒத்திசைவாக மந்திரத்தை தானாக மீண்டும் மீண்டும் கூறுவதைக் குறிக்கிறது.
 
@@ -38,7 +38,7 @@ type: Yoga
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text %}
-# Ajapa Japa Meditation
+## Ajapa Japa Meditation
 
 Ajapa Japa is a spontaneous and effortless meditation technique rooted in the Yoga-Tantra tradition. Often called the "mantra of the breath," it involves the automatic repetition of a mantra synchronized with the natural breathing process.
 
