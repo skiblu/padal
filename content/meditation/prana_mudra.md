@@ -7,6 +7,7 @@ title: Prana Mudra
 lyrics_en: yoga, meditation, relaxation, mindfulness, sleep, calm, grounding, Prana, Mudra
 lyrics_ta: யோகா, தியானம், ஓய்வு, மனநிலை, தூக்கம், அமைதி, நிலைநிறுத்தல், பிராணா, முத்திரை
 type: Yoga
+radio: false
 ---
 
 {% capture text %}

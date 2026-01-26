@@ -8,5 +8,6 @@ title_ta: ஓய்வுக்கான யோகா நித்ரா
 lyrics_en: yoga, nidra, relaxation, meditation, sleep, rest, calm, grounding
 lyrics_ta: யோகா, நித்ரா, ஓய்வு, தியான, தூக்கம், அமைதி, நிலைநிறுத்தல்
 type: Yoga
+radio: false
 ---
 

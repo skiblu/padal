@@ -38,9 +38,10 @@ Only include items that have section, audio_id and audio_length (no fallbacks).
         - p.section (non-empty)
         - p.audio_id (non-empty)
         - p.audio_length (non-empty)
+        - p.radio == true OR p.radio is not available
       No fallback logic for duration or url.
     {%- endcomment -%}
-    {%- if p.section and p.section != "" and p.audio_id and p.audio_id != "" and p.audio_length and p.audio_length != "" -%}
+    {%- if p.section and p.section != "" and p.audio_id and p.audio_id != "" and p.audio_length and p.audio_length != "" and (p.radio == nil or p.radio == true) -%}
       {%- capture _url -%}{{ 'https://assets.bhaktipadal.in/audio/' | relative_url }}{{ p.section }}/{{ p.audio_id }}.mp3{%- endcapture -%}
   TRACKS.push({
     title: {{ p.title | default: p.data.title | default: p.audio_id | jsonify }},

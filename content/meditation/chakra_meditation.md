@@ -7,6 +7,7 @@ title: Chakra Meditation
 lyrics_en: yoga, meditation, relaxation, mindfulness, sleep, calm, grounding, Chakra
 lyrics_ta: யோகா, தியானம், ஓய்வு, மனநிலை, தூக்கம், அமைதி, நிலைநிறுத்தல், சக்கரம்
 type: Yoga
+radio: false
 ---
 
 {% capture text %}

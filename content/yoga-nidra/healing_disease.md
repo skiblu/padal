@@ -8,5 +8,6 @@ title_ta: நோய்களை குணப்படுத்துதல்
 lyrics_en: yoga, nidra, relaxation, meditation, sleep, rest, calm, grounding, healing disease
 lyrics_ta: யோகா, நித்ரா, ஓய்வு, தியான, தூக்கம், அமைதி, நிலைநிறுத்தல், நோய்களை குணப்படுத்துதல்
 type: Yoga
+radio: false
 ---
 

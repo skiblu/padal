@@ -7,6 +7,7 @@ title: Ajapa Japa
 lyrics_en: yoga, meditation, relaxation, mindfulness, sleep, calm, grounding, Ajapa, Japa
 lyrics_ta: யோகா, தியானம், ஓய்வு, மனநிலை, தூக்கம், அமைதி, நிலைநிறுத்தல், அஜபா, ஜபா
 type: Yoga
+radio: false
 ---
 
 {% capture text %}

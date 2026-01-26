@@ -7,6 +7,7 @@ title: Antar Mouna - 1 and 2
 lyrics_en: yoga, meditation, relaxation, mindfulness, sleep, calm, grounding, Antar, Mouna 
 lyrics_ta: யோகா, தியானம், ஓய்வு, மனநிலை, தூக்கம், அமைதி, நிலைநிறுத்தல், அந்தர், மௌனம்
 type: Yoga
+radio: false
 ---
 
 {% capture text %}
