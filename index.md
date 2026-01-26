@@ -1,7 +1,7 @@
 ---
 title: Bhakti Padal
 layout: main-layout
-description: ஆன்லைன் பக்தி நூலகம்
+description: online library / ஆன்லைன் நூலகம்
 history: false
 ---
 
