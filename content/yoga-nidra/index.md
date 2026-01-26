@@ -8,15 +8,11 @@ lyrics_en: Yoga Nidra, Yoga, Mindfulness, Relaxation, Health, Wellness, Sleep
 lyrics_ta: யோகா நித்ரா, யோகா, மனநிலை, ஓய்வு, ஆரோக்கியம், நலன், தூக்கம்
 ---
 {% capture text %}
-### யோகா நித்ரா
-
 யோகா நித்ரா, பொதுவாக "யோகிக் தூக்கம்" என்று அழைக்கப்படுகிறது, ஒரு முறையான வழிகாட்டப்பட்ட தியானமாகும் இது விழிப்புணர்வு ஓய்வின் நிலையை உண்டாக்குகிறது. இது பயிற்சியாளரை விழிப்புணர்வு மற்றும் தூக்கத்தின் நிலைகளுக்கு இடையில் மிதக்கும் நிலையில் வைத்திருக்க உதவுகிறது, ஆழமான உடல், மன மற்றும் உணர்ச்சி சிகிச்சையை எளிதாக்குகிறது.
 
 {% endcapture %} {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-### Yoga Nidra
-
 Yoga Nidra, often referred to as "Yogic Sleep," is a systematic guided meditation that induces a state of conscious relaxation. It allows the practitioner to hover between the states of wakefulness and sleep, facilitating deep physical, mental, and emotional healing.
 
 {% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
