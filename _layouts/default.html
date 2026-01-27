@@ -11,12 +11,18 @@
     {% include template/banner.html %}
 
     {{ content }}
-
+    <!-- page footer here -->
     {% include template/foot.html %}
+
+    <!-- Add here -->
     {%- if site.attribute.advertisement.enabled -%}
-        {% include template/foot-add.html %}
+      {% include template/foot-add.html %}
     {%- endif -%}
-    {% include template/main-footer.html %}
+
+    <div style="background: {{ site.header-background }}; margin-top: 3rem;">
+      <!-- Global footer here -->
+      {% include template/main-footer.html %}
+    </div>
   </body>
 
 </html>
