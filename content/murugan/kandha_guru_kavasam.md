@@ -2,6 +2,7 @@
 section: Murugan
 nav_order: 50
 title: Kandha Guru Kavasam
+youtube_id: wMXQOOnw9cY
 lyrics_en: Murugan, Padal, Tamil, Lyrics, Song, Kandha, Guru, Kavasam
 lyrics_ta: முருகன், பாடல், தமிழ், வரிகள், கந்தா, குரு, கவசம்
 ---
