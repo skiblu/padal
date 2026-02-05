@@ -174,6 +174,84 @@ layout: default
 <link rel="stylesheet" href="{{ '/assets/css/notify.css' | relative_url }}">
 
 
+{% comment %}
+Liquid logic to figure out the nav items and nesting from the content front matter,
+Plus figures out the previous and next page for the active page
+{%- endcomment -%}
+{% assign nav_pages = site.html_pages | where_exp: 'p','p.nav_order' | where_exp: 'p', 'p.section == nil' | sort: 'nav_order' %}
+{% for p in nav_pages %}
+{% assign current_i = forloop.index0 %}
+{% if p.parent_id %}
+{% assign p_children = site.html_pages | where: 'section', p.parent_id | sort: 'nav_order' %}
+{% comment %} figure out prev/next pages for active section header {% endcomment %}
+{% if p.url == page.url %}
+{% assign prev_number = forloop.index0 | minus: 1 %}
+{% assign next_number = forloop.index0 | plus: 1 %}
+{% if forloop.first %}
+{% if p_children[0] %}{% assign next_page_title = p_children[0].title %}{% assign next_page_url = p_children[0].url %}
+{% else %}
+{% assign next_page_title = nav_pages[next_number].title %}{% assign next_page_url = nav_pages[next_number].url %}
+{% endif %}
+{% else %}
+{% assign prev_page = nav_pages[prev_number] %}
+{% if prev_page.parent_id %}
+{% assign prev_child = site.html_pages | where: 'section', prev_page.parent_id | sort: 'nav_order' | last %}
+{% assign prev_page_title = prev_child.title %}{% assign prev_page_url = prev_child.url %}
+{% else %}
+{% assign prev_page_title = prev_page.title %}{% assign prev_page_url = prev_page.url %}
+{% endif %}
+{% if p_children[0] %}{% assign next_page_title = p_children[0].title %}{% assign next_page_url = p_children[0].url %}
+{% else %}
+{% unless forloop.last %}{% assign next_page_title = nav_pages[next_number].title %}{% assign next_page_url = nav_pages[next_number].url %}{% endunless %}
+{% endif %}
+{% endif %}
+{%- endif -%}
+{% for c in p_children %}
+{% comment %} figure out prev/next pages for active section child {% endcomment %}
+{% if c.url == page.url %}
+{% assign prev_number = forloop.index0 | minus: 1 %}
+{% assign next_number = forloop.index0 | plus: 1 %}
+{% if forloop.last %}
+{% if forloop.first %}
+{% assign prev_page_title = p.title %}{% assign prev_page_url = p.url %}
+{% else %}
+{% assign prev_page_title = p_children[prev_number].title %}{% assign prev_page_url = p_children[prev_number].url %}
+{% endif %}
+{% assign next_i = current_i | plus: 1 %}
+{% assign next_page_title = nav_pages[next_i].title %}{% assign next_page_url = nav_pages[next_i].url %}
+{% elsif forloop.first %}
+{% assign prev_page_title = p.title %}{% assign prev_page_url = p.url %}
+{% assign next_page_title = p_children[next_number].title %}{% assign next_page_url = p_children[next_number].url %}
+{% else %}
+{% assign prev_page_title = p_children[prev_number].title %}{% assign prev_page_url = p_children[prev_number].url %}
+{% assign next_page_title = p_children[next_number].title %}{% assign next_page_url = p_children[next_number].url %}
+{% endif %}
+{%- endif -%}
+{% endfor %}
+{% else %}
+{% comment %}
+Display individual listing (non-section pages)
+{%- endcomment -%}
+{% comment %} figure out prev/next pages for active individual listing {% endcomment %}
+{% if p.url == page.url %}
+{% assign prev_number = forloop.index0 | minus: 1 %}
+{% assign next_number = forloop.index0 | plus: 1 %}
+{% unless forloop.first %}
+{% assign prev_page = nav_pages[prev_number] %}
+{% if prev_page.parent_id %}
+{% assign prev_child = site.html_pages | where: 'section', prev_page.parent_id | sort: 'nav_order' | last %}
+{% assign prev_page_title = prev_child.title %}{% assign prev_page_url = prev_child.url %}
+{% else %}
+{% assign prev_page_title = prev_page.title %}{% assign prev_page_url = prev_page.url %}
+{% endif %}
+{% endunless %}
+{% unless forloop.last %}
+{% assign next_page_title = nav_pages[next_number].title %}{% assign next_page_url = nav_pages[next_number].url %}
+{% endunless %}
+{%- endif -%}
+{% endif %}
+{% endfor %}
+
 <div class="container-xxl" id="wrapper">
 
   <!-- Page content wrapper-->
@@ -196,7 +274,3 @@ layout: default
 
   </div>
 </div>
-
-<script>
-  /* Remove old sidebar toggle - no longer needed */
-</script>
