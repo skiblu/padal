@@ -32,7 +32,7 @@ layout: default
     <div class="d-flex flex-wrap gap-1 flex-grow-1">
       {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
       {%- assign visible_groups = pages_by_type | slice: 0, 3 -%}
-      {%- assign hidden_groups = pages_by_type | slice: 3 -%}
+      {%- assign hidden_groups = pages_by_type | drop: 3 -%}
       
       {%- for group in visible_groups -%}
       {%- if group.name and group.name != '' -%}
