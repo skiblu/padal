@@ -18,7 +18,7 @@ layout: default
         </li>
         {% endif %}
         <li class="breadcrumb-item">
-          <a href="{{ page.url | relative_url }}" title="{{ page.nav | default: page.title }}">{{ page.nav | default: page.title | truncate: 8, '' }}</a>
+          <a href="{{ page.url | relative_url }}" title="{{ page.nav | default: page.title }}">{{ page.nav | default: page.title | truncate: 15, '' }}</a>
         </li>
       </ol>
     </nav>
