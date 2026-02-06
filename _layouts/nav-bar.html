@@ -58,12 +58,14 @@ layout: default
         <a href="#" class="nav-link dropdown-toggle" onclick="event.preventDefault(); event.stopPropagation();">
           More
         </a>
-        <div class="dropdown-content">
+        <div class="dropdown-content" style="flex-direction: column; min-width: 200px;">
           {%- for group in hidden_groups -%}
           {%- if group.name and group.name != '' -%}
-          <a href="#" class="dropdown-submenu-toggle" onclick="event.preventDefault(); event.stopPropagation();" style="padding: 12px 16px; text-decoration: none; color: #333; display: block; transition: background-color 0.2s ease; white-space: nowrap; position: relative;">
-            {{ group.name }}
-            <span style="font-size: 0.75rem; margin-left: 4px;">▶</span>
+          <div style="position: relative; padding: 0;">
+            <a href="#" class="dropdown-submenu-toggle" onclick="event.preventDefault(); event.stopPropagation();" style="padding: 12px 16px; text-decoration: none; color: #333; display: block; transition: background-color 0.2s ease;">
+              {{ group.name }}
+              <span style="float: right; font-size: 0.75rem;">▶</span>
+            </a>
             <div class="dropdown-submenu-content" style="display: none; flex-direction: column; position: absolute; top: 0; left: 100%; min-width: 200px; background-color: #f9f9f9; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);">
               {%- for item in group.items -%}
               {%- if item.parent_id and item.parent_id != '' -%}
@@ -71,7 +73,7 @@ layout: default
               {%- endif -%}
               {%- endfor -%}
             </div>
-          </a>
+          </div>
           {%- endif -%}
           {%- endfor -%}
         </div>
