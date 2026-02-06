@@ -97,11 +97,14 @@
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
+  padding: 0;
   z-index: 1;
   top: 100%;
   left: 0;
   border-radius: 0 0 4px 4px;
+  flex-wrap: wrap;
+  display: none;
+  flex-direction: row;
 }
 
 .dropdown-nav .dropdown-content a {
@@ -110,8 +113,9 @@
   text-decoration: none;
   display: block;
   transition: background-color 0.2s ease;
-  margin: -12px -16px;
-  padding: 12px 16px;
+  flex: 1;
+  min-width: 120px;
+  white-space: nowrap;
 }
 
 .dropdown-nav .dropdown-content a:hover {
@@ -119,11 +123,29 @@
 }
 
 .dropdown-nav:hover .dropdown-content {
-  display: block;
+  display: flex;
 }
 
 .dropdown-nav:hover > .nav-link {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Submenu Toggle for Mobile More dropdown */
+.dropdown-submenu-toggle {
+  cursor: pointer;
+}
+
+.dropdown-submenu-toggle:hover {
+  background-color: #f1f1f1;
+}
+
+/* Submenu content visibility on click */
+.dropdown-submenu-content {
+  display: none !important;
+}
+
+.dropdown-submenu-content.show {
+  display: flex !important;
 }
 
 /* Nested Dropdown Support */
