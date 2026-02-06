@@ -29,7 +29,7 @@ layout: default
 <div id="breadcrumb-nav-mobile" class="py-2 border-bottom bg-orange-light d-lg-none">
   <div class="container-xxl d-flex justify-content-between align-items-center gap-2">
     <!-- Type Navigation -->
-    <nav class="navbar-nav flex-grow-1" style="gap: 0;">
+    <div class="d-flex flex-wrap gap-1 flex-grow-1">
       {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
       {%- assign visible_groups = pages_by_type | slice: 0, 3 -%}
       {%- assign remaining_count = pages_by_type.size | minus: 3 -%}
@@ -37,49 +37,48 @@ layout: default
       
       {%- for group in visible_groups -%}
       {%- if group.name and group.name != '' -%}
-      <div class="nav-item dropdown-nav">
-        <a href="#" class="nav-link dropdown-toggle" onclick="event.preventDefault(); event.stopPropagation();">
+      <div class="dropdown">
+        <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdown-mobile{{ forloop.index }}" data-bs-toggle="dropdown" aria-expanded="false">
           {{ group.name }}
-        </a>
-        <div class="dropdown-content">
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdown-mobile{{ forloop.index }}">
           {%- for item in group.items -%}
           {%- if item.parent_id and item.parent_id != '' -%}
-          <a href="{{ item.url | relative_url }}">{{ item.parent_id }}</a>
+          <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
           {%- endif -%}
           {%- endfor -%}
-        </div>
+        </ul>
       </div>
       {%- endif -%}
       {%- endfor -%}
 
       <!-- More dropdown if there are more than 3 groups -->
       {%- if hidden_groups.size > 0 -%}
-      <div class="nav-item dropdown-nav">
-        <a href="#" class="nav-link dropdown-toggle" onclick="event.preventDefault(); event.stopPropagation();">
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdown-mobile-more" data-bs-toggle="dropdown" aria-expanded="false">
           More
-        </a>
-        <div class="dropdown-content" style="flex-direction: column; min-width: 200px;">
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdown-mobile-more">
           {%- for group in hidden_groups -%}
           {%- if group.name and group.name != '' -%}
-          <div style="position: relative; padding: 0;">
-            <a href="#" class="dropdown-submenu-toggle" onclick="event.preventDefault(); event.stopPropagation();" style="padding: 12px 16px; text-decoration: none; color: #333; display: block; transition: background-color 0.2s ease;">
+          <li class="dropdown-submenu position-relative">
+            <a href="#" class="dropdown-item" onclick="event.preventDefault(); event.stopPropagation();">
               {{ group.name }}
-              <span style="float: right; font-size: 0.75rem;">▶</span>
             </a>
-            <div class="dropdown-submenu-content" style="display: none; flex-direction: column; position: absolute; top: 0; left: 100%; min-width: 200px; background-color: #f9f9f9; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);">
+            <ul class="dropdown-menu" style="position: absolute; top: 0; left: 100%; min-width: 150px;">
               {%- for item in group.items -%}
               {%- if item.parent_id and item.parent_id != '' -%}
-              <a href="{{ item.url | relative_url }}" style="padding: 12px 16px; text-decoration: none; color: #333; display: block; transition: background-color 0.2s ease;">{{ item.parent_id }}</a>
+              <li><a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.parent_id }}</a></li>
               {%- endif -%}
               {%- endfor -%}
-            </div>
-          </div>
+            </ul>
+          </li>
           {%- endif -%}
           {%- endfor -%}
-        </div>
+        </ul>
       </div>
       {%- endif -%}
-    </nav>
+    </div>
 
     <!-- Notification Bell -->
     <div class="flex-shrink-0">
@@ -171,16 +170,6 @@ layout: default
 <!-- notification scripts and styles -->
 <script src="{{ '/assets/js/notify-configure.js' | relative_url }}"></script>
 <link rel="stylesheet" href="{{ '/assets/css/notify.css' | relative_url }}">
-
-<script>
-  // Handle mobile submenu toggle
-  document.querySelectorAll('.dropdown-submenu-toggle').forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-      const submenuContent = toggle.nextElementSibling;
-      submenuContent.classList.toggle('show');
-    });
-  });
-</script>
 
 
 {% comment %}
