@@ -2,6 +2,8 @@
 section: Shivan
 nav_order: 50
 title: Sivapuramam - Nama Shivaya Vaaḻga
+audio_id: gr563FDGy473
+audio_length: 642
 lyrics_en: Sivapuranam, Namassivaaya, Vaaḻka, Naathanthaaṉ, Vaaḻka
 lyrics_ta: சிவபுராணம், நமச்சிவாய, வாழ்க, நாதன்தான், வாழ்க
 ---
