@@ -273,9 +273,9 @@ Display individual listing (non-section pages)
       <!-- Recommendations: show up to 6 thumbnail buttons -->
       <section id="recommendations" class="my-4">
         <div class="card recommendations-card p-3">
-          <div class="d-flex align-items-center justify-content-between mb-2">
+          <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between mb-2">
             <h3 class="h6 mb-0">Recommendations</h3>
-            <small class="text-muted">Similar pages that you may like</small>
+            <small class="text-muted mt-1 mt-sm-0">Similar pages that you may like</small>
           </div>
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           {%- assign album = page.parent_id | default: page.section -%}

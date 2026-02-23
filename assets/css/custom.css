@@ -124,3 +124,27 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* Tile enclosure: rounded border and subtle background */
+.recommendation-item {
+  border: 1px solid rgba(0,0,0,0.06);
+  background: var(--bs-body-bg, #fff);
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  align-items: center;
+}
+
+.recommendation-item img,
+.recommendation-fallback {
+  width: 56px;
+  height: 56px;
+  display: inline-block;
+  object-fit: cover;
+}
+
+.recommendation-fallback svg { display: block; }
+
+@media (max-width: 575.98px) {
+  /* Give tiles more breathing room on very small screens */
+  .recommendation-item { padding: 0.5rem; }
+}
