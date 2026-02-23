@@ -270,6 +270,50 @@ Display individual listing (non-section pages)
         {% if next_page_title %}<a class="btn btn-outline-dark btn-next" href="{{ next_page_url | relative_url }}">{{ next_page_title }} {% include icon.html icon="chevron-right" %}</a>{% endif %}
       </div>
 
+      <!-- Recommendations: show up to 6 thumbnail buttons -->
+      <section id="recommendations" class="my-4">
+        <h3 class="h6 mb-3">Recommendations</h3>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          {%- assign album = page.parent_id | default: page.section -%}
+          {%- comment -%} first, pick up to 3 from same album (excluding current page) {%- endcomment -%}
+          {%- assign same_album_pages = site.html_pages | where: "section", album | where_exp: "p","p.url != page.url" | sort: "nav_order" -%}
+          {%- assign first_three = same_album_pages | slice: 0,3 -%}
+
+          {%- for item in first_three -%}
+          <div class="col">
+            <a class="btn btn-light w-100 text-start d-flex align-items-center p-2 shadow-sm" href="{{ item.url | relative_url }}">
+              <img src="{{ ('/images/' | append: (item.parent_id | default: item.section | slugify) | append: '.webp') | relative_url }}" alt="{{ item.parent_id | default: item.section }}" width="56" height="56" class="me-3 rounded" />
+              <div class="flex-grow-1">
+                <div class="fw-semibold">{{ item.title }}</div>
+                {% if item.lyrics_en %}<div class="small text-muted">{{ item.lyrics_en }}</div>{% endif %}
+                {% if item.lyrics_ta %}<div class="small text-muted">{{ item.lyrics_ta }}</div>{% endif %}
+              </div>
+            </a>
+          </div>
+          {%- endfor -%}
+
+          {%- comment -%} then, pick remaining slots (up to 3) from other parent_id groups {%- endcomment -%}
+          {%- assign remaining = 6 | minus: first_three.size -%}
+          {%- if remaining > 0 -%}
+            {%- assign other_groups = site.html_pages | where_exp: "p","p.section and p.section != album" | group_by: "section" -%}
+            {%- assign other_groups = other_groups | slice: 0, remaining -%}
+            {%- for group in other_groups -%}
+              {%- assign item = group.items | first -%}
+              <div class="col">
+                <a class="btn btn-light w-100 text-start d-flex align-items-center p-2 shadow-sm" href="{{ item.url | relative_url }}">
+                  <img src="{{ ('/images/' | append: (group.name | slugify) | append: '.webp') | relative_url }}" alt="{{ group.name }}" width="56" height="56" class="me-3 rounded" />
+                  <div class="flex-grow-1">
+                    <div class="fw-semibold">{{ item.title }}</div>
+                    {% if item.lyrics_en %}<div class="small text-muted">{{ item.lyrics_en }}</div>{% endif %}
+                    {% if item.lyrics_ta %}<div class="small text-muted">{{ item.lyrics_ta }}</div>{% endif %}
+                  </div>
+                </a>
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+      </section>
+
     </main>
 
   </div>
