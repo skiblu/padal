@@ -1,11 +1,12 @@
 ---
 section: Shivan
 nav_order: 50
-youtube_id: 
-audio_id: 
-audio_length: 
-title: Om Thillai Nataraajane Chitampara Vaasane 
-lyrics_en: Om, Thillai, Nataraajane, Chitampara ,Vaasane
+youtube_id: wjp_AdIKpXc
+audio_id: u48fhoBfbE93
+audio_length: 232
+title: Om Thillai Nataraajane Chidampara Vaasane 
+title_ta: ஓம் தில்லை நடராஜனே சிதம்பர வாசனே
+lyrics_en: Om, Thillai, Nataraajane, Chidampara, Chitampara ,Vaasane
 lyrics_ta: ஓம், தில்லை, நடராஜனே, சிதம்பர, வாசனே
 ---
 {% capture text %}
