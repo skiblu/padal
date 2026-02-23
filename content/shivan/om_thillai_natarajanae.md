@@ -6,7 +6,7 @@ audio_id: u48fhoBfbE93
 audio_length: 232
 title: Om Thillai Nataraajane Chidampara Vaasane 
 title_ta: ஓம் தில்லை நடராஜனே சிதம்பர வாசனே
-lyrics_en: Om, Thillai, Nataraajane, Chidampara, Chitampara ,Vaasane
+lyrics_en: Om, Thillai, Nataraajane, Nadarajan, Chidampara, Chitampara ,Vaasane
 lyrics_ta: ஓம், தில்லை, நடராஜனே, சிதம்பர, வாசனே
 ---
 {% capture text %}

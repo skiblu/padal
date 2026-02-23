@@ -1,7 +1,9 @@
 ---
 section: Shivan
 nav_order: 50
-youtube_id: fRh3wIagoGw
+youtube_id: T0rNBPBYwas
+audio_id: 9a2e7b8cfs
+audio_length: 99
 title: En appan allava
 lyrics_en: Shivan, En, appan, allava
 lyrics_ta: சிவன், என், அப்பன், அல்லவா
