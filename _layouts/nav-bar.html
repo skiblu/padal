@@ -272,8 +272,12 @@ Display individual listing (non-section pages)
 
       <!-- Recommendations: show up to 6 thumbnail buttons -->
       <section id="recommendations" class="my-4">
-        <h3 class="h6 mb-3">Recommendations</h3>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="card recommendations-card p-3">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <h3 class="h6 mb-0">Recommendations</h3>
+            <small class="text-muted">Similar pages that you may like</small>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           {%- assign album = page.parent_id | default: page.section -%}
           {%- comment -%} first, pick up to 3 from same album (excluding current page) {%- endcomment -%}
           {%- assign same_album_pages = site.html_pages | where: "section", album | where_exp: "p","p.url != page.url" | sort: "nav_order" -%}
@@ -281,8 +285,8 @@ Display individual listing (non-section pages)
 
           {%- for item in first_three -%}
           <div class="col">
-            <a class="btn btn-light w-100 text-start d-flex align-items-center p-2 shadow-sm" href="{{ item.url | relative_url }}">
-              <img src="{{ ('/images/' | append: (item.parent_id | default: item.section | slugify) | append: '.webp') | relative_url }}" alt="{{ item.parent_id | default: item.section }}" width="56" height="56" class="me-3 rounded" />
+            <a class="recommendation-item d-flex w-100 text-start align-items-center p-2" href="{{ item.url | relative_url }}">
+              <img src="{{ ('/images/' | append: (item.section | default: item.section | slugify) | append: '.webp') | relative_url }}" alt="{{ item.section | default: item.section }}" width="56" height="56" class="me-3 rounded" />
               <div class="flex-grow-1">
                 <div class="fw-semibold">{{ item.title }}</div>
                 {% if item.lyrics_en %}<div class="small text-muted">{{ item.lyrics_en }}</div>{% endif %}
@@ -300,8 +304,8 @@ Display individual listing (non-section pages)
             {%- for group in other_groups -%}
               {%- assign item = group.items | first -%}
               <div class="col">
-                <a class="btn btn-light w-100 text-start d-flex align-items-center p-2 shadow-sm" href="{{ item.url | relative_url }}">
-                  <img src="{{ ('/images/' | append: (group.name | slugify) | append: '.webp') | relative_url }}" alt="{{ group.name }}" width="56" height="56" class="me-3 rounded" />
+                <a class="recommendation-item d-flex w-100 text-start align-items-center p-2" href="{{ item.url | relative_url }}">
+                  <img src="{{ ('/images/' | append: (group.section | slugify) | append: '.webp') | relative_url }}" alt="{{ group.section }}" width="56" height="56" class="me-3 rounded" />
                   <div class="flex-grow-1">
                     <div class="fw-semibold">{{ item.title }}</div>
                     {% if item.lyrics_en %}<div class="small text-muted">{{ item.lyrics_en }}</div>{% endif %}
@@ -311,6 +315,7 @@ Display individual listing (non-section pages)
               </div>
             {%- endfor -%}
           {%- endif -%}
+        </div>
         </div>
       </section>
 

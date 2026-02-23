@@ -88,3 +88,39 @@
   margin-left: 0.5em;
   font-size: 0.75rem;
 }
+
+/* Recommendations card and items */
+.recommendations-card {
+  background: var(--bs-body-bg, #ffffff);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.recommendation-item {
+  background: transparent;
+  border-radius: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.15s ease, transform 0.08s ease;
+}
+
+.recommendation-item:hover {
+  background: rgba(0,0,0,0.03);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.recommendation-item img {
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.recommendation-item .small.text-muted {
+  display: block;
+  line-height: 1.1;
+  color: rgba(0,0,0,0.55);
+  max-height: 3.3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
