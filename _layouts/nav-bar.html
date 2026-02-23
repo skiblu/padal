@@ -277,13 +277,15 @@ Display individual listing (non-section pages)
             <h3 class="h6 mb-0">Recommendations</h3>
             <small class="text-muted mt-1 mt-sm-0">Similar pages that you may like</small>
           </div>
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          {%- assign album = page.parent_id | default: page.section -%}
-          {%- comment -%} first, pick up to 3 from same album (excluding current page) {%- endcomment -%}
-          {%- assign same_album_pages = site.html_pages | where: "section", album | where_exp: "p","p.url != page.url" | sort: "nav_order" -%}
-          {%- assign first_three = same_album_pages | slice: 0,3 -%}
+          <div id="recommendations-grid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"></div>
 
-          {%- for item in first_three -%}
+          {%- comment -%} render a larger hidden pool; JS will pick random 6 from this pool {%- endcomment -%}
+          <div id="recommendations-source" class="d-none">
+          {%- assign album = page.parent_id | default: page.section -%}
+          {%- assign same_album_pages = site.html_pages | where: "section", album | where_exp: "p","p.url != page.url" | sort: "nav_order" -%}
+
+
+          {%- for item in same_album_pages -%}
           <div class="col">
             {% assign rec_parent = page.section | default: page.parent_id %}
             <a class="recommendation-item d-flex w-100 text-start align-items-center p-2" href="{{ item.url | relative_url }}">
@@ -297,25 +299,37 @@ Display individual listing (non-section pages)
           </div>
           {%- endfor -%}
 
-          {%- comment -%} then, pick remaining slots (up to 3) from other parent_id groups {%- endcomment -%}
-          {%- assign remaining = 6 | minus: first_three.size -%}
-          {%- if remaining > 0 -%}
-            {%- assign other_groups = site.html_pages | where_exp: "p","p.section and p.section != album" | group_by: "section" -%}
-            {%- assign other_groups = other_groups | slice: 0, remaining -%}
-            {%- for group in other_groups -%}
-              {%- assign item = group.items | first -%}
-              <div class="col">
-                <a class="recommendation-item d-flex w-100 text-start align-items-center p-2" href="{{ item.url | relative_url }}">
-                  <img src="{{ '/images/' | append: group.name | append: '.webp' | relative_url }}" alt="{{ group.name }}" width="56" height="56" class="me-3 rounded" onerror='(function(img){img.onerror=null;img.style.display="none";var s=document.createElement("span");s.className="recommendation-fallback me-3 rounded";s.innerHTML="<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"56\" height=\"56\" viewBox=\"0 0 200 200\"><rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"%23f8f3da\"/><text x=\"50%\" y=\"55%\" dominant-baseline=\"middle\" text-anchor=\"middle\" fill=\"%236b5a34\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"16\">No image</text></svg>";img.parentNode.insertBefore(s,img);})(this)' />
-                  <div class="flex-grow-1">
-                    <div class="fw-semibold">{{ item.title }}</div>
-                    {% if item.lyrics_en %}<div class="small text-muted">{{ item.lyrics_en }}</div>{% endif %}
-                    {% if item.lyrics_ta %}<div class="small text-muted">{{ item.lyrics_ta }}</div>{% endif %}
-                  </div>
-                </a>
-              </div>
-            {%- endfor -%}
-          {%- endif -%}
+          {%- assign other_groups = site.html_pages | where_exp: "p","p.section and p.section != album" | group_by: "section" -%}
+          {%- for group in other_groups -%}
+            {%- assign item = group.items | first -%}
+            <div class="col">
+              <a class="recommendation-item d-flex w-100 text-start align-items-center p-2" href="{{ item.url | relative_url }}">
+                <img src="{{ '/images/' | append: group.name | append: '.webp' | relative_url }}" alt="{{ group.name }}" width="56" height="56" class="me-3 rounded" onerror='(function(img){img.onerror=null;img.style.display="none";var s=document.createElement("span");s.className="recommendation-fallback me-3 rounded";s.innerHTML="<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"56\" height=\"56\" viewBox=\"0 0 200 200\"><rect width=\"100%\" height=\"100%\" rx=\"12\" fill=\"%23f8f3da\"/><text x=\"50%\" y=\"55%\" dominant-baseline=\"middle\" text-anchor=\"middle\" fill=\"%236b5a34\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"16\">No image</text></svg>";img.parentNode.insertBefore(s,img);})(this)' />
+                <div class="flex-grow-1">
+                  <div class="fw-semibold">{{ item.title }}</div>
+                  {% if item.lyrics_en %}<div class="small text-muted">{{ item.lyrics_en }}</div>{% endif %}
+                  {% if item.lyrics_ta %}<div class="small text-muted">{{ item.lyrics_ta }}</div>{% endif %}
+                </div>
+              </a>
+            </div>
+          {%- endfor -%}
+          </div>
+
+          <script>
+            (function(){
+              try{
+                var src = Array.from(document.querySelectorAll('#recommendations-source > .col'));
+                if(!src.length) return;
+                for (let i = src.length - 1; i > 0; i--) {
+                  const j = Math.floor(Math.random() * (i + 1));
+                  [src[i], src[j]] = [src[j], src[i]];
+                }
+                var pick = src.slice(0,6);
+                var grid = document.getElementById('recommendations-grid');
+                pick.forEach(function(el){ el.classList.remove('d-none'); grid.appendChild(el); });
+              }catch(e){console.error(e)}
+            })();
+          </script>
         </div>
         </div>
       </section>
