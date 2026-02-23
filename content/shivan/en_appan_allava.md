@@ -4,9 +4,10 @@ nav_order: 50
 youtube_id: T0rNBPBYwas
 audio_id: 9a2e7b8cfs
 audio_length: 99
-title: En appan allava
-lyrics_en: Shivan, En, appan, allava
-lyrics_ta: சிவன், என், அப்பன், அல்லவா
+title: Enappan allava
+title_ta: என்னப்பன் அல்லவா
+lyrics_en: Shivan, Ennappan, En, appan, allava, En, thaayum, Enthaayum, allava
+lyrics_ta: சிவன், என், அப்பன், அல்லவா, என், தாயும், அல்லவா
 ---
 
 {% capture text %}
