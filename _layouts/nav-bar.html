@@ -282,7 +282,7 @@ Display individual listing (non-section pages)
           {%- comment -%} render a larger hidden pool; JS will pick random 6 from this pool {%- endcomment -%}
           <div id="recommendations-source" class="d-none">
           {%- assign album = page.parent_id | default: page.section -%}
-          {%- assign same_album_pages = site.html_pages | where: "section", album | where_exp: "p","p.url != page.url" | sort: "nav_order" -%}
+          {%- assign same_album_pages = site.html_pages | where: "section", album | where_exp: "p","p.url != page.url and p.sitemap != false and p.history != false" | sort: "nav_order" -%}
 
 
           {%- for item in same_album_pages -%}
@@ -299,7 +299,7 @@ Display individual listing (non-section pages)
           </div>
           {%- endfor -%}
 
-          {%- assign other_groups = site.html_pages | where_exp: "p","p.section and p.section != album" | group_by: "section" -%}
+            {%- assign other_groups = site.html_pages | where_exp: "p","p.section and p.section != album and p.sitemap != false and p.history != false" | group_by: "section" -%}
           {%- for group in other_groups -%}
             {%- assign item = group.items | first -%}
             <div class="col">
