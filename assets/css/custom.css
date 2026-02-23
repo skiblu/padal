@@ -91,10 +91,10 @@
 
 /* Recommendations card and items */
 .recommendations-card {
-  background: var(--bs-body-bg, #ffffff);
+  background: transparent; /* blend with surrounding page background */
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 0.75rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
 }
 
 .recommendation-item {
@@ -112,8 +112,9 @@
 }
 
 .recommendation-item img {
-  object-fit: cover;
+  object-fit: contain; /* show full image without cropping */
   flex-shrink: 0;
+  background: transparent;
 }
 
 .recommendation-item .small.text-muted {
@@ -139,8 +140,9 @@
   width: 56px;
   height: 56px;
   display: inline-block;
-  object-fit: cover;
 }
+
+.recommendation-item img { display:block; }
 
 .recommendation-fallback svg { display: block; }
 
