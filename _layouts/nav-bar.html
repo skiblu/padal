@@ -285,8 +285,10 @@ Display individual listing (non-section pages)
 
           {%- for item in first_three -%}
           <div class="col">
+            {% assign rec_parent = page.section | default: page.parent_id %}
+            {% assign rec_slug = rec_parent | slugify %}
             <a class="recommendation-item d-flex w-100 text-start align-items-center p-2" href="{{ item.url | relative_url }}">
-              <img src="{{ ('/images/' | append: (item.section | default: item.section | slugify) | append: '.webp') | relative_url }}" alt="{{ item.section | default: item.section }}" width="56" height="56" class="me-3 rounded" />
+              <img src="{{ '/images/' | append: rec_slug | append: '.webp' | relative_url }}" alt="{{ rec_parent }}" width="56" height="56" class="me-3 rounded" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="100%25" height="100%25" rx="16" fill="%23f8f3da"/><text x="50%25" y="55%25" dominant-baseline="middle" text-anchor="middle" fill="%236b5a34" font-family="Arial, Helvetica, sans-serif" font-size="16">No image</text></svg>';" />
               <div class="flex-grow-1">
                 <div class="fw-semibold">{{ item.title }}</div>
                 {% if item.lyrics_en %}<div class="small text-muted">{{ item.lyrics_en }}</div>{% endif %}
@@ -303,9 +305,10 @@ Display individual listing (non-section pages)
             {%- assign other_groups = other_groups | slice: 0, remaining -%}
             {%- for group in other_groups -%}
               {%- assign item = group.items | first -%}
+              {%- assign group_name = group.name | default: item.section | slugify -%}
               <div class="col">
                 <a class="recommendation-item d-flex w-100 text-start align-items-center p-2" href="{{ item.url | relative_url }}">
-                  <img src="{{ ('/images/' | append: (group.section | slugify) | append: '.webp') | relative_url }}" alt="{{ group.section }}" width="56" height="56" class="me-3 rounded" />
+                  <img src="{{ '/images/' | append: group_name | append: '.webp' | relative_url }}" alt="{{ group.name }}" width="56" height="56" class="me-3 rounded" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="100%25" height="100%25" rx="16" fill="%23f8f3da"/><text x="50%25" y="55%25" dominant-baseline="middle" text-anchor="middle" fill="%236b5a34" font-family="Arial, Helvetica, sans-serif" font-size="16">No image</text></svg>';" />
                   <div class="flex-grow-1">
                     <div class="fw-semibold">{{ item.title }}</div>
                     {% if item.lyrics_en %}<div class="small text-muted">{{ item.lyrics_en }}</div>{% endif %}
