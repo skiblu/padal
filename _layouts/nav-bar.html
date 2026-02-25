@@ -80,8 +80,11 @@ layout: default
       {%- endif -%}
     </div>
 
-    <!-- Notification Bell -->
+    <!-- Right Side Icons -->
     <div class="flex-shrink-0">
+      <a id="favs-btn" class="btn btn-link position-relative p-2" href="{{ '/content/favourites.html' | relative_url }}" role="button" aria-label="Favourites" title="Favourites" style="color:inherit;">
+        <img id="favs-img" src="{{ '/assets/bootstrap-icons/bookmark-heart.svg' | relative_url }}" width="20" height="20" alt="Favourites" style="vertical-align:middle;" />
+      </a>
       <a id="notif-btn" class="btn btn-link position-relative p-2" href="#" role="button" aria-label="Notifications" title="Notifications" onclick="event.preventDefault();" style="color:inherit;"
          data-ably-key="{{ site.notify.key | default: '' }}"
          data-ably-channel="{{ site.notify.channel | default: 'padal-notification' }}"
@@ -144,6 +147,9 @@ layout: default
 
     <!-- Right: Notification Bell -->
     <div>
+      <a id="favs-btn" class="btn btn-link position-relative p-2" href="{{ '/content/favourites.html' | relative_url }}" role="button" aria-label="Favourites" title="Favourites" style="color:inherit;">
+        <img id="favs-img" src="{{ '/assets/bootstrap-icons/bookmark-heart.svg' | relative_url }}" width="20" height="20" alt="Favourites" style="vertical-align:middle;" />
+      </a>
       <a id="notif-btn" class="btn btn-link position-relative p-2" href="#" role="button" aria-label="Notifications" title="Notifications" onclick="event.preventDefault();" style="color:inherit;"
          data-ably-key="{{ site.notify.key | default: '' }}"
          data-ably-channel="{{ site.notify.channel | default: 'padal-notification' }}"
