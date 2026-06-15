@@ -45,47 +45,47 @@ lyrics_ta: விஷ்ணு, நாராயண, சத்யநாராய�
 
 `இந்த பூஜைக்கு வேண்டிய விசேஷ பொருட்கள்`
 
-1. 3 கலசங்கள்\
-2. ஸத்யநாராயண படம்\
-3. ஸத்யநாராயண யந்த்ரம்\
-4. கோலமாவு\
-5. வாழை இலை\
-6. நூல் (கலசத்தில் சுற்றுவதற்கு)\
-7. அ) ஒரு கலசத்திற்கு 2 வஸ்த்ரம் வீதம் 3#2=6\
-   ஆ) நவக்ரஹ பூஜைக்கு 9 வர்ண வஸ்த்ரம்\
-   (ஸூர்யன் சிவப்பு, சந்திரன்  வெள்ளை, செவ்வாய்  சிவப்பு, புதன்  பச்சை, குரு  மஞ்சள், சுக்ரன்  வெள்ளை, சனி கருப்பு, ராஹு  நீலம், கேது  பலவண்ணம்.)\
-8. 9 கிண்ணங்கள் (தொன்னை, இலையினால் செய்யப்பட்டது)\
-9. பல்வேறு புஷ்பங்கள்.\
+1. 3 கலசங்கள்
+2. ஸத்யநாராயண படம்
+3. ஸத்யநாராயண யந்த்ரம்
+4. கோலமாவு
+5. வாழை இலை
+6. நூல் (கலசத்தில் சுற்றுவதற்கு)
+7. அ) ஒரு கலசத்திற்கு 2 வஸ்த்ரம் வீதம் 3#2=6
+   ஆ) நவக்ரஹ பூஜைக்கு 9 வர்ண வஸ்த்ரம்
+   (ஸூர்யன் சிவப்பு, சந்திரன்  வெள்ளை, செவ்வாய்  சிவப்பு, புதன்  பச்சை, குரு  மஞ்சள், சுக்ரன்  வெள்ளை, சனி கருப்பு, ராஹு  நீலம், கேது  பலவண்ணம்.)
+8. 9 கிண்ணங்கள் (தொன்னை, இலையினால் செய்யப்பட்டது)
+9. பல்வேறு புஷ்பங்கள்.
 10. இவற்றைத் தவிர மற்ற வேண்டிய பொருட்கள் பட்டியல்
 
 `பொதுவாக பூஜைக்கு தேவையான பொருட்கள்`
 
-1. மஞ்சள் பொடி\
-2. குங்குமம்\
-3. சந்தனம்\
-4. பூமாலை\
-5. உதிரிப்பூக்கள்\
-6. வெற்றிலை, பாக்கு\
-7. ஊதுபத்தி\
-8. சாம்பிராணி\
-9. பஞ்சு (திரிக்காக)\
-10. நல்லெண்ணெய்\
-11. கற்பூரம்\
-12. வெல்லம்\
-13. மாவிலை\
-14. வாழைப்பழம்\
-15. அரிசி\
-16. தேங்காய்\
-17. தயிர்\
-18. தேன்\
-19. தீப்பெட்டி\
-20. பூணூல்\
-21. வஸ்த்ரம்\
-22. அக்ஷதை (பச்சரிசியுடன் மஞ்சள் பொடி கலந்தது)\
-23. பஞ்சாம்ருதம் (வாழைப்பழம், பால், தேன், நெய், சர்க்கரை, கலந்தது)\
-24. கோலப்பொடி / அரிசி மாவு\
-25. பஞ்சகவ்யம்:\
-1. பசுவின் சிறுநீர் (கோமியம்), 2. பசுவின் சாணம், 3. பால், 4. தயிர், 5. நெய்  இவை ஐந்தும் சேர்ந்த கலவையே பஞ்ச கவ்யமாகும்.\
+1. மஞ்சள் பொடி
+2. குங்குமம்
+3. சந்தனம்
+4. பூமாலை
+5. உதிரிப்பூக்கள்
+6. வெற்றிலை, பாக்கு
+7. ஊதுபத்தி
+8. சாம்பிராணி
+9. பஞ்சு (திரிக்காக)
+10. நல்லெண்ணெய்
+11. கற்பூரம்
+12. வெல்லம்
+13. மாவிலை
+14. வாழைப்பழம்
+15. அரிசி
+16. தேங்காய்
+17. தயிர்
+18. தேன்
+19. தீப்பெட்டி
+20. பூணூல்
+21. வஸ்த்ரம்
+22. அக்ஷதை (பச்சரிசியுடன் மஞ்சள் பொடி கலந்தது)
+23. பஞ்சாம்ருதம் (வாழைப்பழம், பால், தேன், நெய், சர்க்கரை, கலந்தது)
+24. கோலப்பொடி / அரிசி மாவு
+25. பஞ்சகவ்யம்:
+1. பசுவின் சிறுநீர் (கோமியம்), 2. பசுவின் சாணம், 3. பால், 4. தயிர், 5. நெய்  இவை ஐந்தும் சேர்ந்த கலவையே பஞ்ச கவ்யமாகும்.
 26. திராட்சை, கல்கண்டு, சர்க்கரை கலந்த பசுவின் பால்.
 
 குறிப்பு: ஹோமங்களுக்கு நெய் உபயோகிப்பது உத்தமம். ஒரு சில பூஜைகளில் நவதான்னியங்கள், கருகு மணிமாலை, பனைஓலை, மஞ்சள் கொத்து, ஏலக்காய் பொடி, கண் மை, அகல் விளக்கு, மூங்கில் தட்டு, பஞ்சினால் செய்த மாலை, போன்ற சில விசேஷ பொருட்கள் தேவைப்படுகின்றன. அந்தந்த பூஜையை செய்யும்போது அதற்கு தேவையானவற்றை முதலிலேயை சேகரித்து வைத்துக்கொள்ள வேண்டும்.
@@ -94,7 +94,7 @@ lyrics_ta: விஷ்ணு, நாராயண, சத்யநாராய�
 
 பூஜைக்கு உரிய சில பொருள்கள் கிடைக்காமலிருக்கலாம். இந்த நிலையில் ஒரு பொருளுக்குப்பதிலாக இந்தப் பொருள்தான் மாற்றுப் பொருள் என்பது விரத கல்பங்களில் குறிப்பிடப்பட்டுள்ளது. அவை.
 
-1. தேனுக்குப் பதிலாக வெல்லம்,\
+1. தேனுக்குப் பதிலாக வெல்லம்,
 2. வஸ்த்ரம், ஆபரணம், சத்ரம், சாமரம், முதலிய ராஜோபசாரங்களுக்குப் பதிலாக அக்ஷதை (அ) புஷ்பம்.
 {% endcapture %}
 {% include lang-filter.html lang="ta" text=text %}
@@ -138,47 +138,47 @@ Ippoojaiyaip Pothu Sthalangkazhiloa, Alathu Avaravarkazhuthaiya Ilathiloa, Seyya
 
 `intha Poojaikku Vaenthiya Visaesha Poruthkazh`
 
-1. 3 Kalasangkazh\
-2. Sathyanaaraayana Patham\
-3. Sathyanaaraayana Yanthram\
-4. Koalamaavu\
-5. Vaaḻai Ilai\
-6. Nool (kalasathil Suruvatharku)\
-7. A) Oru Kalasathirku 2 Vasthram Veetham 3#2=6\
-Aa) Navakraha Poojaikku 9 Varna Vasthram\
-(sooryaṉ Sivappu, Santhiraṉ Vezhzhai, Sevvaay Sivappu, Puthaṉ Passai, Kuru Manysazh, Sukraṉ Vezhzhai, Saṉi Karuppu, Raahu Neelam, Kaethu Palavanam.)\
-8. 9 Kinangkazh (thoṉṉai, Ilaiyiṉaal Seyyappathathu)\
-9. Palvaeru Pushpangkazh.\
+1. 3 Kalasangkazh
+2. Sathyanaaraayana Patham
+3. Sathyanaaraayana Yanthram
+4. Koalamaavu
+5. Vaaḻai Ilai
+6. Nool (kalasathil Suruvatharku)
+7. A) Oru Kalasathirku 2 Vasthram Veetham 3#2=6
+Aa) Navakraha Poojaikku 9 Varna Vasthram
+(sooryaṉ Sivappu, Santhiraṉ Vezhzhai, Sevvaay Sivappu, Puthaṉ Passai, Kuru Manysazh, Sukraṉ Vezhzhai, Saṉi Karuppu, Raahu Neelam, Kaethu Palavanam.)
+8. 9 Kinangkazh (thoṉṉai, Ilaiyiṉaal Seyyappathathu)
+9. Palvaeru Pushpangkazh.
 10. Ivaraith Thavira Mara Vaenthiya Poruthkazh Pathiyal
 
 `pothuvaaka Poojaikku Thaevaiyaaṉa Poruthkazh`
 
-1. Manysazh Pothi\
-2. Kungkumam\
-3. Santhaṉam\
-4. Poomaalai\
-5. Uthirippookkazh\
-6. Verilai, Paakku\
-7. Oothupathi\
-8. Saampiraani\
-9. Panysu (thirikkaaka)\
-10. Naleney\
-11. Karpooram\
-12. Velam\
-13. Maavilai\
-14. Vaaḻaippaḻam\
-15. Arisi\
-16. Thaengkaay\
-17. Thayir\
-18. Thaeṉ\
-19. Theeppethi\
-20. Poonool\
-21. Vasthram\
-22. Akshathai (passarisiyuthaṉ Manysazh Pothi Kalanthathu)\
-23. Panysaamrutham (vaaḻaippaḻam, Paal, Thaeṉ, Ney, Sarkkarai, Kalanthathu)\
-24. Koalappothi / Arisi Maavu\
-25. Panysakavyam:\
-1. Pasuviṉ Siruneer (koamiyam), 2. Pasuviṉ Saanam, 3. Paal, 4. Thayir, 5. Ney Ivai Ainthum Saerntha Kalavaiyae Panysa Kavyamaakum.\
+1. Manysazh Pothi
+2. Kungkumam
+3. Santhaṉam
+4. Poomaalai
+5. Uthirippookkazh
+6. Verilai, Paakku
+7. Oothupathi
+8. Saampiraani
+9. Panysu (thirikkaaka)
+10. Naleney
+11. Karpooram
+12. Velam
+13. Maavilai
+14. Vaaḻaippaḻam
+15. Arisi
+16. Thaengkaay
+17. Thayir
+18. Thaeṉ
+19. Theeppethi
+20. Poonool
+21. Vasthram
+22. Akshathai (passarisiyuthaṉ Manysazh Pothi Kalanthathu)
+23. Panysaamrutham (vaaḻaippaḻam, Paal, Thaeṉ, Ney, Sarkkarai, Kalanthathu)
+24. Koalappothi / Arisi Maavu
+25. Panysakavyam:
+1. Pasuviṉ Siruneer (koamiyam), 2. Pasuviṉ Saanam, 3. Paal, 4. Thayir, 5. Ney Ivai Ainthum Saerntha Kalavaiyae Panysa Kavyamaakum.
 26. Thiraathsai, Kalkanthu, Sarkkarai Kalantha Pasuviṉ Paal.
 
 Kurippu: Hoamangkazhukku Ney Upayoakippathu Uthamam. Oru Sila Poojaikazhil Navathaaṉṉiyangkazh, Karuku Manimaalai, Paṉaioalai, Manysazh Kothu, Aelakkaay Pothi, Kan Mai, Akal Vizhakku, Moongkil Thathu, Panysiṉaal Seytha Maalai, Poaṉra Sila Visaesha Poruthkazh Thaevaippathukiṉraṉa. Anthantha Poojaiyai Seyyumpoathu Atharku Thaevaiyaaṉavarai Muthalilaeyai Saekarithu Vaithukkozhzha Vaenthum.
@@ -187,7 +187,7 @@ Kurippu: Hoamangkazhukku Ney Upayoakippathu Uthamam. Oru Sila Poojaikazhil Navat
 
 Poojaikku Uriya Sila Poruzhkazh Kithaikkaamalirukkalaam. Intha Nilaiyil Oru Poruzhukkuppathilaaka Inthap Poruzhthaaṉ Maarup Poruzh Eṉpathu Viratha Kalpangkazhil Kurippithappathuzhzhathu. Avai.
 
-1. Thaeṉukkup Pathilaaka Velam,\
+1. Thaeṉukkup Pathilaaka Velam,
 2. Vasthram, Aaparanam, Sathram, Saamaram, Muthaliya Raajoapasaarangkazhukkup Pathilaaka Akshathai ’ Pushpam.
 {% endcapture %}
 {% include lang-filter.html lang="en" text=text_en %}
