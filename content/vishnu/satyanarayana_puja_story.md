@@ -11,6 +11,8 @@ lyrics_ta: விஷ்ணு, நாராயண, சத்யநாராய�
 
 ஒரு சமயம் நைமிசாரண்யத்தில் சவுனகாதி முனிவர்கள் ஸூதபௌராணிகரை, “விரும்பும் பலத்தை  வரத்தாலும் தவத்தாலும் எவ்வாறு விரைவில் பெற முடியும்”? என்று கேட்டனர். ஸூதரும் பகவான் நாரதருக்குக் கூறியதைச் சொல்லுவதாகச் கூறிச் சொல்ல ஆரம்பித்தார். நாரதர் பிறருக்கு அருள் புரிய பூவுலகம் சென்றார். அங்குத் துன்புற்ற மக்களைக் கண்டார். “இவர்களது துன்பத்தைப் போக்கும் வழி என்ன?” என்று அறிவதற்காக விஷ்ணு லோகம் சென்று பகவானை வேண்டினார். மஹாவிஷ்ணுவும் நாரதரிடம். “நாரதா, கேள் ஏதேனும் ஒரு தினத்தில் சுற்றம் சூழ அந்தணர்களுடன் ஸத்ய நாராயண விரதத்தைச் செய்யலாம். பக்தியுடன் நைவேத்யங்களை ஸமர்ப்பிக்க வேண்டும். வாழைப்பழம், கோதுமை மாவு அல்லது அரிசி மாவு, நெய், பால், சர்க்கரை, பக்ஷணவர்க்கங்கள் எல்லாம் நைவேத்யம் செய்ய வேண்டும். அந்தணரிடம் இந்த விரத மகிமையைக் கேட்டு தக்ஷிணை அளித்து எல்லோருக்கும் உணவு அளித்து வீடு திரும்ப வேண்டும். இது கலியுகத்தில் கண்கூடாகப் பயனளிக்க வல்லதாம் ” என்று கூறினார்.
 
+{% include figure.html img="https://assets.bhaktipadal.in/images/vishnu/u37hf9afy.jpg" width="50%" %}
+
 `இரண்டாவது அத்தியாயம்`
 
 ஸூதர் கூறுகிறார். அழகிய காசி நாட்டில் ஏழை அந்தணன் ஒருவன் பசி தாகத்தால் அலைந்து கொண்டு இருந்தான். பகவான் அவனிடம் அன்பு கொண்டு ஒரு கிழவன் போல் வேடம் பூண்டு அவனிடம் பரிவுடன், “நீ ஏன் மிகவும் துன்புற்று அலைந்து திரிகிறாய்? என்று கேட்டார். “பிக்ஷை பெறுவதற்கு என்று சொல்லி கிழவரே அதற்கு வழி காட்ட வேண்டும் என்று வேண்டினான். அவரும் அவனை ஸத்ய நாராயண விரதம் செய்யும்படிக் கூறி அதன் முறையையும் உபதேசித்து மறைந்தார். அந்தணனும் அதைச் செய்வதாக உறுதி பூண்டு பிக்ஷைக்காக நகருக்குச் சென்றபோது மிக அதிகமான பொருள் பெற்றான். அதைக் கொண்டு உற்றார் உறவினருடன் ஸத்ய நாராயண பூஜையை நன்றாகச் செய்தான். அவன் துன்பம் நீங்கியது செல்வந்தன் ஆனான். பின்னர் இதை விடாது செய்து இறுதியில முக்தியும் பெற்றான்.
@@ -101,6 +103,8 @@ lyrics_ta: விஷ்ணு, நாராயண, சத்யநாராய�
 `muthal Athiyaayam`
 
 Oru Samayam Naimisaaranyathil Savuṉakaathi Muṉivarkazh Soothapauraanikarai, “virumpum Palathai Varathaalum Thavathaalum Evvaaru Viraivil Pera Muthiyum”? Eṉru Kaethaṉar. Sootharum Pakavaaṉ Naaratharukkuk Kooriyathais Soluvathaakas Kooris Sola Aarampithaar. Naarathar Pirarukku Aruzh Puriya Poovulakam Seṉraar. Angkuth Thuṉpura Makkazhaik Kanthaar. “ivarkazhathu Thuṉpathaip Poakkum Vaḻi Eṉṉa?” Eṉru Arivatharkaaka Vishnu Loakam Seṉru Pakavaaṉai Vaenthiṉaar. Mahaavishnuvum Naaratharitham. “naarathaa, Kaezh Aethaeṉum Oru Thiṉathil Suram Sooḻa Anthanarkazhuthaṉ Sathya Naaraayana Virathathais Seyyalaam. Pakthiyuthaṉ Naivaethyangkazhai Samarppikka Vaenthum. Vaaḻaippaḻam, Koathumai Maavu Alathu Arisi Maavu, Ney, Paal, Sarkkarai, Pakshanavarkkangkazh Elaam Naivaethyam Seyya Vaenthum. Anthanaritham Intha Viratha Makimaiyaik Kaethu Thakshinai Azhithu Eloarukkum Unavu Azhithu Veethu Thirumpa Vaenthum. Ithu Kaliyukathil Kankoothaakap Payaṉazhikka Valathaam ” Eṉru Kooriṉaar.
+
+{% include figure.html img="https://assets.bhaktipadal.in/images/vishnu/u37hf9afy.jpg" width="50%" %}
 
 `iranthaavathu Athiyaayam`
 
