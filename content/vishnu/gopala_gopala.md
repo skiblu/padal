@@ -2,7 +2,8 @@
 section: Vishnu
 nav_order: 50
 title:  Gopala Gopala
-lyrics_en: Vishnu, Gopala, Gopala, கோபாலா, கோபாலா
+lyrics_en: Vishnu, Gopala, Gopala
+lyrics_ta: விஷ்ணு, கோபாலா, கோபாலா
 ---
 
 {% capture text %}
