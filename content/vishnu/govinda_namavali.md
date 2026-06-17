@@ -11,11 +11,13 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 ஸ்ரீவெங்கடேசா கோவிந்தா\
 பக்த வத்சலா கோவிந்தா\
 பாகவதப்ரிய கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 நித்ய நிர்மலா கோவிந்தா\
 நீலமேகசியமா கோவிந்தா\
 புராண புருச கோவிந்தா\
 புண்டரீகாக்ஷ கோவிந்தா\
-கோவிந்தா ஹரி கோவிந்தா\
 `கோவிந்தா ஹரி கோவிந்தா`\
 `கோகுல நந்தன கோவிந்தா`
 
@@ -23,6 +25,9 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 நவநீத சோர கோவிந்தா\
 பசுபாலக ஸ்ரீ கோவிந்தா\
 பாப விமோசன கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 துஷ்ட சம்ஹார கோவிந்தா\
 துரித நிவாரண கோவிந்தா\
 சிஷ்ட பரிபாலக கோவிந்தா\
@@ -34,6 +39,9 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 வராக மூர்த்திவி கோவிந்தா\
 கோபி ஜனலோல கோவிந்தா\
 கோவர்த்தனோத்தார கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 தசரத நந்தன கோவிந்தா\
 தசமுக மர்தன கோவிந்தா\
 பட்சி வாகன கோவிந்தா\
@@ -45,6 +53,9 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 மதுசூதனஹரி கோவிந்தா\
 வராஹ நரசிம்ம கோவிந்தா\
 வாமன ப்ருகுராம கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 பாலராமானுன கோவிந்தா\
 பௌத்த கல்கிதர கோவிந்தா\
 வேணுகான ப்ரிய கோவிந்தா\
@@ -56,6 +67,9 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 சிரித பரிபாலக கோவிந்தா\
 தரித்ர ஜனபோஷக கோவிந்தா\
 தர்ம சமஸ்தாபக கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 அனாத ரட்ஷக கோவிந்தா\
 ஆபத் பாந்தவ கோவிந்தா\
 சரணாகத வத்சல கோவிந்தா\
@@ -67,6 +81,9 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 காமித பலதா கோவிந்தா\
 பாப விநாசக கோவிந்தா\
 பாஹி முராரே கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 ஸ்ரீ முத்ராங்கித கோவிந்தா\
 ஸ்ரீ வத்சாங்கித கோவிந்தா\
 தரணீ  நாயக கோவிந்தா\
@@ -78,6 +95,9 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 ப்ரசன்ன மூர்த்தி கோவிந்தா\
 அபயஹஸ்தப்ரதர்சன கோவிந்தா\
 மர்த்யாவதாரா கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 சங்கு சக்ரதர கோவிந்தா\
 சார்ங்க கதாதர கோவிந்தா\
 விரஜா திரஸ்த கோவிந்தா\
@@ -89,6 +109,9 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 சகஸ்ர நாமா கோவிந்தா\
 லட்சுமி வல்லப கோவிந்தா\
 லட்சுமண ஆக்ரஜ கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 கஸ்தூரி திலக கோவிந்தா\
 காஞ்சனாம்பரதர கோவிந்தா\
 கருட வாகன கோவிந்தா\
@@ -100,6 +123,9 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 வாரதி பந்தன கோவிந்தா\
 ஏழுமலைவாசா கோவிந்தா\
 ஏக ஸ்வருபா கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 ஸ்ரீராம கிருஷ்ண கோவிந்தா\
 ரகுகுல நந்தன கோவிந்தா\
 பிரத்யஷ தேவா கோவிந்தா\
@@ -111,6 +137,9 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 வைஜயந்தி மால கோவிந்தா\
 வட்டிகாசுப்ரிய கோவிந்தா\
 வசுதேவ தனயா கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 வில்வ பத்ரார்ச்சித கோவிந்தா\
 பிட்சுக சமஸ்துத கோவிந்தா\
 ஸ்திரபும் ரூபா கோவிந்தா\
@@ -122,6 +151,9 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 பக்த ரட்சக கோவிந்தா\
 நித்ய கல்யாண கோவிந்தா\
 நீரஜநாப கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 ஹதீராம ப்ரிய கோவிந்தா\
 ஹரி சர்வோத்தம கோவிந்தா\
 ஜனார்த்தனாமூர்த்தி கோவிந்தா\
@@ -133,6 +165,9 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 ஆபன் நிவாரண கோவிந்தா\
 ரத்ன கிரீடா கோவிந்தா\
 ராமானுஜநுத கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 சுயம் ப்ரகாச கோவிந்தா\
 ஆஸ்ரித பக்ஷ கோவிந்தா\
 நித்யசுப ப்ரத கோவிந்தா\
@@ -144,6 +179,9 @@ lyrics_ta: விஷ்ணு, வெங்கடேஷ, கோவிந்த, 
 ஆத்யந்த ரஹிதா கோவிந்தா\
 இகபர தாயக கோவிந்தா\
 இபராஜ ரட்சக கோவிந்தா\
+`கோவிந்தா ஹரி கோவிந்தா`\
+`கோகுல நந்தன கோவிந்தா`
+
 பரம தாயாளோ கோவிந்தா\
 பத்மநாப ஹரி கோவிந்தா\
 திருமலை வாசா கோவிந்தா\
@@ -165,11 +203,13 @@ Shreeshreenivaasa Govinda\
 Shreevengkathaesaa Govinda\
 Paktha Vathsalaa Govinda\
 Paakavathapriya Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Nithya Nirmalaa Govinda\
 Neelamaekasiyamaa Govinda\
 Puraana Purusa Govinda\
 Punthareekaaksha Govinda\
-Govinda Hari Govinda\
 `Govinda Hari Govinda`\
 `Gokula Nanthaṉa Govinda`
 
@@ -177,6 +217,9 @@ Nantha Nanthaṉa Govinda\
 Navaneetha Soara Govinda\
 Pasupaalaka Shree Govinda\
 Paapa Vimoasaṉa Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Thushtha Samhaara Govinda\
 Thuritha Nivaarana Govinda\
 Sishtha Paripaalaka Govinda\
@@ -188,6 +231,9 @@ Vajra Makuthathara Govinda\
 Varaaka Moorthivi Govinda\
 Koapi Jaṉaloala Govinda\
 Koavarthaṉoathaara Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Thasaratha Nanthaṉa Govinda\
 Thasamuka Marthaṉa Govinda\
 Pathsi Vaakaṉa Govinda\
@@ -199,6 +245,9 @@ Mathsya Koormaa Govinda\
 Mathusoothaṉahari Govinda\
 Varaaha Narasima Govinda\
 Vaamaṉa Prukuraama Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Paalaraamaaṉuṉa Govinda\
 Pautha Kalkithara Govinda\
 Vaenukaaṉa Priya Govinda\
@@ -210,6 +259,9 @@ Seethaa Naayaka Govinda\
 Siritha Paripaalaka Govinda\
 Tharithra Jaṉapoashaka Govinda\
 Tharma Samasthaapaka Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Aṉaatha Rathshaka Govinda\
 Aapath Paanthava Govinda\
 Saranaakatha Vathsala Govinda\
@@ -221,6 +273,9 @@ Kamala Thaṉaashi Govinda\
 Kaamitha Palathaa Govinda\
 Paapa Vinaasaka Govinda\
 Paahi Muraarae Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Shree Muthraangkitha Govinda\
 Shree Vathsaangkitha Govinda\
 Tharanee Naayaka Govinda\
@@ -232,6 +287,9 @@ Pathmaavathi Priya Govinda\
 Prasaṉṉa Moorthi Govinda\
 Apayahasthapratharsaṉa Govinda\
 Marthyaavathaaraa Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Sangku Sakrathara Govinda\
 Saarngka Kathaathara Govinda\
 Virajaa Thirastha Govinda\
@@ -243,6 +301,9 @@ Saazhakiraamathara Govinda\
 Sakasra Naamaa Govinda\
 Lathsumi Valapa Govinda\
 Lathsumana Aakraja Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Kasthoori Thilaka Govinda\
 Kaanysaṉaamparathara Govinda\
 Karutha Vaakaṉa Govinda\
@@ -254,6 +315,9 @@ Vaaṉara Saevitha Govinda\
 Vaarathi Panthaṉa Govinda\
 Aeḻumalaivaasaa Govinda\
 Aeka Svarupaa Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Shreeraama Kirushna Govinda\
 Rakukula Nanthaṉa Govinda\
 Pirathyasha Thaevaa Govinda\
@@ -265,6 +329,9 @@ Vajraka Vasathara Govinda\
 Vaijayanthi Maala Govinda\
 Vathikaasupriya Govinda\
 Vasuthaeva Thaṉayaa Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Vilva Pathraarssitha Govinda\
 Pithsuka Samasthutha Govinda\
 Sthirapum Roopaa Govinda\
@@ -276,6 +343,9 @@ Piramaantha Roopaa Govinda\
 Paktha Rathsaka Govinda\
 Nithya Kalyaana Govinda\
 Neerajanaapa Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Hatheeraama Priya Govinda\
 Hari Sarvoathama Govinda\
 Jaṉaarthaṉaamoorthi Govinda\
@@ -287,6 +357,9 @@ Apishaekapriya Govinda\
 Aapaṉ Nivaarana Govinda\
 Rathṉa Kireethaa Govinda\
 Raamaaṉujanutha Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Suyam Prakaasa Govinda\
 Aasritha Paksha Govinda\
 Nithyasupa Pratha Govinda\
@@ -298,6 +371,9 @@ Aaṉantha Roopaa Govinda\
 Aathyantha Rahithaa Govinda\
 Ikapara Thaayaka Govinda\
 Iparaaja Rathsaka Govinda\
+`Govinda Hari Govinda`\
+`Gokula Nanthaṉa Govinda`
+
 Parama Thaayaazhoa Govinda\
 Pathmanaapa Hari Govinda\
 Thirumalai Vaasaa Govinda\
