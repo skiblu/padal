@@ -3,14 +3,45 @@
   const FAVORITE_KEY = 'bhaktipadal_favorites';
   const MAX_RECENT = 10;
 
+  function currentPageLanguage() {
+    try {
+      var html = document.documentElement;
+      var raw = html && html.getAttribute ? html.getAttribute('lang') : '';
+      raw = (raw && raw.trim()) ? raw.trim() : 'ta';
+      return raw.toLowerCase();
+    } catch (e) {
+      return 'ta';
+    }
+  }
+
+  function storedLanguage() {
+    try {
+      var raw = localStorage.getItem('site_lang');
+      return (raw && raw.trim()) ? raw.trim().toLowerCase() : '';
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function pageLanguageOverride() {
+    try {
+      var marker = document.body;
+      var raw = marker && marker.getAttribute ? marker.getAttribute('data-page-lang') : '';
+      return (raw && raw.trim()) ? raw.trim().toLowerCase() : '';
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function preferredLanguage() {
+    return pageLanguageOverride() || storedLanguage() || currentPageLanguage();
+  }
+
   // Immediate attempt to apply language filters as soon as this script runs.
   // This prevents a visible flash when the stored language doesn't match the element.
   (function immediateLangApply() {
     try {
-      // read stored language (default 'ta')
-      var raw = null;
-      try { raw = localStorage.getItem('site_lang'); } catch (e) { raw = null; }
-      var cur = (raw && raw.trim()) ? raw.trim() : 'ta';
+      var cur = preferredLanguage();
       var nodes = document.querySelectorAll && document.querySelectorAll('.lang-filter[data-lang]');
       if (nodes && nodes.length) {
         nodes.forEach(function (el) {
@@ -31,11 +62,11 @@
       var sel = document.getElementById('site-lang-select');
       if (!sel) return;
       try {
-        var stored = localStorage.getItem('site_lang');
+        var stored = storedLanguage();
         if (stored) sel.value = stored;
       } catch (e) { /* ignore storage errors */ }
-      // default to Tamil if nothing selected
-      if (!sel.value) sel.value = 'ta';
+      // default to the page language if nothing selected
+      if (!sel.value) sel.value = preferredLanguage();
       sel.addEventListener('change', function () {
         try { localStorage.setItem('site_lang', sel.value); } catch (e) { /* ignore */ }
         // notify other scripts so they can update instantly without reload
@@ -51,12 +82,7 @@
 
     // --- lang-filter handling (moved from include) ---
     function _currentLang() {
-      try {
-        var raw = localStorage.getItem('site_lang');
-        return (raw && raw.trim()) ? raw.trim() : 'ta';
-      } catch (e) {
-        return 'ta';
-      }
+      return preferredLanguage();
     }
 
     function updateLangFilters(lang) {

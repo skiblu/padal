@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" >
+{%- assign page_lang = page.lang | default: 'ta' -%}
+<html lang="{{ page_lang }}" >
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   {% include template/head.html %}
   </head>
 
-  <body>
+  <body data-page-lang="{{ page.lang | default: '' }}">
 
     <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
 
