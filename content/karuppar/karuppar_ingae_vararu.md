@@ -7,6 +7,7 @@ lyrics_en: Karuppu, Karuppar, Swamy, Tamil, Ingae, Vararu
 lyrics_ta: கருப்பு, கருப்பர், சாமி, தமிழ், இங்கே, வாரரு
 ---
 
+
 {% capture text %}
 `வாராரய்யா வாராரு`\
 `கருப்பரிங்கே வாராரு`\
