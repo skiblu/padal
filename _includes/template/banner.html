@@ -6,7 +6,7 @@
                 {%- if site.title-icon -%}
                   {%- assign _ti = site.title-icon -%}
                   {%- if _ti contains '.png' or _ti contains '.jpg' or _ti contains '.jpeg' or _ti contains '.gif' -%}
-                    <span class="me-2">{% include icon.html icon=site.title-icon class="title-icon-img" %}</span>
+                    <span class="me-2">{% include icon.html icon=site.title-icon class="title-icon-img" width="32" height="32" %}</span>
                   {%- else -%}
                     <span class="me-2">{% include icon.html icon=site.title-icon %}</span>
                   {%- endif -%}

@@ -18,7 +18,7 @@
   {%- else -%}
     {%- assign src = 'images/' | append: icon -%}
   {%- endif -%}
-  <img src="{{ src | relative_url }}" alt="{{ include.alt | default: icon | split: '/' | last }}" {%- if include.class -%} class="{{ include.class }}"{%- endif -%}>
+  <img src="{{ src | relative_url }}" alt="{{ include.alt | default: icon | split: '/' | last }}" {%- if include.width -%} width="{{ include.width }}"{%- endif -%}{%- if include.height -%} height="{{ include.height }}"{%- endif -%}{%- if include.class -%} class="{{ include.class }}"{%- endif -%}>
 {%- else -%}
   {%- capture icon_path -%}bootstrap-icons/{{ icon }}.svg{%- endcapture -%}
   {%- capture markup -%}{% include {{ icon_path }} %}{%- endcapture -%}
