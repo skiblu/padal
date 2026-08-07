@@ -1,7 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light pb-lg-0 border-bottom">
     {%- assign current_lang = page.lang | default: site.lang | default: 'ta' -%}
+        {%- if current_lang == 'en' -%}
+            {%- assign home_url = '/en/' -%}
+        {%- else -%}
+            {%- assign home_url = '/' -%}
+        {%- endif -%}
     <div class="container">
-        <a class="navbar-brand" href="{{ '/' | relative_url }}">{% if site.title-icon %}{% include icon.html icon=site.title-icon %} {% endif %}{{ site.title }}</a>
+                <a class="navbar-brand" href="{{ home_url | relative_url }}">{% if site.title-icon %}{% include icon.html icon=site.title-icon %} {% endif %}{{ site.title }}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

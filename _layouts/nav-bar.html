@@ -3,19 +3,28 @@
 layout: default
 ---
 {%- assign current_lang = page.lang | default: site.lang | default: 'ta' -%}
+{%- if current_lang == 'en' -%}
+  {%- assign home_url = '/en/' -%}
+  {%- assign content_base = '/content/' -%}
+  {%- assign favourites_url = '/content/en/favourites.html' -%}
+{%- else -%}
+  {%- assign home_url = '/' -%}
+  {%- assign content_base = '/content/' -%}
+  {%- assign favourites_url = '/content/favourites.html' -%}
+{%- endif -%}
 <!-- Mobile: Breadcrumb Path (first line) -->
 <div id="breadcrumb-path-mobile" class="py-2 border-bottom bg-orange-light d-lg-none">
   <div class="container-xxl">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb mb-0" style="font-size: 0.85rem;">
         <li class="breadcrumb-item">
-          <a href="{{ '/' | relative_url }}" title="Home">
+          <a href="{{ home_url | relative_url }}" title="Home">
             <img src="{{ '/assets/bootstrap-icons/house.svg' | relative_url }}" width="20" height="20" alt="Home" style="vertical-align:middle;" />
           </a>
         </li>
         {% if page.section or page.parent_id %}
         <li class="breadcrumb-item">
-          <a href="{{ '/content/' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/" title="{{ page.section | default: page.parent_id }}">{{ page.section | default: page.parent_id }}</a>
+          <a href="{{ content_base | relative_url }}{{ page.section | default: page.parent_id | slugify }}{% if current_lang == 'en' %}/en/{% else %}/{% endif %}" title="{{ page.section | default: page.parent_id }}">{{ page.section | default: page.parent_id }}</a>
         </li>
         {% endif %}
         <li class="breadcrumb-item">
@@ -25,7 +34,7 @@ layout: default
     </nav>
   </div>
 </div>
-
+        <a id="favs-btn" class="btn btn-link position-relative p-2" href="{{ favourites_url | relative_url }}" role="button" aria-label="Favourites" title="Favourites" style="color:inherit;">
 <!-- Mobile: Type Navigation & Notification (second line) -->
 <div id="breadcrumb-nav-mobile" class="py-2 border-bottom bg-orange-light d-lg-none">
   <div class="container-xxl d-flex justify-content-between align-items-center gap-2">
@@ -83,7 +92,7 @@ layout: default
 
     <!-- Right Side Icons -->
     <div class="flex-shrink-0">
-      <a id="favs-btn" class="btn btn-link position-relative p-2" href="{{ '/content/favourites.html' | relative_url }}" role="button" aria-label="Favourites" title="Favourites" style="color:inherit;">
+      <a id="favs-btn" class="btn btn-link position-relative p-2" href="{{ favourites_url | relative_url }}" role="button" aria-label="Favourites" title="Favourites" style="color:inherit;">
         <img id="favs-img" src="{{ '/assets/bootstrap-icons/bookmark-heart.svg' | relative_url }}" width="20" height="20" alt="Favourites" style="vertical-align:middle;" />
       </a>
       <a id="notif-btn" class="btn btn-link position-relative p-2" href="#" role="button" aria-label="Notifications" title="Notifications" onclick="event.preventDefault();" style="color:inherit;"
@@ -108,13 +117,13 @@ layout: default
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item">
-          <a href="{{ '/' | relative_url }}" title="Home">
+          <a href="{{ home_url | relative_url }}" title="Home">
             <img src="{{ '/assets/bootstrap-icons/house.svg' | relative_url }}" width="20" height="20" alt="Home" style="vertical-align:middle;" />
           </a>
         </li>
         {% if page.section or page.parent_id %}
         <li class="breadcrumb-item">
-          <a href="{{ '/content/' | relative_url }}{{ page.section | default: page.parent_id | slugify }}/">{{ page.section | default: page.parent_id }}</a>
+          <a href="{{ content_base | relative_url }}{{ page.section | default: page.parent_id | slugify }}{% if current_lang == 'en' %}/en/{% else %}/{% endif %}">{{ page.section | default: page.parent_id }}</a>
         </li>
         {% endif %}
         <li class="breadcrumb-item">
@@ -148,7 +157,7 @@ layout: default
 
     <!-- Right: Notification Bell -->
     <div>
-      <a id="favs-btn" class="btn btn-link position-relative p-2" href="{{ '/content/favourites.html' | relative_url }}" role="button" aria-label="Favourites" title="Favourites" style="color:inherit;">
+      <a id="favs-btn" class="btn btn-link position-relative p-2" href="{{ favourites_url | relative_url }}" role="button" aria-label="Favourites" title="Favourites" style="color:inherit;">
         <img id="favs-img" src="{{ '/assets/bootstrap-icons/bookmark-heart.svg' | relative_url }}" width="20" height="20" alt="Favourites" style="vertical-align:middle;" />
       </a>
       <a id="notif-btn" class="btn btn-link position-relative p-2" href="#" role="button" aria-label="Notifications" title="Notifications" onclick="event.preventDefault();" style="color:inherit;"

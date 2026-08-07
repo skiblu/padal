@@ -33,28 +33,47 @@
     }
   }
 
+  function currentPagePath() {
+    try {
+      var body = document.body;
+      var raw = body && body.getAttribute ? body.getAttribute('data-page-url') : '';
+      return (raw && raw.trim()) ? raw.trim() : window.location.pathname;
+    } catch (e) {
+      return window.location.pathname;
+    }
+  }
+
+  function localizedPath(lang) {
+    var path = currentPagePath() || '/';
+
+    function stripEnglishPrefix(value) {
+      if (value === '/en') return '/';
+      return value.replace(/^\/en(?=\/|$)/, '');
+    }
+
+    function addEnglishPrefix(value) {
+      if (value === '/' || value === '') return '/en/';
+      if (value.startsWith('/content/')) {
+        var rel = value.replace(/^\/content\//, '');
+        var parts = rel.split('/').filter(Boolean);
+        if (!parts.length) return '/content/en/';
+        if (parts[0] === 'en') return value;
+        if (parts.length === 1) return '/content/en/' + parts[0];
+        return '/content/' + parts[0] + '/en/' + parts.slice(1).join('/');
+      }
+      if (value.startsWith('/en/')) return value;
+      return '/en' + value;
+    }
+
+    if (lang === 'en') {
+      return addEnglishPrefix(path);
+    }
+    return stripEnglishPrefix(path);
+  }
+
   function preferredLanguage() {
     return storedLanguage() || pageLanguageOverride() || currentPageLanguage();
   }
-
-  // Immediate attempt to apply language filters as soon as this script runs.
-  // This prevents a visible flash when the stored language doesn't match the element.
-  (function immediateLangApply() {
-    try {
-      var cur = preferredLanguage();
-      var nodes = document.querySelectorAll && document.querySelectorAll('.lang-filter[data-lang]');
-      if (nodes && nodes.length) {
-        nodes.forEach(function (el) {
-          var desired = (el.getAttribute('data-lang') || '').trim();
-          // show only when desired equals current; otherwise ensure hidden
-          if (desired && cur === desired) el.style.display = '';
-          else el.style.display = 'none';
-        });
-      }
-    } catch (e) {
-      // do not break the page if this runs too early or fails
-    }
-  })();
 
   document.addEventListener('DOMContentLoaded', () => {
     // Language selector: initialize from localStorage and reload page on change
@@ -66,8 +85,7 @@
         var stored = storedLanguage();
         if (stored) sel.value = stored;
       } catch (e) { /* ignore storage errors */ }
-      // default to the page language if nothing selected
-      if (!sel.value) sel.value = preferredLanguage();
+      if (!sel.value) sel.value = pageLang || currentPageLanguage();
       try {
         if (!storedLanguage() && pageLang) {
           localStorage.setItem('site_lang', pageLang);
@@ -75,42 +93,23 @@
       } catch (e) { /* ignore storage errors */ }
       sel.addEventListener('change', function () {
         try { localStorage.setItem('site_lang', sel.value); } catch (e) { /* ignore */ }
-        // notify other scripts so they can update instantly without reload
-        try {
-          var ev = new CustomEvent('siteLangChanged', { detail: { lang: sel.value } });
-          window.dispatchEvent(ev);
-        } catch (e) {
-          // fallback: still reload if event dispatch fails
-          window.location.reload();
-        }
+        window.location.href = localizedPath(sel.value) + window.location.search + window.location.hash;
       });
+
+      if (pageLang && sel.value !== pageLang) {
+        try { localStorage.setItem('site_lang', pageLang); } catch (e) { /* ignore */ }
+      }
+
+      var storedNow = '';
+      try { storedNow = storedLanguage(); } catch (e) { storedNow = ''; }
+      if (storedNow && pageLang && storedNow !== pageLang) {
+        var target = localizedPath(storedNow);
+        if (target && target !== window.location.pathname) {
+          window.location.replace(target + window.location.search + window.location.hash);
+          return;
+        }
+      }
     })();
-
-    // --- lang-filter handling (moved from include) ---
-    function _currentLang() {
-      return preferredLanguage();
-    }
-
-    function updateLangFilters(lang) {
-      try {
-        var nodes = document.querySelectorAll('.lang-filter[data-lang]');
-        if (!nodes || !nodes.length) return;
-        nodes.forEach(function (el) {
-          var desired = (el.getAttribute('data-lang') || '').trim();
-          if (desired && lang === desired) el.style.display = '';
-          else el.style.display = 'none';
-        });
-      } catch (e) { /* ignore */ }
-    }
-
-    // initial apply (ensures correct state even if immediate attempt ran too early)
-    updateLangFilters(_currentLang());
-    // respond to changes without reload
-    window.addEventListener('siteLangChanged', function (evt) {
-      var newLang = (evt && evt.detail && evt.detail.lang) ? evt.detail.lang : _currentLang();
-      updateLangFilters(newLang);
-    }, false);
-    // --- end lang-filter handling ---
 
     const favContainer = document.getElementById('favorite-btn-container');
     const allowHistory = !!favContainer;
