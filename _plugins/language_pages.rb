@@ -10,10 +10,8 @@ module Jekyll
         next unless cloneable_page?(page)
 
         page.data['lang'] ||= 'ta'
-        raw_content = page.content.dup
-        page.instance_variable_set(:@content, localized_content(raw_content, 'ta'))
 
-        cloned_page = clone_page_for_language(site, page, 'en', raw_content)
+        cloned_page = clone_page_for_language(site, page, 'en')
         cloned_pages << cloned_page if cloned_page
       end
 
@@ -34,9 +32,9 @@ module Jekyll
       page.path.start_with?('content/') && File.extname(page.path) == '.md'
     end
 
-    def clone_page_for_language(site, page, lang, raw_content)
+    def clone_page_for_language(site, page, lang)
       clone = PageWithoutAFile.new(site, site.source, File.dirname(page.path), File.basename(page.path))
-      clone.instance_variable_set(:@content, localized_content(raw_content, lang))
+      clone.instance_variable_set(:@content, page.content.dup)
       clone.instance_variable_set(:@data, deep_copy(page.data))
       clone.data['lang'] = lang
       clone.data['permalink'] = language_permalink(page, lang)
@@ -69,14 +67,6 @@ module Jekyll
       Marshal.load(Marshal.dump(object))
     rescue TypeError
       object.dup
-    end
-
-    def localized_content(content, lang)
-      other_lang = lang == 'en' ? 'ta' : 'en'
-      content.gsub(
-        /\{%-?\s*capture\s+(\w+)\s*-?%\}[\s\S]*?\{%-?\s*endcapture\s*-?%\}\s*\{%-?\s*include\s+lang-filter\.html\s+lang="#{other_lang}"\s+text=\1\s*-?%\}/m,
-        ''
-      )
     end
   end
 end

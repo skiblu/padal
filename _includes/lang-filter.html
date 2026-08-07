@@ -1,9 +1,5 @@
 {%- assign current_lang = page.lang | default: site.lang | default: 'ta' -%}
-{%- assign show_block = false -%}
 {%- if include.lang and include.lang == current_lang -%}
-  {%- assign show_block = true -%}
-{%- endif -%}
-<div class="lang-filter" data-lang="{{ include.lang | default: '' }}" style="{% unless show_block %}display:none;{% endunless %}">
   {%- if include.html -%}
     {{ include.html }}
   {%- else -%}
@@ -11,4 +7,4 @@
       {{ include.text | markdownify }}
     {%- endif -%}
   {%- endif -%}
-</div>
+{%- endif -%}

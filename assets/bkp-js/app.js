@@ -46,18 +46,15 @@
   function localizedPath(lang) {
     var path = currentPagePath() || '/';
 
-    function stripEnglishPrefix(value) {
-      if (value === '/en') return '/';
-      return value.replace(/^\/en(?=\/|$)/, '');
-    }
-
-    function addEnglishPrefix(value) {
+    function toEnglish(value) {
       if (value === '/' || value === '') return '/en/';
+      if (value === '/search/' || value === '/search/index.html') return '/en/search/index.html';
+      if (value.startsWith('/content/en/')) return value;
+      if (/^\/content\/[^/]+\/en\//.test(value)) return value;
       if (value.startsWith('/content/')) {
         var rel = value.replace(/^\/content\//, '');
         var parts = rel.split('/').filter(Boolean);
         if (!parts.length) return '/content/en/';
-        if (parts[0] === 'en') return value;
         if (parts.length === 1) return '/content/en/' + parts[0];
         return '/content/' + parts[0] + '/en/' + parts.slice(1).join('/');
       }
@@ -65,10 +62,17 @@
       return '/en' + value;
     }
 
-    if (lang === 'en') {
-      return addEnglishPrefix(path);
+    function toTamil(value) {
+      if (value === '/en/' || value === '/en') return '/';
+      if (value === '/en/search/index.html') return '/search/index.html';
+      if (/^\/content\/[^/]+\/en\//.test(value)) {
+        return value.replace(/^\/content\/([^/]+)\/en\//, '/content/$1/');
+      }
+      if (value.startsWith('/content/en/')) return '/content/' + value.slice('/content/en/'.length);
+      return value.replace(/^\/en(?=\/|$)/, '');
     }
-    return stripEnglishPrefix(path);
+
+    return lang === 'en' ? toEnglish(path) : toTamil(path);
   }
 
   function preferredLanguage() {
