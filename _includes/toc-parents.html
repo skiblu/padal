@@ -2,7 +2,8 @@
 TOC of all items with parent_id, grouped by type
 {% endcomment %}
 
-{%- assign pages_sorted = site.html_pages | sort: "nav_order" -%}
+{%- assign current_lang = page.lang | default: site.lang | default: 'ta' -%}
+{%- assign pages_sorted = site.html_pages | where_exp: 'p', 'p.lang == current_lang' | sort: "nav_order" -%}
 {%- assign pages_by_type = pages_sorted | group_by: "type" -%}
 
 <div class="row justify-content-center">

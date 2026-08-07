@@ -2,6 +2,7 @@
 # pages with nav-bar
 layout: default
 ---
+{%- assign current_lang = page.lang | default: site.lang | default: 'ta' -%}
 <!-- Mobile: Breadcrumb Path (first line) -->
 <div id="breadcrumb-path-mobile" class="py-2 border-bottom bg-orange-light d-lg-none">
   <div class="container-xxl">
@@ -30,7 +31,7 @@ layout: default
   <div class="container-xxl d-flex justify-content-between align-items-center gap-2">
     <!-- Type Navigation -->
     <div class="d-flex flex-wrap gap-1 flex-grow-1">
-      {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
+      {%- assign pages_by_type = site.html_pages | where_exp: 'p', 'p.lang == current_lang' | sort: "nav_order" | group_by: "type" -%}
       {%- assign visible_groups = pages_by_type | slice: 0, 3 -%}
       {%- assign remaining_count = pages_by_type.size | minus: 3 -%}
       {%- assign hidden_groups = pages_by_type | slice: 3, remaining_count -%}
@@ -125,7 +126,7 @@ layout: default
     <!-- Center: Type-based Navigation Menu -->
     <nav aria-label="content type navigation" class="flex-grow-1 d-flex justify-content-center">
       <div class="d-flex flex-wrap gap-2 justify-content-center">
-        {%- assign pages_by_type = site.html_pages | sort: "nav_order" | group_by: "type" -%}
+        {%- assign pages_by_type = site.html_pages | where_exp: 'p', 'p.lang == current_lang' | sort: "nav_order" | group_by: "type" -%}
         {%- for group in pages_by_type -%}
         {%- if group.name and group.name != '' -%}
         <div class="dropdown">
@@ -184,11 +185,11 @@ layout: default
 Liquid logic to figure out the nav items and nesting from the content front matter,
 Plus figures out the previous and next page for the active page
 {%- endcomment -%}
-{% assign nav_pages = site.html_pages | where_exp: 'p','p.nav_order' | where_exp: 'p', 'p.section == nil' | sort: 'nav_order' %}
+{% assign nav_pages = site.html_pages | where_exp: 'p','p.nav_order' | where_exp: 'p', 'p.section == nil' | where_exp: 'p', 'p.lang == current_lang' | sort: 'nav_order' %}
 {% for p in nav_pages %}
 {% assign current_i = forloop.index0 %}
 {% if p.parent_id %}
-{% assign p_children = site.html_pages | where: 'section', p.parent_id | sort: 'nav_order' %}
+{% assign p_children = site.html_pages | where: 'section', p.parent_id | where_exp: 'p', 'p.lang == current_lang' | sort: 'nav_order' %}
 {% comment %} figure out prev/next pages for active section header {% endcomment %}
 {% if p.url == page.url %}
 {% assign prev_number = forloop.index0 | minus: 1 %}
@@ -201,7 +202,7 @@ Plus figures out the previous and next page for the active page
 {% else %}
 {% assign prev_page = nav_pages[prev_number] %}
 {% if prev_page.parent_id %}
-{% assign prev_child = site.html_pages | where: 'section', prev_page.parent_id | sort: 'nav_order' | last %}
+{% assign prev_child = site.html_pages | where: 'section', prev_page.parent_id | where_exp: 'p', 'p.lang == current_lang' | sort: 'nav_order' | last %}
 {% assign prev_page_title = prev_child.title %}{% assign prev_page_url = prev_child.url %}
 {% else %}
 {% assign prev_page_title = prev_page.title %}{% assign prev_page_url = prev_page.url %}
@@ -245,7 +246,7 @@ Display individual listing (non-section pages)
 {% unless forloop.first %}
 {% assign prev_page = nav_pages[prev_number] %}
 {% if prev_page.parent_id %}
-{% assign prev_child = site.html_pages | where: 'section', prev_page.parent_id | sort: 'nav_order' | last %}
+{% assign prev_child = site.html_pages | where: 'section', prev_page.parent_id | where_exp: 'p', 'p.lang == current_lang' | sort: 'nav_order' | last %}
 {% assign prev_page_title = prev_child.title %}{% assign prev_page_url = prev_child.url %}
 {% else %}
 {% assign prev_page_title = prev_page.title %}{% assign prev_page_url = prev_page.url %}
@@ -288,7 +289,7 @@ Display individual listing (non-section pages)
           {%- comment -%} render a larger hidden pool; JS will pick random 6 from this pool {%- endcomment -%}
           <div id="recommendations-source" class="d-none">
           {%- assign album = page.parent_id | default: page.section -%}
-          {%- assign same_album_pages = site.html_pages | where: "section", album | where_exp: "p","p.url != page.url and p.sitemap != false and p.history != false" | sort: "nav_order" -%}
+          {%- assign same_album_pages = site.html_pages | where: "section", album | where_exp: "p","p.url != page.url and p.sitemap != false and p.history != false and p.lang == current_lang" | sort: "nav_order" -%}
 
 
           {%- for item in same_album_pages -%}
@@ -305,7 +306,7 @@ Display individual listing (non-section pages)
           </div>
           {%- endfor -%}
 
-            {%- assign other_groups = site.html_pages | where_exp: "p","p.section and p.section != album and p.sitemap != false and p.history != false" | group_by: "section" -%}
+            {%- assign other_groups = site.html_pages | where_exp: "p","p.section and p.section != album and p.sitemap != false and p.history != false and p.lang == current_lang" | group_by: "section" -%}
           {%- for group in other_groups -%}
             {%- assign item = group.items | first -%}
             <div class="col" data-pool="other">

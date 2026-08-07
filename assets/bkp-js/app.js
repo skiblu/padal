@@ -34,7 +34,7 @@
   }
 
   function preferredLanguage() {
-    return pageLanguageOverride() || storedLanguage() || currentPageLanguage();
+    return storedLanguage() || pageLanguageOverride() || currentPageLanguage();
   }
 
   // Immediate attempt to apply language filters as soon as this script runs.
@@ -61,12 +61,18 @@
     (function setupLanguageSelect() {
       var sel = document.getElementById('site-lang-select');
       if (!sel) return;
+      var pageLang = pageLanguageOverride();
       try {
         var stored = storedLanguage();
         if (stored) sel.value = stored;
       } catch (e) { /* ignore storage errors */ }
       // default to the page language if nothing selected
       if (!sel.value) sel.value = preferredLanguage();
+      try {
+        if (!storedLanguage() && pageLang) {
+          localStorage.setItem('site_lang', pageLang);
+        }
+      } catch (e) { /* ignore storage errors */ }
       sel.addEventListener('change', function () {
         try { localStorage.setItem('site_lang', sel.value); } catch (e) { /* ignore */ }
         // notify other scripts so they can update instantly without reload

@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light pb-lg-0 border-bottom">
+    {%- assign current_lang = page.lang | default: site.lang | default: 'ta' -%}
     <div class="container">
         <a class="navbar-brand" href="{{ '/' | relative_url }}">{% if site.title-icon %}{% include icon.html icon=site.title-icon %} {% endif %}{{ site.title }}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +11,7 @@
             {%- comment -%}
               existing navigation items
             {%- endcomment -%}
-            {% for section in site.html_pages %}{% if section.nav %}
+            {% for section in site.html_pages %}{% if section.nav and section.lang == current_lang %}
                 <li class="nav-item">
                     <a class="nav-link{% if page.url == section.url %} active{% endif %} p-3" href="{{ section.url | relative_url }}">{% if section.nav == true %}{{ section.title }}{% else %}{{ section.nav }}{% endif %}</a>
                 </li>

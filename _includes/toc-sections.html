@@ -4,10 +4,11 @@ Usage: {% include toc-sections.html parent_name="my-parent-id" %}
 {% endcomment %}
 
 {%- assign pid = include.parent_name | default: "" -%}
+{%- assign current_lang = page.lang | default: site.lang | default: 'ta' -%}
 {%- if pid != "" -%}
 
-{%- assign children_default = site.html_pages | where: "section", pid | sort: "nav_order" -%}
-{%- assign children_atoz = site.html_pages | where: "section", pid | sort: "title" -%}
+{%- assign children_default = site.html_pages | where: "section", pid | where_exp: 'p', 'p.lang == current_lang' | sort: "nav_order" -%}
+{%- assign children_atoz = site.html_pages | where: "section", pid | where_exp: 'p', 'p.lang == current_lang' | sort: "title" -%}
 
 {%- if children_default.size > 0 -%}
 <div class="row justify-content-center">
