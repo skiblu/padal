@@ -4,8 +4,8 @@ nav_order: 50
 youtube_id: opvOrqjeGRI
 audio_id: 4f09DH2k29
 audio_length: 349
-title: Thaaḻa Malarethuthu Thangarali Poovethuthu
-lyrics_en: thaaḻa, Malarethuthu, Thangarali, Poovethuthu, devotional song, lyrics, Amman, Mariamma, Andal, Tamil
+title: Thaazha Malarethuthu Thangarali Poovethuthu
+lyrics_en: Thaazha, Malarethuthu, Thangarali, Poovethuthu, devotional song, lyrics, Amman, Mariamma, Andal, Tamil
 lyrics_ta: தாழ, மலரெடுத்து, தங்கரளி, பூவெடுத்து, பக்தி பாடல், பாடல்கள், அம்மன், மாரியம்மா, ஆண்டாள், தமிழ்
 ---
 {% capture text %}
@@ -68,7 +68,7 @@ lyrics_ta: தாழ, மலரெடுத்து, தங்கரளி, ப
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-`thaaḻa Malarethuthu thangarali Poovethuthu`\
+`thaazha Malarethuthu thangarali Poovethuthu`\
 `thangarali Uṉakkuthaaṉamaa Eṉ Maariyamaa`\
 `thangarali Uṉakkuthaaṉamaa`
 
@@ -76,7 +76,7 @@ Vezhzhi Malarethuthu Vezhzharazhi Poovethuthu\
 Vezhzharazhi Uṉakkuthaaṉamaa Eṉ Maariyamaa\
 Vezhzharazhi Uṉakkuthaaṉamaa
 
-Kathaaḻa Naarurussu Kaathu Mali Poovethuthu\
+Kathaazha Naarurussu Kaathu Mali Poovethuthu\
 Kaathu Mali Uṉakkuthaaṉamaa Eṉ Maariyamaa\
 Kaathu Mali Uṉakkuthaaṉamaa
 
@@ -120,7 +120,7 @@ Yaaṉai Kathi Saerkoḻassu Athukku Mali Naathu Nathu\
 Athukku Mali Uṉakkuthaaṉamaa Eṉ Maariyamaa\
 Athukku Mali Uṉakkuthaaṉamaa
 
-`thaaḻa Malarethuthu thangarali Poovethuthu`\
+`thaazha Malarethuthu thangarali Poovethuthu`\
 `thangarali Uṉakkuthaaṉamaa Eṉ Maariyamaa`\
 `thangarali Uṉakkuthaaṉamaa`
 {% endcapture %}
