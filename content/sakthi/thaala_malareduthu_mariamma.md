@@ -68,9 +68,9 @@ lyrics_ta: தாழ, மலரெடுத்து, தங்கரளி, ப
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-`thaaḻa Malarethuthu Thangkarazhi Poovethuthu`\
-`thangkarazhi Uṉakkuthaaṉamaa Eṉ Maariyamaa`\
-`thangkarazhi Uṉakkuthaaṉamaa`
+`thaaḻa Malarethuthu thangarali Poovethuthu`\
+`thangarali Uṉakkuthaaṉamaa Eṉ Maariyamaa`\
+`thangarali Uṉakkuthaaṉamaa`
 
 Vezhzhi Malarethuthu Vezhzharazhi Poovethuthu\
 Vezhzharazhi Uṉakkuthaaṉamaa Eṉ Maariyamaa\
@@ -120,8 +120,8 @@ Yaaṉai Kathi Saerkoḻassu Athukku Mali Naathu Nathu\
 Athukku Mali Uṉakkuthaaṉamaa Eṉ Maariyamaa\
 Athukku Mali Uṉakkuthaaṉamaa
 
-`thaaḻa Malarethuthu Thangkarazhi Poovethuthu`\
-`thangkarazhi Uṉakkuthaaṉamaa Eṉ Maariyamaa`\
-`thangkarazhi Uṉakkuthaaṉamaa`
+`thaaḻa Malarethuthu thangarali Poovethuthu`\
+`thangarali Uṉakkuthaaṉamaa Eṉ Maariyamaa`\
+`thangarali Uṉakkuthaaṉamaa`
 {% endcapture %}
 {% include lang-filter.html lang="en" text=text_en %}
