@@ -1,8 +1,8 @@
 ---
 section: Sakthi
 nav_order: 50
-title: Aigiri Nanthiṉi Nanthitha Maethiṉi
-lyrics_en: Aigiri, Nanthiṉi, Nanthitha, Maethiṉi, Visva, Vinoathini, Nanthanuthae
+title: Aigiri Nanthini Nanthitha Maethini
+lyrics_en: Aigiri, Nanthini, Nanthitha, Maethini, Visva, Vinoathini, Nanthanuthae
 lyrics_ta: அயிகிரி, நந்தினி, நந்தித, மேதினி, விச்வ, வினோதினி, நந்தநுதே
 ---
 {% capture text %}
@@ -188,7 +188,7 @@ lyrics_ta: அயிகிரி, நந்தினி, நந்தித, ம
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-1. Ayikiri Nanthiṉi Nanthitha Maethiṉi\
+1. Ayikiri Nanthini Nanthitha Maethini\
 Visva Viṉoathiṉi Nanthanuthae\
 Kirivara Vinthya Siroathi Nivaasiṉi\
 Vishnu Vilaasiṉi Jishnunuthae\
