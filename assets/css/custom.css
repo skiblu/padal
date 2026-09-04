@@ -62,6 +62,23 @@
   display: inline-block;
 }
 
+/* Reserve space for controls and players populated after DOMContentLoaded. */
+#share-container {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+}
+
+#favorite-btn-container {
+  min-width: 58px;
+  min-height: 24px;
+  flex: 0 0 58px;
+}
+
+.music-player-wrapper {
+  min-height: 260px;
+}
+
 /* Nested Dropdown Support */
 .dropdown-submenu {
   position: relative;
