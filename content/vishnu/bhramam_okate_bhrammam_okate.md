@@ -88,22 +88,22 @@ lyrics_ta: பிரம்மம், ஒகடே, பிரம்மம், ஒ
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-`bhramam Okate… Para… bhramam Okate`\
-`bhramam Okate… Para… bhramam Okate`\
-`bhramam Okate… Para… bhramam Okate`
+`Bhramam Okate… Para… Bhramam Okate`\
+`Bhramam Okate… Para… Bhramam Okate`\
+`Bhramam Okate… Para… Bhramam Okate`
 
-`tantaṉaa Naaki Tantaṉaa Naa Pure`\
-`tantaṉaa Naaki Tantaṉaa Naa Pure`\
-`tantaṉaa Naa Pala Tantaṉaa Naa`\
-`tantaṉaa Naa Pala Tantaṉaa Naa`
+`Tantanaa Naaki Tantanaa Naa Pure`\
+`Tantanaa Naaki Tantanaa Naa Pure`\
+`Tantanaa Naa Pala Tantanaa Naa`\
+`Tantanaa Naa Pala Tantanaa Naa`
 
-bhramam Okate… Para… Pirammam Oka Te….para\
-bhramam Okate… Para… bhramam Okate
+Bhramam Okate… Para… Bhramam Okate…. Para\
+Bhramam Okate… Para… Bhramam Okate
 
-`tantaṉaa Naaki Tantaṉaa Naa Pure`\
-`tantaṉaa Naa Pala Tantaṉaa Naa`\
-`pala Tantaṉaa Naa`\
-`pala Tantaṉaa Naa`
+`Tantanaa Naaki Tantanaa Naa Pure`\
+`Tantanaa Naa Pala Tantanaa Naa`\
+`Pala Tantanaa Naa`\
+`Pala Tantanaa Naa`
 
 Kantuvaku Hee Naatikamolinto Levu\
 Antarikki Shreehari Antaraatmaa\
@@ -118,10 +118,10 @@ Antarikki Shreehari Antaraatmaa\
 Hare Antaraatmaa\
 Shree Hare Antaraatmaa
 
-`tantaṉaa Naaki Tantaṉaa Naa Pure`\
-`tantaṉaa Naa Pala Tantaṉaa Naa`\
-`pala Tantaṉaa Naa`\
-`pala Tantaṉaa Naa`
+`Tantanaa Naaki Tantanaa Naa Pure`\
+`Tantanaa Naa Pala Tantanaa Naa`\
+`Pala Tantanaa Naa`\
+`Pala Tantanaa Naa`
 
 Nintaara Raaju Nit Reṉcunitra Yoṉkate\
 Antaṉe Pantu Nitra Natiyoo Okate\
@@ -134,10 +134,10 @@ Cantalu Tuṉeti Cari Poomi Okate\
 Cari Poomi Okate\
 Cari Poomi Okate
 
-`tantaṉaa Naaki Tantaṉaa Naa Pure`\
-`tantaṉaa Naa Pala Tantaṉaa Naa`\
-`pala Tantaṉaa Naa`\
-`pala Tantaṉaa Naa`
+`Tantanaa Naaki Tantanaa Naa Pure`\
+`Tantanaa Naa Pala Tantanaa Naa`\
+`Pala Tantanaa Naa`\
+`Pala Tantanaa Naa`
 
 Katu Keeyoo Nuku Meeta Kayoo Eṉ Tokate\
 Putameecuṉakaamu Meeta Polayoo Eṉ Tokte\
@@ -152,16 +152,16 @@ Eesvara Naamum\
 Vengkatesvara Naamum\
 Shree Vengkatesvara Naamum Okate
 
-`tantaṉaa Naaki Tantaṉaa Naa Pure`\
-`tantaṉaa Naa Pala Tantaṉaa Naa`\
-`pala Tantaṉaa Naa`
+`Tantanaa Naaki Tantanaa Naa Pure`\
+`Tantanaa Naa Pala Tantanaa Naa`\
+`Pala Tantanaa Naa`
 
-bhramam Okate… Para… Pirammam Oka Te….para\
-bhramam Okate… Para… Pirammam Oka Te…\
-Tantaṉaa Naaki Tantaṉaa Naa Pure\
-Tantaṉaa Naa Pala Tantaṉaa Naa\
-`pala Tantaṉaa Naa`\
-`pala Tantaṉaa Naa`\
-`pala Tantaṉaa Naa`
+Bhramam Okate… Para… Bhramam Okate…. Para\
+Bhramam Okate… Para… Bhramam Okate…\
+Tantanaa Naaki Tantanaa Naa Pure\
+Tantanaa Naa Pala Tantanaa Naa\
+`Pala Tantanaa Naa`\
+`Pala Tantanaa Naa`\
+`Pala Tantanaa Naa`
 {% endcapture %}
 {% include lang-filter.html lang="en" text=text_en %}

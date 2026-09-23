@@ -44,36 +44,36 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-`saranamappa saranamappa swaamiyae`\
-`inge varanumappa varanumaiyyaa saamiyae..`(Chorus)
+`Saranamappa Saranamappa Swaamiyae`\
+`Ingae varanumappa varanumaiyyaa Saamiyae..` (Chorus)
 
-nettriyilee neearaninndu neela aadai thaangayae\
-suttrrivandhu aiyyan padham dhedhinaen andha\
-sabarimalai thannai nokki odinaen.\
-(`saranamappa..`)
+Nettriyilae neeraNinthu neela aadai thaangiyae\
+Suttrivandhu Ayyan padham thaedinaen, andha\
+Sabarimalai thannai nokki odinaen.\
+(`Saranamappa..`)
 
-bavakadalaai kadanndhu sendru paramanadi saernndiidavae\
-thavakkalamaaam thulasi maalai dhaangineaen – indha\
-dhaaraniyil un pugazhaip paadinaeaen.\
-(`saranamappa..`)
+Bhavakkadalaik kadandhu sendru Paramanadi saernthidavae\
+Thavakkalamaam thulasi maalai thaanginaen – indha\
+Dhaaraniyil un pugazhaip paadinaen.\
+(`Saranamappa..`)
 
 
-svaami thindhakkaththom ayyappa thindhakkaththom\
-ayyappa thindhakkaththom svaami thindhakkaththom\
-sarameduththu theerththamaadi vaettaiyaadi koottam koodi\
-paettaiyilee thullivandhaeaen swaamiyae – adhu\
-paeraaanandham paeraaanandham swaamiyae…\
-(`saranamappa..`)
+Swaami thindhakkaththom Ayyappa thindhakkaththom\
+Ayyappa thindhakkaththom Swaami thindhakkaththom\
+Saram eduththu theerththamaadi vaettaiyaadi koottam koodi\
+Paettaiyilae thullivandhaen Swaamiyae – adhu\
+Paeraanandham paeraanandham Swaamiyae…\
+(`Saranamappa..`)
 
-irumudiyum thaan gikkonndu peruvazhi yil nadakkkaiyilee\
-karimalai yil kadharugiraen aiyyanae\
-kaaththarul vaenndugireaen meyyanae\
-(`saranamappa..`)
+Irumudiyum thaan sumandhu peruvazhiyil nadakkaiyilae\
+Karimalaiyil katharugiraen Ayyanae\
+Kaaththarul vaendugiraen Meyyanae\
+(`Saranamappa..`)
 
-aaru vaaram nonbirundhu aaru moondru padiiyaeari\
-aaravvaram koottaththukku naduviilee\
-aanandhamaai dharisanamum kaannbaenae\
-(`saranamappa..`)
+Aaru vaaram nonbirundhu aaru moondru padiyaeri\
+Aaravaaram koottaththukku naduvilae\
+Aanandhamaai dharisanamum kaanbaenae\
+(`Saranamappa..`)
 
 
 `swaamiyae... saranam ayyappa!`

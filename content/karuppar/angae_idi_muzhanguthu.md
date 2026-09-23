@@ -40,35 +40,34 @@ deiii\
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-kattakkaruppu lingam\
-kaatthu nikkum mahaalingam\
-unnai andharaththil thaan varavazhaiththu varavazhaiththu varavazhaiththu varavazhaiththu...\
-deiii\
-unnai sattiputti thaalam kotti varavazhaiththu varavazhaiththu varavazhaiththu varavazhaiththu.....\
-`andha vella nalla kuthiraiyil`\
-`vella nalla kuthiraiyil`\
-`vella nalla kuthiraiyilae...`\
-nee vaegamaa vandhurayyaa\
-vandhurayyaa vandhurayyaa vandhurayyaa....
+Kattakkaruppu lingam\
+Kaatthu nikkum Mahaalingam\
+Unnai andharaththil thaan varavazhaiththu varavazhaiththu varavazhaiththu varavazhaiththu...\
+Deiii\
+Unnai sattiputti thaalam kotti varavazhaiththu varavazhaiththu varavazhaiththu varavazhaiththu.....\
+`Andha vella nalla kuthiraiyil`\
+`Vella nalla kuthiraiyil`\
+`Vella nalla kuthiraiyilae...`\
+Nee vaegamaa vandhurayyaa\
+Vandhurayyaa vandhurayyaa vandhurayyaa....
 
-angae idi muzhanguthu\
-karuppasaami thanga kalasam minnnuthu\
+Angae idi muzhanguthu\
+Karuppasaami thanga kalasam minnuthu\
 `Yeeeii angae idi muzhanguthu`\
-`karuppasaami thanga kalasam minnnuthu`
+`Karuppasaami thanga kalasam minnuthu`
 
-`thandhanaththom paattu paadi`\
-`thalamellaam kotti paadi` (2)
+`Thandhanaththom paattu paadi`\
+`Thalamellaam kotti paadi` (2)
 
-vaiyakaththu makkalukku vaazhvazhikka indhanaaeram\
-vaaraaraam karuppasaami, varam thaaraaraam karuppasaami\
-koattai karuppasaami gunamulla kuri saami (2)
+Vaiyakaththu makkalukku vaazhvazhikka indha naeram\
+Vaaraaraam Karuppasaami, varam thaaraaraam Karuppasaami\
+Koattai Karuppasaami gunamulla kuri saami (2)
 
-varaanda kuthiraiyila varmalikka indha naeram\
-vaaraaraam enga kizhavan, indha dharaniyai kaakkum kizhavan\
-`angae idi muzhanguthu`\
-`karuppasaami thanga kalasam minnnuthu` [2]
+Varaanda kuthiraiyila varam alikka indha naeram\
+Vaaraaraam enga kizhavan, indha dharaniyai kaakkum kizhavan\
+`Angae idi muzhanguthu`\
+`Karuppasaami thanga kalasam minnuthu` [2]
 {% endcapture %}
 {% include lang-filter.html lang="en" text=text_en %}
-
 
 

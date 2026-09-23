@@ -52,40 +52,40 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-saranam solli kooppiduvom... sabarimalai vaasanai...\
-varanum endru azhaiththiduvom...varam kodukkum eesanai...
+Saranam solli kooppiduvom... Sabarimalai vaasanai...\
+Varanum endru azhaiththiduvom... varam kodukkum Eesanai...
 
-arulaiththarum aandavanai...anbarkumithththranai...\
-siram thaazhththi vanangiduvom... hariharasudhan ayyappanai...
+Arulaiththarum aandavanai... anbarku mithranai...\
+Siram thaazhththi vanangiduvom... Hariharasudhan Ayyappanai...
 
-villaalee veeranae...veeramani kanndanae...\
-thamizh solleduththup paaduvom...sundharesan maindhannai...
+Villaalee veeranae... Veeramani Kandanae...\
+Thamizh solleduththup paaduvom... Sundharesan Maindhanai...
 
 `suvaami saranam ayyappa... saranam saranam ayyappa...`\
 `suvaami saranam ayyappa... saranam saranam ayyappa...`
 
-sabarimalai selbavarku sanjalaangal illai....\
-bayan dhanaiye pokkiduvaan pandhalanin pillai...\
-aabayam endru saranndaindhaal akanndridumae thollai...\
-avaninnri avaniyilee anuvum asaivadhuu illai...
+Sabarimalai selbavarku sanjalaangal illai....\
+Bhayam dhanaiye pokkiduvaan Pandhalanin pillai...\
+Abhayam endru saranadaindhaal agandridumae thollai...\
+Avanindri avaniyile anuvum asaivadhu illai...
 
-veetai vittu kattum katti arulmalai purappaduvom...\
-koottu saranam pottu erumaeli paettai selvom...\
-paettai thulli aadum podhu paaerinbam kolvom...
+Veettai vittu kattum katti Arulmalai purappaduvom...\
+Koottu saranam pottu Erumaeli Paettai selvom...\
+Paettai thulli aadum podhu paerinbam kolvom...
 
 `saami thindhakkaththom...ayyappan thindhakkaththom`\
 `saami thindhakkaththom...ayyappan thindhakkaththom`
 
-paettai thulli aadum podhu paaerinbam kolvom...\
-kottai kaavalan vaabaru suvaamiyai konndaadi magizhvom...
+Paettai thulli aadum podhu paerinbam kolvom...\
+Kottai kaavalan Vaabaru Swaamiyai kondaadi magizhvom...
 
 `suvaami saranam ayyappa... saranam saranam ayyappa...`\
 `suvaami saranam ayyappa... saranam saranam ayyappa...`
 
-seermaevum sabarimalai naadhan arul thaedu...\
-eearonnbadhu padiiyaeari eesan padham naadu...\
-paarellaam kaathth unirkkum paramanin thiruveedu...\
-naaraayanan selvanaiyae naaviniikka paadu...
+Seermaevum Sabarimalai Naadhan arul thaedu...\
+Eeronbadhu padiyaeri Eesan padham naadu...\
+Paarellaam kaaththu nirkum Paramanin thiruveedu...\
+Naaraayanan selvanaiyae naavinikka paadu...
 
 `suvaami saranam ayyappa... saranam saranam ayyappa...`\
 `suvaami saranam ayyappa... saranam saranam ayyappa...`

@@ -26,19 +26,18 @@ lyrics_en: Murugan, Velava, Velava, வேலவா, வேலவா
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-vaelava vaelava vaelmurugaa vaa vaa
+Velava Velava Velmurugaa Vaa Vaa
 
-vaelmurugaa vaa vaa vaelmurugaa vaa vaa\
-vaelava shanmugaa murugaa murugaa `(vaelava vaelava….)`
+Velmurugaa Vaa Vaa Velmurugaa Vaa Vaa\
+Velava Shanmugaa Murugaa Murugaa `(Velava Velava….)`
 
-valli mannavaalaa kunjari mannaalaa\
-vanna mayil vaahanaa murugaa murugaa   `(vaelava vaelava….)`
+Valli Manavaalaa Kunjari Manaalaa\
+Vanna Mayil Vaahanaa Murugaa Murugaa   `(Velava Velava….)`
 
-sooraadhi sooraa suprahmmannya dhaevaa\
-saravannaa shanmugaa murugaa murugaa  `(vaelava vaelava….)`
+Sooraadhi Sooraa Subrahmanya Dhaevaa\
+Saravanaa Shanmugaa Murugaa Murugaa  `(Velava Velava….)`
 
 
-`veththrivael muruganukku... aroharaa!!`
+`Vetrivel Muruganukku... Aroharaa!!`
 {% endcapture %}
 {% include lang-filter.html lang="en" text=text_en %}
-

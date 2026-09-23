@@ -35,32 +35,31 @@ lyrics_ta: ஹனுமான், ஹனுமந்தா, ஹனுமந்�
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-anumandhaa anumandhaa\
-anjchanai maindhaa anumandhaa!\
-anumandhaa anumandhaa\
-aanjcha naeyaa anumandhaa!
+Anumandhaa Anumandhaa\
+Anjanai Maindhaa Anumandhaa!\
+Anumandhaa Anumandhaa\
+Anjaneyaa Anumandhaa!
 
-kadhiravan thannai pazhamendru enni\
-kaikalil pidiththaai anumandhaa!\
-kaatrinil yaeri kadalinaik kadandhu\
-ilangaiyaip podiththaai anumandhaa!
+Kadhiravan thannai pazhamendru enni\
+Kaikalil pidiththaai Anumandhaa!\
+Kaatrinil yaeri kadalinaik kadandhu\
+Ilangaiyaip podiththaai Anumandhaa!
 
-buththiyil bakthiyil sakthiyil unakku\
-nikarillai evarum anumandhaa!\
-aththanai irundhhum adakkaththin uruvaai\
-thigazhbavan neeyae anumandhaa!
+Bhuththiyil bhakthiyil sakthiyil unakku\
+Nikarillai evarum Anumandhaa!\
+Aththanai irundhum adakkaththin uruvaai\
+Thigazhbavan neeyae Anumandhaa!
 
-karuththitta vannan kamalak kannan\
-kathaiyinaic sonnaal anumandhaa!\
-karuththudan amarndhhu kannneer peruga\
-kaettiduv vaayae anumandhaa!
+Karuththitta Vannan Kamalak Kannan\
+Kathaiyinaich sonnaal Anumandhaa!\
+Karuththudan amarndhu kanneer peruga\
+Kaettiduvaayae Anumandhaa!
 
-neruppittaa vaalinai mudivil laamal\
-neenndidhac seiyththaai anumandhaa!\
-viruppudan endhan bakthiyum adhupol\
-valarnndhida arulvaai anumandhaa!
+Neruppitta vaalinai mudivil laamal\
+Neendidach seydhaai Anumandhaa!\
+Viruppudan endhan bhakthiyum adhupol\
+Valarndhida arulvaai Anumandhaa!
 {% endcapture %}
 {% include lang-filter.html lang="en" text=text_en %}
-
 
 

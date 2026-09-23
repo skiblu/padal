@@ -35,30 +35,30 @@ lyrics_en: Murugan, VelMuruga, VelVel
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-velmurugaa velmurugaa velmurugaa velvael\
-velmurugaa vaelaayudhaa velmurugaa velvael
+Velmurugaa Velmurugaa Velmurugaa Velvel\
+Velmurugaa Velaayudhaa Velmurugaa Velvel
 
-aarubadai veedu konda aarumugaa velvael\
-aaerumayil vaagananae velmurugaa velvael
+Aarupadai veedu konda Aarumugaa Velvel\
+Aerumayil vaagananae Velmurugaa Velvel
 
-omumurugaa endrudhinam undhan naamam velvael\
-oyaamal jebpiththiruppom velmurugaa velvael
+Omumurugaa endrudhinam undhan naamam Velvel\
+Oyaamal jebiththiruppom Velmurugaa Velvel
 
-paalaabishaekangal yaettukk kolvaai velvael\
-baktharkalai kaaththiduvaai velmurugaa velvael
+Paalaabhishaekangal yaettuk kolvaai Velvel\
+Bhaktharkalai kaaththiduvaai Velmurugaa Velvel
 
-thenaabishaekangal yaettukk kolvaai velvael\
-theriyaamal seyyumpizhai poruththarulvaai velvael
+Thenaabhishaekangal yaettuk kolvaai Velvel\
+Theriyaamal seyyum pizhai poruththarulvaai Velvel
 
-vaasaamalar maalaikalai yaettukk kolvaai velvael\
-thaesaolirum paalaganae velmurugaa velvael
+Vaasamalar maalaikalai yaettuk kolvaai Velvel\
+Thaesaolirum paalaganae Velmurugaa Velvel
 
-veesugindra thendral poala velmurugaa velvael\
-engal vaazhvil vandhavanae velmurugaa velvael
+Veesugindra thendral poala Velmurugaa Velvel\
+Engal vaazhvil vandhavanae Velmurugaa Velvel
 
-anbodu naangal seyyum aththanaiyum velvael\
-aaadharavai yaettukk kondu arulpurivaai velvael
+Anbodu naangal seyyum aththanaiyum Velvel\
+Aadharavaai yaettuk kondu arulpurivaai Velvel
 
-`veththrivael muruganukku... aroharaa!!`
+`Vetrivel Muruganukku... Aroharaa!!`
 {% endcapture %}
 {% include lang-filter.html lang="en" text=text_en %}

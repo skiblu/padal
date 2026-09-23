@@ -77,27 +77,27 @@ lyrics_ta: ஐயப்பா, பக்தி, வா வா வா வா ஐ�
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-vaa vaa vaa vaa ayyappa\
-vaavar thoazhanae ayyappa — *Chorus*\
-vaa vaa vaa vaa ayyappa\
-vaavar thoazhanae ayyappa — *Chorus*
+Vaa Vaa Vaa Vaa Ayyappa\
+Vaavar Thoazhanae Ayyappa — *Chorus*\
+Vaa Vaa Vaa Vaa Ayyappa\
+Vaavar Thoazhanae Ayyappa — *Chorus*
 
-karpooram aeththikuttu kaithaaalam pottukuttu\
-kaliyuga varadhanai kooppiduvvom.\
-namma kaliyuga varadhanai kooppiduvvom — *Chorus* — Repeat.
+Karpooram aeththikuttu kaithaalam pottukuttu\
+Kaliyuga varadhanai kooppiduvom.\
+Namma Kaliyuga varadhanai kooppiduvom — *Chorus* — Repeat.
 
-avan vanpuli mael earikuttu vaasal vandhu saerum varai\
-saranangal balamaai sollidavvom\
-saami yae… saami yae… *(Side voice)*
+Avan Vanpuli mael aerikittu vaasal vandhu saerum varai\
+Saranangal balamaai solliduvom\
+Saamiyae… Saamiyae… *(Side voice)*
 
-vaa vaa vaa vaa ayyappa\
-vaavar thoazhanae ayyappa — *Chorus*\
-vaa vaa vaa vaa ayyappa\
-vaavar thoazhanae ayyappa — *Chorus*
+Vaa Vaa Vaa Vaa Ayyappa\
+Vaavar Thoazhanae Ayyappa — *Chorus*\
+Vaa Vaa Vaa Vaa Ayyappa\
+Vaavar Thoazhanae Ayyappa — *Chorus*
 
-karumpukatti maalai katti maalaiyoada paattukatti\
-manikannda saamiyai kooppiduvvom.\
-saami yae… saami yae… *(Side voice)*
+Karumbukatti maalai katti maalaiyoada paattukatti\
+Manikanda Saamiyai kooppiduvom.\
+Saamiyae… Saamiyae… *(Side voice)*
 
 namma manikannda saamiyai kooppiduvvom — *Chorus*\
 avar maamalai ya vittuvandhu vaasal vandhu saerum varai\

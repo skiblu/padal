@@ -45,37 +45,37 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், பாடல்
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-`sree dharma saasthaa paahimaam` \
-`sree sabareesha paahimaam` \
-`dhaevaa paahimaam` \
-`maamalai vaasaa paahimaam`
+`Sree Dharma Saasthaa Paahimaam` \
+`Sree Sabareesha Paahimaam` \
+`Dhaevaa Paahimaam` \
+`Maamalai Vaasaa Paahimaam`
 
-swaami yae... ayyappo, \
-swaami saranam.. saranam ayyappa...
+Swaamiyae... Ayyappo, \
+Swaami Saranam.. Saranam Ayyappa...
 
-mohini suthanae mohana roopaa \
-mohamagattrruga paalanai \
-manndala kaalam idho vannallo \
-mani maalaiyum kazhuth thil vizhunnallo \
-manasaakilum azhiinju poyallo \
-engalai kaaththiduvvaai ayyappa.. ayyappa..
+Mohini suthanae mohana roopaa \
+Moham agattruga paalanai \
+Mandala kaalam idho vannallo \
+Mani maalaiyum kazhuthil vizhunnallo \
+Manasaakilum azhinju poyallo \
+Engalai kaaththiduvaai Ayyappa.. Ayyappa..
 
-`sree dharma saasthaa paahimaam` \
-`sree sabareesha paahimaam` \
-`dhaevaa paahimaam` \
-`maamalai vaasaa paahimaam`
+`Sree Dharma Saasthaa Paahimaam` \
+`Sree Sabareesha Paahimaam` \
+`Dhaevaa Paahimaam` \
+`Maamalai Vaasaa Paahimaam`
 
-vanpuli mudhugil kayariya bhagavaan \
-vanmalai kazattruga engalai \
-ungal suyaroopathththai naangal kaannavae \
-malaiyaakilum kadanndhu vannallo \
-mani peedathth hil vaazhum dheivamae \
-engalai kaaththiduvvaai ayyappa.. ayyappa..
+Vanpuli mudhugil kayariya Bhagavaan \
+Vanmalai kazhatruga engalai \
+Ungal suyaroopaththai naangal kaanavae \
+Malaiyaakilum kadandhu vannallo \
+Mani peedaththil vaazhum Dheivamae \
+Engalai kaaththiduvaai Ayyappa.. Ayyappa..
 
-`sree dharma saasthaa paahimaam` \
-`sree sabareesha paahimaam` \
-`dhaevaa paahimaam` \
-`maamalai vaasaa paahimaam`
+`Sree Dharma Saasthaa Paahimaam` \
+`Sree Sabareesha Paahimaam` \
+`Dhaevaa Paahimaam` \
+`Maamalai Vaasaa Paahimaam`
 
 `swaamiyae... saranam ayyappa!`
 {% endcapture %}

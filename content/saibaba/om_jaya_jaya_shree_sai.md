@@ -67,8 +67,8 @@ Jaya jaya sayi baaba\
 Sachidanandha sayi\
 Sathyaroopane sai baaba
 
-Thooya paramporuL thuvaara maayayil\
-Azhaippaan seeradikku.. suvaami azhaippaan seeradikku\
+Thooya paramporul Dwaraka maayaiyil\
+Azhaippaan Seeradikku.. Swaami azhaippaan Seeradikku\
 Azhaithadhum varuvaan baaba\
 Arul karam tharuvaan baaba\
 Annaiyaai anaithiduvaan\
@@ -76,8 +76,8 @@ Maathroopane sai baaba
 
 Om jaya jaya sree sayi...
 
-Neerum neruppai sudhare vaittaye\
-Nirmalane sayi.. engal nirmalane sayi\
+Neerum neruppaai sudarae vaiththaayae\
+Nirmalanae Saayi.. engal Nirmalanae Saayi\
 Aathma jothiye baaba\
 Aanandha kadale baaba\
 Seeradiyil kaandom\
@@ -85,9 +85,9 @@ Siva roopan sai baaba
 
 Om jaya jaya sree sayi...
 
-Thiruvuthiyal pini theerthidum baaba\
-Un makimaiku alavavillaiye\
-Un makimaiku alavavillaiye\
+Thiruvuthiyaal pini theerththidum Baabaa\
+Un magimaikku alavillaiyae\
+Un magimaikku alavillaiyae\
 Thuniyil kanindha baaba\
 Yoga malare baaba\
 Punmuka dharisaname\
@@ -95,20 +95,19 @@ Rama roopane sai baaba
 
 Om jaya jaya sree sayi....
 
-Guruvaai vandhaai arulai pozhindhaai\
-Tharaniyil thavamaanaai.. nee tharaniyil thavamaanaai\
-Eththanai thavangal baaba\
+Guruvaai vandhaai arulaip pozhindhaai\
+Tharaniyil thavamaanaai.. Nee tharaniyil thavamaanaai\
+Eththanai thavangal Baabaa\
 Unnai kaana baaba\
 Ikkanam unnai thozhuthom\
 Thattha roopane sai baaba
 
 Om jaya jaya sree sayi....
 
-Thanamum kalviyum thalarvilla manamum\
-Nallvai naalum tharum.. thinam nallvai naalum tharum\
-Vanjanai illaa baaba\
-Nenjangal ellaam baaba\
-Sayi vaazhum idam\
-Parabrahmane sai baaba
+Dhanamum kalviyum thalarvilla manamum\
+Nallavai naalum tharum.. dhinam nallavai naalum tharum\
+Vanjanai illaa Baabaa\
+Nenjangal ellaam Baabaa\
+Saayi vaazhum idam\
+Parabrahmanae Saayi Baabaa
 {% endcapture %} {% include lang-filter.html lang="en" text=text_en %}
-

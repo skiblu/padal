@@ -6,7 +6,7 @@ lyrics_en: Ayyappa, Tamil, Senthoora, Pottu, Vecha
 lyrics_ta: ஐயப்பா, தமிழ், செந்தூர, பொட்டு, வச்ச
 ---
 {% capture text %}
-Note: Similar to 16 vayathinile song tune
+Note: Similar to the tune of the song *16 Vayathinile*
 
 தந்தானே தானனனே தந்தானே (`ஹோய்`)\
 தானே தந்தானே (`ஹோய்`)\
@@ -81,64 +81,64 @@ Note: Similar to 16 vayathinile song tune
 {% capture text_en %}
 Note: Similar to 16 vayathinile song tune
 
-thandhaanae thaananae thandhaanae (`hoy`)\
-thaanae thandhaanae (`hoy`)\
-suvaami thandhaanae thaananae thandhaanae (`hoy`)\
-thaanae thandhaanae (`hoy`)\
-thandhaanae thandhaanae `hoy`
+Thandhaanae Thaananae Thandhaanae (`Hoy`)\
+Thaanae Thandhaanae (`Hoy`)\
+Swaami Thandhaanae Thaananae Thandhaanae (`Hoy`)\
+Thaanae Thandhaanae (`Hoy`)\
+Thandhaanae Thandhaanae `Hoy`
 
-senthoor a pottu vacha ayyappa (`hoy`)\
-suvaami ayyappa (`hoy`) (Chorus)\
-nee singaara nadai nadandhaal ayyappa (`hoy`)\
-swaami ayyappa (`hoy`)
-
-`andha vaanamum vanangumae suvaami`\
-`indha bhoomiyum vanangumae suvaami`
-
-senthoor a pottu vacha ayyappa (`hoy`)\
-suvaami ayyappa (`hoy`) (Chorus)\
-nee singaara nadai nadandhaal ayyappa (`hoy`)\
-swaami ayyappa (`hoy`)
+Senthoora pottu vacha Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`) (Chorus)\
+Nee singaara nadai nadandhaal Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`)
 
 `andha vaanamum vanangumae suvaami`\
 `indha bhoomiyum vanangumae suvaami`
 
-arul manakkum aandavanae ayyappa (`hoy`)\
-suvaami ayyappa (`hoy`)\
-nee aadhiyaana jothiyaanaal ayyappa(`hoy`)\
-suvaami ayyappa(`hoy`)
+Senthoora pottu vacha Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`) (Chorus)\
+Nee singaara nadai nadandhaal Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`)
 
 `andha vaanamum vanangumae suvaami`\
 `indha bhoomiyum vanangumae suvaami`
 
-senthoor a pottu vacha ayyappa (`hoy`)\
-suvaami ayyappa (`hoy`) (Chorus)\
-nee singaara nadai nadandhaal ayyappa (`hoy`)\
-swaami ayyappa (`hoy`)
+Arul manakkum Aandavanae Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`)\
+Nee aadhiyaana jothiyaanaal Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`)
 
 `andha vaanamum vanangumae suvaami`\
 `indha bhoomiyum vanangumae suvaami`
 
-ichchai theerkkum aandavanae ayyappa (`hoy`)\
-suvaami ayyappa (`hoy`)\
-nee eerkkum kaandha malaiyaanaal ayyappa  (`hoy`)\
-suvaami ayyappa (`hoy`)
+Senthoora pottu vacha Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`) (Chorus)\
+Nee singaara nadai nadandhaal Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`)
 
 `andha vaanamum vanangumae suvaami`\
 `indha bhoomiyum vanangumae suvaami`
 
-senthoor a pottu vacha ayyappa (`hoy`)\
-suvaami ayyappa (`hoy`) (Chorus)\
-nee singaara nadai nadandhaal ayyappa (`hoy`)\
-swaami ayyappa (`hoy`)
+Ichchai theerkkum Aandavanae Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`)\
+Nee eerkkum Kaandha malaiyaanaal Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`)
 
 `andha vaanamum vanangumae suvaami`\
 `indha bhoomiyum vanangumae suvaami`
 
-andha aezhu kadal thaanndi varuvaai ayyappa (`hoy`)\
-suvaami ayyappa (`hoy`) \
-nee aekaandha moorththiyaana ayyappa (`hoy`)\
-suvaami ayyappa (`hoy`)
+Senthoora pottu vacha Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`) (Chorus)\
+Nee singaara nadai nadandhaal Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`)
+
+`andha vaanamum vanangumae suvaami`\
+`indha bhoomiyum vanangumae suvaami`
+
+Andha aezhu kadal thaandi varuvaai Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`) \
+Nee aekaandha moorththiyaana Ayyappa (`Hoy`)\
+Swaami Ayyappa (`Hoy`)
 
 `andha vaanamum vanangumae suvaami`\
 `indha bhoomiyum vanangumae suvaami`

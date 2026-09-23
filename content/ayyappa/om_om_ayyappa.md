@@ -45,38 +45,38 @@ lyrics_ta: ஓம், ஓம், ஐயப்பா
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-om om ayyappa\
-om guru naathaa ayyappa
+Om Om Ayyappa\
+Om Guru Naathaa Ayyappa
 
-aranaar baalaa ayyappa\
-ambikai baalaa ayyappa `(om om )`
+Aranaar baalaa Ayyappa\
+Ambikai baalaa Ayyappa `(Om Om)`
 
-aapth baanthavaa ayyappa\
-aadhi paraabara ayyappa `(om om )`
+Aaptha baandhavaa Ayyappa\
+Aadhi Paraabaraa Ayyappa `(Om Om)`
 
-irumudip priyaa ayyappa\
-irakkam migundhavaa ayyappa `(om om )`
+Irumudi priyaa Ayyappa\
+Irakkam migundhavaa Ayyappa `(Om Om)`
 
-eesan maganae ayyappa\
-eeswara mainthaa ayyappa `(om om )`
+Eesan maganae Ayyappa\
+Eeswara mainthaa Ayyappa `(Om Om)`
 
-umaiyaal baalaa ayyappa\
-uruthunaai neeyae ayyappa `(om om )`
+Umaiyaal baalaa Ayyappa\
+Uruthunai neeyae Ayyappa `(Om Om)`
 
-ookkam tharubhavaa ayyappa\
-oozvinai aruppavaa ayyappa `(om om )`
+Ookkam tharubavaa Ayyappa\
+Oozhvinai aruppavaa Ayyappa `(Om Om)`
 
-engum nirraindhavaa ayyappa\
-engal naayagaa ayyappa `(om om )`
+Engum nirainthavaa Ayyappa\
+Engal naayagaa Ayyappa `(Om Om)`
 
-bambaiyin baalaa ayyappa\
-bandhala vaendhae ayyappa `(om om )`
+Bambaiyin baalaa Ayyappa\
+Pandhala vaendhae Ayyappa `(Om Om)`
 
-vanpuli vaahanaa ayyappa\
-vanaththiliruppavaa ayyappa `(om om )`
+Vanpuli vaahanaa Ayyappa\
+Vanaththiliruppavaa Ayyappa `(Om Om)`
 
-sabari gireesaa ayyappa\
-saasvatha roopae ayyappa `(om om )`
+Sabari Gireesaa Ayyappa\
+Saasvatha roopae Ayyappa `(Om Om)`
 
 `swaamiyae... saranam ayyappa!`
 {% endcapture %}

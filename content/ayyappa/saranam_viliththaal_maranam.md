@@ -41,33 +41,33 @@ lyrics_ta: ஐயப்பா, தமிழ், பக்தி, சரணம்
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-saamiyae… ai .. \
-saranam ayyappo(chorus)\
-sarana koshappriyaanae..\
-saranam ayyappo(chorus)
+Saamiyae… Ai .. \
+Saranam Ayyappo (Chorus)\
+Sarana Koshappriyaanae..\
+Saranam Ayyappo (Chorus)
 
 `saranam viliththaal maranam illai`\
 `saasthaa naamam arulin ellai`\
 `tharunam idhudaan saranampodu`\
 `dharma sasthaa paadhambaadu` (2)
 
-kaakkum dheivam thirumaal naamam\
-karunai seyyum eeswara naamam\
-kalanndhu magizhndha aiyyan naamam\
-koovi vandhaal puviyil shemam `(saranam viliththaal..)`
+Kaakkum Dheivam Thirumaal Naamam\
+Karunai seyyum Eeswara Naamam\
+Kalandhu magizhndha Ayyan Naamam\
+Koovi vandhaal puviyil Kshemam `(Saranam viliththaal..)`
 
-kaadum maedum veedum vaasal\
-kallum mullaum mallikai meththai\
-aadum manadththai adakki vaa vaa\
-aiyyan maedai naadi vaa vaa `(saranam viliththaal..)`
+Kaadum Maedum Veedum Vaasal\
+Kallum Mullum Malligai Meththai\
+Aadum Manaththai adakki vaa vaa\
+Ayyan Maedai naadi vaa vaa `(Saranam viliththaal..)`
 
-neypol urugum manadthil aiyyan\
-naeril varuvaan niraiyath tharuvaan\
-guruvai naadu maalaiyai soodu\
-kodi gnaana jothiyai paadu
+Neypol urugum manaththil Ayyan\
+Naeril varuvaan niraiyath tharuvaan\
+Guruvai naadu maalaiyai soodu\
+Kodi Gnaana Jothiyai paadu
 
-saranam saranamae, saranam pon ayyappa\
-ayyappo saranam, saranam pon ayyappo
+Saranam Saranamae, Saranam Pon Ayyappa\
+Ayyappo Saranam, Saranam Pon Ayyappo
 
 
 `swaamiyae... saranam ayyappa!`

@@ -64,55 +64,55 @@ lyrics_ta: ஐயப்பன்‌, நீ, இன்றி, வாழ்வே
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-`nee indri vazhvethu ayyappa`\
-`un ninaivinndri magizhvethu ayyappa`\
-kannukkul unai vaiththu naan paargireaen\
-kanneeraai karaindthoda maayam aeno\
-neeyinndri anuvedthum asayaadhayya\
-vaazhvil inbamum thunbamum neethaanaiyaa
+`Nee indri vaazhvethu Ayyappa`\
+`Un ninaivindri magizhvethu Ayyappa`\
+Kannukkul unai vaiththu naan paarkkiraen\
+Kanneerai karaindhoda maayam aeno\
+Neeyindri anuvethum asaiyaadhayya\
+Vaazhvil inbamum thunbamum neethaanaiyaa
 
-`nee indri vazhvethu ayyappa`\
-`un ninaivinndri magizhvethu ayyappa`
+`Nee indri vaazhvethu Ayyappa`\
+`Un ninaivindri magizhvethu Ayyappa`
 
-neydhengaai naan konndu varuvenayyaa\
-unponmaeni ney uruga seyvaen ayyaa\
-gurusuvaami thunai konndu varuvenaiyyaa\
-engal guruvin guruvai kaanbenaiyaa
+Neythengaai naan kondu varuvaenayya\
+Un ponmaeni ney uruga seyvaen Ayyaa\
+Guruswaami thunai kondu varuvaenaiyyaa\
+Engal guruvin guruvai kaanbenaiyaa
 
-`nee indri vazhvethu ayyappa`\
-`un ninaivinndri magizhvethu ayyappa`
+`Nee indri vaazhvethu Ayyappa`\
+`Un ninaivindri magizhvethu Ayyappa`
 
-kannukkul unai vaiththu naan paargireaen\
-kanneeraai karaindthoda maayam aeno\
-neeyinndri anuvedthum asayaadhayya\
-neeyinndri anuvedthum asayaadhayya\
-vaazhvil inbamum thunbamum neethaanaiyaa
+Kannukkul unai vaiththu naan paarkkiraen\
+Kanneerai karaindhoda maayam aeno\
+Neeyindri anuvethum asaiyaadhayya\
+Neeyindri anuvethum asaiyaadhayya\
+Vaazhvil inbamum thunbamum neethaanaiyaa
 
-`nee indri vazhvethu ayyappa`\
-`un ninaivinndri magizhvethu ayyappa`
+`Nee indri vaazhvethu Ayyappa`\
+`Un ninaivindri magizhvethu Ayyappa`
 
-karimalai thaanndi vandhomayya\
-kadinathththin kadinathgai unarndhomayya\
-malaiyaettram romba romba kadinamaiyyaa\
-andha bambai nadhi neerum punathmamayyayyaa
+Karimalai thaandi vandhomayya\
+Kadinaththin kadinaththai unarndhomayya\
+Malaiyaettram romba romba kadinamaiyyaa\
+Andha Pambai nadhi neerum punithamaiyyaa
 
-`nee indri vazhvethu ayyappa`\
-`un ninaivinndri magizhvethu ayyappa`
+`Nee indri vaazhvethu Ayyappa`\
+`Un ninaivindri magizhvethu Ayyappa`
 
-irumudi thalai thaangi varuvomayya\
-un thiruvadi saranathtai adaivomayya\
-padhinettu padi eari varuvaenaiyyaa\
-undhan padhinettu padi eari varuvaenaiyyaa\
-engal thathvamasiyai kaanbenaiyyaa
+Irumudi thalai thaangi varuvomayya\
+Un thiruvadi saranaththai adaivomayya\
+Padhinettu padiyaeri varuvaenaiyyaa\
+Undhan padhinettu padiyaeri varuvaenaiyyaa\
+Engal Thathvamasiyaik kaanbenaiyyaa
 
-`nee indri vazhvethu ayyappa`\
-`un ninaivinndri magizhvethu ayyappa`
+`Nee indri vaazhvethu Ayyappa`\
+`Un ninaivindri magizhvethu Ayyappa`
 
-`nee indri vazhvethu ayyappa`\
-`un ninaivinndri magizhvethu ayyappa`\
-un ninaivinndri magizhvethu ayyappa\
-un ninaivinndri magizhvethu ayyappa\
-undhan ninaivinndri magizhvethu ayyappa
+`Nee indri vaazhvethu Ayyappa`\
+`Un ninaivindri magizhvethu Ayyappa`\
+Un ninaivindri magizhvethu Ayyappa\
+Un ninaivindri magizhvethu Ayyappa\
+Undhan ninaivindri magizhvethu Ayyappa
 
 
 `swaamiyae... saranam ayyappa!`

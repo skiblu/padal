@@ -55,46 +55,46 @@ lyrics_ta: ஐயப்பா, தமிழ், பாடல், வாரரு
 {% include lang-filter.html lang="ta" text=text %}
 
 {% capture text_en %}
-vaaraarayyaa vaaraarae vazhinadaiyaa vaaraarae\
-vazhinadaiyaai vaaraarae peruvaziyila vaaraarae\
-peruvaziyila vaaraarae paerinbam thaaraarae
+Vaaraarayyaa Vaaraarae Vazhinadaiyaa Vaaraarae\
+Vazhinadaiyaai Vaaraarae Peruvazhiyilae Vaaraarae\
+Peruvazhiyilae Vaaraarae Paerinbam Thaaraarae
 
-acchan koavil arasanum aadippaadi vaaraarae\
-aariyangaavu aiyyaavumae aananndhamaai vaaraarae\
-kulaththuppuzhai paalanumae kuraigal theerkka vaaraarae
+Acchan Koavil Arasanum Aadippaadi Vaaraarae\
+Aariyangaavu Aiyyaavumae Aanandhamaai Vaaraarae\
+Kulaththuppuzhai Paalanumae Kuraigal Theerkka Vaaraarae
 
-erumaeli saasthhaavumae aegaandhamaai vaaraarae\
-aegaandhamaai vaaraarae engal dheyvam vaaraarae\
-periyaana vattaththula perumaallum vaaraarae\
-siriyaana vattaththula sivanodum vaaraarae
+Erumaeli Saasthaavumae Aegaandhamaai Vaaraarae\
+Aegaandhamaai Vaaraarae Engal Dheivam Vaaraarae\
+Periyaana Vattaththula Perumaalum Vaaraarae\
+Siriyaana Vattaththula Sivanodum Vaaraarae
 
-kaalaaikatti naadhanumae vaelai theerkka vaaraarae\
-azhudhaiyil kullichchipputtu hariharanum vaaraarae\
-hariharanum vaaraarae ayyappanum vaaraarae
+Kaalaikatti Naadhanumae Vaelai Theerkka Vaaraarae\
+Azhudhaiyil Kulichchipputtu Hariharanum Vaaraarae\
+Hariharanum Vaaraarae Ayyappanum Vaaraarae
 
-karimalaiyin aeththaththilae kannnan magan vaaraarae\
-kannnan magan vaaraarae karuppanoada vaaraarae
+Karimalaiyin Aeththaththilae Kannan Magan Vaaraarae\
+Kannan Magan Vaaraarae Karuppanoada Vaaraarae
 
-bambaiyil kullichchipputtu baalakanum vaaraarae\
-baalakanum vaaraarae pandhalandharasan vaaraarae
+Bambaiyil Kulichchipputtu Baalakanum Vaaraarae\
+Baalakanum Vaaraarae Pandhalandharasan Vaaraarae
 
-neelimalai aeththaththilae nikkaamalae vaaraarae\
-nikkaamalae vaaraarae brammacchaari vaaraarae
+Neelimalai Aeththaththilae Nikkaamalae Vaaraarae\
+Nikkaamalae Vaaraarae Brahmachchaari Vaaraarae
 
-appaachchi maedaeari hariharanum vaaraarae\
-hariharanum vaaraarae ayyappanum vaaraarae
+Appaachchi Maedaeri Hariharanum Vaaraarae\
+Hariharanum Vaaraarae Ayyappanum Vaaraarae
 
-sabarimalai naadhanumae sabalam poakka vaaraarae\
-sabalam poakka vaaraarae saasthhaavum vaaraarae
+Sabarimalai Naadhanumae Sabalam Poakka Vaaraarae\
+Sabalam Poakka Vaaraarae Saasthaavum Vaaraarae
 
-padinaettu padiyaeari saasthhaavum vaaraarae\
-villeduththu ambeduththu vaettaiyaadi vaaraarae\
-vaettaiyaadi vaaraarae viramanikaanndan vaaraarae
+Padinaettu Padiyaeri Saasthaavum Vaaraarae\
+Villeduththu Ambeduththu Vaettaiyaadi Vaaraarae\
+Vaettaiyaadi Vaaraarae Veeramanikandhan Vaaraarae
 
-ayyappa bajanaikkuththaan aananndhamaai vaaraarae\
-vandhavarrai vaazhthdidavae karunaiyoadu vaaraarae
+Ayyappa Bhajanaikkuththaan Aanandhamaai Vaaraarae\
+Vandhavarai Vaazhththidavae Karunaiyoadu Vaaraarae
 
-`vaaraarayyaa vaaraarae vazhinadaiyaa vaaraarae `(2)
+`Vaaraarayyaa Vaaraarae Vazhinadaiyaa Vaaraarae` (2)
 
 
 `swaamiyae... saranam ayyappaa!`
